@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['using_20axial_20and_20translational_20symmetry_6678',['Using axial and translational symmetry',['../md_doc_axial.html',1,'']]]
+  ['variable_20names_6679',['Variable names',['../md_doc_varnames.html',1,'']]]
 ];
