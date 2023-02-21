@@ -94,12 +94,53 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:aed2ce3808e3a89eadbd2e9ce243c5ccf"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__sample.html#aed2ce3808e3a89eadbd2e9ce243c5ccf">sample_update_payload</a> (igrid, w, wold, xgrid, xpart, upart, qpart, mpart, mypayload, mynpayload, particle_time)</td></tr>
 <tr class="memdesc:aed2ce3808e3a89eadbd2e9ce243c5ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Payload update.  <a href="namespacemod__particle__sample.html#aed2ce3808e3a89eadbd2e9ce243c5ccf">More...</a><br /></td></tr>
 <tr class="separator:aed2ce3808e3a89eadbd2e9ce243c5ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab207e0fc6b4a6dc66e1a2fdd04745e88"><td class="memItemLeft" align="right" valign="top">pure double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__sample.html#ab207e0fc6b4a6dc66e1a2fdd04745e88">sample_get_particle_dt</a> (partp, end_time)</td></tr>
-<tr class="separator:ab207e0fc6b4a6dc66e1a2fdd04745e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45cf85cce01436052b44076f84e032c8"><td class="memItemLeft" align="right" valign="top">double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__sample.html#a45cf85cce01436052b44076f84e032c8">sample_get_particle_dt</a> (partp, end_time)</td></tr>
+<tr class="separator:a45cf85cce01436052b44076f84e032c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ead54915f9da9b68800214ce827aba"><td class="memItemLeft" align="right" valign="top">logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__sample.html#a74ead54915f9da9b68800214ce827aba">point_in_igrid_ghostc</a> (x, igrid, ngh)</td></tr>
+<tr class="memdesc:a74ead54915f9da9b68800214ce827aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quick check if particle coordinate is inside igrid (ghost cells included, except last one)  <a href="namespacemod__particle__sample.html#a74ead54915f9da9b68800214ce827aba">More...</a><br /></td></tr>
+<tr class="separator:a74ead54915f9da9b68800214ce827aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Scattered sampling based on fixed-particle interpolation By Fabio Bacchini (2020) </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a id="a74ead54915f9da9b68800214ce827aba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ead54915f9da9b68800214ce827aba">&#9670;&nbsp;</a></span>point_in_igrid_ghostc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical function mod_particle_sample::point_in_igrid_ghostc </td>
+          <td>(</td>
+          <td class="paramtype">double precision, dimension(ndim), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>igrid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ngh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Quick check if particle coordinate is inside igrid (ghost cells included, except last one) </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__sample_8t_source.html#l00252">252</a> of file <a class="el" href="mod__particle__sample_8t_source.html">mod_particle_sample.t</a>.</p>
+
+</div>
+</div>
 <a id="aee684c8a4df45d1ae8aa316ee1251143"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee684c8a4df45d1ae8aa316ee1251143">&#9670;&nbsp;</a></span>sample_create_particles()</h2>
 
@@ -143,14 +184,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ab207e0fc6b4a6dc66e1a2fdd04745e88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab207e0fc6b4a6dc66e1a2fdd04745e88">&#9670;&nbsp;</a></span>sample_get_particle_dt()</h2>
+<a id="a45cf85cce01436052b44076f84e032c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45cf85cce01436052b44076f84e032c8">&#9670;&nbsp;</a></span>sample_get_particle_dt()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">pure double precision function mod_particle_sample::sample_get_particle_dt </td>
+          <td class="memname">double precision function mod_particle_sample::sample_get_particle_dt </td>
           <td>(</td>
           <td class="paramtype">type(<a class="el" href="structmod__particle__base_1_1particle__ptr.html">particle_ptr</a>), intent(in)&#160;</td>
           <td class="paramname"><em>partp</em>, </td>
@@ -173,10 +214,11 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__particle__sample_ab207e0fc6b4a6dc66e1a2fdd04745e88_cgraph.png" border="0" usemap="#anamespacemod__particle__sample_ab207e0fc6b4a6dc66e1a2fdd04745e88_cgraph" alt=""/></div>
-<map name="anamespacemod__particle__sample_ab207e0fc6b4a6dc66e1a2fdd04745e88_cgraph" id="anamespacemod__particle__sample_ab207e0fc6b4a6dc66e1a2fdd04745e88_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,188,47"/>
-<area shape="rect" href="namespacemod__particle__base.html#a10fdd3836ff16c481594ceec5fd1e97e" title=" " alt="" coords="236,5,389,47"/>
+<div class="center"><img src="namespacemod__particle__sample_a45cf85cce01436052b44076f84e032c8_cgraph.png" border="0" usemap="#anamespacemod__particle__sample_a45cf85cce01436052b44076f84e032c8_cgraph" alt=""/></div>
+<map name="anamespacemod__particle__sample_a45cf85cce01436052b44076f84e032c8_cgraph" id="anamespacemod__particle__sample_a45cf85cce01436052b44076f84e032c8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,188,80"/>
+<area shape="rect" href="namespacemod__particle__base.html#a10fdd3836ff16c481594ceec5fd1e97e" title=" " alt="" coords="243,5,397,47"/>
+<area shape="rect" href="namespacemod__particle__sample.html#a74ead54915f9da9b68800214ce827aba" title="Quick check if particle coordinate is inside igrid (ghost cells included, except last one)" alt="" coords="236,71,404,112"/>
 </map>
 </div>
 
@@ -231,7 +273,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacemod__particle__sample_ab90da43eae0916ebd793a21880cca706_cgraph.png" border="0" usemap="#anamespacemod__particle__sample_ab90da43eae0916ebd793a21880cca706_cgraph" alt=""/></div>
 <map name="anamespacemod__particle__sample_ab90da43eae0916ebd793a21880cca706_cgraph" id="anamespacemod__particle__sample_ab90da43eae0916ebd793a21880cca706_cgraph">
 <area shape="rect" title=" " alt="" coords="5,39,212,80"/>
-<area shape="rect" href="namespacemod__particle__sample.html#ab207e0fc6b4a6dc66e1a2fdd04745e88" title=" " alt="" coords="263,5,446,47"/>
+<area shape="rect" href="namespacemod__particle__sample.html#a45cf85cce01436052b44076f84e032c8" title=" " alt="" coords="263,5,446,47"/>
 <area shape="rect" href="namespacemod__particle__sample.html#aed2ce3808e3a89eadbd2e9ce243c5ccf" title="Payload update." alt="" coords="260,71,449,112"/>
 </map>
 </div>
