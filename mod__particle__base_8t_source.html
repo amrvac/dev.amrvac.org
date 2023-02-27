@@ -1644,14 +1644,14 @@ $(function() {
 <div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160; </div>
 <div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;    <span class="comment">! Fix phi-boundary crossing</span></div>
 <div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;    <span class="comment">! Case 1: particle has crossed from ~2pi to ~0</span></div>
-<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;    xpmod(phiind) = xp(phiind) + 2.d0*pi</div>
+<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;    xpmod(phiind) = xp(phiind) + 2.d0*dpi</div>
 <div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;    <span class="keywordflow">if</span> ((.not. <a class="code" href="namespacemod__particle__base.html#ac297f1a4a2d25d4fcc6e11cda15b47eb">point_in_igrid_ghostc</a>(xp,igrid,0)) &amp;</div>
 <div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160;        .and. (<a class="code" href="namespacemod__particle__base.html#ac297f1a4a2d25d4fcc6e11cda15b47eb">point_in_igrid_ghostc</a>(xpmod,igrid,0))) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l01569"></a><span class="lineno"> 1569</span>&#160;      xp(phiind) = xpmod(phiind)</div>
 <div class="line"><a name="l01570"></a><span class="lineno"> 1570</span>&#160;      <span class="keywordflow">return</span></div>
 <div class="line"><a name="l01571"></a><span class="lineno"> 1571</span>&#160;<span class="keywordflow">    end if</span></div>
 <div class="line"><a name="l01572"></a><span class="lineno"> 1572</span>&#160;    <span class="comment">! Case 2: particle has crossed from ~0 to ~2pi</span></div>
-<div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;    xpmod(phiind) = xp(phiind) - 2.d0*pi</div>
+<div class="line"><a name="l01573"></a><span class="lineno"> 1573</span>&#160;    xpmod(phiind) = xp(phiind) - 2.d0*dpi</div>
 <div class="line"><a name="l01574"></a><span class="lineno"> 1574</span>&#160;    <span class="keywordflow">if</span> ((.not. <a class="code" href="namespacemod__particle__base.html#ac297f1a4a2d25d4fcc6e11cda15b47eb">point_in_igrid_ghostc</a>(xp,igrid,0)) &amp;</div>
 <div class="line"><a name="l01575"></a><span class="lineno"> 1575</span>&#160;        .and. (<a class="code" href="namespacemod__particle__base.html#ac297f1a4a2d25d4fcc6e11cda15b47eb">point_in_igrid_ghostc</a>(xpmod,igrid,0))) <span class="keywordflow">then</span> </div>
 <div class="line"><a name="l01576"></a><span class="lineno"> 1576</span>&#160;      xp(phiind) = xpmod(phiind)</div>
