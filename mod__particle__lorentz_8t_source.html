@@ -285,7 +285,7 @@ $(function() {
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">double precision</span>                  :: xp(ndir), xpm(ndir), xpc(ndir), xpcm(ndir)</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">double precision</span>                  :: up(ndir), upc(ndir), tp</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">double precision</span>, <span class="keywordtype">dimension(ndir)</span> :: b, e, bc, ec, vfluid, current</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">double precision</span>                  :: rho, rhoold</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">double precision</span>                  :: rho, rhoold, td</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">do</span> iipart=1,<a class="code" href="namespacemod__particle__base.html#a9319a47c1e3acedf0411e1930e7c4201">nparticles_active_on_mype</a></div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      ipart = <a class="code" href="namespacemod__particle__base.html#a7faa50a255b88148a70ddfbbbbd355f0">particles_active_on_mype</a>(iipart);</div>
@@ -540,7 +540,7 @@ $(function() {
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span>  :: w(ixG^T,1:nw),wold(ixG^T,1:nw)</div>
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span>  :: xgrid(ixG^T,1:ndim),xpart(1:ndir),upart(1:ndir),qpart,mpart,particle_time</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: mypayload(mynpayload)</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordtype">double precision</span>              :: b(3), e(3), tmp(3), lfac, vfluid(3), current(3), rho, rhoold</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordtype">double precision</span>              :: b(3), e(3), tmp(3), lfac, vfluid(3), current(3), rho, rhoold, td</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemod__particle__base.html#a85a2d46a6cbe809098c52ea9beca540a">get_vec</a>(<a class="code" href="namespacemod__particle__base.html#aa2e7ca32ca0e1f842e28e7147a430db2">bp</a>, igrid, xpart,particle_time,b)</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemod__particle__base.html#a85a2d46a6cbe809098c52ea9beca540a">get_vec</a>(<a class="code" href="namespacemod__particle__base.html#aaf063a0b45a8e523c163d101fdb1419e">vp</a>, igrid, xpart,particle_time,vfluid)</div>
