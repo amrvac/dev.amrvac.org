@@ -35,7 +35,6 @@ var searchData=
   ['evolvingboundary_540',['evolvingboundary',['../namespacemod__forest.html#a21bc6aeefe5747e7ba5d5c8b0d421334',1,'mod_forest']]],
   ['example_20simulations_541',['Example simulations',['../md_doc_examples.html',1,'']]],
   ['examples_2emd_542',['examples.md',['../examples_8md.html',1,'']]],
-  ['extremaa_543',['extremaa',['../namespacemod__ppm.html#af1ac6f81ebe6083d040746da2069869d',1,'mod_ppm']]],
-  ['extremaq_544',['extremaq',['../namespacemod__ppm.html#ac3f3e7d7779227c8a007b1350f83b316',1,'mod_ppm']]],
-  ['extremaw_545',['extremaw',['../namespacemod__ppm.html#ac5ff91a5bbaa4d59441056fb8d90e65c',1,'mod_ppm']]]
+  ['extremaq_543',['extremaq',['../namespacemod__ppm.html#ac3f3e7d7779227c8a007b1350f83b316',1,'mod_ppm']]],
+  ['extremaw_544',['extremaw',['../namespacemod__ppm.html#ac5ff91a5bbaa4d59441056fb8d90e65c',1,'mod_ppm']]]
 ];
