@@ -92,7 +92,7 @@ var searchData=
   ['lorentz_5finit_1221',['lorentz_init',['../namespacemod__particle__lorentz.html#a7d69e6051df4a9ac4aa2893e21a45370',1,'mod_particle_lorentz']]],
   ['lorentz_5fintegrate_5fparticles_1222',['lorentz_integrate_particles',['../namespacemod__particle__lorentz.html#a88a4b1cb7f083aec128a32ac245ca52c',1,'mod_particle_lorentz']]],
   ['lorentz_5fkick_1223',['lorentz_kick',['../namespacemod__particle__lorentz.html#ad1c7982aec23c0452da155f5b01b602e',1,'mod_particle_lorentz']]],
-  ['lorentz_5fupdate_5fpayload_1224',['lorentz_update_payload',['../namespacemod__particle__lorentz.html#ab1897998904bc04b8bb8c9e0a91c6e31',1,'mod_particle_lorentz']]],
+  ['lorentz_5fupdate_5fpayload_1224',['lorentz_update_payload',['../namespacemod__particle__lorentz.html#a4bf01ec77776724dc13e7e8259ab4092',1,'mod_particle_lorentz']]],
   ['los_5fphi_1225',['los_phi',['../namespacemod__global__parameters.html#acee9d1c0fd5be4ecb6d0c7b1199c5e00',1,'mod_global_parameters']]],
   ['los_5ftheta_1226',['los_theta',['../namespacemod__global__parameters.html#aa8df2f891dca11a4a18199294bb4e018',1,'mod_global_parameters']]],
   ['losses_1227',['losses',['../namespacemod__particle__base.html#a2f6e68db84ced57f098cecd754a58d3e',1,'mod_particle_base']]],
