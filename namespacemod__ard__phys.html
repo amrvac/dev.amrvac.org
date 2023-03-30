@@ -105,8 +105,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a0313faa74c915de3881f5ead468a2d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af84d58d7e8e4ab45fc22d8a2c0ef1511"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ard__phys.html#af84d58d7e8e4ab45fc22d8a2c0ef1511">ard_add_source_geom</a> (qdt, ixIL, ixOL, wCT, w, x)</td></tr>
 <tr class="separator:af84d58d7e8e4ab45fc22d8a2c0ef1511"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdeb53db6a2659e9da612bffccc6f9fe"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ard__phys.html#acdeb53db6a2659e9da612bffccc6f9fe">ard_add_source</a> (qdt, ixIL, ixOL, wCT, w, x, qsourcesplit, active, wCTprim)</td></tr>
-<tr class="separator:acdeb53db6a2659e9da612bffccc6f9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4340d6d6a0b03ea45435d56259e49773"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ard__phys.html#a4340d6d6a0b03ea45435d56259e49773">ard_add_source</a> (qdt, ixIL, ixOL, wCT, wCTprim, w, x, qsourcesplit, active)</td></tr>
+<tr class="separator:a4340d6d6a0b03ea45435d56259e49773"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f4dc2ccf8f65dfcde0509cd3d532221"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ard__phys.html#a7f4dc2ccf8f65dfcde0509cd3d532221">ard_laplacian</a> (ixIL, ixOL, var, lpl)</td></tr>
 <tr class="memdesc:a7f4dc2ccf8f65dfcde0509cd3d532221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Laplacian using a standard second order scheme. For now this method only works in slab geometries. Requires one ghost cell only.  <a href="namespacemod__ard__phys.html#a7f4dc2ccf8f65dfcde0509cd3d532221">More...</a><br /></td></tr>
 <tr class="separator:a7f4dc2ccf8f65dfcde0509cd3d532221"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,8 +214,8 @@ Variables</h2></td></tr>
 <p>An advection term can be aplied to these systems of the form: nabla( (A1/adv_pow) * u^(adv_pow) ) (for the first unknown) nabla( (A2/adv_pow) * v^(adv_pow) ) (for the second unknown, if applicable) nabla( (A3/adv_pow) * w^(adv_pow) ) (for the third unknown, if applicable)</p>
 <p>IMEX methods are also supported. The implicit system is solved by a multigrid solver coupled into MPI-AMRVAC. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a id="acdeb53db6a2659e9da612bffccc6f9fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdeb53db6a2659e9da612bffccc6f9fe">&#9670;&nbsp;</a></span>ard_add_source()</h2>
+<a id="a4340d6d6a0b03ea45435d56259e49773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4340d6d6a0b03ea45435d56259e49773">&#9670;&nbsp;</a></span>ard_add_source()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,6 +259,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in)&#160;</td>
+          <td class="paramname"><em>wCTprim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(inout)&#160;</td>
           <td class="paramname"><em>w</em>, </td>
         </tr>
@@ -278,13 +284,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">logical, intent(inout)&#160;</td>
-          <td class="paramname"><em>active</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(in), optional&#160;</td>
-          <td class="paramname"><em>wCTprim</em>&#160;</td>
+          <td class="paramname"><em>active</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -298,8 +298,8 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__ard__phys_acdeb53db6a2659e9da612bffccc6f9fe_cgraph.png" border="0" usemap="#anamespacemod__ard__phys_acdeb53db6a2659e9da612bffccc6f9fe_cgraph" alt=""/></div>
-<map name="anamespacemod__ard__phys_acdeb53db6a2659e9da612bffccc6f9fe_cgraph" id="anamespacemod__ard__phys_acdeb53db6a2659e9da612bffccc6f9fe_cgraph">
+<div class="center"><img src="namespacemod__ard__phys_a4340d6d6a0b03ea45435d56259e49773_cgraph.png" border="0" usemap="#anamespacemod__ard__phys_a4340d6d6a0b03ea45435d56259e49773_cgraph" alt=""/></div>
+<map name="anamespacemod__ard__phys_a4340d6d6a0b03ea45435d56259e49773_cgraph" id="anamespacemod__ard__phys_a4340d6d6a0b03ea45435d56259e49773_cgraph">
 <area shape="rect" title=" " alt="" coords="5,23,183,65"/>
 <area shape="rect" href="namespacemod__ard__phys.html#a7f4dc2ccf8f65dfcde0509cd3d532221" title="Compute the Laplacian using a standard second order scheme. For now this method only works in slab ge..." alt="" coords="231,5,443,32"/>
 <area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="491,31,565,57"/>
@@ -427,7 +427,7 @@ Here is the call graph for this function:</div>
 
 <p>inplace update of psa==&gt;F_im(psa) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00617">617</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00616">616</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -801,7 +801,7 @@ Here is the call graph for this function:</div>
 
 <p>Implicit solve of psa=psb+dtfactor*dt*F_im(psa) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00637">637</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00636">636</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -866,7 +866,7 @@ Here is the call graph for this function:</div>
 
 <p>Compute the Laplacian using a standard second order scheme. For now this method only works in slab geometries. Requires one ghost cell only. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00568">568</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00567">567</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -898,7 +898,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacemod__ard__phys_a3fdfd1533a8e947fa9c840d7f086ed75_cgraph.png" border="0" usemap="#anamespacemod__ard__phys_a3fdfd1533a8e947fa9c840d7f086ed75_cgraph" alt=""/></div>
 <map name="anamespacemod__ard__phys_a3fdfd1533a8e947fa9c840d7f086ed75_cgraph" id="anamespacemod__ard__phys_a3fdfd1533a8e947fa9c840d7f086ed75_cgraph">
 <area shape="rect" title=" " alt="" coords="5,410,217,437"/>
-<area shape="rect" href="namespacemod__ard__phys.html#acdeb53db6a2659e9da612bffccc6f9fe" title=" " alt="" coords="286,5,463,47"/>
+<area shape="rect" href="namespacemod__ard__phys.html#a4340d6d6a0b03ea45435d56259e49773" title=" " alt="" coords="286,5,463,47"/>
 <area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="532,315,607,342"/>
 <area shape="rect" href="namespacemod__ard__phys.html#af84d58d7e8e4ab45fc22d8a2c0ef1511" title=" " alt="" coords="286,123,463,164"/>
 <area shape="rect" href="namespacemod__ard__phys.html#ace35bfd8a4726b89756634a95d3c3e4d" title=" " alt="" coords="279,188,470,229"/>
@@ -1091,7 +1091,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00591">591</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00590">590</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

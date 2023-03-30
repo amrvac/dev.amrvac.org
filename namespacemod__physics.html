@@ -170,8 +170,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:ae8aebc6b57c4c528fddc21ecdaf17e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48ebe8d7aa8fe9b4799db4bc1af1975b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#a48ebe8d7aa8fe9b4799db4bc1af1975b">dummy_add_source_geom</a> (qdt, ixIL, ixOL, wCT, w, x)</td></tr>
 <tr class="separator:a48ebe8d7aa8fe9b4799db4bc1af1975b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e15b7a9353c0e85a4bcc876e617bb4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#a53e15b7a9353c0e85a4bcc876e617bb4">dummy_add_source</a> (qdt, ixIL, ixOL, wCT, w, x, qsourcesplit, active, wCTprim)</td></tr>
-<tr class="separator:a53e15b7a9353c0e85a4bcc876e617bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b7eafacdf349498327f7c67d5a87918"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#a1b7eafacdf349498327f7c67d5a87918">dummy_add_source</a> (qdt, ixIL, ixOL, wCT, wCTprim, w, x, qsourcesplit, active)</td></tr>
+<tr class="separator:a1b7eafacdf349498327f7c67d5a87918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9213e958662387013ac07f086ff3f21"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#af9213e958662387013ac07f086ff3f21">dummy_check_w</a> (primitive, ixIL, ixOL, w, w_flag)</td></tr>
 <tr class="separator:af9213e958662387013ac07f086ff3f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad630a9ceff3e8decc0ca2c04fa15e256"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#ad630a9ceff3e8decc0ca2c04fa15e256">dummy_get_pthermal</a> (w, x, ixIL, ixOL, pth)</td></tr>
@@ -306,8 +306,8 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This module defines the procedures of a physics module. It contains function pointers for the various supported routines. An actual physics module has to set these pointers to its implementation of these routines. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a id="a53e15b7a9353c0e85a4bcc876e617bb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53e15b7a9353c0e85a4bcc876e617bb4">&#9670;&nbsp;</a></span>dummy_add_source()</h2>
+<a id="a1b7eafacdf349498327f7c67d5a87918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b7eafacdf349498327f7c67d5a87918">&#9670;&nbsp;</a></span>dummy_add_source()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,6 +351,12 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in)&#160;</td>
+          <td class="paramname"><em>wCTprim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(inout)&#160;</td>
           <td class="paramname"><em>w</em>, </td>
         </tr>
@@ -370,13 +376,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">logical, intent(inout)&#160;</td>
-          <td class="paramname"><em>active</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in), optional&#160;</td>
-          <td class="paramname"><em>wCTprim</em>&#160;</td>
+          <td class="paramname"><em>active</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -386,7 +386,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00463">463</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00462">462</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -452,7 +452,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00456">456</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00455">455</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -482,7 +482,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00497">497</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00495">495</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -498,7 +498,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00428">428</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00427">427</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -558,7 +558,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00476">476</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00474">474</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -588,7 +588,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00552">552</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00550">550</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -624,7 +624,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00546">546</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00544">544</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -684,7 +684,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00448">448</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00447">447</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -771,7 +771,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00524">524</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00522">522</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -837,7 +837,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00440">440</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00439">439</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -897,7 +897,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00486">486</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00484">484</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -954,7 +954,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00568">568</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00566">566</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -970,7 +970,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00425">425</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00424">424</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -1054,7 +1054,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00431">431</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00430">430</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -1120,7 +1120,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00515">515</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00513">513</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -1210,7 +1210,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00534">534</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00532">532</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -1236,7 +1236,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00503">503</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00501">501</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>
@@ -1252,14 +1252,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00345">345</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00344">344</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__physics_aea7f8deb14a3c301c4db010855407ce3_cgraph.png" border="0" usemap="#anamespacemod__physics_aea7f8deb14a3c301c4db010855407ce3_cgraph" alt=""/></div>
 <map name="anamespacemod__physics_aea7f8deb14a3c301c4db010855407ce3_cgraph" id="anamespacemod__physics_aea7f8deb14a3c301c4db010855407ce3_cgraph">
 <area shape="rect" title=" " alt="" coords="5,587,196,614"/>
-<area shape="rect" href="namespacemod__physics.html#a53e15b7a9353c0e85a4bcc876e617bb4" title=" " alt="" coords="249,5,415,47"/>
+<area shape="rect" href="namespacemod__physics.html#a1b7eafacdf349498327f7c67d5a87918" title=" " alt="" coords="249,5,415,47"/>
 <area shape="rect" href="namespacemod__physics.html#a48ebe8d7aa8fe9b4799db4bc1af1975b" title=" " alt="" coords="249,71,415,112"/>
 <area shape="rect" href="namespacemod__physics.html#a0c16dbee64a6667a0d86337bc7dce6bf" title=" " alt="" coords="249,136,415,177"/>
 <area shape="rect" href="namespacemod__physics.html#ac22202501f5cbeb12c46765f66769eb5" title=" " alt="" coords="249,201,415,243"/>
