@@ -11,7 +11,7 @@
 <area shape="rect" id="node10" href="$namespacemod__mhd__phys.html#a697edad8ffdc6976eb89a37326dbaa2b" title=" " alt="" coords="265,487,471,529"/>
 <area shape="rect" id="node11" href="$namespacemod__mhd__phys.html#a1647cb58218eadaf9c5724e053ef7a40" title="Add divB related sources to w within ixO corresponding to Powel." alt="" coords="265,553,471,594"/>
 <area shape="rect" id="node12" href="$namespacemod__mhd__phys.html#ac2540d1d3511903e1107277f88f4e009" title="Add resistive source to w within ixO Uses 5 point stencil (2 neighbours) in each direction,..." alt="" coords="247,619,489,645"/>
-<area shape="rect" id="node13" href="$namespacemod__mhd__phys.html#a0b043eacbdbddc8ecb0717a4ec2fdd9c" title="Source terms for semirelativistic MHD." alt="" coords="265,670,471,711"/>
+<area shape="rect" id="node13" href="$namespacemod__mhd__phys.html#a0b043eacbdbddc8ecb0717a4ec2fdd9c" title="Source terms for semirelativistic MHD Gombosi 2002 JCP 177, 176." alt="" coords="265,670,471,711"/>
 <area shape="rect" id="node14" href="$namespacemod__cak__force.html#a83fe70934132062bf7aec456aa93f530" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="292,735,444,777"/>
 <area shape="rect" id="node15" href="$namespacemod__gravity.html#ab20751e039ea3c70d106929d2940f853" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="289,801,447,842"/>
 <area shape="rect" id="node16" href="$namespacemod__mhd__phys.html#a9746c721818c851ea49eebea6477bb33" title=" " alt="" coords="261,866,475,907"/>
