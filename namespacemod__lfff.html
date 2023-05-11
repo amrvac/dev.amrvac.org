@@ -90,6 +90,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:ac604d9a61394c508966a54cb0d6de5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19aa7cd7bf6dff5b3dc4a7b12612c7c0"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#a19aa7cd7bf6dff5b3dc4a7b12612c7c0">get_potential_field_potential</a> (ixIL, ixOL, potential, x, zshift)</td></tr>
 <tr class="separator:a19aa7cd7bf6dff5b3dc4a7b12612c7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add184f5f6175190a880cc3543ef8cea2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#add184f5f6175190a880cc3543ef8cea2">get_potential_field_potential_sphere</a> (ixIL, x, potential, nth, nph, magnetogram, theta, phi, r_sphere)</td></tr>
+<tr class="separator:add184f5f6175190a880cc3543ef8cea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -244,6 +246,84 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00168">168</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+
+</div>
+</div>
+<a id="add184f5f6175190a880cc3543ef8cea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add184f5f6175190a880cc3543ef8cea2">&#9670;&nbsp;</a></span>get_potential_field_potential_sphere()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_lfff::get_potential_field_potential_sphere </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(ixi^s,1:ndim), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(ixi^s), intent(out)&#160;</td>
+          <td class="paramname"><em>potential</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>nth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>nph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(nth,nph), intent(in)&#160;</td>
+          <td class="paramname"><em>magnetogram</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(nth), intent(in)&#160;</td>
+          <td class="paramname"><em>theta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, dimension(nph), intent(in)&#160;</td>
+          <td class="paramname"><em>phi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">real*8, intent(in)&#160;</td>
+          <td class="paramname"><em>r_sphere</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00199">199</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
 
 </div>
 </div>

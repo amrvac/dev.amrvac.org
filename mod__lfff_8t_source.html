@@ -265,19 +265,65 @@ $(function() {
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    zk(ixo^s)=x(ixo^s,3)-xprobmin3+zshift</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    potential=0.d0</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="comment">! looping Bz0 pixels see equation (2)</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">do</span> ixp2=1,<a class="code" href="namespacemod__lfff.html#ab933f87ec30a5e5fe667265277f2e22f">nx2</a></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      <span class="keywordflow">do</span> ixp1=1,<a class="code" href="namespacemod__lfff.html#a57571732dd6f8862594f402d4d2fb0d3">nx1</a></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        bigr(ixo^s)=dsqrt((x(ixo^s,1)-<a class="code" href="namespacemod__lfff.html#aee4b83bf08dd16d1c4cb8501926ebdf9">xa1</a>(ixp1))**2+&amp;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                          (x(ixo^s,2)-<a class="code" href="namespacemod__lfff.html#ac46e4d8479397894718341a638add773">xa2</a>(ixp2))**2+&amp;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                          zk(ixo^s)**2)</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        potential(ixo^s)=potential(ixo^s)+0.5d0*<a class="code" href="namespacemod__lfff.html#a144c405acf9984ebc8327c875d55fee8">bz0</a>(ixp1,ixp2)/bigr*<a class="code" href="namespacemod__lfff.html#a072313a92a3f71f5554e1624f107e6fd">darea</a>/dpi</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="keywordflow">      end do</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keywordflow">    end do</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__lfff.html#a19aa7cd7bf6dff5b3dc4a7b12612c7c0">get_potential_field_potential</a></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacemod__lfff.html">mod_lfff</a></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="comment">!$OMP PARALLEL DO PRIVATE(bigr) REDUCTION(+:potential)</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="keywordflow">do</span> ixp2=1,<a class="code" href="namespacemod__lfff.html#ab933f87ec30a5e5fe667265277f2e22f">nx2</a></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      <span class="keywordflow">do</span> ixp1=1,<a class="code" href="namespacemod__lfff.html#a57571732dd6f8862594f402d4d2fb0d3">nx1</a></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        bigr(ixo^s)=dsqrt((x(ixo^s,1)-<a class="code" href="namespacemod__lfff.html#aee4b83bf08dd16d1c4cb8501926ebdf9">xa1</a>(ixp1))**2+&amp;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                          (x(ixo^s,2)-<a class="code" href="namespacemod__lfff.html#ac46e4d8479397894718341a638add773">xa2</a>(ixp2))**2+&amp;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                          zk(ixo^s)**2)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        potential(ixo^s)=potential(ixo^s)+0.5d0*<a class="code" href="namespacemod__lfff.html#a144c405acf9984ebc8327c875d55fee8">bz0</a>(ixp1,ixp2)/bigr*<a class="code" href="namespacemod__lfff.html#a072313a92a3f71f5554e1624f107e6fd">darea</a>/dpi</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keywordflow">      end do</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keywordflow">    end do</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="comment">!$OMP END PARALLEL DO</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__lfff.html#a19aa7cd7bf6dff5b3dc4a7b12612c7c0">get_potential_field_potential</a></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="namespacemod__lfff.html#add184f5f6175190a880cc3543ef8cea2">  199</a></span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacemod__lfff.html#add184f5f6175190a880cc3543ef8cea2">get_potential_field_potential_sphere</a>(ixI^L,x,potential,nth,nph,magnetogram,theta,phi,r_sphere)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="comment">! PURPOSE: </span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <span class="comment">! Calculation scalar potential of potential field given</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="comment">! Bz at photosphere (Schmidt 1964 NASSP). </span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="comment">! NOTE: Only works for spherical coordinates </span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="comment">! OUTPUT: potential</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: ixI^L,nth,nph</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    real*8, <span class="keywordtype">intent(in)</span> :: x(ixi^s,1:<a class="code" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>)</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">! magnetogram Br on photosphere</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    real*8, <span class="keywordtype">intent(in)</span> :: magnetogram(nth,nph)</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">! theta and phi grid of the photospheric magnetogram</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    real*8, <span class="keywordtype">intent(in)</span> :: theta(nth),phi(nph)</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="comment">! radius of photosphere</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    real*8, <span class="keywordtype">intent(in)</span> :: r_sphere</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    real*8, <span class="keywordtype">intent(out)</span> :: potential(ixi^s)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    real*8 :: area(nth),distance(ixi^s),dtheta_half,dphi,inv2pi</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">integer</span> :: ix1,ix2</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    potential=0.d0</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="comment">! assume uniformly discretized theta and phi</span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    dtheta_half=0.5d0*(theta(2)-theta(1))</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    dphi=phi(2)-phi(1)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    area(1:nth)=2.d0*r_sphere**2*sin(theta(1:nth))*sin(dtheta_half)*sin(dphi)</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    inv2pi=-1.d0/(2.d0*dpi)</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="comment">!$OMP PARALLEL DO PRIVATE(distance) REDUCTION(+:potential)</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">do</span> ix2=1,nph,2</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <span class="keywordflow">do</span> ix1=1,nth,2</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        distance(ixi^s)=sqrt(x(ixi^s,1)**2+r_sphere**2-2.d0*x(ixi^s,1)*r_sphere*&amp;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        (sin(x(ixi^s,2))*sin(theta(ix1))*cos(phi(ix2)-x(ixi^s,3))+cos(x(ixi^s,2))*&amp;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        cos(theta(ix1))))</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">where</span>(distance(ixi^s)/=0.d0)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;          distance(ixi^s)=1.d0/distance(ixi^s)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="keywordflow">        end where</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        potential(ixi^s)=potential(ixi^s)+inv2pi*magnetogram(ix1,ix2)*distance(ixi^s)*area(ix1)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keywordflow">      end do</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="keywordflow">    end do</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="comment">!$OMP END PARALLEL DO</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__lfff.html#add184f5f6175190a880cc3543ef8cea2">get_potential_field_potential_sphere</a></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;}</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacemod__lfff.html">mod_lfff</a></div>
 <div class="ttc" id="acomm__lib_8t_html_a49b49ea9ffbbadfe688e332921c4cddd"><div class="ttname"><a href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd">mpistop</a></div><div class="ttdeci">subroutine mpistop(message)</div><div class="ttdoc">Exit MPI-AMRVAC with an error message.</div><div class="ttdef"><b>Definition:</b> <a href="comm__lib_8t_source.html#l00193">comm_lib.t:194</a></div></div>
 <div class="ttc" id="anamespacemod__global__parameters_html"><div class="ttname"><a href="namespacemod__global__parameters.html">mod_global_parameters</a></div><div class="ttdoc">This module contains definitions of global parameters and variables and some generic functions/subrou...</div><div class="ttdef"><b>Definition:</b> <a href="mod__global__parameters_8t_source.html#l00004">mod_global_parameters.t:4</a></div></div>
+<div class="ttc" id="anamespacemod__global__parameters_html_a44dda3cb334ff384ee40e1797717cc38"><div class="ttname"><a href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">mod_global_parameters::ndim</a></div><div class="ttdeci">integer, parameter ndim</div><div class="ttdoc">Number of spatial dimensions for grid variables.</div><div class="ttdef"><b>Definition:</b> <a href="mod__global__parameters_8t_source.html#l00062">mod_global_parameters.t:62</a></div></div>
 <div class="ttc" id="anamespacemod__global__parameters_html_a5704f1c57aa09935d3491f65ad240861"><div class="ttname"><a href="namespacemod__global__parameters.html#a5704f1c57aa09935d3491f65ad240861">mod_global_parameters::icomm</a></div><div class="ttdeci">integer icomm</div><div class="ttdoc">The MPI communicator.</div><div class="ttdef"><b>Definition:</b> <a href="mod__global__parameters_8t_source.html#l00025">mod_global_parameters.t:25</a></div></div>
 <div class="ttc" id="anamespacemod__global__parameters_html_a605b2c8e7a386f644c7f8817421b6d67"><div class="ttname"><a href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mod_global_parameters::mype</a></div><div class="ttdeci">integer mype</div><div class="ttdoc">The rank of the current MPI task.</div><div class="ttdef"><b>Definition:</b> <a href="mod__global__parameters_8t_source.html#l00022">mod_global_parameters.t:22</a></div></div>
 <div class="ttc" id="anamespacemod__global__parameters_html_a701c9a9b2d5f02bb7c7a8181f09df2ae"><div class="ttname"><a href="namespacemod__global__parameters.html#a701c9a9b2d5f02bb7c7a8181f09df2ae">mod_global_parameters::ierrmpi</a></div><div class="ttdeci">integer ierrmpi</div><div class="ttdoc">A global MPI error return code.</div><div class="ttdef"><b>Definition:</b> <a href="mod__global__parameters_8t_source.html#l00028">mod_global_parameters.t:28</a></div></div>
@@ -291,6 +337,7 @@ $(function() {
 <div class="ttc" id="anamespacemod__lfff_html_ac46e4d8479397894718341a638add773"><div class="ttname"><a href="namespacemod__lfff.html#ac46e4d8479397894718341a638add773">mod_lfff::xa2</a></div><div class="ttdeci">double precision, dimension(:), allocatable, save xa2</div><div class="ttdef"><b>Definition:</b> <a href="mod__lfff_8t_source.html#l00033">mod_lfff.t:33</a></div></div>
 <div class="ttc" id="anamespacemod__lfff_html_ac604d9a61394c508966a54cb0d6de5b5"><div class="ttname"><a href="namespacemod__lfff.html#ac604d9a61394c508966a54cb0d6de5b5">mod_lfff::calc_lin_fff</a></div><div class="ttdeci">subroutine calc_lin_fff(ixIL, ixOL, Bf, x, alpha, zshift, idir)</div><div class="ttdef"><b>Definition:</b> <a href="mod__lfff_8t_source.html#l00100">mod_lfff.t:101</a></div></div>
 <div class="ttc" id="anamespacemod__lfff_html_aca4dc7187ff5b260ed012afb9809ae9f"><div class="ttname"><a href="namespacemod__lfff.html#aca4dc7187ff5b260ed012afb9809ae9f">mod_lfff::bzmax</a></div><div class="ttdeci">double precision, save bzmax</div><div class="ttdef"><b>Definition:</b> <a href="mod__lfff_8t_source.html#l00031">mod_lfff.t:31</a></div></div>
+<div class="ttc" id="anamespacemod__lfff_html_add184f5f6175190a880cc3543ef8cea2"><div class="ttname"><a href="namespacemod__lfff.html#add184f5f6175190a880cc3543ef8cea2">mod_lfff::get_potential_field_potential_sphere</a></div><div class="ttdeci">subroutine get_potential_field_potential_sphere(ixIL, x, potential, nth, nph, magnetogram, theta, phi, r_sphere)</div><div class="ttdef"><b>Definition:</b> <a href="mod__lfff_8t_source.html#l00199">mod_lfff.t:200</a></div></div>
 <div class="ttc" id="anamespacemod__lfff_html_aee4b83bf08dd16d1c4cb8501926ebdf9"><div class="ttname"><a href="namespacemod__lfff.html#aee4b83bf08dd16d1c4cb8501926ebdf9">mod_lfff::xa1</a></div><div class="ttdeci">double precision, dimension(:), allocatable, save xa1</div><div class="ttdef"><b>Definition:</b> <a href="mod__lfff_8t_source.html#l00033">mod_lfff.t:33</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
