@@ -217,6 +217,10 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:aa5f28cce5fcaba2c51de288ae406b6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af299ec05dc0bd3fe76a9341ce4472946"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#af299ec05dc0bd3fe76a9341ce4472946">comm_particles_global</a> ()</td></tr>
 <tr class="separator:af299ec05dc0bd3fe76a9341ce4472946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a466e15f6074b3ae16a435655cbb4adf1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#a466e15f6074b3ae16a435655cbb4adf1">comm_particles_old</a> ()</td></tr>
+<tr class="separator:a466e15f6074b3ae16a435655cbb4adf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db6cae9ccf1676b88ab61611e341ed2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#a0db6cae9ccf1676b88ab61611e341ed2">comm_particles_global_old</a> ()</td></tr>
+<tr class="separator:a0db6cae9ccf1676b88ab61611e341ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8ea9400a27c2e5e0c19c8a4d3b620e8"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#ab8ea9400a27c2e5e0c19c8a4d3b620e8">apply_periodb</a> (<a class="el" href="namespacemod__particle__base.html#aa8a738f61f2ee57b8ef6415e36c3d360">particle</a>, igrid_particle, ipe_particle, BC_applied)</td></tr>
 <tr class="separator:ab8ea9400a27c2e5e0c19c8a4d3b620e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43281fc1a5a02b8bbe9621cad0e2e605"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#a43281fc1a5a02b8bbe9621cad0e2e605">destroy_particles</a> (destroy_n_particles_mype, particle_index_to_be_destroyed)</td></tr>
@@ -491,7 +495,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01931">1931</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02246">2246</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -522,13 +526,14 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__particle__base_aa5f28cce5fcaba2c51de288ae406b6d7_cgraph.png" border="0" usemap="#anamespacemod__particle__base_aa5f28cce5fcaba2c51de288ae406b6d7_cgraph" alt=""/></div>
 <map name="anamespacemod__particle__base_aa5f28cce5fcaba2c51de288ae406b6d7_cgraph" id="anamespacemod__particle__base_aa5f28cce5fcaba2c51de288ae406b6d7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,152,159,193"/>
+<area shape="rect" title=" " alt="" coords="5,181,159,223"/>
 <area shape="rect" href="namespacemod__particle__base.html#ab8ea9400a27c2e5e0c19c8a4d3b620e8" title=" " alt="" coords="232,5,385,47"/>
 <area shape="rect" href="namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="483,47,637,88"/>
 <area shape="rect" href="namespacemod__particle__base.html#a43281fc1a5a02b8bbe9621cad0e2e605" title="clean up destroyed particles on all cores" alt="" coords="232,123,385,164"/>
 <area shape="rect" href="namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="459,134,661,190"/>
-<area shape="rect" href="namespacemod__particle__base.html#a24d3f7d76b59c8f7954ad59258a02b32" title="Quick check if particle is still in igrid." alt="" coords="232,240,385,281"/>
-<area shape="rect" href="namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="207,306,411,362"/>
+<area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="271,239,346,266"/>
+<area shape="rect" href="namespacemod__particle__base.html#a24d3f7d76b59c8f7954ad59258a02b32" title="Quick check if particle is still in igrid." alt="" coords="232,291,385,332"/>
+<area shape="rect" href="namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="207,357,411,413"/>
 </map>
 </div>
 
@@ -546,16 +551,74 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01831">1831</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01799">1799</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__particle__base_af299ec05dc0bd3fe76a9341ce4472946_cgraph.png" border="0" usemap="#anamespacemod__particle__base_af299ec05dc0bd3fe76a9341ce4472946_cgraph" alt=""/></div>
 <map name="anamespacemod__particle__base_af299ec05dc0bd3fe76a9341ce4472946_cgraph" id="anamespacemod__particle__base_af299ec05dc0bd3fe76a9341ce4472946_cgraph">
-<area shape="rect" title=" " alt="" coords="5,79,179,120"/>
+<area shape="rect" title=" " alt="" coords="5,97,179,139"/>
 <area shape="rect" href="namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="252,5,405,47"/>
-<area shape="rect" href="namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="227,71,430,127"/>
-<area shape="rect" href="namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="227,151,431,207"/>
+<area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="291,71,366,98"/>
+<area shape="rect" href="namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="227,122,430,178"/>
+<area shape="rect" href="namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="227,202,431,258"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0db6cae9ccf1676b88ab61611e341ed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db6cae9ccf1676b88ab61611e341ed2">&#9670;&nbsp;</a></span>comm_particles_global_old()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_particle_base::comm_particles_global_old</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02146">2146</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__particle__base_a0db6cae9ccf1676b88ab61611e341ed2_cgraph.png" border="0" usemap="#anamespacemod__particle__base_a0db6cae9ccf1676b88ab61611e341ed2_cgraph" alt=""/></div>
+<map name="anamespacemod__particle__base_a0db6cae9ccf1676b88ab61611e341ed2_cgraph" id="anamespacemod__particle__base_a0db6cae9ccf1676b88ab61611e341ed2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,79,205,120"/>
+<area shape="rect" href="namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="279,5,432,47"/>
+<area shape="rect" href="namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="254,71,457,127"/>
+<area shape="rect" href="namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="253,151,457,207"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a466e15f6074b3ae16a435655cbb4adf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a466e15f6074b3ae16a435655cbb4adf1">&#9670;&nbsp;</a></span>comm_particles_old()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_particle_base::comm_particles_old</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01934">1934</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__particle__base_a466e15f6074b3ae16a435655cbb4adf1_cgraph.png" border="0" usemap="#anamespacemod__particle__base_a466e15f6074b3ae16a435655cbb4adf1_cgraph" alt=""/></div>
+<map name="anamespacemod__particle__base_a466e15f6074b3ae16a435655cbb4adf1_cgraph" id="anamespacemod__particle__base_a466e15f6074b3ae16a435655cbb4adf1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,152,159,193"/>
+<area shape="rect" href="namespacemod__particle__base.html#ab8ea9400a27c2e5e0c19c8a4d3b620e8" title=" " alt="" coords="232,5,385,47"/>
+<area shape="rect" href="namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="483,47,637,88"/>
+<area shape="rect" href="namespacemod__particle__base.html#a43281fc1a5a02b8bbe9621cad0e2e605" title="clean up destroyed particles on all cores" alt="" coords="232,123,385,164"/>
+<area shape="rect" href="namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="459,134,661,190"/>
+<area shape="rect" href="namespacemod__particle__base.html#a24d3f7d76b59c8f7954ad59258a02b32" title="Quick check if particle is still in igrid." alt="" coords="232,240,385,281"/>
+<area shape="rect" href="namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="207,306,411,362"/>
 </map>
 </div>
 
@@ -634,7 +697,7 @@ Here is the call graph for this function:</div>
 
 <p>clean up destroyed particles on all cores </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01968">1968</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02283">2283</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1024,12 +1087,12 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__particle__base_a6ff9e2fbe7d77c6678c39ec52c521d0d_cgraph.png" border="0" usemap="#anamespacemod__particle__base_a6ff9e2fbe7d77c6678c39ec52c521d0d_cgraph" alt=""/></div>
 <map name="anamespacemod__particle__base_a6ff9e2fbe7d77c6678c39ec52c521d0d_cgraph" id="anamespacemod__particle__base_a6ff9e2fbe7d77c6678c39ec52c521d0d_cgraph">
-<area shape="rect" title="Let particles evolve in time. The routine also handles grid variables and output." alt="" coords="5,201,159,243"/>
+<area shape="rect" title="Let particles evolve in time. The routine also handles grid variables and output." alt="" coords="5,188,159,229"/>
 <area shape="rect" href="namespacemod__particle__base.html#abe0a898715bc93553b26b9ff359f2e54" title="Routine handles the particle evolution." alt="" coords="217,5,370,47"/>
 <area shape="rect" href="namespacemod__particle__base.html#af299ec05dc0bd3fe76a9341ce4472946" title=" " alt="" coords="207,71,380,112"/>
-<area shape="rect" href="namespacemod__particle__base.html#a799d41e9927b073958394e6d90d2e3ee" title="Deallocate grid variables for particles." alt="" coords="217,136,370,177"/>
-<area shape="rect" href="namespacemod__particle__base.html#ae95dfec331c76d35b90c6210a9b85f58" title="Initialize grid variables for particles." alt="" coords="217,201,370,243"/>
-<area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="256,267,331,294"/>
+<area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="428,107,503,134"/>
+<area shape="rect" href="namespacemod__particle__base.html#a799d41e9927b073958394e6d90d2e3ee" title="Deallocate grid variables for particles." alt="" coords="217,188,370,229"/>
+<area shape="rect" href="namespacemod__particle__base.html#ae95dfec331c76d35b90c6210a9b85f58" title="Initialize grid variables for particles." alt="" coords="217,253,370,295"/>
 <area shape="rect" href="namespacemod__particle__base.html#a83e06128a50d73e09215a45b2f05080e" title=" " alt="" coords="217,319,370,360"/>
 <area shape="rect" href="namespacemod__particle__base.html#a22d691333cb182e116559e4043a16590" title=" " alt="" coords="213,384,373,425"/>
 </map>
@@ -1929,7 +1992,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02019">2019</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02334">2334</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1949,7 +2012,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02009">2009</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02324">2324</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -2003,7 +2066,7 @@ Here is the call graph for this function:</div>
 <map name="anamespacemod__particle__base_af50d04610884666f8d34765e34cb644f_cgraph" id="anamespacemod__particle__base_af50d04610884666f8d34765e34cb644f_cgraph">
 <area shape="rect" title=" " alt="" coords="5,64,185,105"/>
 <area shape="rect" href="namespacemod__particle__base.html#af299ec05dc0bd3fe76a9341ce4472946" title=" " alt="" coords="233,5,407,47"/>
-<area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="283,71,357,98"/>
+<area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="455,42,529,69"/>
 <area shape="rect" href="namespacemod__particle__base.html#a8d2abb7efcc7f290bc4e3f92451a8250" title=" " alt="" coords="243,123,397,164"/>
 </map>
 </div>
