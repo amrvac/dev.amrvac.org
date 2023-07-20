@@ -1,0 +1,5 @@
+<map id="mod_srhd_phys::srhd_get_auxiliary" name="mod_srhd_phys::srhd_get_auxiliary">
+<area shape="rect" id="node1" title="Compute auxiliary variables lfac and xi from a conservative state using srhd_con2prim to calculate en..." alt="" coords="5,23,165,65"/>
+<area shape="rect" id="node2" href="$namespacemod__srhd__phys.html#ac00f15c977eaefa0523d182dc55f4315" title="con2prim: (D,S**2,tau) &#45;&#45;&gt; compute auxiliaries lfac and xi" alt="" coords="213,5,436,32"/>
+<area shape="rect" id="node3" href="$comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="287,56,362,83"/>
+</map>

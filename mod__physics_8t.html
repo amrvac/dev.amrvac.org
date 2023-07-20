@@ -135,6 +135,10 @@ Data Types</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__physics_1_1sub__get__pthermal.html">mod_physics::sub_get_pthermal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__physics_1_1sub__get__auxiliary.html">mod_physics::sub_get_auxiliary</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__physics_1_1sub__get__auxiliary__prim.html">mod_physics::sub_get_auxiliary_prim</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__physics_1_1sub__get__tgas.html">mod_physics::sub_get_tgas</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__physics_1_1sub__get__trad.html">mod_physics::sub_get_trad</a></td></tr>
@@ -186,6 +190,10 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:af9213e958662387013ac07f086ff3f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad630a9ceff3e8decc0ca2c04fa15e256"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#ad630a9ceff3e8decc0ca2c04fa15e256">mod_physics::dummy_get_pthermal</a> (w, x, ixIL, ixOL, pth)</td></tr>
 <tr class="separator:ad630a9ceff3e8decc0ca2c04fa15e256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac687637834e4686478b211a05966c044"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#ac687637834e4686478b211a05966c044">mod_physics::dummy_get_auxiliary</a> (ixIL, ixOL, w, x)</td></tr>
+<tr class="separator:ac687637834e4686478b211a05966c044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae86d0ed9cda4e2eb8d72eabbeb400ddb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#ae86d0ed9cda4e2eb8d72eabbeb400ddb">mod_physics::dummy_get_auxiliary_prim</a> (ixIL, ixOL, w)</td></tr>
+<tr class="separator:ae86d0ed9cda4e2eb8d72eabbeb400ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c16dbee64a6667a0d86337bc7dce6bf"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#a0c16dbee64a6667a0d86337bc7dce6bf">mod_physics::dummy_boundary_adjust</a> (igrid, psb)</td></tr>
 <tr class="separator:a0c16dbee64a6667a0d86337bc7dce6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad95e43868a4a0bd787b8953adf6b97f3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#ad95e43868a4a0bd787b8953adf6b97f3">mod_physics::dummy_write_info</a> (fh)</td></tr>
@@ -312,6 +320,10 @@ Variables</h2></td></tr>
 <tr class="separator:a508fedcf0d20e73db468b7a05778a325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6220bffb8430e4125d340bb12124b3fc"><td class="memItemLeft" align="right" valign="top">procedure(sub_update_temperature), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#a6220bffb8430e4125d340bb12124b3fc">mod_physics::phys_update_temperature</a> =&gt; null()</td></tr>
 <tr class="separator:a6220bffb8430e4125d340bb12124b3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8363ff077d45953128c278bed97d43c0"><td class="memItemLeft" align="right" valign="top">procedure(sub_get_auxiliary), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#a8363ff077d45953128c278bed97d43c0">mod_physics::phys_get_auxiliary</a> =&gt; null()</td></tr>
+<tr class="separator:a8363ff077d45953128c278bed97d43c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8834df44c87ecf2a57755b8af7620b0a"><td class="memItemLeft" align="right" valign="top">procedure(sub_get_auxiliary_prim), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physics.html#a8834df44c87ecf2a57755b8af7620b0a">mod_physics::phys_get_auxiliary_prim</a> =&gt; null()</td></tr>
+<tr class="separator:a8834df44c87ecf2a57755b8af7620b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,0 +1,23 @@
+<map id="mod_srhd_phys::srhd_phys_init" name="mod_srhd_phys::srhd_phys_init">
+<area shape="rect" id="node1" title="Initialize the module." alt="" coords="5,541,165,583"/>
+<area shape="rect" id="node2" href="$comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="683,183,757,210"/>
+<area shape="rect" id="node3" href="$namespacemod__particles.html#a7a89b126b34bb788a3911955880ddd8f" title="Initialize particle data and parameters." alt="" coords="428,403,635,430"/>
+<area shape="rect" id="node4" href="$namespacemod__srhd__phys.html#a4a2f73ca2434854da6e32d80f66b1233" title="dummy addsource subroutine" alt="" coords="217,743,377,784"/>
+<area shape="rect" id="node5" href="$namespacemod__srhd__phys.html#ae85d9d681e873717dcaf01d1572246c1" title="Add geometrical source terms to w." alt="" coords="217,239,377,280"/>
+<area shape="rect" id="node6" href="$namespacemod__srhd__phys.html#a278fbbe40cb78d60e092f5aad3de8d18" title="Compute auxiliary variables lfac and xi from a conservative state using srhd_con2prim to calculate en..." alt="" coords="451,176,611,217"/>
+<area shape="rect" id="node7" href="$namespacemod__srhd__phys.html#a28487e7e2a29dad0ed770060d6c2200b" title="Calculate thermal pressure p within ixO^L must follow after update conservative with auxiliaries." alt="" coords="451,245,611,287"/>
+<area shape="rect" id="node8" href="$namespacemod__srhd__phys.html#a85fe93ea83d32d065f99ec09575158cc" title="Calculate v vector from conservatives." alt="" coords="451,320,611,361"/>
+<area shape="rect" id="node9" href="$namespacemod__srhd__phys.html#abb45942fb4cd6be73df6678919690885" title=" " alt="" coords="451,476,611,517"/>
+<area shape="rect" id="node10" href="$namespacemod__srhd__phys.html#ae21c3cfd80b98d7df197106a73137e90" title="Returns logical argument flag T where values are not ok." alt="" coords="451,657,611,699"/>
+<area shape="rect" id="node11" href="$namespacemod__srhd__phys.html#ae53b637cd085f8fd0033ce4bf89de556" title=" " alt="" coords="217,808,377,849"/>
+<area shape="rect" id="node12" href="$namespacemod__srhd__phys.html#a59a070edd7d0842fff1432984b4173c3" title="Set auxiliary variables lfac and xi from a primitive state only used when handle_small_values average..." alt="" coords="451,567,611,608"/>
+<area shape="rect" id="node13" href="$namespacemod__srhd__phys.html#acc065008ebc7800f97541a045508c3f8" title="Estimating bounds for the minimum and maximum signal velocities here we will not use Hspeed at all (o..." alt="" coords="217,457,377,499"/>
+<area shape="rect" id="node14" href="$namespacemod__srhd__phys.html#a2156c0fe22d98892e455f7a8f0943c40" title="Calculate cmax_idim within ixO^L used especially for setdt CFL limit." alt="" coords="217,873,377,915"/>
+<area shape="rect" id="node15" href="$namespacemod__srhd__phys.html#aa6bd8ce3286eb48fc1682a6d20fec16b" title="dummy get_dt subroutine" alt="" coords="217,939,377,980"/>
+<area shape="rect" id="node16" href="$namespacemod__srhd__phys.html#a06ae463edcec43efccc08e0ba70fb509" title="Calculate fluxes within ixO^L." alt="" coords="217,1004,377,1045"/>
+<area shape="rect" id="node17" href="$namespacemod__srhd__phys.html#aa5d59dfaf9b5a358b34bfbc0f3eb049d" title="handles bootstrapping" alt="" coords="213,625,380,667"/>
+<area shape="rect" id="node18" href="$namespacemod__srhd__phys.html#a12e343be8572940edc62ed4a1ee490ff" title=" " alt="" coords="451,5,611,47"/>
+<area shape="rect" id="node19" href="$namespacemod__srhd__phys.html#a7476f6153a7231db18f999084ec129a4" title="Transform primitive variables into conservative ones." alt="" coords="217,1069,377,1111"/>
+<area shape="rect" id="node20" href="$namespacemod__srhd__phys.html#a9758c1007bb3ac71581e6494f7690948" title="Transform conservative variables into primitive ones." alt="" coords="217,173,377,215"/>
+<area shape="rect" id="node21" href="$namespacemod__srhd__phys.html#a20efad8b66a9c32b98266fef2eef0147" title="Write this module&#39;s parameters to a snapshot." alt="" coords="217,1135,377,1176"/>
+</map>
