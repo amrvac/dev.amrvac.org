@@ -1052,7 +1052,7 @@ $(function() {
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;    <a class="code" href="namespacemod__particle__base.html#aaf063a0b45a8e523c163d101fdb1419e">vp</a> = sqrt(sum(v(:)**2))</div>
 <div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160; </div>
 <div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;    dt_cfl0    = dxmin / max(<a class="code" href="namespacemod__particle__base.html#aaf063a0b45a8e523c163d101fdb1419e">vp</a>, smalldouble)</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    dt_cfl_ap0 = uparcfl * abs(max(abs(y(<a class="code" href="namespacemod__global__parameters.html#a6d65136b05163940551f4704a2dc13b8">ndir</a>+1)),uparmin) / max(ap0, smalldouble))</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;    dt_cfl_ap0 = uparcfl * abs(max(abs(y(<a class="code" href="namespacemod__global__parameters.html#a6d65136b05163940551f4704a2dc13b8">ndir</a>+1)),uparmin) / max(abs(ap0), smalldouble))</div>
 <div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;    <span class="comment">!dt_cfl_ap0 = min(dt_cfl_ap0, uparcfl * sqrt(abs(unit_length*dxmin/(ap0+smalldouble))) )</span></div>
 <div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160; </div>
 <div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;    <span class="comment">! make an Euler step with the proposed timestep:</span></div>
@@ -1080,7 +1080,7 @@ $(function() {
 <div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;    <a class="code" href="namespacemod__particle__base.html#aaf063a0b45a8e523c163d101fdb1419e">vp</a> = sqrt(sum(v(:)**2))</div>
 <div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160; </div>
 <div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;    dt_cfl1    = dxmin / max(<a class="code" href="namespacemod__particle__base.html#aaf063a0b45a8e523c163d101fdb1419e">vp</a>, smalldouble)</div>
-<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;    dt_cfl_ap1 = uparcfl * abs(max(abs(y(<a class="code" href="namespacemod__global__parameters.html#a6d65136b05163940551f4704a2dc13b8">ndir</a>+1)),uparmin) / max(ap1, smalldouble))</div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;    dt_cfl_ap1 = uparcfl * abs(max(abs(y(<a class="code" href="namespacemod__global__parameters.html#a6d65136b05163940551f4704a2dc13b8">ndir</a>+1)),uparmin) / max(abs(ap1), smalldouble))</div>
 <div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;    <span class="comment">!dt_cfl_ap1 = min(dt_cfl_ap1, uparcfl * sqrt(abs(unit_length*dxmin/(ap1+smalldouble))) )</span></div>
 <div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160; </div>
 <div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;    dt_tmp = min(dt_euler, dt_cfl1, dt_cfl_ap1)</div>
