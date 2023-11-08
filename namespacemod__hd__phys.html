@@ -160,11 +160,11 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a257f3d24264205d1fdbd989c0661dc72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1833998a00dd467ed9fb68de9c126299"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a1833998a00dd467ed9fb68de9c126299">hd_get_flux</a> (wC, w, x, ixIL, ixOL, idim, f)</td></tr>
 <tr class="separator:a1833998a00dd467ed9fb68de9c126299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ac268fb6e9fcf9553781e51eddfcdf6"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a4ac268fb6e9fcf9553781e51eddfcdf6">hd_add_source_geom</a> (qdt, ixIL, ixOL, wCT, w, x)</td></tr>
-<tr class="memdesc:a4ac268fb6e9fcf9553781e51eddfcdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add geometrical source terms to w.  <a href="namespacemod__hd__phys.html#a4ac268fb6e9fcf9553781e51eddfcdf6">More...</a><br /></td></tr>
-<tr class="separator:a4ac268fb6e9fcf9553781e51eddfcdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6239346f3aeda236a95699ca985aa27f"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a6239346f3aeda236a95699ca985aa27f">hd_add_source</a> (qdt, ixIL, ixOL, wCT, wCTprim, w, x, qsourcesplit, active)</td></tr>
-<tr class="separator:a6239346f3aeda236a95699ca985aa27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24de3cf866881bb2e9fa57a4c88c982c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a24de3cf866881bb2e9fa57a4c88c982c">hd_add_source_geom</a> (qdt, dtfactor, ixIL, ixOL, wCT, w, x)</td></tr>
+<tr class="memdesc:a24de3cf866881bb2e9fa57a4c88c982c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add geometrical source terms to w.  <a href="namespacemod__hd__phys.html#a24de3cf866881bb2e9fa57a4c88c982c">More...</a><br /></td></tr>
+<tr class="separator:a24de3cf866881bb2e9fa57a4c88c982c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59505d7b6ed147a198a52134bf30bab1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a59505d7b6ed147a198a52134bf30bab1">hd_add_source</a> (qdt, dtfactor, ixIL, ixOL, wCT, wCTprim, w, x, qsourcesplit, active)</td></tr>
+<tr class="separator:a59505d7b6ed147a198a52134bf30bab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67c24f3df7b4256f045d0486be021a75"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a67c24f3df7b4256f045d0486be021a75">hd_get_dt</a> (w, ixIL, ixOL, dtnew, dxD, x)</td></tr>
 <tr class="separator:a67c24f3df7b4256f045d0486be021a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb55f3a4ddbad1460eece9c6d1624eaf"><td class="memItemLeft" align="right" valign="top">double precision function, dimension(ixo^s), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#aeb55f3a4ddbad1460eece9c6d1624eaf">hd_kin_en</a> (w, ixIL, ixOL, inv_rho)</td></tr>
@@ -340,8 +340,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a6239346f3aeda236a95699ca985aa27f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6239346f3aeda236a95699ca985aa27f">&#9670;&nbsp;</a></span>hd_add_source()</h2>
+<a id="a59505d7b6ed147a198a52134bf30bab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59505d7b6ed147a198a52134bf30bab1">&#9670;&nbsp;</a></span>hd_add_source()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,6 +351,12 @@ Here is the call graph for this function:</div>
           <td>(</td>
           <td class="paramtype">double precision, intent(in)&#160;</td>
           <td class="paramname"><em>qdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>dtfactor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -424,8 +430,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__hd__phys_a6239346f3aeda236a95699ca985aa27f_cgraph.png" border="0" usemap="#anamespacemod__hd__phys_a6239346f3aeda236a95699ca985aa27f_cgraph" alt=""/></div>
-<map name="anamespacemod__hd__phys_a6239346f3aeda236a95699ca985aa27f_cgraph" id="anamespacemod__hd__phys_a6239346f3aeda236a95699ca985aa27f_cgraph">
+<div class="center"><img src="namespacemod__hd__phys_a59505d7b6ed147a198a52134bf30bab1_cgraph.png" border="0" usemap="#anamespacemod__hd__phys_a59505d7b6ed147a198a52134bf30bab1_cgraph" alt=""/></div>
+<map name="anamespacemod__hd__phys_a59505d7b6ed147a198a52134bf30bab1_cgraph" id="anamespacemod__hd__phys_a59505d7b6ed147a198a52134bf30bab1_cgraph">
 <area shape="rect" title=" " alt="" coords="5,169,172,211"/>
 <area shape="rect" href="namespacemod__cak__force.html#a83fe70934132062bf7aec456aa93f530" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="238,5,390,47"/>
 <area shape="rect" href="namespacemod__dust.html#a63222be92b15ca739af19cd425247e3b" title="w[iw]= w[iw]+qdt*S[wCT, x] where S is the source based on wCT within ixO" alt="" coords="237,71,391,112"/>
@@ -438,8 +444,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a4ac268fb6e9fcf9553781e51eddfcdf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ac268fb6e9fcf9553781e51eddfcdf6">&#9670;&nbsp;</a></span>hd_add_source_geom()</h2>
+<a id="a24de3cf866881bb2e9fa57a4c88c982c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24de3cf866881bb2e9fa57a4c88c982c">&#9670;&nbsp;</a></span>hd_add_source_geom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,6 +455,12 @@ Here is the call graph for this function:</div>
           <td>(</td>
           <td class="paramtype">double precision, intent(in)&#160;</td>
           <td class="paramname"><em>qdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>dtfactor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -510,12 +522,12 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__hd__phys_a4ac268fb6e9fcf9553781e51eddfcdf6_cgraph.png" border="0" usemap="#anamespacemod__hd__phys_a4ac268fb6e9fcf9553781e51eddfcdf6_cgraph" alt=""/></div>
-<map name="anamespacemod__hd__phys_a4ac268fb6e9fcf9553781e51eddfcdf6_cgraph" id="anamespacemod__hd__phys_a4ac268fb6e9fcf9553781e51eddfcdf6_cgraph">
+<div class="center"><img src="namespacemod__hd__phys_a24de3cf866881bb2e9fa57a4c88c982c_cgraph.png" border="0" usemap="#anamespacemod__hd__phys_a24de3cf866881bb2e9fa57a4c88c982c_cgraph" alt=""/></div>
+<map name="anamespacemod__hd__phys_a24de3cf866881bb2e9fa57a4c88c982c_cgraph" id="anamespacemod__hd__phys_a24de3cf866881bb2e9fa57a4c88c982c_cgraph">
 <area shape="rect" title="Add geometrical source terms to w." alt="" coords="5,97,172,139"/>
 <area shape="rect" href="namespacemod__hd__phys.html#aa893373436eb62993cc188e9005870c8" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="220,5,384,47"/>
 <area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="432,105,507,131"/>
-<area shape="rect" href="namespacemod__rotating__frame.html#a2ff601f629ea6c87c1be3b513b5474c9" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="223,122,381,178"/>
+<area shape="rect" href="namespacemod__rotating__frame.html#a2c66211145083d9dc744d39d837b74ed" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="223,122,381,178"/>
 <area shape="rect" href="namespacemod__viscosity.html#a992638ce7fbbbc28f36a51e4a6d51835" title=" " alt="" coords="227,203,377,244"/>
 </map>
 </div>
@@ -2070,10 +2082,10 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="588,395,663,422"/>
 <area shape="rect" href="namespacemod__dust.html#ae39df6d084f2ff5bd3e9ff6408cbd39c" title=" " alt="" coords="293,939,443,966"/>
 <area shape="rect" href="namespacemod__gravity.html#ac77da47869e83fdec592fa926333722c" title="Initialize the module." alt="" coords="275,421,461,447"/>
-<area shape="rect" href="namespacemod__hd__phys.html#a6239346f3aeda236a95699ca985aa27f" title=" " alt="" coords="285,823,451,864"/>
+<area shape="rect" href="namespacemod__hd__phys.html#a59505d7b6ed147a198a52134bf30bab1" title=" " alt="" coords="285,823,451,864"/>
 <area shape="rect" href="namespacemod__hd__phys.html#af250d284c660c1a8c289f8b1a99bef49" title=" " alt="" coords="531,823,719,864"/>
 <area shape="rect" href="namespacemod__hd__phys.html#aa893373436eb62993cc188e9005870c8" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="788,713,952,755"/>
-<area shape="rect" href="namespacemod__hd__phys.html#a4ac268fb6e9fcf9553781e51eddfcdf6" title="Add geometrical source terms to w." alt="" coords="285,655,451,696"/>
+<area shape="rect" href="namespacemod__hd__phys.html#a24de3cf866881bb2e9fa57a4c88c982c" title="Add geometrical source terms to w." alt="" coords="285,655,451,696"/>
 <area shape="rect" href="namespacemod__hd__phys.html#a0464902bc4be34094c08fafc7abf3488" title=" " alt="" coords="277,472,459,513"/>
 <area shape="rect" href="namespacemod__hd__phys.html#a4138044bc4c10294eea9cdde1e533d96" title="Returns logical argument flag where values are ok." alt="" coords="771,1019,969,1046"/>
 <area shape="rect" href="namespacemod__hd__phys.html#a472abc14b625f0456c2bf00e9d9fd63c" title="Transform total energy to internal energy." alt="" coords="273,1158,463,1185"/>

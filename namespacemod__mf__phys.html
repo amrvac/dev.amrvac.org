@@ -123,9 +123,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a891ceb8d3185e1df2b98270bfc1d2083"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mf__phys.html#a891ceb8d3185e1df2b98270bfc1d2083">mf_velocity_update</a> (qt, psa)</td></tr>
 <tr class="memdesc:a891ceb8d3185e1df2b98270bfc1d2083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add global source terms to update frictional velocity on complete domain.  <a href="namespacemod__mf__phys.html#a891ceb8d3185e1df2b98270bfc1d2083">More...</a><br /></td></tr>
 <tr class="separator:a891ceb8d3185e1df2b98270bfc1d2083"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f7dcb91d15eca5f61d26a159553c661"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mf__phys.html#a3f7dcb91d15eca5f61d26a159553c661">mf_add_source</a> (qdt, ixIL, ixOL, wCT, wCTprim, w, x, qsourcesplit, active)</td></tr>
-<tr class="memdesc:a3f7dcb91d15eca5f61d26a159553c661"><td class="mdescLeft">&#160;</td><td class="mdescRight">w[iws]=w[iws]+qdt*S[iws,wCT] where S is the source based on wCT within ixO  <a href="namespacemod__mf__phys.html#a3f7dcb91d15eca5f61d26a159553c661">More...</a><br /></td></tr>
-<tr class="separator:a3f7dcb91d15eca5f61d26a159553c661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cbee5aeb3ec1f5bc7d73c5e8eabab19"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mf__phys.html#a8cbee5aeb3ec1f5bc7d73c5e8eabab19">mf_add_source</a> (qdt, dtfactor, ixIL, ixOL, wCT, wCTprim, w, x, qsourcesplit, active)</td></tr>
+<tr class="memdesc:a8cbee5aeb3ec1f5bc7d73c5e8eabab19"><td class="mdescLeft">&#160;</td><td class="mdescRight">w[iws]=w[iws]+qdt*S[iws,wCT] where S is the source based on wCT within ixO  <a href="namespacemod__mf__phys.html#a8cbee5aeb3ec1f5bc7d73c5e8eabab19">More...</a><br /></td></tr>
+<tr class="separator:a8cbee5aeb3ec1f5bc7d73c5e8eabab19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0720a3988edda4012d42ae24469fba97"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mf__phys.html#a0720a3988edda4012d42ae24469fba97">frictional_velocity</a> (w, x, ixIL, ixOL)</td></tr>
 <tr class="separator:a0720a3988edda4012d42ae24469fba97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8363168123393c35abf5027260a8dc20"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mf__phys.html#a8363168123393c35abf5027260a8dc20">add_source_res1</a> (qdt, ixIL, ixOL, wCT, w, x)</td></tr>
@@ -158,8 +158,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a95fccc26e8e0deffb81122c9e3027cc4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mf__phys.html#a95fccc26e8e0deffb81122c9e3027cc4">mf_get_dt</a> (w, ixIL, ixOL, dtnew, dxD, x)</td></tr>
 <tr class="memdesc:a95fccc26e8e0deffb81122c9e3027cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">If resistivity is not zero, check diffusion time limit for dt.  <a href="namespacemod__mf__phys.html#a95fccc26e8e0deffb81122c9e3027cc4">More...</a><br /></td></tr>
 <tr class="separator:a95fccc26e8e0deffb81122c9e3027cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e4dc78b3e757463416f11d121809d67"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mf__phys.html#a3e4dc78b3e757463416f11d121809d67">mf_add_source_geom</a> (qdt, ixIL, ixOL, wCT, w, x)</td></tr>
-<tr class="separator:a3e4dc78b3e757463416f11d121809d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31522bbc4f9c6a2afabba1baa3ac7762"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mf__phys.html#a31522bbc4f9c6a2afabba1baa3ac7762">mf_add_source_geom</a> (qdt, dtfactor, ixIL, ixOL, wCT, w, x)</td></tr>
+<tr class="separator:a31522bbc4f9c6a2afabba1baa3ac7762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabbe9fe15d41644d0213461c003e38df"><td class="memItemLeft" align="right" valign="top">double precision function, dimension(ixo^s), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mf__phys.html#aabbe9fe15d41644d0213461c003e38df">mf_mag_en_all</a> (w, ixIL, ixOL)</td></tr>
 <tr class="memdesc:aabbe9fe15d41644d0213461c003e38df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute 2 times total magnetic energy.  <a href="namespacemod__mf__phys.html#aabbe9fe15d41644d0213461c003e38df">More...</a><br /></td></tr>
 <tr class="separator:aabbe9fe15d41644d0213461c003e38df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1457,8 +1457,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a3f7dcb91d15eca5f61d26a159553c661"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f7dcb91d15eca5f61d26a159553c661">&#9670;&nbsp;</a></span>mf_add_source()</h2>
+<a id="a8cbee5aeb3ec1f5bc7d73c5e8eabab19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cbee5aeb3ec1f5bc7d73c5e8eabab19">&#9670;&nbsp;</a></span>mf_add_source()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1468,6 +1468,12 @@ Here is the call graph for this function:</div>
           <td>(</td>
           <td class="paramtype">double precision, intent(in)&#160;</td>
           <td class="paramname"><em>qdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>dtfactor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1543,8 +1549,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__mf__phys_a3f7dcb91d15eca5f61d26a159553c661_cgraph.png" border="0" usemap="#anamespacemod__mf__phys_a3f7dcb91d15eca5f61d26a159553c661_cgraph" alt=""/></div>
-<map name="anamespacemod__mf__phys_a3f7dcb91d15eca5f61d26a159553c661_cgraph" id="anamespacemod__mf__phys_a3f7dcb91d15eca5f61d26a159553c661_cgraph">
+<div class="center"><img src="namespacemod__mf__phys_a8cbee5aeb3ec1f5bc7d73c5e8eabab19_cgraph.png" border="0" usemap="#anamespacemod__mf__phys_a8cbee5aeb3ec1f5bc7d73c5e8eabab19_cgraph" alt=""/></div>
+<map name="anamespacemod__mf__phys_a8cbee5aeb3ec1f5bc7d73c5e8eabab19_cgraph" id="anamespacemod__mf__phys_a8cbee5aeb3ec1f5bc7d73c5e8eabab19_cgraph">
 <area shape="rect" title="w[iws]=w[iws]+qdt*S[iws,wCT] where S is the source based on wCT within ixO" alt="" coords="5,174,176,215"/>
 <area shape="rect" href="namespacemod__mf__phys.html#a16ecff5ed43b4085c7f1bf9d454043fa" title=" " alt="" coords="225,5,453,32"/>
 <area shape="rect" href="namespacemod__mf__phys.html#a0a82cff5d1f5f3dc2ddea2d3bd0f4308" title="Add Hyper&#45;resistive source to w within ixO Uses 9 point stencil (4 neighbours) in each direction." alt="" coords="241,57,437,98"/>
@@ -1558,8 +1564,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a3e4dc78b3e757463416f11d121809d67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e4dc78b3e757463416f11d121809d67">&#9670;&nbsp;</a></span>mf_add_source_geom()</h2>
+<a id="a31522bbc4f9c6a2afabba1baa3ac7762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31522bbc4f9c6a2afabba1baa3ac7762">&#9670;&nbsp;</a></span>mf_add_source_geom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1569,6 +1575,12 @@ Here is the call graph for this function:</div>
           <td>(</td>
           <td class="paramtype">double precision, intent(in)&#160;</td>
           <td class="paramname"><em>qdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>dtfactor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1624,8 +1636,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__mf__phys_a3e4dc78b3e757463416f11d121809d67_cgraph.png" border="0" usemap="#anamespacemod__mf__phys_a3e4dc78b3e757463416f11d121809d67_cgraph" alt=""/></div>
-<map name="anamespacemod__mf__phys_a3e4dc78b3e757463416f11d121809d67_cgraph" id="anamespacemod__mf__phys_a3e4dc78b3e757463416f11d121809d67_cgraph">
+<div class="center"><img src="namespacemod__mf__phys_a31522bbc4f9c6a2afabba1baa3ac7762_cgraph.png" border="0" usemap="#anamespacemod__mf__phys_a31522bbc4f9c6a2afabba1baa3ac7762_cgraph" alt=""/></div>
+<map name="anamespacemod__mf__phys_a31522bbc4f9c6a2afabba1baa3ac7762_cgraph" id="anamespacemod__mf__phys_a31522bbc4f9c6a2afabba1baa3ac7762_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,176,47"/>
 <area shape="rect" href="namespacemod__mf__phys.html#a5d2b93519820f09e028acdceef315efc" title="Calculate total pressure within ixO^L including magnetic pressure." alt="" coords="224,5,392,47"/>
 </map>
@@ -2646,9 +2658,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacemod__mf__phys_a164e326547f7aa16b24fcbaf0e8bf01a_cgraph.png" border="0" usemap="#anamespacemod__mf__phys_a164e326547f7aa16b24fcbaf0e8bf01a_cgraph" alt=""/></div>
 <map name="anamespacemod__mf__phys_a164e326547f7aa16b24fcbaf0e8bf01a_cgraph" id="anamespacemod__mf__phys_a164e326547f7aa16b24fcbaf0e8bf01a_cgraph">
 <area shape="rect" title=" " alt="" coords="5,606,212,632"/>
-<area shape="rect" href="namespacemod__mf__phys.html#a3f7dcb91d15eca5f61d26a159553c661" title="w[iws]=w[iws]+qdt*S[iws,wCT] where S is the source based on wCT within ixO" alt="" coords="284,1188,455,1229"/>
+<area shape="rect" href="namespacemod__mf__phys.html#a8cbee5aeb3ec1f5bc7d73c5e8eabab19" title="w[iws]=w[iws]+qdt*S[iws,wCT] where S is the source based on wCT within ixO" alt="" coords="284,1188,455,1229"/>
 <area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="577,467,651,494"/>
-<area shape="rect" href="namespacemod__mf__phys.html#a3e4dc78b3e757463416f11d121809d67" title=" " alt="" coords="284,125,455,166"/>
+<area shape="rect" href="namespacemod__mf__phys.html#a31522bbc4f9c6a2afabba1baa3ac7762" title=" " alt="" coords="284,125,455,166"/>
 <area shape="rect" href="namespacemod__mf__phys.html#ab99b07b21395999f8a61e4d96faa76ac" title=" " alt="" coords="265,190,473,232"/>
 <area shape="rect" href="namespacemod__mf__phys.html#a18f4a9e18c389b5a90f76dd2dc2f9dce" title=" " alt="" coords="277,256,462,297"/>
 <area shape="rect" href="namespacemod__mf__phys.html#ad9c6423d95f07ba8b1d77ea65420c6ee" title=" " alt="" coords="278,60,461,101"/>

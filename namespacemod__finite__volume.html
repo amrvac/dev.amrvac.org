@@ -83,12 +83,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:a9acd70abe2798045db118a804e2dc4ce"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__finite__volume.html#a9acd70abe2798045db118a804e2dc4ce">hancock</a> (qdt, ixIL, ixOL, idimsLIM, qtC, sCT, qt, snew, dxs, x)</td></tr>
-<tr class="memdesc:a9acd70abe2798045db118a804e2dc4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">The non-conservative Hancock predictor for TVDLF.  <a href="namespacemod__finite__volume.html#a9acd70abe2798045db118a804e2dc4ce">More...</a><br /></td></tr>
-<tr class="separator:a9acd70abe2798045db118a804e2dc4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a575e6d4020c5ec393962f30399744ff1"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__finite__volume.html#a575e6d4020c5ec393962f30399744ff1">finite_volume</a> (method, qdt, ixIL, ixOL, idimsLIM, qtC, sCT, qt, snew, sold, fC, fE, dxs, x)</td></tr>
-<tr class="memdesc:a575e6d4020c5ec393962f30399744ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">finite volume method  <a href="namespacemod__finite__volume.html#a575e6d4020c5ec393962f30399744ff1">More...</a><br /></td></tr>
-<tr class="separator:a575e6d4020c5ec393962f30399744ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752f4d2fe38f1ac5fb7a3907c589a2e1"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__finite__volume.html#a752f4d2fe38f1ac5fb7a3907c589a2e1">hancock</a> (qdt, dtfactor, ixIL, ixOL, idimsLIM, qtC, sCT, qt, snew, dxs, x)</td></tr>
+<tr class="memdesc:a752f4d2fe38f1ac5fb7a3907c589a2e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The non-conservative Hancock predictor for TVDLF.  <a href="namespacemod__finite__volume.html#a752f4d2fe38f1ac5fb7a3907c589a2e1">More...</a><br /></td></tr>
+<tr class="separator:a752f4d2fe38f1ac5fb7a3907c589a2e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a955ead3cbf2da8e37ed4bd4bf163991f"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__finite__volume.html#a955ead3cbf2da8e37ed4bd4bf163991f">finite_volume</a> (method, qdt, dtfactor, ixIL, ixOL, idimsLIM, qtC, sCT, qt, snew, sold, fC, fE, dxs, x)</td></tr>
+<tr class="memdesc:a955ead3cbf2da8e37ed4bd4bf163991f"><td class="mdescLeft">&#160;</td><td class="mdescRight">finite volume method  <a href="namespacemod__finite__volume.html#a955ead3cbf2da8e37ed4bd4bf163991f">More...</a><br /></td></tr>
+<tr class="separator:a955ead3cbf2da8e37ed4bd4bf163991f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4096159cd061b7e8cc27c68dba299ebd"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__finite__volume.html#a4096159cd061b7e8cc27c68dba299ebd">reconstruct_lr</a> (ixIL, ixLL, ixRL, idims, w, wLC, wRC, wLp, wRp, x, dxdim)</td></tr>
 <tr class="memdesc:a4096159cd061b7e8cc27c68dba299ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the upwinded wLC(ixL) and wRC(ixR) from w. the wCT is only used when PPM is exploited.  <a href="namespacemod__finite__volume.html#a4096159cd061b7e8cc27c68dba299ebd">More...</a><br /></td></tr>
 <tr class="separator:a4096159cd061b7e8cc27c68dba299ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -96,8 +96,8 @@ Functions/Subroutines</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module with finite volume methods for fluxes. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a id="a575e6d4020c5ec393962f30399744ff1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a575e6d4020c5ec393962f30399744ff1">&#9670;&nbsp;</a></span>finite_volume()</h2>
+<a id="a955ead3cbf2da8e37ed4bd4bf163991f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a955ead3cbf2da8e37ed4bd4bf163991f">&#9670;&nbsp;</a></span>finite_volume()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -113,6 +113,12 @@ Functions/Subroutines</h2></td></tr>
           <td></td>
           <td class="paramtype">double precision, intent(in)&#160;</td>
           <td class="paramname"><em>qdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>dtfactor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -214,14 +220,14 @@ Functions/Subroutines</h2></td></tr>
 
 <p>finite volume method </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__finite__volume_8t_source.html#l00097">97</a> of file <a class="el" href="mod__finite__volume_8t_source.html">mod_finite_volume.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__finite__volume_8t_source.html#l00113">113</a> of file <a class="el" href="mod__finite__volume_8t_source.html">mod_finite_volume.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__finite__volume_a575e6d4020c5ec393962f30399744ff1_cgraph.png" border="0" usemap="#anamespacemod__finite__volume_a575e6d4020c5ec393962f30399744ff1_cgraph" alt=""/></div>
-<map name="anamespacemod__finite__volume_a575e6d4020c5ec393962f30399744ff1_cgraph" id="anamespacemod__finite__volume_a575e6d4020c5ec393962f30399744ff1_cgraph">
+<div class="center"><img src="namespacemod__finite__volume_a955ead3cbf2da8e37ed4bd4bf163991f_cgraph.png" border="0" usemap="#anamespacemod__finite__volume_a955ead3cbf2da8e37ed4bd4bf163991f_cgraph" alt=""/></div>
+<map name="anamespacemod__finite__volume_a955ead3cbf2da8e37ed4bd4bf163991f_cgraph" id="anamespacemod__finite__volume_a955ead3cbf2da8e37ed4bd4bf163991f_cgraph">
 <area shape="rect" title="finite volume method" alt="" coords="5,99,160,141"/>
-<area shape="rect" href="namespacemod__source.html#a153989002044b8fc49e65cde8b81c00b" title="Add source within ixO for iws: w=w+qdt*S[wCT]." alt="" coords="208,5,392,32"/>
+<area shape="rect" href="namespacemod__source.html#a37caec5d9f530bb58e31bcbaea843afe" title="Add source within ixO for iws: w=w+qdt*S[wCT]." alt="" coords="208,5,392,32"/>
 <area shape="rect" href="mod__finite__volume_8t.html#a9e2798344330527451517501c987da7b" title=" " alt="" coords="208,56,392,83"/>
 <area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="440,136,515,163"/>
 <area shape="rect" href="namespacemod__finite__volume.html#a4096159cd061b7e8cc27c68dba299ebd" title="Determine the upwinded wLC(ixL) and wRC(ixR) from w. the wCT is only used when PPM is exploited." alt="" coords="223,158,377,199"/>
@@ -231,8 +237,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a9acd70abe2798045db118a804e2dc4ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9acd70abe2798045db118a804e2dc4ce">&#9670;&nbsp;</a></span>hancock()</h2>
+<a id="a752f4d2fe38f1ac5fb7a3907c589a2e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752f4d2fe38f1ac5fb7a3907c589a2e1">&#9670;&nbsp;</a></span>hancock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,6 +248,12 @@ Here is the call graph for this function:</div>
           <td>(</td>
           <td class="paramtype">double precision, intent(in)&#160;</td>
           <td class="paramname"><em>qdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>dtfactor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -330,10 +342,10 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__finite__volume_a9acd70abe2798045db118a804e2dc4ce_cgraph.png" border="0" usemap="#anamespacemod__finite__volume_a9acd70abe2798045db118a804e2dc4ce_cgraph" alt=""/></div>
-<map name="anamespacemod__finite__volume_a9acd70abe2798045db118a804e2dc4ce_cgraph" id="anamespacemod__finite__volume_a9acd70abe2798045db118a804e2dc4ce_cgraph">
+<div class="center"><img src="namespacemod__finite__volume_a752f4d2fe38f1ac5fb7a3907c589a2e1_cgraph.png" border="0" usemap="#anamespacemod__finite__volume_a752f4d2fe38f1ac5fb7a3907c589a2e1_cgraph" alt=""/></div>
+<map name="anamespacemod__finite__volume_a752f4d2fe38f1ac5fb7a3907c589a2e1_cgraph" id="anamespacemod__finite__volume_a752f4d2fe38f1ac5fb7a3907c589a2e1_cgraph">
 <area shape="rect" title="The non&#45;conservative Hancock predictor for TVDLF." alt="" coords="5,49,160,90"/>
-<area shape="rect" href="namespacemod__source.html#a153989002044b8fc49e65cde8b81c00b" title="Add source within ixO for iws: w=w+qdt*S[wCT]." alt="" coords="208,5,392,32"/>
+<area shape="rect" href="namespacemod__source.html#a37caec5d9f530bb58e31bcbaea843afe" title="Add source within ixO for iws: w=w+qdt*S[wCT]." alt="" coords="208,5,392,32"/>
 <area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="440,85,515,112"/>
 <area shape="rect" href="namespacemod__finite__volume.html#a4096159cd061b7e8cc27c68dba299ebd" title="Determine the upwinded wLC(ixL) and wRC(ixR) from w. the wCT is only used when PPM is exploited." alt="" coords="223,107,377,149"/>
 </map>
@@ -441,7 +453,7 @@ Here is the call graph for this function:</div>
 
 <p>Determine the upwinded wLC(ixL) and wRC(ixR) from w. the wCT is only used when PPM is exploited. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__finite__volume_8t_source.html#l01045">1045</a> of file <a class="el" href="mod__finite__volume_8t_source.html">mod_finite_volume.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__finite__volume_8t_source.html#l01074">1074</a> of file <a class="el" href="mod__finite__volume_8t_source.html">mod_finite_volume.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

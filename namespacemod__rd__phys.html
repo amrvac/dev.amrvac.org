@@ -103,8 +103,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a9b4f15b29777e04ac172942d8cba356d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2d56888e0d5505f3ba052005637bd4d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rd__phys.html#ae2d56888e0d5505f3ba052005637bd4d">rd_get_flux</a> (wC, w, x, ixIL, ixOL, idim, f)</td></tr>
 <tr class="separator:ae2d56888e0d5505f3ba052005637bd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a129153ca6a3b4222d96e4c93e8eca49e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rd__phys.html#a129153ca6a3b4222d96e4c93e8eca49e">rd_add_source</a> (qdt, ixIL, ixOL, wCT, wCTprim, w, x, qsourcesplit, active)</td></tr>
-<tr class="separator:a129153ca6a3b4222d96e4c93e8eca49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac69cc118bc967ea7275a19a822eb9398"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rd__phys.html#ac69cc118bc967ea7275a19a822eb9398">rd_add_source</a> (qdt, dtfactor, ixIL, ixOL, wCT, wCTprim, w, x, qsourcesplit, active)</td></tr>
+<tr class="separator:ac69cc118bc967ea7275a19a822eb9398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad91427217c2802e2847fdad64201d511"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rd__phys.html#ad91427217c2802e2847fdad64201d511">rd_laplacian</a> (ixIL, ixOL, var, lpl)</td></tr>
 <tr class="memdesc:ad91427217c2802e2847fdad64201d511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the Laplacian using a standard second order scheme. For now this method only works in slab geometries. Requires one ghost cell only.  <a href="namespacemod__rd__phys.html#ad91427217c2802e2847fdad64201d511">More...</a><br /></td></tr>
 <tr class="separator:ad91427217c2802e2847fdad64201d511"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,8 +263,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a129153ca6a3b4222d96e4c93e8eca49e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a129153ca6a3b4222d96e4c93e8eca49e">&#9670;&nbsp;</a></span>rd_add_source()</h2>
+<a id="ac69cc118bc967ea7275a19a822eb9398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69cc118bc967ea7275a19a822eb9398">&#9670;&nbsp;</a></span>rd_add_source()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,6 +274,12 @@ Here is the call graph for this function:</div>
           <td>(</td>
           <td class="paramtype">double precision, intent(in)&#160;</td>
           <td class="paramname"><em>qdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>dtfactor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -347,8 +353,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__rd__phys_a129153ca6a3b4222d96e4c93e8eca49e_cgraph.png" border="0" usemap="#anamespacemod__rd__phys_a129153ca6a3b4222d96e4c93e8eca49e_cgraph" alt=""/></div>
-<map name="anamespacemod__rd__phys_a129153ca6a3b4222d96e4c93e8eca49e_cgraph" id="anamespacemod__rd__phys_a129153ca6a3b4222d96e4c93e8eca49e_cgraph">
+<div class="center"><img src="namespacemod__rd__phys_ac69cc118bc967ea7275a19a822eb9398_cgraph.png" border="0" usemap="#anamespacemod__rd__phys_ac69cc118bc967ea7275a19a822eb9398_cgraph" alt=""/></div>
+<map name="anamespacemod__rd__phys_ac69cc118bc967ea7275a19a822eb9398_cgraph" id="anamespacemod__rd__phys_ac69cc118bc967ea7275a19a822eb9398_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,167,47"/>
 <area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="459,13,533,39"/>
 <area shape="rect" href="namespacemod__rd__phys.html#ad91427217c2802e2847fdad64201d511" title="Compute the Laplacian using a standard second order scheme. For now this method only works in slab ge..." alt="" coords="215,38,411,65"/>
@@ -882,7 +888,7 @@ Here is the call graph for this function:</div>
 <map name="anamespacemod__rd__phys_a2781b19b4d1c74287564f4b4bfa70779_cgraph" id="anamespacemod__rd__phys_a2781b19b4d1c74287564f4b4bfa70779_cgraph">
 <area shape="rect" title=" " alt="" coords="5,344,201,371"/>
 <area shape="rect" href="namespacemod__particles.html#a7a89b126b34bb788a3911955880ddd8f" title="Initialize particle data and parameters." alt="" coords="249,5,456,32"/>
-<area shape="rect" href="namespacemod__rd__phys.html#a129153ca6a3b4222d96e4c93e8eca49e" title=" " alt="" coords="272,57,433,98"/>
+<area shape="rect" href="namespacemod__rd__phys.html#ac69cc118bc967ea7275a19a822eb9398" title=" " alt="" coords="272,57,433,98"/>
 <area shape="rect" href="namespacemod__rd__phys.html#ab397361da8fcff07f5c38dcbbacf7f24" title=" " alt="" coords="265,122,440,163"/>
 <area shape="rect" href="namespacemod__rd__phys.html#a495a9b0617f38890bf71ee50ee0b51a0" title="inplace update of psa==&gt;F_im(psa)" alt="" coords="255,187,450,229"/>
 <area shape="rect" href="namespacemod__rd__phys.html#a61fcfc9e258693d50fd8dd1254a737ff" title=" " alt="" coords="273,253,432,294"/>

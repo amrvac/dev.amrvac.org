@@ -1,7 +1,7 @@
 <map id="mod_mhd_phys::mhd_add_source" name="mod_mhd_phys::mhd_add_source">
 <area shape="rect" id="node1" title="w[iws]=w[iws]+qdt*S[iws,wCT] where S is the source based on wCT within ixO" alt="" coords="5,487,199,529"/>
-<area shape="rect" id="node2" href="$namespacemod__mhd__phys.html#a73a23283a89afaa799df21ce24e48974" title=" " alt="" coords="257,5,479,32"/>
-<area shape="rect" id="node3" href="$namespacemod__mhd__phys.html#a34700ad74a3d9f47b82567b4062b4913" title="Source terms after split off time&#45;independent magnetic field." alt="" coords="265,57,471,98"/>
+<area shape="rect" id="node2" href="$namespacemod__mhd__phys.html#aa246e7024a5c5d62bb789faf316f24ec" title=" " alt="" coords="257,5,479,32"/>
+<area shape="rect" id="node3" href="$namespacemod__mhd__phys.html#ad4afa9e520ea7f930b0e72998f8b4257" title="Source terms after split off time&#45;independent magnetic field." alt="" coords="265,57,471,98"/>
 <area shape="rect" id="node4" href="$namespacemod__mhd__phys.html#a539f7b44e5eb79a96889ccaca2c4f476" title=" " alt="" coords="249,123,487,149"/>
 <area shape="rect" id="node5" href="$namespacemod__mhd__phys.html#a6c97f3a58814b483aae39681e38acd31" title="Source terms for hydrodynamic energy version of MHD." alt="" coords="265,174,471,215"/>
 <area shape="rect" id="node6" href="$namespacemod__mhd__phys.html#a6eac8ae60957456f73440695a3d6bb93" title="Add Hyper&#45;resistive source to w within ixO Uses 9 point stencil (4 neighbours) in each direction." alt="" coords="265,239,471,281"/>
