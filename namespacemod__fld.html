@@ -99,7 +99,7 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:ad7aa7efd71997039f66577052264a90b"><td class="mdescLeft">&#160;</td><td class="mdescRight">w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles the energy exchange between gas and radiation  <a href="namespacemod__fld.html#ad7aa7efd71997039f66577052264a90b">More...</a><br /></td></tr>
 <tr class="separator:ad7aa7efd71997039f66577052264a90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9f2df78330406043ccd51c94710a9f7"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#ac9f2df78330406043ccd51c94710a9f7">fld_get_opacity</a> (w, x, ixIL, ixOL, fld_kappa)</td></tr>
-<tr class="memdesc:ac9f2df78330406043ccd51c94710a9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the opacity in the w-array by calling <a class="el" href="namespacemod__opal__opacity.html" title="This module reads in opacities from opal tables.">mod_opal_opacity</a>.  <a href="namespacemod__fld.html#ac9f2df78330406043ccd51c94710a9f7">More...</a><br /></td></tr>
+<tr class="memdesc:ac9f2df78330406043ccd51c94710a9f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the opacity in the w-array by calling <a class="el" href="namespacemod__opal__opacity.html" title="This module reads in Rosseland-mean opacities from OPAL tables. Table opacity values are given in bas...">mod_opal_opacity</a>.  <a href="namespacemod__fld.html#ac9f2df78330406043ccd51c94710a9f7">More...</a><br /></td></tr>
 <tr class="separator:ac9f2df78330406043ccd51c94710a9f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3ff35a06221274a626b1fbf804c1915"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#af3ff35a06221274a626b1fbf804c1915">fld_get_fluxlimiter</a> (w, x, ixIL, ixOL, fld_lambda, fld_R)</td></tr>
 <tr class="memdesc:af3ff35a06221274a626b1fbf804c1915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate fld flux limiter This subroutine calculates flux limiter lambda using the prescription stored in fld_fluxlimiter. It also calculates the ratio of radiation scaleheight and mean free path.  <a href="namespacemod__fld.html#af3ff35a06221274a626b1fbf804c1915">More...</a><br /></td></tr>
@@ -180,8 +180,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a4717a388644e4cb1fe9b0e27860d2007"><td class="memItemLeft" align="right" valign="top">character(len=8)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#a4717a388644e4cb1fe9b0e27860d2007">fld_opacity_law</a> = 'const'</td></tr>
 <tr class="memdesc:a4717a388644e4cb1fe9b0e27860d2007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use constant Opacity?  <a href="namespacemod__fld.html#a4717a388644e4cb1fe9b0e27860d2007">More...</a><br /></td></tr>
 <tr class="separator:a4717a388644e4cb1fe9b0e27860d2007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae08359f6c5f97d728f29a27255f244fe"><td class="memItemLeft" align="right" valign="top">character(len=6)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#ae08359f6c5f97d728f29a27255f244fe">fld_opal_table</a> = 'Y09800'</td></tr>
-<tr class="separator:ae08359f6c5f97d728f29a27255f244fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cb90faa1f0dbfb0d74e9772a7d00545"><td class="memItemLeft" align="right" valign="top">character(len=50)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#a7cb90faa1f0dbfb0d74e9772a7d00545">fld_opal_table</a> = 'Y09800'</td></tr>
+<tr class="separator:a7cb90faa1f0dbfb0d74e9772a7d00545"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6653738fcac09ac966028771a78e4d52"><td class="memItemLeft" align="right" valign="top">character(len=16)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#a6653738fcac09ac966028771a78e4d52">fld_fluxlimiter</a> = 'Pomraning'</td></tr>
 <tr class="memdesc:a6653738fcac09ac966028771a78e4d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Diffusion limit lambda = 0.33.  <a href="namespacemod__fld.html#a6653738fcac09ac966028771a78e4d52">More...</a><br /></td></tr>
 <tr class="separator:a6653738fcac09ac966028771a78e4d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -840,7 +840,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the opacity in the w-array by calling <a class="el" href="namespacemod__opal__opacity.html" title="This module reads in opacities from opal tables.">mod_opal_opacity</a>. </p>
+<p>Sets the opacity in the w-array by calling <a class="el" href="namespacemod__opal__opacity.html" title="This module reads in Rosseland-mean opacities from OPAL tables. Table opacity values are given in bas...">mod_opal_opacity</a>. </p>
 <p>Take lower value of rho in domain</p>
 <p>Opacity bump</p>
 <p>Take lower value of rho in domain</p>
@@ -855,7 +855,7 @@ Here is the call graph for this function:</div>
 <map name="anamespacemod__fld_ac9f2df78330406043ccd51c94710a9f7_cgraph" id="anamespacemod__fld_ac9f2df78330406043ccd51c94710a9f7_cgraph">
 <area shape="rect" title="Sets the opacity in the w&#45;array by calling mod_opal_opacity." alt="" coords="5,35,187,61"/>
 <area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="281,5,356,32"/>
-<area shape="rect" href="namespacemod__opal__opacity.html#a8a6b7571280893a4d5716c993e03c910" title="This subroutine calculates the opacity for a given temperature&#45;density structure. The opacities are r..." alt="" coords="235,57,403,98"/>
+<area shape="rect" href="namespacemod__opal__opacity.html#a8a6b7571280893a4d5716c993e03c910" title="This subroutine calculates the opacity for a given temperature&#45;density structure. Opacities are read ..." alt="" coords="235,57,403,98"/>
 </map>
 </div>
 
@@ -1052,11 +1052,11 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacemod__fld_ac391ad2256509da6e71540cbe251c37e_cgraph.png" border="0" usemap="#anamespacemod__fld_ac391ad2256509da6e71540cbe251c37e_cgraph" alt=""/></div>
 <map name="anamespacemod__fld_ac391ad2256509da6e71540cbe251c37e_cgraph" id="anamespacemod__fld_ac391ad2256509da6e71540cbe251c37e_cgraph">
 <area shape="rect" title="Initialising FLD&#45;module: Read opacities Initialise Multigrid adimensionalise kappa Add extra variable..." alt="" coords="5,137,132,163"/>
-<area shape="rect" href="namespacemod__fld.html#a252186780c5a68f744c09e61199eed1c" title="Calling all subroutines to perform the multigrid method Communicates rad_e and diff_coeff to multigri..." alt="" coords="211,5,353,47"/>
-<area shape="rect" href="namespacemod__fld.html#ade46e76ac547d6c1f1c27e324f94af46" title="inplace update of psa==&gt;F_im(psa)" alt="" coords="205,71,359,112"/>
-<area shape="rect" href="namespacemod__fld.html#a2fab030adfe37e60459f2f6c8140f091" title="public methods these are called in mod_rhd_phys" alt="" coords="187,137,377,163"/>
-<area shape="rect" href="namespacemod__opal__opacity.html#ac42d05a1ff082e78575d8b017da6010b" title="This routine is called when the fld radiation module is initialised. Here, the tables for different H..." alt="" coords="180,187,384,214"/>
-<area shape="rect" href="namespacemod__variables.html#a924c3b2f4e13f6f6432de212ac790966" title="Set extra variable in w, which is not advected and has no boundary conditions. This has to be done af..." alt="" coords="209,239,355,280"/>
+<area shape="rect" href="namespacemod__fld.html#a252186780c5a68f744c09e61199eed1c" title="Calling all subroutines to perform the multigrid method Communicates rad_e and diff_coeff to multigri..." alt="" coords="205,5,346,47"/>
+<area shape="rect" href="namespacemod__fld.html#ade46e76ac547d6c1f1c27e324f94af46" title="inplace update of psa==&gt;F_im(psa)" alt="" coords="198,71,353,112"/>
+<area shape="rect" href="namespacemod__fld.html#a2fab030adfe37e60459f2f6c8140f091" title="public methods these are called in mod_rhd_phys" alt="" coords="180,137,371,163"/>
+<area shape="rect" href="namespacemod__opal__opacity.html#a7c35946184618fb6e09dc3257316b79d" title="This subroutine is called when the FLD radiation module is initialised. The OPAL tables for different..." alt="" coords="191,188,360,229"/>
+<area shape="rect" href="namespacemod__variables.html#a924c3b2f4e13f6f6432de212ac790966" title="Set extra variable in w, which is not advected and has no boundary conditions. This has to be done af..." alt="" coords="202,253,349,295"/>
 </map>
 </div>
 
@@ -1986,14 +1986,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ae08359f6c5f97d728f29a27255f244fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae08359f6c5f97d728f29a27255f244fe">&#9670;&nbsp;</a></span>fld_opal_table</h2>
+<a id="a7cb90faa1f0dbfb0d74e9772a7d00545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb90faa1f0dbfb0d74e9772a7d00545">&#9670;&nbsp;</a></span>fld_opal_table</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">character(len=6) mod_fld::fld_opal_table = 'Y09800'</td>
+          <td class="memname">character(len=50) mod_fld::fld_opal_table = 'Y09800'</td>
         </tr>
       </table>
 </div><div class="memdoc">
