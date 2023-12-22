@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['data_20file_20conversion_6795',['Data file conversion',['../md_doc_convert.html',1,'']]],
-  ['discretization_6796',['Discretization',['../md_doc_discretization.html',1,'']]],
-  ['dump_20variables_20to_20dat_20files_6797',['Dump variables to dat files',['../md_doc_dat_convert.html',1,'']]],
-  ['dust_20in_20mpi_2damrvac_6798',['Dust in MPI-AMRVAC',['../md_doc_dust.html',1,'']]]
+  ['data_20file_20conversion_6797',['Data file conversion',['../md_doc_convert.html',1,'']]],
+  ['discretization_6798',['Discretization',['../md_doc_discretization.html',1,'']]],
+  ['dump_20variables_20to_20dat_20files_6799',['Dump variables to dat files',['../md_doc_dat_convert.html',1,'']]],
+  ['dust_20in_20mpi_2damrvac_6800',['Dust in MPI-AMRVAC',['../md_doc_dust.html',1,'']]]
 ];
