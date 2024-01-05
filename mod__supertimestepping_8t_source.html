@@ -111,9 +111,9 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="comment">! input parameters from parameter file</span><span class="comment"></span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">  !&gt; the coefficient that multiplies the sts dt</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">double precision</span> :: sts_dtpar=0.9d0 <span class="comment"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">double precision</span> :: sts_dtpar=0.8d0<span class="comment"></span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">  !&gt; the maximum number of subcycles</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">integer</span> :: sts_ncycles=1000 </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">integer</span> :: sts_ncycles=1000</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">integer</span> :: sts_method = 1</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="namespacemod__supertimestepping.html#a5eed6af0503fee10e276e32c2a22cf6f">   37</a></span>&#160;  <span class="keywordtype">integer</span>, <span class="keywordtype">parameter</span> :: <a class="code" href="namespacemod__supertimestepping.html#a5eed6af0503fee10e276e32c2a22cf6f">sourcetype_sts_prior</a> =0</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="namespacemod__supertimestepping.html#aee73b731117cd378d312183e8688a9fd">   38</a></span>&#160;  <span class="keywordtype">integer</span>, <span class="keywordtype">parameter</span> :: <a class="code" href="namespacemod__supertimestepping.html#aee73b731117cd378d312183e8688a9fd">sourcetype_sts_after</a> =1</div>
@@ -121,7 +121,7 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="namespacemod__supertimestepping.html#a157666c32be87db3a930b42afc3dc66c">   40</a></span>&#160;  <span class="keywordtype">integer</span> :: <a class="code" href="namespacemod__supertimestepping.html#a157666c32be87db3a930b42afc3dc66c">sourcetype_sts</a> = <a class="code" href="namespacemod__supertimestepping.html#ab70a467105fe297e965a1962b05db1bd">sourcetype_sts_split</a></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">!The following is used only for method 2, not input parameter TODO check if we want as input parameter</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">double precision</span>,<span class="keywordtype">parameter</span> :: nu_sts = 0.5<span class="comment"></span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">double precision</span>,<span class="keywordtype">parameter</span> :: nu_sts = 0.5d0<span class="comment"></span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">  !&gt; Whether to conserve fluxes at the current partial step</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">logical</span> :: fix_conserve_at_step = .true.</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">logical</span> :: sts_initialized = .false.</div>
@@ -342,7 +342,7 @@ $(function() {
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: ixi^<a class="code" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>, ixo^<a class="code" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a></div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: x(ixi^s,1:<a class="code" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>)</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(inout)</span> :: w(ixi^s,1:nw) </div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(inout)</span> :: w(ixi^s,1:nw)</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      <span class="keyword">end subroutine </span>sts_after_last_cycle</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keyword">end interface</span></div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
@@ -469,9 +469,9 @@ $(function() {
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keywordflow">do</span> <span class="keywordflow">while</span>(.not. <span class="keyword">associated</span>(oldtemp,temp))  </div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;         oldtemp%s = sts_get_ncycles(my_dt1,oldtemp%dt_expl,dt_modified1) </div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;         <span class="comment">!check dt is not modified again, and this should not happen, except for bug in sts_get_ncycles1,2</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;         <span class="keywordflow">if</span>(dt_modified1) <span class="keyword">call </span><a class="code" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd">mpistop</a>(<span class="stringliteral">&quot;sts dt modified twice&quot;</span>)  </div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;         <span class="keywordflow">if</span>(dt_modified1) <span class="keyword">call </span><a class="code" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd">mpistop</a>(<span class="stringliteral">&quot;sts dt modified twice&quot;</span>)</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;         oldtemp=&gt;oldtemp%next</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="keywordflow">        end do</span> </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="keywordflow">        end do</span></div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="keywordflow">      end if</span></div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      temp=&gt;temp%next</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
@@ -562,7 +562,7 @@ $(function() {
 <div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;          ^<a class="code" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>&amp;<a class="code" href="namespacemod__global__parameters.html#af2f7436240818f02fc7b675a70cae4a3">dxlevel</a>(^<a class="code" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>)=<a class="code" href="namespacemod__global__parameters.html#a9dd666c3ecb8ef351f14f46cf32a3a62">rnode</a>(<a class="code" href="namespacemod__global__parameters.html#ad720343997778dd3cdeb03a7b389a3b0">rpdx</a>^<a class="code" href="namespacemod__global__parameters.html#aa3194833cc9e7e739ed1fa396655a636">d_</a>,igrid);</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;          <a class="code" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>=&gt;ps(igrid)</div>
 <div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;          <span class="keyword">call </span>temp%sts_before_first_cycle(ixg^<a class="code" href="namespacemod__global__parameters.html#a66b6d102b0c1abd62b12a11b7fdb31b3">ll</a>,ixg^<a class="code" href="namespacemod__global__parameters.html#a66b6d102b0c1abd62b12a11b7fdb31b3">ll</a>,ps(igrid)%w,ps(igrid)%x)  </div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="keywordflow">        end do</span> </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="keywordflow">        end do</span></div>
 <div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;<span class="keywordflow">      end if</span></div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160; </div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;      <span class="keyword">allocate</span>(bj(1:temp%s))</div>
@@ -577,7 +577,7 @@ $(function() {
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;      <a class="code" href="namespacemod__ghostcells__update.html#adcc38dbc8c130dad9cf28cff4358d7a3">type_send_p</a>=&gt;temp%type_send_p_sts_1</div>
 <div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;      <a class="code" href="namespacemod__ghostcells__update.html#ad8850b169feadfc5b6b5341feed47cab">type_recv_p</a>=&gt;temp%type_recv_p_sts_1</div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160; </div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;      <span class="keywordflow">if</span>(.not. temp%types_initialized) <span class="keywordflow">then</span> </div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;      <span class="keywordflow">if</span>(.not. temp%types_initialized) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        <span class="keyword">call </span><a class="code" href="namespacemod__ghostcells__update.html#a5a035ca86bfa7e52a61d1ba8f5d1389d">create_bc_mpi_datatype</a>(temp%startwbc,temp%nwbc)</div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        <span class="keywordflow">if</span>(temp%nflux&gt;temp%nwbc) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;          <span class="comment">! prepare types for the changed no-need-ghost-update variables in the last getbc</span></div>
@@ -597,14 +597,14 @@ $(function() {
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;<span class="keywordflow">        end if</span></div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        temp%types_initialized = .true.</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;<span class="keywordflow">      end if</span></div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        </div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160; </div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;      sumbj=0.d0</div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;      <span class="keywordflow">do</span> j=1,temp%s</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        <span class="keywordflow">if</span>(j .eq. temp%s .and. (sumbj + bj(j)) * temp%dt_expl &gt; my_dt) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;          dtj = my_dt - sumbj * temp%dt_expl</div>
 <div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;          dtj = bj(j)* temp%dt_expl</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;<span class="keywordflow">        end if</span>  </div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;<span class="keywordflow">        end if</span></div>
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        sumbj = sumbj + bj(j)</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a4ebd0a5ae560288eeb5dfd3b2f251429">stagger_grid</a>) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;          <span class="comment">!$OMP PARALLEL DO PRIVATE(igrid)</span></div>
@@ -674,7 +674,7 @@ $(function() {
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;          ^<a class="code" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>&amp;<a class="code" href="namespacemod__global__parameters.html#af2f7436240818f02fc7b675a70cae4a3">dxlevel</a>(^<a class="code" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>)=<a class="code" href="namespacemod__global__parameters.html#a9dd666c3ecb8ef351f14f46cf32a3a62">rnode</a>(<a class="code" href="namespacemod__global__parameters.html#ad720343997778dd3cdeb03a7b389a3b0">rpdx</a>^<a class="code" href="namespacemod__global__parameters.html#aa3194833cc9e7e739ed1fa396655a636">d_</a>,igrid);</div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;          <a class="code" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>=&gt;ps(igrid)</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;          <span class="keyword">call </span>temp%sts_after_last_cycle(ixg^<a class="code" href="namespacemod__global__parameters.html#a66b6d102b0c1abd62b12a11b7fdb31b3">ll</a>,ixg^<a class="code" href="namespacemod__global__parameters.html#a66b6d102b0c1abd62b12a11b7fdb31b3">ll</a>,ps(igrid)%w,ps(igrid)%x)</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;<span class="keywordflow">        end do</span> </div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;<span class="keywordflow">        end do</span></div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        <a class="code" href="namespacemod__global__parameters.html#a97dcff27c39ab92f38c63288a904f89b">prolongprimitive</a>  = prolong_flag</div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        <a class="code" href="namespacemod__global__parameters.html#a584ce48a94cacaab9e7da7b04a6a85d6">coarsenprimitive</a> = coarsen_flag</div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;<span class="keywordflow">      end if</span></div>
@@ -1022,7 +1022,7 @@ $(function() {
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;<span class="keywordflow">          end do</span></div>
 <div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;          <span class="comment">!$OMP END PARALLEL DO</span></div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;<span class="keywordflow">        end if</span></div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;<span class="keywordflow">      endif</span></div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;<span class="keywordflow">      end if</span></div>
 <div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160; </div>
 <div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;      <span class="keyword">deallocate</span>(bj)</div>
 <div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160; </div>
