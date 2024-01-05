@@ -1,13 +1,13 @@
 var searchData=
 [
   ['ddpolynomial_5fbisection_3980',['ddpolynomial_bisection',['../namespacemod__fld.html#a5c3cb192d4ff204d751bbabdc46570a3',1,'mod_fld::ddpolynomial_bisection()'],['../namespacemod__afld.html#a77e713c279492245503edda6384cef4a',1,'mod_afld::ddpolynomial_bisection()']]],
-  ['dealloc_5fnode_3981',['dealloc_node',['../amr__solution__node_8t.html#a2346e8aa5148b9b9ac6265238786aac3',1,'amr_solution_node.t']]],
-  ['dealloc_5fstate_3982',['dealloc_state',['../amr__solution__node_8t.html#a867cb4035dd29f2aed43e85a0d3e55bf',1,'amr_solution_node.t']]],
-  ['dealloc_5fstate_5fcoarse_3983',['dealloc_state_coarse',['../amr__solution__node_8t.html#a755ff7adc6306dca1c82fb6523fa1dee',1,'amr_solution_node.t']]],
+  ['dealloc_5fnode_3981',['dealloc_node',['../namespacemod__amr__solution__node.html#a46ef45ac86c356bf8616032f5c04afdf',1,'mod_amr_solution_node']]],
+  ['dealloc_5fstate_3982',['dealloc_state',['../namespacemod__amr__solution__node.html#afd813751dad7f07270acb3acbacbb120',1,'mod_amr_solution_node']]],
+  ['dealloc_5fstate_5fcoarse_3983',['dealloc_state_coarse',['../namespacemod__amr__solution__node.html#a38dd1a474e3240fa2ce18cb1c128e780',1,'mod_amr_solution_node']]],
   ['dealloc_5fsubnode_3984',['dealloc_subnode',['../namespacemod__slice.html#af1779f67911ecd3bab21aafbc64f5523',1,'mod_slice']]],
   ['deallocatebfaces_3985',['deallocatebfaces',['../namespacemod__amr__fct.html#af15ca531e99d7cec5ba5997edc0cc6c8',1,'mod_amr_fct']]],
   ['deallocatebflux_3986',['deallocatebflux',['../namespacemod__fix__conserve.html#a65d99df7e3cd137b545e3067ca538afc',1,'mod_fix_conserve']]],
-  ['delete_5ffrom_5flinked_5flist_3987',['delete_from_linked_list',['../forest_8t.html#a2d4bbc87d39c655983e19f1841753f34',1,'forest.t']]],
+  ['delete_5ffrom_5flinked_5flist_3987',['delete_from_linked_list',['../namespacemod__functions__forest.html#a533a6def3c20726e6a75445c0081af9b',1,'mod_functions_forest']]],
   ['derivs_5fadvect_3988',['derivs_advect',['../namespacemod__particle__advect.html#a804c450232a3cb8ed90202d53050ad43',1,'mod_particle_advect']]],
   ['derivs_5fgca_3989',['derivs_gca',['../namespacemod__particle__gca.html#a3122997645fd02516d04de652c53287f',1,'mod_particle_gca']]],
   ['derivs_5fgca_5frk_3990',['derivs_gca_rk',['../namespacemod__particle__gca.html#a3c6adb0f0d4a68723bba52be3f22de52',1,'mod_particle_gca']]],

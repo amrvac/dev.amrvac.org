@@ -96,6 +96,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a25c5de60438d48ea9d2d50daf741f59b"><td class="memItemLeft" align="right" valign="top">integer function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__variables.html#a25c5de60438d48ea9d2d50daf741f59b">var_set_rho</a> ()</td></tr>
 <tr class="memdesc:a25c5de60438d48ea9d2d50daf741f59b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set density variable.  <a href="namespacemod__variables.html#a25c5de60438d48ea9d2d50daf741f59b">More...</a><br /></td></tr>
 <tr class="separator:a25c5de60438d48ea9d2d50daf741f59b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67d7a43716758f18d4a148274819a39a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__variables.html#a67d7a43716758f18d4a148274819a39a">errormsg</a> (message)</td></tr>
+<tr class="memdesc:a67d7a43716758f18d4a148274819a39a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exit MPI-AMRVAC with an error message.  <a href="namespacemod__variables.html#a67d7a43716758f18d4a148274819a39a">More...</a><br /></td></tr>
+<tr class="separator:a67d7a43716758f18d4a148274819a39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dacb21908b77b96b8e1f7d860d0e761"><td class="memItemLeft" align="right" valign="top">integer function, dimension(ndir)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__variables.html#a9dacb21908b77b96b8e1f7d860d0e761">var_set_momentum</a> (ndir)</td></tr>
 <tr class="memdesc:a9dacb21908b77b96b8e1f7d860d0e761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set momentum variables.  <a href="namespacemod__variables.html#a9dacb21908b77b96b8e1f7d860d0e761">More...</a><br /></td></tr>
 <tr class="separator:a9dacb21908b77b96b8e1f7d860d0e761"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +190,34 @@ Variables</h2></td></tr>
 <tr class="separator:abc7dc2944d824d524068c56dad3b413e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a id="a67d7a43716758f18d4a148274819a39a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d7a43716758f18d4a148274819a39a">&#9670;&nbsp;</a></span>errormsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_variables::errormsg </td>
+          <td>(</td>
+          <td class="paramtype">character(len=*), intent(in)&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exit MPI-AMRVAC with an error message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>The error message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mod__variables_8t_source.html#l00185">185</a> of file <a class="el" href="mod__variables_8t_source.html">mod_variables.t</a>.</p>
+
+</div>
+</div>
 <a id="a667fe89fa15d44f07bcda501b8992bb0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a667fe89fa15d44f07bcda501b8992bb0">&#9670;&nbsp;</a></span>var_set_auxvar()</h2>
 
@@ -243,14 +274,14 @@ Variables</h2></td></tr>
 
 <p>Set magnetic field variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__variables_8t_source.html#l00228">228</a> of file <a class="el" href="mod__variables_8t_source.html">mod_variables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__variables_8t_source.html#l00240">240</a> of file <a class="el" href="mod__variables_8t_source.html">mod_variables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__variables_ac367c759b5cd63f9375d0c2be9eff03c_cgraph.png" border="0" usemap="#anamespacemod__variables_ac367c759b5cd63f9375d0c2be9eff03c_cgraph" alt=""/></div>
 <map name="anamespacemod__variables_ac367c759b5cd63f9375d0c2be9eff03c_cgraph" id="anamespacemod__variables_ac367c759b5cd63f9375d0c2be9eff03c_cgraph">
 <area shape="rect" title="Set magnetic field variables." alt="" coords="5,5,152,47"/>
-<area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="200,13,275,39"/>
+<area shape="rect" href="namespacemod__variables.html#a67d7a43716758f18d4a148274819a39a" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="200,13,385,39"/>
 </map>
 </div>
 
@@ -270,7 +301,7 @@ Here is the call graph for this function:</div>
 
 <p>Set energy variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__variables_8t_source.html#l00203">203</a> of file <a class="el" href="mod__variables_8t_source.html">mod_variables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__variables_8t_source.html#l00215">215</a> of file <a class="el" href="mod__variables_8t_source.html">mod_variables.t</a>.</p>
 
 </div>
 </div>
@@ -383,14 +414,14 @@ Here is the call graph for this function:</div>
 
 <p>Set momentum variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__variables_8t_source.html#l00183">183</a> of file <a class="el" href="mod__variables_8t_source.html">mod_variables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__variables_8t_source.html#l00195">195</a> of file <a class="el" href="mod__variables_8t_source.html">mod_variables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__variables_a9dacb21908b77b96b8e1f7d860d0e761_cgraph.png" border="0" usemap="#anamespacemod__variables_a9dacb21908b77b96b8e1f7d860d0e761_cgraph" alt=""/></div>
 <map name="anamespacemod__variables_a9dacb21908b77b96b8e1f7d860d0e761_cgraph" id="anamespacemod__variables_a9dacb21908b77b96b8e1f7d860d0e761_cgraph">
 <area shape="rect" title="Set momentum variables." alt="" coords="5,5,152,47"/>
-<area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="200,13,275,39"/>
+<area shape="rect" href="namespacemod__variables.html#a67d7a43716758f18d4a148274819a39a" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="200,13,385,39"/>
 </map>
 </div>
 
@@ -408,7 +439,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__variables_8t_source.html#l00215">215</a> of file <a class="el" href="mod__variables_8t_source.html">mod_variables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__variables_8t_source.html#l00227">227</a> of file <a class="el" href="mod__variables_8t_source.html">mod_variables.t</a>.</p>
 
 </div>
 </div>

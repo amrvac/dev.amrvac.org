@@ -340,9 +340,6 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:aec88734df551cd89eb43a736f2f74909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01a3b4d0a6340604836936682e7f3df3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#a01a3b4d0a6340604836936682e7f3df3">mod_twofl_phys::add_source_linde</a> (qdt, ixIL, ixOL, wCT, w, x)</td></tr>
 <tr class="separator:a01a3b4d0a6340604836936682e7f3df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a427e01515131a67806de21d64a4876f3"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#a427e01515131a67806de21d64a4876f3">mod_twofl_phys::get_divb</a> (w, ixIL, ixOL, divb, fourthorder)</td></tr>
-<tr class="memdesc:a427e01515131a67806de21d64a4876f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate div B within ixO.  <a href="namespacemod__twofl__phys.html#a427e01515131a67806de21d64a4876f3">More...</a><br /></td></tr>
-<tr class="separator:a427e01515131a67806de21d64a4876f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d0b8bddc381efff11e630d0eac9d53a"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#a6d0b8bddc381efff11e630d0eac9d53a">mod_twofl_phys::get_normalized_divb</a> (w, ixIL, ixOL, divb)</td></tr>
 <tr class="memdesc:a6d0b8bddc381efff11e630d0eac9d53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get dimensionless div B = |divB| * volume / area / |B|  <a href="namespacemod__twofl__phys.html#a6d0b8bddc381efff11e630d0eac9d53a">More...</a><br /></td></tr>
 <tr class="separator:a6d0b8bddc381efff11e630d0eac9d53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -535,9 +532,6 @@ Variables</h2></td></tr>
 <tr class="memitem:aff4388f6f45f6c1f450f7638a29f46fb"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#aff4388f6f45f6c1f450f7638a29f46fb">mod_twofl_phys::psi_</a></td></tr>
 <tr class="memdesc:aff4388f6f45f6c1f450f7638a29f46fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indices of the GLM psi.  <a href="namespacemod__twofl__phys.html#aff4388f6f45f6c1f450f7638a29f46fb">More...</a><br /></td></tr>
 <tr class="separator:aff4388f6f45f6c1f450f7638a29f46fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fa708a5681368c5b3694e7491fa2a2d"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#a9fa708a5681368c5b3694e7491fa2a2d">mod_twofl_phys::mag</a></td></tr>
-<tr class="memdesc:a9fa708a5681368c5b3694e7491fa2a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indices of the magnetic field.  <a href="namespacemod__twofl__phys.html#a9fa708a5681368c5b3694e7491fa2a2d">More...</a><br /></td></tr>
-<tr class="separator:a9fa708a5681368c5b3694e7491fa2a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77776b8eb09018622b20910bf9492939"><td class="memItemLeft" align="right" valign="top">logical, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#a77776b8eb09018622b20910bf9492939">mod_twofl_phys::has_equi_rho_c0</a> = .false.</td></tr>
 <tr class="memdesc:a77776b8eb09018622b20910bf9492939"><td class="mdescLeft">&#160;</td><td class="mdescRight">equi vars flags  <a href="namespacemod__twofl__phys.html#a77776b8eb09018622b20910bf9492939">More...</a><br /></td></tr>
 <tr class="separator:a77776b8eb09018622b20910bf9492939"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -655,22 +649,21 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__twofl__phys_8t_source.html#l06377">6377</a> of file <a class="el" href="mod__twofl__phys_8t_source.html">mod_twofl_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__twofl__phys_8t_source.html#l06341">6341</a> of file <a class="el" href="mod__twofl__phys_8t_source.html">mod_twofl_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="mod__twofl__phys_8t_a8177ff8e83af0188bf7581b9b6231c66_cgraph.png" border="0" usemap="#amod__twofl__phys_8t_a8177ff8e83af0188bf7581b9b6231c66_cgraph" alt=""/></div>
 <map name="amod__twofl__phys_8t_a8177ff8e83af0188bf7581b9b6231c66_cgraph" id="amod__twofl__phys_8t_a8177ff8e83af0188bf7581b9b6231c66_cgraph">
-<area shape="rect" title=" " alt="" coords="5,226,200,253"/>
-<area shape="rect" href="namespacemod__twofl__phys.html#a110b080718ccc7a4fb9848520b851871" title=" " alt="" coords="248,109,447,151"/>
+<area shape="rect" title=" " alt="" coords="5,205,200,231"/>
+<area shape="rect" href="namespacemod__twofl__phys.html#a110b080718ccc7a4fb9848520b851871" title=" " alt="" coords="248,59,447,100"/>
 <area shape="rect" href="namespacemod__hyperdiffusivity.html#a8ca5fee3be217a38b119153470c5fe5a" title=" " alt="" coords="520,5,680,47"/>
 <area shape="rect" href="namespacemod__twofl__phys.html#ad19194e30ae692fb883ac2e1d8c7b232" title=" " alt="" coords="495,75,705,116"/>
 <area shape="rect" href="namespacemod__twofl__phys.html#aa6b8c1938400ce53b5046179cb6aaeb8" title=" " alt="" coords="495,149,705,191"/>
-<area shape="rect" href="comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="310,226,385,253"/>
-<area shape="rect" href="namespacemod__hyperdiffusivity.html#a20e04bad59cac11dccd4e5ace43f1fd2" title=" " alt="" coords="267,277,427,319"/>
-<area shape="rect" href="namespacemod__hyperdiffusivity.html#aa423c396f36437fbc5c9350086e04a0c" title=" " alt="" coords="265,343,430,384"/>
-<area shape="rect" href="namespacemod__hyperdiffusivity.html#ae1d9056daa752eb3365cda592ed5fc92" title=" " alt="" coords="267,408,427,449"/>
-<area shape="rect" href="namespacemod__hyperdiffusivity.html#a042e3638e1a7f5030dc7752dae2e996f" title=" " alt="" coords="264,473,431,515"/>
+<area shape="rect" href="namespacemod__hyperdiffusivity.html#a20e04bad59cac11dccd4e5ace43f1fd2" title=" " alt="" coords="267,227,427,268"/>
+<area shape="rect" href="namespacemod__hyperdiffusivity.html#aa423c396f36437fbc5c9350086e04a0c" title=" " alt="" coords="265,292,430,333"/>
+<area shape="rect" href="namespacemod__hyperdiffusivity.html#ae1d9056daa752eb3365cda592ed5fc92" title=" " alt="" coords="267,357,427,399"/>
+<area shape="rect" href="namespacemod__hyperdiffusivity.html#a042e3638e1a7f5030dc7752dae2e996f" title=" " alt="" coords="264,423,431,464"/>
 </map>
 </div>
 
@@ -732,7 +725,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__twofl__phys_8t_source.html#l02627">2627</a> of file <a class="el" href="mod__twofl__phys_8t_source.html">mod_twofl_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__twofl__phys_8t_source.html#l02626">2626</a> of file <a class="el" href="mod__twofl__phys_8t_source.html">mod_twofl_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -804,7 +797,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__twofl__phys_8t_source.html#l04827">4827</a> of file <a class="el" href="mod__twofl__phys_8t_source.html">mod_twofl_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__twofl__phys_8t_source.html#l04791">4791</a> of file <a class="el" href="mod__twofl__phys_8t_source.html">mod_twofl_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -7,9 +7,10 @@ var searchData=
   ['end_5fcomm_5ffaces_4053',['end_comm_faces',['../namespacemod__amr__fct.html#adbbdbcbea30b85f3f207ce8e03bc04d4',1,'mod_amr_fct']]],
   ['energy_5finteraction_4054',['energy_interaction',['../namespacemod__afld.html#a82dd0394b7f8e8ab01b44bc521217105',1,'mod_afld::energy_interaction()'],['../namespacemod__fld.html#a03cf61257d6dd23014c08b06329d2b2c',1,'mod_fld::energy_interaction()']]],
   ['entropyfix_4055',['entropyfix',['../namespacemod__tvd.html#ace15ec1f26a212d77951ba761d01af4a',1,'mod_tvd']]],
-  ['errest_4056',['errest',['../errest_8t.html#a63749891be57e814fb40044d74c58e30',1,'errest.t']]],
-  ['evaluate_5fe_5frad_5fmg_4057',['evaluate_e_rad_mg',['../namespacemod__afld.html#a3893a80f56c473f3d9ebf1cf7cc03dfe',1,'mod_afld::evaluate_e_rad_mg()'],['../namespacemod__fld.html#ade46e76ac547d6c1f1c27e324f94af46',1,'mod_fld::evaluate_e_rad_mg()']]],
-  ['evaluate_5fimplicit_4058',['evaluate_implicit',['../namespacemod__advance.html#a5b51995016800b085e215559cebbc3fa',1,'mod_advance']]],
-  ['extremaq_4059',['extremaq',['../namespacemod__ppm.html#ac3f3e7d7779227c8a007b1350f83b316',1,'mod_ppm']]],
-  ['extremaw_4060',['extremaw',['../namespacemod__ppm.html#ac5ff91a5bbaa4d59441056fb8d90e65c',1,'mod_ppm']]]
+  ['errest_4056',['errest',['../namespacemod__errest.html#aec4df070250188e621b93a27e0507ece',1,'mod_errest']]],
+  ['errormsg_4057',['errormsg',['../namespacemod__variables.html#a67d7a43716758f18d4a148274819a39a',1,'mod_variables']]],
+  ['evaluate_5fe_5frad_5fmg_4058',['evaluate_e_rad_mg',['../namespacemod__afld.html#a3893a80f56c473f3d9ebf1cf7cc03dfe',1,'mod_afld::evaluate_e_rad_mg()'],['../namespacemod__fld.html#ade46e76ac547d6c1f1c27e324f94af46',1,'mod_fld::evaluate_e_rad_mg()']]],
+  ['evaluate_5fimplicit_4059',['evaluate_implicit',['../namespacemod__advance.html#a5b51995016800b085e215559cebbc3fa',1,'mod_advance']]],
+  ['extremaq_4060',['extremaq',['../namespacemod__ppm.html#ac3f3e7d7779227c8a007b1350f83b316',1,'mod_ppm']]],
+  ['extremaw_4061',['extremaw',['../namespacemod__ppm.html#ac5ff91a5bbaa4d59441056fb8d90e65c',1,'mod_ppm']]]
 ];

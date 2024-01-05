@@ -1,4 +1,0 @@
-<map id="mod_srhd_phys::srhd_get_csound2_prim_eos" name="mod_srhd_phys::srhd_get_csound2_prim_eos">
-<area shape="rect" id="node1" title="Calculate the square of the thermal sound speed csound2 within ixO^L. available rho &#45; rho*h &#45; p." alt="" coords="5,5,184,47"/>
-<area shape="rect" id="node2" href="$comm__lib_8t.html#a49b49ea9ffbbadfe688e332921c4cddd" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="232,13,307,39"/>
-</map>

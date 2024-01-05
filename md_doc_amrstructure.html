@@ -83,7 +83,7 @@ $(function() {
 <h1>Important (global) parameters</h1>
 <p>Some important global parameters are in the module <em><a class="el" href="mod__global__parameters_8t.html">mod_global_parameters.t</a></em>. In particular, note that the maximum number of blocks per processor is the parameter <b>max_blocks</b>, and the maximum number of levels is the parameter <b>nlevelshi</b>. The latter is default set to 20. If your want to run with more levels, and/or allow for more grids per processor, you need to change their value and recompile. The number of levels set in the par file as <em>refine_max_level</em> must always be smaller or equal to <b>nlevelshi</b>. This <b>nlevelshi</b> also returns in those parameters that are defined per level, such as <em>limiter</em> which needs to be set for all (default) 20 levels.</p>
 <h1>AMR criteria</h1>
-<p>This in essence describes the module <em><a class="el" href="errest_8t.html">errest.t</a></em>, or at least its most essential aspets.</p>
+<p>This in essence describes the module <em>errest.t</em>, or at least its most essential aspets.</p>
 <p>The block-tree nature implies that a decision for refining/coarsening is to be made on a block-by-block basis. This automated block-based regridding procedure involves 3 steps: </p><pre class="fragment">(1) consider all blocks at level 1&lt; l&lt; _refine_max_level_ , with _refine_max_level_ the maximal grid level selected;
 (2) quantify the local error E_\xx at each gridpoint in a certain grid block;
 (3) if any point has this error exceeding a user-set threshold _refine_threshold(l)_, refine this block (and ensure proper nesting);
