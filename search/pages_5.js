@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['features_20overview_6767',['Features overview',['../md_doc_features.html',1,'']]],
-  ['frequently_20asked_20questions_6768',['Frequently Asked Questions',['../md_doc_faq.html',1,'']]]
+  ['features_20overview_6771',['Features overview',['../md_doc_features.html',1,'']]],
+  ['frequently_20asked_20questions_6772',['Frequently Asked Questions',['../md_doc_faq.html',1,'']]]
 ];
