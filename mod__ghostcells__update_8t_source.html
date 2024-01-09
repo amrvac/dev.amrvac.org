@@ -200,7 +200,7 @@ $(function() {
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">contains</span></div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="namespacemod__ghostcells__update.html#a3417a3525ae4ffe14c013b3aed6fc62a">  121</a></span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacemod__ghostcells__update.html#a3417a3525ae4ffe14c013b3aed6fc62a">init_bc</a>()</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a> </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__physics.html">mod_physics</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacemod__physics.html#a3b574f164bdb18cad0d1e95962df62a4">phys_req_diagonal</a>, <a class="code" href="namespacemod__physics.html#a9c0b8a2dc10a59ca87e89eaa056929ad">physics_type</a></div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
@@ -443,7 +443,7 @@ $(function() {
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__ghostcells__update.html#a3417a3525ae4ffe14c013b3aed6fc62a">init_bc</a></div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
 <div class="line"><a name="l00364"></a><span class="lineno"><a class="line" href="namespacemod__ghostcells__update.html#a5a035ca86bfa7e52a61d1ba8f5d1389d">  364</a></span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacemod__ghostcells__update.html#a5a035ca86bfa7e52a61d1ba8f5d1389d">create_bc_mpi_datatype</a>(nwstart,nwbc) </div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a> </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: nwstart, nwbc</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">integer</span> :: i^D, ic^D, inc^D, iib^D</div>
@@ -467,7 +467,7 @@ $(function() {
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__ghostcells__update.html#a5a035ca86bfa7e52a61d1ba8f5d1389d">create_bc_mpi_datatype</a></div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160; </div>
 <div class="line"><a name="l00388"></a><span class="lineno"><a class="line" href="namespacemod__ghostcells__update.html#a14af744e26860190413096c3bf73f73b">  388</a></span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacemod__ghostcells__update.html#a14af744e26860190413096c3bf73f73b">get_bc_comm_type</a>(comm_type,ix^L,ixG^L,nwstart,nwbc)</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a> </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  </div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(inout)</span> :: comm_type</div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: ix^L, ixG^L, nwstart, nwbc</div>
@@ -488,7 +488,7 @@ $(function() {
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__ghostcells__update.html#a14af744e26860190413096c3bf73f73b">get_bc_comm_type</a></div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
 <div class="line"><a name="l00409"></a><span class="lineno"><a class="line" href="namespacemod__ghostcells__update.html#abdb8ff1b9a7e801ff0084699dea5b593">  409</a></span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacemod__ghostcells__update.html#abdb8ff1b9a7e801ff0084699dea5b593">put_bc_comm_types</a>()</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a> </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordtype">integer</span> :: i^D, ic^D, inc^D, iib^D</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
