@@ -233,7 +233,7 @@ $(function() {
 <div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="namespacemod__random__heating.html#ab72007cf057322269dc25b5023c2137c">  152</a></span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacemod__random__heating.html#ab72007cf057322269dc25b5023c2137c">generatetv</a>(vtim,vlim,periods,variation,mnx,num,si)</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span>          :: vtim,vlim,mnx,num</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: periods,variation,si</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">integer</span>                      :: vx,j</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">integer</span>                      :: i,vx,j</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">character(len=100)</span>           :: filename</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">logical</span>                      :: alive</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
@@ -355,42 +355,43 @@ $(function() {
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">character(len=100)</span>, <span class="keywordtype">intent(in)</span>  :: filename</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordtype">double precision</span>, <span class="keywordtype">allocatable</span>   :: vn(:,:),vm(:)</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordtype">double precision</span>                :: lambda,c,lambda_min,lambda_max,rms,ll</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">integer</span>                         :: j, kk, lth = 1</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keyword">allocate</span>(vn(num, mnx))</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keyword">allocate</span>(vm(mnx))</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">do</span> kk = 1, vtim</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        lambda_min = lth * 1.d0 / (mnx * 1.d0)</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        lambda_max = lth * 2.d0</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">do</span> i = 1, num</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;          lambda = i * 1.d0 / num * (lambda_max - lambda_min) + lambda_min</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;          c = lambda ** si </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          <span class="keyword">call </span>random_number(ll)        </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;          <span class="keywordflow">do</span> j = 1, mnx  </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            vn(i,j) = c*sin(2.*dpi*(j*1.d0/(mnx-1)*lth)/lambda+2.*dpi*2.*(ll-0.5))</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keywordflow">          end do</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="keywordflow">        end do</span>     </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        rms = 0.d0</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        vm = 0.d0    </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">do</span> j = 1, mnx  </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;          <span class="keywordflow">do</span> i = 1, num</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            vm(j) = vm(j) + vn(i, j) </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="keywordflow">          end do</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;          rms = rms + vm(j)**2</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="keywordflow">        end do</span>         </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        vm = vm / dsqrt(rms/mnx)    <span class="comment">! normalization        </span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">do</span> j = 1, vlim</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;          va(vlim*(kk-1)+j) = vm(j)**2</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="keywordflow">        end do</span>       </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keywordflow">    end do</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keyword">open</span>(unit=22,file=filename,form=<span class="stringliteral">&#39;formatted&#39;</span>,status=<span class="stringliteral">&#39;new&#39;</span>)</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keyword">write</span>(22,<span class="stringliteral">&#39;(es12.4)&#39;</span>) va</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keyword">close</span>(22)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__random__heating.html#ae81a31f9937d0dafe61c8149838fc36f">randomv</a></div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacemod__random__heating.html">mod_random_heating</a></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    <span class="keywordtype">integer</span>                         :: i</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordtype">integer</span>                         :: j, kk, lth = 1</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keyword">allocate</span>(vn(num, mnx))</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keyword">allocate</span>(vm(mnx))</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">do</span> kk = 1, vtim</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        lambda_min = lth * 1.d0 / (mnx * 1.d0)</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        lambda_max = lth * 2.d0</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">do</span> i = 1, num</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;          lambda = i * 1.d0 / num * (lambda_max - lambda_min) + lambda_min</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          c = lambda ** si </div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;          <span class="keyword">call </span>random_number(ll)        </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;          <span class="keywordflow">do</span> j = 1, mnx  </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            vn(i,j) = c*sin(2.*dpi*(j*1.d0/(mnx-1)*lth)/lambda+2.*dpi*2.*(ll-0.5))</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="keywordflow">          end do</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="keywordflow">        end do</span>     </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        rms = 0.d0</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        vm = 0.d0    </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">do</span> j = 1, mnx  </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;          <span class="keywordflow">do</span> i = 1, num</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            vm(j) = vm(j) + vn(i, j) </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keywordflow">          end do</span></div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;          rms = rms + vm(j)**2</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keywordflow">        end do</span>         </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        vm = vm / dsqrt(rms/mnx)    <span class="comment">! normalization        </span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">do</span> j = 1, vlim</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;          va(vlim*(kk-1)+j) = vm(j)**2</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keywordflow">        end do</span>       </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keywordflow">    end do</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keyword">open</span>(unit=22,file=filename,form=<span class="stringliteral">&#39;formatted&#39;</span>,status=<span class="stringliteral">&#39;new&#39;</span>)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keyword">write</span>(22,<span class="stringliteral">&#39;(es12.4)&#39;</span>) va</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keyword">close</span>(22)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__random__heating.html#ae81a31f9937d0dafe61c8149838fc36f">randomv</a></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacemod__random__heating.html">mod_random_heating</a></div>
 <div class="ttc" id="anamespacemod__comm__lib_html"><div class="ttname"><a href="namespacemod__comm__lib.html">mod_comm_lib</a></div><div class="ttdef"><b>Definition:</b> <a href="mod__comm__lib_8t_source.html#l00001">mod_comm_lib.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__comm__lib_html_a9b6f1a8fd13bc5670e3b426151c34048"><div class="ttname"><a href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mod_comm_lib::mpistop</a></div><div class="ttdeci">subroutine, public mpistop(message)</div><div class="ttdoc">Exit MPI-AMRVAC with an error message.</div><div class="ttdef"><b>Definition:</b> <a href="mod__comm__lib_8t_source.html#l00207">mod_comm_lib.t:208</a></div></div>
 <div class="ttc" id="anamespacemod__global__parameters_html"><div class="ttname"><a href="namespacemod__global__parameters.html">mod_global_parameters</a></div><div class="ttdoc">This module contains definitions of global parameters and variables and some generic functions/subrou...</div><div class="ttdef"><b>Definition:</b> <a href="mod__global__parameters_8t_source.html#l00004">mod_global_parameters.t:4</a></div></div>
