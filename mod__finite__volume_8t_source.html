@@ -1243,7 +1243,7 @@ $(function() {
 <div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;              <span class="keyword">call </span><a class="code" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;idims is wrong in mod_limiter&quot;</span>)</div>
 <div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;<span class="keywordflow">            end select</span></div>
 <div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;<span class="keywordflow">          end if</span></div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;            </div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160; </div>
 <div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;          <span class="comment">! limit flux from left and/or right</span></div>
 <div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;          <span class="keyword">call </span><a class="code" href="namespacemod__limiter.html#a358e3650bfa838c75f25186e88f850e6">dwlimiter2</a>(dwc,ixi^<a class="code" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,ixc^<a class="code" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,idims,<a class="code" href="namespacemod__global__parameters.html#aa40a0a40ea6fc4578cfb48b0700db571">type_limiter</a>(<a class="code" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>%level),ldw,rdw,a2max=a2max)</div>
 <div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;          wlp(ixl^s,iw)=wlp(ixl^s,iw)+half*ldw(ixl^s)</div>
