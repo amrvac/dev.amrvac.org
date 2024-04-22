@@ -608,7 +608,7 @@ $(function() {
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(inout)</span> :: w(ixI^S, nw)</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: x(ixI^S, 1:ndim)</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160; </div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="keyword">call </span><a class="code" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;No get_auxiliary method specified&quot;</span>)</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="comment">!call mpistop(&quot;No get_auxiliary method specified&quot;)</span></div>
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__physics.html#ac687637834e4686478b211a05966c044">dummy_get_auxiliary</a></div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160; </div>
 <div class="line"><a name="l00533"></a><span class="lineno"><a class="line" href="namespacemod__physics.html#ae86d0ed9cda4e2eb8d72eabbeb400ddb">  533</a></span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacemod__physics.html#ae86d0ed9cda4e2eb8d72eabbeb400ddb">dummy_get_auxiliary_prim</a>(ixI^L, ixO^L, w)</div>
