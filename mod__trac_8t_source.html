@@ -800,7 +800,7 @@ $(function() {
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    <span class="keywordtype">integer</span> :: iFL,iLP,ixO^L,ixI^L,ixc^L,ixb^L,ixc^D</div>
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keywordtype">integer</span> :: igrid,j,ipmin,ipmax,igrid_nb</div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    <span class="keywordtype">double precision</span> :: dxb^D,dxMax^D,xb^L,Tcnow</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keywordtype">double precision</span> :: xFnow(ndim)</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keywordtype">double precision</span> :: xFnow(ndim),xc(ndim)</div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;    <span class="keywordtype">integer</span> :: weightIndex,idn^D,ixmax^ND</div>
 <div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;    <span class="keywordtype">double precision</span> :: ds,weight</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
@@ -873,137 +873,139 @@ $(function() {
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160; </div>
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;                {<span class="keywordflow">do</span> ixc^dd=ixcmin^dd,ixcmax^dd;}</div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;                  ds=0.d0</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;                  {ds=ds+(xfnow(^dd)-ps(igrid_nb)%x({ixc^dd},^dd))**2;}</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;                  ds=sqrt(ds)</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                  <span class="keywordflow">if</span>(ds&lt;1.0d-2*dxb1) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                    weight=(1/(1.0d-2*dxb1))**weightindex</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;                  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                    weight=(1/ds)**weightindex</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;<span class="keywordflow">                  endif</span></div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                  ps(igrid_nb)%wextra(ixc^dd,tweight_)=ps(igrid_nb)%wextra(ixc^dd,tweight_)+weight</div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                  ps(igrid_nb)%wextra(ixc^dd,tcoff_)=ps(igrid_nb)%wextra(ixc^dd,tcoff_)+weight*tcnow</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                {enddo;}</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="keywordflow">              endif</span></div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="keywordflow">            endif</span></div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160; </div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;            <span class="keywordflow">if</span> (ixbmax^d&gt;ixomin^d) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;              idn^dd=0;</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;              idn^d=1</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;              <span class="keywordflow">if</span> (neighbor(2,idn^dd,igrid)==mype .and. neighbor_type(idn^dd,igrid)==neighbor_sibling) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                igrid_nb=neighbor(1,idn^dd,igrid)</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                xbmin^nd=rnode(rpxmin^nd_,igrid_nb)</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                <span class="keywordflow">if</span> (xbmin^nd&lt;phys_trac_mask) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;                  ixcmin^dd=max(ixbmin^dd,ixomin^dd);</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;                  ixcmax^dd=min(ixbmax^dd,ixomax^dd);</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                  ixcmin^d=ixomin^d</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;                  ixcmax^d=ixomin^d+(ixbmax^d-ixomax^d)</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;                  xbmax^nd=rnode(rpxmax^nd_,igrid_nb)</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;                  ixmax^nd=floor((phys_trac_mask-xbmin^nd)/dxb^nd)+ixomin^nd</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;                  <span class="keywordflow">if</span> (xbmax^nd&gt;phys_trac_mask) ixcmax^nd=min(ixmax^nd,ixcmax^nd)</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160; </div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;                  {<span class="keywordflow">do</span> ixc^dd=ixcmin^dd,ixcmax^dd;}</div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                    ds=0.d0</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                    {ds=ds+(xfnow(^dd)-ps(igrid_nb)%x({ixc^dd},^dd))**2;}</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                    ds=sqrt(ds)</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                    <span class="keywordflow">if</span>(ds&lt;1.0d-2*dxb1) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;                      weight=(1/(1.0d-2*dxb1))**weightindex</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;                    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;                      weight=(1/ds)**weightindex</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;<span class="keywordflow">                    endif</span></div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;                    ps(igrid_nb)%wextra(ixc^dd,tweight_)=ps(igrid_nb)%wextra(ixc^dd,tweight_)+weight</div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;                    ps(igrid_nb)%wextra(ixc^dd,tcoff_)=ps(igrid_nb)%wextra(ixc^dd,tcoff_)+weight*tcnow</div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;                  {enddo;}</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;<span class="keywordflow">                endif</span></div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;<span class="keywordflow">              endif</span></div>
-<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;<span class="keywordflow">            endif</span></div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;          \}</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;<span class="keywordflow">        enddo</span></div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160; </div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        ilp=ipmax+1</div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;<span class="keywordflow">      enddo</span></div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;<span class="keywordflow">    enddo</span></div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160; </div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160; </div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    <span class="keywordflow">do</span> j=1,ngrid_trac</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;      igrid=trac_grid(j)</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;      <span class="keywordflow">where</span>(ps(igrid)%wextra(ixo^s,tweight_)&gt;0.d0)</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        ps(igrid)%wextra(ixo^s,tcoff_)=ps(igrid)%wextra(ixo^s,tcoff_)/ps(igrid)%wextra(ixo^s,tweight_)</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;      <span class="keywordflow">elsewhere</span></div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        ps(igrid)%wextra(ixo^s,tcoff_)=t_bott</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;<span class="keywordflow">      endwhere</span></div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;<span class="keywordflow">    enddo</span></div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160; </div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__trac.html#a705a16e05a4d26ca6e79985383c41162">interp_tcoff</a></div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;                  xc(:)=ps(igrid_nb)%x(ixc^dd,:)</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;                  {ds=ds+(xfnow(^dd)-xc(^dd))**2;}</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                  ds=sqrt(ds)</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                  <span class="keywordflow">if</span>(ds&lt;1.0d-2*dxb1) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;                    weight=(1/(1.0d-2*dxb1))**weightindex</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                    weight=(1/ds)**weightindex</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="keywordflow">                  endif</span></div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                  ps(igrid_nb)%wextra(ixc^dd,tweight_)=ps(igrid_nb)%wextra(ixc^dd,tweight_)+weight</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                  ps(igrid_nb)%wextra(ixc^dd,tcoff_)=ps(igrid_nb)%wextra(ixc^dd,tcoff_)+weight*tcnow</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;                {enddo;}</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;<span class="keywordflow">              endif</span></div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;<span class="keywordflow">            endif</span></div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160; </div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            <span class="keywordflow">if</span> (ixbmax^d&gt;ixomin^d) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;              idn^dd=0;</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;              idn^d=1</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;              <span class="keywordflow">if</span> (neighbor(2,idn^dd,igrid)==mype .and. neighbor_type(idn^dd,igrid)==neighbor_sibling) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                igrid_nb=neighbor(1,idn^dd,igrid)</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                xbmin^nd=rnode(rpxmin^nd_,igrid_nb)</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;                <span class="keywordflow">if</span> (xbmin^nd&lt;phys_trac_mask) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;                  ixcmin^dd=max(ixbmin^dd,ixomin^dd);</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                  ixcmax^dd=min(ixbmax^dd,ixomax^dd);</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;                  ixcmin^d=ixomin^d</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;                  ixcmax^d=ixomin^d+(ixbmax^d-ixomax^d)</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;                  xbmax^nd=rnode(rpxmax^nd_,igrid_nb)</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;                  ixmax^nd=floor((phys_trac_mask-xbmin^nd)/dxb^nd)+ixomin^nd</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;                  <span class="keywordflow">if</span> (xbmax^nd&gt;phys_trac_mask) ixcmax^nd=min(ixmax^nd,ixcmax^nd)</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160; </div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                  {<span class="keywordflow">do</span> ixc^dd=ixcmin^dd,ixcmax^dd;}</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                    ds=0.d0</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                    xc(:)=ps(igrid_nb)%x(ixc^dd,:)</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                    {ds=ds+(xfnow(^dd)-xc(^dd))**2;}</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;                    ds=sqrt(ds)</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;                    <span class="keywordflow">if</span>(ds&lt;1.0d-2*dxb1) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;                      weight=(1/(1.0d-2*dxb1))**weightindex</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;                      weight=(1/ds)**weightindex</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;<span class="keywordflow">                    endif</span></div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;                    ps(igrid_nb)%wextra(ixc^dd,tweight_)=ps(igrid_nb)%wextra(ixc^dd,tweight_)+weight</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;                    ps(igrid_nb)%wextra(ixc^dd,tcoff_)=ps(igrid_nb)%wextra(ixc^dd,tcoff_)+weight*tcnow</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;                  {enddo;}</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;<span class="keywordflow">                endif</span></div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;<span class="keywordflow">              endif</span></div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;<span class="keywordflow">            endif</span></div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;          \}</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;<span class="keywordflow">        enddo</span></div>
+<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160; </div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;        ilp=ipmax+1</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;<span class="keywordflow">      enddo</span></div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;<span class="keywordflow">    enddo</span></div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160; </div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160; </div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;    <span class="keywordflow">do</span> j=1,ngrid_trac</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;      igrid=trac_grid(j)</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;      <span class="keywordflow">where</span>(ps(igrid)%wextra(ixo^s,tweight_)&gt;0.d0)</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        ps(igrid)%wextra(ixo^s,tcoff_)=ps(igrid)%wextra(ixo^s,tcoff_)/ps(igrid)%wextra(ixo^s,tweight_)</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;      <span class="keywordflow">elsewhere</span></div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        ps(igrid)%wextra(ixo^s,tcoff_)=t_bott</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;<span class="keywordflow">      endwhere</span></div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;<span class="keywordflow">    enddo</span></div>
 <div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160; </div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160; </div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;  <span class="keyword">subroutine </span>trac_after_setdt(tco,trac_alfa,T_peak, T_bott_in)</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;       <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span>    :: trac_alfa,tco,T_peak, T_bott_in</div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;      <span class="comment">! default lower limit of cutoff temperature</span></div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;      t_bott = t_bott_in</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;      <span class="keywordflow">select case</span>(phys_trac_type)</div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;      <span class="keywordflow">case</span>(0)<span class="comment"></span></div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;<span class="comment">        !&gt; Test case, fixed cutoff temperature</span></div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;<span class="comment">        !&gt; do nothing here</span></div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;      <span class="keywordflow">case</span>(1)<span class="comment"></span></div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;<span class="comment">        !&gt; 1D TRAC method</span></div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        <span class="keyword">call </span>trac_simple(tco,trac_alfa,t_peak)</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;      <span class="keywordflow">case</span>(2)<span class="comment"></span></div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;<span class="comment">        !&gt; LTRAC method, by iijima et al. 2021</span></div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;<span class="comment">        !&gt; do nothing here </span></div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        <span class="keyword">call </span>ltrac(t_peak)</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;      <span class="keywordflow">case</span>(3)<span class="comment"></span></div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;<span class="comment">        !&gt; 2D or 3D TRACL(ine) method</span></div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        <span class="keyword">call </span>tracl(.false.,t_peak)</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;      <span class="keywordflow">case</span>(4)<span class="comment"></span></div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;<span class="comment">        !&gt; 2D or 3D TRACB(lock) method</span></div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;        <span class="keyword">call </span>tracb(.false.,t_peak)</div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;      <span class="keywordflow">case</span>(5)<span class="comment"></span></div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;<span class="comment">        !&gt; 2D or 3D TRACL(ine) method with mask</span></div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;        <span class="keyword">call </span>tracl(.true.,t_peak)</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;      <span class="keywordflow">case</span>(6)<span class="comment"></span></div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;<span class="comment">        !&gt; 2D or 3D TRACB(lock) method with mask</span></div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;        <span class="keyword">call </span>tracb(.true.,t_peak)</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;<span class="keywordflow">      case default</span></div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;        <span class="keyword">call </span>mpistop(<span class="stringliteral">&quot;undefined TRAC method type&quot;</span>)</div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;<span class="keywordflow">      end select</span></div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160; </div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;  <span class="keyword">end subroutine </span>trac_after_setdt</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__trac.html#a705a16e05a4d26ca6e79985383c41162">interp_tcoff</a></div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160; </div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160; </div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;  <span class="keyword">subroutine </span>trac_after_setdt(tco,trac_alfa,T_peak, T_bott_in)</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;       <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span>    :: trac_alfa,tco,T_peak, T_bott_in</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;      <span class="comment">! default lower limit of cutoff temperature</span></div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;      t_bott = t_bott_in</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;      <span class="keywordflow">select case</span>(phys_trac_type)</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;      <span class="keywordflow">case</span>(0)<span class="comment"></span></div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;<span class="comment">        !&gt; Test case, fixed cutoff temperature</span></div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;<span class="comment">        !&gt; do nothing here</span></div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;      <span class="keywordflow">case</span>(1)<span class="comment"></span></div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;<span class="comment">        !&gt; 1D TRAC method</span></div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="keyword">call </span>trac_simple(tco,trac_alfa,t_peak)</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;      <span class="keywordflow">case</span>(2)<span class="comment"></span></div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;<span class="comment">        !&gt; LTRAC method, by iijima et al. 2021</span></div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;<span class="comment">        !&gt; do nothing here </span></div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        <span class="keyword">call </span>ltrac(t_peak)</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;      <span class="keywordflow">case</span>(3)<span class="comment"></span></div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;<span class="comment">        !&gt; 2D or 3D TRACL(ine) method</span></div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;        <span class="keyword">call </span>tracl(.false.,t_peak)</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;      <span class="keywordflow">case</span>(4)<span class="comment"></span></div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;<span class="comment">        !&gt; 2D or 3D TRACB(lock) method</span></div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;        <span class="keyword">call </span>tracb(.false.,t_peak)</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;      <span class="keywordflow">case</span>(5)<span class="comment"></span></div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;<span class="comment">        !&gt; 2D or 3D TRACL(ine) method with mask</span></div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;        <span class="keyword">call </span>tracl(.true.,t_peak)</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;      <span class="keywordflow">case</span>(6)<span class="comment"></span></div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;<span class="comment">        !&gt; 2D or 3D TRACB(lock) method with mask</span></div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;        <span class="keyword">call </span>tracb(.true.,t_peak)</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;<span class="keywordflow">      case default</span></div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        <span class="keyword">call </span>mpistop(<span class="stringliteral">&quot;undefined TRAC method type&quot;</span>)</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;<span class="keywordflow">      end select</span></div>
 <div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160; </div>
-<div class="line"><a name="l00891"></a><span class="lineno"><a class="line" href="namespacemod__trac.html#aa52c4fa933c5b1df28693d70a1742d0b">  891</a></span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacemod__trac.html#aa52c4fa933c5b1df28693d70a1742d0b">initialize_trac_after_settree</a></div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__physics.html">mod_physics</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacemod__physics.html#a89eb266cd1982cecd9417fe9cdfc2aa2">phys_trac_after_setdt</a></div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;  </div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#ab908e5eeaa29a966331d7211514c1ade">phys_trac</a>) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;      <a class="code" href="namespacemod__physics.html#a89eb266cd1982cecd9417fe9cdfc2aa2">phys_trac_after_setdt</a> =&gt; trac_after_setdt</div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a4f6384ef5cf871c2570995bc0f1b263f">phys_trac_type</a> .eq. 3) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Using TRACL(ine) global method&#39;</span></div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;By default, magnetic field lines are traced every 4 grid cells&#39;</span></div>
-<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        <span class="keyword">call </span>init_trac_line(.false.)</div>
-<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;<span class="keywordflow">      end if</span></div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a4f6384ef5cf871c2570995bc0f1b263f">phys_trac_type</a> .eq. 4) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Using TRACB(lock) global method&#39;</span></div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Currently, only valid in Cartesian uniform settings&#39;</span></div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;By default, magnetic field lines are traced every 4 grid cells&#39;</span></div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        <span class="keyword">call </span>init_trac_block(.false.)</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;<span class="keywordflow">      end if</span></div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a4f6384ef5cf871c2570995bc0f1b263f">phys_trac_type</a> .eq. 5) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Using TRACL(ine) method with a mask&#39;</span></div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;By default, magnetic field lines are traced every 4 grid cells&#39;</span></div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        <span class="keyword">call </span>init_trac_line(.true.)</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;<span class="keywordflow">      end if</span></div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a4f6384ef5cf871c2570995bc0f1b263f">phys_trac_type</a> .eq. 6) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Using TRACB(lock) method with a mask&#39;</span></div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Currently, only valid in Cartesian uniform settings&#39;</span></div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;By default, magnetic field lines are traced every 4 grid cells&#39;</span></div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;        <span class="keyword">call </span>init_trac_block(.true.)</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;<span class="keywordflow">      end if</span></div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<span class="keywordflow">    end if</span></div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;  </div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__trac.html#aa52c4fa933c5b1df28693d70a1742d0b">initialize_trac_after_settree</a></div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160; </div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160; </div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;  <span class="keyword">end subroutine </span>trac_after_setdt</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160; </div>
+<div class="line"><a name="l00893"></a><span class="lineno"><a class="line" href="namespacemod__trac.html#aa52c4fa933c5b1df28693d70a1742d0b">  893</a></span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespacemod__trac.html#aa52c4fa933c5b1df28693d70a1742d0b">initialize_trac_after_settree</a></div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;    <span class="keywordtype">use </span><a class="code" href="namespacemod__physics.html">mod_physics</a>, <span class="keywordtype">only</span>: <a class="code" href="namespacemod__physics.html#a89eb266cd1982cecd9417fe9cdfc2aa2">phys_trac_after_setdt</a></div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;  </div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#ab908e5eeaa29a966331d7211514c1ade">phys_trac</a>) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;      <a class="code" href="namespacemod__physics.html#a89eb266cd1982cecd9417fe9cdfc2aa2">phys_trac_after_setdt</a> =&gt; trac_after_setdt</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a4f6384ef5cf871c2570995bc0f1b263f">phys_trac_type</a> .eq. 3) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Using TRACL(ine) global method&#39;</span></div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;By default, magnetic field lines are traced every 4 grid cells&#39;</span></div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;        <span class="keyword">call </span>init_trac_line(.false.)</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a4f6384ef5cf871c2570995bc0f1b263f">phys_trac_type</a> .eq. 4) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Using TRACB(lock) global method&#39;</span></div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Currently, only valid in Cartesian uniform settings&#39;</span></div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;By default, magnetic field lines are traced every 4 grid cells&#39;</span></div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        <span class="keyword">call </span>init_trac_block(.false.)</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a4f6384ef5cf871c2570995bc0f1b263f">phys_trac_type</a> .eq. 5) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Using TRACL(ine) method with a mask&#39;</span></div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;By default, magnetic field lines are traced every 4 grid cells&#39;</span></div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;        <span class="keyword">call </span>init_trac_line(.true.)</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a4f6384ef5cf871c2570995bc0f1b263f">phys_trac_type</a> .eq. 6) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Using TRACB(lock) method with a mask&#39;</span></div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;Currently, only valid in Cartesian uniform settings&#39;</span></div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> .eq. 0) <span class="keyword">write</span>(*,*) <span class="stringliteral">&#39;By default, magnetic field lines are traced every 4 grid cells&#39;</span></div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;        <span class="keyword">call </span>init_trac_block(.true.)</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;  </div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespacemod__trac.html#aa52c4fa933c5b1df28693d70a1742d0b">initialize_trac_after_settree</a></div>
 <div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160; </div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacemod__trac.html">mod_trac</a></div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160; </div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160; </div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;<span class="keyword">end module </span><a class="code" href="namespacemod__trac.html">mod_trac</a></div>
 <div class="ttc" id="anamespacemod__functions__bfield_html"><div class="ttname"><a href="namespacemod__functions__bfield.html">mod_functions_bfield</a></div><div class="ttdef"><b>Definition:</b> <a href="mod__functions__bfield_8t_source.html#l00001">mod_functions_bfield.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__functions__bfield_html_a9325934e82e214dd9a5fc608b174fbb9"><div class="ttname"><a href="namespacemod__functions__bfield.html#a9325934e82e214dd9a5fc608b174fbb9">mod_functions_bfield::mag</a></div><div class="ttdeci">integer, dimension(:), allocatable, public mag</div><div class="ttdoc">Indices of the magnetic field.</div><div class="ttdef"><b>Definition:</b> <a href="mod__functions__bfield_8t_source.html#l00010">mod_functions_bfield.t:10</a></div></div>
 <div class="ttc" id="anamespacemod__global__parameters_html"><div class="ttname"><a href="namespacemod__global__parameters.html">mod_global_parameters</a></div><div class="ttdoc">This module contains definitions of global parameters and variables and some generic functions/subrou...</div><div class="ttdef"><b>Definition:</b> <a href="mod__global__parameters_8t_source.html#l00004">mod_global_parameters.t:4</a></div></div>
@@ -1025,7 +1027,7 @@ $(function() {
 <div class="ttc" id="anamespacemod__trac_html"><div class="ttname"><a href="namespacemod__trac.html">mod_trac</a></div><div class="ttdef"><b>Definition:</b> <a href="mod__trac_8t_source.html#l00001">mod_trac.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__trac_html_a321238850dbeaf74c8555de59622fcc9"><div class="ttname"><a href="namespacemod__trac.html#a321238850dbeaf74c8555de59622fcc9">mod_trac::get_te_grid</a></div><div class="ttdeci">subroutine get_te_grid()</div><div class="ttdef"><b>Definition:</b> <a href="mod__trac_8t_source.html#l00586">mod_trac.t:587</a></div></div>
 <div class="ttc" id="anamespacemod__trac_html_a705a16e05a4d26ca6e79985383c41162"><div class="ttname"><a href="namespacemod__trac.html#a705a16e05a4d26ca6e79985383c41162">mod_trac::interp_tcoff</a></div><div class="ttdeci">subroutine interp_tcoff(xF, ipel, igridl, numR, Tlcoff)</div><div class="ttdef"><b>Definition:</b> <a href="mod__trac_8t_source.html#l00714">mod_trac.t:715</a></div></div>
-<div class="ttc" id="anamespacemod__trac_html_aa52c4fa933c5b1df28693d70a1742d0b"><div class="ttname"><a href="namespacemod__trac.html#aa52c4fa933c5b1df28693d70a1742d0b">mod_trac::initialize_trac_after_settree</a></div><div class="ttdeci">subroutine, public initialize_trac_after_settree</div><div class="ttdef"><b>Definition:</b> <a href="mod__trac_8t_source.html#l00891">mod_trac.t:892</a></div></div>
+<div class="ttc" id="anamespacemod__trac_html_aa52c4fa933c5b1df28693d70a1742d0b"><div class="ttname"><a href="namespacemod__trac.html#aa52c4fa933c5b1df28693d70a1742d0b">mod_trac::initialize_trac_after_settree</a></div><div class="ttdeci">subroutine, public initialize_trac_after_settree</div><div class="ttdef"><b>Definition:</b> <a href="mod__trac_8t_source.html#l00893">mod_trac.t:894</a></div></div>
 <div class="ttc" id="anamespacemod__trace__field_html"><div class="ttname"><a href="namespacemod__trace__field.html">mod_trace_field</a></div><div class="ttdef"><b>Definition:</b> <a href="mod__trace__field_8t_source.html#l00001">mod_trace_field.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__trace__field_html_adf0c5ba82fcfa0783bda7cc812199a9e"><div class="ttname"><a href="namespacemod__trace__field.html#adf0c5ba82fcfa0783bda7cc812199a9e">mod_trace_field::trace_field_multi</a></div><div class="ttdeci">subroutine trace_field_multi(xfm, wPm, wLm, dL, numL, numP, nwP, nwL, forwardm, ftype, tcondi)</div><div class="ttdef"><b>Definition:</b> <a href="mod__trace__field_8t_source.html#l00008">mod_trace_field.t:9</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
