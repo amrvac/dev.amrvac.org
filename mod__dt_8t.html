@@ -95,13 +95,13 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:aea859f9346411815a5d7a157dd8afab0"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dt.html#aea859f9346411815a5d7a157dd8afab0">mod_dt::setdt</a> ()</td></tr>
 <tr class="memdesc:aea859f9346411815a5d7a157dd8afab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">setdt - set dt for all levels between levmin and levmax. dtpar&gt;0 --&gt; use fixed dtpar for all level dtpar&lt;=0 --&gt; determine CFL limited timestep  <a href="namespacemod__dt.html#aea859f9346411815a5d7a157dd8afab0">More...</a><br /></td></tr>
 <tr class="separator:aea859f9346411815a5d7a157dd8afab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f1eb3b1519e6726bb1f85a2bbee6802"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mod__dt_8t.html#a7f1eb3b1519e6726bb1f85a2bbee6802">getdt_courant</a> (w, ixIL, ixOL, dtnew, dxD, x, cmax_mype, a2max_mype)</td></tr>
-<tr class="memdesc:a7f1eb3b1519e6726bb1f85a2bbee6802"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute CFL limited dt (for variable time stepping)  <a href="mod__dt_8t.html#a7f1eb3b1519e6726bb1f85a2bbee6802">More...</a><br /></td></tr>
-<tr class="separator:a7f1eb3b1519e6726bb1f85a2bbee6802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e8b449a2eaf27642a1e74f9e9d8aab3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mod__dt_8t.html#a7e8b449a2eaf27642a1e74f9e9d8aab3">getdt_courant</a> (w, ixIL, ixOL, dtnew, dxD, x, cmax_mype, a2max_mype, cs2max_mype)</td></tr>
+<tr class="memdesc:a7e8b449a2eaf27642a1e74f9e9d8aab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute CFL limited dt (for variable time stepping)  <a href="mod__dt_8t.html#a7e8b449a2eaf27642a1e74f9e9d8aab3">More...</a><br /></td></tr>
+<tr class="separator:a7e8b449a2eaf27642a1e74f9e9d8aab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a id="a7f1eb3b1519e6726bb1f85a2bbee6802"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f1eb3b1519e6726bb1f85a2bbee6802">&#9670;&nbsp;</a></span>getdt_courant()</h2>
+<a id="a7e8b449a2eaf27642a1e74f9e9d8aab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e8b449a2eaf27642a1e74f9e9d8aab3">&#9670;&nbsp;</a></span>getdt_courant()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +170,13 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double precision, dimension(ndim), intent(inout)&#160;</td>
-          <td class="paramname"><em>a2max_mype</em>&#160;</td>
+          <td class="paramname"><em>a2max_mype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(inout)&#160;</td>
+          <td class="paramname"><em>cs2max_mype</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -182,12 +188,12 @@ Functions/Subroutines</h2></td></tr>
 
 <p>compute CFL limited dt (for variable time stepping) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dt_8t_source.html#l00171">171</a> of file <a class="el" href="mod__dt_8t_source.html">mod_dt.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dt_8t_source.html#l00163">163</a> of file <a class="el" href="mod__dt_8t_source.html">mod_dt.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="mod__dt_8t_a7f1eb3b1519e6726bb1f85a2bbee6802_cgraph.png" border="0" usemap="#amod__dt_8t_a7f1eb3b1519e6726bb1f85a2bbee6802_cgraph" alt=""/></div>
-<map name="amod__dt_8t_a7f1eb3b1519e6726bb1f85a2bbee6802_cgraph" id="amod__dt_8t_a7f1eb3b1519e6726bb1f85a2bbee6802_cgraph">
+<div class="center"><img src="mod__dt_8t_a7e8b449a2eaf27642a1e74f9e9d8aab3_cgraph.png" border="0" usemap="#amod__dt_8t_a7e8b449a2eaf27642a1e74f9e9d8aab3_cgraph" alt=""/></div>
+<map name="amod__dt_8t_a7e8b449a2eaf27642a1e74f9e9d8aab3_cgraph" id="amod__dt_8t_a7e8b449a2eaf27642a1e74f9e9d8aab3_cgraph">
 <area shape="rect" title="compute CFL limited dt (for variable time stepping)" alt="" coords="5,5,117,32"/>
 <area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="165,5,348,32"/>
 </map>

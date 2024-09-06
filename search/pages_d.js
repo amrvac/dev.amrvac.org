@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['setting_20parameters_6805',['Setting parameters',['../md_doc_par.html',1,'']]],
-  ['setting_20up_20a_20new_20problem_6806',['Setting up a new problem',['../md_doc_amrvacusr.html',1,'']]],
-  ['setting_20up_20the_20python_20tools_6807',['Setting up the python tools',['../md_doc_python_setup.html',1,'']]],
-  ['slice_20output_6808',['Slice output',['../md_doc_slices.html',1,'']]],
-  ['slope_20limiters_6809',['Slope Limiters',['../md_doc_limiter.html',1,'']]],
-  ['small_20values_20options_20in_20mpi_2damrvac_6810',['Small values options in MPI-AMRVAC',['../md_doc_smallvalues.html',1,'']]],
-  ['source_20language_6811',['Source language',['../md_doc_source.html',1,'']]]
+  ['setting_20parameters_6981',['Setting parameters',['../md_doc_par.html',1,'']]],
+  ['setting_20up_20a_20new_20problem_6982',['Setting up a new problem',['../md_doc_amrvacusr.html',1,'']]],
+  ['setting_20up_20the_20python_20tools_6983',['Setting up the python tools',['../md_doc_python_setup.html',1,'']]],
+  ['slice_20output_6984',['Slice output',['../md_doc_slices.html',1,'']]],
+  ['slope_20limiters_6985',['Slope Limiters',['../md_doc_limiter.html',1,'']]],
+  ['small_20values_20options_20in_20mpi_2damrvac_6986',['Small values options in MPI-AMRVAC',['../md_doc_smallvalues.html',1,'']]],
+  ['source_20language_6987',['Source language',['../md_doc_source.html',1,'']]]
 ];

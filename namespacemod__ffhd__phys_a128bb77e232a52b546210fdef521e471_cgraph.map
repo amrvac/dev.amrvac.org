@@ -1,0 +1,4 @@
+<map id="mod_ffhd_phys::ffhd_get_tc_dt_ffhd" name="mod_ffhd_phys::ffhd_get_tc_dt_ffhd">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,160,47"/>
+<area shape="rect" id="node2" href="$namespacemod__thermal__conduction.html#aa05ffc173c42298f1a1c543ba10220c4" title="Get the explicut timestep for the TC (ffhd implementation)" alt="" coords="208,5,395,47"/>
+</map>

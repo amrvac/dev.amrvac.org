@@ -100,8 +100,10 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a06712e83dc81e2953a38bee9f3109661"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a06712e83dc81e2953a38bee9f3109661">tc_get_hd_params</a> (fl, read_hd_params)</td></tr>
 <tr class="memdesc:a06712e83dc81e2953a38bee9f3109661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init TC coefficients: HD case.  <a href="namespacemod__thermal__conduction.html#a06712e83dc81e2953a38bee9f3109661">More...</a><br /></td></tr>
 <tr class="separator:a06712e83dc81e2953a38bee9f3109661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed9ae145a45ffa9d878f2b32661b2559"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#aed9ae145a45ffa9d878f2b32661b2559">tc_get_ffhd_params</a> (fl, read_ffhd_params)</td></tr>
+<tr class="separator:aed9ae145a45ffa9d878f2b32661b2559"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8b53592736ea52c07ce819bf7869e35"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#af8b53592736ea52c07ce819bf7869e35">get_tc_dt_mhd</a> (w, ixIL, ixOL, dxD, x, fl)</td></tr>
-<tr class="memdesc:af8b53592736ea52c07ce819bf7869e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the explicit timestep for the TC (mhd implementation)  <a href="namespacemod__thermal__conduction.html#af8b53592736ea52c07ce819bf7869e35">More...</a><br /></td></tr>
+<tr class="memdesc:af8b53592736ea52c07ce819bf7869e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the explicut timestep for the TC (mhd implementation)  <a href="namespacemod__thermal__conduction.html#af8b53592736ea52c07ce819bf7869e35">More...</a><br /></td></tr>
 <tr class="separator:af8b53592736ea52c07ce819bf7869e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c76c4af70a17fd8d279d163331f7fe1"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a4c76c4af70a17fd8d279d163331f7fe1">sts_set_source_tc_mhd</a> (ixIL, ixOL, w, x, wres, fix_conserve_at_step, my_dt, igrid, nflux, fl)</td></tr>
 <tr class="memdesc:a4c76c4af70a17fd8d279d163331f7fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computational Physics 227, 123  <a href="namespacemod__thermal__conduction.html#a4c76c4af70a17fd8d279d163331f7fe1">More...</a><br /></td></tr>
@@ -120,6 +122,14 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a05a35414439cd20f76817f491e0fa54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f6223b1a346f63d39efe9f351a0aeb8"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a7f6223b1a346f63d39efe9f351a0aeb8">set_source_tc_hd</a> (ixIL, ixOL, w, x, fl, qvec, rho, Te)</td></tr>
 <tr class="separator:a7f6223b1a346f63d39efe9f351a0aeb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa05ffc173c42298f1a1c543ba10220c4"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#aa05ffc173c42298f1a1c543ba10220c4">get_tc_dt_ffhd</a> (w, ixIL, ixOL, dxD, x, fl)</td></tr>
+<tr class="memdesc:aa05ffc173c42298f1a1c543ba10220c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the explicut timestep for the TC (ffhd implementation)  <a href="namespacemod__thermal__conduction.html#aa05ffc173c42298f1a1c543ba10220c4">More...</a><br /></td></tr>
+<tr class="separator:aa05ffc173c42298f1a1c543ba10220c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc230a85ef63b4e6478dac149d2a260"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a0cc230a85ef63b4e6478dac149d2a260">sts_set_source_tc_ffhd</a> (ixIL, ixOL, w, x, wres, fix_conserve_at_step, my_dt, igrid, nflux, fl)</td></tr>
+<tr class="memdesc:a0cc230a85ef63b4e6478dac149d2a260"><td class="mdescLeft">&#160;</td><td class="mdescRight">anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computational Physics 227, 123  <a href="namespacemod__thermal__conduction.html#a0cc230a85ef63b4e6478dac149d2a260">More...</a><br /></td></tr>
+<tr class="separator:a0cc230a85ef63b4e6478dac149d2a260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a959f8dcdf69fd45a7dc1ac1212d18004"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a959f8dcdf69fd45a7dc1ac1212d18004">set_source_tc_ffhd</a> (ixIL, ixOL, w, x, fl, qvec, rho, Te, alpha)</td></tr>
+<tr class="separator:a959f8dcdf69fd45a7dc1ac1212d18004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -138,6 +148,80 @@ Variables</h2></td></tr>
 <li>in the tc_list of amrvac.par : tc_perpendicular=.true. ! (default .false.) turn on thermal conduction perpendicular to magnetic field tc_saturate=.true. ! (default .false. ) turn on thermal conduction saturate effect tc_slope_limiter='MC' ! choose limiter for slope-limited anisotropic thermal conduction in MHD note: twofl_list incorporates instances for charges and neutrals </li>
 </ol>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a id="aa05ffc173c42298f1a1c543ba10220c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa05ffc173c42298f1a1c543ba10220c4">&#9670;&nbsp;</a></span>get_tc_dt_ffhd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision function, public mod_thermal_conduction::get_tc_dt_ffhd </td>
+          <td>(</td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in)&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixO</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:ndim), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>fl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the explicut timestep for the TC (ffhd implementation) </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00923">923</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
 <a id="a7bc4890ec3bcb79a3f068eca6659fd63"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7bc4890ec3bcb79a3f068eca6659fd63">&#9670;&nbsp;</a></span>get_tc_dt_hd()</h2>
 
@@ -208,7 +292,7 @@ Variables</h2></td></tr>
 
 <p>Get the explicit timestep for the TC (hd implementation) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00678">678</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00703">703</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -280,15 +364,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the explicit timestep for the TC (mhd implementation) </p>
+<p>Get the explicut timestep for the TC (mhd implementation) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00189">189</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00222">222</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__thermal__conduction_af8b53592736ea52c07ce819bf7869e35_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_af8b53592736ea52c07ce819bf7869e35_cgraph" alt=""/></div>
 <map name="anamespacemod__thermal__conduction_af8b53592736ea52c07ce819bf7869e35_cgraph" id="anamespacemod__thermal__conduction_af8b53592736ea52c07ce819bf7869e35_cgraph">
-<area shape="rect" title="Get the explicit timestep for the TC (mhd implementation)" alt="" coords="5,5,192,47"/>
+<area shape="rect" title="Get the explicut timestep for the TC (mhd implementation)" alt="" coords="5,5,192,47"/>
 <area shape="rect" href="namespacemod__geometry.html#a92ec4e2c8ae00a42bf5bf2c1ce3a26c4" title="Calculate gradient of a scalar q within ixL in direction idir." alt="" coords="240,13,423,39"/>
 </map>
 </div>
@@ -353,7 +437,101 @@ Here is the call graph for this function:</div>
 
 <p>Calculate gradient of a scalar q at cell interfaces in direction idir. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00635">635</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00661">661</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="a959f8dcdf69fd45a7dc1ac1212d18004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959f8dcdf69fd45a7dc1ac1212d18004">&#9670;&nbsp;</a></span>set_source_tc_ffhd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_thermal_conduction::set_source_tc_ffhd </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixO</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in)&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:ndim), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>fl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:ndim), intent(out)&#160;</td>
+          <td class="paramname"><em>qvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)&#160;</td>
+          <td class="paramname"><em>rho</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)&#160;</td>
+          <td class="paramname"><em>Te</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01050">1050</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__thermal__conduction_a959f8dcdf69fd45a7dc1ac1212d18004_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a959f8dcdf69fd45a7dc1ac1212d18004_cgraph" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_a959f8dcdf69fd45a7dc1ac1212d18004_cgraph" id="anamespacemod__thermal__conduction_a959f8dcdf69fd45a7dc1ac1212d18004_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,192,80"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a5c8e7bb356302dd7255d6e9ff296d841" title="Calculate gradient of a scalar q at cell interfaces in direction idir." alt="" coords="240,5,427,47"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#ace260cd152691d8f575c0f91b9996a3f" title=" " alt="" coords="240,71,427,112"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -431,7 +609,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00803">803</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00825">825</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -524,7 +702,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00349">349</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00380">380</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -600,7 +778,109 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00597">597</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00624">624</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="a0cc230a85ef63b4e6478dac149d2a260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cc230a85ef63b4e6478dac149d2a260">&#9670;&nbsp;</a></span>sts_set_source_tc_ffhd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine, public mod_thermal_conduction::sts_set_source_tc_ffhd </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixO</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in)&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:ndim), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(inout)&#160;</td>
+          <td class="paramname"><em>wres</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">logical, intent(in)&#160;</td>
+          <td class="paramname"><em>fix_conserve_at_step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>my_dt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>igrid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>nflux</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>fl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computational Physics 227, 123 </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00994">994</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__thermal__conduction_a0cc230a85ef63b4e6478dac149d2a260_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a0cc230a85ef63b4e6478dac149d2a260_cgraph" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_a0cc230a85ef63b4e6478dac149d2a260_cgraph" id="anamespacemod__thermal__conduction_a0cc230a85ef63b4e6478dac149d2a260_cgraph">
+<area shape="rect" title="anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computation..." alt="" coords="5,35,192,76"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a959f8dcdf69fd45a7dc1ac1212d18004" title=" " alt="" coords="253,5,439,47"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#af0fc91a69837c51f45b6d82fe884d75a" title=" " alt="" coords="240,71,452,98"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -690,7 +970,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00737">737</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00761">761</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -792,7 +1072,7 @@ Here is the call graph for this function:</div>
 
 <p>anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computational Physics 227, 123 </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00277">277</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00309">309</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -803,6 +1083,37 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacemod__fix__conserve.html#af0fc91a69837c51f45b6d82fe884d75a" title=" " alt="" coords="240,71,452,98"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="aed9ae145a45ffa9d878f2b32661b2559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed9ae145a45ffa9d878f2b32661b2559">&#9670;&nbsp;</a></span>tc_get_ffhd_params()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine, public mod_thermal_conduction::tc_get_ffhd_params </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>fl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>read_ffhd_params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read tc parameters from par file: ffHD case</p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00191">191</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -835,7 +1146,7 @@ Here is the call graph for this function:</div>
 <p>Init TC coefficients: HD case. </p>
 <p>Read tc parameters from par file: HD case</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00157">157</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00160">160</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -868,7 +1179,7 @@ Here is the call graph for this function:</div>
 <p>Init TC coefficients: MHD case. </p>
 <p>Read tc module parameters from par file: MHD case</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00116">116</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00119">119</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -888,7 +1199,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00108">108</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00111">111</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
