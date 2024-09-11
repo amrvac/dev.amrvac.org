@@ -354,7 +354,7 @@ $(function() {
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="keywordflow">    end do</span></div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">! set number of variables which need update ghostcells</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    nwgc=nwflux</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    nwgc=nwflux+nwaux</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="comment">! set the index of the last flux variable for species 1</span></div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    stop_indices(1)=nwflux</div>
