@@ -78,8 +78,10 @@ $(function() {
 <div class="textblock"><p>02/10/24</p>
 <p>Tinatin Baratashvili</p>
 <h2>## How to run Icarus testcase </h2>
-<p>The standard procedure has to be followed to run the testcase of Icarus.</p>
-<p>First, retrieve the makefile by </p><div class="fragment"><div class="line">setup.pl -d=3</div>
+<p>To run the Icarus test case, you must follow the standard MPI-AMRVAC procedure. First, you install AMRVAC from <a href="https://amrvac.org/md_doc_installation.html">https://amrvac.org/md_doc_installation.html</a>.</p>
+<p>In order to get the latest version please checkout amrvac3.2 branch: </p><div class="fragment"><div class="line">git checkout amrvac3.2</div>
+</div><!-- fragment --><p> and </p><div class="fragment"><div class="line">git pull</div>
+</div><!-- fragment --><p>Then, make sure you are in ~/icarus folder and retrieve the makefile by </p><div class="fragment"><div class="line">setup.pl -d=3</div>
 </div><!-- fragment --><p> and compile it with </p><div class="fragment"><div class="line">make -j 4</div>
 <div class="line">````</div>
 <div class="line"> </div>
@@ -95,6 +97,51 @@ $(function() {
 <li>The solar wind boundary (.vtk file)</li>
 <li>The CME parameter file (.in file)</li>
 </ul>
+<h1>Setting Icarus parameters</h1>
+<p>Icarus-specific parameter list (&amp;icarus_list) in the <code>.par</code> file:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Standard values   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>amr_criterion</code>   </td><td class="markdownTableBodyNone"><code>shock</code>, <code>tracing</code>   </td><td class="markdownTableBodyNone">Default AMR criteria according to Baratashvili et al. 2022    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>cme_flag</code>   </td><td class="markdownTableBodyNone">0, 1   </td><td class="markdownTableBodyNone">0 means no CME injection, 1 activates CME injection    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>num_cmes</code>   </td><td class="markdownTableBodyNone">$\ge$ 0   </td><td class="markdownTableBodyNone">Number of CMEs to be injected. num_cmes $\le$ number of CMEs in the input <code>cme_parameter_file</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>relaxation</code>   </td><td class="markdownTableBodyNone">14   </td><td class="markdownTableBodyNone">Duration is given in days    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>cme_insertion</code>   </td><td class="markdownTableBodyNone">0   </td><td class="markdownTableBodyNone">Duration is given in days    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>cme_parameter_file</code>   </td><td class="markdownTableBodyNone">'cme_parameters.in'   </td><td class="markdownTableBodyNone">The file containing CME parameters    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>magnetogram_time</code>   </td><td class="markdownTableBodyNone">'2015-06-25T01:04:00'   </td><td class="markdownTableBodyNone">Magnetogram timestamp in 'YYYY-MM-DDTHH:mm:ss' format    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>delta_phi</code>   </td><td class="markdownTableBodyNone">1.2   </td><td class="markdownTableBodyNone">The correction longitude from WSA file given in radians, output of the VTK file generation python script   </td></tr>
+</table>
+<h1>Changing the parameters</h1>
+<p>Some of the settings that you could change in the <code>.par</code> files are:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Name   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>base_filename</code>   </td><td class="markdownTableBodyNone">Base file name for output    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>tsavestart(2)</code>   </td><td class="markdownTableBodyNone">Time to start saving output 3D data [in hours]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>dtsave_dat</code>   </td><td class="markdownTableBodyNone">Time between 3D data output [in hours]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>time_max</code>   </td><td class="markdownTableBodyNone">Time when simulation ends [in hours]    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>time_stepper</code>   </td><td class="markdownTableBodyNone">time discretization method, e.g., twostep, threestep, fourstep    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>flux_scheme</code>   </td><td class="markdownTableBodyNone">spatial discretization method, e.g., tvd, tvdlf, hll    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>limiter</code>   </td><td class="markdownTableBodyNone">which limiter to use in the spatial discretization, e.g., woodward, minmod, koren    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">&lsquo;stretch_dim(1)='uni&rsquo;, stretch_uncentered=.false.<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; When uncommented, the grid is stretched radially, when commented it is radially uniform \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>refine_max_level<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; The maximum number of refinement levels \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>block_nx1<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; 30 if uniform, 6 if radially stretched \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>domain_nx1<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Domain Resolutions: 300 - low, 600 - middle, 1200 - high \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>domain_nx2<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Domain Resolutions: 32 - low, 64 - middle, 126 - high \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>domain_nx3<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Domain Resolutions: 96 - low, 192 - middle, 384 - high \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>xprobmin1, xprobmax1<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Lower and outer boundary values in solar radii \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>omega_frame<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; The rotation rate of the Sun [radian per hour] \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>boundary_data_file_name'   </td><td class="markdownTableBodyNone">The input boundary file in the VTK format   </td></tr>
+</table>
+<p>A complete list of parameters can be found <a class="el" href="md_doc_par.html">par.md</a>.</p>
 <h2>Additional Scripts</h2>
 <p>The additional files are uploaded to generate necessary files for Icarus.</p>
 <ul>
