@@ -138,7 +138,27 @@ $(function() {
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>limiter</code>   </td><td class="markdownTableBodyNone">which limiter to use in the spatial discretization, e.g., woodward, minmod, koren    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">&lsquo;stretch_dim(1)='uni&rsquo;<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; When uncommented, the grid is stretched radially, when commented it is radially uniform \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>stretch_uncentered=.false.<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; When uncommented, the grid is stretched radially, when commented it is radially uniform \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>refine_max_level<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; The maximum number of refinement levels \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>block_nx1<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; 30 if uniform, 6 if radially stretched \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>domain_nx1<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Domain Resolutions: 300 - low, 600 - middle, 1200 - high \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>domain_nx2<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Domain Resolutions: 32 - low, 64 - middle, 126 - high \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>domain_nx3<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Domain Resolutions: 96 - low, 192 - middle, 384 - high \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>xprobmin1<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Lower boundary in solar radii \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>xprobmax1<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; Outer boundary in solar radii \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowOdd"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>omega_frame<code>\ilinebr &lt;/td&gt; &lt;td class="markdownTableBodyNone"&gt; The rotation rate of the Sun [radian per hour] \ilinebr &lt;/td&gt; &lt;/tr&gt; &lt;tr class="markdownTableRowEven"&gt; &lt;td class="markdownTableBodyNone"&gt;</code>boundary_data_file_name`   </td><td class="markdownTableBodyNone">The input boundary file in the VTK format   </td></tr>
+<td class="markdownTableBodyNone"><code>stretch_dim(1)=</code>'uni'   </td><td class="markdownTableBodyNone">When uncommented, the grid is stretched radially, when commented it is radially uniform    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>stretch_uncentered=.false.</code>   </td><td class="markdownTableBodyNone">When uncommented, the grid is stretched radially, when commented it is radially uniform    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>refine_max_level</code>   </td><td class="markdownTableBodyNone">The maximum number of refinement levels    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>block_nx1</code>   </td><td class="markdownTableBodyNone">30 if uniform, 6 if radially stretched    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>domain_nx1</code>   </td><td class="markdownTableBodyNone">Domain Resolutions: 300 - low, 600 - middle, 1200 - high    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>domain_nx2</code>   </td><td class="markdownTableBodyNone">Domain Resolutions: 32 - low, 64 - middle, 126 - high    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>domain_nx3</code>   </td><td class="markdownTableBodyNone">Domain Resolutions: 96 - low, 192 - middle, 384 - high    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>xprobmin1</code>   </td><td class="markdownTableBodyNone">Lower boundary in solar radii    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>xprobmax1</code>   </td><td class="markdownTableBodyNone">Outer boundary in solar radii    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>omega_frame</code>   </td><td class="markdownTableBodyNone">The rotation rate of the Sun [radian per hour]    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>boundary_data_file_name</code>   </td><td class="markdownTableBodyNone">The input boundary file in the VTK format   </td></tr>
 </table>
 <p>A complete list of parameters can be found <a href="https://github.com/amrvac/amrvac/blob/amrvac3.2/doc/par.md">par.md</a>.</p>
 <h1>Additional Scripts</h1>
