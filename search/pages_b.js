@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['physics_20modules_20and_20equations_6980',['Physics modules and equations',['../md_doc_equations.html',1,'']]],
-  ['publications_20related_20to_20mpi_2damrvac_6981',['Publications related to MPI-AMRVAC',['../md_doc_publications.html',1,'']]]
+  ['physics_20modules_20and_20equations_6974',['Physics modules and equations',['../md_doc_equations.html',1,'']]],
+  ['publications_20related_20to_20mpi_2damrvac_6975',['Publications related to MPI-AMRVAC',['../md_doc_publications.html',1,'']]]
 ];
