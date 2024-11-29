@@ -1,9 +1,0 @@
-<map id="mod_ffhd_phys::ffhd_add_source" name="mod_ffhd_phys::ffhd_add_source">
-<area shape="rect" id="node1" title=" " alt="" coords="5,169,160,211"/>
-<area shape="rect" id="node2" href="$namespacemod__ffhd__phys.html#ade151c46e2b2a90fd6dc6fc116e573ff" title=" " alt="" coords="222,5,375,47"/>
-<area shape="rect" id="node3" href="$namespacemod__ffhd__phys.html#a9615402a4721ba1b126206bb7ab7d207" title=" " alt="" coords="222,71,375,112"/>
-<area shape="rect" id="node4" href="$namespacemod__ffhd__phys.html#a17bbbf6daa0cc7b349c527f55f2cda8e" title=" " alt="" coords="217,136,380,177"/>
-<area shape="rect" id="node5" href="$namespacemod__gravity.html#ab20751e039ea3c70d106929d2940f853" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="220,201,377,243"/>
-<area shape="rect" id="node6" href="$namespacemod__radiative__cooling.html#ae958ed08210d50fa1e01ed5ae3fd4e34" title=" " alt="" coords="212,267,385,323"/>
-<area shape="rect" id="node7" href="$namespacemod__viscosity.html#a61f06d68c91f32ec45245f989be9614c" title=" " alt="" coords="208,348,389,389"/>
-</map>

@@ -42,7 +42,7 @@
 <area shape="rect" id="node41" href="$namespacemod__supertimestepping.html#aa6c319b28911c6e73c1218f56f66d850" title="Set the hooks called before the first cycle and after the last cycle in the STS update This method sh..." alt="" coords="272,2302,464,2358"/>
 <area shape="rect" id="node42" href="$namespacemod__supertimestepping.html#ab8f1d9807c6320de449a5983500bd7c8" title="Set the hook of error handling in the STS update. This method is called before updating the BC...." alt="" coords="278,2382,458,2438"/>
 <area shape="rect" id="node43" href="$namespacemod__supertimestepping.html#ae300305fc391679ed668a2d0eb686b67" title="Initialize sts module." alt="" coords="278,2463,458,2504"/>
-<area shape="rect" id="node44" href="$namespacemod__thermal__conduction.html#a06712e83dc81e2953a38bee9f3109661" title="Init TC coefficients: HD case." alt="" coords="275,2528,461,2569"/>
+<area shape="rect" id="node44" href="$namespacemod__thermal__conduction.html#a06712e83dc81e2953a38bee9f3109661" title="Read tc module parameters from par file: MHD case." alt="" coords="275,2528,461,2569"/>
 <area shape="rect" id="node45" href="$namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="275,2593,461,2635"/>
 <area shape="rect" id="node46" href="$namespacemod__hd__phys.html#ab2348ea31e6f9d7814d61a645200ee00" title=" " alt="" coords="274,2659,462,2700"/>
 <area shape="rect" id="node47" href="$namespacemod__viscosity.html#a694614da2f2a26938cfaca941a18963a" title="Initialize the module." alt="" coords="263,2725,473,2751"/>
