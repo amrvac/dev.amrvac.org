@@ -1,0 +1,48 @@
+<map id="mod_ffhd_phys::ffhd_phys_init" name="mod_ffhd_phys::ffhd_phys_init">
+<area shape="rect" id="node1" title=" " alt="" coords="5,1424,160,1465"/>
+<area shape="rect" id="node2" href="$namespacemod__supertimestepping.html#a30d9310a240e2d446902e06a6359d054" title="subroutine which added programatically a term to be calculated using STS Params: sts_getdt function c..." alt="" coords="235,5,415,47"/>
+<area shape="rect" id="node3" href="$namespacemod__ffhd__phys.html#a78837cfca76dd18816c9884bcac42b29" title=" " alt="" coords="247,71,402,112"/>
+<area shape="rect" id="node4" href="$namespacemod__ffhd__phys.html#a17bbbf6daa0cc7b349c527f55f2cda8e" title=" " alt="" coords="489,100,652,141"/>
+<area shape="rect" id="node5" href="$namespacemod__ffhd__phys.html#a5de0cbddfe78de6174c1219efd62aaf2" title=" " alt="" coords="247,188,402,229"/>
+<area shape="rect" id="node6" href="$namespacemod__ffhd__phys.html#acc01baecbe67d2e493b2695cb18db8eb" title=" " alt="" coords="247,253,402,295"/>
+<area shape="rect" id="node7" href="$namespacemod__ffhd__phys.html#a932e6391b1642be30e73cd04f2011e5c" title=" " alt="" coords="247,319,402,360"/>
+<area shape="rect" id="node8" href="$namespacemod__ffhd__phys.html#acfeee7d6e7a20e53874bbba9edb3198a" title=" " alt="" coords="247,384,402,425"/>
+<area shape="rect" id="node9" href="$namespacemod__ffhd__phys.html#a7d149b13ebcce5df8dc08638a37446b3" title=" " alt="" coords="247,449,402,491"/>
+<area shape="rect" id="node10" href="$namespacemod__ffhd__phys.html#a8774f370abf5e818657996363be51cf3" title=" " alt="" coords="247,515,402,556"/>
+<area shape="rect" id="node11" href="$namespacemod__ffhd__phys.html#ac26479d561c70d9beeb350b168885205" title=" " alt="" coords="247,580,402,621"/>
+<area shape="rect" id="node12" href="$namespacemod__ffhd__phys.html#a019b36b1989ef147a2bafebafaeb6c06" title=" " alt="" coords="247,645,402,687"/>
+<area shape="rect" id="node13" href="$namespacemod__ffhd__phys.html#a375312ae17a035a25fc5bd034ca46035" title=" " alt="" coords="247,711,402,752"/>
+<area shape="rect" id="node14" href="$namespacemod__ffhd__phys.html#a8ff067ea8191af821e57a28c1dcf35d9" title=" " alt="" coords="247,776,402,817"/>
+<area shape="rect" id="node15" href="$namespacemod__ffhd__phys.html#adf8a3efafcccc5e46615042ded51497a" title=" " alt="" coords="247,841,402,883"/>
+<area shape="rect" id="node16" href="$namespacemod__ffhd__phys.html#af631282982788c9706cb88d412396095" title=" " alt="" coords="493,900,648,941"/>
+<area shape="rect" id="node17" href="$namespacemod__ffhd__phys.html#acfdff4469ac45be1fb6bc7c7899fbd4f" title=" " alt="" coords="245,959,405,1000"/>
+<area shape="rect" id="node18" href="$namespacemod__ffhd__phys.html#a128bb77e232a52b546210fdef521e471" title=" " alt="" coords="247,1024,402,1065"/>
+<area shape="rect" id="node19" href="$namespacemod__ffhd__phys.html#a4da1bbf7118a2405740a399d1223cce9" title=" " alt="" coords="247,1089,402,1131"/>
+<area shape="rect" id="node20" href="$namespacemod__ffhd__phys.html#a2510b87c5b5397eedb1f6a2a56e5a45b" title=" " alt="" coords="221,1155,429,1196"/>
+<area shape="rect" id="node21" href="$namespacemod__ffhd__phys.html#a41455658a6d1ba97a08a2fcf5547ad6a" title=" " alt="" coords="220,1220,429,1261"/>
+<area shape="rect" id="node22" href="$namespacemod__ffhd__phys.html#aad7191b25805429b75e3799f7565365f" title=" " alt="" coords="227,1285,423,1327"/>
+<area shape="rect" id="node23" href="$namespacemod__ffhd__phys.html#a9d42728f3ef80bb7aef1383c4db117b2" title=" " alt="" coords="247,1351,402,1392"/>
+<area shape="rect" id="node24" href="$namespacemod__ffhd__phys.html#a110878cd60ab3dfc18b80dcc337a68d5" title=" " alt="" coords="241,1417,408,1473"/>
+<area shape="rect" id="node25" href="$namespacemod__ffhd__phys.html#ae393a2a25b530a0f2f24dd6f38f10760" title=" " alt="" coords="247,1497,402,1539"/>
+<area shape="rect" id="node26" href="$namespacemod__ffhd__phys.html#a92a4843027363ce255ed4c49006ac561" title=" " alt="" coords="247,1563,402,1604"/>
+<area shape="rect" id="node27" href="$namespacemod__ffhd__phys.html#afc87fa44239d3430a03b682ce71ba10f" title=" " alt="" coords="237,1628,413,1669"/>
+<area shape="rect" id="node28" href="$namespacemod__ffhd__phys.html#ad058ba78f22eee34984f8390629f5e2e" title=" " alt="" coords="247,1693,402,1735"/>
+<area shape="rect" id="node29" href="$namespacemod__ffhd__phys.html#a6c1be4d1ea23f76cdfa35d0777d8ed4b" title=" " alt="" coords="247,1759,402,1800"/>
+<area shape="rect" id="node30" href="$namespacemod__ffhd__phys.html#a73f95ba33722024d7188b49298f1fc75" title=" " alt="" coords="245,1824,405,1865"/>
+<area shape="rect" id="node31" href="$namespacemod__ffhd__phys.html#a83540eb0a5805b9f480102230869e8a3" title=" " alt="" coords="247,1889,402,1931"/>
+<area shape="rect" id="node32" href="$namespacemod__ffhd__phys.html#a7f5788f71e346aeb259c0ab7d8ce63d3" title="Write this module&#39;s parameters to a snapsoht." alt="" coords="247,1955,402,1996"/>
+<area shape="rect" id="node33" href="$namespacemod__gravity.html#ac77da47869e83fdec592fa926333722c" title="Initialize the module." alt="" coords="232,2021,417,2047"/>
+<area shape="rect" id="node34" href="$namespacemod__ionization__degree.html#a98f8df508ab03ff6431b97782de7be8d" title=" " alt="" coords="237,2072,412,2113"/>
+<area shape="rect" id="node35" href="$namespacemod__radiative__cooling.html#a2c0aab05964e01b97b9ae65c6d2ea830" title=" " alt="" coords="239,2137,410,2179"/>
+<area shape="rect" id="node36" href="$namespacemod__radiative__cooling.html#ae450293b5673565067dbec5188ed3325" title="Radiative cooling initialization." alt="" coords="239,2203,410,2259"/>
+<area shape="rect" id="node37" href="$namespacemod__ffhd__phys.html#aaff0b6cbb71ee0cdf2344fe0eff0008a" title=" " alt="" coords="208,2283,441,2310"/>
+<area shape="rect" id="node38" href="$namespacemod__ffhd__phys.html#a4275d16f17371fbae9e1b31c3583b63c" title=" " alt="" coords="227,2335,422,2376"/>
+<area shape="rect" id="node39" href="$namespacemod__ffhd__phys.html#a98d817afbd3a9852b6e9599ee2455a68" title=" " alt="" coords="215,2400,434,2441"/>
+<area shape="rect" id="node40" href="$namespacemod__supertimestepping.html#aa6c319b28911c6e73c1218f56f66d850" title="Set the hooks called before the first cycle and after the last cycle in the STS update This method sh..." alt="" coords="229,2466,421,2522"/>
+<area shape="rect" id="node41" href="$namespacemod__supertimestepping.html#ab8f1d9807c6320de449a5983500bd7c8" title="Set the hook of error handling in the STS update. This method is called before updating the BC...." alt="" coords="235,2546,415,2602"/>
+<area shape="rect" id="node42" href="$namespacemod__supertimestepping.html#ae300305fc391679ed668a2d0eb686b67" title="Initialize sts module." alt="" coords="235,2627,415,2668"/>
+<area shape="rect" id="node43" href="$namespacemod__thermal__conduction.html#aed9ae145a45ffa9d878f2b32661b2559" title=" " alt="" coords="231,2692,418,2733"/>
+<area shape="rect" id="node44" href="$namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="231,2757,418,2799"/>
+<area shape="rect" id="node45" href="$namespacemod__ffhd__phys.html#a51eb18e871ee4a36956f45f7a23074e7" title=" " alt="" coords="226,2823,423,2864"/>
+<area shape="rect" id="node46" href="$namespacemod__viscosity.html#a694614da2f2a26938cfaca941a18963a" title="Initialize the module." alt="" coords="220,2889,429,2915"/>
+</map>
