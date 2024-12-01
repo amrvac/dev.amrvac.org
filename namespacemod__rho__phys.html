@@ -106,8 +106,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a589f74f87219d123db6aa6c5781198ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9f977ec4d9f61b3e31ea28d1b855b18"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rho__phys.html#ab9f977ec4d9f61b3e31ea28d1b855b18">rho_get_flux</a> (wC, w, x, ixIL, ixOL, idim, f)</td></tr>
 <tr class="separator:ab9f977ec4d9f61b3e31ea28d1b855b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08f4baf8c313a095e80da6257b559f65"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rho__phys.html#a08f4baf8c313a095e80da6257b559f65">rho_add_source_geom</a> (qdt, dtfactor, ixIL, ixOL, wCT, w, x)</td></tr>
-<tr class="separator:a08f4baf8c313a095e80da6257b559f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de9ce9104990f0aadacb8e7bfd3c861"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rho__phys.html#a4de9ce9104990f0aadacb8e7bfd3c861">rho_add_source_geom</a> (qdt, dtfactor, ixIL, ixOL, wCT, wprim, w, x)</td></tr>
+<tr class="separator:a4de9ce9104990f0aadacb8e7bfd3c861"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -122,8 +122,8 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module containing the physics routines for scalar advection. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a id="a08f4baf8c313a095e80da6257b559f65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08f4baf8c313a095e80da6257b559f65">&#9670;&nbsp;</a></span>rho_add_source_geom()</h2>
+<a id="a4de9ce9104990f0aadacb8e7bfd3c861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4de9ce9104990f0aadacb8e7bfd3c861">&#9670;&nbsp;</a></span>rho_add_source_geom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,6 +169,12 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(inout)&#160;</td>
           <td class="paramname"><em>wCT</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(inout)&#160;</td>
+          <td class="paramname"><em>wprim</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -687,7 +693,7 @@ Here is the call graph for this function:</div>
 <map name="anamespacemod__rho__phys_ac95407e2ac394616f7d6c325a94d105e_cgraph" id="anamespacemod__rho__phys_ac95407e2ac394616f7d6c325a94d105e_cgraph">
 <area shape="rect" title=" " alt="" coords="5,239,217,265"/>
 <area shape="rect" href="namespacemod__particles.html#a7a89b126b34bb788a3911955880ddd8f" title="Initialize particle data and parameters." alt="" coords="271,5,478,32"/>
-<area shape="rect" href="namespacemod__rho__phys.html#a08f4baf8c313a095e80da6257b559f65" title=" " alt="" coords="286,57,463,98"/>
+<area shape="rect" href="namespacemod__rho__phys.html#a4de9ce9104990f0aadacb8e7bfd3c861" title=" " alt="" coords="286,57,463,98"/>
 <area shape="rect" href="namespacemod__rho__phys.html#ad51ef98e818c1942f188987a65ec8106" title=" " alt="" coords="287,122,462,163"/>
 <area shape="rect" href="namespacemod__rho__phys.html#aed01b1eb30e68167bca7a7299b08dc57" title=" " alt="" coords="266,188,483,215"/>
 <area shape="rect" href="namespacemod__rho__phys.html#a589f74f87219d123db6aa6c5781198ef" title=" " alt="" coords="277,239,472,265"/>

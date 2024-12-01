@@ -344,8 +344,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a61703c3a7087f9162de62a186a8829a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e1dfe1c6f7c4ee37720152b77fe3e4"><td class="memItemLeft" align="right" valign="top">pure logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#a09e1dfe1c6f7c4ee37720152b77fe3e4">has_collisions</a> ()</td></tr>
 <tr class="separator:a09e1dfe1c6f7c4ee37720152b77fe3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b7d7bc5e6ad7a5abf0b651e65a0339a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#a6b7d7bc5e6ad7a5abf0b651e65a0339a">twofl_add_source_geom</a> (qdt, dtfactor, ixIL, ixOL, wCT, w, x)</td></tr>
-<tr class="separator:a6b7d7bc5e6ad7a5abf0b651e65a0339a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fef6517827122de8f5e6c74db527825"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#a8fef6517827122de8f5e6c74db527825">twofl_add_source_geom</a> (qdt, dtfactor, ixIL, ixOL, wCT, wprim, w, x)</td></tr>
+<tr class="separator:a8fef6517827122de8f5e6c74db527825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad19194e30ae692fb883ac2e1d8c7b232"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#ad19194e30ae692fb883ac2e1d8c7b232">twofl_get_temp_c_pert_from_etot</a> (w, x, ixIL, ixOL, res)</td></tr>
 <tr class="separator:ad19194e30ae692fb883ac2e1d8c7b232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac36cb8a7f352e9bdc3ca1c2dd54489d2"><td class="memItemLeft" align="right" valign="top">double precision function, dimension(ixo^s)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__twofl__phys.html#ac36cb8a7f352e9bdc3ca1c2dd54489d2">twofl_mag_en_all</a> (w, ixIL, ixOL)</td></tr>
@@ -3770,8 +3770,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a6b7d7bc5e6ad7a5abf0b651e65a0339a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b7d7bc5e6ad7a5abf0b651e65a0339a">&#9670;&nbsp;</a></span>twofl_add_source_geom()</h2>
+<a id="a8fef6517827122de8f5e6c74db527825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fef6517827122de8f5e6c74db527825">&#9670;&nbsp;</a></span>twofl_add_source_geom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3822,6 +3822,12 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(inout)&#160;</td>
+          <td class="paramname"><em>wprim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(inout)&#160;</td>
           <td class="paramname"><em>w</em>, </td>
         </tr>
         <tr>
@@ -3842,8 +3848,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__twofl__phys_a6b7d7bc5e6ad7a5abf0b651e65a0339a_cgraph.png" border="0" usemap="#anamespacemod__twofl__phys_a6b7d7bc5e6ad7a5abf0b651e65a0339a_cgraph" alt=""/></div>
-<map name="anamespacemod__twofl__phys_a6b7d7bc5e6ad7a5abf0b651e65a0339a_cgraph" id="anamespacemod__twofl__phys_a6b7d7bc5e6ad7a5abf0b651e65a0339a_cgraph">
+<div class="center"><img src="namespacemod__twofl__phys_a8fef6517827122de8f5e6c74db527825_cgraph.png" border="0" usemap="#anamespacemod__twofl__phys_a8fef6517827122de8f5e6c74db527825_cgraph" alt=""/></div>
+<map name="anamespacemod__twofl__phys_a8fef6517827122de8f5e6c74db527825_cgraph" id="anamespacemod__twofl__phys_a8fef6517827122de8f5e6c74db527825_cgraph">
 <area shape="rect" title=" " alt="" coords="5,89,173,131"/>
 <area shape="rect" href="namespacemod__twofl__phys.html#a4e18f8b5346e80f4d7e4418f32845e7f" title=" " alt="" coords="227,5,384,47"/>
 <area shape="rect" href="namespacemod__twofl__phys.html#a7621aad8684305f6320e23d5797bd071" title=" " alt="" coords="437,119,595,160"/>

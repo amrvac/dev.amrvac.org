@@ -103,8 +103,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a2284bdc7e6308d9349070f592dbd757b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0313faa74c915de3881f5ead468a2d5a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ard__phys.html#a0313faa74c915de3881f5ead468a2d5a">ard_get_flux</a> (wC, w, x, ixIL, ixOL, idim, f)</td></tr>
 <tr class="separator:a0313faa74c915de3881f5ead468a2d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01e49b3d06d8e1f6fca3728a6a9c4c97"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ard__phys.html#a01e49b3d06d8e1f6fca3728a6a9c4c97">ard_add_source_geom</a> (qdt, dtfactor, ixIL, ixOL, wCT, w, x)</td></tr>
-<tr class="separator:a01e49b3d06d8e1f6fca3728a6a9c4c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fa441db5b9c3d27d786b240fbec1b3f"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ard__phys.html#a4fa441db5b9c3d27d786b240fbec1b3f">ard_add_source_geom</a> (qdt, dtfactor, ixIL, ixOL, wCT, wprim, w, x)</td></tr>
+<tr class="separator:a4fa441db5b9c3d27d786b240fbec1b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95422789416862d09693e5e5e1c0be5a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ard__phys.html#a95422789416862d09693e5e5e1c0be5a">ard_add_source</a> (qdt, dtfactor, ixIL, ixOL, wCT, wCTprim, w, x, qsourcesplit, active)</td></tr>
 <tr class="separator:a95422789416862d09693e5e5e1c0be5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f4dc2ccf8f65dfcde0509cd3d532221"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ard__phys.html#a7f4dc2ccf8f65dfcde0509cd3d532221">ard_laplacian</a> (ixIL, ixOL, var, lpl)</td></tr>
@@ -313,8 +313,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a01e49b3d06d8e1f6fca3728a6a9c4c97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01e49b3d06d8e1f6fca3728a6a9c4c97">&#9670;&nbsp;</a></span>ard_add_source_geom()</h2>
+<a id="a4fa441db5b9c3d27d786b240fbec1b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa441db5b9c3d27d786b240fbec1b3f">&#9670;&nbsp;</a></span>ard_add_source_geom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -360,6 +360,12 @@ Here is the call graph for this function:</div>
           <td></td>
           <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(inout)&#160;</td>
           <td class="paramname"><em>wCT</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(inout)&#160;</td>
+          <td class="paramname"><em>wprim</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -874,7 +880,7 @@ Here is the call graph for this function:</div>
 <map name="anamespacemod__ard__phys_a3fdfd1533a8e947fa9c840d7f086ed75_cgraph" id="anamespacemod__ard__phys_a3fdfd1533a8e947fa9c840d7f086ed75_cgraph">
 <area shape="rect" title=" " alt="" coords="5,383,217,410"/>
 <area shape="rect" href="namespacemod__ard__phys.html#a95422789416862d09693e5e5e1c0be5a" title=" " alt="" coords="286,5,463,47"/>
-<area shape="rect" href="namespacemod__ard__phys.html#a01e49b3d06d8e1f6fca3728a6a9c4c97" title=" " alt="" coords="286,71,463,112"/>
+<area shape="rect" href="namespacemod__ard__phys.html#a4fa441db5b9c3d27d786b240fbec1b3f" title=" " alt="" coords="286,71,463,112"/>
 <area shape="rect" href="namespacemod__ard__phys.html#ace35bfd8a4726b89756634a95d3c3e4d" title=" " alt="" coords="279,136,470,177"/>
 <area shape="rect" href="namespacemod__ard__phys.html#af248e66e4de9bbdc01f1b66f07ccc772" title="inplace update of psa==&gt;F_im(psa)" alt="" coords="269,201,480,243"/>
 <area shape="rect" href="namespacemod__ard__phys.html#a4769341f689125088039d055bda1b259" title=" " alt="" coords="287,267,462,308"/>

@@ -103,8 +103,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a4e5fe63dd5a8063c3b69b4cf084812fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24e2427f19f9053e2ce1e2407d91a728"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__nonlinear__phys.html#a24e2427f19f9053e2ce1e2407d91a728">nonlinear_get_flux</a> (wC, w, x, ixIL, ixOL, idim, f)</td></tr>
 <tr class="separator:a24e2427f19f9053e2ce1e2407d91a728"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43f51e4c68e343c98384570cb2f074d4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__nonlinear__phys.html#a43f51e4c68e343c98384570cb2f074d4">nonlinear_add_source_geom</a> (qdt, dtfactor, ixIL, ixOL, wCT, w, x)</td></tr>
-<tr class="separator:a43f51e4c68e343c98384570cb2f074d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f7cf11505bb581a70f01e78b18439a0"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__nonlinear__phys.html#a1f7cf11505bb581a70f01e78b18439a0">nonlinear_add_source_geom</a> (qdt, dtfactor, ixIL, ixOL, wCT, wprim, w, x)</td></tr>
+<tr class="separator:a1f7cf11505bb581a70f01e78b18439a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec5e0a36ab5d02e689574da90117f67e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__nonlinear__phys.html#aec5e0a36ab5d02e689574da90117f67e">nonlinear_add_source</a> (qdt, dtfactor, ixIL, ixOL, wCT, wCTprim, w, x, qsourcesplit, active)</td></tr>
 <tr class="separator:aec5e0a36ab5d02e689574da90117f67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -225,8 +225,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a43f51e4c68e343c98384570cb2f074d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43f51e4c68e343c98384570cb2f074d4">&#9670;&nbsp;</a></span>nonlinear_add_source_geom()</h2>
+<a id="a1f7cf11505bb581a70f01e78b18439a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7cf11505bb581a70f01e78b18439a0">&#9670;&nbsp;</a></span>nonlinear_add_source_geom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,6 +272,12 @@ Here is the call graph for this function:</div>
           <td></td>
           <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(inout)&#160;</td>
           <td class="paramname"><em>wCT</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(inout)&#160;</td>
+          <td class="paramname"><em>wprim</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -717,7 +723,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="5,318,163,359"/>
 <area shape="rect" href="namespacemod__kdv.html#a62c481ac932c61a252c909316d01ca93" title="Initialize the module." alt="" coords="248,5,389,32"/>
 <area shape="rect" href="namespacemod__nonlinear__phys.html#aec5e0a36ab5d02e689574da90117f67e" title=" " alt="" coords="233,57,405,98"/>
-<area shape="rect" href="namespacemod__nonlinear__phys.html#a43f51e4c68e343c98384570cb2f074d4" title=" " alt="" coords="211,122,427,163"/>
+<area shape="rect" href="namespacemod__nonlinear__phys.html#a1f7cf11505bb581a70f01e78b18439a0" title=" " alt="" coords="211,122,427,163"/>
 <area shape="rect" href="namespacemod__nonlinear__phys.html#ad2ad9b84c04f9016d5288566c6344797" title=" " alt="" coords="229,187,409,229"/>
 <area shape="rect" href="namespacemod__nonlinear__phys.html#acd079d3206a40c1489f8707427521aa6" title=" " alt="" coords="237,253,400,294"/>
 <area shape="rect" href="namespacemod__nonlinear__phys.html#a4e5fe63dd5a8063c3b69b4cf084812fa" title=" " alt="" coords="240,318,397,359"/>
