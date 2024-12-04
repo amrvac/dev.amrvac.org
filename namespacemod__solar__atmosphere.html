@@ -97,14 +97,6 @@ Functions/Subroutines</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:abd4232eafd8be416d28740ad66917469"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#abd4232eafd8be416d28740ad66917469">n_valc</a></td></tr>
-<tr class="separator:abd4232eafd8be416d28740ad66917469"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d0ec09132d850785d89186e0f6eabcd"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#a6d0ec09132d850785d89186e0f6eabcd">n_hong</a></td></tr>
-<tr class="separator:a6d0ec09132d850785d89186e0f6eabcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24c79dd982e9d37c0f57436e6fb55336"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#a24c79dd982e9d37c0f57436e6fb55336">n_fontenla</a></td></tr>
-<tr class="separator:a24c79dd982e9d37c0f57436e6fb55336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfe303fe014fc52691953caca3cfb16a"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#acfe303fe014fc52691953caca3cfb16a">n_alc7</a></td></tr>
-<tr class="separator:acfe303fe014fc52691953caca3cfb16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb88d14b9ebbce67f14a3c65d7305a18"><td class="memItemLeft" align="right" valign="top">double precision, parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#aeb88d14b9ebbce67f14a3c65d7305a18">solar_gravity</a> =2.74d4</td></tr>
 <tr class="separator:aeb88d14b9ebbce67f14a3c65d7305a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1827b76d72bada3e6dba0a77c833b71"><td class="memItemLeft" align="right" valign="top">double precision, dimension(1:52)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#aa1827b76d72bada3e6dba0a77c833b71">h_valc</a></td></tr>
@@ -123,6 +115,14 @@ Variables</h2></td></tr>
 <tr class="separator:ac33d8d78f0c7dd3bfbe6887e7d26e051"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d13373bd47f68ec21d35d6480ab7997"><td class="memItemLeft" align="right" valign="top">double precision, dimension(1:120)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#a0d13373bd47f68ec21d35d6480ab7997">t_alc7</a></td></tr>
 <tr class="separator:a0d13373bd47f68ec21d35d6480ab7997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4232eafd8be416d28740ad66917469"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#abd4232eafd8be416d28740ad66917469">n_valc</a></td></tr>
+<tr class="separator:abd4232eafd8be416d28740ad66917469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0ec09132d850785d89186e0f6eabcd"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#a6d0ec09132d850785d89186e0f6eabcd">n_hong</a></td></tr>
+<tr class="separator:a6d0ec09132d850785d89186e0f6eabcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c79dd982e9d37c0f57436e6fb55336"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#a24c79dd982e9d37c0f57436e6fb55336">n_fontenla</a></td></tr>
+<tr class="separator:a24c79dd982e9d37c0f57436e6fb55336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfe303fe014fc52691953caca3cfb16a"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__solar__atmosphere.html#acfe303fe014fc52691953caca3cfb16a">n_alc7</a></td></tr>
+<tr class="separator:acfe303fe014fc52691953caca3cfb16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>User can use subroutine get_atm_para to generate 1D solar stmosphere. User should provide heights (h), number density at h=0, number of points (nh), and the gravity (grav) at each point. User can select temperature profile. This subroutine will return density and pressure at each point. </p>
@@ -406,7 +406,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00016">16</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00015">15</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -422,7 +422,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00015">15</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00014">14</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -438,7 +438,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00014">14</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00013">13</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -454,7 +454,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00013">13</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00012">12</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -470,7 +470,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00011">11</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00016">16</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -486,7 +486,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00011">11</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00016">16</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -502,7 +502,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00011">11</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00016">16</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -518,7 +518,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00011">11</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00016">16</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -534,7 +534,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00012">12</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00011">11</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -550,7 +550,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00016">16</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00015">15</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -566,7 +566,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00015">15</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00014">14</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -582,7 +582,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00014">14</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00013">13</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -598,7 +598,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00013">13</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__solar__atmosphere_8t_source.html#l00012">12</a> of file <a class="el" href="mod__solar__atmosphere_8t_source.html">mod_solar_atmosphere.t</a>.</p>
 
 </div>
 </div>

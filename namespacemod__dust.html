@@ -140,6 +140,15 @@ Functions/Subroutines</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a0e0e400aeb3c7f7fe0a828766a3f02cf"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a0e0e400aeb3c7f7fe0a828766a3f02cf">dust_min_rho</a> = -1.0d0</td></tr>
+<tr class="memdesc:a0e0e400aeb3c7f7fe0a828766a3f02cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum dust density as used when dust_small_to_zero=T.  <a href="namespacemod__dust.html#a0e0e400aeb3c7f7fe0a828766a3f02cf">More...</a><br /></td></tr>
+<tr class="separator:a0e0e400aeb3c7f7fe0a828766a3f02cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ac2551062b9bacde6164a8b2e179120"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:), allocatable, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a5ac2551062b9bacde6164a8b2e179120">dust_size</a></td></tr>
+<tr class="memdesc:a5ac2551062b9bacde6164a8b2e179120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of each dust species, dimensionless expression.  <a href="namespacemod__dust.html#a5ac2551062b9bacde6164a8b2e179120">More...</a><br /></td></tr>
+<tr class="separator:a5ac2551062b9bacde6164a8b2e179120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e82b7f4141ab314e95a1598f7ece7a"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:), allocatable, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#af9e82b7f4141ab314e95a1598f7ece7a">dust_density</a></td></tr>
+<tr class="memdesc:af9e82b7f4141ab314e95a1598f7ece7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal density of each dust species, dimensionless expression.  <a href="namespacemod__dust.html#af9e82b7f4141ab314e95a1598f7ece7a">More...</a><br /></td></tr>
+<tr class="separator:af9e82b7f4141ab314e95a1598f7ece7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e84e809ba53fffe368aab3ae16ce5ac"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a8e84e809ba53fffe368aab3ae16ce5ac">dust_n_species</a> = 0</td></tr>
 <tr class="memdesc:a8e84e809ba53fffe368aab3ae16ce5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of dust species.  <a href="namespacemod__dust.html#a8e84e809ba53fffe368aab3ae16ce5ac">More...</a><br /></td></tr>
 <tr class="separator:a8e84e809ba53fffe368aab3ae16ce5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,18 +158,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a7a080e96d8e9cf5d86eb430bbf82cb4e"><td class="memItemLeft" align="right" valign="top">integer, dimension(:, :), allocatable, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a7a080e96d8e9cf5d86eb430bbf82cb4e">dust_mom</a></td></tr>
 <tr class="memdesc:a7a080e96d8e9cf5d86eb430bbf82cb4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indices of the dust momentum densities.  <a href="namespacemod__dust.html#a7a080e96d8e9cf5d86eb430bbf82cb4e">More...</a><br /></td></tr>
 <tr class="separator:a7a080e96d8e9cf5d86eb430bbf82cb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ac2551062b9bacde6164a8b2e179120"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:), allocatable, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a5ac2551062b9bacde6164a8b2e179120">dust_size</a></td></tr>
-<tr class="memdesc:a5ac2551062b9bacde6164a8b2e179120"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of each dust species, dimensionless expression.  <a href="namespacemod__dust.html#a5ac2551062b9bacde6164a8b2e179120">More...</a><br /></td></tr>
-<tr class="separator:a5ac2551062b9bacde6164a8b2e179120"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9e82b7f4141ab314e95a1598f7ece7a"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:), allocatable, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#af9e82b7f4141ab314e95a1598f7ece7a">dust_density</a></td></tr>
-<tr class="memdesc:af9e82b7f4141ab314e95a1598f7ece7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal density of each dust species, dimensionless expression.  <a href="namespacemod__dust.html#af9e82b7f4141ab314e95a1598f7ece7a">More...</a><br /></td></tr>
-<tr class="separator:af9e82b7f4141ab314e95a1598f7ece7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a804ba7ea402db06cbf2bb579eddfdf15"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a804ba7ea402db06cbf2bb579eddfdf15">dust_small_to_zero</a> = .false.</td></tr>
 <tr class="memdesc:a804ba7ea402db06cbf2bb579eddfdf15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set small dust densities to zero to avoid numerical problems.  <a href="namespacemod__dust.html#a804ba7ea402db06cbf2bb579eddfdf15">More...</a><br /></td></tr>
 <tr class="separator:a804ba7ea402db06cbf2bb579eddfdf15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e0e400aeb3c7f7fe0a828766a3f02cf"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a0e0e400aeb3c7f7fe0a828766a3f02cf">dust_min_rho</a> = -1.0d0</td></tr>
-<tr class="memdesc:a0e0e400aeb3c7f7fe0a828766a3f02cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum dust density as used when dust_small_to_zero=T.  <a href="namespacemod__dust.html#a0e0e400aeb3c7f7fe0a828766a3f02cf">More...</a><br /></td></tr>
-<tr class="separator:a0e0e400aeb3c7f7fe0a828766a3f02cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6186fc0a20cbb6768ca31e508ffc3f91"><td class="memItemLeft" align="right" valign="top">character(len=std_len), public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a6186fc0a20cbb6768ca31e508ffc3f91">dust_method</a> = 'Kwok'</td></tr>
 <tr class="memdesc:a6186fc0a20cbb6768ca31e508ffc3f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">What type of dust drag force to use. Can be 'Kwok', 'sticking', 'linear', 'usr' or 'none'.  <a href="namespacemod__dust.html#a6186fc0a20cbb6768ca31e508ffc3f91">More...</a><br /></td></tr>
 <tr class="separator:a6186fc0a20cbb6768ca31e508ffc3f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,7 +244,7 @@ Variables</h2></td></tr>
 
 <p>w[iw]= w[iw]+qdt*S[wCT, x] where S is the source based on wCT within ixO </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00528">528</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00529">529</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -325,7 +325,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00673">673</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00674">674</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -436,7 +436,7 @@ Here is the call graph for this function:</div>
 
 <p>inplace update of psa==&gt;F_im(psa) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00581">581</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00582">582</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -517,7 +517,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01009">1009</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01010">1010</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -598,7 +598,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01033">1033</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01034">1034</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -681,7 +681,7 @@ Here is the call graph for this function:</div>
 
 <p>Get dt related to dust and gas stopping time (Laibe 2011) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00896">896</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00897">897</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -890,7 +890,7 @@ Here is the call graph for this function:</div>
 
 <p>Implicit solve of psb=psa+dtfactor*dt*F_im(psb) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00650">650</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00651">651</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1020,7 +1020,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00603">603</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00604">604</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1227,7 +1227,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00351">351</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00352">352</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1302,7 +1302,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00814">814</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00815">815</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1380,7 +1380,7 @@ Here is the call graph for this function:</div>
 <p>Get sticking coefficient alpha_T (always between 0 and 1) </p>
 <p>Uses Temperatures in K Equation from Decin et al. 2006 </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00437">437</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00438">438</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1453,7 +1453,7 @@ Here is the call graph for this function:</div>
 <p>Note that this calculation assumes cgs!!!!</p>
 <p>It takes as input the stellar luminosity in solar units in 'stellar' case or a fixed dust input temperature in Kelvin when 'constant' or does case 'ism' </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00467">467</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00468">468</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -1646,7 +1646,7 @@ Here is the call graph for this function:</div>
 
 <p>Internal density of each dust species, dimensionless expression. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00028">28</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00034">34</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -1664,7 +1664,7 @@ Here is the call graph for this function:</div>
 
 <p>What type of dust drag force to use. Can be 'Kwok', 'sticking', 'linear', 'usr' or 'none'. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00059">59</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00066">66</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -1682,7 +1682,7 @@ Here is the call graph for this function:</div>
 
 <p>Minimum dust density as used when dust_small_to_zero=T. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00050">50</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00028">28</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -1700,7 +1700,7 @@ Here is the call graph for this function:</div>
 
 <p>Indices of the dust momentum densities. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00022">22</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00047">47</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -1718,7 +1718,7 @@ Here is the call graph for this function:</div>
 
 <p>The number of dust species. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00012">12</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00037">37</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -1736,7 +1736,7 @@ Here is the call graph for this function:</div>
 
 <p>Indices of the dust densities. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00019">19</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00044">44</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -1754,7 +1754,7 @@ Here is the call graph for this function:</div>
 
 <p>Size of each dust species, dimensionless expression. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00025">25</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00031">31</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -1772,7 +1772,7 @@ Here is the call graph for this function:</div>
 
 <p>Set small dust densities to zero to avoid numerical problems. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00047">47</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00050">50</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>

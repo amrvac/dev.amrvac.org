@@ -53,7 +53,7 @@ var searchData=
   ['slab_6536',['slab',['../namespacemod__global__parameters.html#a73f2b59cb14bf25ef28108c185ffd72d',1,'mod_global_parameters']]],
   ['slab_5funiform_6537',['slab_uniform',['../namespacemod__global__parameters.html#ac9c8181c0530dba02a4ae8e21b37c1e5',1,'mod_global_parameters']]],
   ['slice_5ftype_6538',['slice_type',['../namespacemod__slice.html#aa01fdbfdbedbb831547f4797f2518fbe',1,'mod_slice']]],
-  ['slicecoord_6539',['slicecoord',['../namespacemod__slice.html#ae261b249da78bf9f9c0fde95e943551a',1,'mod_slice']]],
+  ['slicecoord_6539',['slicecoord',['../namespacemod__slice.html#a6fcbd4957b14341f638a001a334eff77',1,'mod_slice']]],
   ['slicedir_6540',['slicedir',['../namespacemod__slice.html#ab03e9f445d1009207701692d48e2f4f9',1,'mod_slice']]],
   ['slicenext_6541',['slicenext',['../namespacemod__slice.html#a3cb1cee59aefde34ff7330a6b1370be3',1,'mod_slice']]],
   ['slowsteps_6542',['slowsteps',['../namespacemod__global__parameters.html#a7697c549bfe2fdc52590606d35f7645f',1,'mod_global_parameters']]],

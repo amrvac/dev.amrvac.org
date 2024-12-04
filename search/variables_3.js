@@ -53,6 +53,6 @@ var searchData=
   ['dxcoarse_5563',['dxcoarse',['../structmod__physicaldata_1_1state__sub.html#aead871b1276f7896bcf57197f78fe79b',1,'mod_physicaldata::state_sub']]],
   ['dxfirst_5564',['dxfirst',['../namespacemod__global__parameters.html#ae8bd4f96706c14515d6e833bdb98cbe5',1,'mod_global_parameters']]],
   ['dxfirst_5f1mq_5565',['dxfirst_1mq',['../namespacemod__global__parameters.html#af8a6712fb6a1869bdd1fe5e243335cd5',1,'mod_global_parameters']]],
-  ['dxlevel_5566',['dxlevel',['../namespacemod__global__parameters.html#af2f7436240818f02fc7b675a70cae4a3',1,'mod_global_parameters']]],
+  ['dxlevel_5566',['dxlevel',['../namespacemod__global__parameters.html#ac487446056522027f949f42ba64b2e11',1,'mod_global_parameters']]],
   ['dxmid_5567',['dxmid',['../namespacemod__global__parameters.html#afee2bc8ebcd7636780481dcfd79f3625',1,'mod_global_parameters']]]
 ];

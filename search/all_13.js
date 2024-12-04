@@ -110,7 +110,7 @@ var searchData=
   ['slab_5funiform_2694',['slab_uniform',['../namespacemod__global__parameters.html#ac9c8181c0530dba02a4ae8e21b37c1e5',1,'mod_global_parameters']]],
   ['slice_20output_2695',['Slice output',['../md_doc_slices.html',1,'']]],
   ['slice_5ftype_2696',['slice_type',['../namespacemod__slice.html#aa01fdbfdbedbb831547f4797f2518fbe',1,'mod_slice']]],
-  ['slicecoord_2697',['slicecoord',['../namespacemod__slice.html#ae261b249da78bf9f9c0fde95e943551a',1,'mod_slice']]],
+  ['slicecoord_2697',['slicecoord',['../namespacemod__slice.html#a6fcbd4957b14341f638a001a334eff77',1,'mod_slice']]],
   ['slicedir_2698',['slicedir',['../namespacemod__slice.html#ab03e9f445d1009207701692d48e2f4f9',1,'mod_slice']]],
   ['slicenext_2699',['slicenext',['../namespacemod__slice.html#a3cb1cee59aefde34ff7330a6b1370be3',1,'mod_slice']]],
   ['slices_2emd_2700',['slices.md',['../slices_8md.html',1,'']]],
