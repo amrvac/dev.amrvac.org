@@ -1,0 +1,5 @@
+<map id="mod_usr::usr_init" name="mod_usr::usr_init">
+<area shape="rect" id="node1" title="This routine should set user methods, and activate the physics module." alt="" coords="5,31,140,57"/>
+<area shape="rect" id="node2" href="$namespacemod__usr.html#acc698c9462730f8a1a8536a638529fee" title="A routine for specifying initial conditions." alt="" coords="188,5,385,32"/>
+<area shape="rect" id="node3" href="$namespacemod__mhd.html#a7a866250156ff45efd487369fe6e21d0" title=" " alt="" coords="195,56,379,83"/>
+</map>

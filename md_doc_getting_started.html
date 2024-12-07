@@ -85,7 +85,7 @@ $(function() {
 <h1><a class="anchor" id="vac_compilation"></a>
 Compilation</h1>
 <p>In the vac test folder, run the setup script with: </p><pre class="fragment">setup.pl -d=2
-</pre><p> This will copy a makefile to the current folder, set the problem dimension to two, and use the default compiler settings, which is mpif90 (gfortran with openMPI). To select different compiler settings (present in <code>amrvac/arch/</code>)</p>
+</pre><p> This will copy a makefile to the current folder, set the problem dimension to two, and use the default compiler settings, which is mpif90 (gfortran with openMPI). To select different compiler settings, check files in <code>amrvac/arch/</code>.</p>
 <p>Then, to compile the code according to the makefile: </p><pre class="fragment">make -j4
 </pre><p> To switch to using intel compiler mpiifort, you could modify the makefile and compile: </p><pre class="fragment">setup.pl -d=2 -arch=intel
 make -j4
