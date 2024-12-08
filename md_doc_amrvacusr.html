@@ -186,7 +186,7 @@ Structure of mod_usr.t</h1>
 </div><!-- fragment --><p>In the call set_coordinate_system, the argument "Cartesian_2.5D" means using 2-dimension 3-vector-component Cartesian coordinates. "Cartesian_1.5D" means 1-dimension 2-vector-component Cartesian, and "Cartesian_1.75D" means 1-dimension 3-vector-component Cartesian. If "Cartesian_1D", 1-dimension 1-vector-component Cartesian. <br  />
  If "Cartesian_2D", 2-dimension 2-vector-component Cartesian. <br  />
  If "Cartesian_3D", 3-dimension 3-vector-component Cartesian. <br  />
- IF number of vector components is larger than dimension number, -v= flag should be set consistently during setup.</p>
+ If number of vector components is larger than dimension number, -v flag should be set consistently during setup.</p>
 <h2><a class="anchor" id="user_specialbound"></a>
 Special boundary</h2>
 <p>When the predefined boundary types provided by MPI-AMRVAC are not sufficient , a pointed <b>usr_special_bc</b> subroutine can solve the problem. It is called for each boundary region and all variable in the boundary region <b>typeboundary_min1=8*'special'...</b> is selected.</p>
