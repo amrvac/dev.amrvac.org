@@ -112,9 +112,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a2e1e3a37a4bdf513c95a0436949925be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace260cd152691d8f575c0f91b9996a3f"><td class="memItemLeft" align="right" valign="top">double precision function, dimension(ixi^s)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#ace260cd152691d8f575c0f91b9996a3f">slope_limiter</a> (f, ixIL, ixOL, idims, pm, tc_slope_limiter)</td></tr>
 <tr class="separator:ace260cd152691d8f575c0f91b9996a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c8e7bb356302dd7255d6e9ff296d841"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a5c8e7bb356302dd7255d6e9ff296d841">gradientc</a> (q, ixIL, ixOL, idir, gradq)</td></tr>
-<tr class="memdesc:a5c8e7bb356302dd7255d6e9ff296d841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate gradient of a scalar q at cell interfaces in direction idir.  <a href="namespacemod__thermal__conduction.html#a5c8e7bb356302dd7255d6e9ff296d841">More...</a><br /></td></tr>
-<tr class="separator:a5c8e7bb356302dd7255d6e9ff296d841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30df4cdb5c7c3b87971dc3ad56c39c19"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a30df4cdb5c7c3b87971dc3ad56c39c19">gradientc</a> (q, x, ixIL, ixOL, idir, gradq)</td></tr>
+<tr class="memdesc:a30df4cdb5c7c3b87971dc3ad56c39c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate gradient of a scalar q at cell interfaces in direction idir.  <a href="namespacemod__thermal__conduction.html#a30df4cdb5c7c3b87971dc3ad56c39c19">More...</a><br /></td></tr>
+<tr class="separator:a30df4cdb5c7c3b87971dc3ad56c39c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc4890ec3bcb79a3f068eca6659fd63"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a7bc4890ec3bcb79a3f068eca6659fd63">get_tc_dt_hd</a> (w, ixIL, ixOL, dxD, x, fl)</td></tr>
 <tr class="memdesc:a7bc4890ec3bcb79a3f068eca6659fd63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the explicit timestep for the TC (hd implementation)  <a href="namespacemod__thermal__conduction.html#a7bc4890ec3bcb79a3f068eca6659fd63">More...</a><br /></td></tr>
 <tr class="separator:a7bc4890ec3bcb79a3f068eca6659fd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,7 +218,7 @@ Variables</h2></td></tr>
 
 <p>Get the explicut timestep for the TC (ffhd implementation) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01152">1152</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01182">1182</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -292,7 +292,7 @@ Variables</h2></td></tr>
 
 <p>Get the explicit timestep for the TC (hd implementation) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00932">932</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00964">964</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -379,8 +379,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a5c8e7bb356302dd7255d6e9ff296d841"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c8e7bb356302dd7255d6e9ff296d841">&#9670;&nbsp;</a></span>gradientc()</h2>
+<a id="a30df4cdb5c7c3b87971dc3ad56c39c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30df4cdb5c7c3b87971dc3ad56c39c19">&#9670;&nbsp;</a></span>gradientc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -390,6 +390,12 @@ Here is the call graph for this function:</div>
           <td>(</td>
           <td class="paramtype">double precision, dimension(ixi^s), intent(in)&#160;</td>
           <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:ndim), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -437,7 +443,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate gradient of a scalar q at cell interfaces in direction idir. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00890">890</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00925">925</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -521,14 +527,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01278">1278</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01308">1308</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__thermal__conduction_a959f8dcdf69fd45a7dc1ac1212d18004_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a959f8dcdf69fd45a7dc1ac1212d18004_cgraph" alt=""/></div>
 <map name="anamespacemod__thermal__conduction_a959f8dcdf69fd45a7dc1ac1212d18004_cgraph" id="anamespacemod__thermal__conduction_a959f8dcdf69fd45a7dc1ac1212d18004_cgraph">
 <area shape="rect" title=" " alt="" coords="5,39,192,80"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a5c8e7bb356302dd7255d6e9ff296d841" title="Calculate gradient of a scalar q at cell interfaces in direction idir." alt="" coords="240,5,427,47"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a30df4cdb5c7c3b87971dc3ad56c39c19" title="Calculate gradient of a scalar q at cell interfaces in direction idir." alt="" coords="240,5,427,47"/>
 <area shape="rect" href="namespacemod__thermal__conduction.html#ace260cd152691d8f575c0f91b9996a3f" title=" " alt="" coords="240,71,427,112"/>
 </map>
 </div>
@@ -609,14 +615,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01054">1054</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01086">1086</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__thermal__conduction_a7f6223b1a346f63d39efe9f351a0aeb8_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a7f6223b1a346f63d39efe9f351a0aeb8_cgraph" alt=""/></div>
 <map name="anamespacemod__thermal__conduction_a7f6223b1a346f63d39efe9f351a0aeb8_cgraph" id="anamespacemod__thermal__conduction_a7f6223b1a346f63d39efe9f351a0aeb8_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,192,47"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a5c8e7bb356302dd7255d6e9ff296d841" title="Calculate gradient of a scalar q at cell interfaces in direction idir." alt="" coords="240,5,427,47"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a30df4cdb5c7c3b87971dc3ad56c39c19" title="Calculate gradient of a scalar q at cell interfaces in direction idir." alt="" coords="240,5,427,47"/>
 </map>
 </div>
 
@@ -709,7 +715,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacemod__thermal__conduction_a2e1e3a37a4bdf513c95a0436949925be_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a2e1e3a37a4bdf513c95a0436949925be_cgraph" alt=""/></div>
 <map name="anamespacemod__thermal__conduction_a2e1e3a37a4bdf513c95a0436949925be_cgraph" id="anamespacemod__thermal__conduction_a2e1e3a37a4bdf513c95a0436949925be_cgraph">
 <area shape="rect" title=" " alt="" coords="5,39,192,80"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a5c8e7bb356302dd7255d6e9ff296d841" title="Calculate gradient of a scalar q at cell interfaces in direction idir." alt="" coords="240,5,427,47"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a30df4cdb5c7c3b87971dc3ad56c39c19" title="Calculate gradient of a scalar q at cell interfaces in direction idir." alt="" coords="240,5,427,47"/>
 <area shape="rect" href="namespacemod__thermal__conduction.html#ace260cd152691d8f575c0f91b9996a3f" title=" " alt="" coords="240,71,427,112"/>
 </map>
 </div>
@@ -778,7 +784,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00853">853</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00888">888</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -870,7 +876,7 @@ Here is the call graph for this function:</div>
 
 <p>anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computational Physics 227, 123 </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01222">1222</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01252">1252</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -970,7 +976,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00990">990</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01022">1022</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

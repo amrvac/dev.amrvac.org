@@ -151,7 +151,7 @@ var searchData=
   ['global_5ftime_886',['global_time',['../namespacemod__global__parameters.html#a2bdc961e7304863887ec17a92ae5ac0a',1,'mod_global_parameters']]],
   ['grad_5fkappa_5fb_887',['grad_kappa_b',['../namespacemod__particle__gca.html#ab3fcbcabbe561caf6f162a0b983a6063',1,'mod_particle_gca']]],
   ['gradient_888',['gradient',['../namespacemod__geometry.html#a92ec4e2c8ae00a42bf5bf2c1ce3a26c4',1,'mod_geometry']]],
-  ['gradientc_889',['gradientc',['../namespacemod__thermal__conduction.html#a5c8e7bb356302dd7255d6e9ff296d841',1,'mod_thermal_conduction']]],
+  ['gradientc_889',['gradientc',['../namespacemod__thermal__conduction.html#a30df4cdb5c7c3b87971dc3ad56c39c19',1,'mod_thermal_conduction']]],
   ['gradiento_890',['gradiento',['../namespacemod__afld.html#abc9c121f004800e7363f3a8d053d1efc',1,'mod_afld::gradiento()'],['../namespacemod__fld.html#a10a1413ec8612a5dd9a5b09eb68919a7',1,'mod_fld::gradiento()']]],
   ['gradientq_891',['gradientq',['../namespacemod__geometry.html#a1ddb1aed09387c6a4002ed4f14de66a5',1,'mod_geometry']]],
   ['gradients_892',['gradients',['../namespacemod__geometry.html#ad4e9524cb60a1c8ce07d4641fe761251',1,'mod_geometry']]],
