@@ -1868,7 +1868,7 @@ $(function() {
 <div class="line"><a name="l01787"></a><span class="lineno"> 1787</span>&#160; </div>
 <div class="line"><a name="l01788"></a><span class="lineno"> 1788</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacemod__global__parameters.html#ac00b1fb8c041c78556efef827450962a">fix_small_values</a>) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l01789"></a><span class="lineno"> 1789</span>&#160;      <span class="comment">! fix small values preventing NaN numbers in the following converting</span></div>
-<div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;      <span class="keyword">call </span><a class="code" href="namespacemod__mhd__phys.html#a82bd1497f43afb7a5a707b50a9e4016b">mhd_handle_small_values_semirelati</a>(.false., w, x, ixi^l, ixo^l, <span class="stringliteral">&#39;mhd_to_primitive_semirelati&#39;</span>)</div>
+<div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;      <span class="keyword">call </span>mhd_handle_small_values(.false., w, x, ixi^l, ixo^l, <span class="stringliteral">&#39;mhd_to_primitive_semirelati&#39;</span>)</div>
 <div class="line"><a name="l01791"></a><span class="lineno"> 1791</span>&#160;<span class="keywordflow">    end if</span></div>
 <div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160; </div>
 <div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160;   {<span class="keywordflow">do</span> ix^db=ixomin^db,ixomax^db\}</div>
@@ -1928,7 +1928,7 @@ $(function() {
 <div class="line"><a name="l01847"></a><span class="lineno"> 1847</span>&#160; </div>
 <div class="line"><a name="l01848"></a><span class="lineno"> 1848</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacemod__global__parameters.html#ac00b1fb8c041c78556efef827450962a">fix_small_values</a>) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l01849"></a><span class="lineno"> 1849</span>&#160;      <span class="comment">! fix small values preventing NaN numbers in the following converting</span></div>
-<div class="line"><a name="l01850"></a><span class="lineno"> 1850</span>&#160;      <span class="keyword">call </span><a class="code" href="namespacemod__mhd__phys.html#a82bd1497f43afb7a5a707b50a9e4016b">mhd_handle_small_values_semirelati</a>(.false., w, x, ixi^l, ixo^l, <span class="stringliteral">&#39;mhd_to_primitive_semirelati_noe&#39;</span>)</div>
+<div class="line"><a name="l01850"></a><span class="lineno"> 1850</span>&#160;      <span class="keyword">call </span>mhd_handle_small_values(.false., w, x, ixi^l, ixo^l, <span class="stringliteral">&#39;mhd_to_primitive_semirelati_noe&#39;</span>)</div>
 <div class="line"><a name="l01851"></a><span class="lineno"> 1851</span>&#160;<span class="keywordflow">    end if</span></div>
 <div class="line"><a name="l01852"></a><span class="lineno"> 1852</span>&#160; </div>
 <div class="line"><a name="l01853"></a><span class="lineno"> 1853</span>&#160;   {<span class="keywordflow">do</span> ix^db=ixomin^db,ixomax^db\}</div>
