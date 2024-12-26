@@ -96,16 +96,14 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a5a035ca86bfa7e52a61d1ba8f5d1389d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14af744e26860190413096c3bf73f73b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a14af744e26860190413096c3bf73f73b">get_bc_comm_type</a> (comm_type, ixL, ixGL, nwstart, nwbc)</td></tr>
 <tr class="separator:a14af744e26860190413096c3bf73f73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdb8ff1b9a7e801ff0084699dea5b593"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#abdb8ff1b9a7e801ff0084699dea5b593">put_bc_comm_types</a> ()</td></tr>
-<tr class="separator:abdb8ff1b9a7e801ff0084699dea5b593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc70508ceb326fb28166d751e5de31fc"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#abc70508ceb326fb28166d751e5de31fc">getbc</a> (time, qdt, psb, nwstart, nwbc, req_diag)</td></tr>
 <tr class="memdesc:abc70508ceb326fb28166d751e5de31fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">do update ghost cells of all blocks including physical boundaries  <a href="namespacemod__ghostcells__update.html#abc70508ceb326fb28166d751e5de31fc">More...</a><br /></td></tr>
 <tr class="separator:abc70508ceb326fb28166d751e5de31fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d2bac4c882f79a5d943b3e11147c275"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a1d2bac4c882f79a5d943b3e11147c275">identifyphysbound</a> (s, iibD)</td></tr>
-<tr class="separator:a1d2bac4c882f79a5d943b3e11147c275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:ab37898678ca43e159e1fe0d63af3cd07"><td class="memItemLeft" align="right" valign="top">integer, parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ab37898678ca43e159e1fe0d63af3cd07">npwbuf</a> =2</td></tr>
+<tr class="separator:ab37898678ca43e159e1fe0d63af3cd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc4d94514dca05ef03d020a397854e9d"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#adc4d94514dca05ef03d020a397854e9d">ixm</a></td></tr>
 <tr class="separator:adc4d94514dca05ef03d020a397854e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c6697eb3c341d1f459d541cab97c79e"><td class="memItemLeft" align="right" valign="top">integer, dimension(^nd, 0:3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a0c6697eb3c341d1f459d541cab97c79e">l</a></td></tr>
@@ -116,28 +114,26 @@ Variables</h2></td></tr>
 <tr class="separator:a3286c21be39160eae16d61b3fa666aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a127253119571e539ac44714654dfcae1"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a127253119571e539ac44714654dfcae1">ixcogs</a></td></tr>
 <tr class="separator:a127253119571e539ac44714654dfcae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab37898678ca43e159e1fe0d63af3cd07"><td class="memItemLeft" align="right" valign="top">integer, parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ab37898678ca43e159e1fe0d63af3cd07">npwbuf</a> =2</td></tr>
-<tr class="separator:ab37898678ca43e159e1fe0d63af3cd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fb8043808fb6b0c194dfc74c21429c5"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:2,-1:1)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a6fb8043808fb6b0c194dfc74c21429c5">ixs_srl_</a></td></tr>
-<tr class="separator:a6fb8043808fb6b0c194dfc74c21429c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b419687702579ffad2ce03a3e5cc90f"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:2,-1:1)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a2b419687702579ffad2ce03a3e5cc90f">ixr_srl_</a></td></tr>
-<tr class="separator:a2b419687702579ffad2ce03a3e5cc90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3c5e277be00615fa2a8ea6a83cb47fc"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ac3c5e277be00615fa2a8ea6a83cb47fc">ixs_srl_</a></td></tr>
+<tr class="separator:ac3c5e277be00615fa2a8ea6a83cb47fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bb07ed9958630ad640bbacd317dbecd"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a9bb07ed9958630ad640bbacd317dbecd">ixr_srl_</a></td></tr>
+<tr class="separator:a9bb07ed9958630ad640bbacd317dbecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13084870506549a7475999aac45cd42e"><td class="memItemLeft" align="right" valign="top">integer, dimension(^nd,-1:1)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a13084870506549a7475999aac45cd42e">ixs_srl_stg_</a></td></tr>
 <tr class="separator:a13084870506549a7475999aac45cd42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d6fd8e1feba7c1ab3754b96c0a03479"><td class="memItemLeft" align="right" valign="top">integer, dimension(^nd,-1:1)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a8d6fd8e1feba7c1ab3754b96c0a03479">ixr_srl_stg_</a></td></tr>
 <tr class="separator:a8d6fd8e1feba7c1ab3754b96c0a03479"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb16128853b3e93227f779d97cfff202"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1,-1:1)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#acb16128853b3e93227f779d97cfff202">ixs_r_</a></td></tr>
-<tr class="separator:acb16128853b3e93227f779d97cfff202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e91d2e40221d884e7d98b34bdc73599"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a8e91d2e40221d884e7d98b34bdc73599">ixs_r_</a></td></tr>
+<tr class="separator:a8e91d2e40221d884e7d98b34bdc73599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a125a59be6d6d27944b62c4c067faaae7"><td class="memItemLeft" align="right" valign="top">integer, dimension(^nd,-1:1)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a125a59be6d6d27944b62c4c067faaae7">ixs_r_stg_</a></td></tr>
 <tr class="separator:a125a59be6d6d27944b62c4c067faaae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae60b471f3bd433987c68c58f3d858a4"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1, 0:3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#aae60b471f3bd433987c68c58f3d858a4">ixr_r_</a></td></tr>
-<tr class="separator:aae60b471f3bd433987c68c58f3d858a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fb4a1591edf5b0a89b8f8fed193dc7a"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a2fb4a1591edf5b0a89b8f8fed193dc7a">ixr_r_</a></td></tr>
+<tr class="separator:a2fb4a1591edf5b0a89b8f8fed193dc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ebaaf6d43c24f32923cbfcae47c1a39"><td class="memItemLeft" align="right" valign="top">integer, dimension(^nd, 0:3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a1ebaaf6d43c24f32923cbfcae47c1a39">ixr_r_stg_</a></td></tr>
 <tr class="separator:a1ebaaf6d43c24f32923cbfcae47c1a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7fb5f1483710f34a85c1993a1a23fba"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1, 0:3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ab7fb5f1483710f34a85c1993a1a23fba">ixs_p_</a></td></tr>
-<tr class="separator:ab7fb5f1483710f34a85c1993a1a23fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa24ca1688cf545eda7615a0dbbcc742"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1, 0:3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#aaa24ca1688cf545eda7615a0dbbcc742">ixr_p_</a></td></tr>
-<tr class="separator:aaa24ca1688cf545eda7615a0dbbcc742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29eef16a6fb2b7275ed2ee1705207c85"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a29eef16a6fb2b7275ed2ee1705207c85">ixs_p_</a></td></tr>
+<tr class="separator:a29eef16a6fb2b7275ed2ee1705207c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0a717bfa035b075e80f6c750843078"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a3f0a717bfa035b075e80f6c750843078">ixr_p_</a></td></tr>
+<tr class="separator:a3f0a717bfa035b075e80f6c750843078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7604f1cf091df80042e759d9066ac902"><td class="memItemLeft" align="right" valign="top">integer, dimension(^nd, 0:3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a7604f1cf091df80042e759d9066ac902">ixs_p_stg_</a></td></tr>
 <tr class="separator:a7604f1cf091df80042e759d9066ac902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada233ca513b8c1a3f620b928f8dfc7c8"><td class="memItemLeft" align="right" valign="top">integer, dimension(^nd, 0:3)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ada233ca513b8c1a3f620b928f8dfc7c8">ixr_p_stg_</a></td></tr>
@@ -258,54 +254,54 @@ Variables</h2></td></tr>
 <tr class="separator:a16a9b42e21b0b8f953fc94139d9e166e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78acc38fb41582747dda3f9767db187d"><td class="memItemLeft" align="right" valign="top">integer, dimension(^nd, 0:3^d &amp;)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a78acc38fb41582747dda3f9767db187d">sizes_p_recv_stg</a></td></tr>
 <tr class="separator:a78acc38fb41582747dda3f9767db187d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac860872b620a7b48c6a5745cfda410ea"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:2^d &amp;,-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ac860872b620a7b48c6a5745cfda410ea">type_send_srl_f</a></td></tr>
-<tr class="separator:ac860872b620a7b48c6a5745cfda410ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0581a0a79826efa0c38267b3cbb26234"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:2^d &amp;,-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a0581a0a79826efa0c38267b3cbb26234">type_recv_srl_f</a></td></tr>
-<tr class="separator:a0581a0a79826efa0c38267b3cbb26234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeee1ca184c727200fc9884b369380cc1"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;,-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#aeee1ca184c727200fc9884b369380cc1">type_send_r_f</a></td></tr>
-<tr class="separator:aeee1ca184c727200fc9884b369380cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80412bfa5cf60cceede033bf802ac765"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;, 0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a80412bfa5cf60cceede033bf802ac765">type_recv_r_f</a></td></tr>
-<tr class="separator:a80412bfa5cf60cceede033bf802ac765"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26b5edcdc4690233ef589fefea4e83d5"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;, 0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a26b5edcdc4690233ef589fefea4e83d5">type_send_p_f</a></td></tr>
-<tr class="separator:a26b5edcdc4690233ef589fefea4e83d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa59eb51583f89f6e632a8bfa86bdfeb2"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;, 0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#aa59eb51583f89f6e632a8bfa86bdfeb2">type_recv_p_f</a></td></tr>
-<tr class="separator:aa59eb51583f89f6e632a8bfa86bdfeb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22474254ce7ce5b30421532a04b94b06"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:2^d &amp;,-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a22474254ce7ce5b30421532a04b94b06">type_send_srl_p1</a></td></tr>
-<tr class="separator:a22474254ce7ce5b30421532a04b94b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64a9bafbc8ab1bc9947b00bf13618c2f"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:2^d &amp;,-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a64a9bafbc8ab1bc9947b00bf13618c2f">type_recv_srl_p1</a></td></tr>
-<tr class="separator:a64a9bafbc8ab1bc9947b00bf13618c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc141953d589537ca54d91e7f06b1422"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;,-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#acc141953d589537ca54d91e7f06b1422">type_send_r_p1</a></td></tr>
-<tr class="separator:acc141953d589537ca54d91e7f06b1422"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9da3b164ff4c2e02fac91e8ff5ad35e8"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;, 0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a9da3b164ff4c2e02fac91e8ff5ad35e8">type_recv_r_p1</a></td></tr>
-<tr class="separator:a9da3b164ff4c2e02fac91e8ff5ad35e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cd3f266c08db651fb175eafd933761a"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;, 0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a1cd3f266c08db651fb175eafd933761a">type_send_p_p1</a></td></tr>
-<tr class="separator:a1cd3f266c08db651fb175eafd933761a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a069444ec0d32ef6ffe1d8a491ce24507"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;, 0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a069444ec0d32ef6ffe1d8a491ce24507">type_recv_p_p1</a></td></tr>
-<tr class="separator:a069444ec0d32ef6ffe1d8a491ce24507"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ce70b2ce6ad8fc3c6c413ecbc8dd0a5"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:2^d &amp;,-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a6ce70b2ce6ad8fc3c6c413ecbc8dd0a5">type_send_srl_p2</a></td></tr>
-<tr class="separator:a6ce70b2ce6ad8fc3c6c413ecbc8dd0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06eed9d9c82320fead23d490e9315cd6"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:2^d &amp;,-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a06eed9d9c82320fead23d490e9315cd6">type_recv_srl_p2</a></td></tr>
-<tr class="separator:a06eed9d9c82320fead23d490e9315cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a078cdea5a09bcc97af73805e9741e64b"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;,-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a078cdea5a09bcc97af73805e9741e64b">type_send_r_p2</a></td></tr>
-<tr class="separator:a078cdea5a09bcc97af73805e9741e64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a96d6be327801743b8c6355fb579187"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;, 0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a3a96d6be327801743b8c6355fb579187">type_recv_r_p2</a></td></tr>
-<tr class="separator:a3a96d6be327801743b8c6355fb579187"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac12fe0e64d0868a1cedb47b61657ed9e"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;, 0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ac12fe0e64d0868a1cedb47b61657ed9e">type_send_p_p2</a></td></tr>
-<tr class="separator:ac12fe0e64d0868a1cedb47b61657ed9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f73fbff99d10770ef897e5a2d3d7b3b"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;, 0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a7f73fbff99d10770ef897e5a2d3d7b3b">type_recv_p_p2</a></td></tr>
-<tr class="separator:a7f73fbff99d10770ef897e5a2d3d7b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a731adfb368abb3c3deb73479d40f3108"><td class="memItemLeft" align="right" valign="top">integer, dimension(:^d &amp;,:^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a731adfb368abb3c3deb73479d40f3108">type_send_srl</a></td></tr>
-<tr class="separator:a731adfb368abb3c3deb73479d40f3108"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a350296a701671bd1f39b9ef0d2eb50c1"><td class="memItemLeft" align="right" valign="top">integer, dimension(:^d &amp;,:^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a350296a701671bd1f39b9ef0d2eb50c1">type_recv_srl</a></td></tr>
-<tr class="separator:a350296a701671bd1f39b9ef0d2eb50c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a853cf6750962537b2515e9c307d8abf8"><td class="memItemLeft" align="right" valign="top">integer, dimension(:^d &amp;,:^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a853cf6750962537b2515e9c307d8abf8">type_send_r</a></td></tr>
-<tr class="separator:a853cf6750962537b2515e9c307d8abf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83c6bc9a67ddc370031a954021f59c06"><td class="memItemLeft" align="right" valign="top">integer, dimension(:^d &amp;,:^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a83c6bc9a67ddc370031a954021f59c06">type_recv_r</a></td></tr>
-<tr class="separator:a83c6bc9a67ddc370031a954021f59c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcc38dbc8c130dad9cf28cff4358d7a3"><td class="memItemLeft" align="right" valign="top">integer, dimension(:^d &amp;,:^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#adcc38dbc8c130dad9cf28cff4358d7a3">type_send_p</a></td></tr>
-<tr class="separator:adcc38dbc8c130dad9cf28cff4358d7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8850b169feadfc5b6b5341feed47cab"><td class="memItemLeft" align="right" valign="top">integer, dimension(:^d &amp;,:^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ad8850b169feadfc5b6b5341feed47cab">type_recv_p</a></td></tr>
-<tr class="separator:ad8850b169feadfc5b6b5341feed47cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76209037459ab223ff8b736ab9acf483"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a76209037459ab223ff8b736ab9acf483">type_send_srl_f</a></td></tr>
+<tr class="separator:a76209037459ab223ff8b736ab9acf483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ad7d9b643560b0daa327776517a0a4"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a64ad7d9b643560b0daa327776517a0a4">type_recv_srl_f</a></td></tr>
+<tr class="separator:a64ad7d9b643560b0daa327776517a0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69199f947c6bf0166553125005bb8bd8"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a69199f947c6bf0166553125005bb8bd8">type_send_r_f</a></td></tr>
+<tr class="separator:a69199f947c6bf0166553125005bb8bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64616f6d095ba53ef9cff93ee2e8457f"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a64616f6d095ba53ef9cff93ee2e8457f">type_recv_r_f</a></td></tr>
+<tr class="separator:a64616f6d095ba53ef9cff93ee2e8457f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f333213f0e2d38f43644c8a51437c1"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a30f333213f0e2d38f43644c8a51437c1">type_send_p_f</a></td></tr>
+<tr class="separator:a30f333213f0e2d38f43644c8a51437c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae288a4359cd625f6f6be3e7d6b490ec5"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ae288a4359cd625f6f6be3e7d6b490ec5">type_recv_p_f</a></td></tr>
+<tr class="separator:ae288a4359cd625f6f6be3e7d6b490ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02ace4076e2b553acc2726e8629e42f9"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a02ace4076e2b553acc2726e8629e42f9">type_send_srl_p1</a></td></tr>
+<tr class="separator:a02ace4076e2b553acc2726e8629e42f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf857392266219c21180a7011bc0a90a"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#adf857392266219c21180a7011bc0a90a">type_recv_srl_p1</a></td></tr>
+<tr class="separator:adf857392266219c21180a7011bc0a90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47da41a4931c0a69803460ca0cb3935a"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a47da41a4931c0a69803460ca0cb3935a">type_send_r_p1</a></td></tr>
+<tr class="separator:a47da41a4931c0a69803460ca0cb3935a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa180deefc56484ba548dbbc56534b30a"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#aa180deefc56484ba548dbbc56534b30a">type_recv_r_p1</a></td></tr>
+<tr class="separator:aa180deefc56484ba548dbbc56534b30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840cd18b788df59375ecda2e74e3423d"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a840cd18b788df59375ecda2e74e3423d">type_send_p_p1</a></td></tr>
+<tr class="separator:a840cd18b788df59375ecda2e74e3423d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b2fd4a0dad114bbe34c2463ff49b07"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a01b2fd4a0dad114bbe34c2463ff49b07">type_recv_p_p1</a></td></tr>
+<tr class="separator:a01b2fd4a0dad114bbe34c2463ff49b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a571e0a23709269c6d4fe690cfe451b44"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a571e0a23709269c6d4fe690cfe451b44">type_send_srl_p2</a></td></tr>
+<tr class="separator:a571e0a23709269c6d4fe690cfe451b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abde5c8f47119774cac5c94189a134d54"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#abde5c8f47119774cac5c94189a134d54">type_recv_srl_p2</a></td></tr>
+<tr class="separator:abde5c8f47119774cac5c94189a134d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e5908242974fd71b2760700fbffe25a"><td class="memItemLeft" align="right" valign="top">integer, dimension(-1:1^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a0e5908242974fd71b2760700fbffe25a">type_send_r_p2</a></td></tr>
+<tr class="separator:a0e5908242974fd71b2760700fbffe25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad848d776f02017341ebbe27367e930e"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#aad848d776f02017341ebbe27367e930e">type_recv_r_p2</a></td></tr>
+<tr class="separator:aad848d776f02017341ebbe27367e930e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0f5ca2aad54b42ca1e54c511b674cf"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a5a0f5ca2aad54b42ca1e54c511b674cf">type_send_p_p2</a></td></tr>
+<tr class="separator:a5a0f5ca2aad54b42ca1e54c511b674cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ea5dd20dba9f7a3355674931f9720f2"><td class="memItemLeft" align="right" valign="top">integer, dimension(0:3^d &amp;), target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a3ea5dd20dba9f7a3355674931f9720f2">type_recv_p_p2</a></td></tr>
+<tr class="separator:a3ea5dd20dba9f7a3355674931f9720f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432c51155cca2cb7414688e4eaf57951"><td class="memItemLeft" align="right" valign="top">integer, dimension( :^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a432c51155cca2cb7414688e4eaf57951">type_send_srl</a></td></tr>
+<tr class="separator:a432c51155cca2cb7414688e4eaf57951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae47cf3b3b6c118b5224b5875ca88cd46"><td class="memItemLeft" align="right" valign="top">integer, dimension( :^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ae47cf3b3b6c118b5224b5875ca88cd46">type_recv_srl</a></td></tr>
+<tr class="separator:ae47cf3b3b6c118b5224b5875ca88cd46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99770c1cae5a47a3dd4f62d0e970350d"><td class="memItemLeft" align="right" valign="top">integer, dimension( :^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a99770c1cae5a47a3dd4f62d0e970350d">type_send_r</a></td></tr>
+<tr class="separator:a99770c1cae5a47a3dd4f62d0e970350d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025c1f51d3dd6a6cbc2b699e291286ef"><td class="memItemLeft" align="right" valign="top">integer, dimension( :^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a025c1f51d3dd6a6cbc2b699e291286ef">type_recv_r</a></td></tr>
+<tr class="separator:a025c1f51d3dd6a6cbc2b699e291286ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3281347edc3c4e8cfef15ef71b43dccf"><td class="memItemLeft" align="right" valign="top">integer, dimension( :^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a3281347edc3c4e8cfef15ef71b43dccf">type_send_p</a></td></tr>
+<tr class="separator:a3281347edc3c4e8cfef15ef71b43dccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4c6bbd6355b839ce52a77516e7e6d99"><td class="memItemLeft" align="right" valign="top">integer, dimension( :^d &amp;), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ac4c6bbd6355b839ce52a77516e7e6d99">type_recv_p</a></td></tr>
+<tr class="separator:ac4c6bbd6355b839ce52a77516e7e6d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7efd6b18047a219678508eb58b5e536"><td class="memItemLeft" align="right" valign="top">logical, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#ae7efd6b18047a219678508eb58b5e536">bcphys</a> =.true.</td></tr>
 <tr class="separator:ae7efd6b18047a219678508eb58b5e536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -338,7 +334,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00364">364</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00322">322</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -407,7 +403,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00388">388</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00343">343</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -463,18 +459,18 @@ Here is the call graph for this function:</div>
 
 <p>do update ghost cells of all blocks including physical boundaries </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00434">434</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00365">365</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__ghostcells__update_abc70508ceb326fb28166d751e5de31fc_cgraph.png" border="0" usemap="#anamespacemod__ghostcells__update_abc70508ceb326fb28166d751e5de31fc_cgraph" alt=""/></div>
 <map name="anamespacemod__ghostcells__update_abc70508ceb326fb28166d751e5de31fc_cgraph" id="anamespacemod__ghostcells__update_abc70508ceb326fb28166d751e5de31fc_cgraph">
-<area shape="rect" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="5,546,181,587"/>
-<area shape="rect" href="mod__ghostcells__update_8t.html#a5ee99fa517ba8aed6ee7e4832fe6e9c8" title="Send to finer neighbor." alt="" coords="271,5,387,32"/>
+<area shape="rect" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="5,470,181,511"/>
+<area shape="rect" href="mod__ghostcells__update_8t.html#a5b7f72f668c0c5c8da0ce0b5bff1ed84" title="Send to finer neighbor." alt="" coords="271,5,387,32"/>
 <area shape="rect" href="mod__ghostcells__update_8t.html#aeaf06ff9ff7245392d4b36ea99daf8e9" title="fill coarser representative with data from coarser neighbors" alt="" coords="258,56,401,83"/>
-<area shape="rect" href="mod__ghostcells__update_8t.html#a6833bb80a867d031b572bd6b490470fe" title="fill coarser neighbor&#39;s ghost cells" alt="" coords="273,107,386,133"/>
+<area shape="rect" href="mod__ghostcells__update_8t.html#aa586abf6d5b9bb7dffa2ad097693cea8" title="fill coarser neighbor&#39;s ghost cells" alt="" coords="273,107,386,133"/>
 <area shape="rect" href="mod__ghostcells__update_8t.html#aaecf56715d4aa987c2d2846a78efaa7f" title="fill restricted ghost cells after receipt" alt="" coords="259,157,399,184"/>
-<area shape="rect" href="mod__ghostcells__update_8t.html#aa5ff8da62fe7629286b041def212c8a7" title=" " alt="" coords="288,208,371,235"/>
+<area shape="rect" href="mod__ghostcells__update_8t.html#a32fd32ef4b26c80b1616374faab9a5d9" title=" " alt="" coords="288,208,371,235"/>
 <area shape="rect" href="mod__ghostcells__update_8t.html#a358a8046cfea98d291c992ca8aeec302" title="fill siblings ghost cells with received data" alt="" coords="274,259,385,285"/>
 <area shape="rect" href="namespacemod__boundary__conditions.html#acb1710f32d334f37c8937542b5dfdaaa" title="fill ghost cells at a physical boundary" alt="" coords="233,310,426,351"/>
 <area shape="rect" href="mod__ghostcells__update_8t.html#a539d4a89f11162c6f5f0057ffaddcf16" title="Receive from coarse neighbor." alt="" coords="265,376,393,403"/>
@@ -485,51 +481,12 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="mod__ghostcells__update_8t.html#ab56a57badc0ef82a6f341d823e3364e5" title="Send to sibling at same refinement level." alt="" coords="280,629,379,656"/>
 <area shape="rect" href="namespacemod__coarsen.html#aa405d60da3c03b9423df6c225752424b" title="coarsen one grid to its coarser representative" alt="" coords="229,680,429,707"/>
 <area shape="rect" href="mod__ghostcells__update_8t.html#ac48bcd1b79a3575792e5109cf6fe0ffc" title="Physical boundary conditions." alt="" coords="247,731,412,757"/>
-<area shape="rect" href="mod__ghostcells__update_8t.html#a92e0e3c485610e82b304a816bcc6e01c" title="Physical boundary conditions." alt="" coords="241,781,418,808"/>
-<area shape="rect" href="mod__ghostcells__update_8t.html#a6c6048cf15f1bf29732b7cb62e25b61f" title=" " alt="" coords="251,832,407,859"/>
-<area shape="rect" href="mod__ghostcells__update_8t.html#a131730352407c781c98ee1dc41b4f3bd" title=" " alt="" coords="283,883,376,909"/>
-<area shape="rect" href="mod__ghostcells__update_8t.html#ac9f81bd4734be3dddddaf1c127c8aab4" title=" " alt="" coords="477,908,591,935"/>
-<area shape="rect" href="namespacemod__boundary__conditions.html#a38f7ce058a949049b745bfcebef0b2bd" title="fill inner boundary values" alt="" coords="233,985,426,1026"/>
-<area shape="rect" href="namespacemod__ghostcells__update.html#a1d2bac4c882f79a5d943b3e11147c275" title=" " alt="" coords="241,1050,417,1091"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="238,1116,421,1143"/>
+<area shape="rect" href="mod__ghostcells__update_8t.html#a131730352407c781c98ee1dc41b4f3bd" title=" " alt="" coords="283,781,376,808"/>
+<area shape="rect" href="mod__ghostcells__update_8t.html#ac9f81bd4734be3dddddaf1c127c8aab4" title=" " alt="" coords="477,807,591,833"/>
+<area shape="rect" href="namespacemod__boundary__conditions.html#a38f7ce058a949049b745bfcebef0b2bd" title="fill inner boundary values" alt="" coords="233,883,426,925"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="238,949,421,976"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a1d2bac4c882f79a5d943b3e11147c275"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d2bac4c882f79a5d943b3e11147c275">&#9670;&nbsp;</a></span>identifyphysbound()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine mod_ghostcells_update::identifyphysbound </td>
-          <td>(</td>
-          <td class="paramtype">type(<a class="el" href="structmod__physicaldata_1_1state.html">state</a>)&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(out)&#160;</td>
-          <td class="paramname"><em>iib</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(out)&#160;</td>
-          <td class="paramname"><em>D</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l01840">1840</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -545,7 +502,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00121">121</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00116">116</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -555,22 +512,6 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="229,13,412,39"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="abdb8ff1b9a7e801ff0084699dea5b593"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdb8ff1b9a7e801ff0084699dea5b593">&#9670;&nbsp;</a></span>put_bc_comm_types()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine mod_ghostcells_update::put_bc_comm_types</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00409">409</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -587,7 +528,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00113">113</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00108">108</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -603,7 +544,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00044">44</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00039">39</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -619,7 +560,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00044">44</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00039">39</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -635,7 +576,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00044">44</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00039">39</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -651,7 +592,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00044">44</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00039">39</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -667,7 +608,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00044">44</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00039">39</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -683,7 +624,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00044">44</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00039">39</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -699,7 +640,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00050">50</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00045">45</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -715,7 +656,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00047">47</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00042">42</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -731,7 +672,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00047">47</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00042">42</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -747,7 +688,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00047">47</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00042">42</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -763,7 +704,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00050">50</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00045">45</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -779,7 +720,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00047">47</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00042">42</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -795,7 +736,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00047">47</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00042">42</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -811,7 +752,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00047">47</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00042">42</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -827,7 +768,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00006">6</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00009">9</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -843,7 +784,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00006">6</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00009">9</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -859,7 +800,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00006">6</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00009">9</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -875,23 +816,23 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00006">6</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00009">9</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="aaa24ca1688cf545eda7615a0dbbcc742"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa24ca1688cf545eda7615a0dbbcc742">&#9670;&nbsp;</a></span>ixr_p_</h2>
+<a id="a3f0a717bfa035b075e80f6c750843078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0a717bfa035b075e80f6c750843078">&#9670;&nbsp;</a></span>ixr_p_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:1, 0:3) mod_ghostcells_update::ixr_p_</td>
+          <td class="memname">integer, dimension(0:3) mod_ghostcells_update::ixr_p_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00035">35</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00030">30</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -907,23 +848,23 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00038">38</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00033">33</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="aae60b471f3bd433987c68c58f3d858a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae60b471f3bd433987c68c58f3d858a4">&#9670;&nbsp;</a></span>ixr_r_</h2>
+<a id="a2fb4a1591edf5b0a89b8f8fed193dc7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fb4a1591edf5b0a89b8f8fed193dc7a">&#9670;&nbsp;</a></span>ixr_r_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:1, 0:3) mod_ghostcells_update::ixr_r_</td>
+          <td class="memname">integer, dimension(0:3) mod_ghostcells_update::ixr_r_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00029">29</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00024">24</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -939,23 +880,23 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00032">32</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00027">27</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="a2b419687702579ffad2ce03a3e5cc90f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b419687702579ffad2ce03a3e5cc90f">&#9670;&nbsp;</a></span>ixr_srl_</h2>
+<a id="a9bb07ed9958630ad640bbacd317dbecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bb07ed9958630ad640bbacd317dbecd">&#9670;&nbsp;</a></span>ixr_srl_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:2,-1:1) mod_ghostcells_update::ixr_srl_</td>
+          <td class="memname">integer, dimension(-1:1) mod_ghostcells_update::ixr_srl_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00017">17</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00012">12</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -971,23 +912,23 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00020">20</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00015">15</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="ab7fb5f1483710f34a85c1993a1a23fba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7fb5f1483710f34a85c1993a1a23fba">&#9670;&nbsp;</a></span>ixs_p_</h2>
+<a id="a29eef16a6fb2b7275ed2ee1705207c85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29eef16a6fb2b7275ed2ee1705207c85">&#9670;&nbsp;</a></span>ixs_p_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:1, 0:3) mod_ghostcells_update::ixs_p_</td>
+          <td class="memname">integer, dimension(0:3) mod_ghostcells_update::ixs_p_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00035">35</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00030">30</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1003,23 +944,23 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00038">38</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00033">33</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="acb16128853b3e93227f779d97cfff202"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb16128853b3e93227f779d97cfff202">&#9670;&nbsp;</a></span>ixs_r_</h2>
+<a id="a8e91d2e40221d884e7d98b34bdc73599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e91d2e40221d884e7d98b34bdc73599">&#9670;&nbsp;</a></span>ixs_r_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:1,-1:1) mod_ghostcells_update::ixs_r_</td>
+          <td class="memname">integer, dimension(-1:1) mod_ghostcells_update::ixs_r_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00023">23</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00018">18</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1035,23 +976,23 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00026">26</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00021">21</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="a6fb8043808fb6b0c194dfc74c21429c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fb8043808fb6b0c194dfc74c21429c5">&#9670;&nbsp;</a></span>ixs_srl_</h2>
+<a id="ac3c5e277be00615fa2a8ea6a83cb47fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3c5e277be00615fa2a8ea6a83cb47fc">&#9670;&nbsp;</a></span>ixs_srl_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:2,-1:1) mod_ghostcells_update::ixs_srl_</td>
+          <td class="memname">integer, dimension(-1:1) mod_ghostcells_update::ixs_srl_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00017">17</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00012">12</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1067,7 +1008,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00020">20</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00015">15</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1083,7 +1024,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00006">6</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00009">9</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1099,7 +1040,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00009">9</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00007">7</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1115,7 +1056,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00041">41</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00036">36</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1072,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00041">41</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00036">36</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1147,7 +1088,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00041">41</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00036">36</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1163,7 +1104,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00041">41</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00036">36</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1179,7 +1120,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00041">41</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00036">36</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1195,7 +1136,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00041">41</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00036">36</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1211,7 +1152,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00085">85</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00080">80</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1227,7 +1168,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00079">79</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00074">74</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1243,7 +1184,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00073">73</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00068">68</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1259,7 +1200,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00063">63</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00058">58</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1275,7 +1216,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00059">59</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00054">54</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1291,7 +1232,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00081">81</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00076">76</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1307,7 +1248,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00075">75</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00070">70</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1323,7 +1264,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00069">69</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00064">64</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1339,7 +1280,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00064">64</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00059">59</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1355,7 +1296,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00060">60</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00055">55</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1371,7 +1312,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00082">82</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00077">77</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1387,7 +1328,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00076">76</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00071">71</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1403,7 +1344,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00070">70</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00065">65</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1419,7 +1360,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00085">85</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00080">80</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1435,7 +1376,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00079">79</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00074">74</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1451,7 +1392,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00073">73</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00068">68</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1467,7 +1408,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00063">63</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00058">58</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1483,7 +1424,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00059">59</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00054">54</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1499,7 +1440,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00081">81</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00076">76</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1515,7 +1456,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00075">75</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00070">70</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1531,7 +1472,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00069">69</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00064">64</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1547,7 +1488,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00064">64</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00059">59</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1563,7 +1504,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00060">60</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00055">55</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1579,7 +1520,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00082">82</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00077">77</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1595,7 +1536,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00076">76</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00071">71</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1611,7 +1552,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00070">70</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00065">65</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1627,7 +1568,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00095">95</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00090">90</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1643,7 +1584,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00094">94</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00089">89</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1659,7 +1600,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00095">95</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00090">90</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1675,7 +1616,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00094">94</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00089">89</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1691,7 +1632,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00091">91</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00086">86</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1707,7 +1648,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00089">89</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00084">84</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1723,7 +1664,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00090">90</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00085">85</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1739,7 +1680,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00088">88</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00083">83</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1755,7 +1696,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00067">67</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00062">62</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1771,7 +1712,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00056">56</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00051">51</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1787,7 +1728,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00067">67</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00062">62</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -1803,50 +1744,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00056">56</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00051">51</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="ad8850b169feadfc5b6b5341feed47cab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8850b169feadfc5b6b5341feed47cab">&#9670;&nbsp;</a></span>type_recv_p</h2>
+<a id="ac4c6bbd6355b839ce52a77516e7e6d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c6bbd6355b839ce52a77516e7e6d99">&#9670;&nbsp;</a></span>type_recv_p</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(:^d&amp;,:^d&amp;), pointer mod_ghostcells_update::type_recv_p</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00110">110</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
-
-</div>
-</div>
-<a id="aa59eb51583f89f6e632a8bfa86bdfeb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa59eb51583f89f6e632a8bfa86bdfeb2">&#9670;&nbsp;</a></span>type_recv_p_f</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;, 0:3^d&amp;), target mod_ghostcells_update::type_recv_p_f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00102">102</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
-
-</div>
-</div>
-<a id="a069444ec0d32ef6ffe1d8a491ce24507"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a069444ec0d32ef6ffe1d8a491ce24507">&#9670;&nbsp;</a></span>type_recv_p_p1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;, 0:3^d&amp;), target mod_ghostcells_update::type_recv_p_p1</td>
+          <td class="memname">integer, dimension(  :^d&amp;), pointer mod_ghostcells_update::type_recv_p</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1855,110 +1764,30 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a7f73fbff99d10770ef897e5a2d3d7b3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f73fbff99d10770ef897e5a2d3d7b3b">&#9670;&nbsp;</a></span>type_recv_p_p2</h2>
+<a id="ae288a4359cd625f6f6be3e7d6b490ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae288a4359cd625f6f6be3e7d6b490ec5">&#9670;&nbsp;</a></span>type_recv_p_f</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;, 0:3^d&amp;), target mod_ghostcells_update::type_recv_p_p2</td>
+          <td class="memname">integer, dimension( 0:3^d&amp;), target mod_ghostcells_update::type_recv_p_f</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00108">108</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00097">97</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="a83c6bc9a67ddc370031a954021f59c06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83c6bc9a67ddc370031a954021f59c06">&#9670;&nbsp;</a></span>type_recv_r</h2>
+<a id="a01b2fd4a0dad114bbe34c2463ff49b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b2fd4a0dad114bbe34c2463ff49b07">&#9670;&nbsp;</a></span>type_recv_p_p1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(:^d&amp;,:^d&amp;), pointer mod_ghostcells_update::type_recv_r</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00110">110</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
-
-</div>
-</div>
-<a id="a80412bfa5cf60cceede033bf802ac765"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80412bfa5cf60cceede033bf802ac765">&#9670;&nbsp;</a></span>type_recv_r_f</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;, 0:3^d&amp;), target mod_ghostcells_update::type_recv_r_f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00102">102</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
-
-</div>
-</div>
-<a id="a9da3b164ff4c2e02fac91e8ff5ad35e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9da3b164ff4c2e02fac91e8ff5ad35e8">&#9670;&nbsp;</a></span>type_recv_r_p1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;, 0:3^d&amp;), target mod_ghostcells_update::type_recv_r_p1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00105">105</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
-
-</div>
-</div>
-<a id="a3a96d6be327801743b8c6355fb579187"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a96d6be327801743b8c6355fb579187">&#9670;&nbsp;</a></span>type_recv_r_p2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;, 0:3^d&amp;), target mod_ghostcells_update::type_recv_r_p2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00108">108</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
-
-</div>
-</div>
-<a id="a350296a701671bd1f39b9ef0d2eb50c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a350296a701671bd1f39b9ef0d2eb50c1">&#9670;&nbsp;</a></span>type_recv_srl</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, dimension(:^d&amp;,:^d&amp;), pointer mod_ghostcells_update::type_recv_srl</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00109">109</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
-
-</div>
-</div>
-<a id="a0581a0a79826efa0c38267b3cbb26234"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0581a0a79826efa0c38267b3cbb26234">&#9670;&nbsp;</a></span>type_recv_srl_f</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, dimension(-1:2^d&amp;,-1:1^d&amp;), target mod_ghostcells_update::type_recv_srl_f</td>
+          <td class="memname">integer, dimension( 0:3^d&amp;), target mod_ghostcells_update::type_recv_p_p1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1967,14 +1796,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a64a9bafbc8ab1bc9947b00bf13618c2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64a9bafbc8ab1bc9947b00bf13618c2f">&#9670;&nbsp;</a></span>type_recv_srl_p1</h2>
+<a id="a3ea5dd20dba9f7a3355674931f9720f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ea5dd20dba9f7a3355674931f9720f2">&#9670;&nbsp;</a></span>type_recv_p_p2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:2^d&amp;,-1:1^d&amp;), target mod_ghostcells_update::type_recv_srl_p1</td>
+          <td class="memname">integer, dimension( 0:3^d&amp;), target mod_ghostcells_update::type_recv_p_p2</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1983,62 +1812,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a06eed9d9c82320fead23d490e9315cd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06eed9d9c82320fead23d490e9315cd6">&#9670;&nbsp;</a></span>type_recv_srl_p2</h2>
+<a id="a025c1f51d3dd6a6cbc2b699e291286ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025c1f51d3dd6a6cbc2b699e291286ef">&#9670;&nbsp;</a></span>type_recv_r</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:2^d&amp;,-1:1^d&amp;), target mod_ghostcells_update::type_recv_srl_p2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00106">106</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
-
-</div>
-</div>
-<a id="adcc38dbc8c130dad9cf28cff4358d7a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcc38dbc8c130dad9cf28cff4358d7a3">&#9670;&nbsp;</a></span>type_send_p</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, dimension(:^d&amp;,:^d&amp;), pointer mod_ghostcells_update::type_send_p</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00110">110</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
-
-</div>
-</div>
-<a id="a26b5edcdc4690233ef589fefea4e83d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26b5edcdc4690233ef589fefea4e83d5">&#9670;&nbsp;</a></span>type_send_p_f</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;, 0:3^d&amp;), target mod_ghostcells_update::type_send_p_f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00102">102</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
-
-</div>
-</div>
-<a id="a1cd3f266c08db651fb175eafd933761a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cd3f266c08db651fb175eafd933761a">&#9670;&nbsp;</a></span>type_send_p_p1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;, 0:3^d&amp;), target mod_ghostcells_update::type_send_p_p1</td>
+          <td class="memname">integer, dimension(  :^d&amp;), pointer mod_ghostcells_update::type_recv_r</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2047,62 +1828,62 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ac12fe0e64d0868a1cedb47b61657ed9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac12fe0e64d0868a1cedb47b61657ed9e">&#9670;&nbsp;</a></span>type_send_p_p2</h2>
+<a id="a64616f6d095ba53ef9cff93ee2e8457f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64616f6d095ba53ef9cff93ee2e8457f">&#9670;&nbsp;</a></span>type_recv_r_f</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;, 0:3^d&amp;), target mod_ghostcells_update::type_send_p_p2</td>
+          <td class="memname">integer, dimension( 0:3^d&amp;), target mod_ghostcells_update::type_recv_r_f</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00108">108</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00097">97</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="a853cf6750962537b2515e9c307d8abf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a853cf6750962537b2515e9c307d8abf8">&#9670;&nbsp;</a></span>type_send_r</h2>
+<a id="aa180deefc56484ba548dbbc56534b30a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa180deefc56484ba548dbbc56534b30a">&#9670;&nbsp;</a></span>type_recv_r_p1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(:^d&amp;,:^d&amp;), pointer mod_ghostcells_update::type_send_r</td>
+          <td class="memname">integer, dimension( 0:3^d&amp;), target mod_ghostcells_update::type_recv_r_p1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00109">109</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00100">100</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="aeee1ca184c727200fc9884b369380cc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeee1ca184c727200fc9884b369380cc1">&#9670;&nbsp;</a></span>type_send_r_f</h2>
+<a id="aad848d776f02017341ebbe27367e930e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad848d776f02017341ebbe27367e930e">&#9670;&nbsp;</a></span>type_recv_r_p2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;,-1:1^d&amp;), target mod_ghostcells_update::type_send_r_f</td>
+          <td class="memname">integer, dimension( 0:3^d&amp;), target mod_ghostcells_update::type_recv_r_p2</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00101">101</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00103">103</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="acc141953d589537ca54d91e7f06b1422"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc141953d589537ca54d91e7f06b1422">&#9670;&nbsp;</a></span>type_send_r_p1</h2>
+<a id="ae47cf3b3b6c118b5224b5875ca88cd46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae47cf3b3b6c118b5224b5875ca88cd46">&#9670;&nbsp;</a></span>type_recv_srl</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;,-1:1^d&amp;), target mod_ghostcells_update::type_send_r_p1</td>
+          <td class="memname">integer, dimension(  :^d&amp;), pointer mod_ghostcells_update::type_recv_srl</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2111,46 +1892,94 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a078cdea5a09bcc97af73805e9741e64b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a078cdea5a09bcc97af73805e9741e64b">&#9670;&nbsp;</a></span>type_send_r_p2</h2>
+<a id="a64ad7d9b643560b0daa327776517a0a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ad7d9b643560b0daa327776517a0a4">&#9670;&nbsp;</a></span>type_recv_srl_f</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:1^d&amp;,-1:1^d&amp;), target mod_ghostcells_update::type_send_r_p2</td>
+          <td class="memname">integer, dimension(-1:1^d&amp;), target mod_ghostcells_update::type_recv_srl_f</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00107">107</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00095">95</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="a731adfb368abb3c3deb73479d40f3108"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a731adfb368abb3c3deb73479d40f3108">&#9670;&nbsp;</a></span>type_send_srl</h2>
+<a id="adf857392266219c21180a7011bc0a90a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf857392266219c21180a7011bc0a90a">&#9670;&nbsp;</a></span>type_recv_srl_p1</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(:^d&amp;,:^d&amp;), pointer mod_ghostcells_update::type_send_srl</td>
+          <td class="memname">integer, dimension(-1:1^d&amp;), target mod_ghostcells_update::type_recv_srl_p1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00109">109</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00098">98</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
-<a id="ac860872b620a7b48c6a5745cfda410ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac860872b620a7b48c6a5745cfda410ea">&#9670;&nbsp;</a></span>type_send_srl_f</h2>
+<a id="abde5c8f47119774cac5c94189a134d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abde5c8f47119774cac5c94189a134d54">&#9670;&nbsp;</a></span>type_recv_srl_p2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:2^d&amp;,-1:1^d&amp;), target mod_ghostcells_update::type_send_srl_f</td>
+          <td class="memname">integer, dimension(-1:1^d&amp;), target mod_ghostcells_update::type_recv_srl_p2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00101">101</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+
+</div>
+</div>
+<a id="a3281347edc3c4e8cfef15ef71b43dccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3281347edc3c4e8cfef15ef71b43dccf">&#9670;&nbsp;</a></span>type_send_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(  :^d&amp;), pointer mod_ghostcells_update::type_send_p</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00105">105</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+
+</div>
+</div>
+<a id="a30f333213f0e2d38f43644c8a51437c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30f333213f0e2d38f43644c8a51437c1">&#9670;&nbsp;</a></span>type_send_p_f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension( 0:3^d&amp;), target mod_ghostcells_update::type_send_p_f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00097">97</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+
+</div>
+</div>
+<a id="a840cd18b788df59375ecda2e74e3423d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840cd18b788df59375ecda2e74e3423d">&#9670;&nbsp;</a></span>type_send_p_p1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension( 0:3^d&amp;), target mod_ghostcells_update::type_send_p_p1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2159,14 +1988,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a22474254ce7ce5b30421532a04b94b06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22474254ce7ce5b30421532a04b94b06">&#9670;&nbsp;</a></span>type_send_srl_p1</h2>
+<a id="a5a0f5ca2aad54b42ca1e54c511b674cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0f5ca2aad54b42ca1e54c511b674cf">&#9670;&nbsp;</a></span>type_send_p_p2</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:2^d&amp;,-1:1^d&amp;), target mod_ghostcells_update::type_send_srl_p1</td>
+          <td class="memname">integer, dimension( 0:3^d&amp;), target mod_ghostcells_update::type_send_p_p2</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2175,19 +2004,131 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a6ce70b2ce6ad8fc3c6c413ecbc8dd0a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ce70b2ce6ad8fc3c6c413ecbc8dd0a5">&#9670;&nbsp;</a></span>type_send_srl_p2</h2>
+<a id="a99770c1cae5a47a3dd4f62d0e970350d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99770c1cae5a47a3dd4f62d0e970350d">&#9670;&nbsp;</a></span>type_send_r</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">integer, dimension(-1:2^d&amp;,-1:1^d&amp;), target mod_ghostcells_update::type_send_srl_p2</td>
+          <td class="memname">integer, dimension(  :^d&amp;), pointer mod_ghostcells_update::type_send_r</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00106">106</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00104">104</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+
+</div>
+</div>
+<a id="a69199f947c6bf0166553125005bb8bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69199f947c6bf0166553125005bb8bd8">&#9670;&nbsp;</a></span>type_send_r_f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(-1:1^d&amp;), target mod_ghostcells_update::type_send_r_f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00096">96</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+
+</div>
+</div>
+<a id="a47da41a4931c0a69803460ca0cb3935a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47da41a4931c0a69803460ca0cb3935a">&#9670;&nbsp;</a></span>type_send_r_p1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(-1:1^d&amp;), target mod_ghostcells_update::type_send_r_p1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00099">99</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+
+</div>
+</div>
+<a id="a0e5908242974fd71b2760700fbffe25a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5908242974fd71b2760700fbffe25a">&#9670;&nbsp;</a></span>type_send_r_p2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(-1:1^d&amp;), target mod_ghostcells_update::type_send_r_p2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00102">102</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+
+</div>
+</div>
+<a id="a432c51155cca2cb7414688e4eaf57951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a432c51155cca2cb7414688e4eaf57951">&#9670;&nbsp;</a></span>type_send_srl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(  :^d&amp;), pointer mod_ghostcells_update::type_send_srl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00104">104</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+
+</div>
+</div>
+<a id="a76209037459ab223ff8b736ab9acf483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76209037459ab223ff8b736ab9acf483">&#9670;&nbsp;</a></span>type_send_srl_f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(-1:1^d&amp;), target mod_ghostcells_update::type_send_srl_f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00095">95</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+
+</div>
+</div>
+<a id="a02ace4076e2b553acc2726e8629e42f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02ace4076e2b553acc2726e8629e42f9">&#9670;&nbsp;</a></span>type_send_srl_p1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(-1:1^d&amp;), target mod_ghostcells_update::type_send_srl_p1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00098">98</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+
+</div>
+</div>
+<a id="a571e0a23709269c6d4fe690cfe451b44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a571e0a23709269c6d4fe690cfe451b44">&#9670;&nbsp;</a></span>type_send_srl_p2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(-1:1^d&amp;), target mod_ghostcells_update::type_send_srl_p2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00101">101</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
