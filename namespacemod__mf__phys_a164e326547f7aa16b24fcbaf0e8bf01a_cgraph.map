@@ -1,5 +1,5 @@
 <map id="mod_mf_phys::mf_phys_init" name="mod_mf_phys::mf_phys_init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,593,212,619"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,567,212,594"/>
 <area shape="rect" id="node2" href="$namespacemod__mf__phys.html#a8cbee5aeb3ec1f5bc7d73c5e8eabab19" title="w[iws]=w[iws]+qdt*S[iws,wCT] where S is the source based on wCT within ixO" alt="" coords="284,5,455,47"/>
 <area shape="rect" id="node3" href="$namespacemod__mf__phys.html#a1a69a790b950d588afb178e1777223af" title=" " alt="" coords="284,71,455,112"/>
 <area shape="rect" id="node4" href="$namespacemod__mf__phys.html#ab99b07b21395999f8a61e4d96faa76ac" title=" " alt="" coords="265,136,473,177"/>
@@ -11,13 +11,12 @@
 <area shape="rect" id="node10" href="$namespacemod__mf__phys.html#a09d95616d2987b148f0ff0fc6e8143f1" title="prepare velocities for ct methods" alt="" coords="285,501,453,543"/>
 <area shape="rect" id="node11" href="$namespacemod__mf__phys.html#a95fccc26e8e0deffb81122c9e3027cc4" title="If resistivity is not zero, check diffusion time limit for dt." alt="" coords="275,567,463,594"/>
 <area shape="rect" id="node12" href="$namespacemod__mf__phys.html#a16dd0f06c273cb9f8b90026dc8756e28" title="Calculate fluxes within ixO^L." alt="" coords="270,618,469,645"/>
-<area shape="rect" id="node13" href="$namespacemod__mf__phys.html#aea0ee2b93079543018cd3347f7dc54fe" title="Calculate v vector." alt="" coords="278,669,461,695"/>
-<area shape="rect" id="node14" href="$namespacemod__mf__phys.html#a298879015f462984603c544bfed4aab4" title=" " alt="" coords="260,719,479,746"/>
-<area shape="rect" id="node15" href="$namespacemod__mf__phys.html#affce02bda119815622485d3b707dcb03" title=" " alt="" coords="269,771,470,812"/>
-<area shape="rect" id="node16" href="$namespacemod__mf__phys.html#ab70dfa046f9db36bdbc4099530ebf1c1" title="Transform primitive variables into conservative ones." alt="" coords="289,836,449,877"/>
-<area shape="rect" id="node17" href="$namespacemod__mf__phys.html#a1276a43e95a34a706934608fe37904c4" title="Transform conservative variables into primitive ones." alt="" coords="289,901,449,943"/>
-<area shape="rect" id="node18" href="$namespacemod__mf__phys.html#af7c51c3f27621ab02a85f9c8a2c4e81b" title=" " alt="" coords="273,967,465,1008"/>
-<area shape="rect" id="node19" href="$namespacemod__mf__phys.html#a891ceb8d3185e1df2b98270bfc1d2083" title="Add global source terms to update frictional velocity on complete domain." alt="" coords="270,1032,469,1073"/>
-<area shape="rect" id="node20" href="$namespacemod__mf__phys.html#ad0edb985cb7c4a3ca53eed3ca655b3dc" title="Write this module&#39;s parameters to a snapsoht." alt="" coords="263,1098,475,1125"/>
-<area shape="rect" id="node21" href="$namespacemod__particles.html#a7a89b126b34bb788a3911955880ddd8f" title="Initialize particle data and parameters." alt="" coords="266,1149,473,1175"/>
+<area shape="rect" id="node13" href="$namespacemod__mf__phys.html#a298879015f462984603c544bfed4aab4" title=" " alt="" coords="260,669,479,695"/>
+<area shape="rect" id="node14" href="$namespacemod__mf__phys.html#affce02bda119815622485d3b707dcb03" title=" " alt="" coords="269,720,470,761"/>
+<area shape="rect" id="node15" href="$namespacemod__mf__phys.html#ab70dfa046f9db36bdbc4099530ebf1c1" title="Transform primitive variables into conservative ones." alt="" coords="289,785,449,827"/>
+<area shape="rect" id="node16" href="$namespacemod__mf__phys.html#a1276a43e95a34a706934608fe37904c4" title="Transform conservative variables into primitive ones." alt="" coords="289,851,449,892"/>
+<area shape="rect" id="node17" href="$namespacemod__mf__phys.html#af7c51c3f27621ab02a85f9c8a2c4e81b" title=" " alt="" coords="273,916,465,957"/>
+<area shape="rect" id="node18" href="$namespacemod__mf__phys.html#a891ceb8d3185e1df2b98270bfc1d2083" title="Add global source terms to update frictional velocity on complete domain." alt="" coords="270,981,469,1023"/>
+<area shape="rect" id="node19" href="$namespacemod__mf__phys.html#ad0edb985cb7c4a3ca53eed3ca655b3dc" title="Write this module&#39;s parameters to a snapsoht." alt="" coords="263,1047,475,1074"/>
+<area shape="rect" id="node20" href="$namespacemod__particles.html#a7a89b126b34bb788a3911955880ddd8f" title="Initialize particle data and parameters." alt="" coords="266,1098,473,1125"/>
 </map>

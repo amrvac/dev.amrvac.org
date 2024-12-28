@@ -98,9 +98,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a4bef2610a9a75d0590dce3edad6d7fee"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__advance.html#a4bef2610a9a75d0590dce3edad6d7fee">advect1</a> (method, dtfactor, idimLIM, qtC, psa, qt, psb)</td></tr>
 <tr class="memdesc:a4bef2610a9a75d0590dce3edad6d7fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integrate all grids by one partial step.  <a href="namespacemod__advance.html#a4bef2610a9a75d0590dce3edad6d7fee">More...</a><br /></td></tr>
 <tr class="separator:a4bef2610a9a75d0590dce3edad6d7fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8003ddfc1af37662208929f2caa00cbd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__advance.html#a8003ddfc1af37662208929f2caa00cbd">advect1_grid</a> (method, qdt, dtfactor, ixIL, idimLIM, qtC, sCT, qt, s, fC, fE, dxs, x)</td></tr>
-<tr class="memdesc:a8003ddfc1af37662208929f2caa00cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance a single grid over one partial time step.  <a href="namespacemod__advance.html#a8003ddfc1af37662208929f2caa00cbd">More...</a><br /></td></tr>
-<tr class="separator:a8003ddfc1af37662208929f2caa00cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e17b520d57df96db178384edee54e66"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__advance.html#a0e17b520d57df96db178384edee54e66">advect1_grid</a> (igrid, method, qdt, dtfactor, ixIL, idimLIM, qtC, sCT, qt, s, dxs, x)</td></tr>
+<tr class="memdesc:a0e17b520d57df96db178384edee54e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advance a single grid over one partial time step.  <a href="namespacemod__advance.html#a0e17b520d57df96db178384edee54e66">More...</a><br /></td></tr>
+<tr class="separator:a0e17b520d57df96db178384edee54e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2beedac0bce5cbce19c516a00b5c98"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__advance.html#a4c2beedac0bce5cbce19c516a00b5c98">process</a> (iit, qt)</td></tr>
 <tr class="memdesc:a4c2beedac0bce5cbce19c516a00b5c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">process is a user entry in time loop, before output and advance allows to modify solution, add extra variables, etc. Warning: CFL dt already determined (and is not recomputed)!  <a href="namespacemod__advance.html#a4c2beedac0bce5cbce19c516a00b5c98">More...</a><br /></td></tr>
 <tr class="separator:a4c2beedac0bce5cbce19c516a00b5c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,22 +267,20 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__advance_a4bef2610a9a75d0590dce3edad6d7fee_cgraph.png" border="0" usemap="#anamespacemod__advance_a4bef2610a9a75d0590dce3edad6d7fee_cgraph" alt=""/></div>
 <map name="anamespacemod__advance_a4bef2610a9a75d0590dce3edad6d7fee_cgraph" id="anamespacemod__advance_a4bef2610a9a75d0590dce3edad6d7fee_cgraph">
-<area shape="rect" title="Integrate all grids by one partial step." alt="" coords="5,224,179,251"/>
-<area shape="rect" href="namespacemod__advance.html#a8003ddfc1af37662208929f2caa00cbd" title="Advance a single grid over one partial time step." alt="" coords="234,5,439,32"/>
-<area shape="rect" href="namespacemod__fix__conserve.html#a63d6347a8533a8ed2e9537869c665444" title=" " alt="" coords="255,57,419,98"/>
-<area shape="rect" href="namespacemod__fix__conserve.html#a482f9e62d354bc5d00003e380fbc8ee1" title=" " alt="" coords="255,122,419,163"/>
-<area shape="rect" href="namespacemod__ghostcells__update.html#abc70508ceb326fb28166d751e5de31fc" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="249,187,425,229"/>
-<area shape="rect" href="namespacemod__fix__conserve.html#a295f588de053ce80e0500c241ae24460" title=" " alt="" coords="237,253,437,280"/>
-<area shape="rect" href="namespacemod__fix__conserve.html#a58ec316c5eb551df342c792ed2612f0e" title=" " alt="" coords="235,304,438,331"/>
-<area shape="rect" href="namespacemod__fix__conserve.html#a8e321b6488183dd5e10247497d0d975e" title=" " alt="" coords="227,355,447,381"/>
-<area shape="rect" href="namespacemod__fix__conserve.html#af0fc91a69837c51f45b6d82fe884d75a" title=" " alt="" coords="231,405,443,432"/>
+<area shape="rect" title="Integrate all grids by one partial step." alt="" coords="5,163,179,189"/>
+<area shape="rect" href="namespacemod__advance.html#a0e17b520d57df96db178384edee54e66" title="Advance a single grid over one partial time step." alt="" coords="227,5,432,32"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#a63d6347a8533a8ed2e9537869c665444" title=" " alt="" coords="247,57,411,98"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#a482f9e62d354bc5d00003e380fbc8ee1" title=" " alt="" coords="247,122,411,163"/>
+<area shape="rect" href="namespacemod__ghostcells__update.html#abc70508ceb326fb28166d751e5de31fc" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="241,187,417,229"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#a295f588de053ce80e0500c241ae24460" title=" " alt="" coords="229,253,429,280"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#a58ec316c5eb551df342c792ed2612f0e" title=" " alt="" coords="228,304,431,331"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a8003ddfc1af37662208929f2caa00cbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8003ddfc1af37662208929f2caa00cbd">&#9670;&nbsp;</a></span>advect1_grid()</h2>
+<a id="a0e17b520d57df96db178384edee54e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e17b520d57df96db178384edee54e66">&#9670;&nbsp;</a></span>advect1_grid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,6 +288,12 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">subroutine mod_advance::advect1_grid </td>
           <td>(</td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>igrid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">integer, intent(in)&#160;</td>
           <td class="paramname"><em>method</em>, </td>
         </tr>
@@ -356,18 +360,6 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,1:nwflux,1:ndim)&#160;</td>
-          <td class="paramname"><em>fC</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,sdim:3)&#160;</td>
-          <td class="paramname"><em>fE</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">double precision, dimension(ndim), intent(in)&#160;</td>
           <td class="paramname"><em>dxs</em>, </td>
         </tr>
@@ -387,20 +379,22 @@ Here is the call graph for this function:</div>
 
 <p>Advance a single grid over one partial time step. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00689">689</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00672">672</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__advance_a8003ddfc1af37662208929f2caa00cbd_cgraph.png" border="0" usemap="#anamespacemod__advance_a8003ddfc1af37662208929f2caa00cbd_cgraph" alt=""/></div>
-<map name="anamespacemod__advance_a8003ddfc1af37662208929f2caa00cbd_cgraph" id="anamespacemod__advance_a8003ddfc1af37662208929f2caa00cbd_cgraph">
-<area shape="rect" title="Advance a single grid over one partial time step." alt="" coords="5,180,211,207"/>
-<area shape="rect" href="namespacemod__source.html#a37caec5d9f530bb58e31bcbaea843afe" title="Add source within ixO for iws: w=w+qdt*S[wCT]." alt="" coords="491,115,675,141"/>
-<area shape="rect" href="namespacemod__finite__difference.html#a03d8cfda33f483557fccf0a872d93d4d" title=" " alt="" coords="269,107,432,149"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="491,212,674,239"/>
-<area shape="rect" href="namespacemod__finite__difference.html#af942d4f8f8f4c086622864e42bbb7123" title=" " alt="" coords="259,5,443,32"/>
-<area shape="rect" href="namespacemod__finite__volume.html#a330387f8c1732e2ecc0cdb67d47eb68e" title="finite volume method" alt="" coords="273,173,428,214"/>
-<area shape="rect" href="namespacemod__finite__volume.html#a752f4d2fe38f1ac5fb7a3907c589a2e1" title="The non&#45;conservative Hancock predictor for TVDLF." alt="" coords="273,238,428,279"/>
-<area shape="rect" href="namespacemod__tvd.html#ad44a625b8ed17905e48623383b5c4c64" title=" " alt="" coords="281,355,420,381"/>
+<div class="center"><img src="namespacemod__advance_a0e17b520d57df96db178384edee54e66_cgraph.png" border="0" usemap="#anamespacemod__advance_a0e17b520d57df96db178384edee54e66_cgraph" alt=""/></div>
+<map name="anamespacemod__advance_a0e17b520d57df96db178384edee54e66_cgraph" id="anamespacemod__advance_a0e17b520d57df96db178384edee54e66_cgraph">
+<area shape="rect" title="Advance a single grid over one partial time step." alt="" coords="5,245,211,272"/>
+<area shape="rect" href="namespacemod__source.html#a37caec5d9f530bb58e31bcbaea843afe" title="Add source within ixO for iws: w=w+qdt*S[wCT]." alt="" coords="527,115,711,141"/>
+<area shape="rect" href="namespacemod__finite__difference.html#a03d8cfda33f483557fccf0a872d93d4d" title=" " alt="" coords="287,107,450,149"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="527,212,710,239"/>
+<area shape="rect" href="namespacemod__finite__difference.html#af942d4f8f8f4c086622864e42bbb7123" title=" " alt="" coords="277,5,461,32"/>
+<area shape="rect" href="namespacemod__finite__volume.html#a330387f8c1732e2ecc0cdb67d47eb68e" title="finite volume method" alt="" coords="291,173,446,214"/>
+<area shape="rect" href="namespacemod__finite__volume.html#a752f4d2fe38f1ac5fb7a3907c589a2e1" title="The non&#45;conservative Hancock predictor for TVDLF." alt="" coords="291,238,446,279"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#a8e321b6488183dd5e10247497d0d975e" title=" " alt="" coords="259,355,479,381"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#af0fc91a69837c51f45b6d82fe884d75a" title=" " alt="" coords="263,405,475,432"/>
+<area shape="rect" href="namespacemod__tvd.html#ad44a625b8ed17905e48623383b5c4c64" title=" " alt="" coords="299,456,438,483"/>
 </map>
 </div>
 
@@ -543,7 +537,7 @@ Here is the call graph for this function:</div>
 
 <p>process is a user entry in time loop, before output and advance allows to modify solution, add extra variables, etc. Warning: CFL dt already determined (and is not recomputed)! </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00739">739</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00737">737</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -584,7 +578,7 @@ Here is the call graph for this function:</div>
 
 <p>process_advanced is user entry in time loop, just after advance allows to modify solution, add extra variables, etc. added for handling two-way coupled PIC-MHD Warning: w is now at global_time^(n+1), global time and iteration at global_time^n, it^n </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00772">772</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00770">770</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

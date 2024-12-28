@@ -80,16 +80,16 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:acb1710f32d334f37c8937542b5dfdaaa"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__boundary__conditions.html#acb1710f32d334f37c8937542b5dfdaaa">bc_phys</a> (iside, idims, time, qdt, s, ixGL, ixBL)</td></tr>
-<tr class="memdesc:acb1710f32d334f37c8937542b5dfdaaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill ghost cells at a physical boundary  <a href="namespacemod__boundary__conditions.html#acb1710f32d334f37c8937542b5dfdaaa">More...</a><br /></td></tr>
-<tr class="separator:acb1710f32d334f37c8937542b5dfdaaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5396b4a2ebc243b9df8ede1807b57bd3"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__boundary__conditions.html#a5396b4a2ebc243b9df8ede1807b57bd3">bc_phys</a> (iside, idims, time, qdt, s, ixGL, ixBL, nwhead, nwtail)</td></tr>
+<tr class="memdesc:a5396b4a2ebc243b9df8ede1807b57bd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill ghost cells at a physical boundary  <a href="namespacemod__boundary__conditions.html#a5396b4a2ebc243b9df8ede1807b57bd3">More...</a><br /></td></tr>
+<tr class="separator:a5396b4a2ebc243b9df8ede1807b57bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f7ce058a949049b745bfcebef0b2bd"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__boundary__conditions.html#a38f7ce058a949049b745bfcebef0b2bd">getintbc</a> (time, ixGL)</td></tr>
 <tr class="memdesc:a38f7ce058a949049b745bfcebef0b2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill inner boundary values  <a href="namespacemod__boundary__conditions.html#a38f7ce058a949049b745bfcebef0b2bd">More...</a><br /></td></tr>
 <tr class="separator:a38f7ce058a949049b745bfcebef0b2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a id="acb1710f32d334f37c8937542b5dfdaaa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb1710f32d334f37c8937542b5dfdaaa">&#9670;&nbsp;</a></span>bc_phys()</h2>
+<a id="a5396b4a2ebc243b9df8ede1807b57bd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5396b4a2ebc243b9df8ede1807b57bd3">&#9670;&nbsp;</a></span>bc_phys()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +146,19 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>L</em>&#160;</td>
+          <td class="paramname"><em>L</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>nwhead</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>nwtail</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -162,8 +174,8 @@ Functions/Subroutines</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__boundary__conditions_acb1710f32d334f37c8937542b5dfdaaa_cgraph.png" border="0" usemap="#anamespacemod__boundary__conditions_acb1710f32d334f37c8937542b5dfdaaa_cgraph" alt=""/></div>
-<map name="anamespacemod__boundary__conditions_acb1710f32d334f37c8937542b5dfdaaa_cgraph" id="anamespacemod__boundary__conditions_acb1710f32d334f37c8937542b5dfdaaa_cgraph">
+<div class="center"><img src="namespacemod__boundary__conditions_a5396b4a2ebc243b9df8ede1807b57bd3_cgraph.png" border="0" usemap="#anamespacemod__boundary__conditions_a5396b4a2ebc243b9df8ede1807b57bd3_cgraph" alt=""/></div>
+<map name="anamespacemod__boundary__conditions_a5396b4a2ebc243b9df8ede1807b57bd3_cgraph" id="anamespacemod__boundary__conditions_a5396b4a2ebc243b9df8ede1807b57bd3_cgraph">
 <area shape="rect" title="fill ghost cells at a physical boundary" alt="" coords="5,27,199,69"/>
 <area shape="rect" href="namespacemod__bc__data.html#ac4692cab356d6370d401eaa9aabc417a" title="Set boundary conditions according to user data." alt="" coords="247,5,441,32"/>
 <area shape="rect" href="namespacemod__functions__bfield.html#aebb8fb6527300058b4b839f4193c47a4" title="Calculate div B within ixO." alt="" coords="263,57,425,98"/>
@@ -206,7 +218,7 @@ Here is the call graph for this function:</div>
 
 <p>fill inner boundary values </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__boundary__conditions_8t_source.html#l00270">270</a> of file <a class="el" href="mod__boundary__conditions_8t_source.html">mod_boundary_conditions.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__boundary__conditions_8t_source.html#l00267">267</a> of file <a class="el" href="mod__boundary__conditions_8t_source.html">mod_boundary_conditions.t</a>.</p>
 
 </div>
 </div>
