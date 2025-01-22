@@ -1,5 +1,0 @@
-<map id="mod_hd_phys::hd_add_source_geom" name="mod_hd_phys::hd_add_source_geom">
-<area shape="rect" id="node1" title="Add geometrical source terms to w." alt="" coords="5,50,172,91"/>
-<area shape="rect" id="node2" href="$namespacemod__rotating__frame.html#a2c66211145083d9dc744d39d837b74ed" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="220,5,379,61"/>
-<area shape="rect" id="node3" href="$namespacemod__viscosity.html#a992638ce7fbbbc28f36a51e4a6d51835" title=" " alt="" coords="225,86,374,127"/>
-</map>

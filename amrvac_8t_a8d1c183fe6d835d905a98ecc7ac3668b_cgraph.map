@@ -1,26 +1,63 @@
 <map id="amrvac" name="amrvac">
-<area shape="rect" id="node1" title="AMRVAC solves a set of hyperbolic equations &#160;using adaptive mesh refinement." alt="" coords="5,591,76,618"/>
-<area shape="rect" id="node2" href="$namespacemod__fix__conserve.html#ad56616828b83c369718a109e26b0e9ff" title=" " alt="" coords="611,68,843,95"/>
-<area shape="rect" id="node3" href="$namespacemod__comm__lib.html#a3bb8f7073e6c5083d584d17c871d8af6" title="Finalize (or shutdown) the MPI environment." alt="" coords="143,744,313,785"/>
-<area shape="rect" id="node4" href="$namespacemod__comm__lib.html#a388d2ad420c05555f3bd1744b8e17689" title="Initialize the MPI environment." alt="" coords="641,709,812,750"/>
-<area shape="rect" id="node5" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="891,599,1073,626"/>
-<area shape="rect" id="node6" href="$namespacemod__convert__files.html#a62a6fb3fa85f5bb311485d3dc140562c" title=" " alt="" coords="397,592,546,633"/>
-<area shape="rect" id="node7" href="$namespacemod__ghostcells__update.html#abc70508ceb326fb28166d751e5de31fc" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="639,357,815,398"/>
-<area shape="rect" id="node8" href="$namespacemod__initialize__amr.html#a0057789c0baf7737ff7d12f1c6a5ff65" title="improve initial condition after initialization" alt="" coords="131,424,325,465"/>
-<area shape="rect" id="node9" href="$namespacemod__multigrid__coupling.html#aec3563c8809267a23e94c236093a2b12" title="Setup multigrid for usage." alt="" coords="382,474,561,516"/>
-<area shape="rect" id="node10" href="$namespacemod__convert.html#aa85241ac32b3b2a84319e2fe0fa01b56" title=" " alt="" coords="132,810,324,836"/>
-<area shape="rect" id="node11" href="$namespacemod__initialize.html#a57f25bc03fa294f258c33ddd3d4c844b" title="Initialize amrvac: read par files and initialize variables." alt="" coords="139,861,317,902"/>
-<area shape="rect" id="node12" href="$namespacemod__trac.html#aa52c4fa933c5b1df28693d70a1742d0b" title=" " alt="" coords="155,926,301,968"/>
-<area shape="rect" id="node13" href="$namespacemod__initialize__amr.html#aa168da334aaca07260c9bc5449925576" title="Generate and initialize all grids at the coarsest level (level one)" alt="" coords="398,357,545,398"/>
-<area shape="rect" id="node14" href="$namespacemod__initialize__amr.html#ac2c24309d6ecbdc2f734308561d22363" title="modify initial condition" alt="" coords="653,533,800,574"/>
-<area shape="rect" id="node15" href="$namespacemod__particles.html#aecb3aafd9f10d12b4b4ca6466ed6da87" title="Create initial particles." alt="" coords="139,992,317,1033"/>
-<area shape="rect" id="node16" href="$namespacemod__advance.html#a4c2beedac0bce5cbce19c516a00b5c98" title="process is a user entry in time loop, before output and advance allows to modify solution,..." alt="" coords="386,188,557,215"/>
-<area shape="rect" id="node17" href="$namespacemod__input__output.html#a98a1cccd22f5c9aebc79667b1b469161" title="Read the command line arguments passed to amrvac." alt="" coords="139,1057,317,1098"/>
-<area shape="rect" id="node18" href="$namespacemod__input__output.html#aa2d00e56c4444b0b4806a9c13ce2eff7" title="Routine to read in snapshots (.dat files). When it cannot recognize the file version,..." alt="" coords="139,1122,317,1164"/>
-<area shape="rect" id="node19" href="$namespacemod__amr__grid.html#a1d21768e5b7034d71d93c87a60b14833" title="reset AMR and (de)allocate boundary flux storage at level changes" alt="" coords="380,119,563,146"/>
-<area shape="rect" id="node20" href="$namespacemod__amr__grid.html#a46bb4219ed6144389d25ea1d03354575" title="Force the tree to desired level(s) from level_io(_min/_max) used for conversion to vtk output." alt="" coords="380,240,563,281"/>
-<area shape="rect" id="node21" href="$namespacemod__selectgrids.html#aa15f11bf5108fe0eae81eb81aa46f3b1" title=" " alt="" coords="124,1188,332,1215"/>
-<area shape="rect" id="node22" href="$namespacemod__amr__grid.html#a81fdb2745e9bcee99e51e222cfb57a42" title="Build up AMR." alt="" coords="386,18,557,44"/>
-<area shape="rect" id="node23" href="$amrvac_8t.html#ac5af3cab85e31682fedc92879f7e072e" title=" " alt="" coords="167,170,289,196"/>
-<area shape="rect" id="node24" href="$namespacemod__usr.html#ae9af24eaf30f13b1f264cc800272798c" title="This routine should set user methods, and activate the physics module." alt="" coords="161,1239,295,1266"/>
+<area shape="rect" id="Node000001" title="AMRVAC solves a set of hyperbolic equations &#160;using adaptive mesh refinement." alt="" coords="5,589,76,614"/>
+<area shape="rect" id="Node000002" href="$namespacemod__fix__conserve.html#ad56616828b83c369718a109e26b0e9ff" title=" " alt="" coords="611,69,843,94"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="39,589,42,493,53,348,63,273,78,204,97,148,109,126,122,110,156,90,204,76,262,67,327,62,467,61,597,68,597,73,467,66,328,67,263,72,205,82,158,95,126,114,113,129,102,150,83,205,69,274,58,349,48,494,45,589"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a3bb8f7073e6c5083d584d17c871d8af6" title="Finalize (or shutdown) the MPI environment." alt="" coords="143,740,313,780"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="50,613,78,664,99,694,126,720,145,732,142,736,122,724,95,697,73,667,45,616"/>
+<area shape="rect" id="Node000004" href="$namespacemod__comm__lib.html#a388d2ad420c05555f3bd1744b8e17689" title="Initialize the MPI environment." alt="" coords="641,703,812,743"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="55,613,84,642,104,657,125,669,189,691,256,708,324,720,392,728,520,733,627,730,628,735,520,738,392,733,324,726,255,714,188,696,123,674,101,662,81,646,51,617"/>
+<area shape="rect" id="Node000005" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="891,596,1073,621"/>
+<area shape="poly" id="edge21_Node000001_Node000005" title=" " alt="" coords="77,604,210,622,380,638,514,641,649,636,877,618,877,624,649,642,514,646,380,643,209,627,76,610"/>
+<area shape="rect" id="Node000006" href="$namespacemod__convert__files.html#a62a6fb3fa85f5bb311485d3dc140562c" title=" " alt="" coords="397,588,546,628"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="76,600,383,604,383,610,76,605"/>
+<area shape="rect" id="Node000015" href="$namespacemod__ghostcells__update.html#abc70508ceb326fb28166d751e5de31fc" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="639,359,815,399"/>
+<area shape="poly" id="edge9_Node000001_Node000015" title=" " alt="" coords="39,589,42,545,53,483,64,450,78,418,98,389,122,365,160,346,211,335,271,329,336,329,464,335,563,344,627,354,626,359,562,350,464,340,336,334,271,335,212,340,162,351,126,369,102,393,83,421,69,452,59,484,48,545,45,589"/>
+<area shape="rect" id="Node000056" href="$namespacemod__initialize__amr.html#a0057789c0baf7737ff7d12f1c6a5ff65" title="improve initial condition after initialization" alt="" coords="131,423,325,463"/>
+<area shape="poly" id="edge10_Node000001_Node000056" title=" " alt="" coords="45,588,73,536,95,506,122,480,142,467,145,472,126,484,99,510,78,539,50,590"/>
+<area shape="rect" id="Node000057" href="$namespacemod__multigrid__coupling.html#aec3563c8809267a23e94c236093a2b12" title="Setup multigrid for usage." alt="" coords="382,474,561,514"/>
+<area shape="poly" id="edge18_Node000001_Node000057" title=" " alt="" coords="51,587,81,557,101,542,123,530,184,509,248,496,311,489,368,487,368,492,311,495,249,502,186,514,125,535,104,547,84,561,55,591"/>
+<area shape="rect" id="Node000092" href="$namespacemod__convert.html#aa85241ac32b3b2a84319e2fe0fa01b56" title=" " alt="" coords="132,805,324,830"/>
+<area shape="poly" id="edge13_Node000001_Node000092" title=" " alt="" coords="46,614,53,650,67,697,90,748,106,771,126,790,134,796,131,801,122,794,102,774,86,750,62,699,48,651,41,615"/>
+<area shape="rect" id="Node000093" href="$namespacemod__initialize.html#a57f25bc03fa294f258c33ddd3d4c844b" title="Initialize amrvac: read par files and initialize variables." alt="" coords="139,855,317,895"/>
+<area shape="poly" id="edge14_Node000001_Node000093" title=" " alt="" coords="45,615,49,658,61,719,86,784,103,815,126,841,130,845,127,849,122,845,99,818,81,787,56,720,44,659,40,615"/>
+<area shape="rect" id="Node000133" href="$namespacemod__trac.html#aa52c4fa933c5b1df28693d70a1742d0b" title=" " alt="" coords="155,919,301,959"/>
+<area shape="poly" id="edge15_Node000001_Node000133" title=" " alt="" coords="44,615,45,668,54,746,64,788,79,831,99,870,126,905,144,919,140,923,122,909,94,873,74,833,59,790,49,747,39,668,39,615"/>
+<area shape="rect" id="Node000134" href="$namespacemod__initialize__amr.html#aa168da334aaca07260c9bc5449925576" title="Generate and initialize all grids at the coarsest level (level one)" alt="" coords="398,359,545,399"/>
+<area shape="poly" id="edge16_Node000001_Node000134" title=" " alt="" coords="41,588,46,552,60,502,84,451,101,428,122,409,152,391,185,377,254,361,322,358,385,362,384,367,322,363,254,367,187,382,155,395,126,413,105,432,89,454,65,504,52,553,46,589"/>
+<area shape="rect" id="Node000149" href="$namespacemod__initialize__amr.html#ac2c24309d6ecbdc2f734308561d22363" title="modify initial condition" alt="" coords="653,531,800,571"/>
+<area shape="poly" id="edge19_Node000001_Node000149" title=" " alt="" coords="76,591,124,583,265,569,407,559,640,550,640,555,407,564,266,574,124,588,77,597"/>
+<area shape="rect" id="Node000150" href="$namespacemod__particles.html#aecb3aafd9f10d12b4b4ca6466ed6da87" title="Create initial particles." alt="" coords="139,983,317,1023"/>
+<area shape="poly" id="edge22_Node000001_Node000150" title=" " alt="" coords="46,614,54,687,70,794,94,900,109,941,126,969,130,973,126,977,122,973,104,944,89,902,64,795,48,688,41,615"/>
+<area shape="rect" id="Node000182" href="$namespacemod__advance.html#a4c2beedac0bce5cbce19c516a00b5c98" title="process is a user entry in time loop, before output and advance allows to modify solution,..." alt="" coords="386,194,557,220"/>
+<area shape="poly" id="edge23_Node000001_Node000182" title=" " alt="" coords="41,588,49,522,66,427,90,334,105,298,122,273,140,261,164,250,227,233,300,221,372,212,373,217,301,226,228,238,166,255,142,266,126,277,110,300,95,336,71,429,55,523,46,589"/>
+<area shape="rect" id="Node000183" href="$namespacemod__input__output.html#a98a1cccd22f5c9aebc79667b1b469161" title="Read the command line arguments passed to amrvac." alt="" coords="139,1047,317,1087"/>
+<area shape="poly" id="edge25_Node000001_Node000183" title=" " alt="" coords="45,614,51,698,66,825,76,890,90,950,106,1000,126,1033,130,1038,126,1041,122,1037,102,1002,85,952,71,891,60,825,46,699,40,615"/>
+<area shape="rect" id="Node000185" href="$namespacemod__input__output.html#aa2d00e56c4444b0b4806a9c13ce2eff7" title="Routine to read in snapshots (.dat files). When it cannot recognize the file version,..." alt="" coords="139,1111,317,1151"/>
+<area shape="poly" id="edge26_Node000001_Node000185" title=" " alt="" coords="45,615,49,709,62,855,72,931,86,1001,104,1058,126,1097,130,1102,126,1105,122,1101,99,1060,81,1002,67,932,57,855,44,710,40,615"/>
+<area shape="rect" id="Node000194" href="$namespacemod__amr__grid.html#a1d21768e5b7034d71d93c87a60b14833" title="reset AMR and (de)allocate boundary flux storage at level changes" alt="" coords="380,120,563,145"/>
+<area shape="poly" id="edge27_Node000001_Node000194" title=" " alt="" coords="40,589,44,501,56,370,67,302,81,240,99,189,122,156,154,133,190,117,228,107,267,103,343,104,409,114,409,119,343,109,267,108,229,113,191,122,157,138,126,160,104,192,86,241,72,303,62,371,49,502,45,589"/>
+<area shape="rect" id="Node000211" href="$namespacemod__amr__grid.html#a46bb4219ed6144389d25ea1d03354575" title="Force the tree to desired level(s) from level_io(_min/_max) used for conversion to vtk output." alt="" coords="380,244,563,284"/>
+<area shape="poly" id="edge29_Node000001_Node000211" title=" " alt="" coords="39,589,39,538,48,463,58,422,73,383,94,346,122,314,140,303,163,294,225,280,296,271,366,265,367,271,296,276,226,285,165,299,142,308,126,318,98,349,78,385,63,424,53,464,44,538,44,589"/>
+<area shape="rect" id="Node000204" href="$namespacemod__selectgrids.html#aa15f11bf5108fe0eae81eb81aa46f3b1" title=" " alt="" coords="124,1176,332,1201"/>
+<area shape="poly" id="edge31_Node000001_Node000204" title=" " alt="" coords="45,615,47,721,57,886,67,972,82,1052,101,1118,113,1143,126,1161,130,1166,127,1169,122,1165,108,1145,96,1119,76,1053,62,973,52,886,42,721,39,615"/>
+<area shape="rect" id="Node000213" href="$namespacemod__amr__grid.html#a81fdb2745e9bcee99e51e222cfb57a42" title="Build up AMR." alt="" coords="386,18,557,44"/>
+<area shape="poly" id="edge32_Node000001_Node000213" title=" " alt="" coords="39,589,41,486,50,326,60,242,75,166,95,103,108,79,122,61,153,38,188,21,225,11,263,5,339,5,405,13,404,18,338,10,263,10,226,16,189,26,156,43,126,65,112,82,100,105,80,167,66,243,56,326,46,486,45,589"/>
+<area shape="rect" id="Node000214" href="$amrvac_8t.html#ac5af3cab85e31682fedc92879f7e072e" title=" " alt="" coords="167,170,289,196"/>
+<area shape="poly" id="edge34_Node000001_Node000214" title=" " alt="" coords="40,589,48,513,63,400,87,288,103,244,122,213,136,201,152,193,155,198,139,206,126,217,108,246,93,290,68,401,53,514,46,589"/>
+<area shape="rect" id="Node000260" href="$namespacemod__usr.html#ae9af24eaf30f13b1f264cc800272798c" title="This routine should set user methods, and activate the physics module." alt="" coords="161,1225,295,1250"/>
+<area shape="poly" id="edge37_Node000001_Node000260" title=" " alt="" coords="44,614,45,729,54,909,64,1004,78,1092,99,1164,112,1191,126,1212,149,1227,146,1232,122,1216,107,1194,94,1166,73,1093,58,1005,49,910,40,729,39,614"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="793,700,842,682,898,654,947,626,950,631,901,659,844,687,795,705"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="547,606,877,606,877,611,547,611"/>
+<area shape="poly" id="edge6_Node000006_Node000015" title=" " alt="" coords="493,586,691,407,694,411,497,590"/>
+<area shape="poly" id="edge7_Node000015_Node000005" title=" " alt="" coords="752,397,958,585,955,589,749,401"/>
+<area shape="poly" id="edge11_Node000056_Node000015" title=" " alt="" coords="325,434,439,423,562,408,625,398,626,403,563,414,440,429,326,439"/>
+<area shape="poly" id="edge12_Node000056_Node000057" title=" " alt="" coords="325,460,369,470,368,475,324,466"/>
+<area shape="poly" id="edge17_Node000134_Node000015" title=" " alt="" coords="545,376,625,376,625,382,545,382"/>
+<area shape="poly" id="edge20_Node000149_Node000005" title=" " alt="" coords="801,565,912,590,911,595,799,570"/>
+<area shape="poly" id="edge24_Node000182_Node000015" title=" " alt="" coords="534,217,564,230,605,257,643,288,702,347,698,351,639,292,602,261,561,235,532,222"/>
+<area shape="poly" id="edge28_Node000194_Node000002" title=" " alt="" coords="536,117,648,95,649,100,537,122"/>
+<area shape="poly" id="edge30_Node000211_Node000015" title=" " alt="" coords="521,282,564,301,672,351,670,356,562,306,519,287"/>
+<area shape="poly" id="edge33_Node000213_Node000002" title=" " alt="" coords="537,41,649,64,648,69,536,46"/>
+<area shape="poly" id="edge35_Node000214_Node000182" title=" " alt="" coords="290,186,372,195,372,200,289,192"/>
+<area shape="poly" id="edge36_Node000214_Node000194" title=" " alt="" coords="289,168,396,145,397,150,290,173"/>
 </map>

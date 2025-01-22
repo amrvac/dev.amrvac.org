@@ -1,6 +1,0 @@
-<map id="mod_ffhd_phys::ffhd_get_dt" name="mod_ffhd_phys::ffhd_get_dt">
-<area shape="rect" id="node1" title=" " alt="" coords="5,71,160,112"/>
-<area shape="rect" id="node2" href="$namespacemod__radiative__cooling.html#a6ce0229b23f942e86c22b3c89f7f96dd" title=" " alt="" coords="213,5,384,47"/>
-<area shape="rect" id="node3" href="$namespacemod__gravity.html#a6567eb0ce75b7a2b770ab848461c6fb5" title=" " alt="" coords="220,71,377,112"/>
-<area shape="rect" id="node4" href="$namespacemod__viscosity.html#a3abc58754cd1fd2237da85b19407d595" title=" " alt="" coords="208,136,389,177"/>
-</map>

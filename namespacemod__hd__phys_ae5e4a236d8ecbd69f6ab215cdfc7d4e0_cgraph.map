@@ -1,4 +1,0 @@
-<map id="mod_hd_phys::hd_get_cmax" name="mod_hd_phys::hd_get_cmax">
-<area shape="rect" id="node1" title="Calculate cmax_idim = csound + abs(v_idim) within ixO^L." alt="" coords="5,13,212,39"/>
-<area shape="rect" id="node2" href="$namespacemod__dust.html#af1ce35be3416cadd0ebcfc7c2d1f9fa7" title=" " alt="" coords="260,5,411,47"/>
-</map>
