@@ -20,6 +20,6 @@ var searchData=
   ['visc_5fget_5fflux_5fprim_17',['visc_get_flux_prim',['../namespacemod__viscosity.html#a19f61795c5415a88b464795d0af393f3',1,'mod_viscosity']]],
   ['viscosity_5fadd_5fsource_18',['viscosity_add_source',['../namespacemod__viscosity.html#a8c9581ffb669577f04e4b1d0618be1fd',1,'mod_viscosity']]],
   ['viscosity_5fget_5fdt_19',['viscosity_get_dt',['../namespacemod__viscosity.html#aa92c0f66095ceddf01eb3fbec0cf9f23',1,'mod_viscosity']]],
-  ['viscosity_5finit_20',['viscosity_init',['../namespacemod__viscosity.html#a694614da2f2a26938cfaca941a18963a',1,'mod_viscosity']]],
+  ['viscosity_5finit_20',['viscosity_init',['../namespacemod__viscosity.html#a924ee8e80bc5ea1666abe401ec332723',1,'mod_viscosity']]],
   ['vlaplacian_5fset_5fmethods_21',['vlaplacian_set_methods',['../namespacem__octree__mg__1d.html#ac0df03ff726a6a264286de3a127f9d2f',1,'m_octree_mg_1d::vlaplacian_set_methods()'],['../namespacem__octree__mg__2d.html#ad3ed8bab963f29ba77f88d6a298a9d48',1,'m_octree_mg_2d::vlaplacian_set_methods()'],['../namespacem__octree__mg__3d.html#ae2fc9a604ab269e690aecbc77b1254fd',1,'m_octree_mg_3d::vlaplacian_set_methods()']]]
 ];
