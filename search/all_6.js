@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['c_0',['c',['../namespacemod__mhd__phys.html#ab9e60feb1a18a8074f83808e28247364',1,'mod_mhd_phys']]],
-  ['c_5f_1',['c_',['../namespacemod__mhd__phys.html#a0285509f6d1009369a7680950f365ec2',1,'mod_mhd_phys']]],
+  ['c_0',['c',['../namespacemod__mhd__phys.html#ab9e60feb1a18a8074f83808e28247364',1,'mod_mhd_phys::c'],['../namespacemod__rmhd__phys.html#a3782d578e58d1a352ea62d92a5ea628d',1,'mod_rmhd_phys::c']]],
+  ['c_5f_1',['c_',['../namespacemod__mhd__phys.html#a0285509f6d1009369a7680950f365ec2',1,'mod_mhd_phys::c_'],['../namespacemod__rmhd__phys.html#a81b959af0c57c51405957ace8a869a51',1,'mod_rmhd_phys::c_']]],
   ['c_5fhyp_2',['c_hyp',['../namespacemod__twofl__phys.html#a96117861ede2a95260b4f092cf0ce8b4',1,'mod_twofl_phys']]],
   ['c_5fnorm_3',['c_norm',['../namespacemod__global__parameters.html#a9ba740b454cb3ffd54625142049b3bcf',1,'mod_global_parameters']]],
   ['c_5fshk_4',['c_shk',['../namespacemod__twofl__phys.html#a19d6958fa894cdec30180865d72c7b0b',1,'mod_twofl_phys']]],
@@ -72,7 +72,7 @@ var searchData=
   ['child_69',['child',['../structmod__forest_1_1tree__node.html#a95b3e82718d76479ba340b8b5dca2cce',1,'mod_forest::tree_node']]],
   ['children_70',['children',['../structm__octree__mg__3d_1_1mg__box__t.html#a066470dfa28df4fb69192208a37c04e1',1,'m_octree_mg_3d::mg_box_t::children'],['../structm__octree__mg__2d_1_1mg__box__t.html#aab0ab4fdd3b37d5cdb29ca9e50131c25',1,'m_octree_mg_2d::mg_box_t::children'],['../structm__octree__mg__1d_1_1mg__box__t.html#a6c4c682a0f02086724c6febe703393a3',1,'m_octree_mg_1d::mg_box_t::children']]],
   ['circle_71',['circle',['../structmod__random_1_1rng__t.html#aecf3d582d667f283ed5fbb5c4b325609',1,'mod_random::rng_t']]],
-  ['clean_5finitial_5fdivb_72',['clean_initial_divb',['../namespacemod__mf__phys.html#a3cbdde47fd036e1d6eab5619370dc80b',1,'mod_mf_phys::clean_initial_divb'],['../namespacemod__mhd__phys.html#a9a767541d6e7087b6c16778f08b93736',1,'mod_mhd_phys::clean_initial_divb'],['../namespacemod__twofl__phys.html#a09a4f8abb19c33c312cb76b8a342f5b2',1,'mod_twofl_phys::clean_initial_divb']]],
+  ['clean_5finitial_5fdivb_72',['clean_initial_divb',['../namespacemod__mf__phys.html#a3cbdde47fd036e1d6eab5619370dc80b',1,'mod_mf_phys::clean_initial_divb'],['../namespacemod__mhd__phys.html#a9a767541d6e7087b6c16778f08b93736',1,'mod_mhd_phys::clean_initial_divb'],['../namespacemod__rmhd__phys.html#a4408c869587d924c483534997eb203a1',1,'mod_rmhd_phys::clean_initial_divb'],['../namespacemod__twofl__phys.html#a09a4f8abb19c33c312cb76b8a342f5b2',1,'mod_twofl_phys::clean_initial_divb']]],
   ['cmax_5fglobal_73',['cmax_global',['../namespacemod__global__parameters.html#a4f55f4cc1474cb823b2c12c32831d509',1,'mod_global_parameters::cmax_global'],['../namespacemod__magnetofriction.html#aeefa0b9e0497a416c1ca73d476e2adb3',1,'mod_magnetofriction::cmax_global']]],
   ['cmax_5fmype_74',['cmax_mype',['../namespacemod__magnetofriction.html#aa9753da5d3df3e3ef9b02ae3cd0bb2d4',1,'mod_magnetofriction']]],
   ['coarsen_75',['coarsen',['../namespacemod__forest.html#a98adc4efe3fc2778d5699ae7e5431816',1,'mod_forest']]],

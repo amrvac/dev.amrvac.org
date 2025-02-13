@@ -50,12 +50,12 @@
 <area shape="poly" id="edge27_Node000001_Node000237" title=" " alt="" coords="123,860,124,952,129,1022,141,1101,160,1185,189,1268,229,1347,254,1383,283,1415,289,1421,286,1425,279,1419,250,1386,225,1350,184,1270,155,1186,136,1102,124,1022,119,952,117,860"/>
 <area shape="rect" id="Node000238" href="$namespacemod__thermal__conduction.html#a591ee12c87621f338cc65935a9c5fa20" title="anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computation..." alt="" coords="296,1493,483,1533"/>
 <area shape="poly" id="edge28_Node000001_Node000238" title=" " alt="" coords="125,859,141,978,174,1165,196,1264,222,1355,251,1430,267,1458,283,1480,287,1483,283,1487,279,1483,262,1461,246,1432,217,1356,191,1265,169,1166,136,979,120,860"/>
-<area shape="rect" id="Node000242" href="$namespacemod__thermal__conduction.html#a8c9c30e2196550623da28cc61d017793" title="Init TC coefficients: MHD case." alt="" coords="296,1557,483,1597"/>
-<area shape="poly" id="edge29_Node000001_Node000242" title=" " alt="" coords="125,859,139,988,170,1194,192,1304,218,1405,249,1488,266,1520,283,1544,286,1547,283,1550,279,1547,261,1523,244,1490,213,1406,187,1305,165,1195,134,988,119,860"/>
-<area shape="rect" id="Node000243" href="$namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="296,1621,483,1661"/>
-<area shape="poly" id="edge30_Node000001_Node000243" title=" " alt="" coords="124,859,137,998,166,1224,188,1344,215,1455,246,1546,264,1581,283,1608,286,1611,283,1615,279,1611,260,1584,241,1548,209,1456,183,1345,161,1225,132,999,119,860"/>
-<area shape="rect" id="Node000244" href="$namespacemod__viscosity.html#a924ee8e80bc5ea1666abe401ec332723" title="Initialize the module." alt="" coords="285,1686,494,1711"/>
-<area shape="poly" id="edge31_Node000001_Node000244" title=" " alt="" coords="124,860,134,1010,161,1256,182,1386,209,1507,243,1606,262,1643,283,1672,288,1676,285,1680,279,1675,258,1646,238,1608,204,1508,177,1387,156,1257,129,1011,119,860"/>
+<area shape="rect" id="Node000241" href="$namespacemod__thermal__conduction.html#a8c9c30e2196550623da28cc61d017793" title="Init TC coefficients: MHD case." alt="" coords="296,1557,483,1597"/>
+<area shape="poly" id="edge29_Node000001_Node000241" title=" " alt="" coords="125,859,139,988,170,1194,192,1304,218,1405,249,1488,266,1520,283,1544,286,1547,283,1550,279,1547,261,1523,244,1490,213,1406,187,1305,165,1195,134,988,119,860"/>
+<area shape="rect" id="Node000242" href="$namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="296,1621,483,1661"/>
+<area shape="poly" id="edge30_Node000001_Node000242" title=" " alt="" coords="124,859,137,998,166,1224,188,1344,215,1455,246,1546,264,1581,283,1608,286,1611,283,1615,279,1611,260,1584,241,1548,209,1456,183,1345,161,1225,132,999,119,860"/>
+<area shape="rect" id="Node000243" href="$namespacemod__viscosity.html#a924ee8e80bc5ea1666abe401ec332723" title="Initialize the module." alt="" coords="285,1686,494,1711"/>
+<area shape="poly" id="edge31_Node000001_Node000243" title=" " alt="" coords="124,860,134,1010,161,1256,182,1386,209,1507,243,1606,262,1643,283,1672,288,1676,285,1680,279,1675,258,1646,238,1608,204,1508,177,1387,156,1257,129,1011,119,860"/>
 <area shape="poly" id="edge13_Node000181_Node000192" title=" " alt="" coords="492,711,543,717,542,722,491,717"/>
 <area shape="poly" id="edge18_Node000200_Node000200" title=" " alt="" coords="612,940,603,930,608,920,625,913,655,911,693,915,703,920,706,926,702,929,699,924,691,921,655,917,626,919,611,924,608,929,616,936"/>
 <area shape="poly" id="edge20_Node000220_Node000200" title=" " alt="" coords="492,964,531,960,532,965,492,969"/>

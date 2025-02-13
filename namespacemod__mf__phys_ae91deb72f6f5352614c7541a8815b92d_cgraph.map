@@ -8,9 +8,9 @@
 <area shape="poly" id="edge3_Node000001_Node000005" title=" " alt="" coords="165,174,199,169,200,174,166,179"/>
 <area shape="rect" id="Node000006" href="$namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="223,195,399,235"/>
 <area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="166,194,210,199,209,205,165,199"/>
-<area shape="rect" id="Node000021" href="$namespacemod__geometry.html#a5e16962a2f11058e42599f6c5e21f207" title="Calculate gradient of a scalar q within ixL in direction idir." alt="" coords="220,259,403,285"/>
+<area shape="rect" id="Node000021" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="220,259,403,285"/>
 <area shape="poly" id="edge7_Node000001_Node000021" title=" " alt="" coords="125,204,214,244,242,253,241,258,212,249,123,209"/>
-<area shape="rect" id="Node000022" href="$namespacemod__geometry.html#a8744a5c0a4182d844e384e4bec8d0ccc" title="Calculate gradient of a scalar q within ixL in direction idir first use limiter to go from cell cente..." alt="" coords="217,309,406,334"/>
+<area shape="rect" id="Node000022" href="$namespacemod__geometry.html#acd1b9edd7157bf60764c69998f7a8d00" title=" " alt="" coords="218,309,405,334"/>
 <area shape="poly" id="edge8_Node000001_Node000022" title=" " alt="" coords="106,205,153,250,182,274,215,294,233,302,230,307,212,298,179,278,149,254,102,209"/>
 <area shape="poly" id="edge4_Node000005_Node000004" title=" " alt="" coords="394,142,457,132,458,137,395,147"/>
 <area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="275,146,267,136,271,126,286,120,311,118,343,122,355,131,352,135,341,127,311,123,287,125,275,130,272,136,279,143"/>

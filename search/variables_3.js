@@ -18,7 +18,7 @@ var searchData=
   ['direction_5fslit_15',['direction_slit',['../namespacemod__global__parameters.html#adea6be0a38ab7843e78126360184857a',1,'mod_global_parameters']]],
   ['ditregrid_16',['ditregrid',['../namespacemod__global__parameters.html#a3ca4430b2e1352a48833355f28427d9f',1,'mod_global_parameters']]],
   ['ditsave_17',['ditsave',['../namespacemod__global__parameters.html#a642b591486cb72f711ffcaffacd41d84',1,'mod_global_parameters']]],
-  ['divbwave_18',['divbwave',['../namespacemod__twofl__phys.html#a7c5d507209cd8c59a56a3067ae0c8059',1,'mod_twofl_phys::divbwave'],['../namespacemod__mhd__phys.html#a9e260a913b7ca612a92be685f151c735',1,'mod_mhd_phys::divbwave'],['../namespacemod__mf__phys.html#a44b5c40b7587279433d916f3a5d52086',1,'mod_mf_phys::divbwave']]],
+  ['divbwave_18',['divbwave',['../namespacemod__twofl__phys.html#a7c5d507209cd8c59a56a3067ae0c8059',1,'mod_twofl_phys::divbwave'],['../namespacemod__rmhd__phys.html#a19eff8acc03d0bea4937804215f35ad7',1,'mod_rmhd_phys::divbwave'],['../namespacemod__mhd__phys.html#a9e260a913b7ca612a92be685f151c735',1,'mod_mhd_phys::divbwave'],['../namespacemod__mf__phys.html#a44b5c40b7587279433d916f3a5d52086',1,'mod_mf_phys::divbwave']]],
   ['dldtcool_19',['dldtcool',['../structmod__radiative__cooling_1_1rc__fluid.html#a43f44d0d0352890884cf42fccefc3b15',1,'mod_radiative_cooling::rc_fluid']]],
   ['dmaxvel_20',['dmaxvel',['../namespacemod__srhd__phys.html#addf17d1ad358b23e77c21133ef3a4a5e',1,'mod_srhd_phys']]],
   ['domain_5fnx_21',['domain_nx',['../namespacemod__global__parameters.html#a23b35ecdd0fd1864d80811b347464176',1,'mod_global_parameters']]],

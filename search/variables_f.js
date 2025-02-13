@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['p_5f_0',['p_',['../namespacemod__srhd__phys.html#abf6e962c3358a82f79bb6781215a4279',1,'mod_srhd_phys::p_'],['../namespacemod__rhd__phys.html#a0a9a0fcf5eb47246bbaa270106b92fe5',1,'mod_rhd_phys::p_'],['../namespacemod__mhd__phys.html#ab5d8d7978ec9cd3f0a993f2ef2f69a06',1,'mod_mhd_phys::p_'],['../namespacemod__hd__phys.html#afa17866e94e20529b5f7fdca33e33c96',1,'mod_hd_phys::p_'],['../namespacemod__ffhd__phys.html#ade52055dea74df81dfdb92663dd6776d',1,'mod_ffhd_phys::p_']]],
+  ['p_5f_0',['p_',['../namespacemod__srhd__phys.html#abf6e962c3358a82f79bb6781215a4279',1,'mod_srhd_phys::p_'],['../namespacemod__rmhd__phys.html#a6625ca95ac29d2791140ee63e65faf67',1,'mod_rmhd_phys::p_'],['../namespacemod__rhd__phys.html#a0a9a0fcf5eb47246bbaa270106b92fe5',1,'mod_rhd_phys::p_'],['../namespacemod__mhd__phys.html#ab5d8d7978ec9cd3f0a993f2ef2f69a06',1,'mod_mhd_phys::p_'],['../namespacemod__hd__phys.html#afa17866e94e20529b5f7fdca33e33c96',1,'mod_hd_phys::p_'],['../namespacemod__ffhd__phys.html#ade52055dea74df81dfdb92663dd6776d',1,'mod_ffhd_phys::p_']]],
   ['p_5fbt_5fratio_1',['p_bt_ratio',['../namespacemod__tdfluxrope.html#acae88b13165aeac91a7f8ff11b311005',1,'mod_tdfluxrope']]],
   ['par_5ffiles_2',['par_files',['../namespacemod__global__parameters.html#a551004039cf74031e6bf9e613eb24e64',1,'mod_global_parameters']]],
   ['parent_3',['parent',['../structm__octree__mg__1d_1_1mg__box__t.html#a2485282a8bbb35c6bb8434fd8aa6c40c',1,'m_octree_mg_1d::mg_box_t::parent'],['../structmod__forest_1_1tree__node.html#a0b883285981c88fbbc15c281b0500706',1,'mod_forest::tree_node::parent'],['../structm__octree__mg__3d_1_1mg__box__t.html#abbe67a6152fd4ea815ee308abd21e652',1,'m_octree_mg_3d::mg_box_t::parent'],['../structm__octree__mg__2d_1_1mg__box__t.html#a6a55316babd3d3307dda0a86dd4a8958',1,'m_octree_mg_2d::mg_box_t::parent']]],
   ['parents_4',['parents',['../structm__octree__mg__3d_1_1mg__lvl__t.html#a22912b29ec880c083f0e5cb3126ed5f5',1,'m_octree_mg_3d::mg_lvl_t::parents'],['../structm__octree__mg__2d_1_1mg__lvl__t.html#a9ee2110c780341352abdf1b337fd55a5',1,'m_octree_mg_2d::mg_lvl_t::parents'],['../structm__octree__mg__1d_1_1mg__lvl__t.html#aa6fbabb8eca6b3054edf7700d5c8471f',1,'m_octree_mg_1d::mg_lvl_t::parents']]],
-  ['partial_5fenergy_5',['partial_energy',['../namespacemod__mhd__phys.html#a8126e49068ec909217681a1a846630b0',1,'mod_mhd_phys']]],
+  ['partial_5fenergy_5',['partial_energy',['../namespacemod__rmhd__phys.html#ab6b497f50a663f2e333b73cf0a67e118',1,'mod_rmhd_phys::partial_energy'],['../namespacemod__mhd__phys.html#a8126e49068ec909217681a1a846630b0',1,'mod_mhd_phys::partial_energy']]],
   ['particle_6',['particle',['../namespacemod__particle__base.html#aa8a738f61f2ee57b8ef6415e36c3d360',1,'mod_particle_base']]],
   ['particles_5factive_5fon_5fmype_7',['particles_active_on_mype',['../namespacemod__particle__base.html#a7faa50a255b88148a70ddfbbbbd355f0',1,'mod_particle_base']]],
   ['particles_5fcfl_8',['particles_cfl',['../namespacemod__particle__base.html#addb32980bb19d0619260d0fc15876516',1,'mod_particle_base']]],
@@ -101,5 +101,5 @@ var searchData=
   ['ps4_98',['ps4',['../namespacemod__physicaldata.html#a053b43bc822d30f95e32239711ae29b8',1,'mod_physicaldata']]],
   ['ps_5fsub_99',['ps_sub',['../namespacemod__physicaldata.html#a0776d9a3254043ce99ff1d6353ae9109',1,'mod_physicaldata']]],
   ['psc_100',['psc',['../namespacemod__physicaldata.html#a8054c49884c4de91497a33856da1baaf',1,'mod_physicaldata']]],
-  ['psi_5f_101',['psi_',['../namespacemod__mf__phys.html#ad757a51b54302ed9b356eb98a4aa4be8',1,'mod_mf_phys::psi_'],['../namespacemod__mhd__phys.html#afbf98327551c6d26b4350591c7debf3a',1,'mod_mhd_phys::psi_'],['../namespacemod__twofl__phys.html#aff4388f6f45f6c1f450f7638a29f46fb',1,'mod_twofl_phys::psi_']]]
+  ['psi_5f_101',['psi_',['../namespacemod__mf__phys.html#ad757a51b54302ed9b356eb98a4aa4be8',1,'mod_mf_phys::psi_'],['../namespacemod__mhd__phys.html#afbf98327551c6d26b4350591c7debf3a',1,'mod_mhd_phys::psi_'],['../namespacemod__rmhd__phys.html#a34cd84b1bfc236c37d7777ef2e9590c9',1,'mod_rmhd_phys::psi_'],['../namespacemod__twofl__phys.html#aff4388f6f45f6c1f450f7638a29f46fb',1,'mod_twofl_phys::psi_']]]
 ];
