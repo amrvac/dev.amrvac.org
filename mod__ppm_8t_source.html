@@ -211,8 +211,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(inout)</span> :: wrc(ixi^s,1:nw),wlc(ixi^s,1:nw) </div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">double precision</span>,<span class="keywordtype">dimension(ixI^S,1:nw_recon)</span>  :: dwc,d2wc,ldw</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">double precision</span>,<span class="keywordtype">dimension(ixI^S,1:nw_recon)</span>  :: wmin,wmax,tmp</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">double precision</span>,<span class="keywordtype">dimension(ixI^S,1:nwflux)</span>  :: dwc,d2wc,ldw</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">double precision</span>,<span class="keywordtype">dimension(ixI^S,1:nwflux)</span>  :: wmin,wmax,tmp</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">double precision</span>,<span class="keywordtype">dimension(ixI^S)</span> :: aa, ab, ac, ki</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">double precision</span>, <span class="keywordtype">parameter</span> :: betamin=0.75d0, betamax=0.85d0,&amp;</div>
@@ -241,54 +241,54 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    lxl^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=lxc^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>-<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(idims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);                          <span class="comment">! lxL=[iMmin-3,ixMmax+1]</span></div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    lxr^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=lxc^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>+<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(idims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);                          <span class="comment">! lxR=[iMmin-1,ixMmax+3]</span></div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    dwc(kxc^s,1:nw_recon)=w(kxr^s,1:nw_recon)-w(kxc^s,1:nw_recon)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    dwc(kxc^s,1:nwflux)=w(kxr^s,1:nwflux)-w(kxc^s,1:nwflux)</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="comment">! Eq. 64,  Miller and Colella 2002, JCP 183, 26 </span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    d2wc(lxc^s,1:nw_recon)=half*(w(lxr^s,1:nw_recon)-w(lxl^s,1:nw_recon))</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">where</span>(dwc(lxc^s,1:nw_recon)*dwc(lxl^s,1:nw_recon)&gt;zero)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    d2wc(lxc^s,1:nwflux)=half*(w(lxr^s,1:nwflux)-w(lxl^s,1:nwflux))</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">where</span>(dwc(lxc^s,1:nwflux)*dwc(lxl^s,1:nwflux)&gt;zero)</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>       <span class="comment">! Store the sign of dwC in wMin</span></div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>       wmin(lxc^s,1:nw_recon)= sign(one,d2wc(lxc^s,1:nw_recon))</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>       wmin(lxc^s,1:nwflux)= sign(one,d2wc(lxc^s,1:nwflux))</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>       <span class="comment">! Eq. 65,  Miller and Colella 2002, JCP 183, 26 </span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>       ldw(lxc^s,1:nw_recon)= wmin(lxc^s,1:nw_recon)*min(dabs(d2wc(lxc^s,1:nw_recon)),&amp;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            2.0d0*dabs(dwc(lxl^s,1:nw_recon)),&amp;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            2.0d0*dabs(dwc(lxc^s,1:nw_recon)))</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>       ldw(lxc^s,1:nwflux)= wmin(lxc^s,1:nwflux)*min(dabs(d2wc(lxc^s,1:nwflux)),&amp;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            2.0d0*dabs(dwc(lxl^s,1:nwflux)),&amp;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            2.0d0*dabs(dwc(lxc^s,1:nwflux)))</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordflow">else</span> <span class="keywordflow">where</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>       ldw(lxc^s,1:nw_recon)=zero</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>       ldw(lxc^s,1:nwflux)=zero</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="keywordflow">    end where</span></div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="comment">! Eq. 66,  Miller and Colella 2002, JCP 183, 26 </span></div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    wlc(ixol^s,1:nw_recon)=wlc(ixol^s,1:nw_recon)+half*dwc(ixol^s,1:nw_recon)&amp;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>         +(ldw(ixol^s,1:nw_recon)-ldw(ixor^s,1:nw_recon))/6.0d0</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    wrc(ixl^s,1:nw_recon)=wlc(ixl^s,1:nw_recon)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    wlc(ixol^s,1:nwflux)=wlc(ixol^s,1:nwflux)+half*dwc(ixol^s,1:nwflux)&amp;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>         +(ldw(ixol^s,1:nwflux)-ldw(ixor^s,1:nwflux))/6.0d0</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    wrc(ixl^s,1:nwflux)=wlc(ixl^s,1:nwflux)</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="comment">! make sure that min w(i)&lt;wLC(i)&lt;w(i+1) same for wRC(i)</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keyword">call </span>extremaw(ixi^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,ixo^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,w,1,wmax,wmin)</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="comment">! Eq. B8, page 217, Mignone et al 2005, ApJS</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    wrc(ixl^s,1:nw_recon)=max(wmin(ixo^s,1:nw_recon)&amp;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>         ,min(wmax(ixo^s,1:nw_recon),wrc(ixl^s,1:nw_recon))) </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    wlc(ixo^s,1:nw_recon)=max(wmin(ixo^s,1:nw_recon)&amp;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>         ,min(wmax(ixo^s,1:nw_recon),wlc(ixo^s,1:nw_recon)))</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    wrc(ixl^s,1:nwflux)=max(wmin(ixo^s,1:nwflux)&amp;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>         ,min(wmax(ixo^s,1:nwflux),wrc(ixl^s,1:nwflux))) </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    wlc(ixo^s,1:nwflux)=max(wmin(ixo^s,1:nwflux)&amp;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>         ,min(wmax(ixo^s,1:nwflux),wlc(ixo^s,1:nwflux)))</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">! Eq. B9, page 217, Mignone et al 2005, ApJS</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">where</span>((wrc(ixl^s,1:nw_recon)-wct(ixo^s,1:nw_recon))&amp;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>         *(wct(ixo^s,1:nw_recon)-wlc(ixo^s,1:nw_recon))&lt;=zero)</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>       wrc(ixl^s,1:nw_recon)=wct(ixo^s,1:nw_recon)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>       wlc(ixo^s,1:nw_recon)=wct(ixo^s,1:nw_recon)</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">where</span>((wrc(ixl^s,1:nwflux)-wct(ixo^s,1:nwflux))&amp;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>         *(wct(ixo^s,1:nwflux)-wlc(ixo^s,1:nwflux))&lt;=zero)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>       wrc(ixl^s,1:nwflux)=wct(ixo^s,1:nwflux)</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>       wlc(ixo^s,1:nwflux)=wct(ixo^s,1:nwflux)</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="keywordflow">    end where</span></div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    wmax(ixo^s,1:nw_recon)=(wlc(ixo^s,1:nw_recon)-wrc(ixl^s,1:nw_recon))*&amp;</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>         (wct(ixo^s,1:nw_recon)-half*(wlc(ixo^s,1:nw_recon)+wrc(ixl^s,1:nw_recon)))</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    wmin(ixo^s,1:nw_recon)=(wlc(ixo^s,1:nw_recon)-wrc(ixl^s,1:nw_recon))**2/6.0d0</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    tmp(hxl^s,1:nw_recon)=wrc(hxl^s,1:nw_recon)</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    wmax(ixo^s,1:nwflux)=(wlc(ixo^s,1:nwflux)-wrc(ixl^s,1:nwflux))*&amp;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>         (wct(ixo^s,1:nwflux)-half*(wlc(ixo^s,1:nwflux)+wrc(ixl^s,1:nwflux)))</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    wmin(ixo^s,1:nwflux)=(wlc(ixo^s,1:nwflux)-wrc(ixl^s,1:nwflux))**2/6.0d0</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    tmp(hxl^s,1:nwflux)=wrc(hxl^s,1:nwflux)</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="comment">! Eq. B10, page 218, Mignone et al 2005, ApJS</span></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">where</span>(wmax(hxr^s,1:nw_recon)&gt;wmin(hxr^s,1:nw_recon))</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>       wrc(hxc^s,1:nw_recon)= 3.0d0*wct(hxr^s,1:nw_recon)&amp;</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            -2.0d0*wlc(hxr^s,1:nw_recon)</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">where</span>(wmax(hxr^s,1:nwflux)&gt;wmin(hxr^s,1:nwflux))</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>       wrc(hxc^s,1:nwflux)= 3.0d0*wct(hxr^s,1:nwflux)&amp;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            -2.0d0*wlc(hxr^s,1:nwflux)</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keywordflow">    end where</span></div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="comment">! Eq. B11, page 218, Mignone et al 2005, ApJS</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">where</span>(wmax(hxc^s,1:nw_recon)&lt;-wmin(hxc^s,1:nw_recon))</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>       wlc(hxc^s,1:nw_recon)= 3.0d0*wct(hxc^s,1:nw_recon)&amp;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            -2.0d0*tmp(hxl^s,1:nw_recon)</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">where</span>(wmax(hxc^s,1:nwflux)&lt;-wmin(hxc^s,1:nwflux))</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>       wlc(hxc^s,1:nwflux)= 3.0d0*wct(hxc^s,1:nwflux)&amp;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            -2.0d0*tmp(hxl^s,1:nwflux)</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="keywordflow">    end where</span></div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="comment">! flattening at the contact discontinuities</span></div>
@@ -297,7 +297,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      kxl^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=kxc^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>-<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(idims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);                <span class="comment">! kxL=[iMmin-4,ixMmax+1]</span></div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>      <span class="keyword">call </span>ppm_flatcd(ixi^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,kxc^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,kxl^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,kxr^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,wct,d2wc,aa,ab)</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      <span class="keywordflow">if</span>(any(kappa*aa(kxc^s)&gt;=ab(kxc^s)))<span class="keywordflow">then</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">do</span> iw=1,nw_recon</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">do</span> iw=1,nwflux</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>          <span class="keywordflow">where</span>(kappa*aa(kxc^s)&gt;=ab(kxc^s).and. dabs(dwc(kxc^s,iw))&gt;smalldouble)</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            wmax(kxc^s,iw) = wct(kxr^s,iw)-2.0d0*wct(kxc^s,iw)+wct(kxl^s,iw)</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keywordflow">          end where</span></div>
@@ -354,7 +354,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>          ki(ixo^s)=min(ki(ixo^s),aa(ixl^s),aa(ixo^s),aa(ixr^s))</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="keywordflow">       end do</span></div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>       <span class="comment">! recycling wMax</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>       <span class="keywordflow">do</span> iw=1,nw_recon</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>       <span class="keywordflow">do</span> iw=1,nwflux</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>          <span class="keywordflow">where</span>(dabs(ab(ixo^s)-one)&gt;smalldouble)</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>             wmax(ixo^s,iw) = (one-ab(ixo^s))*wct(ixo^s,iw)</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="keywordflow">          end where</span></div>
@@ -377,7 +377,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__physics.html">mod_physics</a>, <span class="keywordtype">only</span>: <a class="code hl_variable" href="namespacemod__physics.html#acd5c12827a0427c2b14e969cdebff01a">phys_gamma</a></div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span>             :: ixi^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>, ixo^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>, ixl^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>, ixr^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a></div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span>    :: w(ixi^s, nw), d2w(ixg^t, 1:nw_recon)</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span>    :: w(ixi^s, nw), d2w(ixg^t, 1:nwflux)</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(inout)</span> :: drho(ixg^t), dp(ixg^t)</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    drho(ixo^s) = <a class="code hl_variable" href="namespacemod__physics.html#acd5c12827a0427c2b14e969cdebff01a">phys_gamma</a>*abs(d2w(ixo^s, iw_rho))&amp;</div>
@@ -469,7 +469,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span>  :: w(ixi^s,1:nw)</div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="keywordtype">integer</span>,<span class="keywordtype">intent(in)</span>            :: nshift</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: wmax(ixi^s,1:nw_recon),wmin(ixi^s,1:nw_recon)</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: wmax(ixi^s,1:nwflux),wmin(ixi^s,1:nwflux)</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <span class="keywordtype">integer</span>          :: ixs^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,ixsr^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,ixsl^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,idims,jdims,kdims,ishift,i,j</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
@@ -478,15 +478,15 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>      ixsr^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=ixo^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>+ishift*<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(idims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>      ixsl^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=ixo^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>-ishift*<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(idims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>      <span class="keywordflow">if</span> (ishift==1) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        wmax(ixo^s,1:nw_recon)= &amp;</div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>             max(w(ixo^s,1:nw_recon),w(ixsr^s,1:nw_recon),w(ixsl^s,1:nw_recon))</div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        wmin(ixo^s,1:nw_recon)= &amp;</div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>             min(w(ixo^s,1:nw_recon),w(ixsr^s,1:nw_recon),w(ixsl^s,1:nw_recon))</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        wmax(ixo^s,1:nwflux)= &amp;</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>             max(w(ixo^s,1:nwflux),w(ixsr^s,1:nwflux),w(ixsl^s,1:nwflux))</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        wmin(ixo^s,1:nwflux)= &amp;</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>             min(w(ixo^s,1:nwflux),w(ixsr^s,1:nwflux),w(ixsl^s,1:nwflux))</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        wmax(ixo^s,1:nw_recon)= &amp;</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>             max(wmax(ixo^s,1:nw_recon),w(ixsr^s,1:nw_recon),w(ixsl^s,1:nw_recon))</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        wmin(ixo^s,1:nw_recon)= &amp;</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>             min(wmin(ixo^s,1:nw_recon),w(ixsr^s,1:nw_recon),w(ixsl^s,1:nw_recon))</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        wmax(ixo^s,1:nwflux)= &amp;</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>             max(wmax(ixo^s,1:nwflux),w(ixsr^s,1:nwflux),w(ixsl^s,1:nwflux))</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>        wmin(ixo^s,1:nwflux)= &amp;</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>             min(wmin(ixo^s,1:nwflux),w(ixsr^s,1:nwflux),w(ixsl^s,1:nwflux))</div>
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span><span class="keywordflow">      end if</span></div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>      {^nooned</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>      idims=1</div>
@@ -495,10 +495,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>        ixs^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=ixo^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>+i*ishift*<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(idims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        ixsr^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=ixs^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>+ishift*<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(jdims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>        ixsl^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=ixs^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>-ishift*<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(jdims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>        wmax(ixo^s,1:nw_recon)= &amp;</div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>             max(wmax(ixo^s,1:nw_recon),w(ixsr^s,1:nw_recon),w(ixsl^s,1:nw_recon))</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        wmin(ixo^s,1:nw_recon)= &amp;</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>             min(wmin(ixo^s,1:nw_recon),w(ixsr^s,1:nw_recon),w(ixsl^s,1:nw_recon))</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>        wmax(ixo^s,1:nwflux)= &amp;</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>             max(wmax(ixo^s,1:nwflux),w(ixsr^s,1:nwflux),w(ixsl^s,1:nwflux))</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        wmin(ixo^s,1:nwflux)= &amp;</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>             min(wmin(ixo^s,1:nwflux),w(ixsr^s,1:nwflux),w(ixsl^s,1:nwflux))</div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span><span class="keywordflow">      end do</span></div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>      }</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>      {^ifthreed</div>
@@ -511,10 +511,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>          ixs^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=ixo^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>+j*ishift*<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(jdims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);</div>
 <div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>          ixsr^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=ixs^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>+ishift*<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(kdims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);</div>
 <div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>          ixsl^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>=ixs^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>-ishift*<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(kdims,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>);</div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>          wmax(ixo^s,1:nw_recon)= &amp;</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>               max(wmax(ixo^s,1:nw_recon),w(ixsr^s,1:nw_recon),w(ixsl^s,1:nw_recon))</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>          wmin(ixo^s,1:nw_recon)= &amp;</div>
-<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>               min(wmin(ixo^s,1:nw_recon),w(ixsr^s,1:nw_recon),w(ixsl^s,1:nw_recon))</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>          wmax(ixo^s,1:nwflux)= &amp;</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>               max(wmax(ixo^s,1:nwflux),w(ixsr^s,1:nwflux),w(ixsl^s,1:nwflux))</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>          wmin(ixo^s,1:nwflux)= &amp;</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>               min(wmin(ixo^s,1:nwflux),w(ixsr^s,1:nwflux),w(ixsl^s,1:nwflux))</div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span><span class="keywordflow">        end do</span></div>
 <div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span><span class="keywordflow">      end do</span></div>
 <div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>      }</div>

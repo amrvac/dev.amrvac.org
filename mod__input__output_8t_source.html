@@ -412,7 +412,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    typeboundary_max^d = <a class="code hl_variable" href="namespacemod__global__parameters.html#aba6bd3b8579dde6b7c68f65ab628a049">undefined</a></div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    }</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keyword">allocate</span>(<a class="code hl_variable" href="namespacemod__global__parameters.html#a3ba92b453fe4963537afc9cca083fba8">typeboundary</a>(nw_recon+nwaux,2*ndim))</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keyword">allocate</span>(<a class="code hl_variable" href="namespacemod__global__parameters.html#a3ba92b453fe4963537afc9cca083fba8">typeboundary</a>(nwflux+nwaux,2*ndim))</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <a class="code hl_variable" href="namespacemod__global__parameters.html#a3ba92b453fe4963537afc9cca083fba8">typeboundary</a>=0</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="comment">! not save physical boundary in dat files by default</span></div>
@@ -1405,14 +1405,14 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span>    }</div>
 <div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span> </div>
 <div class="line"><a id="l01312" name="l01312"></a><span class="lineno"> 1312</span>    <span class="comment">! psi, tracers take the same boundary type as the first variable</span></div>
-<div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span>    <span class="keywordflow">if</span> (nwfluxbc&lt;nw_recon) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span>      <span class="keywordflow">do</span> iw=nwfluxbc+1,nw_recon</div>
+<div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span>    <span class="keywordflow">if</span> (nwfluxbc&lt;nwflux) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span>      <span class="keywordflow">do</span> iw=nwfluxbc+1,nwflux</div>
 <div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span>        typeboundary(iw,:) = typeboundary(1, :)</div>
 <div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span><span class="keywordflow">      end do</span></div>
 <div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span><span class="keywordflow">    end if</span></div>
 <div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span>    <span class="comment">! auxiliary variables take the same boundary type as the first variable</span></div>
 <div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span>    <span class="keywordflow">if</span> (nwaux&gt;0) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span>      <span class="keywordflow">do</span> iw=nw_recon+1, nw_recon+nwaux</div>
+<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span>      <span class="keywordflow">do</span> iw=nwflux+1, nwflux+nwaux</div>
 <div class="line"><a id="l01321" name="l01321"></a><span class="lineno"> 1321</span>        typeboundary(iw,:) = typeboundary(1, :)</div>
 <div class="line"><a id="l01322" name="l01322"></a><span class="lineno"> 1322</span><span class="keywordflow">      end do</span></div>
 <div class="line"><a id="l01323" name="l01323"></a><span class="lineno"> 1323</span><span class="keywordflow">    end if</span></div>
@@ -1425,7 +1425,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01330" name="l01330"></a><span class="lineno"> 1330</span>       periodb(idim)=(any(typeboundary(:,2*idim-1:2*idim)==bc_periodic))</div>
 <div class="line"><a id="l01331" name="l01331"></a><span class="lineno"> 1331</span>       aperiodb(idim)=(any(typeboundary(:,2*idim-1:2*idim)==bc_aperiodic))</div>
 <div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span>       <span class="keywordflow">if</span> (periodb(idim).or.aperiodb(idim)) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span>          <span class="keywordflow">do</span> iw=1,nw_recon</div>
+<div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span>          <span class="keywordflow">do</span> iw=1,nwflux</div>
 <div class="line"><a id="l01334" name="l01334"></a><span class="lineno"> 1334</span>             <span class="keywordflow">if</span> (typeboundary(iw,2*idim-1) .ne. typeboundary(iw,2*idim)) &amp;</div>
 <div class="line"><a id="l01335" name="l01335"></a><span class="lineno"> 1335</span>                  <span class="keyword">call </span>mpistop(<span class="stringliteral">&quot;Wrong counterpart in periodic boundary&quot;</span>)</div>
 <div class="line"><a id="l01336" name="l01336"></a><span class="lineno"> 1336</span> </div>

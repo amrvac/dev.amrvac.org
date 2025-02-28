@@ -136,11 +136,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    eps2 = (venk_k * dxdim) ** 3</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    wmax(im^s,1:nw_recon) = max(w(imm^s,1:nw_recon), w(im^s,1:nw_recon), w(imp^s,1:nw_recon))</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    wmin(im^s,1:nw_recon) = min(w(imm^s,1:nw_recon), w(im^s,1:nw_recon), w(imp^s,1:nw_recon))<span class="comment"></span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    wmax(im^s,1:nwflux) = max(w(imm^s,1:nwflux), w(im^s,1:nwflux), w(imp^s,1:nwflux))</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    wmin(im^s,1:nwflux) = min(w(imm^s,1:nwflux), w(im^s,1:nwflux), w(imp^s,1:nwflux))<span class="comment"></span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">    !&gt; use central difference approximation as (eq.5) and take phi = 1</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    westp(im^s,1:nw_recon) = w(im^s,1:nw_recon) + (w(imp^s,1:nw_recon) - w(imm^s,1:nw_recon)) * 0.25d0</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    westm(im^s,1:nw_recon) = w(im^s,1:nw_recon) - (w(imp^s,1:nw_recon) - w(imm^s,1:nw_recon)) * 0.25d0</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    westp(im^s,1:nwflux) = w(im^s,1:nwflux) + (w(imp^s,1:nwflux) - w(imm^s,1:nwflux)) * 0.25d0</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    westm(im^s,1:nwflux) = w(im^s,1:nwflux) - (w(imp^s,1:nwflux) - w(imm^s,1:nwflux)) * 0.25d0</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment"></span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">    !&gt; (eq.30) &amp; (eq.31)</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    deltap = 0</div>
@@ -148,22 +148,22 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    phi1 = 0</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    phi2 = 0</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    phip = 1</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">where</span>(westp(im^s,1:nw_recon) .gt. w(im^s,1:nw_recon))</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      deltap(im^s,1:nw_recon) = wmax(im^s,1:nw_recon) - w(im^s,1:nw_recon)</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      deltam(im^s,1:nw_recon) = westp(im^s,1:nw_recon) - w(im^s,1:nw_recon)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      deltam(im^s,1:nw_recon) = sign(dabs(deltam(im^s,1:nw_recon)) + venk_omega, deltam(im^s,1:nw_recon))</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      phi1(im^s,1:nw_recon) = (deltap(im^s,1:nw_recon)**2 + eps2) + 2.d0 * deltap(im^s,1:nw_recon) * deltam(im^s,1:nw_recon)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      phi2(im^s,1:nw_recon) = deltap(im^s,1:nw_recon)**2 + 2.d0 * deltam(im^s,1:nw_recon)**2 + deltap(im^s,1:nw_recon) * deltam(im^s,1:nw_recon) + eps2</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      phip(im^s,1:nw_recon) = phi1(im^s,1:nw_recon) / phi2(im^s, 1:nw_recon)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">elsewhere</span>(westp(im^s,1:nw_recon) .lt. w(im^s,1:nw_recon))</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      deltap(im^s,1:nw_recon) = wmin(im^s,1:nw_recon) - w(im^s,1:nw_recon)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      deltam(im^s,1:nw_recon) = westp(im^s,1:nw_recon) - w(im^s,1:nw_recon)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      deltam(im^s,1:nw_recon) = sign(dabs(deltam(im^s,1:nw_recon)) + venk_omega, deltam(im^s,1:nw_recon))</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      phi1(im^s,1:nw_recon) = (deltap(im^s,1:nw_recon)**2 + eps2) + 2.d0 * deltap(im^s,1:nw_recon) * deltam(im^s,1:nw_recon)</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      phi2(im^s,1:nw_recon) = deltap(im^s,1:nw_recon)**2 + 2.d0 * deltam(im^s,1:nw_recon)**2 + deltap(im^s,1:nw_recon) * deltam(im^s,1:nw_recon) + eps2</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      phip(im^s,1:nw_recon) = phi1(im^s,1:nw_recon) / phi2(im^s, 1:nw_recon)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">where</span>(westp(im^s,1:nwflux) .gt. w(im^s,1:nwflux))</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      deltap(im^s,1:nwflux) = wmax(im^s,1:nwflux) - w(im^s,1:nwflux)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      deltam(im^s,1:nwflux) = westp(im^s,1:nwflux) - w(im^s,1:nwflux)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      deltam(im^s,1:nwflux) = sign(dabs(deltam(im^s,1:nwflux)) + venk_omega, deltam(im^s,1:nwflux))</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      phi1(im^s,1:nwflux) = (deltap(im^s,1:nwflux)**2 + eps2) + 2.d0 * deltap(im^s,1:nwflux) * deltam(im^s,1:nwflux)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      phi2(im^s,1:nwflux) = deltap(im^s,1:nwflux)**2 + 2.d0 * deltam(im^s,1:nwflux)**2 + deltap(im^s,1:nwflux) * deltam(im^s,1:nwflux) + eps2</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      phip(im^s,1:nwflux) = phi1(im^s,1:nwflux) / phi2(im^s, 1:nwflux)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">elsewhere</span>(westp(im^s,1:nwflux) .lt. w(im^s,1:nwflux))</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      deltap(im^s,1:nwflux) = wmin(im^s,1:nwflux) - w(im^s,1:nwflux)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      deltam(im^s,1:nwflux) = westp(im^s,1:nwflux) - w(im^s,1:nwflux)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      deltam(im^s,1:nwflux) = sign(dabs(deltam(im^s,1:nwflux)) + venk_omega, deltam(im^s,1:nwflux))</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      phi1(im^s,1:nwflux) = (deltap(im^s,1:nwflux)**2 + eps2) + 2.d0 * deltap(im^s,1:nwflux) * deltam(im^s,1:nwflux)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      phi2(im^s,1:nwflux) = deltap(im^s,1:nwflux)**2 + 2.d0 * deltam(im^s,1:nwflux)**2 + deltap(im^s,1:nwflux) * deltam(im^s,1:nwflux) + eps2</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      phip(im^s,1:nwflux) = phi1(im^s,1:nwflux) / phi2(im^s, 1:nwflux)</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">elsewhere</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      phip(im^s,1:nw_recon) = one</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      phip(im^s,1:nwflux) = one</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordflow">   endwhere</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    deltap = 0</div>
@@ -171,28 +171,28 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    phi3 = 0</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    phi4 = 0</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    phim = 0</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">where</span>(westm(im^s,1:nw_recon) .lt. w(im^s,1:nw_recon))</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      deltap(im^s,1:nw_recon) = - (wmax(im^s,1:nw_recon) - w(im^s,1:nw_recon))</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      deltam(im^s,1:nw_recon) = westm(im^s,1:nw_recon) - w(im^s,1:nw_recon)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      deltam(im^s,1:nw_recon) = sign(dabs(deltam(im^s,1:nw_recon)) + venk_omega, deltam(im^s,1:nw_recon))</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      phi3(im^s,1:nw_recon) = (deltap(im^s,1:nw_recon)**2 + eps2) + 2.d0 * deltap(im^s,1:nw_recon) * deltam(im^s,1:nw_recon)</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      phi4(im^s,1:nw_recon) = deltap(im^s,1:nw_recon)**2 + 2.d0 * deltam(im^s,1:nw_recon)**2 + deltap(im^s,1:nw_recon) * deltam(im^s,1:nw_recon) + eps2</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      phim(im^s,1:nw_recon) = phi3(im^s,1:nw_recon) / phi4(im^s, 1:nw_recon)</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">elsewhere</span>(westm(im^s,1:nw_recon) .gt. w(im^s,1:nw_recon))</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      deltap(im^s,1:nw_recon) = - (wmin(im^s,1:nw_recon) - w(im^s,1:nw_recon))</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      deltam(im^s,1:nw_recon) = westm(im^s,1:nw_recon) - w(im^s,1:nw_recon)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      deltam(im^s,1:nw_recon) = sign(dabs(deltam(im^s,1:nw_recon)) + venk_omega, deltam(im^s,1:nw_recon))</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      phi3(im^s,1:nw_recon) = (deltap(im^s,1:nw_recon)**2 + eps2) + 2.d0 * deltap(im^s,1:nw_recon) * deltam(im^s,1:nw_recon)</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      phi4(im^s,1:nw_recon) = deltap(im^s,1:nw_recon)**2 + 2.d0 * deltam(im^s,1:nw_recon)**2 + deltap(im^s,1:nw_recon) * deltam(im^s,1:nw_recon) + eps2</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      phim(im^s,1:nw_recon) = phi3(im^s,1:nw_recon) / phi4(im^s, 1:nw_recon)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">where</span>(westm(im^s,1:nwflux) .lt. w(im^s,1:nwflux))</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      deltap(im^s,1:nwflux) = - (wmax(im^s,1:nwflux) - w(im^s,1:nwflux))</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      deltam(im^s,1:nwflux) = westm(im^s,1:nwflux) - w(im^s,1:nwflux)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      deltam(im^s,1:nwflux) = sign(dabs(deltam(im^s,1:nwflux)) + venk_omega, deltam(im^s,1:nwflux))</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      phi3(im^s,1:nwflux) = (deltap(im^s,1:nwflux)**2 + eps2) + 2.d0 * deltap(im^s,1:nwflux) * deltam(im^s,1:nwflux)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      phi4(im^s,1:nwflux) = deltap(im^s,1:nwflux)**2 + 2.d0 * deltam(im^s,1:nwflux)**2 + deltap(im^s,1:nwflux) * deltam(im^s,1:nwflux) + eps2</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      phim(im^s,1:nwflux) = phi3(im^s,1:nwflux) / phi4(im^s, 1:nwflux)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">elsewhere</span>(westm(im^s,1:nwflux) .gt. w(im^s,1:nwflux))</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      deltap(im^s,1:nwflux) = - (wmin(im^s,1:nwflux) - w(im^s,1:nwflux))</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      deltam(im^s,1:nwflux) = westm(im^s,1:nwflux) - w(im^s,1:nwflux)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      deltam(im^s,1:nwflux) = sign(dabs(deltam(im^s,1:nwflux)) + venk_omega, deltam(im^s,1:nwflux))</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      phi3(im^s,1:nwflux) = (deltap(im^s,1:nwflux)**2 + eps2) + 2.d0 * deltap(im^s,1:nwflux) * deltam(im^s,1:nwflux)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      phi4(im^s,1:nwflux) = deltap(im^s,1:nwflux)**2 + 2.d0 * deltam(im^s,1:nwflux)**2 + deltap(im^s,1:nwflux) * deltam(im^s,1:nwflux) + eps2</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      phim(im^s,1:nwflux) = phi3(im^s,1:nwflux) / phi4(im^s, 1:nwflux)</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">elsewhere</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      phim(im^s,1:nw_recon) = one</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      phim(im^s,1:nwflux) = one</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordflow">    endwhere</span><span class="comment"></span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment">    !&gt; (eq.3)</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    phi(im^s,1:nw_recon) = min(phim(im^s,1:nw_recon),phip(im^s,1:nw_recon))<span class="comment"></span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    phi(im^s,1:nwflux) = min(phim(im^s,1:nwflux),phip(im^s,1:nwflux))<span class="comment"></span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">    !&gt; (eq.5)</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    wlc(il^s,1:nw_recon) = w(il^s,1:nw_recon) + 0.25d0 * (w(ilp^s,1:nw_recon)-w(ilm^s,1:nw_recon)) * phi(il^s,1:nw_recon)</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    wrc(il^s,1:nw_recon) = w(ilp^s,1:nw_recon) - 0.25d0 * (w(ilpp^s,1:nw_recon)-w(il^s,1:nw_recon)) * phi(ilp^s,1:nw_recon)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    wlc(il^s,1:nwflux) = w(il^s,1:nwflux) + 0.25d0 * (w(ilp^s,1:nwflux)-w(ilm^s,1:nwflux)) * phi(il^s,1:nwflux)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    wrc(il^s,1:nwflux) = w(ilp^s,1:nwflux) - 0.25d0 * (w(ilpp^s,1:nwflux)-w(il^s,1:nwflux)) * phi(ilp^s,1:nwflux)</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__venk.html#a003f6450c511e696a0c68c3d9bb7c3a4">venklimiter</a></div>
