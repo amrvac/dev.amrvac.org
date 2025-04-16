@@ -1128,81 +1128,153 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>      ixbmin^d=ixmin^d;</div>
 <div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>      ixbmax^d=ixmax^d-<a class="code hl_variable" href="namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9">kr</a>(idims,^d);</div>
 <div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>      <span class="keyword">call </span>gradientf(te,x,ixi^l,ixb^l,idims,ke)</div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>      qd=0.d0</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>     {<span class="keywordflow">do</span> ix^db=0,1 \}</div>
-<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>        <span class="keywordflow">if</span>({ix^d==0 .and. ^d==idims |.or. }) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>          ixbmin^d=ixcmin^d+ix^d;</div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>          ixbmax^d=ixcmax^d+ix^d;</div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>          qd(ixc^s)=qd(ixc^s)+ke(ixb^s)</div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span><span class="keywordflow">        end if</span></div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>     {<span class="keyword">end </span>do\}</div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>      <span class="comment">! temperature gradient at cell corner</span></div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>      qvec(ixc^s,idims)=qd(ixc^s)*0.5d0**(ndim-1)</div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span><span class="keywordflow">    end do</span></div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>    <span class="comment">! conductivity at cell center</span></div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>    <span class="keywordflow">if</span>(phys_trac) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>      <span class="comment">! transition region adaptive conduction</span></div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>      <span class="keywordflow">where</span>(te(ix^s) &lt; block%wextra(ix^s,fl%Tcoff_))</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>        qd(ix^s)=fl%tc_k_para*dsqrt(block%wextra(ix^s,fl%Tcoff_))**5</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>      <span class="keywordflow">else</span> <span class="keywordflow">where</span></div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>        qd(ix^s)=fl%tc_k_para*dsqrt(te(ix^s))**5</div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span><span class="keywordflow">      end where</span></div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>      qd(ix^s)=fl%tc_k_para*dsqrt(te(ix^s))**5</div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span><span class="keywordflow">    end if</span></div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    ke=0.d0</div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>    {<span class="keywordflow">do</span> ix^db=0,1\}</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>      ixbmin^d=ixcmin^d+ix^d;</div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>      ixbmax^d=ixcmax^d+ix^d;</div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>      ke(ixc^s)=ke(ixc^s)+qd(ixb^s)</div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>    {<span class="keyword">end </span>do\}</div>
-<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>    <span class="comment">! cell corner conductivity</span></div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>    ke(ixc^s)=0.5d0**ndim*ke(ixc^s)</div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>    <span class="comment">! cell corner conduction flux</span></div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>    <span class="keywordflow">do</span> idims=1,ndim</div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>      gradt(ixc^s,idims)=ke(ixc^s)*qvec(ixc^s,idims)</div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span><span class="keywordflow">    end do</span></div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span> </div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>    <span class="keywordflow">if</span>(fl%tc_saturate) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>      <span class="comment">! consider saturation with unsigned saturated TC flux = 5 phi rho c**3</span></div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>      <span class="comment">! saturation flux at cell center</span></div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>      qd(ix^s)=5.5d0*rho(ix^s)*dsqrt(te(ix^s)**3)</div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>      <span class="comment">!cell corner values of qd in ke</span></div>
-<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>      ke=0.d0</div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>      {<span class="keywordflow">do</span> ix^db=0,1\}</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>        ixbmin^d=ixcmin^d+ix^d;</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>        ixbmax^d=ixcmax^d+ix^d;</div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>        ke(ixc^s)=ke(ixc^s)+qd(ixb^s)</div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>      {<span class="keyword">end </span>do\}</div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>      <span class="comment">! cell corner saturation flux</span></div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>      ke(ixc^s)=0.5d0**ndim*ke(ixc^s)</div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>      <span class="comment">! magnitude of cell corner conduction flux</span></div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>      qd(ixc^s)=norm2(gradt(ixc^s,:),dim=ndim+1)</div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>      {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>        <span class="keywordflow">if</span>(qd(ix^d)&gt;ke(ix^d)) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>          ke(ix^d)=ke(ix^d)/(qd(ix^d)+smalldouble)</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>          ^d&amp;gradt({ix^d},^d)=ke({ix^d})*gradt({ix^d},^d)\</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span><span class="keywordflow">        end if</span></div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>      {<span class="keyword">end </span>do\}</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span><span class="keywordflow">    end if</span></div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span> </div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>    <span class="comment">! conduction flux at cell face</span></div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>    qvec=0.d0</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>    <span class="keywordflow">do</span> idims=1,ndim</div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>      ixb^l=ixo^l-kr(idims,^d);</div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>      ixamax^d=ixomax^d; ixamin^d=ixbmin^d;</div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>      {<span class="keywordflow">do</span> ix^db=0,1 \}</div>
-<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>         <span class="keywordflow">if</span>({ ix^d==0 .and. ^d==idims | .or.}) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>           ixbmin^d=ixamin^d-ix^d;</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>           ixbmax^d=ixamax^d-ix^d;</div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>           qvec(ixa^s,idims)=qvec(ixa^s,idims)+gradt(ixb^s,idims)</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span><span class="keywordflow">         end if</span></div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>      {<span class="keyword">end </span>do\}</div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>      qvec(ixa^s,idims)=qvec(ixa^s,idims)*0.5d0**(ndim-1)</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span><span class="keywordflow">    end do</span></div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>     {^ifthreed</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>      <span class="keywordflow">if</span>(idims==1) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>       {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>          qvec(ix^d,idims)=0.25d0*(ke(ix1,ix2,ix3)+ke(ix1,ix2+1,ix3)&amp;</div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>                         +ke(ix1,ix2,ix3+1)+ke(ix1,ix2+1,ix3+1))</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>       {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(idims==2) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>       {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>          qvec(ix^d,idims)=0.25d0*(ke(ix1,ix2,ix3)+ke(ix1+1,ix2,ix3)&amp;</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>                         +ke(ix1,ix2,ix3+1)+ke(ix1+1,ix2,ix3+1))</div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>       {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>       {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>          qvec(ix^d,idims)=0.25d0*(ke(ix1,ix2,ix3)+ke(ix1+1,ix2,ix3)&amp;</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>                         +ke(ix1,ix2+1,ix3)+ke(ix1+1,ix2+1,ix3))</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>       {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>     }</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>     {^iftwod</div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>      <span class="keywordflow">if</span>(idims==1) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>       {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>          qvec(ix^d,idims)=0.5d0*(ke(ix1,ix2)+ke(ix1,ix2+1))</div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>       {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>       {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>          qvec(ix^d,idims)=0.5d0*(ke(ix1,ix2)+ke(ix1+1,ix2))</div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>       {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>     }</div>
+<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>     {^ifoned</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>     <span class="keywordflow">do</span> ix1=ixcmin1,ixcmax1</div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>       qvec(ix1,idims)=ke(ix1)</div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span><span class="keywordflow">     end do</span></div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>     }</div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span><span class="keywordflow">    end do</span></div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>    <span class="comment">! conductivity at cell center</span></div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>    <span class="keywordflow">if</span>(phys_trac) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>     {<span class="keywordflow">do</span> ix^db=ixmin^db,ixmax^db\}</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>        <span class="keywordflow">if</span>(te(ix^d) &lt; block%wextra(ix^d,fl%Tcoff_)) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>          qd(ix^d)=fl%tc_k_para*sqrt(block%wextra(ix^d,fl%Tcoff_)**5)</div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>          qd(ix^d)=fl%tc_k_para*sqrt(te(ix^d)**5)</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span><span class="keywordflow">        end if</span></div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>     {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>      qd(ix^s)=fl%tc_k_para*sqrt(te(ix^s)**5)</div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span><span class="keywordflow">    end if</span></div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>     <span class="comment">! conductivity at cell corner</span></div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>    {^ifthreed</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>    {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>       ke(ix^d)=0.125d0*(qd(ix1,ix2,ix3)+qd(ix1+1,ix2,ix3)&amp;</div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>                      +qd(ix1,ix2+1,ix3)+qd(ix1+1,ix2+1,ix3)&amp;</div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>                      +qd(ix1,ix2,ix3+1)+qd(ix1+1,ix2,ix3+1)&amp;</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>                      +qd(ix1,ix2+1,ix3+1)+qd(ix1+1,ix2+1,ix3+1))</div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>    {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>    }</div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>    {^iftwod</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>    {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>       ke(ix^d)=0.25d0*(qd(ix1,ix2)+qd(ix1+1,ix2)+qd(ix1,ix2+1)+qd(ix1+1,ix2+1))</div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>    {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>    }</div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>    {^ifoned</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>     <span class="keywordflow">do</span> ix1=ixcmin1,ixcmax1</div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>       ke(ix1)=0.5d0*(qd(ix1)+qd(ix1+1))</div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span><span class="keywordflow">     end do</span></div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>    }</div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>    <span class="comment">! cell corner conduction flux</span></div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>    <span class="keywordflow">do</span> idims=1,ndim</div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>      gradt(ixc^s,idims)=ke(ixc^s)*qvec(ixc^s,idims)</div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span><span class="keywordflow">    end do</span></div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span> </div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>    <span class="keywordflow">if</span>(fl%tc_saturate) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>      <span class="comment">! consider saturation with unsigned saturated TC flux = 5 phi rho c**3</span></div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>      <span class="comment">! saturation flux at cell center</span></div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>      qd(ix^s)=5.5d0*rho(ix^s)*dsqrt(te(ix^s)**3)</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>      <span class="comment">!cell corner values of qd in ke</span></div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>      {^ifthreed</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>     {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>        ke(ix^d)=0.125d0*(qd(ix1,ix2,ix3)+qd(ix1+1,ix2,ix3)&amp;</div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>                       +qd(ix1,ix2+1,ix3)+qd(ix1+1,ix2+1,ix3)&amp;</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>                       +qd(ix1,ix2,ix3+1)+qd(ix1+1,ix2,ix3+1)&amp;</div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>                       +qd(ix1,ix2+1,ix3+1)+qd(ix1+1,ix2+1,ix3+1))</div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>     {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>     }</div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>     {^iftwod</div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>     {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>        ke(ix^d)=0.25d0*(qd(ix1,ix2)+qd(ix1+1,ix2)+qd(ix1,ix2+1)+qd(ix1+1,ix2+1))</div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>     {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>     }</div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>     {^ifoned</div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>      <span class="keywordflow">do</span> ix1=ixcmin1,ixcmax1</div>
+<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>        ke(ix1)=0.5d0*(qd(ix1)+qd(ix1+1))</div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span><span class="keywordflow">      end do</span></div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>     }</div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>      <span class="comment">! magnitude of cell corner conduction flux</span></div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>      qd(ixc^s)=norm2(gradt(ixc^s,:),dim=ndim+1)</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>      {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>        <span class="keywordflow">if</span>(qd(ix^d)&gt;ke(ix^d)) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>          ke(ix^d)=ke(ix^d)/(qd(ix^d)+smalldouble)</div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>          ^d&amp;gradt({ix^d},^d)=ke({ix^d})*gradt({ix^d},^d)\</div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span><span class="keywordflow">        end if</span></div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>      {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span><span class="keywordflow">    end if</span></div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span> </div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>    <span class="comment">! conduction flux at cell face</span></div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>    qvec=0.d0</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>    <span class="keywordflow">do</span> idims=1,ndim</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>      ixb^l=ixo^l-kr(idims,^d);</div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>      ixamax^d=ixomax^d; ixamin^d=ixbmin^d;</div>
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>     {^ifthreed</div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>      <span class="keywordflow">if</span>(idims==1) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>       {<span class="keywordflow">do</span> ix^db=ixamin^db,ixamax^db\}</div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>          qvec(ix^d,idims)=0.25d0*(gradt(ix1,ix2,ix3,idims)+gradt(ix1,ix2-1,ix3,idims)&amp;</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>                                +gradt(ix1,ix2,ix3-1,idims)+gradt(ix1,ix2-1,ix3-1,idims))</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>       {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(idims==2) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span>       {<span class="keywordflow">do</span> ix^db=ixamin^db,ixamax^db\}</div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>          qvec(ix^d,idims)=0.25d0*(gradt(ix1,ix2,ix3,idims)+gradt(ix1-1,ix2,ix3,idims)&amp;</div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>                                +gradt(ix1,ix2,ix3-1,idims)+gradt(ix1-1,ix2,ix3-1,idims))</div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>       {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>       {<span class="keywordflow">do</span> ix^db=ixamin^db,ixamax^db\}</div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>          qvec(ix^d,idims)=0.25d0*(gradt(ix1,ix2,ix3,idims)+gradt(ix1,ix2-1,ix3,idims)&amp;</div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>                                +gradt(ix1-1,ix2,ix3,idims)+gradt(ix1-1,ix2-1,ix3,idims))</div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>       {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>     }</div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>     {^iftwod</div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>      <span class="keywordflow">if</span>(idims==1) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>       {<span class="keywordflow">do</span> ix^db=ixamin^db,ixamax^db\}</div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>          qvec(ix^d,idims)=0.5d0*(gradt(ix1,ix2,idims)+gradt(ix1,ix2-1,idims))</div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>       {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>       {<span class="keywordflow">do</span> ix^db=ixamin^db,ixamax^db\}</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>          qvec(ix^d,idims)=0.5d0*(gradt(ix1,ix2,idims)+gradt(ix1-1,ix2,idims))</div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>       {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>     }</div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>     {^ifoned</div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>      <span class="keywordflow">do</span> ix1=ixamin1,ixamax1</div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>        qvec(ix1,idims)=gradt(ix1,idims)</div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span><span class="keywordflow">      end do</span></div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>     }</div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span><span class="keywordflow">    end do</span></div>
 </div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>  <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__thermal__conduction.html#ae7b3ea6235802277a9d72602e17c6e78">set_source_tc_hd</a></div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__thermal__conduction.html">mod_thermal_conduction</a></div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>  <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__thermal__conduction.html#ae7b3ea6235802277a9d72602e17c6e78">set_source_tc_hd</a></div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__thermal__conduction.html">mod_thermal_conduction</a></div>
 <div class="ttc" id="ainterfacemod__thermal__conduction_1_1get__var__subr_html"><div class="ttname"><a href="interfacemod__thermal__conduction_1_1get__var__subr.html">mod_thermal_conduction::get_var_subr</a></div><div class="ttdef"><b>Definition</b> <a href="mod__thermal__conduction_8t_source.html#l00054">mod_thermal_conduction.t:54</a></div></div>
 <div class="ttc" id="anamespacemod__comm__lib_html"><div class="ttname"><a href="namespacemod__comm__lib.html">mod_comm_lib</a></div><div class="ttdef"><b>Definition</b> <a href="mod__comm__lib_8t_source.html#l00001">mod_comm_lib.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__comm__lib_html_a9b6f1a8fd13bc5670e3b426151c34048"><div class="ttname"><a href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mod_comm_lib::mpistop</a></div><div class="ttdeci">subroutine, public mpistop(message)</div><div class="ttdoc">Exit MPI-AMRVAC with an error message.</div><div class="ttdef"><b>Definition</b> <a href="mod__comm__lib_8t_source.html#l00207">mod_comm_lib.t:208</a></div></div>
