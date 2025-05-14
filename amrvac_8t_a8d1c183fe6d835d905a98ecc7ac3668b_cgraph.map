@@ -28,24 +28,24 @@
 <area shape="poly" id="edge18_Node000001_Node000149" title=" " alt="" coords="76,590,124,580,265,564,406,553,640,543,640,548,407,558,265,569,124,586,77,595"/>
 <area shape="rect" id="Node000150" href="$namespacemod__particles.html#aecb3aafd9f10d12b4b4ca6466ed6da87" title="Create initial particles." alt="" coords="139,983,317,1023"/>
 <area shape="poly" id="edge21_Node000001_Node000150" title=" " alt="" coords="46,614,54,687,70,794,94,900,109,941,126,969,130,973,126,977,122,973,104,944,89,902,64,795,48,688,41,615"/>
-<area shape="rect" id="Node000182" href="$namespacemod__advance.html#a4c2beedac0bce5cbce19c516a00b5c98" title="process is a user entry in time loop, before output and advance allows to modify solution,..." alt="" coords="386,194,557,220"/>
-<area shape="poly" id="edge22_Node000001_Node000182" title=" " alt="" coords="41,588,49,522,66,427,90,334,105,298,122,273,140,261,164,250,227,233,300,221,372,212,373,217,301,226,228,238,166,255,142,266,126,277,110,300,95,336,71,429,55,523,46,589"/>
-<area shape="rect" id="Node000183" href="$namespacemod__input__output.html#a98a1cccd22f5c9aebc79667b1b469161" title="Read the command line arguments passed to amrvac." alt="" coords="139,1047,317,1087"/>
-<area shape="poly" id="edge24_Node000001_Node000183" title=" " alt="" coords="45,614,51,698,66,825,76,890,90,950,106,1000,126,1033,130,1038,126,1041,122,1037,102,1002,85,952,71,891,60,825,46,699,40,615"/>
-<area shape="rect" id="Node000185" href="$namespacemod__input__output.html#aa2d00e56c4444b0b4806a9c13ce2eff7" title="Routine to read in snapshots (.dat files). When it cannot recognize the file version,..." alt="" coords="139,1111,317,1151"/>
-<area shape="poly" id="edge25_Node000001_Node000185" title=" " alt="" coords="45,615,49,709,62,855,72,931,86,1001,104,1058,126,1097,130,1102,126,1105,122,1101,99,1060,81,1002,67,932,57,855,44,710,40,615"/>
-<area shape="rect" id="Node000194" href="$namespacemod__amr__grid.html#a1d21768e5b7034d71d93c87a60b14833" title="reset AMR and (de)allocate boundary flux storage at level changes" alt="" coords="380,120,563,145"/>
-<area shape="poly" id="edge26_Node000001_Node000194" title=" " alt="" coords="40,589,44,501,56,370,67,302,81,240,99,189,122,156,154,133,190,117,228,107,267,103,343,104,409,114,409,119,343,109,267,108,229,113,191,122,157,138,126,160,104,192,86,241,72,303,62,371,49,502,45,589"/>
-<area shape="rect" id="Node000211" href="$namespacemod__amr__grid.html#a46bb4219ed6144389d25ea1d03354575" title="Force the tree to desired level(s) from level_io(_min/_max) used for conversion to vtk output." alt="" coords="380,244,563,284"/>
-<area shape="poly" id="edge28_Node000001_Node000211" title=" " alt="" coords="39,589,39,538,48,463,58,422,73,383,94,346,122,314,140,303,163,294,225,280,296,271,366,265,367,271,296,276,226,285,165,299,142,308,126,318,98,349,78,385,63,424,53,464,44,538,44,589"/>
-<area shape="rect" id="Node000204" href="$namespacemod__selectgrids.html#aa15f11bf5108fe0eae81eb81aa46f3b1" title=" " alt="" coords="124,1176,332,1201"/>
-<area shape="poly" id="edge30_Node000001_Node000204" title=" " alt="" coords="45,615,47,721,57,886,67,972,82,1052,101,1118,113,1143,126,1161,130,1166,127,1169,122,1165,108,1145,96,1119,76,1053,62,973,52,886,42,721,39,615"/>
-<area shape="rect" id="Node000213" href="$namespacemod__amr__grid.html#a81fdb2745e9bcee99e51e222cfb57a42" title="Build up AMR." alt="" coords="386,18,557,44"/>
-<area shape="poly" id="edge31_Node000001_Node000213" title=" " alt="" coords="39,589,41,486,50,326,60,242,75,166,95,103,108,79,122,61,153,38,188,21,225,11,263,5,339,5,405,13,404,18,338,10,263,10,226,16,189,26,156,43,126,65,112,82,100,105,80,167,66,243,56,326,46,486,45,589"/>
-<area shape="rect" id="Node000214" href="$amrvac_8t.html#ac5af3cab85e31682fedc92879f7e072e" title=" " alt="" coords="167,170,289,196"/>
-<area shape="poly" id="edge33_Node000001_Node000214" title=" " alt="" coords="40,589,48,513,63,400,87,288,103,244,122,213,136,201,152,193,155,198,139,206,126,217,108,246,93,290,68,401,53,514,46,589"/>
-<area shape="rect" id="Node000260" href="$namespacemod__usr.html#ae9af24eaf30f13b1f264cc800272798c" title="This routine should set user methods, and activate the physics module." alt="" coords="161,1225,295,1250"/>
-<area shape="poly" id="edge36_Node000001_Node000260" title=" " alt="" coords="44,614,45,729,54,909,64,1004,78,1092,99,1164,112,1191,126,1212,149,1227,146,1232,122,1216,107,1194,94,1166,73,1093,58,1005,49,910,40,729,39,614"/>
+<area shape="rect" id="Node000186" href="$namespacemod__advance.html#a4c2beedac0bce5cbce19c516a00b5c98" title="process is a user entry in time loop, before output and advance allows to modify solution,..." alt="" coords="386,194,557,220"/>
+<area shape="poly" id="edge22_Node000001_Node000186" title=" " alt="" coords="41,588,49,522,66,427,90,334,105,298,122,273,140,261,164,250,227,233,300,221,372,212,373,217,301,226,228,238,166,255,142,266,126,277,110,300,95,336,71,429,55,523,46,589"/>
+<area shape="rect" id="Node000187" href="$namespacemod__input__output.html#a98a1cccd22f5c9aebc79667b1b469161" title="Read the command line arguments passed to amrvac." alt="" coords="139,1047,317,1087"/>
+<area shape="poly" id="edge24_Node000001_Node000187" title=" " alt="" coords="45,614,51,698,66,825,76,890,90,950,106,1000,126,1033,130,1038,126,1041,122,1037,102,1002,85,952,71,891,60,825,46,699,40,615"/>
+<area shape="rect" id="Node000189" href="$namespacemod__input__output.html#aa2d00e56c4444b0b4806a9c13ce2eff7" title="Routine to read in snapshots (.dat files). When it cannot recognize the file version,..." alt="" coords="139,1111,317,1151"/>
+<area shape="poly" id="edge25_Node000001_Node000189" title=" " alt="" coords="45,615,49,709,62,855,72,931,86,1001,104,1058,126,1097,130,1102,126,1105,122,1101,99,1060,81,1002,67,932,57,855,44,710,40,615"/>
+<area shape="rect" id="Node000198" href="$namespacemod__amr__grid.html#a1d21768e5b7034d71d93c87a60b14833" title="reset AMR and (de)allocate boundary flux storage at level changes" alt="" coords="380,120,563,145"/>
+<area shape="poly" id="edge26_Node000001_Node000198" title=" " alt="" coords="40,589,44,501,56,370,67,302,81,240,99,189,122,156,154,133,190,117,228,107,267,103,343,104,409,114,409,119,343,109,267,108,229,113,191,122,157,138,126,160,104,192,86,241,72,303,62,371,49,502,45,589"/>
+<area shape="rect" id="Node000215" href="$namespacemod__amr__grid.html#a46bb4219ed6144389d25ea1d03354575" title="Force the tree to desired level(s) from level_io(_min/_max) used for conversion to vtk output." alt="" coords="380,244,563,284"/>
+<area shape="poly" id="edge28_Node000001_Node000215" title=" " alt="" coords="39,589,39,538,48,463,58,422,73,383,94,346,122,314,140,303,163,294,225,280,296,271,366,265,367,271,296,276,226,285,165,299,142,308,126,318,98,349,78,385,63,424,53,464,44,538,44,589"/>
+<area shape="rect" id="Node000208" href="$namespacemod__selectgrids.html#aa15f11bf5108fe0eae81eb81aa46f3b1" title=" " alt="" coords="124,1176,332,1201"/>
+<area shape="poly" id="edge30_Node000001_Node000208" title=" " alt="" coords="45,615,47,721,57,886,67,972,82,1052,101,1118,113,1143,126,1161,130,1166,127,1169,122,1165,108,1145,96,1119,76,1053,62,973,52,886,42,721,39,615"/>
+<area shape="rect" id="Node000217" href="$namespacemod__amr__grid.html#a81fdb2745e9bcee99e51e222cfb57a42" title="Build up AMR." alt="" coords="386,18,557,44"/>
+<area shape="poly" id="edge31_Node000001_Node000217" title=" " alt="" coords="39,589,41,486,50,326,60,242,75,166,95,103,108,79,122,61,153,38,188,21,225,11,263,5,339,5,405,13,404,18,338,10,263,10,226,16,189,26,156,43,126,65,112,82,100,105,80,167,66,243,56,326,46,486,45,589"/>
+<area shape="rect" id="Node000218" href="$amrvac_8t.html#ac5af3cab85e31682fedc92879f7e072e" title=" " alt="" coords="167,170,289,196"/>
+<area shape="poly" id="edge33_Node000001_Node000218" title=" " alt="" coords="40,589,48,513,63,400,87,288,103,244,122,213,136,201,152,193,155,198,139,206,126,217,108,246,93,290,68,401,53,514,46,589"/>
+<area shape="rect" id="Node000264" href="$namespacemod__usr.html#ae9af24eaf30f13b1f264cc800272798c" title="This routine should set user methods, and activate the physics module." alt="" coords="161,1225,295,1250"/>
+<area shape="poly" id="edge36_Node000001_Node000264" title=" " alt="" coords="44,614,45,729,54,909,64,1004,78,1092,99,1164,112,1191,126,1212,149,1227,146,1232,122,1216,107,1194,94,1166,73,1093,58,1005,49,910,40,729,39,614"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="812,637,911,615,912,620,813,643"/>
 <area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="546,716,611,718,686,716,765,707,842,689,874,675,905,658,955,621,958,625,908,662,876,680,843,694,766,712,686,721,611,724,546,722"/>
 <area shape="poly" id="edge8_Node000042_Node000005" title=" " alt="" coords="750,369,959,577,956,581,746,373"/>
@@ -53,10 +53,10 @@
 <area shape="poly" id="edge11_Node000056_Node000057" title=" " alt="" coords="325,460,369,470,368,475,324,466"/>
 <area shape="poly" id="edge16_Node000134_Node000042" title=" " alt="" coords="544,368,625,360,625,365,545,374"/>
 <area shape="poly" id="edge19_Node000149_Node000005" title=" " alt="" coords="801,558,912,583,911,589,799,563"/>
-<area shape="poly" id="edge23_Node000182_Node000042" title=" " alt="" coords="530,217,564,230,636,274,695,320,691,324,633,278,561,235,529,222"/>
-<area shape="poly" id="edge27_Node000194_Node000002" title=" " alt="" coords="536,117,648,95,649,100,537,122"/>
-<area shape="poly" id="edge29_Node000211_Node000042" title=" " alt="" coords="532,282,655,324,653,329,530,287"/>
-<area shape="poly" id="edge32_Node000213_Node000002" title=" " alt="" coords="537,41,649,64,648,69,536,46"/>
-<area shape="poly" id="edge34_Node000214_Node000182" title=" " alt="" coords="290,186,372,195,372,200,289,192"/>
-<area shape="poly" id="edge35_Node000214_Node000194" title=" " alt="" coords="289,168,396,145,397,150,290,173"/>
+<area shape="poly" id="edge23_Node000186_Node000042" title=" " alt="" coords="530,217,564,230,636,274,695,320,691,324,633,278,561,235,529,222"/>
+<area shape="poly" id="edge27_Node000198_Node000002" title=" " alt="" coords="536,117,648,95,649,100,537,122"/>
+<area shape="poly" id="edge29_Node000215_Node000042" title=" " alt="" coords="532,282,655,324,653,329,530,287"/>
+<area shape="poly" id="edge32_Node000217_Node000002" title=" " alt="" coords="537,41,649,64,648,69,536,46"/>
+<area shape="poly" id="edge34_Node000218_Node000186" title=" " alt="" coords="290,186,372,195,372,200,289,192"/>
+<area shape="poly" id="edge35_Node000218_Node000198" title=" " alt="" coords="289,168,396,145,397,150,290,173"/>
 </map>
