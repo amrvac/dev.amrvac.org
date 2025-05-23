@@ -90,7 +90,7 @@ $(function() {
 </div><!-- fragment --><p>Then, make sure you are in ~/icarus folder and retrieve the makefile by </p><div class="fragment"><div class="line">setup.pl -d=3</div>
 </div><!-- fragment --><p> and compile it with </p><div class="fragment"><div class="line">make -j 4</div>
 </div><!-- fragment --><p>you can run the testcase with</p>
-<div class="fragment"><div class="line">mpirun –np 4 ./amrvac -i amrvac.par</div>
+<div class="fragment"><div class="line">mpirun -np 4 ./amrvac -i amrvac.par</div>
 </div><!-- fragment --><p> Note* 4 here is number of CPUs, can be modified depending on the availability of CPUs.</p>
 <h1>Standard testcase description</h1>
 <p>This run will be short, to check that it does not crash and can be finished successfully. I would recommend not modifying this amrvac.par file, instead to work with test_icarus.par file which is also uploaded in this directory. By default this testcase runs a simulation in low resolution, uniform grid, without AMR, with 5 cone CMEs. The simulation lasts 24 days and the output is saved after 14 days.</p>
