@@ -3858,55 +3858,50 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l03642" name="l03642"></a><span class="lineno"> 3642</span> </div>
 <div class="line"><a id="l03643" name="l03643"></a><span class="lineno"> 3643</span>    <span class="comment">! The parity of redblack_cntr determines which cells we use. If</span></div>
 <div class="line"><a id="l03644" name="l03644"></a><span class="lineno"> 3644</span>    <span class="comment">! redblack_cntr is even, we use the even cells and vice versa.</span></div>
-<div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span>    associate(cc =&gt; mg%boxes(id)%cc, n =&gt; <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a0bf82c21d1ee723e765cdeee14285150">mg_iphi</a>, &amp;</div>
-<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>         i_eps1 =&gt; <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a8dcbdb7ae6e3b93b9b950f9713a37c06">mg_iveps1</a>, &amp;</div>
-<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span>         i_eps2 =&gt; <a class="code hl_variable" href="namespacem__octree__mg__1d.html#aafed4d96ed9a8389f4e2b6a185da4add">mg_iveps2</a>)</div>
-<div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span> </div>
-<div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span>      <span class="keywordflow">if</span> (redblack) i0 = 2 - iand(redblack_cntr, 1)</div>
-<div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span> </div>
-<div class="line"><a id="l03651" name="l03651"></a><span class="lineno"> 3651</span>      <span class="keywordflow">do</span> i = i0, nc, di</div>
-<div class="line"><a id="l03652" name="l03652"></a><span class="lineno"> 3652</span>         a0(1:2)     = cc(i, i_eps1)</div>
-<div class="line"><a id="l03653" name="l03653"></a><span class="lineno"> 3653</span>         u(1:2) = cc(i-1:i+1:2, n)</div>
-<div class="line"><a id="l03654" name="l03654"></a><span class="lineno"> 3654</span>         a(1:2) = cc(i-1:i+1:2, i_eps1)</div>
-<div class="line"><a id="l03655" name="l03655"></a><span class="lineno"> 3655</span>         c(:)   = 2 * a0(:) * a(:) / (a0(:) + a(:)) * idr2</div>
-<div class="line"><a id="l03656" name="l03656"></a><span class="lineno"> 3656</span> </div>
-<div class="line"><a id="l03657" name="l03657"></a><span class="lineno"> 3657</span>         cc(i, n) = &amp;</div>
-<div class="line"><a id="l03658" name="l03658"></a><span class="lineno"> 3658</span>              (sum(c(:) * u(:)) - cc(i, <a class="code hl_variable" href="namespacem__octree__mg__1d.html#acd30980ed77c241e12ababaabd88a660">mg_irhs</a>)) / &amp;</div>
-<div class="line"><a id="l03659" name="l03659"></a><span class="lineno"> 3659</span>              (sum(c(:)) + <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a2d3e15ccf1f3db35799dab4bc3ecec01">ahelmholtz_lambda</a>)</div>
-<div class="line"><a id="l03660" name="l03660"></a><span class="lineno"> 3660</span><span class="keywordflow">      end do</span></div>
-<div class="line"><a id="l03661" name="l03661"></a><span class="lineno"> 3661</span>    <span class="keyword">end </span>associate</div>
-<div class="line"><a id="l03662" name="l03662"></a><span class="lineno"> 3662</span>  <span class="keyword">end subroutine </span>box_gs_ahelmh</div>
-<div class="line"><a id="l03663" name="l03663"></a><span class="lineno"> 3663</span><span class="comment"></span> </div>
-<div class="line"><a id="l03664" name="l03664"></a><span class="lineno"> 3664</span><span class="comment">  !&gt; Perform Helmholtz operator on a box</span></div>
-<div class="line"><a id="l03665" name="l03665"></a><span class="lineno"> 3665</span>  <span class="keyword">subroutine </span>box_ahelmh(mg, id, nc, i_out)</div>
-<div class="line"><a id="l03666" name="l03666"></a><span class="lineno"> 3666</span>    <span class="keywordtype">type</span>(<a class="code hl_struct" href="structm__octree__mg__1d_1_1mg__t.html">mg_t</a>), <span class="keywordtype">intent(inout)</span> :: mg</div>
-<div class="line"><a id="l03667" name="l03667"></a><span class="lineno"> 3667</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span>       :: id</div>
-<div class="line"><a id="l03668" name="l03668"></a><span class="lineno"> 3668</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span>       :: nc</div>
-<div class="line"><a id="l03669" name="l03669"></a><span class="lineno"> 3669</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span>       :: i_out<span class="comment"> !&lt; Index of variable to store Helmholtz in</span></div>
-<div class="line"><a id="l03670" name="l03670"></a><span class="lineno"> 3670</span>    <span class="keywordtype">integer</span>                   :: i</div>
-<div class="line"><a id="l03671" name="l03671"></a><span class="lineno"> 3671</span><span class="keywordtype">    real</span>(<a class="code hl_variable" href="namespacem__octree__mg__1d.html#aad4f68cff96595ec3a6e52d611fb40ba">dp</a>)                  :: idr2(2*1), a0(2*1), u0, u(2*1), a(2*1)</div>
-<div class="line"><a id="l03672" name="l03672"></a><span class="lineno"> 3672</span> </div>
-<div class="line"><a id="l03673" name="l03673"></a><span class="lineno"> 3673</span>    <span class="comment">! Duplicate 1/dr^2 array to multiply neighbor values</span></div>
-<div class="line"><a id="l03674" name="l03674"></a><span class="lineno"> 3674</span>    idr2(1:2*1:2) = 1/mg%dr(:, mg%boxes(id)%lvl)**2</div>
-<div class="line"><a id="l03675" name="l03675"></a><span class="lineno"> 3675</span>    idr2(2:2*1:2) = idr2(1:2*1:2)</div>
-<div class="line"><a id="l03676" name="l03676"></a><span class="lineno"> 3676</span> </div>
-<div class="line"><a id="l03677" name="l03677"></a><span class="lineno"> 3677</span>    associate(cc =&gt; mg%boxes(id)%cc, n =&gt; <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a0bf82c21d1ee723e765cdeee14285150">mg_iphi</a>, &amp;</div>
-<div class="line"><a id="l03678" name="l03678"></a><span class="lineno"> 3678</span>         i_eps1 =&gt; <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a8dcbdb7ae6e3b93b9b950f9713a37c06">mg_iveps1</a>, &amp;</div>
-<div class="line"><a id="l03679" name="l03679"></a><span class="lineno"> 3679</span>         i_eps2 =&gt; <a class="code hl_variable" href="namespacem__octree__mg__1d.html#aafed4d96ed9a8389f4e2b6a185da4add">mg_iveps2</a>)</div>
-<div class="line"><a id="l03680" name="l03680"></a><span class="lineno"> 3680</span>      <span class="keywordflow">do</span> i = 1, nc</div>
-<div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span>         a0(1:2)     = cc(i, i_eps1)</div>
-<div class="line"><a id="l03682" name="l03682"></a><span class="lineno"> 3682</span>         a(1:2) = cc(i-1:i+1:2, i_eps1)</div>
-<div class="line"><a id="l03683" name="l03683"></a><span class="lineno"> 3683</span>         u0     = cc(i, n)</div>
-<div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span>         u(1:2) = cc(i-1:i+1:2, n)</div>
-<div class="line"><a id="l03685" name="l03685"></a><span class="lineno"> 3685</span> </div>
-<div class="line"><a id="l03686" name="l03686"></a><span class="lineno"> 3686</span>         cc(i, i_out) = sum(2 * idr2 * &amp;</div>
-<div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span>              a0(:)*a(:)/(a0(:) + a(:)) * (u(:) - u0)) - &amp;</div>
-<div class="line"><a id="l03688" name="l03688"></a><span class="lineno"> 3688</span>              <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a2d3e15ccf1f3db35799dab4bc3ecec01">ahelmholtz_lambda</a> * u0</div>
-<div class="line"><a id="l03689" name="l03689"></a><span class="lineno"> 3689</span><span class="keywordflow">      end do</span></div>
-<div class="line"><a id="l03690" name="l03690"></a><span class="lineno"> 3690</span>    <span class="keyword">end </span>associate</div>
-<div class="line"><a id="l03691" name="l03691"></a><span class="lineno"> 3691</span>  <span class="keyword">end subroutine </span>box_ahelmh</div>
-<div class="line"><a id="l03692" name="l03692"></a><span class="lineno"> 3692</span> </div>
-<div class="line"><a id="l03693" name="l03693"></a><span class="lineno"> 3693</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacem__octree__mg__1d.html">m_octree_mg_1d</a></div>
+<div class="line"><a id="l03645" name="l03645"></a><span class="lineno"> 3645</span>    associate(cc =&gt; mg%boxes(id)%cc, n =&gt; <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a0bf82c21d1ee723e765cdeee14285150">mg_iphi</a>, i_eps1 =&gt; <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a8dcbdb7ae6e3b93b9b950f9713a37c06">mg_iveps1</a>)</div>
+<div class="line"><a id="l03646" name="l03646"></a><span class="lineno"> 3646</span>      <span class="keywordflow">if</span> (redblack) i0 = 2 - iand(redblack_cntr, 1)</div>
+<div class="line"><a id="l03647" name="l03647"></a><span class="lineno"> 3647</span> </div>
+<div class="line"><a id="l03648" name="l03648"></a><span class="lineno"> 3648</span>      <span class="keywordflow">do</span> i = i0, nc, di</div>
+<div class="line"><a id="l03649" name="l03649"></a><span class="lineno"> 3649</span>         a0(1:2) = cc(i, i_eps1)</div>
+<div class="line"><a id="l03650" name="l03650"></a><span class="lineno"> 3650</span>         u(1:2) = cc(i-1:i+1:2, n)</div>
+<div class="line"><a id="l03651" name="l03651"></a><span class="lineno"> 3651</span>         a(1:2) = cc(i-1:i+1:2, i_eps1)</div>
+<div class="line"><a id="l03652" name="l03652"></a><span class="lineno"> 3652</span>         c(:)   = 2 * a0(:) * a(:) / (a0(:) + a(:)) * idr2</div>
+<div class="line"><a id="l03653" name="l03653"></a><span class="lineno"> 3653</span> </div>
+<div class="line"><a id="l03654" name="l03654"></a><span class="lineno"> 3654</span>         cc(i, n) = &amp;</div>
+<div class="line"><a id="l03655" name="l03655"></a><span class="lineno"> 3655</span>              (sum(c(:) * u(:)) - cc(i, <a class="code hl_variable" href="namespacem__octree__mg__1d.html#acd30980ed77c241e12ababaabd88a660">mg_irhs</a>)) / &amp;</div>
+<div class="line"><a id="l03656" name="l03656"></a><span class="lineno"> 3656</span>              (sum(c(:)) + <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a2d3e15ccf1f3db35799dab4bc3ecec01">ahelmholtz_lambda</a>)</div>
+<div class="line"><a id="l03657" name="l03657"></a><span class="lineno"> 3657</span><span class="keywordflow">      end do</span></div>
+<div class="line"><a id="l03658" name="l03658"></a><span class="lineno"> 3658</span>    <span class="keyword">end </span>associate</div>
+<div class="line"><a id="l03659" name="l03659"></a><span class="lineno"> 3659</span>  <span class="keyword">end subroutine </span>box_gs_ahelmh</div>
+<div class="line"><a id="l03660" name="l03660"></a><span class="lineno"> 3660</span><span class="comment"></span> </div>
+<div class="line"><a id="l03661" name="l03661"></a><span class="lineno"> 3661</span><span class="comment">  !&gt; Perform Helmholtz operator on a box</span></div>
+<div class="line"><a id="l03662" name="l03662"></a><span class="lineno"> 3662</span>  <span class="keyword">subroutine </span>box_ahelmh(mg, id, nc, i_out)</div>
+<div class="line"><a id="l03663" name="l03663"></a><span class="lineno"> 3663</span>    <span class="keywordtype">type</span>(<a class="code hl_struct" href="structm__octree__mg__1d_1_1mg__t.html">mg_t</a>), <span class="keywordtype">intent(inout)</span> :: mg</div>
+<div class="line"><a id="l03664" name="l03664"></a><span class="lineno"> 3664</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span>       :: id</div>
+<div class="line"><a id="l03665" name="l03665"></a><span class="lineno"> 3665</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span>       :: nc</div>
+<div class="line"><a id="l03666" name="l03666"></a><span class="lineno"> 3666</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span>       :: i_out<span class="comment"> !&lt; Index of variable to store Helmholtz in</span></div>
+<div class="line"><a id="l03667" name="l03667"></a><span class="lineno"> 3667</span>    <span class="keywordtype">integer</span>                   :: i</div>
+<div class="line"><a id="l03668" name="l03668"></a><span class="lineno"> 3668</span><span class="keywordtype">    real</span>(<a class="code hl_variable" href="namespacem__octree__mg__1d.html#aad4f68cff96595ec3a6e52d611fb40ba">dp</a>)                  :: idr2(2*1), a0(2*1), u0, u(2*1), a(2*1)</div>
+<div class="line"><a id="l03669" name="l03669"></a><span class="lineno"> 3669</span> </div>
+<div class="line"><a id="l03670" name="l03670"></a><span class="lineno"> 3670</span>    <span class="comment">! Duplicate 1/dr^2 array to multiply neighbor values</span></div>
+<div class="line"><a id="l03671" name="l03671"></a><span class="lineno"> 3671</span>    idr2(1:2*1:2) = 1/mg%dr(:, mg%boxes(id)%lvl)**2</div>
+<div class="line"><a id="l03672" name="l03672"></a><span class="lineno"> 3672</span>    idr2(2:2*1:2) = idr2(1:2*1:2)</div>
+<div class="line"><a id="l03673" name="l03673"></a><span class="lineno"> 3673</span> </div>
+<div class="line"><a id="l03674" name="l03674"></a><span class="lineno"> 3674</span>    associate(cc =&gt; mg%boxes(id)%cc, n =&gt; <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a0bf82c21d1ee723e765cdeee14285150">mg_iphi</a>, i_eps1 =&gt; <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a8dcbdb7ae6e3b93b9b950f9713a37c06">mg_iveps1</a>)</div>
+<div class="line"><a id="l03675" name="l03675"></a><span class="lineno"> 3675</span>      <span class="keywordflow">do</span> i = 1, nc</div>
+<div class="line"><a id="l03676" name="l03676"></a><span class="lineno"> 3676</span>         a0(1:2)     = cc(i, i_eps1)</div>
+<div class="line"><a id="l03677" name="l03677"></a><span class="lineno"> 3677</span>         a(1:2) = cc(i-1:i+1:2, i_eps1)</div>
+<div class="line"><a id="l03678" name="l03678"></a><span class="lineno"> 3678</span>         u0     = cc(i, n)</div>
+<div class="line"><a id="l03679" name="l03679"></a><span class="lineno"> 3679</span>         u(1:2) = cc(i-1:i+1:2, n)</div>
+<div class="line"><a id="l03680" name="l03680"></a><span class="lineno"> 3680</span> </div>
+<div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span>         cc(i, i_out) = sum(2 * idr2 * &amp;</div>
+<div class="line"><a id="l03682" name="l03682"></a><span class="lineno"> 3682</span>              a0(:)*a(:)/(a0(:) + a(:)) * (u(:) - u0)) - &amp;</div>
+<div class="line"><a id="l03683" name="l03683"></a><span class="lineno"> 3683</span>              <a class="code hl_variable" href="namespacem__octree__mg__1d.html#a2d3e15ccf1f3db35799dab4bc3ecec01">ahelmholtz_lambda</a> * u0</div>
+<div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span><span class="keywordflow">      end do</span></div>
+<div class="line"><a id="l03685" name="l03685"></a><span class="lineno"> 3685</span>    <span class="keyword">end </span>associate</div>
+<div class="line"><a id="l03686" name="l03686"></a><span class="lineno"> 3686</span>  <span class="keyword">end subroutine </span>box_ahelmh</div>
+<div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span> </div>
+<div class="line"><a id="l03688" name="l03688"></a><span class="lineno"> 3688</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacem__octree__mg__1d.html">m_octree_mg_1d</a></div>
 <div class="ttc" id="ainterfacem__octree__mg__1d_1_1mg__box__gsrb_html"><div class="ttname"><a href="interfacem__octree__mg__1d_1_1mg__box__gsrb.html">m_octree_mg_1d::mg_box_gsrb</a></div><div class="ttdoc">Subroutine that performs Gauss-Seidel relaxation.</div><div class="ttdef"><b>Definition</b> <a href="m__octree__mg__1d_8t_source.html#l00321">m_octree_mg_1d.t:321</a></div></div>
 <div class="ttc" id="ainterfacem__octree__mg__1d_1_1mg__box__op_html"><div class="ttname"><a href="interfacem__octree__mg__1d_1_1mg__box__op.html">m_octree_mg_1d::mg_box_op</a></div><div class="ttdoc">Subroutine that performs A * cc(..., i_in) = cc(..., i_out)</div><div class="ttdef"><b>Definition</b> <a href="m__octree__mg__1d_8t_source.html#l00312">m_octree_mg_1d.t:312</a></div></div>
 <div class="ttc" id="ainterfacem__octree__mg__1d_1_1mg__box__prolong_html"><div class="ttname"><a href="interfacem__octree__mg__1d_1_1mg__box__prolong.html">m_octree_mg_1d::mg_box_prolong</a></div><div class="ttdoc">Subroutine that performs prolongation to a single child.</div><div class="ttdef"><b>Definition</b> <a href="m__octree__mg__1d_8t_source.html#l00330">m_octree_mg_1d.t:330</a></div></div>
