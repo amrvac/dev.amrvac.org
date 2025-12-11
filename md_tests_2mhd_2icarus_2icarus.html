@@ -81,7 +81,7 @@ $(function() {
   <div class="headertitle"><div class="title">icarus</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>05/11/25</p>
+<div class="textblock"><p>11/12/25</p>
 <p>Tinatin Baratashvili</p>
 <h1>How to run Icarus testcase</h1>
 <p>To run the Icarus test case, you must follow the standard MPI-AMRVAC procedure. First, you install AMRVAC from <a href="https://amrvac.org/md_doc_installation.html">https://amrvac.org/md_doc_installation.html</a>.</p>
@@ -90,10 +90,10 @@ $(function() {
 </div><!-- fragment --><p>Then, make sure you are in ~/icarus folder and retrieve the makefile by </p><div class="fragment"><div class="line">setup.pl -d=3 -v=3</div>
 </div><!-- fragment --><p> and compile it with </p><div class="fragment"><div class="line">make -j 4</div>
 </div><!-- fragment --><p>you can run the testcase with</p>
-<div class="fragment"><div class="line">mpirun -np 4 ./amrvac -i amrvac.par</div>
+<div class="fragment"><div class="line">mpirun –np 4 ./amrvac -i test_icarus.par</div>
 </div><!-- fragment --><p> Note* 4 here is number of CPUs, can be modified depending on the availability of CPUs.</p>
 <h1>Standard testcase description</h1>
-<p>This run will be short, to check that it does not crash and can be finished successfully. I would recommend not modifying this amrvac.par file, instead to work with test_icarus.par file which is also uploaded in this directory. By default this testcase runs a simulation in low resolution, uniform grid, without AMR, with 5 cone CMEs. The simulation lasts 24 days and the output is saved after 14 days.</p>
+<p>I would recommend not modifying this amrvac.par file, instead to work with test_icarus.par file. By default this testcase runs a simulation in low resolution, uniform grid, without AMR, with 5 cone CMEs from the datacube that is already provided. The simulation lasts 24 days and the output is saved after 10 days.</p>
 <h1>Necessary files</h1>
 <p>The most important files to run Icarus are the</p>
 <ul>
@@ -101,6 +101,7 @@ $(function() {
 <li>Parameter file that fixes the numerical method, computational domain and Icarus specific settings</li>
 <li>The solar wind boundary (.vtk file)</li>
 <li>The CME parameter file (.in file)</li>
+<li>The CME datacube if CMEs are injected</li>
 </ul>
 <h1>Setting Icarus parameters</h1>
 <p>Icarus-specific parameter list (&amp;icarus_list) in the <code>.par</code> file:</p>
@@ -120,7 +121,9 @@ $(function() {
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>cme_parameter_file</code>   </td><td class="markdownTableBodyNone">'cme_parameters.in'   </td><td class="markdownTableBodyNone">The file containing CME parameters    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>magnetogram_time</code>   </td><td class="markdownTableBodyNone">'2015-06-25T01:04:00'   </td><td class="markdownTableBodyNone">Magnetogram timestamp in 'YYYY-MM-DDTHH:mm:ss' format   </td></tr>
+<td class="markdownTableBodyNone"><code>magnetogram_time</code>   </td><td class="markdownTableBodyNone">'2015-06-25T01:04:00'   </td><td class="markdownTableBodyNone">Magnetogram timestamp in 'YYYY-MM-DDTHH:mm:ss' format    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>amr_start_hour</code>   </td><td class="markdownTableBodyNone">&gt;= 0   </td><td class="markdownTableBodyNone">When the AMR refinement starts   </td></tr>
 </table>
 <h1>Changing the parameters</h1>
 <p>Some of the settings that you could change in the <code>.par</code> files are:</p>
