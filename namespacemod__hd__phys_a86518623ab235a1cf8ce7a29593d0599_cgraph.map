@@ -1,60 +1,64 @@
 <map id="mod_hd_phys::hd_phys_init" name="mod_hd_phys::hd_phys_init">
-<area shape="rect" id="Node000001" title="Initialize the module." alt="" coords="5,846,208,871"/>
+<area shape="rect" id="Node000001" title="Initialize the module." alt="" coords="5,881,208,906"/>
 <area shape="rect" id="Node000002" href="$namespacemod__supertimestepping.html#a7b8ba942141441da1810e653facd035c" title="subroutine which added programatically a term to be calculated using STS Params: sts_getdt function c..." alt="" coords="271,5,451,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,846,115,701,140,463,159,336,184,219,216,122,234,84,254,56,258,52,262,55,258,59,238,87,221,124,190,221,165,337,145,464,121,701,111,846"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,880,114,730,138,482,157,350,182,227,214,125,233,86,254,56,258,52,262,55,258,59,238,88,219,127,188,228,163,350,143,482,120,730,111,881"/>
 <area shape="rect" id="Node000003" href="$namespacemod__cak__force.html#a3ea4d69b0566bbe50c6d7900abbdce5d" title="Initialize the module." alt="" coords="271,70,451,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,845,116,707,141,483,161,365,185,256,216,166,234,131,254,105,258,101,262,105,258,108,239,134,221,168,191,257,166,366,146,484,121,708,111,846"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,880,115,736,139,502,158,378,183,263,215,169,234,132,254,105,257,102,261,105,258,108,238,135,220,171,189,265,164,379,144,503,120,737,111,880"/>
 <area shape="rect" id="Node000008" href="$namespacemod__dust.html#ae39df6d084f2ff5bd3e9ff6408cbd39c" title=" " alt="" coords="285,119,436,145"/>
-<area shape="poly" id="edge3_Node000001_Node000008" title=" " alt="" coords="106,846,118,716,144,508,164,398,189,296,218,212,236,180,254,155,271,143,274,147,258,159,240,183,223,214,194,298,169,399,150,509,123,717,112,846"/>
+<area shape="poly" id="edge3_Node000001_Node000008" title=" " alt="" coords="106,880,117,745,142,526,162,410,187,303,217,215,235,181,254,155,271,143,274,147,258,159,239,184,222,217,192,305,167,411,147,527,122,746,111,881"/>
 <area shape="rect" id="Node000009" href="$namespacemod__thermal__emission.html#a159fb3c1b066f6de4fee75cb5141bc2f" title=" " alt="" coords="273,169,448,209"/>
-<area shape="poly" id="edge4_Node000001_Node000009" title=" " alt="" coords="107,846,120,727,149,539,170,439,194,348,222,272,237,242,254,220,260,214,264,218,258,223,242,245,227,274,199,349,175,441,155,540,126,728,112,846"/>
+<area shape="poly" id="edge4_Node000001_Node000009" title=" " alt="" coords="106,880,119,756,147,557,167,452,192,355,220,275,237,243,254,220,260,214,264,218,258,223,241,246,225,277,197,356,173,453,153,558,125,757,112,881"/>
 <area shape="rect" id="Node000034" href="$namespacemod__thermal__emission.html#adf0fb0ee2b1bfd1c734f0a86070c37ec" title=" " alt="" coords="273,233,448,273"/>
-<area shape="poly" id="edge5_Node000001_Node000034" title=" " alt="" coords="107,845,123,737,153,568,174,479,197,397,224,330,239,303,254,284,260,278,264,282,258,287,243,306,229,332,202,399,179,481,158,570,128,738,112,846"/>
+<area shape="poly" id="edge5_Node000001_Node000034" title=" " alt="" coords="107,880,121,766,151,587,172,492,195,405,223,333,238,305,254,284,260,278,264,282,258,287,243,308,228,335,201,406,177,493,156,588,127,767,112,881"/>
 <area shape="rect" id="Node000039" href="$namespacemod__thermal__emission.html#a8c9910c8edf1623c3705458a5b337b62" title=" " alt="" coords="273,297,448,337"/>
-<area shape="poly" id="edge6_Node000001_Node000039" title=" " alt="" coords="105,846,107,762,113,700,124,629,142,554,169,480,205,409,228,377,254,347,260,342,264,346,258,351,232,380,210,412,173,482,147,556,129,630,118,700,112,763,110,846"/>
-<area shape="rect" id="Node000040" href="$namespacemod__thermal__conduction.html#a209af8dfb2abc0762cdfa89e6f840c80" title="Get the explicit timestep for the TC (hd implementation)" alt="" coords="267,361,454,401"/>
-<area shape="poly" id="edge7_Node000001_Node000040" title=" " alt="" coords="106,846,111,771,119,717,131,655,150,590,176,526,210,465,254,411,259,407,262,411,258,415,214,468,180,528,155,592,136,656,124,717,116,772,111,846"/>
+<area shape="poly" id="edge6_Node000001_Node000039" title=" " alt="" coords="107,880,123,777,155,617,176,533,199,455,225,391,254,348,260,342,264,346,258,351,230,394,204,457,181,534,160,618,129,778,112,881"/>
+<area shape="rect" id="Node000040" href="$namespacemod__thermal__conduction.html#a209af8dfb2abc0762cdfa89e6f840c80" title="Get the explicit timestep for the TC (hd implementation) Note: also used in 1D MHD (or for neutrals i..." alt="" coords="267,361,454,401"/>
+<area shape="poly" id="edge7_Node000001_Node000040" title=" " alt="" coords="105,880,109,801,116,742,127,675,146,605,172,535,208,469,254,412,258,408,262,412,258,415,212,472,177,537,151,607,132,677,121,743,114,801,111,881"/>
 <area shape="rect" id="Node000041" href="$namespacemod__thermal__emission.html#af29ccd138f3aca890abf25d1dbc02b97" title=" " alt="" coords="273,425,448,465"/>
-<area shape="poly" id="edge8_Node000001_Node000041" title=" " alt="" coords="106,846,115,781,139,681,158,626,183,572,215,520,254,475,260,471,263,475,258,479,219,523,187,574,163,628,144,683,121,781,112,846"/>
+<area shape="poly" id="edge8_Node000001_Node000041" title=" " alt="" coords="106,880,113,810,135,702,153,641,179,581,212,525,254,475,260,471,263,475,258,479,216,528,184,584,158,643,140,703,118,811,111,881"/>
 <area shape="rect" id="Node000042" href="$namespacemod__gravity.html#ac77da47869e83fdec592fa926333722c" title="Initialize the module." alt="" coords="268,490,453,515"/>
-<area shape="poly" id="edge9_Node000001_Node000042" title=" " alt="" coords="107,845,118,787,143,701,163,653,187,607,218,563,254,526,263,520,266,524,258,530,222,567,192,609,167,655,148,702,123,788,112,846"/>
+<area shape="poly" id="edge9_Node000001_Node000042" title=" " alt="" coords="106,880,116,817,139,721,158,668,183,616,215,568,254,526,262,520,265,524,258,530,219,571,188,619,163,670,144,723,121,818,112,881"/>
 <area shape="rect" id="Node000044" href="$namespacemod__hd__phys.html#a0464902bc4be34094c08fafc7abf3488" title=" " alt="" coords="270,540,451,580"/>
-<area shape="poly" id="edge10_Node000001_Node000044" title=" " alt="" coords="109,845,124,797,153,729,196,654,223,620,254,590,261,585,264,589,258,594,227,624,200,657,157,731,129,799,114,847"/>
+<area shape="poly" id="edge10_Node000001_Node000044" title=" " alt="" coords="108,880,121,826,148,748,168,706,192,664,221,624,254,590,261,585,264,589,258,594,225,628,196,667,173,708,153,750,126,828,113,881"/>
 <area shape="rect" id="Node000048" href="$namespacemod__hd__phys.html#a30ec1e8a8a1d950022cca4a32374f6f3" title="Returns logical argument flag where values are ok." alt="" coords="261,605,460,630"/>
-<area shape="poly" id="edge11_Node000001_Node000048" title=" " alt="" coords="111,844,128,804,159,749,201,690,226,663,254,640,267,633,270,638,258,645,230,667,205,694,163,752,133,807,115,847"/>
-<area shape="rect" id="Node000050" href="$namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="279,679,443,719"/>
-<area shape="poly" id="edge12_Node000001_Node000050" title=" " alt="" coords="117,844,173,789,212,756,255,728,268,722,271,726,257,733,215,761,176,793,121,848"/>
-<area shape="rect" id="Node000088" href="$namespacemod__hd__phys.html#a7ca3d81ff30bcd198023630211e8c1e6" title="Transform primitive variables into conservative ones." alt="" coords="283,743,439,783"/>
-<area shape="poly" id="edge14_Node000001_Node000088" title=" " alt="" coords="134,844,255,792,277,785,278,790,257,797,136,848"/>
-<area shape="rect" id="Node000091" href="$namespacemod__hd__phys.html#aad11607293a89d08bdde26526a32bcd4" title="Transform conservative variables into primitive ones." alt="" coords="283,807,439,847"/>
-<area shape="poly" id="edge15_Node000001_Node000091" title=" " alt="" coords="207,843,269,836,269,841,208,849"/>
-<area shape="rect" id="Node000096" href="$namespacemod__ionization__degree.html#a98f8df508ab03ff6431b97782de7be8d" title=" " alt="" coords="273,871,448,911"/>
-<area shape="poly" id="edge16_Node000001_Node000096" title=" " alt="" coords="208,869,260,875,259,881,207,874"/>
-<area shape="rect" id="Node000097" href="$namespacemod__particles.html#a7a89b126b34bb788a3911955880ddd8f" title="Initialize particle data and parameters." alt="" coords="257,935,464,961"/>
-<area shape="poly" id="edge17_Node000001_Node000097" title=" " alt="" coords="135,869,190,894,257,920,288,929,286,934,255,925,188,899,133,874"/>
-<area shape="rect" id="Node000105" href="$namespacemod__radiative__cooling.html#a2c0aab05964e01b97b9ae65c6d2ea830" title=" " alt="" coords="275,985,446,1025"/>
-<area shape="poly" id="edge18_Node000001_Node000105" title=" " alt="" coords="123,870,179,918,217,945,257,970,275,978,273,983,255,974,214,950,176,922,120,874"/>
-<area shape="rect" id="Node000107" href="$namespacemod__radiative__cooling.html#a1af126a415ceee3e65eb49567e74be29" title="Radiative cooling initialization." alt="" coords="275,1050,446,1105"/>
-<area shape="poly" id="edge19_Node000001_Node000107" title=" " alt="" coords="118,870,170,947,210,994,258,1035,266,1041,263,1045,254,1039,207,997,166,950,113,873"/>
-<area shape="rect" id="Node000108" href="$namespacemod__rotating__frame.html#ac4472518b3e7e80ad298502342cfb9ef" title="Initialize the module." alt="" coords="283,1129,438,1169"/>
-<area shape="poly" id="edge20_Node000001_Node000108" title=" " alt="" coords="114,871,130,917,159,982,201,1053,228,1085,258,1114,273,1124,270,1128,254,1118,224,1089,197,1056,154,985,125,919,109,872"/>
-<area shape="rect" id="Node000110" href="$namespacemod__supertimestepping.html#aa6c319b28911c6e73c1218f56f66d850" title="Set the hooks called before the first cycle and after the last cycle in the STS update This method sh..." alt="" coords="265,1194,457,1249"/>
-<area shape="poly" id="edge21_Node000001_Node000110" title=" " alt="" coords="113,871,126,927,152,1009,172,1054,196,1100,224,1142,258,1179,263,1184,260,1188,254,1183,220,1145,191,1102,167,1057,147,1011,121,928,108,872"/>
-<area shape="rect" id="Node000111" href="$namespacemod__supertimestepping.html#ab8f1d9807c6320de449a5983500bd7c8" title="Set the hook of error handling in the STS update. This method is called before updating the BC...." alt="" coords="271,1273,451,1327"/>
-<area shape="poly" id="edge22_Node000001_Node000111" title=" " alt="" coords="112,871,120,938,143,1041,162,1099,187,1156,219,1210,258,1258,262,1262,259,1266,254,1262,214,1213,182,1158,157,1101,138,1043,115,939,106,872"/>
-<area shape="rect" id="Node000067" href="$namespacemod__small__values.html#a102d6945f93b389506b859f24c5f7a37" title=" " alt="" coords="267,1352,455,1392"/>
-<area shape="poly" id="edge23_Node000001_Node000067" title=" " alt="" coords="111,871,114,951,121,1009,133,1075,151,1145,177,1214,212,1279,258,1337,264,1342,260,1346,254,1340,208,1282,172,1216,146,1146,128,1076,116,1010,109,951,105,872"/>
-<area shape="rect" id="Node000068" href="$namespacemod__small__values.html#a71e8c14b4394080d8f59716c4e5a1529" title=" " alt="" coords="267,1416,455,1456"/>
-<area shape="poly" id="edge24_Node000001_Node000068" title=" " alt="" coords="112,871,129,974,160,1134,181,1219,204,1296,230,1360,258,1402,262,1406,258,1410,254,1406,225,1362,199,1298,175,1220,155,1136,123,975,107,872"/>
-<area shape="rect" id="Node000112" href="$namespacemod__supertimestepping.html#ae300305fc391679ed668a2d0eb686b67" title="Initialize sts module." alt="" coords="271,1480,451,1520"/>
-<area shape="poly" id="edge25_Node000001_Node000112" title=" " alt="" coords="112,871,127,986,156,1165,177,1260,200,1347,228,1418,242,1446,258,1466,262,1470,258,1474,254,1470,238,1448,223,1420,195,1348,171,1261,151,1166,121,986,107,872"/>
-<area shape="rect" id="Node000113" href="$namespacemod__thermal__conduction.html#a57cf95e5b705d868c99792a156c06dcd" title=" " alt="" coords="267,1544,454,1584"/>
-<area shape="poly" id="edge26_Node000001_Node000113" title=" " alt="" coords="112,871,125,996,153,1194,173,1300,197,1397,225,1477,241,1507,258,1530,262,1534,258,1538,254,1534,237,1510,220,1479,192,1398,167,1301,147,1195,119,996,106,872"/>
-<area shape="rect" id="Node000116" href="$namespacemod__thermal__conduction.html#a06712e83dc81e2953a38bee9f3109661" title="Init TC coefficients: HD case." alt="" coords="267,1608,454,1648"/>
-<area shape="poly" id="edge27_Node000001_Node000116" title=" " alt="" coords="111,871,123,1006,149,1224,169,1340,193,1447,223,1535,240,1569,258,1594,261,1597,257,1601,254,1598,235,1572,218,1537,188,1448,163,1341,144,1225,117,1007,106,872"/>
-<area shape="rect" id="Node000117" href="$namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="267,1672,454,1712"/>
-<area shape="poly" id="edge28_Node000001_Node000117" title=" " alt="" coords="111,871,121,1016,145,1254,165,1380,190,1497,221,1593,238,1630,258,1658,261,1661,257,1665,254,1662,234,1633,216,1595,184,1498,159,1381,140,1254,115,1017,106,872"/>
-<area shape="rect" id="Node000118" href="$namespacemod__viscosity.html#a924ee8e80bc5ea1666abe401ec332723" title="Initialize the module." alt="" coords="256,1737,465,1762"/>
-<area shape="poly" id="edge29_Node000001_Node000118" title=" " alt="" coords="111,872,118,1028,127,1150,140,1285,159,1422,184,1549,200,1604,217,1653,237,1693,258,1722,263,1727,259,1731,254,1726,232,1695,212,1655,195,1606,179,1550,154,1423,135,1286,121,1151,113,1028,106,872"/>
-<area shape="poly" id="edge13_Node000050_Node000050" title=" " alt="" coords="314,679,311,669,318,660,335,654,361,652,390,655,406,662,404,667,389,660,361,657,336,659,321,664,316,670,319,677"/>
+<area shape="poly" id="edge11_Node000001_Node000048" title=" " alt="" coords="109,880,125,833,153,768,196,698,223,666,254,639,262,634,265,638,258,643,227,670,200,702,158,771,130,835,114,881"/>
+<area shape="rect" id="Node000050" href="$namespacemod__hd__phys.html#afea7981754014b2f57fa8b3b191ac30f" title="Transform total energy to internal energy." alt="" coords="265,654,456,679"/>
+<area shape="poly" id="edge12_Node000001_Node000050" title=" " alt="" coords="111,879,129,841,160,789,202,735,227,710,255,688,265,682,268,687,257,693,230,714,206,738,164,792,134,844,116,882"/>
+<area shape="rect" id="Node000092" href="$namespacemod__hd__phys.html#a155633d9bbe45a3831ecb79463436bdc" title="Transform internal energy to total energy." alt="" coords="265,703,456,729"/>
+<area shape="poly" id="edge13_Node000001_Node000092" title=" " alt="" coords="115,879,168,812,208,772,255,739,271,731,274,736,257,744,212,776,172,815,119,882"/>
+<area shape="rect" id="Node000054" href="$namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="279,777,443,817"/>
+<area shape="poly" id="edge14_Node000001_Node000054" title=" " alt="" coords="134,878,255,827,277,819,278,824,257,832,136,883"/>
+<area shape="rect" id="Node000093" href="$namespacemod__hd__phys.html#a7ca3d81ff30bcd198023630211e8c1e6" title="Transform primitive variables into conservative ones." alt="" coords="283,841,439,881"/>
+<area shape="poly" id="edge16_Node000001_Node000093" title=" " alt="" coords="207,878,269,870,269,875,208,883"/>
+<area shape="rect" id="Node000096" href="$namespacemod__hd__phys.html#aad11607293a89d08bdde26526a32bcd4" title="Transform conservative variables into primitive ones." alt="" coords="283,905,439,945"/>
+<area shape="poly" id="edge17_Node000001_Node000096" title=" " alt="" coords="208,903,269,911,269,916,207,909"/>
+<area shape="rect" id="Node000098" href="$namespacemod__ionization__degree.html#a98f8df508ab03ff6431b97782de7be8d" title=" " alt="" coords="273,969,448,1009"/>
+<area shape="poly" id="edge18_Node000001_Node000098" title=" " alt="" coords="136,904,257,955,278,962,277,967,255,960,134,908"/>
+<area shape="rect" id="Node000099" href="$namespacemod__particles.html#a7a89b126b34bb788a3911955880ddd8f" title="Initialize particle data and parameters." alt="" coords="257,1034,464,1059"/>
+<area shape="poly" id="edge19_Node000001_Node000099" title=" " alt="" coords="121,904,176,960,214,992,257,1019,276,1027,274,1032,255,1024,211,996,172,964,117,908"/>
+<area shape="rect" id="Node000107" href="$namespacemod__radiative__cooling.html#a2c0aab05964e01b97b9ae65c6d2ea830" title=" " alt="" coords="275,1084,446,1124"/>
+<area shape="poly" id="edge20_Node000001_Node000107" title=" " alt="" coords="117,905,138,938,169,982,210,1028,258,1068,270,1076,267,1081,254,1073,206,1032,165,985,133,941,113,908"/>
+<area shape="rect" id="Node000109" href="$namespacemod__radiative__cooling.html#a1af126a415ceee3e65eb49567e74be29" title="Radiative cooling initialization." alt="" coords="275,1149,446,1203"/>
+<area shape="poly" id="edge21_Node000001_Node000109" title=" " alt="" coords="115,905,132,949,162,1010,204,1076,229,1107,258,1134,265,1139,262,1144,254,1138,225,1110,200,1079,157,1012,127,951,110,907"/>
+<area shape="rect" id="Node000110" href="$namespacemod__rotating__frame.html#ac4472518b3e7e80ad298502342cfb9ef" title="Initialize the module." alt="" coords="283,1228,438,1268"/>
+<area shape="poly" id="edge22_Node000001_Node000110" title=" " alt="" coords="113,906,125,962,151,1045,171,1090,194,1134,223,1176,258,1213,273,1223,269,1228,254,1217,219,1180,190,1137,166,1092,146,1046,120,963,108,907"/>
+<area shape="rect" id="Node000112" href="$namespacemod__supertimestepping.html#aa6c319b28911c6e73c1218f56f66d850" title="Set the hooks called before the first cycle and after the last cycle in the STS update This method sh..." alt="" coords="265,1293,457,1347"/>
+<area shape="poly" id="edge23_Node000001_Node000112" title=" " alt="" coords="112,906,121,970,145,1070,164,1125,189,1180,220,1232,258,1278,262,1282,259,1286,254,1282,215,1235,184,1183,159,1127,140,1071,116,971,107,906"/>
+<area shape="rect" id="Node000113" href="$namespacemod__supertimestepping.html#ab8f1d9807c6320de449a5983500bd7c8" title="Set the hook of error handling in the STS update. This method is called before updating the BC...." alt="" coords="271,1371,451,1426"/>
+<area shape="poly" id="edge24_Node000001_Node000113" title=" " alt="" coords="111,906,116,982,124,1038,136,1102,155,1169,180,1237,214,1300,258,1357,262,1361,258,1364,254,1360,210,1303,176,1239,150,1171,131,1103,119,1039,111,983,106,906"/>
+<area shape="rect" id="Node000071" href="$namespacemod__small__values.html#a102d6945f93b389506b859f24c5f7a37" title=" " alt="" coords="267,1451,455,1491"/>
+<area shape="poly" id="edge25_Node000001_Node000071" title=" " alt="" coords="110,906,111,994,115,1060,126,1136,143,1215,170,1295,208,1370,231,1404,258,1435,264,1441,260,1445,254,1439,227,1407,203,1372,165,1297,138,1217,120,1136,110,1061,105,994,105,906"/>
+<area shape="rect" id="Node000072" href="$namespacemod__small__values.html#a71e8c14b4394080d8f59716c4e5a1529" title=" " alt="" coords="267,1515,455,1555"/>
+<area shape="poly" id="edge26_Node000001_Node000072" title=" " alt="" coords="112,906,127,1020,156,1200,177,1294,200,1381,228,1453,242,1480,258,1501,262,1504,258,1508,254,1504,238,1483,223,1455,195,1383,171,1295,151,1201,121,1021,107,907"/>
+<area shape="rect" id="Node000114" href="$namespacemod__supertimestepping.html#ae300305fc391679ed668a2d0eb686b67" title="Initialize sts module." alt="" coords="271,1579,451,1619"/>
+<area shape="poly" id="edge27_Node000001_Node000114" title=" " alt="" coords="112,906,125,1030,153,1229,173,1334,197,1431,225,1511,241,1542,258,1565,262,1568,258,1572,254,1568,237,1545,220,1513,192,1433,167,1335,147,1230,119,1031,106,906"/>
+<area shape="rect" id="Node000115" href="$namespacemod__thermal__conduction.html#a57cf95e5b705d868c99792a156c06dcd" title=" " alt="" coords="267,1643,454,1683"/>
+<area shape="poly" id="edge28_Node000001_Node000115" title=" " alt="" coords="111,906,123,1041,149,1259,169,1375,193,1481,223,1570,240,1603,258,1629,261,1632,257,1636,254,1632,235,1606,218,1572,188,1483,163,1376,144,1260,117,1041,106,906"/>
+<area shape="rect" id="Node000119" href="$namespacemod__thermal__conduction.html#a06712e83dc81e2953a38bee9f3109661" title="Init TC coefficients: HD case." alt="" coords="267,1707,454,1747"/>
+<area shape="poly" id="edge29_Node000001_Node000119" title=" " alt="" coords="111,906,121,1051,145,1288,165,1415,190,1531,221,1628,238,1665,258,1693,261,1696,257,1700,254,1696,234,1668,216,1630,184,1533,159,1416,140,1289,115,1051,106,906"/>
+<area shape="rect" id="Node000120" href="$namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="267,1771,454,1811"/>
+<area shape="poly" id="edge30_Node000001_Node000120" title=" " alt="" coords="111,906,119,1062,142,1319,161,1455,186,1582,218,1686,237,1727,258,1757,261,1760,257,1764,254,1760,233,1729,213,1688,181,1583,156,1456,136,1319,114,1062,106,907"/>
+<area shape="rect" id="Node000121" href="$namespacemod__viscosity.html#a924ee8e80bc5ea1666abe401ec332723" title="Initialize the module." alt="" coords="256,1835,465,1861"/>
+<area shape="poly" id="edge31_Node000001_Node000121" title=" " alt="" coords="111,906,116,1072,124,1203,136,1349,155,1497,181,1633,196,1693,215,1746,235,1789,258,1821,263,1826,259,1829,254,1824,230,1791,210,1748,191,1695,175,1634,150,1497,131,1350,118,1204,111,1072,106,906"/>
+<area shape="poly" id="edge15_Node000054_Node000054" title=" " alt="" coords="314,778,311,768,318,758,335,753,361,751,390,754,406,761,404,766,389,759,361,756,336,758,321,763,316,769,319,776"/>
 </map>

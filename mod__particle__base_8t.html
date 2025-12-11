@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MPI-AMRVAC<span id="projectnumber">&#160;3.1</span>
+   <div id="projectname">MPI-AMRVAC<span id="projectnumber">&#160;3.2</span>
    </div>
    <div id="projectbrief">The MPI - Adaptive Mesh Refinement - Versatile Advection Code (development version)</div>
   </td>
@@ -230,12 +230,12 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a705f221ec9ab699b106f6a84a3c92d88" id="r_a705f221ec9ab699b106f6a84a3c92d88"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#a705f221ec9ab699b106f6a84a3c92d88">mod_particle_base::partvec_from_cartesian</a> (xp, up, upcart)</td></tr>
 <tr class="memdesc:a705f221ec9ab699b106f6a84a3c92d88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert vector from Cartesian coordinates.  <br /></td></tr>
 <tr class="separator:a705f221ec9ab699b106f6a84a3c92d88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a155095a480a44dd87013d92e65d9bd11" id="r_a155095a480a44dd87013d92e65d9bd11"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#a155095a480a44dd87013d92e65d9bd11">mod_particle_base::fix_phi_crossing</a> (xp, igrid)</td></tr>
-<tr class="memdesc:a155095a480a44dd87013d92e65d9bd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fix particle position when crossing the 0,2pi boundary in noncartesian coordinates.  <br /></td></tr>
-<tr class="separator:a155095a480a44dd87013d92e65d9bd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac297f1a4a2d25d4fcc6e11cda15b47eb" id="r_ac297f1a4a2d25d4fcc6e11cda15b47eb"><td class="memItemLeft" align="right" valign="top">logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#ac297f1a4a2d25d4fcc6e11cda15b47eb">mod_particle_base::point_in_igrid_ghostc</a> (x, igrid, ngh)</td></tr>
-<tr class="memdesc:ac297f1a4a2d25d4fcc6e11cda15b47eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quick check if particle coordinate is inside igrid (ghost cells included, except the last ngh)  <br /></td></tr>
-<tr class="separator:ac297f1a4a2d25d4fcc6e11cda15b47eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c80518aefdaa0a8b0e9d3252d377208" id="r_a9c80518aefdaa0a8b0e9d3252d377208"><td class="memItemLeft" align="right" valign="top">recursive subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#a9c80518aefdaa0a8b0e9d3252d377208">mod_particle_base::fix_phi_crossing</a> (xp, igrid)</td></tr>
+<tr class="memdesc:a9c80518aefdaa0a8b0e9d3252d377208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fix particle position when crossing the 0,2pi boundary in noncartesian coordinates.  <br /></td></tr>
+<tr class="separator:a9c80518aefdaa0a8b0e9d3252d377208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a599b3fa0f3f5ccc9cfb73933f26404" id="r_a3a599b3fa0f3f5ccc9cfb73933f26404"><td class="memItemLeft" align="right" valign="top">recursive logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#a3a599b3fa0f3f5ccc9cfb73933f26404">mod_particle_base::point_in_igrid_ghostc</a> (x, igrid, ngh)</td></tr>
+<tr class="memdesc:a3a599b3fa0f3f5ccc9cfb73933f26404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quick check if particle coordinate is inside igrid (ghost cells included, except the last ngh)  <br /></td></tr>
+<tr class="separator:a3a599b3fa0f3f5ccc9cfb73933f26404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5f28cce5fcaba2c51de288ae406b6d7" id="r_aa5f28cce5fcaba2c51de288ae406b6d7"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#aa5f28cce5fcaba2c51de288ae406b6d7">mod_particle_base::comm_particles</a> ()</td></tr>
 <tr class="separator:aa5f28cce5fcaba2c51de288ae406b6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af299ec05dc0bd3fe76a9341ce4472946" id="r_af299ec05dc0bd3fe76a9341ce4472946"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__particle__base.html#af299ec05dc0bd3fe76a9341ce4472946">mod_particle_base::comm_particles_global</a> ()</td></tr>

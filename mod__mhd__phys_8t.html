@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MPI-AMRVAC<span id="projectnumber">&#160;3.1</span>
+   <div id="projectname">MPI-AMRVAC<span id="projectnumber">&#160;3.2</span>
    </div>
    <div id="projectbrief">The MPI - Adaptive Mesh Refinement - Versatile Advection Code (development version)</div>
   </td>
@@ -243,7 +243,7 @@ Variables</h2></td></tr>
 <tr class="memdesc:a14c1c364cc1567b9fd144126c2ee5d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether thermal conduction is used.  <br /></td></tr>
 <tr class="separator:a14c1c364cc1567b9fd144126c2ee5d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9270d689a0479729912aa65936645ce8" id="r_a9270d689a0479729912aa65936645ce8"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a9270d689a0479729912aa65936645ce8">mod_mhd_phys::mhd_htc_sat</a> = .false.</td></tr>
-<tr class="memdesc:a9270d689a0479729912aa65936645ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wheterh saturation is considered for hyperbolic TC.  <br /></td></tr>
+<tr class="memdesc:a9270d689a0479729912aa65936645ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether saturation is considered for hyperbolic TC.  <br /></td></tr>
 <tr class="separator:a9270d689a0479729912aa65936645ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a889142d451f5e3dc5fad47b62e2a20a3" id="r_a889142d451f5e3dc5fad47b62e2a20a3"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a889142d451f5e3dc5fad47b62e2a20a3">mod_mhd_phys::mhd_viscosity</a> = .false.</td></tr>
 <tr class="memdesc:a889142d451f5e3dc5fad47b62e2a20a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether viscosity is added.  <br /></td></tr>
@@ -336,9 +336,9 @@ Variables</h2></td></tr>
 <tr class="memitem:ae868e58d5d3110b2471c1bfdb55478d4" id="r_ae868e58d5d3110b2471c1bfdb55478d4"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#ae868e58d5d3110b2471c1bfdb55478d4">mod_mhd_phys::b0field_forcefree</a> =.true.</td></tr>
 <tr class="memdesc:ae868e58d5d3110b2471c1bfdb55478d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">B0 field is force-free.  <br /></td></tr>
 <tr class="separator:ae868e58d5d3110b2471c1bfdb55478d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8126e49068ec909217681a1a846630b0" id="r_a8126e49068ec909217681a1a846630b0"><td class="memItemLeft" align="right" valign="top">logical, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a8126e49068ec909217681a1a846630b0">mod_mhd_phys::partial_energy</a> = .false.</td></tr>
-<tr class="memdesc:a8126e49068ec909217681a1a846630b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether an internal or hydrodynamic energy equation is used.  <br /></td></tr>
-<tr class="separator:a8126e49068ec909217681a1a846630b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ea022fbef7a0d31a76e3c3e928df1b" id="r_a47ea022fbef7a0d31a76e3c3e928df1b"><td class="memItemLeft" align="right" valign="top">logical, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a47ea022fbef7a0d31a76e3c3e928df1b">mod_mhd_phys::numerical_resistive_heating</a> = .false.</td></tr>
+<tr class="memdesc:a47ea022fbef7a0d31a76e3c3e928df1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether numerical resistive heating is included when solving partial energy equation.  <br /></td></tr>
+<tr class="separator:a47ea022fbef7a0d31a76e3c3e928df1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5c899d144208c2997623e4d82213872" id="r_aa5c899d144208c2997623e4d82213872"><td class="memItemLeft" align="right" valign="top">character(len=std_len), public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aa5c899d144208c2997623e4d82213872">mod_mhd_phys::typedivbfix</a> = 'linde'</td></tr>
 <tr class="memdesc:aa5c899d144208c2997623e4d82213872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method type to clean divergence of B.  <br /></td></tr>
 <tr class="separator:aa5c899d144208c2997623e4d82213872"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -362,6 +362,8 @@ Variables</h2></td></tr>
 <tr class="separator:a9ca8e8abb466fbdc1bcb670a1447c15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeddcf4396bdbd06b2f285c4e717554f4" id="r_aeddcf4396bdbd06b2f285c4e717554f4"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__get__pthermal.html">sub_get_pthermal</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aeddcf4396bdbd06b2f285c4e717554f4">mod_mhd_phys::mhd_get_pthermal</a> =&gt; null()</td></tr>
 <tr class="separator:aeddcf4396bdbd06b2f285c4e717554f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c0dccc2f796ee07fb431af1ba1a1dc1" id="r_a8c0dccc2f796ee07fb431af1ba1a1dc1"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__get__pthermal.html">sub_get_pthermal</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a8c0dccc2f796ee07fb431af1ba1a1dc1">mod_mhd_phys::mhd_get_rfactor</a> =&gt; null()</td></tr>
+<tr class="separator:a8c0dccc2f796ee07fb431af1ba1a1dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0e9578210815171702ac806eba0bcc0" id="r_ab0e9578210815171702ac806eba0bcc0"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__get__pthermal.html">sub_get_pthermal</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#ab0e9578210815171702ac806eba0bcc0">mod_mhd_phys::mhd_get_temperature</a> =&gt; null()</td></tr>
 <tr class="separator:ab0e9578210815171702ac806eba0bcc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>

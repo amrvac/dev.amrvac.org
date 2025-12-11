@@ -20,9 +20,10 @@ var searchData=
   ['get_5fvar_5frfactor_17',['get_var_rfactor',['../structmod__thermal__emission_1_1te__fluid.html#a19a956ee5f36e741ee462136f3cd5c76',1,'mod_thermal_emission::te_fluid::get_var_rfactor'],['../structmod__radiative__cooling_1_1rc__fluid.html#a69cecab6dbef35471187b7577ed18bce',1,'mod_radiative_cooling::rc_fluid::get_var_rfactor']]],
   ['ghost_5fcopy_18',['ghost_copy',['../namespacemod__global__parameters.html#a6c2595e4399ab9a2db77faf60b937237',1,'mod_global_parameters']]],
   ['global_5ftime_19',['global_time',['../namespacemod__global__parameters.html#a2bdc961e7304863887ec17a92ae5ac0a',1,'mod_global_parameters']]],
-  ['grad_5fkappa_5fb_20',['grad_kappa_b',['../namespacemod__particle__gca.html#ab3fcbcabbe561caf6f162a0b983a6063',1,'mod_particle_gca']]],
-  ['grav_5fsplit_21',['grav_split',['../namespacemod__gravity.html#a000408809c23fbe7c61ae678147c89e3',1,'mod_gravity']]],
-  ['gridvars_22',['gridvars',['../namespacemod__physicaldata.html#a0ebf054e1427e313bfdacda3f31eccfb',1,'mod_physicaldata']]],
-  ['gs_5ff_23',['gs_f',['../namespacemod__ard__phys.html#a2d5ae61013066f3a2dcc15cc5c8a2fd5',1,'mod_ard_phys::gs_f'],['../namespacemod__rd__phys.html#a065b9a9f699b13b50630f654419c0ade',1,'mod_rd_phys::gs_f']]],
-  ['gs_5fk_24',['gs_k',['../namespacemod__ard__phys.html#a17f5e20e24b0cf877b41c6b04a4b2367',1,'mod_ard_phys::gs_k'],['../namespacemod__rd__phys.html#a463995e229f4bf8de14be37a75920348',1,'mod_rd_phys::gs_k']]]
+  ['globaltime_20',['globaltime',['../namespacemod__datacube.html#a88ec8359d3faa0f1acb6b608af7a7c3f',1,'mod_datacube']]],
+  ['grad_5fkappa_5fb_21',['grad_kappa_b',['../namespacemod__particle__gca.html#ab3fcbcabbe561caf6f162a0b983a6063',1,'mod_particle_gca']]],
+  ['grav_5fsplit_22',['grav_split',['../namespacemod__gravity.html#a000408809c23fbe7c61ae678147c89e3',1,'mod_gravity']]],
+  ['gridvars_23',['gridvars',['../namespacemod__physicaldata.html#a0ebf054e1427e313bfdacda3f31eccfb',1,'mod_physicaldata']]],
+  ['gs_5ff_24',['gs_f',['../namespacemod__ard__phys.html#a2d5ae61013066f3a2dcc15cc5c8a2fd5',1,'mod_ard_phys::gs_f'],['../namespacemod__rd__phys.html#a065b9a9f699b13b50630f654419c0ade',1,'mod_rd_phys::gs_f']]],
+  ['gs_5fk_25',['gs_k',['../namespacemod__ard__phys.html#a17f5e20e24b0cf877b41c6b04a4b2367',1,'mod_ard_phys::gs_k'],['../namespacemod__rd__phys.html#a463995e229f4bf8de14be37a75920348',1,'mod_rd_phys::gs_k']]]
 ];

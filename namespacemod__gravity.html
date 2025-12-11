@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MPI-AMRVAC<span id="projectnumber">&#160;3.1</span>
+   <div id="projectname">MPI-AMRVAC<span id="projectnumber">&#160;3.2</span>
    </div>
    <div id="projectbrief">The MPI - Adaptive Mesh Refinement - Versatile Advection Code (development version)</div>
   </td>
@@ -96,9 +96,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:ac77da47869e83fdec592fa926333722c" id="r_ac77da47869e83fdec592fa926333722c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__gravity.html#ac77da47869e83fdec592fa926333722c">gravity_init</a> ()</td></tr>
 <tr class="memdesc:ac77da47869e83fdec592fa926333722c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the module.  <br /></td></tr>
 <tr class="separator:ac77da47869e83fdec592fa926333722c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc1755b19a864ee2b13cafbcc9fb9826" id="r_adc1755b19a864ee2b13cafbcc9fb9826"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__gravity.html#adc1755b19a864ee2b13cafbcc9fb9826">gravity_add_source</a> (qdt, ixil, ixol, wct, wctprim, w, x, energy, rhov, qsourcesplit, active)</td></tr>
-<tr class="memdesc:adc1755b19a864ee2b13cafbcc9fb9826"><td class="mdescLeft">&#160;</td><td class="mdescRight">w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO  <br /></td></tr>
-<tr class="separator:adc1755b19a864ee2b13cafbcc9fb9826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7761066ee7cbde8f2b809c38f681c9" id="r_aff7761066ee7cbde8f2b809c38f681c9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__gravity.html#aff7761066ee7cbde8f2b809c38f681c9">gravity_add_source</a> (qdt, ixil, ixol, wct, wctprim, w, x, energy, qsourcesplit, active)</td></tr>
+<tr class="memdesc:aff7761066ee7cbde8f2b809c38f681c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO  <br /></td></tr>
+<tr class="separator:aff7761066ee7cbde8f2b809c38f681c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eb1ec889ca415bc59f25e73eb578b2d" id="r_a5eb1ec889ca415bc59f25e73eb578b2d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__gravity.html#a5eb1ec889ca415bc59f25e73eb578b2d">gravity_get_dt</a> (w, ixil, ixol, dtnew, dxd, x)</td></tr>
 <tr class="separator:a5eb1ec889ca415bc59f25e73eb578b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -133,8 +133,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="adc1755b19a864ee2b13cafbcc9fb9826" name="adc1755b19a864ee2b13cafbcc9fb9826"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc1755b19a864ee2b13cafbcc9fb9826">&#9670;&#160;</a></span>gravity_add_source()</h2>
+<a id="aff7761066ee7cbde8f2b809c38f681c9" name="aff7761066ee7cbde8f2b809c38f681c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff7761066ee7cbde8f2b809c38f681c9">&#9670;&#160;</a></span>gravity_add_source()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,12 +203,6 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">logical, intent(in)&#160;</td>
-          <td class="paramname"><em>rhov</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">logical, intent(in)&#160;</td>
           <td class="paramname"><em>qsourcesplit</em>, </td>
         </tr>
         <tr>
@@ -231,8 +225,8 @@ Variables</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__gravity_adc1755b19a864ee2b13cafbcc9fb9826_cgraph.png" border="0" usemap="#anamespacemod__gravity_adc1755b19a864ee2b13cafbcc9fb9826_cgraph" alt=""/></div>
-<map name="anamespacemod__gravity_adc1755b19a864ee2b13cafbcc9fb9826_cgraph" id="anamespacemod__gravity_adc1755b19a864ee2b13cafbcc9fb9826_cgraph">
+<div class="center"><img src="namespacemod__gravity_aff7761066ee7cbde8f2b809c38f681c9_cgraph.png" border="0" usemap="#anamespacemod__gravity_aff7761066ee7cbde8f2b809c38f681c9_cgraph" alt=""/></div>
+<map name="anamespacemod__gravity_aff7761066ee7cbde8f2b809c38f681c9_cgraph" id="anamespacemod__gravity_aff7761066ee7cbde8f2b809c38f681c9_cgraph">
 <area shape="rect" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="5,5,163,45"/>
 <area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="211,13,393,38"/>
 <area shape="poly" title=" " alt="" coords="163,23,197,23,197,28,163,28"/>
@@ -309,7 +303,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__gravity_8t_source.html#l00086">86</a> of file <a class="el" href="mod__gravity_8t_source.html">mod_gravity.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__gravity_8t_source.html#l00080">80</a> of file <a class="el" href="mod__gravity_8t_source.html">mod_gravity.t</a>.</p>
 
 </div>
 </div>

@@ -29,7 +29,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MPI-AMRVAC<span id="projectnumber">&#160;3.1</span>
+   <div id="projectname">MPI-AMRVAC<span id="projectnumber">&#160;3.2</span>
    </div>
    <div id="projectbrief">The MPI - Adaptive Mesh Refinement - Versatile Advection Code (development version)</div>
   </td>
@@ -97,7 +97,7 @@ $(function() {
   unit_velocity=&lt;your velocity unit&gt;
 </pre> before call (m)hd_activate()</li>
 <li>You can add the name list for thermal conduction, tc_list, in par file, where parameters tc_perpendicular (not in hd), tc_saturate, tc_slope_limiter can be modified. tc_perpendicular=.true. will add conduction flux perpendicular to magnetic field, which is not considered by default. tc_saturate=.true. to consider saturation effect of thermal conduction, which is not the default choice.</li>
-<li>If thermal conduction fails or gives unphysical oscillations, reduce sts_dtpar (default 0.8) of sts_list to smaller values. </li>
+<li>If thermal conduction fails or gives unphysical oscillations, reduce sts_dtpar (default 0.5) of sts_list to smaller values. </li>
 </ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
