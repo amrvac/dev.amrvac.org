@@ -12,10 +12,10 @@
 <area shape="poly" id="edge19_Node000001_Node000021" title=" " alt="" coords="127,228,184,196,220,179,258,166,322,152,388,143,513,136,513,142,388,148,323,157,259,171,222,184,186,200,130,233"/>
 <area shape="rect" id="Node000027" href="$namespacemod__mhd__phys.html#a7cefae9319d59d3d9182e9b35bad1e28" title="Compute 2 times total magnetic energy." alt="" coords="823,167,1021,207"/>
 <area shape="poly" id="edge18_Node000001_Node000027" title=" " alt="" coords="139,254,246,293,321,315,406,335,497,348,591,352,684,343,730,333,774,318,811,298,845,272,896,217,900,220,848,276,814,303,776,323,731,338,685,348,591,357,496,353,405,340,320,320,245,298,138,259"/>
-<area shape="rect" id="Node000041" href="$namespacemod__fix__conserve.html#accd8011113a5f7b3efeec90d42bd9dad" title=" " alt="" coords="259,384,479,409"/>
-<area shape="poly" id="edge20_Node000001_Node000041" title=" " alt="" coords="123,254,180,306,218,336,260,362,297,378,295,382,257,367,215,341,176,311,120,258"/>
-<area shape="rect" id="Node000042" href="$namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="263,433,475,459"/>
-<area shape="poly" id="edge21_Node000001_Node000042" title=" " alt="" coords="118,255,138,289,170,334,211,381,260,420,272,426,269,431,257,424,207,384,165,337,134,291,114,258"/>
+<area shape="rect" id="Node000040" href="$namespacemod__fix__conserve.html#accd8011113a5f7b3efeec90d42bd9dad" title=" " alt="" coords="259,384,479,409"/>
+<area shape="poly" id="edge20_Node000001_Node000040" title=" " alt="" coords="123,254,180,306,218,336,260,362,297,378,295,382,257,367,215,341,176,311,120,258"/>
+<area shape="rect" id="Node000041" href="$namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="263,433,475,459"/>
+<area shape="poly" id="edge21_Node000001_Node000041" title=" " alt="" coords="118,255,138,289,170,334,211,381,260,420,272,426,269,431,257,424,207,384,165,337,134,291,114,258"/>
 <area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="1132,148,1123,138,1128,128,1145,122,1173,120,1208,124,1218,129,1222,134,1217,137,1215,133,1207,129,1173,125,1146,127,1131,132,1129,138,1136,145"/>
 <area shape="poly" id="edge6_Node000015_Node000002" title=" " alt="" coords="383,203,443,159,483,135,526,116,600,94,677,81,751,73,818,69,818,75,752,78,678,86,601,100,528,121,485,140,446,163,386,207"/>
 <area shape="poly" id="edge7_Node000015_Node000003" title=" " alt="" coords="478,228,591,237,728,241,875,236,949,228,1021,217,1082,199,1135,176,1137,181,1084,204,1022,222,950,233,875,241,728,246,591,242,478,233"/>
