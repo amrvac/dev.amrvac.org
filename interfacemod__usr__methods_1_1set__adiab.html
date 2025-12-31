@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MPI-AMRVAC: mod_usr_methods::after_refine Interface Reference</title>
+<title>MPI-AMRVAC: mod_usr_methods::set_adiab Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,28 +78,32 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacemod__usr__methods.html">mod_usr_methods</a></li><li class="navelem"><a class="el" href="interfacemod__usr__methods_1_1after__refine.html">after_refine</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacemod__usr__methods.html">mod_usr_methods</a></li><li class="navelem"><a class="el" href="interfacemod__usr__methods_1_1set__adiab.html">set_adiab</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="interfacemod__usr__methods_1_1after__refine-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">mod_usr_methods::after_refine Interface Reference</div></div>
+<a href="interfacemod__usr__methods_1_1set__adiab-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">mod_usr_methods::set_adiab Interface Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>set adiabatic index  
+ <a href="interfacemod__usr__methods_1_1set__adiab.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a85c39a01f7f3006ed7dee8948e8e8a69" id="r_a85c39a01f7f3006ed7dee8948e8e8a69"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1after__refine.html#a85c39a01f7f3006ed7dee8948e8e8a69">after_refine</a> (n_coarsen, n_refine)</td></tr>
-<tr class="separator:a85c39a01f7f3006ed7dee8948e8e8a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f2eb75f262dc257d62347f1894a465" id="r_ab0f2eb75f262dc257d62347f1894a465"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1set__adiab.html#ab0f2eb75f262dc257d62347f1894a465">set_adiab</a> (w, x, ixil, ixol, adiab)</td></tr>
+<tr class="separator:ab0f2eb75f262dc257d62347f1894a465"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00509">509</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<div class="textblock"><p>set adiabatic index </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00306">306</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a85c39a01f7f3006ed7dee8948e8e8a69" name="a85c39a01f7f3006ed7dee8948e8e8a69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85c39a01f7f3006ed7dee8948e8e8a69">&#9670;&#160;</a></span>after_refine()</h2>
+<a id="ab0f2eb75f262dc257d62347f1894a465" name="ab0f2eb75f262dc257d62347f1894a465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f2eb75f262dc257d62347f1894a465">&#9670;&#160;</a></span>set_adiab()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -108,16 +112,46 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">subroutine mod_usr_methods::after_refine::after_refine </td>
+          <td class="memname">subroutine mod_usr_methods::set_adiab::set_adiab </td>
           <td>(</td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>n_coarsen</em>, </td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in)&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:ndim), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>n_refine</em>&#160;</td>
+          <td class="paramname"><em>ixi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixo^s), intent(out)&#160;</td>
+          <td class="paramname"><em>adiab</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -132,7 +166,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00509">509</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00306">306</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
