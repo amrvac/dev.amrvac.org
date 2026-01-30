@@ -101,7 +101,7 @@ Modules</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:adbccff43b819f6933eeb818a0f4f6684" id="r_adbccff43b819f6933eeb818a0f4f6684"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#adbccff43b819f6933eeb818a0f4f6684">mod_viscosity::vc_params_read</a> (files)</td></tr>
-<tr class="memdesc:adbccff43b819f6933eeb818a0f4f6684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read this module"s parameters from a file.  <br /></td></tr>
+<tr class="memdesc:adbccff43b819f6933eeb818a0f4f6684"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read module parameters from a file.  <br /></td></tr>
 <tr class="separator:adbccff43b819f6933eeb818a0f4f6684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a924ee8e80bc5ea1666abe401ec332723" id="r_a924ee8e80bc5ea1666abe401ec332723"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#a924ee8e80bc5ea1666abe401ec332723">mod_viscosity::viscosity_init</a> (phys_wider_stencil)</td></tr>
 <tr class="memdesc:a924ee8e80bc5ea1666abe401ec332723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the module.  <br /></td></tr>
@@ -114,15 +114,6 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a7359026271979fc6f8e92aecdac64fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa92c0f66095ceddf01eb3fbec0cf9f23" id="r_aa92c0f66095ceddf01eb3fbec0cf9f23"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#aa92c0f66095ceddf01eb3fbec0cf9f23">mod_viscosity::viscosity_get_dt</a> (w, ixil, ixol, dtnew, dxd, x)</td></tr>
 <tr class="separator:aa92c0f66095ceddf01eb3fbec0cf9f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19f61795c5415a88b464795d0af393f3" id="r_a19f61795c5415a88b464795d0af393f3"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#a19f61795c5415a88b464795d0af393f3">mod_viscosity::visc_get_flux_prim</a> (w, x, ixil, ixol, idim, f, energy)</td></tr>
-<tr class="separator:a19f61795c5415a88b464795d0af393f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21decb44c11b145ca4b1ad116e9f66ac" id="r_a21decb44c11b145ca4b1ad116e9f66ac"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#a21decb44c11b145ca4b1ad116e9f66ac">mod_viscosity::get_crossgrad</a> (ixil, ixol, x, w, idim, cross)</td></tr>
-<tr class="separator:a21decb44c11b145ca4b1ad116e9f66ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a482cf900866affb26c13dc18dedd6dbe" id="r_a482cf900866affb26c13dc18dedd6dbe"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#a482cf900866affb26c13dc18dedd6dbe">mod_viscosity::cart_cross_grad</a> (ixil, ixol, x, w, idim, cross)</td></tr>
-<tr class="memdesc:a482cf900866affb26c13dc18dedd6dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">yields d_i v_j + d_j v_i for a given i, OK in Cartesian and for some tensor terms in cylindrical (rr &amp; rz) and in spherical (rr)  <br /></td></tr>
-<tr class="separator:a482cf900866affb26c13dc18dedd6dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfd1ecab3d4edb17f69b8406988d2419" id="r_acfd1ecab3d4edb17f69b8406988d2419"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#acfd1ecab3d4edb17f69b8406988d2419">mod_viscosity::visc_add_source_geom</a> (qdt, ixil, ixol, wct, w, x)</td></tr>
-<tr class="separator:acfd1ecab3d4edb17f69b8406988d2419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dc772df316f68ac2afc9dae6956341d" id="r_a4dc772df316f68ac2afc9dae6956341d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#a4dc772df316f68ac2afc9dae6956341d">mod_viscosity::sub_add_source</a> (qdt, ixil, ixol, wct, wp, w, x, energy, qsourcesplit, active)</td></tr>
 <tr class="separator:a4dc772df316f68ac2afc9dae6956341d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -144,9 +135,6 @@ Variables</h2></td></tr>
 <tr class="memitem:ac341e8bed47c480b362c72840724a76d" id="r_ac341e8bed47c480b362c72840724a76d"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#ac341e8bed47c480b362c72840724a76d">mod_viscosity::vc_split</a> = .false.</td></tr>
 <tr class="memdesc:ac341e8bed47c480b362c72840724a76d"><td class="mdescLeft">&#160;</td><td class="mdescRight">source split or not  <br /></td></tr>
 <tr class="separator:ac341e8bed47c480b362c72840724a76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea7afff38154994f7d579d35afc01f3c" id="r_aea7afff38154994f7d579d35afc01f3c"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#aea7afff38154994f7d579d35afc01f3c">mod_viscosity::viscindiv</a> = .false.</td></tr>
-<tr class="memdesc:aea7afff38154994f7d579d35afc01f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether to compute the viscous terms as fluxes (ie in the div on the LHS), or not (by default)  <br /></td></tr>
-<tr class="separator:aea7afff38154994f7d579d35afc01f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec9be24d8fc7c3afb5cfdf9b1c06f1a2" id="r_aec9be24d8fc7c3afb5cfdf9b1c06f1a2"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="namespacemod__viscosity.html#a4dc772df316f68ac2afc9dae6956341d">sub_add_source</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__viscosity.html#aec9be24d8fc7c3afb5cfdf9b1c06f1a2">mod_viscosity::viscosity_add_source</a> =&gt; null()</td></tr>
 <tr class="separator:aec9be24d8fc7c3afb5cfdf9b1c06f1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
