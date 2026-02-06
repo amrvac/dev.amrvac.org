@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MPI-AMRVAC: mod_physics::sub_small_values Interface Reference</title>
+<title>MPI-AMRVAC: mod_physics::sub_get_cs2 Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,28 +78,28 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacemod__physics.html">mod_physics</a></li><li class="navelem"><a class="el" href="interfacemod__physics_1_1sub__small__values.html">sub_small_values</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacemod__physics.html">mod_physics</a></li><li class="navelem"><a class="el" href="interfacemod__physics_1_1sub__get__cs2.html">sub_get_cs2</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="interfacemod__physics_1_1sub__small__values-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">mod_physics::sub_small_values Interface Reference</div></div>
+<a href="interfacemod__physics_1_1sub__get__cs2-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">mod_physics::sub_get_cs2 Interface Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8c74db44bca760b6b732dac26b7bf28d" id="r_a8c74db44bca760b6b732dac26b7bf28d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__physics_1_1sub__small__values.html#a8c74db44bca760b6b732dac26b7bf28d">sub_small_values</a> (primitive, w, x, ixil, ixol, subname)</td></tr>
-<tr class="separator:a8c74db44bca760b6b732dac26b7bf28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66538d83a77d59d0490ff652944baeae" id="r_a66538d83a77d59d0490ff652944baeae"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__physics_1_1sub__get__cs2.html#a66538d83a77d59d0490ff652944baeae">sub_get_cs2</a> (w, x, ixil, ixol, cs2)</td></tr>
+<tr class="separator:a66538d83a77d59d0490ff652944baeae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00308">308</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00135">135</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a8c74db44bca760b6b732dac26b7bf28d" name="a8c74db44bca760b6b732dac26b7bf28d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c74db44bca760b6b732dac26b7bf28d">&#9670;&#160;</a></span>sub_small_values()</h2>
+<a id="a66538d83a77d59d0490ff652944baeae" name="a66538d83a77d59d0490ff652944baeae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66538d83a77d59d0490ff652944baeae">&#9670;&#160;</a></span>sub_get_cs2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -108,21 +108,15 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">subroutine mod_physics::sub_small_values::sub_small_values </td>
+          <td class="memname">subroutine mod_physics::sub_get_cs2::sub_get_cs2 </td>
           <td>(</td>
-          <td class="paramtype">logical, intent(in)&#160;</td>
-          <td class="paramname"><em>primitive</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(inout)&#160;</td>
+          <td class="paramtype">double precision, dimension(ixi^s, nw), intent(in)&#160;</td>
           <td class="paramname"><em>w</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,1:ndim), intent(in)&#160;</td>
+          <td class="paramtype">double precision, dimension(ixi^s, 1:^nd), intent(in)&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -152,8 +146,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">character(len=*), intent(in)&#160;</td>
-          <td class="paramname"><em>subname</em>&#160;</td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(inout)&#160;</td>
+          <td class="paramname"><em>cs2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -168,7 +162,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00308">308</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00135">135</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
 
 </div>
 </div>

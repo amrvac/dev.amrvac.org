@@ -95,7 +95,7 @@ var searchData=
   ['get_5fwhitelight_5fthomson_92',['get_whitelight_thomson',['../namespacemod__thermal__emission.html#a9e319fe31c0619dc7c7e36f224c15a0f',1,'mod_thermal_emission']]],
   ['getbc_93',['getbc',['../namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6',1,'mod_ghostcells_update']]],
   ['getcmaxfff_94',['getcmaxfff',['../namespacemod__magnetofriction.html#a57c1f8bf0d9d1e2cda19442698a0cc7c',1,'mod_magnetofriction']]],
-  ['getdt_5fcourant_95',['getdt_courant',['../mod__dt_8t.html#a5fc849c0d2320b16740c46ddfe10b044',1,'mod_dt.t']]],
+  ['getdt_5fcourant_95',['getdt_courant',['../mod__dt_8t.html#a533b6c95291256f790756dce6cd9adc2',1,'mod_dt.t']]],
   ['getdtfff_5fcourant_96',['getdtfff_courant',['../namespacemod__magnetofriction.html#a1dacdad96eabfb8e026e4f7e764b98e1',1,'mod_magnetofriction']]],
   ['getfluxmf_97',['getfluxmf',['../namespacemod__magnetofriction.html#a29bc4abe418f3324208b70d329f69cb2',1,'mod_magnetofriction']]],
   ['getheadernames_98',['getheadernames',['../namespacemod__calculate__xw.html#a3c777f366638d870c023352a16d4ef2e',1,'mod_calculate_xw']]],
