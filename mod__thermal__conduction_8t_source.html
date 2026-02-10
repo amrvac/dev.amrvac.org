@@ -1402,7 +1402,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span>         {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
 <div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>            qdd(ix^d)=(gradt(ix1,ix2,idims)*block%surfaceC(ix1,ix2,2)&amp;</div>
 <div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>                    +gradt(ix1+1,ix2,idims)*block%surfaceC(ix1+1,ix2,2))/&amp;</div>
-<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>                 (block%surfaceC(ix1,ix2,2)+block%surfaceC(ix1+1,ix2,2))</div>
+<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>                 (block%surfaceC(ix1,ix2,2)+block%surfaceC(ix1+1,ix2,2)+1.d-300)</div>
 <div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span>         {<span class="keyword">end </span>do\}</div>
 <div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span><span class="keywordflow">        end if</span></div>
 <div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span>       }</div>
