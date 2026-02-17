@@ -86,7 +86,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Generic supertimestepping method 1) in amrvac.par in sts_list set the following parameters which have the default values: sts_dtpar=0.9,sts_ncycles=1000,sts_method=1,sourcetype_sts=2 These parametes are general for all the methods added TODO: check if there is any need to have terms implemented with different sets of parameters, and these cannot be general anymore 2) then add programatically in the code a term with the subroutine add_sts_method This method takes as parameters a function which calculated the explicit timestep associated with the term, a subroutine which sets the source term types for the BC and the BC are generated from the variables startVar:endVar flux conservation (fixconserve) is done for the variables specified by ixChangeStart, ixChangeN, ixChangeFixC The following two steps are done in this way as in fortran it is not allowed to pass null function pointers as parameters: 3)in order to to have hooks before_first_cycle, after_last_cycle (e.g. conversion from e_tot to e_int before first sts cycle and back from e_int to e_tot after the last STS cycle for the thermal conductivity module) add them just afterwards with the subroutine set_conversion_methods_to_head 4) to add the hook for error handling (e.g check small values in the thermal conductivity module ) call set_error_handling_to_head which takes as parameter a subroutine the error handling subroutine is called before setting BC.  
+<p>Generic supertimestepping method which can be used for multiple source terms in the governing equations where each term introduces a sts_term type and all sts terms are stored in a pointer list.  
 <a href="namespacemod__supertimestepping.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -97,7 +97,7 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a5e081548b6182229b9430302af5da2a8" id="r_a5e081548b6182229b9430302af5da2a8"><td class="memItemLeft" align="right" valign="top">pure logical function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__supertimestepping.html#a5e081548b6182229b9430302af5da2a8">is_sts_initialized</a> ()</td></tr>
 <tr class="separator:a5e081548b6182229b9430302af5da2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8ba942141441da1810e653facd035c" id="r_a7b8ba942141441da1810e653facd035c"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__supertimestepping.html#a7b8ba942141441da1810e653facd035c">add_sts_method</a> (sts_getdt, sts_set_sources, startvar, nflux, startwbc, nwbc, evolve_b)</td></tr>
-<tr class="memdesc:a7b8ba942141441da1810e653facd035c"><td class="mdescLeft">&#160;</td><td class="mdescRight">subroutine which added programatically a term to be calculated using STS Params: sts_getdt function calculates the explicit timestep for this term sts_set_sources subroutine sets the source term startVar, endVar, nflux indices of start, end, and number of the variables that need fix conservation startwbc, nwbc indices of start and number of the variables that need ghost cell exchange These terms implemented by an element of the derived type sts_term are put in a linked list  <br /></td></tr>
+<tr class="memdesc:a7b8ba942141441da1810e653facd035c"><td class="mdescLeft">&#160;</td><td class="mdescRight">subroutine which added programatically a term to be calculated using STS Params: sts_getdt function calculates the explicit timestep for this term sts_set_sources subroutine sets the source term startVar, nflux (making endVar=startVar+nflux-1) indices of start and number of the variables that need fix conservation startwbc, nwbc indices of start and number of the variables that need ghost cell exchange These terms implemented by an element of the derived type sts_term are put in a linked list  <br /></td></tr>
 <tr class="separator:a7b8ba942141441da1810e653facd035c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6c319b28911c6e73c1218f56f66d850" id="r_aa6c319b28911c6e73c1218f56f66d850"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__supertimestepping.html#aa6c319b28911c6e73c1218f56f66d850">set_conversion_methods_to_head</a> (sts_before_first_cycle, sts_after_last_cycle)</td></tr>
 <tr class="memdesc:aa6c319b28911c6e73c1218f56f66d850"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the hooks called before the first cycle and after the last cycle in the STS update This method should be called after add_sts_method. The hooks are added to the last term added with this subroutine Params: sts_before_first_cycle, sts_after_last_cycle subroutines which implement the hooks called before first cycle and after last cycle.  <br /></td></tr>
@@ -125,7 +125,11 @@ Variables</h2></td></tr>
 <tr class="separator:aff5330128f2121c6e7b0ce9fa07064e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Generic supertimestepping method 1) in amrvac.par in sts_list set the following parameters which have the default values: sts_dtpar=0.9,sts_ncycles=1000,sts_method=1,sourcetype_sts=2 These parametes are general for all the methods added TODO: check if there is any need to have terms implemented with different sets of parameters, and these cannot be general anymore 2) then add programatically in the code a term with the subroutine add_sts_method This method takes as parameters a function which calculated the explicit timestep associated with the term, a subroutine which sets the source term types for the BC and the BC are generated from the variables startVar:endVar flux conservation (fixconserve) is done for the variables specified by ixChangeStart, ixChangeN, ixChangeFixC The following two steps are done in this way as in fortran it is not allowed to pass null function pointers as parameters: 3)in order to to have hooks before_first_cycle, after_last_cycle (e.g. conversion from e_tot to e_int before first sts cycle and back from e_int to e_tot after the last STS cycle for the thermal conductivity module) add them just afterwards with the subroutine set_conversion_methods_to_head 4) to add the hook for error handling (e.g check small values in the thermal conductivity module ) call set_error_handling_to_head which takes as parameter a subroutine the error handling subroutine is called before setting BC. </p>
+<div class="textblock"><p>Generic supertimestepping method which can be used for multiple source terms in the governing equations where each term introduces a sts_term type and all sts terms are stored in a pointer list. </p>
+<p>user control is in 1) amrvac.par where namelist sts_list sets the following parameters which have default values: sts_dtpar=0.5,sts_ncycles=1000,sts_method=1,sourcetype_sts=2 These parametes are shared for all the terms added</p>
+<p>Any STS-handled term is done via 2) program in the code a term with the subroutine add_sts_method This method takes as parameters a function which calculates the explicit timestep associated with the term and a subroutine which sets the source term for the variables startVar:endVar=startVar+nflux-1 flux conservation (fixconserve) is done for the variables as specified by ixChangeStart, ixChangeN, ixChangeFixC</p>
+<p>3) one can have hooks before_first_cycle, after_last_cycle (e.g. conversion from e_tot to e_int before first sts cycle and back from e_int to e_tot after the last STS cycle as used for the thermal conductivity module) add those hooks just afterwards with the subroutine set_conversion_methods_to_head</p>
+<p>4) add the hook for error handling (e.g check small values in the thermal conductivity module) call set_error_handling_to_head which takes as parameter a subroutine this error handling subroutine is called before setting BC </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="a7b8ba942141441da1810e653facd035c" name="a7b8ba942141441da1810e653facd035c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7b8ba942141441da1810e653facd035c">&#9670;&#160;</a></span>add_sts_method()</h2>
@@ -183,9 +187,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>subroutine which added programatically a term to be calculated using STS Params: sts_getdt function calculates the explicit timestep for this term sts_set_sources subroutine sets the source term startVar, endVar, nflux indices of start, end, and number of the variables that need fix conservation startwbc, nwbc indices of start and number of the variables that need ghost cell exchange These terms implemented by an element of the derived type sts_term are put in a linked list </p>
+<p>subroutine which added programatically a term to be calculated using STS Params: sts_getdt function calculates the explicit timestep for this term sts_set_sources subroutine sets the source term startVar, nflux (making endVar=startVar+nflux-1) indices of start and number of the variables that need fix conservation startwbc, nwbc indices of start and number of the variables that need ghost cell exchange These terms implemented by an element of the derived type sts_term are put in a linked list </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00199">199</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00205">205</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -201,7 +205,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00167">167</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00173">173</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -233,7 +237,7 @@ Variables</h2></td></tr>
 
 <p>Set the hooks called before the first cycle and after the last cycle in the STS update This method should be called after add_sts_method. The hooks are added to the last term added with this subroutine Params: sts_before_first_cycle, sts_after_last_cycle subroutines which implement the hooks called before first cycle and after last cycle. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00252">252</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00258">258</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -255,7 +259,7 @@ Variables</h2></td></tr>
 
 <p>This sets the explicit dt and calculates the number of cycles for each of the terms implemented with STS. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00346">346</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00352">352</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -301,7 +305,7 @@ Here is the call graph for this function:</div>
 
 <p>Set the hook of error handling in the STS update. This method is called before updating the BC. This method should be called after add_sts_method. The hook is added to the last term added with this subroutine. Param: sts_error_handing the subroutine which handles the errors. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00277">277</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00283">283</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -319,7 +323,7 @@ Here is the call graph for this function:</div>
 
 <p>Initialize sts module. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00146">146</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00152">152</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -346,7 +350,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00137">137</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00143">143</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -362,7 +366,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00044">44</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00050">50</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -378,7 +382,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00042">42</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00048">48</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -394,7 +398,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00041">41</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00047">47</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -410,7 +414,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00043">43</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00049">49</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -426,7 +430,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00140">140</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00146">146</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
