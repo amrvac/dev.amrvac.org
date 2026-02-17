@@ -1,30 +1,31 @@
 <map id="mod_mhd_phys::mhd_get_v" name="mod_mhd_phys::mhd_get_v">
-<area shape="rect" id="Node000001" title="Calculate v vector." alt="" coords="5,202,211,227"/>
-<area shape="rect" id="Node000002" href="$namespacemod__global__parameters.html#a1ba907b301287b1559121df9aeb35f03" title="Cross product of two vectors." alt="" coords="1103,74,1283,114"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,200,174,143,213,112,257,85,333,53,399,33,460,21,517,16,639,17,793,16,918,4,973,4,1042,16,1101,37,1152,65,1149,69,1099,42,1041,21,973,10,919,10,793,21,639,22,518,21,460,26,401,38,335,58,260,90,216,116,177,147,122,203"/>
-<area shape="rect" id="Node000003" href="$namespacemod__mhd__phys.html#ac7bf1b8d5fd9dac730901cb6319ced4d" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="1089,208,1296,234"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,225,190,250,259,272,381,289,506,296,630,295,751,288,864,276,966,262,1122,234,1123,239,967,267,865,282,751,293,631,301,506,302,380,294,258,277,188,255,132,229"/>
-<area shape="rect" id="Node000014" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="826,31,1009,56"/>
-<area shape="poly" id="edge4_Node000001_Node000014" title=" " alt="" coords="127,199,184,165,258,132,330,109,405,91,556,65,696,50,812,43,812,48,696,55,557,70,406,96,332,115,260,137,186,170,130,204"/>
-<area shape="rect" id="Node000015" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="527,122,745,147"/>
-<area shape="poly" id="edge5_Node000001_Node000015" title=" " alt="" coords="141,199,195,180,258,164,389,145,513,135,513,140,390,150,259,169,197,185,143,204"/>
-<area shape="rect" id="Node000021" href="$namespacemod__mhd__phys.html#a7e7f9e0cfdae3f081d89b5a609011c5d" title="multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as &#45;mhd_eta_ambi/rh..." alt="" coords="793,183,1041,208"/>
-<area shape="poly" id="edge17_Node000001_Node000021" title=" " alt="" coords="211,209,259,208,780,196,780,201,259,213,211,214"/>
-<area shape="rect" id="Node000039" href="$namespacemod__mhd__phys.html#a7cefae9319d59d3d9182e9b35bad1e28" title="Compute 2 times total magnetic energy." alt="" coords="269,222,468,262"/>
-<area shape="poly" id="edge14_Node000001_Node000039" title=" " alt="" coords="211,223,256,228,255,233,211,228"/>
-<area shape="rect" id="Node000040" href="$namespacemod__fix__conserve.html#accd8011113a5f7b3efeec90d42bd9dad" title=" " alt="" coords="259,338,479,363"/>
-<area shape="poly" id="edge18_Node000001_Node000040" title=" " alt="" coords="126,225,182,269,220,294,260,316,299,331,298,336,258,321,217,299,179,273,122,229"/>
-<area shape="rect" id="Node000041" href="$namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="263,387,475,412"/>
-<area shape="poly" id="edge19_Node000001_Node000041" title=" " alt="" coords="119,226,140,257,172,297,213,339,260,373,273,380,270,384,257,378,209,343,168,300,136,260,115,229"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="1148,210,1139,200,1144,190,1162,184,1193,182,1232,186,1243,191,1246,197,1242,199,1239,195,1231,191,1193,187,1163,189,1147,194,1144,199,1152,206"/>
-<area shape="poly" id="edge6_Node000015_Node000002" title=" " alt="" coords="745,124,1089,99,1089,104,746,129"/>
-<area shape="poly" id="edge7_Node000015_Node000003" title=" " alt="" coords="746,135,887,146,965,156,1042,169,1097,184,1148,201,1146,206,1096,189,1041,174,964,161,887,151,745,140"/>
-<area shape="poly" id="edge8_Node000015_Node000014" title=" " alt="" coords="668,119,793,73,848,57,850,62,794,78,670,124"/>
-<area shape="poly" id="edge9_Node000015_Node000015" title=" " alt="" coords="593,123,584,113,588,103,606,97,636,95,674,99,685,104,688,110,684,113,681,108,673,104,636,100,607,102,592,107,589,113,597,120"/>
-<area shape="poly" id="edge10_Node000015_Node000021" title=" " alt="" coords="669,144,806,178,805,183,668,150"/>
-<area shape="poly" id="edge11_Node000021_Node000002" title=" " alt="" coords="952,180,1124,117,1126,122,954,185"/>
-<area shape="poly" id="edge12_Node000021_Node000003" title=" " alt="" coords="1042,204,1076,208,1076,213,1041,210"/>
-<area shape="poly" id="edge13_Node000021_Node000015" title=" " alt="" coords="884,186,747,152,748,147,886,180"/>
-<area shape="poly" id="edge15_Node000039_Node000003" title=" " alt="" coords="468,237,1076,221,1076,227,468,242"/>
-<area shape="poly" id="edge16_Node000039_Node000015" title=" " alt="" coords="418,220,590,150,592,155,420,225"/>
+<area shape="rect" id="Node000001" title="Calculate v vector." alt="" coords="5,233,211,258"/>
+<area shape="rect" id="Node000002" href="$namespacemod__global__parameters.html#a1ba907b301287b1559121df9aeb35f03" title="Cross product of two vectors." alt="" coords="836,39,1016,79"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,231,134,198,165,153,207,107,231,87,257,70,330,38,407,17,486,6,565,3,642,5,714,13,835,33,835,39,714,18,642,11,565,8,487,11,408,23,332,43,260,75,234,91,210,111,169,157,138,201,118,234"/>
+<area shape="rect" id="Node000003" href="$namespacemod__mhd__phys.html#ac7bf1b8d5fd9dac730901cb6319ced4d" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="823,176,1029,201"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,256,255,287,329,304,413,318,502,327,594,328,685,319,774,298,812,280,847,257,902,209,905,213,851,262,815,285,776,303,686,324,594,333,501,332,412,323,328,309,254,292,145,261"/>
+<area shape="rect" id="Node000014" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="559,262,742,288"/>
+<area shape="poly" id="edge4_Node000001_Node000014" title=" " alt="" coords="211,248,545,267,545,272,211,254"/>
+<area shape="rect" id="Node000015" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="259,152,478,177"/>
+<area shape="poly" id="edge5_Node000001_Node000015" title=" " alt="" coords="149,230,313,179,315,184,150,235"/>
+<area shape="rect" id="Node000021" href="$namespacemod__mhd__phys.html#a7cefae9319d59d3d9182e9b35bad1e28" title="Compute 2 times total magnetic energy." alt="" coords="551,198,750,238"/>
+<area shape="poly" id="edge17_Node000001_Node000021" title=" " alt="" coords="211,238,537,221,537,226,211,243"/>
+<area shape="rect" id="Node000022" href="$namespacemod__mhd__phys.html#a7e7f9e0cfdae3f081d89b5a609011c5d" title="multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as &#45;mhd_eta_ambi/rh..." alt="" coords="527,46,775,72"/>
+<area shape="poly" id="edge18_Node000001_Node000022" title=" " alt="" coords="118,231,173,173,213,140,258,114,320,90,386,74,451,63,512,58,513,63,452,69,387,79,322,95,260,119,216,145,176,177,122,234"/>
+<area shape="rect" id="Node000040" href="$namespacemod__fix__conserve.html#accd8011113a5f7b3efeec90d42bd9dad" title=" " alt="" coords="259,364,479,389"/>
+<area shape="poly" id="edge19_Node000001_Node000040" title=" " alt="" coords="127,256,184,298,260,342,300,357,299,362,258,347,181,302,124,261"/>
+<area shape="rect" id="Node000041" href="$namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="263,413,475,438"/>
+<area shape="poly" id="edge20_Node000001_Node000041" title=" " alt="" coords="120,257,173,326,213,366,260,399,273,406,271,411,257,404,210,370,169,329,116,260"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="882,177,872,167,877,157,895,151,926,149,965,153,976,158,980,164,975,167,973,162,964,158,926,154,896,156,881,161,877,166,886,174"/>
+<area shape="poly" id="edge6_Node000015_Node000002" title=" " alt="" coords="436,149,822,76,823,81,437,154"/>
+<area shape="poly" id="edge7_Node000015_Node000003" title=" " alt="" coords="478,166,809,181,809,186,478,172"/>
+<area shape="poly" id="edge8_Node000015_Node000014" title=" " alt="" coords="390,175,450,211,528,247,558,256,556,262,526,252,448,215,388,179"/>
+<area shape="poly" id="edge9_Node000015_Node000015" title=" " alt="" coords="327,153,318,143,322,133,340,127,369,125,405,129,415,134,419,139,415,142,412,138,404,134,369,130,341,132,326,137,323,142,331,150"/>
+<area shape="poly" id="edge10_Node000015_Node000021" title=" " alt="" coords="405,174,538,203,537,208,404,180"/>
+<area shape="poly" id="edge13_Node000015_Node000022" title=" " alt="" coords="412,149,526,100,615,73,617,78,528,105,414,154"/>
+<area shape="poly" id="edge11_Node000021_Node000003" title=" " alt="" coords="750,204,809,198,809,203,750,210"/>
+<area shape="poly" id="edge12_Node000021_Node000015" title=" " alt="" coords="584,200,491,181,492,176,585,195"/>
+<area shape="poly" id="edge14_Node000022_Node000002" title=" " alt="" coords="775,56,822,56,822,62,775,62"/>
+<area shape="poly" id="edge15_Node000022_Node000003" title=" " alt="" coords="680,69,887,167,884,172,678,74"/>
+<area shape="poly" id="edge16_Node000022_Node000015" title=" " alt="" coords="549,74,528,81,454,113,394,146,392,141,452,108,526,76,548,69"/>
 </map>

@@ -1,10 +1,11 @@
 <map id="mod_mhd_phys::mhd_mag_en_all" name="mod_mhd_phys::mhd_mag_en_all">
-<area shape="rect" id="Node000001" title="Compute 2 times total magnetic energy." alt="" coords="5,22,204,62"/>
+<area shape="rect" id="Node000001" title="Compute 2 times total magnetic energy." alt="" coords="5,59,204,99"/>
 <area shape="rect" id="Node000002" href="$namespacemod__mhd__phys.html#ac7bf1b8d5fd9dac730901cb6319ced4d" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="519,29,725,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,30,252,27,361,24,471,27,505,29,505,34,471,33,361,30,252,33,204,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,57,200,40,252,27,320,20,390,18,517,25,517,31,390,23,320,25,252,33,201,45,154,62"/>
 <area shape="rect" id="Node000013" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="252,67,471,92"/>
-<area shape="poly" id="edge3_Node000001_Node000013" title=" " alt="" coords="205,54,261,62,260,67,204,59"/>
+<area shape="poly" id="edge3_Node000001_Node000013" title=" " alt="" coords="204,85,239,86,238,91,204,91"/>
 <area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="580,31,571,21,576,11,593,5,622,3,659,7,669,11,673,17,668,20,665,15,657,12,622,8,594,10,579,15,576,20,584,27"/>
+<area shape="poly" id="edge6_Node000013_Node000001" title=" " alt="" coords="252,73,218,73,218,68,252,68"/>
 <area shape="poly" id="edge4_Node000013_Node000002" title=" " alt="" coords="450,64,519,54,520,59,451,69"/>
 <area shape="poly" id="edge5_Node000013_Node000013" title=" " alt="" coords="320,68,311,58,316,48,333,42,361,40,397,44,408,49,412,54,407,57,404,53,396,49,361,45,334,47,319,52,316,58,324,65"/>
 </map>
