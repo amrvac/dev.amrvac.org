@@ -8,16 +8,16 @@
 <area shape="poly" id="edge3_Node000001_Node000009" title=" " alt="" coords="164,193,227,173,301,156,369,148,437,144,563,144,563,149,437,150,369,154,302,161,228,178,166,198"/>
 <area shape="rect" id="Node000010" href="$namespacemod__mhd__phys.html#ac7bf1b8d5fd9dac730901cb6319ced4d" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="568,223,775,249"/>
 <area shape="poly" id="edge4_Node000001_Node000010" title=" " alt="" coords="201,218,302,231,432,237,554,237,554,242,432,242,301,236,201,223"/>
-<area shape="rect" id="Node000019" href="$namespacemod__gravity.html#aff7761066ee7cbde8f2b809c38f681c9" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="332,296,489,336"/>
-<area shape="poly" id="edge6_Node000001_Node000019" title=" " alt="" coords="162,218,302,275,340,289,338,294,300,280,160,223"/>
-<area shape="rect" id="Node000020" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="301,195,520,221"/>
-<area shape="poly" id="edge7_Node000001_Node000020" title=" " alt="" coords="254,214,287,214,287,220,254,220"/>
-<area shape="rect" id="Node000029" href="$namespacemod__radiative__cooling.html#a76304d7766df7b067cc8ab02651ba133" title=" " alt="" coords="324,361,497,415"/>
-<area shape="poly" id="edge13_Node000001_Node000029" title=" " alt="" coords="145,219,210,278,254,314,303,346,316,353,313,357,300,350,251,318,206,282,141,223"/>
+<area shape="rect" id="Node000016" href="$namespacemod__gravity.html#aff7761066ee7cbde8f2b809c38f681c9" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="332,296,489,336"/>
+<area shape="poly" id="edge6_Node000001_Node000016" title=" " alt="" coords="162,218,302,275,340,289,338,294,300,280,160,223"/>
+<area shape="rect" id="Node000017" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="301,195,520,221"/>
+<area shape="poly" id="edge7_Node000001_Node000017" title=" " alt="" coords="254,214,287,214,287,220,254,220"/>
+<area shape="rect" id="Node000026" href="$namespacemod__radiative__cooling.html#a76304d7766df7b067cc8ab02651ba133" title=" " alt="" coords="324,361,497,415"/>
+<area shape="poly" id="edge13_Node000001_Node000026" title=" " alt="" coords="145,219,210,278,254,314,303,346,316,353,313,357,300,350,251,318,206,282,141,223"/>
 <area shape="poly" id="edge5_Node000010_Node000010" title=" " alt="" coords="630,225,620,215,625,205,642,199,671,197,708,201,718,205,722,211,718,214,715,209,706,206,671,202,644,204,629,209,626,214,633,221"/>
-<area shape="poly" id="edge12_Node000020_Node000001" title=" " alt="" coords="301,202,267,202,267,196,301,197"/>
-<area shape="poly" id="edge8_Node000020_Node000008" title=" " alt="" coords="433,193,493,160,567,124,598,112,600,117,569,129,495,165,436,198"/>
-<area shape="poly" id="edge9_Node000020_Node000009" title=" " alt="" coords="470,193,597,165,599,170,471,198"/>
-<area shape="poly" id="edge10_Node000020_Node000010" title=" " alt="" coords="521,217,555,221,554,226,520,222"/>
-<area shape="poly" id="edge11_Node000020_Node000020" title=" " alt="" coords="369,197,360,187,364,177,382,171,411,169,447,173,457,177,461,183,457,186,454,181,446,178,411,174,383,176,368,181,365,186,373,193"/>
+<area shape="poly" id="edge12_Node000017_Node000001" title=" " alt="" coords="301,202,267,202,267,196,301,197"/>
+<area shape="poly" id="edge8_Node000017_Node000008" title=" " alt="" coords="433,193,493,160,567,124,598,112,600,117,569,129,495,165,436,198"/>
+<area shape="poly" id="edge9_Node000017_Node000009" title=" " alt="" coords="470,193,597,165,599,170,471,198"/>
+<area shape="poly" id="edge10_Node000017_Node000010" title=" " alt="" coords="521,217,555,221,554,226,520,222"/>
+<area shape="poly" id="edge11_Node000017_Node000017" title=" " alt="" coords="369,197,360,187,364,177,382,171,411,169,447,173,457,177,461,183,457,186,454,181,446,178,411,174,383,176,368,181,365,186,373,193"/>
 </map>

@@ -12,8 +12,8 @@
 <area shape="poly" id="edge13_Node000001_Node000025" title=" " alt="" coords="189,194,510,263,509,268,188,199"/>
 <area shape="rect" id="Node000030" href="$namespacemod__twofl__phys.html#a0b6ea9b7bc1afe2bc532ffa11e1ae6dc" title=" " alt="" coords="484,100,721,140"/>
 <area shape="poly" id="edge14_Node000001_Node000030" title=" " alt="" coords="188,157,236,149,356,136,470,126,470,131,356,141,236,155,189,162"/>
-<area shape="rect" id="Node000054" href="$namespacemod__constrained__transport.html#a25f8b180b123dbde3aeb06a78fe5d054" title="calculate magnetic field from vector potential A at cell edges" alt="" coords="236,380,436,420"/>
-<area shape="poly" id="edge9_Node000001_Node000054" title=" " alt="" coords="110,196,159,274,195,320,238,359,258,372,255,376,234,363,191,323,154,278,106,199"/>
+<area shape="rect" id="Node000048" href="$namespacemod__constrained__transport.html#a25f8b180b123dbde3aeb06a78fe5d054" title="calculate magnetic field from vector potential A at cell edges" alt="" coords="236,380,436,420"/>
+<area shape="poly" id="edge9_Node000001_Node000048" title=" " alt="" coords="110,196,159,274,195,320,238,359,258,372,255,376,234,363,191,323,154,278,106,199"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="353,162,409,125,483,86,509,76,511,81,485,90,412,130,356,167"/>
 <area shape="poly" id="edge3_Node000002_Node000006" title=" " alt="" coords="433,173,570,166,721,149,764,141,765,146,722,155,570,172,433,179"/>
 <area shape="poly" id="edge4_Node000002_Node000008" title=" " alt="" coords="433,187,484,193,756,218,756,224,484,199,432,193"/>

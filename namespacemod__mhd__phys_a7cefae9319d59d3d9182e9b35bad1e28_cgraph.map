@@ -4,12 +4,12 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,57,286,33,423,12,497,5,574,3,651,5,726,14,780,28,829,46,827,51,779,33,725,19,650,11,574,8,498,11,423,17,287,38,180,62"/>
 <area shape="rect" id="Node000003" href="$namespacemod__mhd__phys.html#ac7bf1b8d5fd9dac730901cb6319ced4d" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="519,53,725,79"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,69,252,66,505,62,505,68,252,71,204,74"/>
-<area shape="rect" id="Node000013" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="252,104,471,129"/>
-<area shape="poly" id="edge5_Node000001_Node000013" title=" " alt="" coords="185,97,238,105,238,110,185,102"/>
+<area shape="rect" id="Node000010" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="252,104,471,129"/>
+<area shape="poly" id="edge5_Node000001_Node000010" title=" " alt="" coords="185,97,238,105,238,110,185,102"/>
 <area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="726,63,760,63,760,69,726,69"/>
 <area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="582,55,573,45,578,35,594,29,622,27,657,31,667,35,671,41,666,44,663,39,656,36,622,32,595,34,581,39,578,44,586,51"/>
-<area shape="poly" id="edge9_Node000013_Node000001" title=" " alt="" coords="319,107,217,89,218,84,320,101"/>
-<area shape="poly" id="edge6_Node000013_Node000002" title=" " alt="" coords="471,109,593,102,725,89,791,79,792,84,726,94,593,107,471,115"/>
-<area shape="poly" id="edge7_Node000013_Node000003" title=" " alt="" coords="427,101,542,79,543,84,428,106"/>
-<area shape="poly" id="edge8_Node000013_Node000013" title=" " alt="" coords="320,106,311,96,316,86,333,79,361,77,397,81,408,86,412,92,407,95,404,90,396,86,361,83,334,85,319,90,316,95,324,102"/>
+<area shape="poly" id="edge9_Node000010_Node000001" title=" " alt="" coords="319,107,217,89,218,84,320,101"/>
+<area shape="poly" id="edge6_Node000010_Node000002" title=" " alt="" coords="471,109,593,102,725,89,791,79,792,84,726,94,593,107,471,115"/>
+<area shape="poly" id="edge7_Node000010_Node000003" title=" " alt="" coords="427,101,542,79,543,84,428,106"/>
+<area shape="poly" id="edge8_Node000010_Node000010" title=" " alt="" coords="320,106,311,96,316,86,333,79,361,77,397,81,408,86,412,92,407,95,404,90,396,86,361,83,334,85,319,90,316,95,324,102"/>
 </map>

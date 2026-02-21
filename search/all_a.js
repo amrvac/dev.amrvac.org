@@ -99,7 +99,7 @@ var searchData=
   ['get_5fte_5fhong_96',['get_te_hong',['../namespacemod__solar__atmosphere.html#ac80235c5be0c91f4dfd921b726742cfd',1,'mod_solar_atmosphere']]],
   ['get_5fte_5fsprm_97',['get_te_sprm',['../namespacemod__solar__atmosphere.html#a2dbcfc0f7092c84953105b1c77927189',1,'mod_solar_atmosphere']]],
   ['get_5fte_5fvalc_98',['get_te_valc',['../namespacemod__solar__atmosphere.html#a892d6ab8b9b15f8707618de289930c05',1,'mod_solar_atmosphere']]],
-  ['get_5ftemperature_5fequi_99',['get_temperature_equi',['../structmod__thermal__conduction_1_1tc__fluid.html#a9ede359a129a670fce65368cd8000303',1,'mod_thermal_conduction::tc_fluid']]],
+  ['get_5ftemperature_5fequi_99',['get_temperature_equi',['../structmod__radiative__cooling_1_1rc__fluid.html#a608000eb2d03dff87a5feb61dd79fc7f',1,'mod_radiative_cooling::rc_fluid::get_temperature_equi'],['../structmod__thermal__conduction_1_1tc__fluid.html#a9ede359a129a670fce65368cd8000303',1,'mod_thermal_conduction::tc_fluid::get_temperature_equi']]],
   ['get_5ftemperature_5ffrom_5fconserved_100',['get_temperature_from_conserved',['../structmod__thermal__conduction_1_1tc__fluid.html#a81195f666514824070c75855896e7cbd',1,'mod_thermal_conduction::tc_fluid']]],
   ['get_5ftemperature_5ffrom_5feint_101',['get_temperature_from_eint',['../structmod__thermal__conduction_1_1tc__fluid.html#a18cc4c4920a1008d841c1f55c6fbf70f',1,'mod_thermal_conduction::tc_fluid']]],
   ['get_5fthomson_5fparameters_102',['get_thomson_parameters',['../namespacemod__thermal__emission.html#a4b08eed08c0153a81eb2cc4e17f76d7d',1,'mod_thermal_emission']]],
