@@ -25,7 +25,7 @@ var searchData=
   ['uniterr_22',['uniterr',['../namespacemod__global__parameters.html#a6df6f15f09d7b08da4f73bed764e892d',1,'mod_global_parameters']]],
   ['unitpar_23',['unitpar',['../namespacemod__global__parameters.html#a2643b30397384bf36289b3afb2d7dda3',1,'mod_global_parameters']]],
   ['unitparticles_24',['unitparticles',['../namespacemod__particle__base.html#a7fa0c1f9f6dfe4f14fb5a8ee6f2ffa4c',1,'mod_particle_base']]],
-  ['units_25',['Units',['../md_doc_2python__datfiles.html#dat_units',1,'']]],
+  ['units_25',['units',['../md_doc_2amrvac__units.html',1,'Units'],['../md_doc_2python__datfiles.html#dat_units',1,'Units']]],
   ['unitslice_26',['unitslice',['../namespacemod__global__parameters.html#a046ac9605a9471e9c9cfe8b0881b7dcf',1,'mod_global_parameters']]],
   ['unitsnapshot_27',['unitsnapshot',['../namespacemod__global__parameters.html#ab64429a79897f7d8d4dff7d6471521e4',1,'mod_global_parameters']]],
   ['unitstdin_28',['unitstdin',['../namespacemod__global__parameters.html#a679b2b21305b119e9a86afff9b4e6330',1,'mod_global_parameters']]],

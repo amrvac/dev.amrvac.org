@@ -6,7 +6,8 @@ var searchData=
   ['alfvenwing_2emd_3',['alfvenwing.md',['../alfvenwing_8md.html',1,'']]],
   ['amrstructure_2emd_4',['amrstructure.md',['../amrstructure_8md.html',1,'']]],
   ['amrvac_2et_5',['amrvac.t',['../amrvac_8t.html',1,'']]],
-  ['amrvacusr_2emd_6',['amrvacusr.md',['../amrvacusr_8md.html',1,'']]],
-  ['analysis_2emd_7',['analysis.md',['../analysis_8md.html',1,'']]],
-  ['axial_2emd_8',['axial.md',['../axial_8md.html',1,'']]]
+  ['amrvac_5funits_2emd_6',['amrvac_units.md',['../amrvac__units_8md.html',1,'']]],
+  ['amrvacusr_2emd_7',['amrvacusr.md',['../amrvacusr_8md.html',1,'']]],
+  ['analysis_2emd_8',['analysis.md',['../analysis_8md.html',1,'']]],
+  ['axial_2emd_9',['axial.md',['../axial_8md.html',1,'']]]
 ];
