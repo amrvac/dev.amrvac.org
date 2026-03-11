@@ -1,6 +1,6 @@
 <map id="mod_tvd::tvdlimit2" name="mod_tvd::tvdlimit2">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,56,152,81"/>
-<area shape="rect" id="Node000002" href="$namespacemod__limiter.html#ad477e395652065ecae809c863f1c3cbd" title="Limit the centered dwC differences within ixC for iw in direction idim. The limiter is chosen accordi..." alt="" coords="200,5,379,31"/>
+<area shape="rect" id="Node000002" href="$namespacemod__limiter.html#a50fb37f8c6e29ff87426a51324c698dc" title="Limit the centered dwC differences within ixC for iw in direction idim. The limiter is chosen accordi..." alt="" coords="200,5,379,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,53,222,31,224,36,133,58"/>
 <area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="427,31,609,56"/>
 <area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="152,62,413,47,413,52,152,67"/>

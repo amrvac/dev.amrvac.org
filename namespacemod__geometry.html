@@ -112,6 +112,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:aa38fdb510ba28c2d2152f575d1ccf20f" id="r_aa38fdb510ba28c2d2152f575d1ccf20f"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__geometry.html#aa38fdb510ba28c2d2152f575d1ccf20f">divvectors</a> (qvec, ixil, ixol, divq)</td></tr>
 <tr class="memdesc:aa38fdb510ba28c2d2152f575d1ccf20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate divergence of a vector qvec within ixL using limited extrapolation to cell edges.  <br /></td></tr>
 <tr class="separator:aa38fdb510ba28c2d2152f575d1ccf20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a1cbda9481775027466abadd80e5850" id="r_a7a1cbda9481775027466abadd80e5850"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__geometry.html#a7a1cbda9481775027466abadd80e5850">laplacian</a> (q, ixil, ixol, laplq, nth_in)</td></tr>
+<tr class="separator:a7a1cbda9481775027466abadd80e5850"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9af21193cc064e92debf8e7b96f86a60" id="r_a9af21193cc064e92debf8e7b96f86a60"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__geometry.html#a9af21193cc064e92debf8e7b96f86a60">curlvector</a> (qvec, ixil, ixol, curlvec, idirmin, idirmin0, ndir0, fourthorder)</td></tr>
 <tr class="memdesc:a9af21193cc064e92debf8e7b96f86a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate curl of a vector qvec within ixL Options to employ standard second order CD evaluations use Gauss theorem for non-Cartesian grids use Stokes theorem for non-Cartesian grids.  <br /></td></tr>
 <tr class="separator:a9af21193cc064e92debf8e7b96f86a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -227,7 +229,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__geometry_8t_source.html#l00710">710</a> of file <a class="el" href="mod__geometry_8t_source.html">mod_geometry.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__geometry_8t_source.html#l00772">772</a> of file <a class="el" href="mod__geometry_8t_source.html">mod_geometry.t</a>.</p>
 
 </div>
 </div>
@@ -313,7 +315,7 @@ Variables</h2></td></tr>
 
 <p>Calculate idim transverse components of curl of a vector qvec within ixL Options to employ standard second order CD evaluations use Gauss theorem for non-Cartesian grids use Stokes theorem for non-Cartesian grids. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__geometry_8t_source.html#l01179">1179</a> of file <a class="el" href="mod__geometry_8t_source.html">mod_geometry.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__geometry_8t_source.html#l01241">1241</a> of file <a class="el" href="mod__geometry_8t_source.html">mod_geometry.t</a>.</p>
 
 </div>
 </div>
@@ -436,7 +438,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacemod__geometry_aa38fdb510ba28c2d2152f575d1ccf20f_cgraph.png" border="0" usemap="#anamespacemod__geometry_aa38fdb510ba28c2d2152f575d1ccf20f_cgraph" alt=""/></div>
 <map name="anamespacemod__geometry_aa38fdb510ba28c2d2152f575d1ccf20f_cgraph" id="anamespacemod__geometry_aa38fdb510ba28c2d2152f575d1ccf20f_cgraph">
 <area shape="rect" title="Calculate divergence of a vector qvec within ixL using limited extrapolation to cell edges." alt="" coords="5,31,201,56"/>
-<area shape="rect" href="namespacemod__limiter.html#ad477e395652065ecae809c863f1c3cbd" title="Limit the centered dwC differences within ixC for iw in direction idim. The limiter is chosen accordi..." alt="" coords="254,5,433,31"/>
+<area shape="rect" href="namespacemod__limiter.html#a50fb37f8c6e29ff87426a51324c698dc" title="Limit the centered dwC differences within ixC for iw in direction idim. The limiter is chosen accordi..." alt="" coords="254,5,433,31"/>
 <area shape="poly" title=" " alt="" coords="201,30,240,26,241,31,202,36"/>
 <area shape="rect" href="namespacemod__ppm.html#a37143b5a3fe36507d31095df4acecbd6" title=" " alt="" coords="249,55,437,80"/>
 <area shape="poly" title=" " alt="" coords="202,50,236,54,236,59,201,56"/>
@@ -690,12 +692,72 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacemod__geometry_acd1b9edd7157bf60764c69998f7a8d00_cgraph.png" border="0" usemap="#anamespacemod__geometry_acd1b9edd7157bf60764c69998f7a8d00_cgraph" alt=""/></div>
 <map name="anamespacemod__geometry_acd1b9edd7157bf60764c69998f7a8d00_cgraph" id="anamespacemod__geometry_acd1b9edd7157bf60764c69998f7a8d00_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,192,56"/>
-<area shape="rect" href="namespacemod__limiter.html#ad477e395652065ecae809c863f1c3cbd" title="Limit the centered dwC differences within ixC for iw in direction idim. The limiter is chosen accordi..." alt="" coords="245,5,423,31"/>
+<area shape="rect" href="namespacemod__limiter.html#a50fb37f8c6e29ff87426a51324c698dc" title="Limit the centered dwC differences within ixC for iw in direction idim. The limiter is chosen accordi..." alt="" coords="245,5,423,31"/>
 <area shape="poly" title=" " alt="" coords="192,31,231,26,232,32,193,36"/>
 <area shape="rect" href="namespacemod__ppm.html#a37143b5a3fe36507d31095df4acecbd6" title=" " alt="" coords="240,55,428,80"/>
 <area shape="poly" title=" " alt="" coords="193,50,227,54,226,59,192,56"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a7a1cbda9481775027466abadd80e5850" name="a7a1cbda9481775027466abadd80e5850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a1cbda9481775027466abadd80e5850">&#9670;&#160;</a></span>laplacian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_geometry::laplacian </td>
+          <td>(</td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(inout)&#160;</td>
+          <td class="paramname"><em>laplq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in), optional&#160;</td>
+          <td class="paramname"><em>nth_in</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__geometry_8t_source.html#l00714">714</a> of file <a class="el" href="mod__geometry_8t_source.html">mod_geometry.t</a>.</p>
 
 </div>
 </div>
