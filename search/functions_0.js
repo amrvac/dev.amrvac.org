@@ -37,7 +37,7 @@ var searchData=
   ['afld_5fget_5fopacity_34',['afld_get_opacity',['../namespacemod__afld.html#ad8704dc4f298466b7f931aae68dcb380',1,'mod_afld']]],
   ['afld_5fget_5fradflux_35',['afld_get_radflux',['../namespacemod__afld.html#a3ae4607d5a4b846f75b99c2e56e756c7',1,'mod_afld']]],
   ['afld_5fget_5fradpress_36',['afld_get_radpress',['../namespacemod__afld.html#a9af14da4ee0effb21d55f01e0410b0d1',1,'mod_afld']]],
-  ['afld_5finit_37',['afld_init',['../namespacemod__afld.html#a705680adea8d29d8250119dec25e4a70',1,'mod_afld']]],
+  ['afld_5finit_37',['afld_init',['../namespacemod__afld.html#aaf848524b8a0c3a1d1569cc7c81bb79b',1,'mod_afld']]],
   ['afld_5fparams_5fread_38',['afld_params_read',['../namespacemod__afld.html#af061aa858d2bb7d78828d23afbe78291',1,'mod_afld']]],
   ['afld_5fradforce_5fget_5fdt_39',['afld_radforce_get_dt',['../namespacemod__afld.html#a9a214ac74441479c883fac53192ddbad',1,'mod_afld']]],
   ['afld_5fsmooth_5fdiffcoef_40',['afld_smooth_diffcoef',['../namespacemod__afld.html#a0ce190d6c038097eb591a808d0c4525f',1,'mod_afld']]],

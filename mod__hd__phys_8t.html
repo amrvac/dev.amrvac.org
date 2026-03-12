@@ -105,6 +105,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a86518623ab235a1cf8ce7a29593d0599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0464902bc4be34094c08fafc7abf3488" id="r_a0464902bc4be34094c08fafc7abf3488"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a0464902bc4be34094c08fafc7abf3488">mod_hd_phys::hd_check_params</a></td></tr>
 <tr class="separator:a0464902bc4be34094c08fafc7abf3488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab04625654f7793f76b72d9b6f21b8956" id="r_ab04625654f7793f76b72d9b6f21b8956"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#ab04625654f7793f76b72d9b6f21b8956">mod_hd_phys::hd_set_mg_bounds</a></td></tr>
+<tr class="memdesc:ab04625654f7793f76b72d9b6f21b8956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the boundaries for the diffusion of E.  <br /></td></tr>
+<tr class="separator:ab04625654f7793f76b72d9b6f21b8956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30ec1e8a8a1d950022cca4a32374f6f3" id="r_a30ec1e8a8a1d950022cca4a32374f6f3"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a30ec1e8a8a1d950022cca4a32374f6f3">mod_hd_phys::hd_check_w</a> (primitive, ixil, ixol, w, flag)</td></tr>
 <tr class="memdesc:a30ec1e8a8a1d950022cca4a32374f6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns logical argument flag where values are ok.  <br /></td></tr>
 <tr class="separator:a30ec1e8a8a1d950022cca4a32374f6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,6 +129,18 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:af17430a2cacc3c6b8c497f916273daff" id="r_af17430a2cacc3c6b8c497f916273daff"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff">mod_hd_phys::hd_get_pthermal</a> (w, x, ixil, ixol, pth)</td></tr>
 <tr class="memdesc:af17430a2cacc3c6b8c497f916273daff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate thermal pressure=(gamma-1)*(e-0.5*m**2/rho) within ixO^L.  <br /></td></tr>
 <tr class="separator:af17430a2cacc3c6b8c497f916273daff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add267005e2cdcf46cdcf0c63a014ae55" id="r_add267005e2cdcf46cdcf0c63a014ae55"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#add267005e2cdcf46cdcf0c63a014ae55">mod_hd_phys::hd_get_pradiation</a> (w, x, ixil, ixol, prad)</td></tr>
+<tr class="memdesc:add267005e2cdcf46cdcf0c63a014ae55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate radiation pressure within ixO^L.  <br /></td></tr>
+<tr class="separator:add267005e2cdcf46cdcf0c63a014ae55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a442ffd0c5dde8292f1db0a7b95d895bc" id="r_a442ffd0c5dde8292f1db0a7b95d895bc"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a442ffd0c5dde8292f1db0a7b95d895bc">mod_hd_phys::hd_get_ptot</a> (w, x, ixil, ixol, ptot)</td></tr>
+<tr class="memdesc:a442ffd0c5dde8292f1db0a7b95d895bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates the sum of the gas pressure and max Prad tensor element  <br /></td></tr>
+<tr class="separator:a442ffd0c5dde8292f1db0a7b95d895bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca88bcdd2b9e28086f70746d466a59f" id="r_aaca88bcdd2b9e28086f70746d466a59f"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#aaca88bcdd2b9e28086f70746d466a59f">mod_hd_phys::hd_get_trad</a> (w, x, ixil, ixol, trad)</td></tr>
+<tr class="memdesc:aaca88bcdd2b9e28086f70746d466a59f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates radiation temperature.  <br /></td></tr>
+<tr class="separator:aaca88bcdd2b9e28086f70746d466a59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d425169b2267a6bc747bab19d62bfa5" id="r_a1d425169b2267a6bc747bab19d62bfa5"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a1d425169b2267a6bc747bab19d62bfa5">mod_hd_phys::hd_get_temperature_from_etot</a> (w, x, ixil, ixol, res)</td></tr>
+<tr class="memdesc:a1d425169b2267a6bc747bab19d62bfa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate temperature=p/rho when in e_ the total energy is stored.  <br /></td></tr>
+<tr class="separator:a1d425169b2267a6bc747bab19d62bfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ab9a58df979c6e5d1f183e012fb1842" id="r_a7ab9a58df979c6e5d1f183e012fb1842"><td class="memItemLeft" align="right" valign="top">double precision function, dimension(ixo^s), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a7ab9a58df979c6e5d1f183e012fb1842">mod_hd_phys::hd_kin_en</a> (w, ixil, ixol, inv_rho)</td></tr>
 <tr class="separator:a7ab9a58df979c6e5d1f183e012fb1842"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -149,6 +164,15 @@ Variables</h2></td></tr>
 <tr class="memitem:a08339a348bd234e4c3e376884a84d2b5" id="r_a08339a348bd234e4c3e376884a84d2b5"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a08339a348bd234e4c3e376884a84d2b5">mod_hd_phys::hd_dust</a> = .false.</td></tr>
 <tr class="memdesc:a08339a348bd234e4c3e376884a84d2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether dust is added.  <br /></td></tr>
 <tr class="separator:a08339a348bd234e4c3e376884a84d2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb1cd3b8199f58293156f08684d6ec27" id="r_adb1cd3b8199f58293156f08684d6ec27"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#adb1cd3b8199f58293156f08684d6ec27">mod_hd_phys::hd_dust_implicit</a> = .false.</td></tr>
+<tr class="memdesc:adb1cd3b8199f58293156f08684d6ec27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether dust is added using and implicit update in IMEX.  <br /></td></tr>
+<tr class="separator:adb1cd3b8199f58293156f08684d6ec27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28dc9b20c5e48a92be21ec83c36130eb" id="r_a28dc9b20c5e48a92be21ec83c36130eb"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a28dc9b20c5e48a92be21ec83c36130eb">mod_hd_phys::hd_radiation_fld</a> = .false.</td></tr>
+<tr class="memdesc:a28dc9b20c5e48a92be21ec83c36130eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether radiation-gas interaction is handled using flux limited diffusion.  <br /></td></tr>
+<tr class="separator:a28dc9b20c5e48a92be21ec83c36130eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5568ac6c22366019a7f89b95821ccf4" id="r_af5568ac6c22366019a7f89b95821ccf4"><td class="memItemLeft" align="right" valign="top">character(len=8), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#af5568ac6c22366019a7f89b95821ccf4">mod_hd_phys::hd_radiation_fld_formalism</a> = 'fld'</td></tr>
+<tr class="memdesc:af5568ac6c22366019a7f89b95821ccf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formalism to treat radiation: either fld or afld (anisotropic fld)  <br /></td></tr>
+<tr class="separator:af5568ac6c22366019a7f89b95821ccf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a323d2998e37c0a70c35f00b731fd077f" id="r_a323d2998e37c0a70c35f00b731fd077f"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a323d2998e37c0a70c35f00b731fd077f">mod_hd_phys::hd_viscosity</a> = .false.</td></tr>
 <tr class="memdesc:a323d2998e37c0a70c35f00b731fd077f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether viscosity is added.  <br /></td></tr>
 <tr class="separator:a323d2998e37c0a70c35f00b731fd077f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,6 +216,9 @@ Variables</h2></td></tr>
 <tr class="memitem:afa17866e94e20529b5f7fdca33e33c96" id="r_afa17866e94e20529b5f7fdca33e33c96"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#afa17866e94e20529b5f7fdca33e33c96">mod_hd_phys::p_</a></td></tr>
 <tr class="memdesc:afa17866e94e20529b5f7fdca33e33c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the gas pressure (-1 if not present) should equal e_.  <br /></td></tr>
 <tr class="separator:afa17866e94e20529b5f7fdca33e33c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c4408104292f266820dea08f29960b" id="r_a32c4408104292f266820dea08f29960b"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a32c4408104292f266820dea08f29960b">mod_hd_phys::r_e</a></td></tr>
+<tr class="memdesc:a32c4408104292f266820dea08f29960b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the radiation energy (when fld active)  <br /></td></tr>
+<tr class="separator:a32c4408104292f266820dea08f29960b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cc7155997b8b175aade4ce8dd028742" id="r_a5cc7155997b8b175aade4ce8dd028742"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a5cc7155997b8b175aade4ce8dd028742">mod_hd_phys::te_</a></td></tr>
 <tr class="memdesc:a5cc7155997b8b175aade4ce8dd028742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indices of temperature.  <br /></td></tr>
 <tr class="separator:a5cc7155997b8b175aade4ce8dd028742"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,6 +231,9 @@ Variables</h2></td></tr>
 <tr class="memitem:aac2850a6214916289ce973f155229153" id="r_aac2850a6214916289ce973f155229153"><td class="memItemLeft" align="right" valign="top">double precision, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#aac2850a6214916289ce973f155229153">mod_hd_phys::hd_adiab</a> = 1.0d0</td></tr>
 <tr class="memdesc:aac2850a6214916289ce973f155229153"><td class="mdescLeft">&#160;</td><td class="mdescRight">The adiabatic constant.  <br /></td></tr>
 <tr class="separator:aac2850a6214916289ce973f155229153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac32f9c2599d41880d0e6c33c6b8e838b" id="r_ac32f9c2599d41880d0e6c33c6b8e838b"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#ac32f9c2599d41880d0e6c33c6b8e838b">mod_hd_phys::small_r_e</a></td></tr>
+<tr class="memdesc:ac32f9c2599d41880d0e6c33c6b8e838b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The smallest allowed radiation energy (when fld active)  <br /></td></tr>
+<tr class="separator:ac32f9c2599d41880d0e6c33c6b8e838b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add6f7f0a2bbaf92bedef1f42ad7c5c9c" id="r_add6f7f0a2bbaf92bedef1f42ad7c5c9c"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#add6f7f0a2bbaf92bedef1f42ad7c5c9c">mod_hd_phys::hd_trac</a> = .false.</td></tr>
 <tr class="memdesc:add6f7f0a2bbaf92bedef1f42ad7c5c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether TRAC method is used.  <br /></td></tr>
 <tr class="separator:add6f7f0a2bbaf92bedef1f42ad7c5c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -225,6 +255,8 @@ Variables</h2></td></tr>
 <tr class="separator:a182282a752f3a793d371f78842eb2438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa427cd58a88ff4d3eaa2235bdd4c7970" id="r_aa427cd58a88ff4d3eaa2235bdd4c7970"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#aa427cd58a88ff4d3eaa2235bdd4c7970">mod_hd_phys::eq_state_units</a> = .true.</td></tr>
 <tr class="separator:aa427cd58a88ff4d3eaa2235bdd4c7970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a399388cbaca23e39549cca0e6d94b54b" id="r_a399388cbaca23e39549cca0e6d94b54b"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__get__pthermal.html">sub_get_pthermal</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a399388cbaca23e39549cca0e6d94b54b">mod_hd_phys::hd_get_rfactor</a> =&gt; null()</td></tr>
+<tr class="separator:a399388cbaca23e39549cca0e6d94b54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
