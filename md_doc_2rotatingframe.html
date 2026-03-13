@@ -122,7 +122,7 @@ S_e = \rho r (\omega_0 \sin \theta)**2 (v_r + v_\theta \cot \theta).
 <div class="line">/</div>
 </div><!-- fragment --><p> This value can be overwritten with a computed value in the mod_usr.t if the uniform angular frequency happens to depend on other user input parameters.</p>
 <h1>Numerics and implementation</h1>
-<p>The rotating frame physics module is found in <a class="el" href="mod__rotating__frame_8t.html">mod_rotating_frame.t</a>. This module has some subroutines that are called in the <a class="el" href="mod__hd__phys_8t.html">mod_hd_phys.t</a>, <a class="el" href="mod__mhd__phys_8t.html">mod_mhd_phys.t</a>, and <a class="el" href="mod__rhd__phys_8t.html">mod_rhd_phys.t</a> module to allow to initialise, compute, and add the fictitious forces to the physics governing equations.</p>
+<p>The rotating frame physics module is found in <a class="el" href="mod__rotating__frame_8t.html">mod_rotating_frame.t</a>. This module has some subroutines that are called in the <a class="el" href="mod__hd__phys_8t.html">mod_hd_phys.t</a>, <a class="el" href="mod__mhd__phys_8t.html">mod_mhd_phys.t</a>, and mod_rhd_phys.t module to allow to initialise, compute, and add the fictitious forces to the physics governing equations.</p>
 <h2>Primary subroutines</h2>
 <p><em>rotating_frame_add_source:</em> This subroutine computes the Coriolis and centrifugal contributions to the components of the momentum equation and the energy equation. Based on the geometry (cylindrical or spherical) and the problem dimension the source terms can assume different appearances. </p>
 </div></div><!-- contents -->

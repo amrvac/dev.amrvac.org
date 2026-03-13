@@ -1,7 +1,0 @@
-<map id="mod_rhd_roe::rhd_roe_init" name="mod_rhd_roe::rhd_roe_init">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,197,60"/>
-<area shape="rect" id="Node000002" href="$namespacemod__tvd.html#ae8748c5ff719141fefc2ac786f5b4acd" title=" " alt="" coords="256,5,409,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,33,242,27,243,32,198,38"/>
-<area shape="rect" id="Node000004" href="$namespacemod__rhd__phys.html#ac87b32c49731fdeb7b72d4cb8d3824dd" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="245,55,420,95"/>
-<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="198,56,232,60,231,66,197,62"/>
-</map>
