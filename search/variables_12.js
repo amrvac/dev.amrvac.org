@@ -60,7 +60,7 @@ var searchData=
   ['small_5fdensity_57',['small_density',['../namespacemod__global__parameters.html#ad147dadf78c6587c3b27c5c04039c808',1,'mod_global_parameters']]],
   ['small_5fe_58',['small_e',['../namespacemod__srhd__phys.html#a333c24b83da7f4900d72580a2ff66681',1,'mod_srhd_phys']]],
   ['small_5fpressure_59',['small_pressure',['../namespacemod__global__parameters.html#a19f0c8766e32f669bc7680685a55ea33',1,'mod_global_parameters']]],
-  ['small_5fr_5fe_60',['small_r_e',['../namespacemod__hd__phys.html#ac32f9c2599d41880d0e6c33c6b8e838b',1,'mod_hd_phys::small_r_e'],['../namespacemod__rmhd__phys.html#a42f75a7e2dec8fac5b943ac6e91a676f',1,'mod_rmhd_phys::small_r_e']]],
+  ['small_5fr_5fe_60',['small_r_e',['../namespacemod__hd__phys.html#ac32f9c2599d41880d0e6c33c6b8e838b',1,'mod_hd_phys::small_r_e'],['../namespacemod__mhd__phys.html#a1fc1963e3d3062a3c0b97f588d03faba',1,'mod_mhd_phys::small_r_e'],['../namespacemod__rmhd__phys.html#a42f75a7e2dec8fac5b943ac6e91a676f',1,'mod_rmhd_phys::small_r_e']]],
   ['small_5ftemperature_61',['small_temperature',['../namespacemod__global__parameters.html#a3730de6b193fa2d3fb50e979195ef518',1,'mod_global_parameters']]],
   ['small_5fvalues_5fdaverage_62',['small_values_daverage',['../namespacemod__small__values.html#a16ae31b4ca0d18f843c603e5f4c758d8',1,'mod_small_values']]],
   ['small_5fvalues_5ffix_5fiw_63',['small_values_fix_iw',['../namespacemod__small__values.html#abe16023a5fd2637dd995cf180d9791fa',1,'mod_small_values']]],

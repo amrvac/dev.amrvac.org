@@ -1,0 +1,6 @@
+<map id="mod_mhd_phys::mhd_get_temperature_from_etot" name="mod_mhd_phys::mhd_get_temperature_from_etot">
+<area shape="rect" id="Node000001" title="Calculate temperature=p/rho from total energy." alt="" coords="5,22,196,62"/>
+<area shape="rect" id="Node000002" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="244,29,463,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,39,230,39,230,45,196,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="313,31,304,21,308,11,325,5,353,3,389,7,399,11,403,17,398,20,395,15,387,12,353,8,326,10,312,15,309,20,317,27"/>
+</map>

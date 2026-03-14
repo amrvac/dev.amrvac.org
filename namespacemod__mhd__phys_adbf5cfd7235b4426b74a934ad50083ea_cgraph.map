@@ -1,0 +1,5 @@
+<map id="mod_mhd_phys::mhd_get_pthermal_plus_pradiation" name="mod_mhd_phys::mhd_get_pthermal_plus_pradiation">
+<area shape="rect" id="Node000001" title="Calculates the sum of the gas pressure and the max Prad tensor element." alt="" coords="5,5,200,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f" title="Calculate radiation pressure within ixO^L." alt="" coords="248,5,439,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
+</map>
