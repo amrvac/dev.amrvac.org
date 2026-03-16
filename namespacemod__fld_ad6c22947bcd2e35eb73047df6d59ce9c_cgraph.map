@@ -1,5 +1,5 @@
 <map id="mod_fld::fld_radforce_get_dt" name="mod_fld::fld_radforce_get_dt">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,164,63"/>
+<area shape="rect" id="Node000001" title="get dt limit for radiation force: NOTE: only uniform cartesian here!" alt="" coords="5,23,164,63"/>
 <area shape="rect" id="Node000002" href="$namespacemod__fld.html#a84e9e6eb8603ea5f429c6fab5477f778" title="Calculate fld flux limiter This subroutine calculates flux limiter lambda using the prescription stor..." alt="" coords="212,5,412,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,32,198,28,199,33,165,37"/>
 <area shape="rect" id="Node000006" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="460,31,643,56"/>

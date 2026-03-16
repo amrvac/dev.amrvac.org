@@ -60,7 +60,7 @@ var searchData=
   ['limiter_5fwenozp5_57',['limiter_wenozp5',['../namespacemod__limiter.html#a53d76f38ea25f2da49dbbaafbdb062ac',1,'mod_limiter']]],
   ['limiter_5fwenozp5nm_58',['limiter_wenozp5nm',['../namespacemod__limiter.html#ac93b384f9b7fa0a95bb99ee073b7c597',1,'mod_limiter']]],
   ['limiter_5fwoodward_59',['limiter_woodward',['../namespacemod__limiter.html#a6b071c7bc5981487fd9e54ff87a439f8',1,'mod_limiter']]],
-  ['lineforce_5fopacities_60',['lineforce_opacities',['../namespacemod__afld.html#a02ca3635375053ac0b5bcc38899646d3',1,'mod_afld::lineforce_opacities'],['../namespacemod__fld.html#a8adb0b2d41f252cf64683544a14b47ef',1,'mod_fld::lineforce_opacities']]],
+  ['lineforce_5fopacities_60',['lineforce_opacities',['../namespacemod__fld.html#a8adb0b2d41f252cf64683544a14b47ef',1,'mod_fld']]],
   ['ll_61',['ll',['../namespacemod__global__parameters.html#a66b6d102b0c1abd62b12a11b7fdb31b3',1,'mod_global_parameters']]],
   ['lmax_62',['lmax',['../namespacemod__pfss.html#ac7fc04cbbb1bd5cc6c6f8e2fd23ba9f5',1,'mod_pfss']]],
   ['local_5ftimestep_63',['local_timestep',['../namespacemod__global__parameters.html#a68bbb6233a821af90e2f693a636c0c8c',1,'mod_global_parameters']]],

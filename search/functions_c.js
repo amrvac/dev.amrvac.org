@@ -65,7 +65,7 @@ var searchData=
   ['mhd_5fe_5fto_5fei_62',['mhd_e_to_ei',['../namespacemod__mhd__phys.html#a2496b6220ad0dcae99878a0e22ca3e54',1,'mod_mhd_phys']]],
   ['mhd_5fei_5fto_5fe_63',['mhd_ei_to_e',['../namespacemod__mhd__phys.html#af0bab1b3ad07312a82c867579d3714b3',1,'mod_mhd_phys']]],
   ['mhd_5fface_5fto_5fcenter_64',['mhd_face_to_center',['../namespacemod__mhd__phys.html#ac54ab9cded448f662757e2a9fb5f8bd1',1,'mod_mhd_phys']]],
-  ['mhd_5fget_5fpradiation_65',['mhd_get_pradiation',['../namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f',1,'mod_mhd_phys']]],
+  ['mhd_5fget_5fpradiation_65',['mhd_get_pradiation',['../namespacemod__mhd__phys.html#afd3216bd53b9ab3b61ce50609e023caf',1,'mod_mhd_phys']]],
   ['mhd_5fget_5fpthermal_5fplus_5fpradiation_66',['mhd_get_pthermal_plus_pradiation',['../namespacemod__mhd__phys.html#adbf5cfd7235b4426b74a934ad50083ea',1,'mod_mhd_phys']]],
   ['mhd_5fget_5frho_67',['mhd_get_rho',['../namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c',1,'mod_mhd_phys']]],
   ['mhd_5fget_5ftemperature_5ffrom_5fetot_68',['mhd_get_temperature_from_etot',['../namespacemod__mhd__phys.html#aa60a8a40302808696f09aee80ee5ed36',1,'mod_mhd_phys']]],

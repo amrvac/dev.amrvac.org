@@ -108,9 +108,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:aa60a8a40302808696f09aee80ee5ed36" id="r_aa60a8a40302808696f09aee80ee5ed36"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aa60a8a40302808696f09aee80ee5ed36">mhd_get_temperature_from_etot</a> (w, x, ixil, ixol, res)</td></tr>
 <tr class="memdesc:aa60a8a40302808696f09aee80ee5ed36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate temperature=p/rho from total energy.  <br /></td></tr>
 <tr class="separator:aa60a8a40302808696f09aee80ee5ed36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa54055631ef9951dffe03b51ae8bc1f" id="r_aaa54055631ef9951dffe03b51ae8bc1f"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f">mhd_get_pradiation</a> (w, x, ixil, ixol, prad, nth)</td></tr>
-<tr class="memdesc:aaa54055631ef9951dffe03b51ae8bc1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate radiation pressure within ixO^L.  <br /></td></tr>
-<tr class="separator:aaa54055631ef9951dffe03b51ae8bc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd3216bd53b9ab3b61ce50609e023caf" id="r_afd3216bd53b9ab3b61ce50609e023caf"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#afd3216bd53b9ab3b61ce50609e023caf">mhd_get_pradiation</a> (w, x, ixil, ixol, prad)</td></tr>
+<tr class="memdesc:afd3216bd53b9ab3b61ce50609e023caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate radiation pressure within ixO^L.  <br /></td></tr>
+<tr class="separator:afd3216bd53b9ab3b61ce50609e023caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbf5cfd7235b4426b74a934ad50083ea" id="r_adbf5cfd7235b4426b74a934ad50083ea"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#adbf5cfd7235b4426b74a934ad50083ea">mhd_get_pthermal_plus_pradiation</a> (w, x, ixil, ixol, pth_plus_prad)</td></tr>
 <tr class="memdesc:adbf5cfd7235b4426b74a934ad50083ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the sum of the gas pressure and the max Prad tensor element.  <br /></td></tr>
 <tr class="separator:adbf5cfd7235b4426b74a934ad50083ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -527,13 +527,13 @@ Here is the call graph for this function:</div>
 <map name="anamespacemod__mhd__phys_ac7bf1b8d5fd9dac730901cb6319ced4d_cgraph" id="anamespacemod__mhd__phys_ac7bf1b8d5fd9dac730901cb6319ced4d_cgraph">
 <area shape="rect" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="5,191,212,217"/>
 <area shape="poly" title=" " alt="" coords="68,193,60,183,64,173,81,167,109,165,144,169,154,173,157,179,153,182,150,177,142,174,109,170,82,172,68,177,65,182,72,189"/>
-<area shape="rect" href="namespacemod__afld.html#a9a214ac74441479c883fac53192ddbad" title=" " alt="" coords="269,5,444,45"/>
+<area shape="rect" href="namespacemod__afld.html#a9a214ac74441479c883fac53192ddbad" title="get dt limit for radiation force: NOTE: only uniform cartesian here!" alt="" coords="269,5,444,45"/>
 <area shape="poly" title=" " alt="" coords="118,189,173,126,213,88,259,55,270,49,272,54,261,60,217,92,177,130,122,193"/>
 <area shape="rect" href="namespacemod__cak__force.html#a19ecb8dbb9c1221c6770dfba35d764f4" title="Check time step for total radiation contribution." alt="" coords="281,69,433,109"/>
 <area shape="poly" title=" " alt="" coords="129,189,186,155,259,119,276,112,278,117,261,124,189,160,132,194"/>
 <area shape="rect" href="namespacemod__geometry.html#a9af21193cc064e92debf8e7b96f86a60" title="Calculate curl of a vector qvec within ixL Options to employ standard second order CD evaluations use..." alt="" coords="260,134,453,159"/>
 <area shape="poly" title=" " alt="" coords="164,189,287,160,288,165,165,194"/>
-<area shape="rect" href="namespacemod__fld.html#ad6c22947bcd2e35eb73047df6d59ce9c" title=" " alt="" coords="277,184,436,224"/>
+<area shape="rect" href="namespacemod__fld.html#ad6c22947bcd2e35eb73047df6d59ce9c" title="get dt limit for radiation force: NOTE: only uniform cartesian here!" alt="" coords="277,184,436,224"/>
 <area shape="poly" title=" " alt="" coords="212,201,263,201,263,207,212,207"/>
 <area shape="rect" href="namespacemod__gravity.html#a5eb1ec889ca415bc59f25e73eb578b2d" title=" " alt="" coords="278,248,435,288"/>
 <area shape="poly" title=" " alt="" coords="160,214,266,242,265,247,158,219"/>
@@ -828,8 +828,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="aaa54055631ef9951dffe03b51ae8bc1f" name="aaa54055631ef9951dffe03b51ae8bc1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa54055631ef9951dffe03b51ae8bc1f">&#9670;&#160;</a></span>mhd_get_pradiation()</h2>
+<a id="afd3216bd53b9ab3b61ce50609e023caf" name="afd3216bd53b9ab3b61ce50609e023caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd3216bd53b9ab3b61ce50609e023caf">&#9670;&#160;</a></span>mhd_get_pradiation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -874,13 +874,7 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double precision, dimension(ixo^s, 1:ndim, 1:ndim), intent(out)&#160;</td>
-          <td class="paramname"><em>prad</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>nth</em>&#160;</td>
+          <td class="paramname"><em>prad</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -896,8 +890,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph" alt=""/></div>
-<map name="anamespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph" id="anamespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph">
+<div class="center"><img src="namespacemod__mhd__phys_afd3216bd53b9ab3b61ce50609e023caf_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_afd3216bd53b9ab3b61ce50609e023caf_cgraph" alt=""/></div>
+<map name="anamespacemod__mhd__phys_afd3216bd53b9ab3b61ce50609e023caf_cgraph" id="anamespacemod__mhd__phys_afd3216bd53b9ab3b61ce50609e023caf_cgraph">
 <area shape="rect" title="Calculate radiation pressure within ixO^L." alt="" coords="5,35,196,75"/>
 <area shape="rect" href="namespacemod__afld.html#a9af14da4ee0effb21d55f01e0410b0d1" title="Calculate Radiation Pressure Returns Radiation Pressure as tensor." alt="" coords="267,5,410,45"/>
 <area shape="poly" title=" " alt="" coords="196,40,253,33,254,38,196,46"/>
@@ -973,7 +967,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph" alt=""/></div>
 <map name="anamespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph" id="anamespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph">
 <area shape="rect" title="Calculates the sum of the gas pressure and the max Prad tensor element." alt="" coords="5,5,200,45"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f" title="Calculate radiation pressure within ixO^L." alt="" coords="248,5,439,45"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#afd3216bd53b9ab3b61ce50609e023caf" title="Calculate radiation pressure within ixO^L." alt="" coords="248,5,439,45"/>
 <area shape="poly" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
 </map>
 </div>
