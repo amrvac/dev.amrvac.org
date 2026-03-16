@@ -1,7 +1,0 @@
-<map id="mod_hd_phys::hd_get_ptot" name="mod_hd_phys::hd_get_ptot">
-<area shape="rect" id="Node000001" title="calculates the sum of the gas pressure and max Prad tensor element" alt="" coords="5,45,203,70"/>
-<area shape="rect" id="Node000002" href="$namespacemod__hd__phys.html#add267005e2cdcf46cdcf0c63a014ae55" title="Calculate radiation pressure within ixO^L." alt="" coords="251,5,415,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,42,236,36,237,41,196,47"/>
-<area shape="rect" id="Node000014" href="$namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="251,69,415,109"/>
-<area shape="poly" id="edge2_Node000001_Node000014" title=" " alt="" coords="196,67,237,73,236,79,195,73"/>
-</map>

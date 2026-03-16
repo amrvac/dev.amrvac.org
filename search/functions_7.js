@@ -13,7 +13,7 @@ var searchData=
   ['hd_5fget_5fcsound2_10',['hd_get_csound2',['../namespacemod__hd__phys.html#a44f30d12946c0f46f8c64c835aa589f6',1,'mod_hd_phys']]],
   ['hd_5fget_5fpradiation_11',['hd_get_pradiation',['../namespacemod__hd__phys.html#add267005e2cdcf46cdcf0c63a014ae55',1,'mod_hd_phys']]],
   ['hd_5fget_5fpthermal_12',['hd_get_pthermal',['../namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff',1,'mod_hd_phys']]],
-  ['hd_5fget_5fptot_13',['hd_get_ptot',['../namespacemod__hd__phys.html#a442ffd0c5dde8292f1db0a7b95d895bc',1,'mod_hd_phys']]],
+  ['hd_5fget_5fpthermal_5fplus_5fpradiation_13',['hd_get_pthermal_plus_pradiation',['../namespacemod__hd__phys.html#a13d7793c86b23b57fc9631c2588555fa',1,'mod_hd_phys']]],
   ['hd_5fget_5ftemperature_5ffrom_5fetot_14',['hd_get_temperature_from_etot',['../namespacemod__hd__phys.html#a1d425169b2267a6bc747bab19d62bfa5',1,'mod_hd_phys']]],
   ['hd_5fget_5ftrad_15',['hd_get_trad',['../namespacemod__hd__phys.html#aaca88bcdd2b9e28086f70746d466a59f',1,'mod_hd_phys']]],
   ['hd_5fhllc_5finit_16',['hd_hllc_init',['../namespacemod__hd__hllc.html#a0833bd009acd265827ed1d7fcba916b0',1,'mod_hd_hllc']]],

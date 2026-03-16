@@ -37,7 +37,7 @@ var searchData=
   ['fix_5fonelimiter1_34',['fix_onelimiter1',['../namespacemod__weno.html#a4879f4fc7f1091e5c65e3d452779786e',1,'mod_weno']]],
   ['fix_5fphi_5fcrossing_35',['fix_phi_crossing',['../namespacemod__particle__base.html#a9c80518aefdaa0a8b0e9d3252d377208',1,'mod_particle_base']]],
   ['flag_5fgrid_36',['flag_grid',['../interfacemod__usr__methods_1_1flag__grid.html#a74ce5167dafcefff0c67429ec83f143a',1,'mod_usr_methods::flag_grid']]],
-  ['fld_5fget_5fdiffcoef_5fcentral_37',['fld_get_diffcoef_central',['../namespacemod__fld.html#a7655ed0734cd3f508292a2549b19db7b',1,'mod_fld']]],
+  ['fld_5fget_5fdiffcoef_5fcentral_37',['fld_get_diffcoef_central',['../namespacemod__fld.html#a9b0b7d7aa83e732cd295b42e15e19e1b',1,'mod_fld']]],
   ['fld_5fget_5feddington_38',['fld_get_eddington',['../namespacemod__fld.html#ae4b0473cde5cb134920cc7505650e13b',1,'mod_fld']]],
   ['fld_5fget_5ffluxlimiter_39',['fld_get_fluxlimiter',['../namespacemod__fld.html#a84e9e6eb8603ea5f429c6fab5477f778',1,'mod_fld']]],
   ['fld_5fget_5fopacity_40',['fld_get_opacity',['../namespacemod__fld.html#a078e9ee0bdeb4d94763a97c2f009d9fd',1,'mod_fld']]],
@@ -47,9 +47,8 @@ var searchData=
   ['fld_5finit_44',['fld_init',['../namespacemod__fld.html#a962c482ab84628b0642b98fb2a2538b9',1,'mod_fld']]],
   ['fld_5fparams_5fread_45',['fld_params_read',['../namespacemod__fld.html#a2fab030adfe37e60459f2f6c8140f091',1,'mod_fld']]],
   ['fld_5fradforce_5fget_5fdt_46',['fld_radforce_get_dt',['../namespacemod__fld.html#ad6c22947bcd2e35eb73047df6d59ce9c',1,'mod_fld']]],
-  ['fld_5fsmooth_5fdiffcoef_47',['fld_smooth_diffcoef',['../namespacemod__fld.html#aca3f250fedcc3f1382b2d77a70b0313d',1,'mod_fld']]],
-  ['floortemperature_48',['floortemperature',['../namespacemod__radiative__cooling.html#aa19b525e143eab6061d44286ba2249c9',1,'mod_radiative_cooling']]],
-  ['forcedrefine_5fgrid_5fio_49',['forcedrefine_grid_io',['../namespacemod__errest.html#afc51c345dca154e0f6c3a3fe3bcfbfd3',1,'mod_errest']]],
-  ['frictional_5fvelocity_50',['frictional_velocity',['../namespacemod__magnetofriction.html#aa4a703b6c5a713294594ba0c13fa6d1c',1,'mod_magnetofriction']]],
-  ['fun_5fdestroy_51',['fun_destroy',['../interfacemod__particle__base_1_1fun__destroy.html#ad3f48d4f5d821d7c4e7cc2d3c25a444f',1,'mod_particle_base::fun_destroy']]]
+  ['floortemperature_47',['floortemperature',['../namespacemod__radiative__cooling.html#aa19b525e143eab6061d44286ba2249c9',1,'mod_radiative_cooling']]],
+  ['forcedrefine_5fgrid_5fio_48',['forcedrefine_grid_io',['../namespacemod__errest.html#afc51c345dca154e0f6c3a3fe3bcfbfd3',1,'mod_errest']]],
+  ['frictional_5fvelocity_49',['frictional_velocity',['../namespacemod__magnetofriction.html#aa4a703b6c5a713294594ba0c13fa6d1c',1,'mod_magnetofriction']]],
+  ['fun_5fdestroy_50',['fun_destroy',['../interfacemod__particle__base_1_1fun__destroy.html#ad3f48d4f5d821d7c4e7cc2d3c25a444f',1,'mod_particle_base::fun_destroy']]]
 ];

@@ -1,0 +1,8 @@
+<map id="mod_fld::fld_get_diffcoef_central" name="mod_fld::fld_get_diffcoef_central">
+<area shape="rect" id="Node000001" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="5,23,188,63"/>
+<area shape="rect" id="Node000002" href="$namespacemod__fld.html#a84e9e6eb8603ea5f429c6fab5477f778" title="Calculate fld flux limiter This subroutine calculates flux limiter lambda using the prescription stor..." alt="" coords="236,5,436,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,31,222,27,223,33,188,36"/>
+<area shape="rect" id="Node000003" href="$namespacemod__fld.html#a078e9ee0bdeb4d94763a97c2f009d9fd" title="Sets the opacity in the w&#45;array by calling mod_opal_opacity." alt="" coords="484,31,665,56"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="189,41,470,41,470,46,189,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="436,26,471,30,470,35,436,31"/>
+</map>
