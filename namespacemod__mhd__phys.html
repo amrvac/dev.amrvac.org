@@ -108,9 +108,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:aa60a8a40302808696f09aee80ee5ed36" id="r_aa60a8a40302808696f09aee80ee5ed36"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aa60a8a40302808696f09aee80ee5ed36">mhd_get_temperature_from_etot</a> (w, x, ixil, ixol, res)</td></tr>
 <tr class="memdesc:aa60a8a40302808696f09aee80ee5ed36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate temperature=p/rho from total energy.  <br /></td></tr>
 <tr class="separator:aa60a8a40302808696f09aee80ee5ed36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd3216bd53b9ab3b61ce50609e023caf" id="r_afd3216bd53b9ab3b61ce50609e023caf"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#afd3216bd53b9ab3b61ce50609e023caf">mhd_get_pradiation</a> (w, x, ixil, ixol, prad)</td></tr>
-<tr class="memdesc:afd3216bd53b9ab3b61ce50609e023caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate radiation pressure within ixO^L.  <br /></td></tr>
-<tr class="separator:afd3216bd53b9ab3b61ce50609e023caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa54055631ef9951dffe03b51ae8bc1f" id="r_aaa54055631ef9951dffe03b51ae8bc1f"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f">mhd_get_pradiation</a> (w, x, ixil, ixol, prad, nth)</td></tr>
+<tr class="memdesc:aaa54055631ef9951dffe03b51ae8bc1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate radiation pressure within ixO^L.  <br /></td></tr>
+<tr class="separator:aaa54055631ef9951dffe03b51ae8bc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbf5cfd7235b4426b74a934ad50083ea" id="r_adbf5cfd7235b4426b74a934ad50083ea"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#adbf5cfd7235b4426b74a934ad50083ea">mhd_get_pthermal_plus_pradiation</a> (w, x, ixil, ixol, pth_plus_prad)</td></tr>
 <tr class="memdesc:adbf5cfd7235b4426b74a934ad50083ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the sum of the gas pressure and the max Prad tensor element.  <br /></td></tr>
 <tr class="separator:adbf5cfd7235b4426b74a934ad50083ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -319,6 +319,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a7e6c4cce8bd6ad9a0cdbbf896986dc09" id="r_a7e6c4cce8bd6ad9a0cdbbf896986dc09"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a7e6c4cce8bd6ad9a0cdbbf896986dc09">mhd_radiation_fld</a> = .false.</td></tr>
 <tr class="memdesc:a7e6c4cce8bd6ad9a0cdbbf896986dc09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether radiation-gas interaction is handled using flux limited diffusion.  <br /></td></tr>
 <tr class="separator:a7e6c4cce8bd6ad9a0cdbbf896986dc09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c68666a3ff7679477d6b7a25458366a" id="r_a2c68666a3ff7679477d6b7a25458366a"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a2c68666a3ff7679477d6b7a25458366a">mhd_radiation_use_csrad</a> = .false.</td></tr>
+<tr class="memdesc:a2c68666a3ff7679477d6b7a25458366a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether mixed gas-radiation sound speed is used for cbounds in FLD.  <br /></td></tr>
+<tr class="separator:a2c68666a3ff7679477d6b7a25458366a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a158260e5457a12732d39ebce891f395a" id="r_a158260e5457a12732d39ebce891f395a"><td class="memItemLeft" align="right" valign="top">character(len=8), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a158260e5457a12732d39ebce891f395a">mhd_radiation_fld_formalism</a> = 'fld'</td></tr>
 <tr class="memdesc:a158260e5457a12732d39ebce891f395a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formalism to treat radiation: either fld or afld (anisotropic fld)  <br /></td></tr>
 <tr class="separator:a158260e5457a12732d39ebce891f395a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -445,7 +448,7 @@ Variables</h2></td></tr>
 
 <p>calculate magnetic field from vector potential </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08210">8210</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08287">8287</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -519,7 +522,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate idirmin and the idirmin:3 components of the common current array make sure that <a class="el" href="namespacemod__global__parameters.html#ac487446056522027f949f42ba64b2e11" title="store unstretched cell size of current level">dxlevel(^D)</a> is set correctly. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06207">6207</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06284">6284</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -598,7 +601,7 @@ Here is the call graph for this function:</div>
 
 <p>get dimensionless div B = |divB| * volume / area / |B| </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06173">6173</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06250">6250</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -652,7 +655,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l07356">7356</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l07433">7433</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -730,7 +733,7 @@ Here is the call graph for this function:</div>
 
 <p>Transform total energy to internal energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02187">2187</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02195">2195</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -786,7 +789,7 @@ Here is the call graph for this function:</div>
 
 <p>Transform internal energy to total energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02130">2130</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02138">2138</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -824,12 +827,12 @@ Here is the call graph for this function:</div>
 
 <p>calculate cell-center values from face-center values </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08145">8145</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08222">8222</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
-<a id="afd3216bd53b9ab3b61ce50609e023caf" name="afd3216bd53b9ab3b61ce50609e023caf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd3216bd53b9ab3b61ce50609e023caf">&#9670;&#160;</a></span>mhd_get_pradiation()</h2>
+<a id="aaa54055631ef9951dffe03b51ae8bc1f" name="aaa54055631ef9951dffe03b51ae8bc1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa54055631ef9951dffe03b51ae8bc1f">&#9670;&#160;</a></span>mhd_get_pradiation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -874,7 +877,13 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double precision, dimension(ixo^s, 1:ndim, 1:ndim), intent(out)&#160;</td>
-          <td class="paramname"><em>prad</em>&#160;</td>
+          <td class="paramname"><em>prad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>nth</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -886,12 +895,12 @@ Here is the call graph for this function:</div>
 
 <p>Calculate radiation pressure within ixO^L. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03975">3975</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04052">4052</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__mhd__phys_afd3216bd53b9ab3b61ce50609e023caf_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_afd3216bd53b9ab3b61ce50609e023caf_cgraph" alt=""/></div>
-<map name="anamespacemod__mhd__phys_afd3216bd53b9ab3b61ce50609e023caf_cgraph" id="anamespacemod__mhd__phys_afd3216bd53b9ab3b61ce50609e023caf_cgraph">
+<div class="center"><img src="namespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph" alt=""/></div>
+<map name="anamespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph" id="anamespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph">
 <area shape="rect" title="Calculate radiation pressure within ixO^L." alt="" coords="5,35,196,75"/>
 <area shape="rect" href="namespacemod__afld.html#a9af14da4ee0effb21d55f01e0410b0d1" title="Calculate Radiation Pressure Returns Radiation Pressure as tensor." alt="" coords="267,5,410,45"/>
 <area shape="poly" title=" " alt="" coords="196,40,253,33,254,38,196,46"/>
@@ -960,14 +969,14 @@ Here is the call graph for this function:</div>
 
 <p>Calculates the sum of the gas pressure and the max Prad tensor element. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03995">3995</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04072">4072</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph" alt=""/></div>
 <map name="anamespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph" id="anamespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph">
 <area shape="rect" title="Calculates the sum of the gas pressure and the max Prad tensor element." alt="" coords="5,5,200,45"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#afd3216bd53b9ab3b61ce50609e023caf" title="Calculate radiation pressure within ixO^L." alt="" coords="248,5,439,45"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f" title="Calculate radiation pressure within ixO^L." alt="" coords="248,5,439,45"/>
 <area shape="poly" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
 </map>
 </div>
@@ -1030,7 +1039,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l05329">5329</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l05406">5406</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1134,7 +1143,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate temperature=p/rho from total energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03910">3910</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03987">3987</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1207,7 +1216,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculates radiation temperature. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04016">4016</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04093">4093</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1293,19 +1302,21 @@ Here is the call graph for this function:</div>
 
 <p>Calculate v vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02621">2621</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02629">2629</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__mhd__phys_ad16a691811dcb9e9b616bdfdfc9ee0de_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_ad16a691811dcb9e9b616bdfdfc9ee0de_cgraph" alt=""/></div>
 <map name="anamespacemod__mhd__phys_ad16a691811dcb9e9b616bdfdfc9ee0de_cgraph" id="anamespacemod__mhd__phys_ad16a691811dcb9e9b616bdfdfc9ee0de_cgraph">
-<area shape="rect" title="Calculate v vector." alt="" coords="5,8,211,33"/>
-<area shape="rect" href="namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="525,8,708,33"/>
-<area shape="poly" title=" " alt="" coords="211,8,259,6,368,3,477,6,512,8,512,13,477,11,368,8,259,11,211,14"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="259,45,477,70"/>
-<area shape="poly" title=" " alt="" coords="197,30,266,40,265,46,196,36"/>
-<area shape="poly" title=" " alt="" coords="453,42,518,33,519,38,453,48"/>
-<area shape="poly" title=" " alt="" coords="328,47,319,37,324,27,340,21,368,18,403,22,413,27,417,33,412,36,409,31,402,27,368,24,341,26,327,31,324,36,332,43"/>
+<area shape="rect" title="Calculate v vector." alt="" coords="5,34,211,60"/>
+<area shape="rect" href="namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="525,46,708,72"/>
+<area shape="poly" title=" " alt="" coords="156,32,205,21,258,12,368,3,416,5,478,12,528,24,573,39,571,44,526,29,477,18,416,10,368,8,259,18,206,26,157,37"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f" title="Calculate radiation pressure within ixO^L." alt="" coords="273,27,463,67"/>
+<area shape="poly" title=" " alt="" coords="211,44,259,44,259,50,211,50"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="259,116,477,141"/>
+<area shape="poly" title=" " alt="" coords="150,57,314,109,312,114,149,62"/>
+<area shape="poly" title=" " alt="" coords="414,113,556,73,558,78,415,118"/>
+<area shape="poly" title=" " alt="" coords="328,117,319,107,324,97,340,91,368,89,403,93,413,98,417,104,412,106,409,102,402,98,368,94,341,96,327,101,324,107,332,114"/>
 </map>
 </div>
 
@@ -1357,7 +1368,7 @@ Here is the call graph for this function:</div>
 
 <p>Compute 2 times total magnetic energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06835">6835</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06912">6912</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1395,7 +1406,7 @@ Here is the call graph for this function:</div>
 <p>set added variable and equation for radiation energy</p>
 <p>Initiate radiation-closure module</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00307">307</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00309">309</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1493,7 +1504,7 @@ Here is the call graph for this function:</div>
 
 <p>Set the boundaries for the diffusion of E. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l01390">1390</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l01398">1398</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1555,7 +1566,7 @@ Here is the call graph for this function:</div>
 
 <p>multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as -mhd_eta_ambi/rho^2 The user may mask its value in the user file by implementing usr_mask_ambipolar subroutine </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04870">4870</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04947">4947</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1628,7 +1639,7 @@ Here is the call graph for this function:</div>
 
 <p>B0 field is force-free. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00182">182</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00184">184</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1646,7 +1657,7 @@ Here is the call graph for this function:</div>
 
 <p>To control divB=0 fix for boundary. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00180">180</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00182">182</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1717,7 +1728,7 @@ Here is the call graph for this function:</div>
 
 <p>clean initial divB </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00174">174</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00176">176</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1735,7 +1746,7 @@ Here is the call graph for this function:</div>
 
 <p>Add divB wave in Roe solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00172">172</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00174">174</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1769,7 +1780,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00178">178</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00180">180</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1839,7 +1850,7 @@ Here is the call graph for this function:</div>
 
 <p>whether split off equilibrium density and pressure </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00165">165</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00167">167</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2035,7 +2046,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether divB is computed with a fourth order approximation. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00170">170</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00172">172</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2053,7 +2064,7 @@ Here is the call graph for this function:</div>
 
 <p>whether dump full variables (when splitting is used) in a separate dat file </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00168">168</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00170">170</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2087,7 +2098,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00166">166</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00168">168</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2193,7 +2204,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00219">219</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00221">221</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2209,7 +2220,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00220">220</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00222">222</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2225,7 +2236,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00221">221</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00223">223</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2495,6 +2506,24 @@ Here is the call graph for this function:</div>
 
 <p>Formalism to treat radiation: either fld or afld (anisotropic fld) </p>
 
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00165">165</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a2c68666a3ff7679477d6b7a25458366a" name="a2c68666a3ff7679477d6b7a25458366a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c68666a3ff7679477d6b7a25458366a">&#9670;&#160;</a></span>mhd_radiation_use_csrad</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical, public, protected mod_mhd_phys::mhd_radiation_use_csrad = .false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether mixed gas-radiation sound speed is used for cbounds in FLD. </p>
+
 <p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00163">163</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
@@ -2601,7 +2630,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00217">217</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00219">219</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2617,7 +2646,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00216">216</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00218">218</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2743,7 +2772,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether numerical resistive heating is included when solving partial energy equation. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00186">186</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00188">188</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2833,7 +2862,7 @@ Here is the call graph for this function:</div>
 
 <p>type of fluid for radiative cooling </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00200">200</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00202">202</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2921,7 +2950,7 @@ Here is the call graph for this function:</div>
 
 <p>type of fluid for thermal conduction </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00196">196</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00198">198</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2975,7 +3004,7 @@ Here is the call graph for this function:</div>
 
 <p>type of fluid for thermal emission synthesis </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00198">198</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00200">200</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3027,7 +3056,7 @@ Here is the call graph for this function:</div>
 
 <p>Method type of constrained transport. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00192">192</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00194">194</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3045,7 +3074,7 @@ Here is the call graph for this function:</div>
 
 <p>Method type to clean divergence of B. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00190">190</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00192">192</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3061,7 +3090,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00215">215</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00217">217</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
