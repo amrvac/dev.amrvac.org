@@ -98,7 +98,7 @@ $(function() {
 </pre></li>
 <li>Add a convert method in <code>usr_init</code> subroutine (<code>use <a class="el" href="namespacemod__convert.html">mod_convert</a></code>): <pre class="fragment"> call add_convert_method2(dump_vars, 4, "jx jy jz sxr", "_aux_") 
 </pre> or <pre class="fragment"> call add_convert_method(dump_vars, 4, (/" jx", " jy", " jz", "sxr"/), "_aux_")
-</pre> The first way is preferred as because Fortran requires the strrings in an array to have the same length and extra spaces might be necessary for this. The last argument <code>_aux_</code> is the suffix added to <code>base_filename</code> in order to generate the name of the new dat file.</li>
+</pre> The first way is preferred as because Fortran requires the strings in an array to have the same length and extra spaces might be necessary for this. The last argument <code>_aux_</code> is the suffix added to <code>base_filename</code> in order to generate the name of the new dat file.</li>
 <li>Implement <code>dump_vars</code> function: <pre class="fragment"> function dump_vars(ixI^L, ixO^L, w, x, nwc) result(wnew)
    use mod_global_parameters
    use mod_thermal_emission
