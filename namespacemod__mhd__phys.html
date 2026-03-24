@@ -108,9 +108,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:aa60a8a40302808696f09aee80ee5ed36" id="r_aa60a8a40302808696f09aee80ee5ed36"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aa60a8a40302808696f09aee80ee5ed36">mhd_get_temperature_from_etot</a> (w, x, ixil, ixol, res)</td></tr>
 <tr class="memdesc:aa60a8a40302808696f09aee80ee5ed36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate temperature=p/rho from total energy.  <br /></td></tr>
 <tr class="separator:aa60a8a40302808696f09aee80ee5ed36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa54055631ef9951dffe03b51ae8bc1f" id="r_aaa54055631ef9951dffe03b51ae8bc1f"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f">mhd_get_pradiation</a> (w, x, ixil, ixol, prad, nth)</td></tr>
-<tr class="memdesc:aaa54055631ef9951dffe03b51ae8bc1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate radiation pressure within ixO^L.  <br /></td></tr>
-<tr class="separator:aaa54055631ef9951dffe03b51ae8bc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a5a271e1df245c2c00bbffca2083af" id="r_ac1a5a271e1df245c2c00bbffca2083af"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#ac1a5a271e1df245c2c00bbffca2083af">mhd_get_pradiation_from_prim</a> (w, x, ixil, ixol, prad, nth)</td></tr>
+<tr class="memdesc:ac1a5a271e1df245c2c00bbffca2083af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate radiation pressure within ixO^L.  <br /></td></tr>
+<tr class="separator:ac1a5a271e1df245c2c00bbffca2083af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbf5cfd7235b4426b74a934ad50083ea" id="r_adbf5cfd7235b4426b74a934ad50083ea"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#adbf5cfd7235b4426b74a934ad50083ea">mhd_get_pthermal_plus_pradiation</a> (w, x, ixil, ixol, pth_plus_prad)</td></tr>
 <tr class="memdesc:adbf5cfd7235b4426b74a934ad50083ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the sum of the gas pressure and the max Prad tensor element.  <br /></td></tr>
 <tr class="separator:adbf5cfd7235b4426b74a934ad50083ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -448,7 +448,7 @@ Variables</h2></td></tr>
 
 <p>calculate magnetic field from vector potential </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08283">8283</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08284">8284</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -522,7 +522,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate idirmin and the idirmin:3 components of the common current array make sure that <a class="el" href="namespacemod__global__parameters.html#ac487446056522027f949f42ba64b2e11" title="store unstretched cell size of current level">dxlevel(^D)</a> is set correctly. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06280">6280</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06281">6281</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -601,7 +601,7 @@ Here is the call graph for this function:</div>
 
 <p>get dimensionless div B = |divB| * volume / area / |B| </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06246">6246</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06247">6247</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -655,7 +655,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l07429">7429</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l07430">7430</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -827,18 +827,18 @@ Here is the call graph for this function:</div>
 
 <p>calculate cell-center values from face-center values </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08218">8218</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08219">8219</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
-<a id="aaa54055631ef9951dffe03b51ae8bc1f" name="aaa54055631ef9951dffe03b51ae8bc1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa54055631ef9951dffe03b51ae8bc1f">&#9670;&#160;</a></span>mhd_get_pradiation()</h2>
+<a id="ac1a5a271e1df245c2c00bbffca2083af" name="ac1a5a271e1df245c2c00bbffca2083af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a5a271e1df245c2c00bbffca2083af">&#9670;&#160;</a></span>mhd_get_pradiation_from_prim()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">subroutine, public mod_mhd_phys::mhd_get_pradiation </td>
+          <td class="memname">subroutine, public mod_mhd_phys::mhd_get_pradiation_from_prim </td>
           <td>(</td>
           <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(in)&#160;</td>
           <td class="paramname"><em>w</em>, </td>
@@ -895,12 +895,12 @@ Here is the call graph for this function:</div>
 
 <p>Calculate radiation pressure within ixO^L. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04052">4052</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04051">4051</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph" alt=""/></div>
-<map name="anamespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph" id="anamespacemod__mhd__phys_aaa54055631ef9951dffe03b51ae8bc1f_cgraph">
+<div class="center"><img src="namespacemod__mhd__phys_ac1a5a271e1df245c2c00bbffca2083af_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_ac1a5a271e1df245c2c00bbffca2083af_cgraph" alt=""/></div>
+<map name="anamespacemod__mhd__phys_ac1a5a271e1df245c2c00bbffca2083af_cgraph" id="anamespacemod__mhd__phys_ac1a5a271e1df245c2c00bbffca2083af_cgraph">
 <area shape="rect" title="Calculate radiation pressure within ixO^L." alt="" coords="5,35,196,75"/>
 <area shape="rect" href="namespacemod__afld.html#a9af14da4ee0effb21d55f01e0410b0d1" title="Calculate Radiation Pressure Returns Radiation Pressure as tensor." alt="" coords="267,5,410,45"/>
 <area shape="poly" title=" " alt="" coords="196,40,253,33,254,38,196,46"/>
@@ -969,14 +969,14 @@ Here is the call graph for this function:</div>
 
 <p>Calculates the sum of the gas pressure and the max Prad tensor element. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04072">4072</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04071">4071</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph" alt=""/></div>
 <map name="anamespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph" id="anamespacemod__mhd__phys_adbf5cfd7235b4426b74a934ad50083ea_cgraph">
 <area shape="rect" title="Calculates the sum of the gas pressure and the max Prad tensor element." alt="" coords="5,5,200,45"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f" title="Calculate radiation pressure within ixO^L." alt="" coords="248,5,439,45"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#ac1a5a271e1df245c2c00bbffca2083af" title="Calculate radiation pressure within ixO^L." alt="" coords="248,5,439,45"/>
 <area shape="poly" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
 </map>
 </div>
@@ -1039,7 +1039,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l05402">5402</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l05403">5403</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1143,7 +1143,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate temperature=p/rho from total energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03987">3987</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03986">3986</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1216,7 +1216,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculates radiation temperature. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04093">4093</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04094">4094</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1311,7 +1311,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Calculate v vector." alt="" coords="5,34,211,60"/>
 <area shape="rect" href="namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="525,46,708,72"/>
 <area shape="poly" title=" " alt="" coords="156,32,205,21,258,12,368,3,416,5,478,12,528,24,573,39,571,44,526,29,477,18,416,10,368,8,259,18,206,26,157,37"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f" title="Calculate radiation pressure within ixO^L." alt="" coords="273,27,463,67"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#ac1a5a271e1df245c2c00bbffca2083af" title="Calculate radiation pressure within ixO^L." alt="" coords="273,27,463,67"/>
 <area shape="poly" title=" " alt="" coords="211,44,259,44,259,50,211,50"/>
 <area shape="rect" href="namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="259,116,477,141"/>
 <area shape="poly" title=" " alt="" coords="150,57,314,109,312,114,149,62"/>
@@ -1368,7 +1368,7 @@ Here is the call graph for this function:</div>
 
 <p>Compute 2 times total magnetic energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06908">6908</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06909">6909</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1566,7 +1566,7 @@ Here is the call graph for this function:</div>
 
 <p>multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as -mhd_eta_ambi/rho^2 The user may mask its value in the user file by implementing usr_mask_ambipolar subroutine </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04943">4943</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04944">4944</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1577,7 +1577,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="132,336,150,284,183,208,206,167,233,126,264,88,300,55,324,41,326,46,303,59,268,92,237,129,210,170,188,211,155,286,137,337"/>
 <area shape="rect" href="namespacemod__fld.html#a93ccc025f000558bf6991d7ed2298e60" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles th..." alt="" coords="332,69,489,109"/>
 <area shape="poly" title=" " alt="" coords="134,335,156,293,192,235,240,173,269,144,300,119,318,109,321,113,303,124,272,148,244,176,196,238,161,296,139,337"/>
-<area shape="rect" href="namespacemod__afld.html#a292222016c4df688c77b80961c9b821b" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="339,133,482,173"/>
+<area shape="rect" href="namespacemod__afld.html#a7d56dc1049fcf0100bf84d216deced93" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="339,133,482,173"/>
 <area shape="poly" title=" " alt="" coords="138,335,201,263,247,220,300,183,325,171,328,176,303,188,251,224,205,267,142,338"/>
 <area shape="rect" href="namespacemod__cak__force.html#a6cf762353c1aecaa5af0c8c4371c11a0" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="335,197,487,237"/>
 <area shape="poly" title=" " alt="" coords="150,334,216,296,300,254,334,240,336,245,302,258,219,301,153,339"/>
@@ -1585,7 +1585,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="165,334,227,314,301,297,370,289,440,284,568,282,568,287,440,289,370,294,302,303,229,319,166,339"/>
 <area shape="rect" href="namespacemod__geometry.html#a34777249130c0a609ca96597bb403b30" title=" " alt="" coords="577,345,766,370"/>
 <area shape="poly" title=" " alt="" coords="205,359,302,371,411,375,520,371,563,368,563,373,520,376,411,380,301,376,204,365"/>
-<area shape="rect" href="namespacemod__fld.html#a9b0b7d7aa83e732cd295b42e15e19e1b" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="319,488,502,528"/>
+<area shape="rect" href="namespacemod__fld.html#a82f3a8b76f73a09b2200e80b59dcdfcf" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="319,488,502,528"/>
 <area shape="poly" title=" " alt="" coords="147,360,213,410,256,440,303,467,333,481,330,485,300,472,254,445,210,415,144,364"/>
 <area shape="rect" href="namespacemod__afld.html#ac6227c4f754590112d4ff98a4610cd87" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles th..." alt="" coords="339,552,482,592"/>
 <area shape="poly" title=" " alt="" coords="141,361,164,396,201,444,248,494,303,538,327,550,325,555,300,542,244,498,197,447,160,399,136,364"/>

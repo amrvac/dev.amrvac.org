@@ -72,7 +72,7 @@ var searchData=
   ['advection_20reaction_20diffusion_20module_69',['Advection-reaction-diffusion module',['../md_doc_2advection__reaction__diffusion.html',1,'']]],
   ['advection_5freaction_5fdiffusion_2emd_70',['advection_reaction_diffusion.md',['../advection__reaction__diffusion_8md.html',1,'']]],
   ['advectmf_71',['advectmf',['../namespacemod__magnetofriction.html#ab4dacf3b6be62b81df0772cef04ef26c',1,'mod_magnetofriction']]],
-  ['afld_5fget_5fdiffcoef_5fcentral_72',['afld_get_diffcoef_central',['../namespacemod__afld.html#a292222016c4df688c77b80961c9b821b',1,'mod_afld']]],
+  ['afld_5fget_5fdiffcoef_5fcentral_72',['afld_get_diffcoef_central',['../namespacemod__afld.html#a7d56dc1049fcf0100bf84d216deced93',1,'mod_afld']]],
   ['afld_5fget_5feddington_73',['afld_get_eddington',['../namespacemod__afld.html#af62a3a09185251d685c0fc17dca38fe0',1,'mod_afld']]],
   ['afld_5fget_5ffluxlimiter_74',['afld_get_fluxlimiter',['../namespacemod__afld.html#a534fb3f2e92a62c9e7518f901ce3ae57',1,'mod_afld']]],
   ['afld_5fget_5fopacity_75',['afld_get_opacity',['../namespacemod__afld.html#ad8704dc4f298466b7f931aae68dcb380',1,'mod_afld']]],

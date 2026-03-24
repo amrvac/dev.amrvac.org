@@ -196,7 +196,7 @@ var searchData=
   ['mhd_5fetah_193',['mhd_etah',['../namespacemod__mhd__phys.html#acafe52e5e4a53022fe975f43b8b581bc',1,'mod_mhd_phys']]],
   ['mhd_5fface_5fto_5fcenter_194',['mhd_face_to_center',['../namespacemod__mhd__phys.html#ac54ab9cded448f662757e2a9fb5f8bd1',1,'mod_mhd_phys']]],
   ['mhd_5fgamma_195',['mhd_gamma',['../namespacemod__mhd__phys.html#a3d13dc1cdbc277393bc68ed25e0fa5af',1,'mod_mhd_phys']]],
-  ['mhd_5fget_5fpradiation_196',['mhd_get_pradiation',['../namespacemod__mhd__phys.html#aaa54055631ef9951dffe03b51ae8bc1f',1,'mod_mhd_phys']]],
+  ['mhd_5fget_5fpradiation_5ffrom_5fprim_196',['mhd_get_pradiation_from_prim',['../namespacemod__mhd__phys.html#ac1a5a271e1df245c2c00bbffca2083af',1,'mod_mhd_phys']]],
   ['mhd_5fget_5fpthermal_197',['mhd_get_pthermal',['../namespacemod__mhd__phys.html#aeddcf4396bdbd06b2f285c4e717554f4',1,'mod_mhd_phys']]],
   ['mhd_5fget_5fpthermal_5fplus_5fpradiation_198',['mhd_get_pthermal_plus_pradiation',['../namespacemod__mhd__phys.html#adbf5cfd7235b4426b74a934ad50083ea',1,'mod_mhd_phys']]],
   ['mhd_5fget_5frfactor_199',['mhd_get_rfactor',['../namespacemod__mhd__phys.html#a8c0dccc2f796ee07fb431af1ba1a1dc1',1,'mod_mhd_phys']]],

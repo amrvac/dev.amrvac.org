@@ -1,7 +1,7 @@
 <map id="mod_hd_phys::hd_get_pthermal_plus_pradiation" name="mod_hd_phys::hd_get_pthermal_plus_pradiation">
 <area shape="rect" id="Node000001" title="calculates the sum of the gas pressure and max Prad tensor element" alt="" coords="5,37,200,77"/>
-<area shape="rect" id="Node000002" href="$namespacemod__hd__phys.html#add267005e2cdcf46cdcf0c63a014ae55" title="Calculate radiation pressure within ixO^L." alt="" coords="248,5,412,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,41,234,36,235,41,201,46"/>
-<area shape="rect" id="Node000014" href="$namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="248,69,412,109"/>
-<area shape="poly" id="edge2_Node000001_Node000014" title=" " alt="" coords="201,68,235,73,234,79,200,74"/>
+<area shape="rect" id="Node000002" href="$namespacemod__hd__phys.html#a8eee4cec38852b0284388d7e13a774ee" title="Calculate radiation pressure within ixO^L." alt="" coords="248,5,419,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,41,234,36,235,42,200,46"/>
+<area shape="rect" id="Node000014" href="$namespacemod__hd__phys.html#aad11607293a89d08bdde26526a32bcd4" title="Transform conservative variables into primitive ones." alt="" coords="255,69,411,109"/>
+<area shape="poly" id="edge2_Node000001_Node000014" title=" " alt="" coords="200,68,242,74,241,79,200,73"/>
 </map>

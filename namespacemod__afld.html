@@ -129,9 +129,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:aebb6f45fae873e367229e0d1c201a299" id="r_aebb6f45fae873e367229e0d1c201a299"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__afld.html#aebb6f45fae873e367229e0d1c201a299">put_diffterm_onegrid</a> (ixil, ixol, w)</td></tr>
 <tr class="memdesc:aebb6f45fae873e367229e0d1c201a299"><td class="mdescLeft">&#160;</td><td class="mdescRight">inplace update of psa==&gt;F_im(psa)  <br /></td></tr>
 <tr class="separator:aebb6f45fae873e367229e0d1c201a299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a292222016c4df688c77b80961c9b821b" id="r_a292222016c4df688c77b80961c9b821b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__afld.html#a292222016c4df688c77b80961c9b821b">afld_get_diffcoef_central</a> (w, wct, x, ixil, ixol)</td></tr>
-<tr class="memdesc:a292222016c4df688c77b80961c9b821b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates cell-centered diffusion coefficient to be used in multigrid.  <br /></td></tr>
-<tr class="separator:a292222016c4df688c77b80961c9b821b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d56dc1049fcf0100bf84d216deced93" id="r_a7d56dc1049fcf0100bf84d216deced93"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__afld.html#a7d56dc1049fcf0100bf84d216deced93">afld_get_diffcoef_central</a> (w, wct, wctprim, x, ixil, ixol, primitives_filled)</td></tr>
+<tr class="memdesc:a7d56dc1049fcf0100bf84d216deced93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates cell-centered diffusion coefficient to be used in multigrid.  <br /></td></tr>
+<tr class="separator:a7d56dc1049fcf0100bf84d216deced93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d5289df9bf8e1e13a2af0815ef926a5" id="r_a9d5289df9bf8e1e13a2af0815ef926a5"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__afld.html#a9d5289df9bf8e1e13a2af0815ef926a5">update_diffcoeff</a> (psa)</td></tr>
 <tr class="separator:a9d5289df9bf8e1e13a2af0815ef926a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a9232590db897662fda786c71365a09" id="r_a9a9232590db897662fda786c71365a09"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__afld.html#a9a9232590db897662fda786c71365a09">energy_interaction</a> (w, wct, x, ixil, ixol)</td></tr>
@@ -316,8 +316,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a292222016c4df688c77b80961c9b821b" name="a292222016c4df688c77b80961c9b821b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a292222016c4df688c77b80961c9b821b">&#9670;&#160;</a></span>afld_get_diffcoef_central()</h2>
+<a id="a7d56dc1049fcf0100bf84d216deced93" name="a7d56dc1049fcf0100bf84d216deced93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d56dc1049fcf0100bf84d216deced93">&#9670;&#160;</a></span>afld_get_diffcoef_central()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,6 +333,12 @@ Here is the call graph for this function:</div>
           <td></td>
           <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(in)&#160;</td>
           <td class="paramname"><em>wct</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(in)&#160;</td>
+          <td class="paramname"><em>wctprim</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -362,7 +368,13 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>l</em>&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">logical, intent(in)&#160;</td>
+          <td class="paramname"><em>primitives_filled</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -375,12 +387,12 @@ Here is the call graph for this function:</div>
 <p>Calculates cell-centered diffusion coefficient to be used in multigrid. </p>
 <p>calculate diffusion coefficient</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00608">608</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00607">607</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__afld_a292222016c4df688c77b80961c9b821b_cgraph.png" border="0" usemap="#anamespacemod__afld_a292222016c4df688c77b80961c9b821b_cgraph" alt=""/></div>
-<map name="anamespacemod__afld_a292222016c4df688c77b80961c9b821b_cgraph" id="anamespacemod__afld_a292222016c4df688c77b80961c9b821b_cgraph">
+<div class="center"><img src="namespacemod__afld_a7d56dc1049fcf0100bf84d216deced93_cgraph.png" border="0" usemap="#anamespacemod__afld_a7d56dc1049fcf0100bf84d216deced93_cgraph" alt=""/></div>
+<map name="anamespacemod__afld_a7d56dc1049fcf0100bf84d216deced93_cgraph" id="anamespacemod__afld_a7d56dc1049fcf0100bf84d216deced93_cgraph">
 <area shape="rect" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="5,35,148,75"/>
 <area shape="rect" href="namespacemod__afld.html#a534fb3f2e92a62c9e7518f901ce3ae57" title="Calculate fld flux limiter This subroutine calculates flux limiter lambda using the prescription stor..." alt="" coords="196,5,339,45"/>
 <area shape="poly" title=" " alt="" coords="148,41,182,36,183,41,148,46"/>
@@ -1004,7 +1016,7 @@ Here is the call graph for this function:</div>
 
 <p>Find the root of the 4th degree polynomial using the bisection method. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00733">733</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00734">734</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1052,7 +1064,7 @@ Here is the call graph for this function:</div>
 
 <p>Evaluate second derivative of polynomial at argument e_gas. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00875">875</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00876">876</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1169,7 @@ Here is the call graph for this function:</div>
 
 <p>Evaluate first derivative of polynomial at argument e_gas. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00865">865</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00866">866</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
 
 </div>
 </div>
@@ -1226,7 +1238,7 @@ Here is the call graph for this function:</div>
 <p>Beginning of module substracted wCT Ekin So now add wCT Ekin</p>
 <p>Update rad-energy in w</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00654">654</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00655">655</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1433,7 +1445,7 @@ Here is the call graph for this function:</div>
 <p>Find the root of the 4th degree polynomial using the Halley method. </p>
 <p>Compare error with dx = dx/dy dy</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00824">824</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00825">825</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1496,7 +1508,7 @@ Here is the call graph for this function:</div>
 <p>Find the root of the 4th degree polynomial using the Newton-Ralphson method. </p>
 <p>Compare error with dx = dx/dy dy</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00795">795</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00796">796</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1549,7 +1561,7 @@ Here is the call graph for this function:</div>
 
 <p>Evaluate polynomial at argument e_gas. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00855">855</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00856">856</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
 
 </div>
 </div>
@@ -1599,7 +1611,7 @@ Here is the call graph for this function:</div>
 
 <p>inplace update of psa==&gt;F_im(psa) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00587">587</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00586">586</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
 
 </div>
 </div>
@@ -1619,14 +1631,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00634">634</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__afld_8t_source.html#l00635">635</a> of file <a class="el" href="mod__afld_8t_source.html">mod_afld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__afld_a9d5289df9bf8e1e13a2af0815ef926a5_cgraph.png" border="0" usemap="#anamespacemod__afld_a9d5289df9bf8e1e13a2af0815ef926a5_cgraph" alt=""/></div>
 <map name="anamespacemod__afld_a9d5289df9bf8e1e13a2af0815ef926a5_cgraph" id="anamespacemod__afld_a9d5289df9bf8e1e13a2af0815ef926a5_cgraph">
 <area shape="rect" title=" " alt="" coords="5,13,200,38"/>
-<area shape="rect" href="namespacemod__afld.html#a292222016c4df688c77b80961c9b821b" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="248,5,391,45"/>
+<area shape="rect" href="namespacemod__afld.html#a7d56dc1049fcf0100bf84d216deced93" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="248,5,391,45"/>
 <area shape="poly" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
 </map>
 </div>
