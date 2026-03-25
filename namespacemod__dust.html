@@ -115,9 +115,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:ae9efdbe1728135dcefe096391d55bff8" id="r_ae9efdbe1728135dcefe096391d55bff8"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#ae9efdbe1728135dcefe096391d55bff8">dust_implicit_update</a> (dtfactor, qdt, qtc, psb, psa)</td></tr>
 <tr class="memdesc:ae9efdbe1728135dcefe096391d55bff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implicit solve of psb=psa+dtfactor*dt*F_im(psb)  <br /></td></tr>
 <tr class="separator:ae9efdbe1728135dcefe096391d55bff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d8c76b0490b5244ac2333d9f81b6d0c" id="r_a6d8c76b0490b5244ac2333d9f81b6d0c"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a6d8c76b0490b5244ac2333d9f81b6d0c">dust_get_dt</a> (w, ixil, ixol, dtnew, dxd, x)</td></tr>
-<tr class="memdesc:a6d8c76b0490b5244ac2333d9f81b6d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get dt related to dust and gas stopping time (Laibe 2011)  <br /></td></tr>
-<tr class="separator:a6d8c76b0490b5244ac2333d9f81b6d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13dbe02ea509aae4cc58d06d947c854" id="r_ae13dbe02ea509aae4cc58d06d947c854"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#ae13dbe02ea509aae4cc58d06d947c854">dust_get_dt</a> (wprim, ixil, ixol, dtnew, dxd, x)</td></tr>
+<tr class="memdesc:ae13dbe02ea509aae4cc58d06d947c854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get dt related to dust and gas stopping time (Laibe 2011)  <br /></td></tr>
+<tr class="separator:ae13dbe02ea509aae4cc58d06d947c854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8f0323bbd86a80c96eb9cdd1838cd46" id="r_aa8f0323bbd86a80c96eb9cdd1838cd46"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#aa8f0323bbd86a80c96eb9cdd1838cd46">dust_get_cmax</a> (w, x, ixil, ixol, idim, cmax, cmin)</td></tr>
 <tr class="separator:aa8f0323bbd86a80c96eb9cdd1838cd46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1c2ed9a82c30e325a4a2a2922e0f409" id="r_ac1c2ed9a82c30e325a4a2a2922e0f409"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#ac1c2ed9a82c30e325a4a2a2922e0f409">dust_get_cmax_prim</a> (w, x, ixil, ixol, idim, cmax, cmin)</td></tr>
@@ -229,7 +229,7 @@ Variables</h2></td></tr>
 
 <p>w[iw]= w[iw]+qdt*S[wCT, x] where S is the source based on wCT within ixO </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00529">529</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00531">531</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -331,7 +331,7 @@ Variables</h2></td></tr>
 
 <p>inplace update of psa==&gt;F_im(psa) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00582">582</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00584">584</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -403,7 +403,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01010">1010</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01017">1017</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -475,12 +475,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01034">1034</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01041">1041</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
-<a id="a6d8c76b0490b5244ac2333d9f81b6d0c" name="a6d8c76b0490b5244ac2333d9f81b6d0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d8c76b0490b5244ac2333d9f81b6d0c">&#9670;&#160;</a></span>dust_get_dt()</h2>
+<a id="ae13dbe02ea509aae4cc58d06d947c854" name="ae13dbe02ea509aae4cc58d06d947c854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae13dbe02ea509aae4cc58d06d947c854">&#9670;&#160;</a></span>dust_get_dt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,7 +489,7 @@ Variables</h2></td></tr>
           <td class="memname">subroutine, public mod_dust::dust_get_dt </td>
           <td>(</td>
           <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(in)&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
+          <td class="paramname"><em>wprim</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -549,7 +549,7 @@ Variables</h2></td></tr>
 
 <p>Get dt related to dust and gas stopping time (Laibe 2011) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00897">897</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00899">899</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -731,7 +731,7 @@ Variables</h2></td></tr>
 
 <p>Implicit solve of psb=psa+dtfactor*dt*F_im(psb) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00651">651</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00653">653</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>

@@ -93,7 +93,7 @@ var searchData=
   ['get_5fwhitelight_5fthomson_90',['get_whitelight_thomson',['../namespacemod__thermal__emission.html#a9e319fe31c0619dc7c7e36f224c15a0f',1,'mod_thermal_emission']]],
   ['getbc_91',['getbc',['../namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6',1,'mod_ghostcells_update']]],
   ['getcmaxfff_92',['getcmaxfff',['../namespacemod__magnetofriction.html#a57c1f8bf0d9d1e2cda19442698a0cc7c',1,'mod_magnetofriction']]],
-  ['getdt_5fcourant_93',['getdt_courant',['../mod__dt_8t.html#a25e173fa0bc698beb16f038958bcf900',1,'mod_dt.t']]],
+  ['getdt_5fcourant_5fand_5fphys_93',['getdt_courant_and_phys',['../mod__dt_8t.html#a421480fbcdea5251c29ae400e7df942c',1,'mod_dt.t']]],
   ['getdtfff_5fcourant_94',['getdtfff_courant',['../namespacemod__magnetofriction.html#a1dacdad96eabfb8e026e4f7e764b98e1',1,'mod_magnetofriction']]],
   ['getfluxmf_95',['getfluxmf',['../namespacemod__magnetofriction.html#a29bc4abe418f3324208b70d329f69cb2',1,'mod_magnetofriction']]],
   ['getheadernames_96',['getheadernames',['../namespacemod__calculate__xw.html#a3c777f366638d870c023352a16d4ef2e',1,'mod_calculate_xw']]],
@@ -108,6 +108,6 @@ var searchData=
   ['gradientl_105',['gradientl',['../namespacemod__geometry.html#acd1b9edd7157bf60764c69998f7a8d00',1,'mod_geometry']]],
   ['grav_5fparams_5fread_106',['grav_params_read',['../namespacemod__gravity.html#ab7d092c1b27307517cbb8bd631519932',1,'mod_gravity']]],
   ['gravity_5fadd_5fsource_107',['gravity_add_source',['../namespacemod__gravity.html#aff7761066ee7cbde8f2b809c38f681c9',1,'mod_gravity']]],
-  ['gravity_5fget_5fdt_108',['gravity_get_dt',['../namespacemod__gravity.html#a5eb1ec889ca415bc59f25e73eb578b2d',1,'mod_gravity']]],
+  ['gravity_5fget_5fdt_108',['gravity_get_dt',['../namespacemod__gravity.html#a831142d24c1d9520a6d05108a2b265ef',1,'mod_gravity']]],
   ['gravity_5finit_109',['gravity_init',['../namespacemod__gravity.html#ac77da47869e83fdec592fa926333722c',1,'mod_gravity']]]
 ];
