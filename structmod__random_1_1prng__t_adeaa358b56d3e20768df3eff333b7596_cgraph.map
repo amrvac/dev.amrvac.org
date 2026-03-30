@@ -1,0 +1,5 @@
+<map id="mod_random::prng_t::init_parallel" name="mod_random::prng_t::init_parallel">
+<area shape="rect" id="Node000001" title="Initialize a collection of rng&#39;s for parallel use." alt="" coords="5,5,163,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__random.html#a64edb66e452ebef54f6831f6e3fe78e1" title=" " alt="" coords="211,5,377,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,23,197,23,197,28,163,28"/>
+</map>

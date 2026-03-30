@@ -102,10 +102,78 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a531a5b1de15a661af52f17fa77da2b70" id="r_a531a5b1de15a661af52f17fa77da2b70"><td class="memItemLeft" align="right" valign="top">pure integer(i8) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__random.html#a531a5b1de15a661af52f17fa77da2b70">shiftl</a> (val, shift)</td></tr>
 <tr class="memdesc:a531a5b1de15a661af52f17fa77da2b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">added for nvidia compilers  <br /></td></tr>
 <tr class="separator:a531a5b1de15a661af52f17fa77da2b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64edb66e452ebef54f6831f6e3fe78e1" id="r_a64edb66e452ebef54f6831f6e3fe78e1"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__random.html#a64edb66e452ebef54f6831f6e3fe78e1">poisson_disk_sampling</a> (r_min, bmin1, bmin2, bmax1, bmax2, nmax, points_store, n_setpoints)</td></tr>
+<tr class="separator:a64edb66e452ebef54f6831f6e3fe78e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module for pseudo random number generation. The internal pseudo random generator is the xoroshiro128plus method. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a id="a64edb66e452ebef54f6831f6e3fe78e1" name="a64edb66e452ebef54f6831f6e3fe78e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64edb66e452ebef54f6831f6e3fe78e1">&#9670;&#160;</a></span>poisson_disk_sampling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine, public mod_random::poisson_disk_sampling </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>r_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>bmin1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>bmin2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>bmax1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>bmax2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>nmax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(nmax,2), intent(out)&#160;</td>
+          <td class="paramname"><em>points_store</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(out)&#160;</td>
+          <td class="paramname"><em>n_setpoints</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__random_8t_source.html#l00285">285</a> of file <a class="el" href="mod__random_8t_source.html">mod_random.t</a>.</p>
+
+</div>
+</div>
 <a id="a531a5b1de15a661af52f17fa77da2b70" name="a531a5b1de15a661af52f17fa77da2b70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a531a5b1de15a661af52f17fa77da2b70">&#9670;&#160;</a></span>shiftl()</h2>
 
@@ -134,7 +202,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>added for nvidia compilers </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__random_8t_source.html#l00054">54</a> of file <a class="el" href="mod__random_8t_source.html">mod_random.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__random_8t_source.html#l00055">55</a> of file <a class="el" href="mod__random_8t_source.html">mod_random.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
