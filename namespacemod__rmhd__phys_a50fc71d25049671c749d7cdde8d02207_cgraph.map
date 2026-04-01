@@ -1,26 +1,20 @@
 <map id="mod_rmhd_phys::rmhd_get_trad" name="mod_rmhd_phys::rmhd_get_trad">
-<area shape="rect" id="Node000001" title="Calculates radiation temperature." alt="" coords="5,319,177,359"/>
-<area shape="rect" id="Node000002" href="$namespacemod__afld.html#a9784a91e565000d7a3c989fc5c3fd12b" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles th..." alt="" coords="247,5,393,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,318,107,266,132,195,170,121,195,86,224,55,234,48,237,52,227,59,199,89,174,123,137,197,112,267,99,319"/>
-<area shape="rect" id="Node000009" href="$namespacemod__fld.html#a93ccc025f000558bf6991d7ed2298e60" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles th..." alt="" coords="241,69,399,109"/>
-<area shape="poly" id="edge2_Node000001_Node000009" title=" " alt="" coords="97,317,114,276,141,223,177,167,199,142,224,119,231,114,234,118,227,123,203,146,181,171,145,225,119,278,102,319"/>
-<area shape="rect" id="Node000012" href="$namespacemod__afld.html#a7d56dc1049fcf0100bf84d216deced93" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="249,133,391,173"/>
-<area shape="poly" id="edge3_Node000001_Node000012" title=" " alt="" coords="103,317,151,252,185,215,224,183,235,177,238,181,227,188,189,219,155,255,107,320"/>
-<area shape="rect" id="Node000013" href="$namespacemod__cak__force.html#a6cf762353c1aecaa5af0c8c4371c11a0" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="244,197,396,237"/>
-<area shape="poly" id="edge4_Node000001_Node000013" title=" " alt="" coords="117,316,165,282,224,247,239,240,241,245,227,252,168,286,120,321"/>
-<area shape="rect" id="Node000018" href="$namespacemod__global__parameters.html#a1ba907b301287b1559121df9aeb35f03" title="Cross product of two vectors." alt="" coords="230,261,410,301"/>
-<area shape="poly" id="edge5_Node000001_Node000018" title=" " alt="" coords="171,316,226,302,227,307,172,321"/>
-<area shape="rect" id="Node000019" href="$namespacemod__geometry.html#a34777249130c0a609ca96597bb403b30" title=" " alt="" coords="225,326,415,351"/>
-<area shape="poly" id="edge6_Node000001_Node000019" title=" " alt="" coords="177,336,212,336,212,341,177,341"/>
-<area shape="rect" id="Node000020" href="$namespacemod__fld.html#a82f3a8b76f73a09b2200e80b59dcdfcf" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="229,376,411,416"/>
-<area shape="poly" id="edge7_Node000001_Node000020" title=" " alt="" coords="172,356,227,370,226,375,171,361"/>
-<area shape="rect" id="Node000021" href="$namespacemod__afld.html#ac6227c4f754590112d4ff98a4610cd87" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles th..." alt="" coords="249,440,391,480"/>
-<area shape="poly" id="edge8_Node000001_Node000021" title=" " alt="" coords="120,357,168,391,227,426,241,432,239,437,224,430,165,396,117,361"/>
-<area shape="rect" id="Node000029" href="$namespacemod__rmhd__phys.html#a002c2bc2d73339e92ca77f4857204c05" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="241,528,399,568"/>
-<area shape="poly" id="edge9_Node000001_Node000029" title=" " alt="" coords="109,357,158,420,191,456,227,490,269,519,266,523,224,494,187,460,154,423,105,360"/>
-<area shape="rect" id="Node000036" href="$namespacemod__gravity.html#aff7761066ee7cbde8f2b809c38f681c9" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="241,592,399,632"/>
-<area shape="poly" id="edge11_Node000001_Node000036" title=" " alt="" coords="101,358,116,403,142,462,179,524,201,553,227,578,233,583,230,587,224,582,197,556,174,527,137,465,111,405,96,360"/>
-<area shape="rect" id="Node000037" href="$namespacemod__rmhd__phys.html#a8206442c8d5ae913c57e16cab2e376fa" title="Compute 2 times total magnetic energy." alt="" coords="234,656,406,696"/>
-<area shape="poly" id="edge12_Node000001_Node000037" title=" " alt="" coords="98,358,110,414,134,491,151,531,172,571,197,609,227,642,232,646,228,650,223,646,193,612,167,574,146,534,129,492,105,416,93,360"/>
-<area shape="poly" id="edge10_Node000029_Node000029" title=" " alt="" coords="278,528,275,518,282,509,297,503,320,501,346,504,361,511,358,516,345,509,320,507,298,509,285,513,280,519,283,527"/>
+<area shape="rect" id="Node000001" title="Calculates radiation temperature." alt="" coords="5,220,177,260"/>
+<area shape="rect" id="Node000002" href="$namespacemod__fld.html#ab47011fb824722631ccb86571eea920c" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles th..." alt="" coords="241,5,399,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,219,118,184,146,140,181,95,224,55,232,49,235,54,227,59,185,98,150,143,123,186,104,221"/>
+<area shape="rect" id="Node000015" href="$namespacemod__cak__force.html#a6cf762353c1aecaa5af0c8c4371c11a0" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="244,69,396,109"/>
+<area shape="poly" id="edge2_Node000001_Node000015" title=" " alt="" coords="109,218,158,169,190,142,224,119,236,113,238,117,227,124,193,147,161,173,112,222"/>
+<area shape="rect" id="Node000020" href="$namespacemod__global__parameters.html#a1ba907b301287b1559121df9aeb35f03" title="Cross product of two vectors." alt="" coords="230,133,410,173"/>
+<area shape="poly" id="edge3_Node000001_Node000020" title=" " alt="" coords="139,217,224,183,244,176,246,181,226,188,141,222"/>
+<area shape="rect" id="Node000021" href="$namespacemod__geometry.html#a34777249130c0a609ca96597bb403b30" title=" " alt="" coords="225,198,415,223"/>
+<area shape="poly" id="edge4_Node000001_Node000021" title=" " alt="" coords="177,226,211,222,212,227,178,232"/>
+<area shape="rect" id="Node000022" href="$namespacemod__fld.html#a4ca3fafb74785e7f75b41678a5fc37df" title="Calculates cell&#45;centered diffusion coefficient to be used in multigrid." alt="" coords="229,248,411,288"/>
+<area shape="poly" id="edge5_Node000001_Node000022" title=" " alt="" coords="178,248,215,253,215,258,177,253"/>
+<area shape="rect" id="Node000023" href="$namespacemod__rmhd__phys.html#a002c2bc2d73339e92ca77f4857204c05" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="241,336,399,376"/>
+<area shape="poly" id="edge6_Node000001_Node000023" title=" " alt="" coords="133,258,268,327,266,332,131,263"/>
+<area shape="rect" id="Node000029" href="$namespacemod__gravity.html#aff7761066ee7cbde8f2b809c38f681c9" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="241,400,399,440"/>
+<area shape="poly" id="edge8_Node000001_Node000029" title=" " alt="" coords="108,259,156,321,189,356,227,386,237,392,234,396,224,390,186,360,152,325,104,262"/>
+<area shape="rect" id="Node000030" href="$namespacemod__rmhd__phys.html#a8206442c8d5ae913c57e16cab2e376fa" title="Compute 2 times total magnetic energy." alt="" coords="234,464,406,504"/>
+<area shape="poly" id="edge9_Node000001_Node000030" title=" " alt="" coords="102,259,119,299,146,350,182,404,227,450,234,455,231,459,224,454,178,407,141,353,114,301,97,261"/>
+<area shape="poly" id="edge7_Node000023_Node000023" title=" " alt="" coords="278,336,275,326,282,317,297,311,320,309,346,312,361,319,358,324,345,317,320,315,298,317,285,321,280,327,283,335"/>
 </map>

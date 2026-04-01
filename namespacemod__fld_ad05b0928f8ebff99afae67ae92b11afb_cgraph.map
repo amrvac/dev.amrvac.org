@@ -1,0 +1,7 @@
+<map id="mod_fld::fld_get_fluxlimiter_prim" name="mod_fld::fld_get_fluxlimiter_prim">
+<area shape="rect" id="Node000001" title="This subroutine calculates flux limiter lambda according to fld_fluxlimiter It also calculates fld_R ..." alt="" coords="5,31,243,56"/>
+<area shape="rect" id="Node000002" href="$namespacemod__fld.html#a95deadfe8c5887b2e43cebd150713832" title="Sets the opacity in the w&#45;array by calling mod_opal_opacity NOTE: assumes primitives in w NOTE: assum..." alt="" coords="291,5,509,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="243,30,276,27,277,32,243,35"/>
+<area shape="rect" id="Node000005" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="309,55,491,80"/>
+<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="243,51,295,56,295,61,243,56"/>
+</map>

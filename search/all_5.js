@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['b_0',['b',['../namespacemod__twofl__phys.html#aad72cbc22af306ce12364a9878f3748c',1,'mod_twofl_phys::b'],['../namespacemod__rmhd__phys.html#a47ef966867693f308e2beec7ae62473d',1,'mod_rmhd_phys::b'],['../namespacemod__mhd__phys.html#ac21f646cc9e76a808c9e86b0c86d8a6f',1,'mod_mhd_phys::b'],['../namespacemod__mf__phys.html#a00a3493ee88005d6b67bd0a8f83602ad',1,'mod_mf_phys::b']]],
+  ['b_0',['b',['../namespacemod__rmhd__phys.html#a47ef966867693f308e2beec7ae62473d',1,'mod_rmhd_phys::b'],['../namespacemod__mhd__phys.html#ac21f646cc9e76a808c9e86b0c86d8a6f',1,'mod_mhd_phys::b'],['../namespacemod__mf__phys.html#a00a3493ee88005d6b67bd0a8f83602ad',1,'mod_mf_phys::b'],['../namespacemod__twofl__phys.html#aad72cbc22af306ce12364a9878f3748c',1,'mod_twofl_phys::b']]],
   ['b_20source_20treatments_1',['Divergence B source treatments',['../md_doc_2equations.html#eq_divB_fix',1,'']]],
   ['b0_2',['b0',['../structmod__physicaldata_1_1state.html#a0ee7297bd1311c66b2d912ca660cdd9d',1,'mod_physicaldata::state']]],
   ['b0field_3',['b0field',['../namespacemod__global__parameters.html#a9cd6aa831c14cbf613948179b96c9193',1,'mod_global_parameters']]],
@@ -40,7 +40,7 @@ var searchData=
   ['big_5fimage_37',['big_image',['../namespacemod__global__parameters.html#ace9b925df34ceee46314d890452017d9',1,'mod_global_parameters']]],
   ['bigdouble_38',['bigdouble',['../namespacemod__constants.html#a9a33a6d0d2be6fdf8f75724976ef1afe',1,'mod_constants']]],
   ['biginteger_39',['biginteger',['../namespacemod__constants.html#ad23a2fbe8b4244f81a64ec83d2c774ed',1,'mod_constants']]],
-  ['bisection_5fmethod_40',['bisection_method',['../namespacemod__fld.html#a790ae55dace4c7cae8c5a7091943ad65',1,'mod_fld::bisection_method()'],['../namespacemod__afld.html#a7eb940836590e32462520c6b43fecac3',1,'mod_afld::bisection_method()']]],
+  ['bisection_5fmethod_40',['bisection_method',['../namespacemod__fld.html#a790ae55dace4c7cae8c5a7091943ad65',1,'mod_fld']]],
   ['blk_20files_20using_20lsquo_20convert_5ftype_20onegrid_20rsquo_20tt_20back_20into_20standard_20output_20tt_20dat_20that_20i_20can_20use_20to_20restart_20a_20simulation_20my_20goal_20is_20to_20be_20able_20to_20change_20my_20data_20mid_20simulation_20through_20another_20program_41',['I&apos;m looking for a way to translate some .blk files (using &amp;lsquo;convert_type= &apos;onegrid&amp;rsquo;&lt;tt&gt;) back into standard output&lt;/tt&gt;.dat` that I can use to restart a simulation. My goal is to be able to change my data mid-simulation through another program.',['../md_doc_2faq.html#faq-blk-to-dat',1,'']]],
   ['block_42',['block',['../namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b',1,'mod_global_parameters']]],
   ['block_5fnx_43',['block_nx',['../namespacemod__global__parameters.html#a61b20ad3b87b28e636a5f74d3145a850',1,'mod_global_parameters']]],

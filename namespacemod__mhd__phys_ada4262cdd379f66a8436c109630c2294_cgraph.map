@@ -1,0 +1,5 @@
+<map id="mod_mhd_phys::mhd_get_csrad2" name="mod_mhd_phys::mhd_get_csrad2">
+<area shape="rect" id="Node000001" title="Calculate modified squared sound speed for FLD NOTE: only for diagnostic purposes,..." alt="" coords="5,5,196,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__mhd__phys.html#ab17661cbcc97327c5b017bd1626829a0" title="Calculate modified squared fast wave speed for FLD NOTE: w is primitive on entry here!..." alt="" coords="244,5,435,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,23,230,23,230,28,196,28"/>
+</map>

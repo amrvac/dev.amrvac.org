@@ -1,8 +1,8 @@
 <map id="mod_fld::fld_radforce_get_dt" name="mod_fld::fld_radforce_get_dt">
-<area shape="rect" id="Node000001" title="get dt limit for radiation force: NOTE: only uniform cartesian here!" alt="" coords="5,23,164,63"/>
-<area shape="rect" id="Node000002" href="$namespacemod__fld.html#a84e9e6eb8603ea5f429c6fab5477f778" title="Calculate fld flux limiter This subroutine calculates flux limiter lambda using the prescription stor..." alt="" coords="212,5,412,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,32,198,28,199,33,165,37"/>
-<area shape="rect" id="Node000006" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="460,31,643,56"/>
-<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="164,41,447,41,447,46,164,46"/>
-<area shape="poly" id="edge2_Node000002_Node000006" title=" " alt="" coords="413,26,446,30,446,35,412,31"/>
+<area shape="rect" id="Node000001" title="get dt limit for radiation force and FLD explicit source additions NOTE: w is primitive on entry" alt="" coords="5,23,164,63"/>
+<area shape="rect" id="Node000002" href="$namespacemod__fld.html#ad05b0928f8ebff99afae67ae92b11afb" title="This subroutine calculates flux limiter lambda according to fld_fluxlimiter It also calculates fld_R ..." alt="" coords="212,5,449,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,33,198,29,198,34,165,38"/>
+<area shape="rect" id="Node000006" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="497,31,680,56"/>
+<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="164,41,484,41,484,46,164,46"/>
+<area shape="poly" id="edge2_Node000002_Node000006" title=" " alt="" coords="450,27,484,30,483,36,449,32"/>
 </map>

@@ -1,7 +1,0 @@
-<map id="mod_mhd_phys::mhd_get_pradiation_from_prim" name="mod_mhd_phys::mhd_get_pradiation_from_prim">
-<area shape="rect" id="Node000001" title="Calculate radiation pressure within ixO^L." alt="" coords="5,35,196,75"/>
-<area shape="rect" id="Node000002" href="$namespacemod__afld.html#a9af14da4ee0effb21d55f01e0410b0d1" title="Calculate Radiation Pressure Returns Radiation Pressure as tensor." alt="" coords="267,5,410,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,40,253,33,254,38,196,46"/>
-<area shape="rect" id="Node000009" href="$namespacemod__fld.html#a61306bd3278dc4b63570d46d7a4b654c" title="Calculate Radiation Pressure Returns Radiation Pressure as tensor NOTE: w is primitive on entry." alt="" coords="244,70,433,95"/>
-<area shape="poly" id="edge2_Node000001_Node000009" title=" " alt="" coords="196,63,231,67,230,73,196,69"/>
-</map>

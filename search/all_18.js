@@ -41,7 +41,7 @@ var searchData=
   ['up_20the_20python_20tools_38',['Setting up the python tools',['../md_doc_2python__setup.html',1,'']]],
   ['upcoming_20meetings_39',['Upcoming meetings',['../md_doc_2meetings.html#meetings-upcoming',1,'']]],
   ['update_20the_20code_40',['Update the code',['../md_doc_2installation.html#update_code',1,'']]],
-  ['update_5fdiffcoeff_41',['update_diffcoeff',['../namespacemod__fld.html#a38e6e06ef18024f6865cadb7aab2aa00',1,'mod_fld::update_diffcoeff()'],['../namespacemod__afld.html#a9d5289df9bf8e1e13a2af0815ef926a5',1,'mod_afld::update_diffcoeff()']]],
+  ['update_5fdiffcoeff_41',['update_diffcoeff',['../namespacemod__fld.html#a38e6e06ef18024f6865cadb7aab2aa00',1,'mod_fld']]],
   ['update_5fgridvars_42',['update_gridvars',['../namespacemod__particle__base.html#a2b078cd13a41fd38ad141b6f8eaf6c0d',1,'mod_particle_base']]],
   ['update_5fpayload_43',['update_payload',['../interfacemod__usr__methods_1_1update__payload.html',1,'mod_usr_methods::update_payload'],['../interfacemod__usr__methods_1_1update__payload.html#a546e6b7e48a19ceb2893a133232f76cf',1,'mod_usr_methods::update_payload::update_payload()']]],
   ['upwindlrmf_44',['upwindlrmf',['../namespacemod__magnetofriction.html#aa7f2892aad3fee243653f4d53ddad988',1,'mod_magnetofriction']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['newton_5fmethod_0',['newton_method',['../namespacemod__afld.html#ab2f3dbfffba4e7c41a1e40821ce15ab7',1,'mod_afld::newton_method()'],['../namespacemod__fld.html#ab77a233aa68b193411dcd4d51348ead7',1,'mod_fld::newton_method()']]],
+  ['newton_5fmethod_0',['newton_method',['../namespacemod__fld.html#ab77a233aa68b193411dcd4d51348ead7',1,'mod_fld']]],
   ['next_1',['next',['../structmod__random_1_1rng__t.html#a092fcc612cf5065a15edbc80e24ff65d',1,'mod_random::rng_t']]],
   ['nodenumbertec1d_2',['nodenumbertec1d',['../namespacemod__convert__files.html#a62fde2ee5605e9c642976f76ba5f4e58',1,'mod_convert_files']]],
   ['nodenumbertec2d_3',['nodenumbertec2d',['../namespacemod__convert__files.html#a459f13c008d5b3f5f664f5e0741a58d2',1,'mod_convert_files']]],

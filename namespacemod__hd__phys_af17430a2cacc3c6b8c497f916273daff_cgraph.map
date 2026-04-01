@@ -1,9 +1,7 @@
 <map id="mod_hd_phys::hd_get_pthermal" name="mod_hd_phys::hd_get_pthermal">
-<area shape="rect" id="Node000001" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="5,87,169,127"/>
-<area shape="rect" id="Node000002" href="$namespacemod__hd__phys.html#a8eee4cec38852b0284388d7e13a774ee" title="Calculate radiation pressure within ixO^L." alt="" coords="225,5,396,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,84,216,55,237,47,239,52,218,60,141,89"/>
-<area shape="rect" id="Node000014" href="$namespacemod__hd__phys.html#a7ab9a58df979c6e5d1f183e012fb1842" title=" " alt="" coords="217,94,404,119"/>
-<area shape="poly" id="edge2_Node000001_Node000014" title=" " alt="" coords="170,113,204,113,204,118,170,118"/>
-<area shape="poly" id="edge3_Node000014_Node000001" title=" " alt="" coords="217,100,183,100,183,95,217,95"/>
-<area shape="poly" id="edge4_Node000014_Node000014" title=" " alt="" coords="275,96,267,86,271,76,286,70,311,67,341,71,354,80,350,84,339,76,311,73,287,75,274,80,272,85,279,92"/>
+<area shape="rect" id="Node000001" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="5,22,169,62"/>
+<area shape="rect" id="Node000002" href="$namespacemod__hd__phys.html#a7ab9a58df979c6e5d1f183e012fb1842" title=" " alt="" coords="217,29,404,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,48,204,48,204,54,170,53"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="217,36,183,36,183,30,217,30"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="275,31,267,21,271,11,286,5,311,3,341,6,354,15,350,20,339,11,311,8,287,10,274,15,272,20,279,28"/>
 </map>

@@ -1,0 +1,29 @@
+<map id="mod_hd_phys::hd_get_temperature_from_prim" name="mod_hd_phys::hd_get_temperature_from_prim">
+<area shape="rect" id="Node000001" title="Calculate temperature=p/rho when in we work in primitives (hence e_ is p_)" alt="" coords="5,376,191,416"/>
+<area shape="rect" id="Node000002" href="$namespacemod__fld.html#ab47011fb824722631ccb86571eea920c" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles th..." alt="" coords="251,5,408,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,375,111,314,135,228,153,182,176,136,203,93,237,55,242,51,245,55,241,59,208,97,180,139,158,184,140,230,116,315,105,376"/>
+<area shape="rect" id="Node000015" href="$namespacemod__cak__force.html#a6cf762353c1aecaa5af0c8c4371c11a0" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="253,69,405,109"/>
+<area shape="poly" id="edge2_Node000001_Node000015" title=" " alt="" coords="101,375,116,324,143,256,183,183,208,149,237,119,243,115,246,119,240,123,212,153,187,186,148,258,121,326,107,377"/>
+<area shape="rect" id="Node000020" href="$namespacemod__cak__force.html#a4d9d9d3f83dcc03bd5da8a9687e4e286" title="Check time step for total radiation contribution." alt="" coords="253,133,405,173"/>
+<area shape="poly" id="edge3_Node000001_Node000020" title=" " alt="" coords="105,374,124,334,152,283,190,230,237,183,245,178,248,182,240,187,194,233,157,286,128,337,110,377"/>
+<area shape="rect" id="Node000021" href="$namespacemod__dust.html#a54e7927a6132675ef04f8362ed02f54e" title="w[iw]= w[iw]+qdt*S[wCT, x] where S is the source based on wCT within ixO" alt="" coords="253,197,406,237"/>
+<area shape="poly" id="edge4_Node000001_Node000021" title=" " alt="" coords="112,374,163,312,198,277,237,247,247,241,250,246,240,252,201,281,167,316,116,377"/>
+<area shape="rect" id="Node000022" href="$namespacemod__dust.html#ae13dbe02ea509aae4cc58d06d947c854" title="Get dt related to dust and gas stopping time (Laibe 2011)" alt="" coords="244,262,415,287"/>
+<area shape="poly" id="edge5_Node000001_Node000022" title=" " alt="" coords="122,374,173,335,237,298,258,289,260,294,240,302,176,340,125,378"/>
+<area shape="rect" id="Node000023" href="$namespacemod__dust.html#a97a14405b0b071f67757cd4f055e2f47" title=" " alt="" coords="254,312,405,352"/>
+<area shape="poly" id="edge6_Node000001_Node000023" title=" " alt="" coords="170,373,243,353,244,358,172,378"/>
+<area shape="rect" id="Node000024" href="$namespacemod__fld.html#ad6c22947bcd2e35eb73047df6d59ce9c" title="get dt limit for radiation force and FLD explicit source additions NOTE: w is primitive on entry" alt="" coords="250,376,409,416"/>
+<area shape="poly" id="edge7_Node000001_Node000024" title=" " alt="" coords="191,393,236,393,236,399,191,399"/>
+<area shape="rect" id="Node000025" href="$namespacemod__gravity.html#aff7761066ee7cbde8f2b809c38f681c9" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="251,440,408,480"/>
+<area shape="poly" id="edge8_Node000001_Node000025" title=" " alt="" coords="172,414,244,434,243,439,170,419"/>
+<area shape="rect" id="Node000026" href="$namespacemod__gravity.html#a831142d24c1d9520a6d05108a2b265ef" title=" " alt="" coords="251,504,408,544"/>
+<area shape="poly" id="edge9_Node000001_Node000026" title=" " alt="" coords="126,414,177,452,240,490,254,496,251,501,237,494,174,456,123,418"/>
+<area shape="rect" id="Node000027" href="$namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="247,568,411,608"/>
+<area shape="poly" id="edge10_Node000001_Node000027" title=" " alt="" coords="114,415,164,482,200,521,240,554,250,560,247,564,237,558,196,524,160,486,110,418"/>
+<area shape="rect" id="Node000034" href="$namespacemod__radiative__cooling.html#a76304d7766df7b067cc8ab02651ba133" title=" " alt="" coords="243,633,416,687"/>
+<area shape="poly" id="edge11_Node000001_Node000034" title=" " alt="" coords="109,415,128,457,156,510,194,567,240,618,246,623,243,627,237,622,190,571,151,513,123,459,105,417"/>
+<area shape="rect" id="Node000041" href="$namespacemod__rotating__frame.html#ac392a303c8ded459efff6c36f3eb8754" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="250,711,409,766"/>
+<area shape="poly" id="edge12_Node000001_Node000041" title=" " alt="" coords="106,415,120,470,146,545,186,625,211,663,241,697,245,701,241,705,237,701,207,666,181,628,141,547,115,472,101,417"/>
+<area shape="rect" id="Node000042" href="$namespacemod__viscosity.html#adcf67b40719b55794fce43c15b09c632" title=" " alt="" coords="239,791,420,831"/>
+<area shape="poly" id="edge13_Node000001_Node000042" title=" " alt="" coords="104,416,113,483,135,580,153,632,176,684,205,732,241,775,247,781,243,785,237,779,201,735,171,686,148,634,130,581,107,484,98,416"/>
+</map>
