@@ -127,7 +127,7 @@ var searchData=
   ['nstep_124',['nstep',['../namespacemod__global__parameters.html#a04d1a4206037847c3c566b73b266fa64',1,'mod_global_parameters']]],
   ['nstretchedblocks_125',['nstretchedblocks',['../namespacemod__global__parameters.html#a5063aa41f604cf4b4f90e5f37b7fc4a9',1,'mod_global_parameters']]],
   ['nstretchedblocks_5fbaselevel_126',['nstretchedblocks_baselevel',['../namespacemod__global__parameters.html#a85452df53d9def115b87f8a5657a57b0',1,'mod_global_parameters::nstretchedblocks_baselevel'],['../md_doc_2par.html#par_stretched',1,'stretch_dim, stretch_uncentered, qstretch_baselevel, nstretchedblocks_baselevel']]],
-  ['nth_5ffor_5ffld_127',['nth_for_fld',['../namespacemod__mhd__phys.html#ae7189e6c22aac4fb42c1fb4781e3ac71',1,'mod_mhd_phys::nth_for_fld'],['../namespacemod__hd__phys.html#a6bafab50a91918ec659ae800db84f3a1',1,'mod_hd_phys::nth_for_fld']]],
+  ['nth_5ffor_5fdiff_5fmg_127',['nth_for_diff_mg',['../namespacemod__fld.html#affb8ce8bfcf6c8d6b94f3e78afa266b2',1,'mod_fld']]],
   ['nthetaray_128',['nthetaray',['../namespacemod__cak__force.html#aed2e07c9e5b3c80b4e604b3a4baaadbf',1,'mod_cak_force']]],
   ['num_5fparticles_129',['num_particles',['../namespacemod__particle__base.html#a14879d0bc18c025c62731aa7a08d3524',1,'mod_particle_base']]],
   ['num_5fvars_130',['num_vars',['../structmod__config_1_1cfg__t.html#a4fa45a063830e19564d2be8a29945ae3',1,'mod_config::cfg_t']]],

@@ -77,14 +77,13 @@ var searchData=
   ['mhd_5fmag_5fen_5fall_74',['mhd_mag_en_all',['../namespacemod__mhd__phys.html#a7cefae9319d59d3d9182e9b35bad1e28',1,'mod_mhd_phys']]],
   ['mhd_5fphys_5finit_75',['mhd_phys_init',['../namespacemod__mhd__phys.html#ad7d98b0addb883f4aa58a876eee8025e',1,'mod_mhd_phys']]],
   ['mhd_5froe_5finit_76',['mhd_roe_init',['../namespacemod__mhd__roe.html#a5cb3b297639ad9e15d27ad211ef95f61',1,'mod_mhd_roe']]],
-  ['mhd_5fset_5fmg_5fbounds_77',['mhd_set_mg_bounds',['../namespacemod__mhd__phys.html#a8203f98a3fc90b0ae020c61c96bda351',1,'mod_mhd_phys']]],
-  ['modify_5fic_78',['modify_ic',['../namespacemod__initialize__amr.html#ac2c24309d6ecbdc2f734308561d22363',1,'mod_initialize_amr']]],
-  ['mortonencode_79',['mortonencode',['../namespacemod__space__filling__curve.html#a4ec3c56976c462543d5a8b44a6a95518',1,'mod_space_filling_curve']]],
-  ['mp5limiter_80',['mp5limiter',['../namespacemod__mp5.html#a8fb70283aaa5a224ad6253c6dbd0ede7',1,'mod_mp5']]],
-  ['mp5limiterl_81',['mp5limiterl',['../namespacemod__mp5.html#a1f465efe521354a20c5f4b686104897f',1,'mod_mp5']]],
-  ['mp5limiterr_82',['mp5limiterr',['../namespacemod__mp5.html#aca0ce0883eeae8808f26509616afcc69',1,'mod_mp5']]],
-  ['mp5limitervar_83',['mp5limitervar',['../namespacemod__mp5.html#ab1f4d96ab5f3dc2bb0d3a1a7f87f9899',1,'mod_mp5']]],
-  ['mpistop_84',['mpistop',['../namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048',1,'mod_comm_lib']]],
-  ['multigrid_5fbc_85',['multigrid_bc',['../namespacemod__lfff.html#a2dfde2312d44bebae1dd490a3828886b',1,'mod_lfff']]],
-  ['multiplyambicoef_86',['multiplyambicoef',['../namespacemod__mhd__phys.html#a7e7f9e0cfdae3f081d89b5a609011c5d',1,'mod_mhd_phys']]]
+  ['modify_5fic_77',['modify_ic',['../namespacemod__initialize__amr.html#ac2c24309d6ecbdc2f734308561d22363',1,'mod_initialize_amr']]],
+  ['mortonencode_78',['mortonencode',['../namespacemod__space__filling__curve.html#a4ec3c56976c462543d5a8b44a6a95518',1,'mod_space_filling_curve']]],
+  ['mp5limiter_79',['mp5limiter',['../namespacemod__mp5.html#a8fb70283aaa5a224ad6253c6dbd0ede7',1,'mod_mp5']]],
+  ['mp5limiterl_80',['mp5limiterl',['../namespacemod__mp5.html#a1f465efe521354a20c5f4b686104897f',1,'mod_mp5']]],
+  ['mp5limiterr_81',['mp5limiterr',['../namespacemod__mp5.html#aca0ce0883eeae8808f26509616afcc69',1,'mod_mp5']]],
+  ['mp5limitervar_82',['mp5limitervar',['../namespacemod__mp5.html#ab1f4d96ab5f3dc2bb0d3a1a7f87f9899',1,'mod_mp5']]],
+  ['mpistop_83',['mpistop',['../namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048',1,'mod_comm_lib']]],
+  ['multigrid_5fbc_84',['multigrid_bc',['../namespacemod__lfff.html#a2dfde2312d44bebae1dd490a3828886b',1,'mod_lfff']]],
+  ['multiplyambicoef_85',['multiplyambicoef',['../namespacemod__mhd__phys.html#a7e7f9e0cfdae3f081d89b5a609011c5d',1,'mod_mhd_phys']]]
 ];

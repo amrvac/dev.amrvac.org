@@ -1,11 +1,9 @@
 <map id="mod_hd_phys::hd_check_params" name="mod_hd_phys::hd_check_params">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,101,187,141"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,187,109"/>
 <area shape="rect" id="Node000002" href="$namespacemod__dust.html#abac9be1c49bbffe25b1de9e17c608392" title=" " alt="" coords="245,5,411,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,99,234,55,252,48,254,53,236,60,139,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,67,241,46,243,52,170,72"/>
 <area shape="rect" id="Node000003" href="$namespacemod__dust.html#a5cebc3aeae2db9646a5042db9d290037" title="inplace update of psa==&gt;F_im(psa)" alt="" coords="235,69,421,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,106,220,101,221,107,188,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,87,221,87,221,92,187,92"/>
 <area shape="rect" id="Node000004" href="$namespacemod__dust.html#ae9efdbe1728135dcefe096391d55bff8" title="Implicit solve of psb=psa+dtfactor*dt*F_im(psb)" alt="" coords="239,133,417,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="188,131,225,136,225,142,187,137"/>
-<area shape="rect" id="Node000005" href="$namespacemod__hd__phys.html#ab04625654f7793f76b72d9b6f21b8956" title="Set the boundaries for the diffusion of E." alt="" coords="247,197,409,237"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="139,139,236,183,254,190,252,195,234,188,137,144"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="170,107,243,127,241,132,169,112"/>
 </map>

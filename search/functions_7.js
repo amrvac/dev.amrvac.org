@@ -23,11 +23,10 @@ var searchData=
   ['hd_5fphys_5finit_20',['hd_phys_init',['../namespacemod__hd__phys.html#a86518623ab235a1cf8ce7a29593d0599',1,'mod_hd_phys']]],
   ['hd_5fpthermal_21',['hd_pthermal',['../interfacemod__usr__methods_1_1hd__pthermal.html#ad332fa28266e7792b8eb23df51014666',1,'mod_usr_methods::hd_pthermal']]],
   ['hd_5froe_5finit_22',['hd_roe_init',['../namespacemod__hd__roe.html#a2914c6ee26f6009d4973a8e68c8e2069',1,'mod_hd_roe']]],
-  ['hd_5fset_5fmg_5fbounds_23',['hd_set_mg_bounds',['../namespacemod__hd__phys.html#ab04625654f7793f76b72d9b6f21b8956',1,'mod_hd_phys']]],
-  ['hd_5fto_5fconserved_24',['hd_to_conserved',['../namespacemod__hd__phys.html#a7ca3d81ff30bcd198023630211e8c1e6',1,'mod_hd_phys']]],
-  ['hd_5fto_5fprimitive_25',['hd_to_primitive',['../namespacemod__hd__phys.html#aad11607293a89d08bdde26526a32bcd4',1,'mod_hd_phys']]],
-  ['helmholtz_5fset_5flambda_26',['helmholtz_set_lambda',['../namespacem__octree__mg__1d.html#a8b069b3275222a07e58f1277f4ad9581',1,'m_octree_mg_1d::helmholtz_set_lambda()'],['../namespacem__octree__mg__2d.html#a7149057be22c0963f514247e2ef8cc59',1,'m_octree_mg_2d::helmholtz_set_lambda()'],['../namespacem__octree__mg__3d.html#a029e2e170d92b2acce13c23ecc4e0324',1,'m_octree_mg_3d::helmholtz_set_lambda()']]],
-  ['helmholtz_5fset_5fmethods_27',['helmholtz_set_methods',['../namespacem__octree__mg__1d.html#a670855fa1d0c427a67926ad431980126',1,'m_octree_mg_1d::helmholtz_set_methods()'],['../namespacem__octree__mg__2d.html#a445aa401e468d1b98f858199ee239b79',1,'m_octree_mg_2d::helmholtz_set_methods()'],['../namespacem__octree__mg__3d.html#a6d6bd4c4a8e3976890b73905c034a385',1,'m_octree_mg_3d::helmholtz_set_methods()']]],
-  ['hyp_5fcoeff_28',['hyp_coeff',['../namespacemod__hyperdiffusivity.html#abacfffb2fc6c7a9960af8090da6682df',1,'mod_hyperdiffusivity']]],
-  ['hyperdiffusivity_5finit_29',['hyperdiffusivity_init',['../namespacemod__hyperdiffusivity.html#aeab507f1ea926387cc9322607ff30789',1,'mod_hyperdiffusivity']]]
+  ['hd_5fto_5fconserved_23',['hd_to_conserved',['../namespacemod__hd__phys.html#a7ca3d81ff30bcd198023630211e8c1e6',1,'mod_hd_phys']]],
+  ['hd_5fto_5fprimitive_24',['hd_to_primitive',['../namespacemod__hd__phys.html#aad11607293a89d08bdde26526a32bcd4',1,'mod_hd_phys']]],
+  ['helmholtz_5fset_5flambda_25',['helmholtz_set_lambda',['../namespacem__octree__mg__1d.html#a8b069b3275222a07e58f1277f4ad9581',1,'m_octree_mg_1d::helmholtz_set_lambda()'],['../namespacem__octree__mg__2d.html#a7149057be22c0963f514247e2ef8cc59',1,'m_octree_mg_2d::helmholtz_set_lambda()'],['../namespacem__octree__mg__3d.html#a029e2e170d92b2acce13c23ecc4e0324',1,'m_octree_mg_3d::helmholtz_set_lambda()']]],
+  ['helmholtz_5fset_5fmethods_26',['helmholtz_set_methods',['../namespacem__octree__mg__1d.html#a670855fa1d0c427a67926ad431980126',1,'m_octree_mg_1d::helmholtz_set_methods()'],['../namespacem__octree__mg__2d.html#a445aa401e468d1b98f858199ee239b79',1,'m_octree_mg_2d::helmholtz_set_methods()'],['../namespacem__octree__mg__3d.html#a6d6bd4c4a8e3976890b73905c034a385',1,'m_octree_mg_3d::helmholtz_set_methods()']]],
+  ['hyp_5fcoeff_27',['hyp_coeff',['../namespacemod__hyperdiffusivity.html#abacfffb2fc6c7a9960af8090da6682df',1,'mod_hyperdiffusivity']]],
+  ['hyperdiffusivity_5finit_28',['hyperdiffusivity_init',['../namespacemod__hyperdiffusivity.html#aeab507f1ea926387cc9322607ff30789',1,'mod_hyperdiffusivity']]]
 ];
