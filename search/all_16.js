@@ -122,7 +122,7 @@ var searchData=
   ['slowsteps_119',['slowsteps',['../md_doc_2par.html#par_dt',1,'dtpar, courantpar, typecourant, dtdiffpar, dtTCpar, slowsteps'],['../namespacemod__global__parameters.html#a7697c549bfe2fdc52590606d35f7645f',1,'mod_global_parameters::slowsteps']]],
   ['small_20values_20options_20in_20mpi_20amrvac_120',['Small values options in MPI-AMRVAC',['../md_doc_2smallvalues.html',1,'']]],
   ['small_5fdensity_121',['small_density',['../namespacemod__global__parameters.html#ad147dadf78c6587c3b27c5c04039c808',1,'mod_global_parameters']]],
-  ['small_5fe_122',['small_e',['../namespacemod__srhd__phys.html#a333c24b83da7f4900d72580a2ff66681',1,'mod_srhd_phys']]],
+  ['small_5fe_122',['small_e',['../namespacemod__global__parameters.html#afcd809c11848aea67e7f46ff8356c8c7',1,'mod_global_parameters']]],
   ['small_5fpressure_123',['small_pressure',['../namespacemod__global__parameters.html#a19f0c8766e32f669bc7680685a55ea33',1,'mod_global_parameters']]],
   ['small_5fr_5fe_124',['small_r_e',['../namespacemod__global__parameters.html#a97c9064334e7b5465e6eead6b579996f',1,'mod_global_parameters']]],
   ['small_5ftemperature_125',['small_temperature',['../namespacemod__global__parameters.html#a3730de6b193fa2d3fb50e979195ef518',1,'mod_global_parameters']]],
