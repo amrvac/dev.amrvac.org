@@ -144,9 +144,6 @@ Data Types</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1phys__gravity.html">phys_gravity</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate gravitational acceleration in each dimension.  <a href="interfacemod__usr__methods_1_1phys__gravity.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1phys__visco.html">phys_visco</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculation anormal viscosity depending on space.  <a href="interfacemod__usr__methods_1_1phys__visco.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1process__adv__global.html">process_adv_global</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">for processing after the advance (PIC-MHD, e.g.)  <a href="interfacemod__usr__methods_1_1process__adv__global.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,6 +181,9 @@ Data Types</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Here one can add a time-independent background current density.  <a href="interfacemod__usr__methods_1_1set__j0.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1set__surface.html">set_surface</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1set__viscosity.html">set_viscosity</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculation anormal viscosity depending on space.  <a href="interfacemod__usr__methods_1_1set__viscosity.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1set__wlr.html">set_wlr</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">allow user to specify 'variables' left and right state at physical boundaries to control flux through the boundary surface  <a href="interfacemod__usr__methods_1_1set__wlr.html#details">More...</a><br /></td></tr>
@@ -275,8 +275,8 @@ Variables</h2></td></tr>
 <tr class="separator:a464dd37cac2725d17128b97e54a1837d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58a7755b46b5f7ec03746d49dc4c047e" id="r_a58a7755b46b5f7ec03746d49dc4c047e"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1phys__dust__get__3d__dragforce.html">phys_dust_get_3d_dragforce</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__usr__methods.html#a58a7755b46b5f7ec03746d49dc4c047e">usr_get_3d_dragforce</a> =&gt; null()</td></tr>
 <tr class="separator:a58a7755b46b5f7ec03746d49dc4c047e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a245e7fa0553d11abcb067b4e0a60282d" id="r_a245e7fa0553d11abcb067b4e0a60282d"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1phys__visco.html">phys_visco</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__usr__methods.html#a245e7fa0553d11abcb067b4e0a60282d">usr_setvisco</a> =&gt; null()</td></tr>
-<tr class="separator:a245e7fa0553d11abcb067b4e0a60282d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a761d95a1b06a4421ff84e540e66d116e" id="r_a761d95a1b06a4421ff84e540e66d116e"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1set__viscosity.html">set_viscosity</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__usr__methods.html#a761d95a1b06a4421ff84e540e66d116e">usr_set_viscosity</a> =&gt; null()</td></tr>
+<tr class="separator:a761d95a1b06a4421ff84e540e66d116e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd95d27bfa90bf0a08f92a06894f5754" id="r_acd95d27bfa90bf0a08f92a06894f5754"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1hd__pthermal.html">hd_pthermal</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__usr__methods.html#acd95d27bfa90bf0a08f92a06894f5754">usr_set_pthermal</a> =&gt; null()</td></tr>
 <tr class="separator:acd95d27bfa90bf0a08f92a06894f5754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accaabb09a24829e96dd5a261d6b9d05d" id="r_accaabb09a24829e96dd5a261d6b9d05d"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1refine__grid.html">refine_grid</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__usr__methods.html#accaabb09a24829e96dd5a261d6b9d05d">usr_refine_grid</a> =&gt; null()</td></tr>
@@ -950,6 +950,22 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a761d95a1b06a4421ff84e540e66d116e" name="a761d95a1b06a4421ff84e540e66d116e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a761d95a1b06a4421ff84e540e66d116e">&#9670;&#160;</a></span>usr_set_viscosity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__usr__methods_1_1set__viscosity.html">set_viscosity</a>), pointer mod_usr_methods::usr_set_viscosity =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00053">53</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+
+</div>
+</div>
 <a id="ae74546039e7a0992be655aface1b2ef2" name="ae74546039e7a0992be655aface1b2ef2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae74546039e7a0992be655aface1b2ef2">&#9670;&#160;</a></span>usr_set_wlr</h2>
 
@@ -963,22 +979,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00095">95</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
-
-</div>
-</div>
-<a id="a245e7fa0553d11abcb067b4e0a60282d" name="a245e7fa0553d11abcb067b4e0a60282d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a245e7fa0553d11abcb067b4e0a60282d">&#9670;&#160;</a></span>usr_setvisco</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">procedure(<a class="el" href="interfacemod__usr__methods_1_1phys__visco.html">phys_visco</a>), pointer mod_usr_methods::usr_setvisco =&gt; null()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00053">53</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
