@@ -1,5 +1,5 @@
 <map id="mod_fld::fld_get_radflux" name="mod_fld::fld_get_radflux">
-<area shape="rect" id="Node000001" title="Calculate Radiation Flux (use of cgs units) NOTE: only for diagnostics purposes (w conservative on en..." alt="" coords="5,29,184,55"/>
+<area shape="rect" id="Node000001" title="Calculate Radiation Flux NOTE: only for diagnostics purposes (w conservative on entry) This returns c..." alt="" coords="5,29,184,55"/>
 <area shape="rect" id="Node000002" href="$namespacemod__fld.html#ad05b0928f8ebff99afae67ae92b11afb" title="This subroutine calculates flux limiter lambda according to fld_fluxlimiter It also calculates fld_R ..." alt="" coords="232,29,469,55"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,39,218,39,218,45,184,45"/>
 <area shape="rect" id="Node000003" href="$namespacemod__fld.html#a95deadfe8c5887b2e43cebd150713832" title="Sets the opacity in the w&#45;array by calling mod_opal_opacity NOTE: assumes primitives in w NOTE: assum..." alt="" coords="517,5,736,31"/>

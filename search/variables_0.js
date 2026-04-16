@@ -21,8 +21,9 @@ var searchData=
   ['amr_5fwavefilter_18',['amr_wavefilter',['../namespacemod__global__parameters.html#a4736ef04292da21cb89fb46425b36985',1,'mod_global_parameters']]],
   ['any_5fsource_5fsplit_19',['any_source_split',['../namespacemod__global__parameters.html#a28e56963e38905a7ed480fbd38926d84',1,'mod_global_parameters']]],
   ['aperiodb_20',['aperiodb',['../namespacemod__global__parameters.html#a06ca4eb6d7900c2e147f04adc58f4bf0',1,'mod_global_parameters']]],
-  ['ard_5fmg_5fbc_21',['ard_mg_bc',['../namespacemod__ard__phys.html#aaace6948e45178c0fc4aaa22ec2f704c',1,'mod_ard_phys']]],
-  ['ard_5fparticles_22',['ard_particles',['../namespacemod__ard__phys.html#ab4501ecbdbe13e1e758dfaf0b9b4c5ce',1,'mod_ard_phys']]],
-  ['ars_5fgamma_23',['ars_gamma',['../namespacemod__global__parameters.html#a41f911b8f86d6630ac4c0e4c95fff1da',1,'mod_global_parameters']]],
-  ['autoconvert_24',['autoconvert',['../namespacemod__global__parameters.html#a701d9f0321c70f8e13a05f6c15f2fb76',1,'mod_global_parameters']]]
+  ['arad_5fnorm_21',['arad_norm',['../namespacemod__global__parameters.html#a101c05a959e6f4e953931a9b6833989a',1,'mod_global_parameters']]],
+  ['ard_5fmg_5fbc_22',['ard_mg_bc',['../namespacemod__ard__phys.html#aaace6948e45178c0fc4aaa22ec2f704c',1,'mod_ard_phys']]],
+  ['ard_5fparticles_23',['ard_particles',['../namespacemod__ard__phys.html#ab4501ecbdbe13e1e758dfaf0b9b4c5ce',1,'mod_ard_phys']]],
+  ['ars_5fgamma_24',['ars_gamma',['../namespacemod__global__parameters.html#a41f911b8f86d6630ac4c0e4c95fff1da',1,'mod_global_parameters']]],
+  ['autoconvert_25',['autoconvert',['../namespacemod__global__parameters.html#a701d9f0321c70f8e13a05f6c15f2fb76',1,'mod_global_parameters']]]
 ];
