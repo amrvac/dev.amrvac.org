@@ -724,49 +724,53 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>       <span class="keywordflow">if</span> (res &lt; max_residual) <span class="keywordflow">exit</span></div>
 <div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span><span class="keywordflow">    end do</span></div>
 <div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span> </div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>    <span class="keyword">call </span>mg_copy_from_tree_gc(mg_iphi, <a class="code hl_variable" href="namespacemod__rd__phys.html#a152a00c83bf86d766cdf7755cca9bf4a">u_</a>, state_to=psa)</div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>    <span class="comment">! Done with the u variable ***************************************</span></div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span> </div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    <span class="comment">! Next handle the v variable ***************************************</span></div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>    <span class="keywordflow">if</span> (number_of_species &gt;= 2) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>       lambda = 1/(dtfactor * qdt * <a class="code hl_variable" href="namespacemod__rd__phys.html#a48d8bf899fb04d744e1653e217460974">d2</a>)</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>       <span class="keyword">call </span>helmholtz_set_lambda(lambda)</div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>       mg%bc(:, mg_iphi) = <a class="code hl_variable" href="namespacemod__rd__phys.html#a1bfc917dffea52ad96ab3b6e2661bf0c">rd_mg_bc</a>(2, :)</div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span> </div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>       <span class="keyword">call </span>mg_copy_to_tree(<a class="code hl_variable" href="namespacemod__rd__phys.html#a855d1e09bb330701478c40fc0c56e445">v_</a>, mg_irhs, factor=-lambda, state_from=psb)</div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>       <span class="keyword">call </span>mg_copy_to_tree(<a class="code hl_variable" href="namespacemod__rd__phys.html#a855d1e09bb330701478c40fc0c56e445">v_</a>, mg_iphi, state_from=psb)</div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span> </div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>       <span class="keyword">call </span>mg_fas_fmg(mg, .true., max_res=res)</div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>       <span class="keywordflow">do</span> n = 1, 10</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>          <span class="keyword">call </span>mg_fas_vcycle(mg, max_res=res)</div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>          <span class="keywordflow">if</span> (res &lt; max_residual) <span class="keywordflow">exit</span></div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span><span class="keywordflow">       end do</span></div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span> </div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>       <span class="keyword">call </span>mg_copy_from_tree_gc(mg_iphi, <a class="code hl_variable" href="namespacemod__rd__phys.html#a855d1e09bb330701478c40fc0c56e445">v_</a>, state_to=psa)</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span><span class="keywordflow">    end if</span></div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>    <span class="comment">! Done with the v variable ***************************************</span></div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span> </div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>    <span class="comment">! Next handle the w variable ***************************************</span></div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>    <span class="keywordflow">if</span> (number_of_species &gt;= 3) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>       lambda = 1/(dtfactor * qdt * <a class="code hl_variable" href="namespacemod__rd__phys.html#a2e9cd319908f13a70e2ee9ad2c481ee0">d3</a>)</div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>       <span class="keyword">call </span>helmholtz_set_lambda(lambda)</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span> </div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>       <span class="keyword">call </span>mg_copy_to_tree(<a class="code hl_variable" href="namespacemod__rd__phys.html#a5aa6845739ca3fcaea6e782fd18008a7">w_</a>, mg_irhs, factor=-lambda, state_from=psb)</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>       <span class="keyword">call </span>mg_copy_to_tree(<a class="code hl_variable" href="namespacemod__rd__phys.html#a5aa6845739ca3fcaea6e782fd18008a7">w_</a>, mg_iphi, state_from=psb)</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>    <span class="keywordflow">if</span> (res &gt; max_residual) <span class="keyword">call </span>mpistop(<span class="stringliteral">&quot;u_multigrid: no convergence&quot;</span>)</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span> </div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>    <span class="keyword">call </span>mg_copy_from_tree_gc(mg_iphi, <a class="code hl_variable" href="namespacemod__rd__phys.html#a152a00c83bf86d766cdf7755cca9bf4a">u_</a>, state_to=psa)</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    <span class="comment">! Done with the u variable ***************************************</span></div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span> </div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>    <span class="comment">! Next handle the v variable ***************************************</span></div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>    <span class="keywordflow">if</span> (number_of_species &gt;= 2) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>       lambda = 1/(dtfactor * qdt * <a class="code hl_variable" href="namespacemod__rd__phys.html#a48d8bf899fb04d744e1653e217460974">d2</a>)</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>       <span class="keyword">call </span>helmholtz_set_lambda(lambda)</div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>       mg%bc(:, mg_iphi) = <a class="code hl_variable" href="namespacemod__rd__phys.html#a1bfc917dffea52ad96ab3b6e2661bf0c">rd_mg_bc</a>(2, :)</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span> </div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>       <span class="keyword">call </span>mg_copy_to_tree(<a class="code hl_variable" href="namespacemod__rd__phys.html#a855d1e09bb330701478c40fc0c56e445">v_</a>, mg_irhs, factor=-lambda, state_from=psb)</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>       <span class="keyword">call </span>mg_copy_to_tree(<a class="code hl_variable" href="namespacemod__rd__phys.html#a855d1e09bb330701478c40fc0c56e445">v_</a>, mg_iphi, state_from=psb)</div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span> </div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>       <span class="keyword">call </span>mg_fas_fmg(mg, .true., max_res=res)</div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>       <span class="keywordflow">do</span> n = 1, 10</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>          <span class="keyword">call </span>mg_fas_vcycle(mg, max_res=res)</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>          <span class="keywordflow">if</span> (res &lt; max_residual) <span class="keywordflow">exit</span></div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span><span class="keywordflow">       end do</span></div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span> </div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>       <span class="keywordflow">if</span> (res &gt; max_residual) <span class="keyword">call </span>mpistop(<span class="stringliteral">&quot;v_multigrid: no convergence&quot;</span>)</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>       <span class="keyword">call </span>mg_copy_from_tree_gc(mg_iphi, <a class="code hl_variable" href="namespacemod__rd__phys.html#a855d1e09bb330701478c40fc0c56e445">v_</a>, state_to=psa)</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span><span class="keywordflow">    end if</span></div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>    <span class="comment">! Done with the v variable ***************************************</span></div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span> </div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>    <span class="comment">! Next handle the w variable ***************************************</span></div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>    <span class="keywordflow">if</span> (number_of_species &gt;= 3) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>       lambda = 1/(dtfactor * qdt * <a class="code hl_variable" href="namespacemod__rd__phys.html#a2e9cd319908f13a70e2ee9ad2c481ee0">d3</a>)</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>       <span class="keyword">call </span>helmholtz_set_lambda(lambda)</div>
 <div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span> </div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>       <span class="keyword">call </span>mg_fas_fmg(mg, .true., max_res=res)</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>       <span class="keywordflow">do</span> n = 1, 10</div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>          <span class="keyword">call </span>mg_fas_vcycle(mg, max_res=res)</div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>          <span class="keywordflow">if</span> (res &lt; max_residual) <span class="keywordflow">exit</span></div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span><span class="keywordflow">       end do</span></div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span> </div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>       <span class="keyword">call </span>mg_copy_from_tree_gc(mg_iphi, <a class="code hl_variable" href="namespacemod__rd__phys.html#a5aa6845739ca3fcaea6e782fd18008a7">w_</a>, state_to=psa)</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span><span class="keywordflow">    end if</span></div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>    <span class="comment">! Done with the w variable ***************************************</span></div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span> </div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>  <span class="keyword">end subroutine </span>rd_implicit_update</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span> </div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__rd__phys.html">mod_rd_phys</a></div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>       <span class="keyword">call </span>mg_copy_to_tree(<a class="code hl_variable" href="namespacemod__rd__phys.html#a5aa6845739ca3fcaea6e782fd18008a7">w_</a>, mg_irhs, factor=-lambda, state_from=psb)</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>       <span class="keyword">call </span>mg_copy_to_tree(<a class="code hl_variable" href="namespacemod__rd__phys.html#a5aa6845739ca3fcaea6e782fd18008a7">w_</a>, mg_iphi, state_from=psb)</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span> </div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>       <span class="keyword">call </span>mg_fas_fmg(mg, .true., max_res=res)</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>       <span class="keywordflow">do</span> n = 1, 10</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>          <span class="keyword">call </span>mg_fas_vcycle(mg, max_res=res)</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>          <span class="keywordflow">if</span> (res &lt; max_residual) <span class="keywordflow">exit</span></div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span><span class="keywordflow">       end do</span></div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span> </div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>       <span class="keywordflow">if</span> (res &gt; max_residual) <span class="keyword">call </span>mpistop(<span class="stringliteral">&quot;w_multigrid: no convergence&quot;</span>)</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>       <span class="keyword">call </span>mg_copy_from_tree_gc(mg_iphi, <a class="code hl_variable" href="namespacemod__rd__phys.html#a5aa6845739ca3fcaea6e782fd18008a7">w_</a>, state_to=psa)</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span><span class="keywordflow">    end if</span></div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>    <span class="comment">! Done with the w variable ***************************************</span></div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span> </div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>  <span class="keyword">end subroutine </span>rd_implicit_update</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span> </div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__rd__phys.html">mod_rd_phys</a></div>
 <div class="ttc" id="anamespacemod__comm__lib_html"><div class="ttname"><a href="namespacemod__comm__lib.html">mod_comm_lib</a></div><div class="ttdef"><b>Definition</b> <a href="mod__comm__lib_8t_source.html#l00001">mod_comm_lib.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__comm__lib_html_a9b6f1a8fd13bc5670e3b426151c34048"><div class="ttname"><a href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mod_comm_lib::mpistop</a></div><div class="ttdeci">subroutine, public mpistop(message)</div><div class="ttdoc">Exit MPI-AMRVAC with an error message.</div><div class="ttdef"><b>Definition</b> <a href="mod__comm__lib_8t_source.html#l00207">mod_comm_lib.t:208</a></div></div>
 <div class="ttc" id="anamespacemod__forest_html"><div class="ttname"><a href="namespacemod__forest.html">mod_forest</a></div><div class="ttdoc">Module with basic grid data structures.</div><div class="ttdef"><b>Definition</b> <a href="mod__forest_8t_source.html#l00002">mod_forest.t:2</a></div></div>
