@@ -260,248 +260,244 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="comment">! since we only filled mesh values, and advance assumes filled</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="comment">! ghost cells, do boundary filling for the new levels</span></div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordflow">if</span> (time_advance) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>       <span class="keyword">call </span>getbc(global_time+dt,0.d0,ps,iwstart,nwgc)</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>       <span class="keyword">call </span>getbc(global_time,0.d0,ps,iwstart,nwgc)</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keywordflow">    end if</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordflow">if</span> (use_multigrid) <span class="keyword">call </span>mg_update_refinement(n_coarsen, n_refine)</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keyword">call </span>getbc(global_time,0.d0,ps,iwstart,nwgc)</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordflow">if</span> (use_multigrid) <span class="keyword">call </span>mg_update_refinement(n_coarsen, n_refine)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordflow">if</span> (<span class="keyword">associated</span>(usr_after_refine)) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>       <span class="keyword">call </span>usr_after_refine(n_coarsen, n_refine)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keywordflow">    end if</span></div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">if</span> (<span class="keyword">associated</span>(usr_after_refine)) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>       <span class="keyword">call </span>usr_after_refine(n_coarsen, n_refine)</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keywordflow">    end if</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
 </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__coarsen__refine.html#a90d7cd8cbcd1b2de285dee4d58973632">amr_coarsen_refine</a></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment"></span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="comment">  !&gt; For all grids on all processors, do a check on refinement flags. Make</span></div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">  !&gt; sure that neighbors will not differ more than one level of refinement.</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="keyword">subroutine </span>proper_nesting</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__forest.html">mod_forest</a></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__amr__neighbors.html">mod_amr_neighbors</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__amr__neighbors.html#a686f8e8a5eace464a27777d6efd0a762">find_neighbor</a></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordtype">logical</span>, <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> :: refine2</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordtype">integer</span> :: iigrid, igrid, level, ic^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>, inp^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>, i^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>, my_neighbor_type,ipe</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordtype">logical</span> :: coarsening, pole(<a class="code hl_variable" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), sendbuf(<a class="code hl_variable" href="namespacemod__global__parameters.html#ad92f0d9f4cbc71571fb26c74cd2be25b">max_blocks</a>)</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordtype">type</span>(<a class="code hl_struct" href="structmod__forest_1_1tree__node__ptr.html">tree_node_ptr</a>) :: tree, p_neighbor, my_parent, sibling, my_neighbor, &amp;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                           neighborchild</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacemod__global__parameters.html#aac1731aeb6f288269458ed77b7317e88">nbufferx</a>^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>/=0|.or.) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>       <span class="keyword">allocate</span>(refine2(<a class="code hl_variable" href="namespacemod__global__parameters.html#ad92f0d9f4cbc71571fb26c74cd2be25b">max_blocks</a>,<a class="code hl_variable" href="namespacemod__global__parameters.html#a879ff9a3d86e228553c9e44151a31574">npe</a>))</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>       <span class="keyword">call </span>mpi_allreduce(<a class="code hl_variable" href="namespacemod__forest.html#a10676f2b0d4b8a9e41c032ffc46ca1b2">refine</a>,refine2,<a class="code hl_variable" href="namespacemod__global__parameters.html#ad92f0d9f4cbc71571fb26c74cd2be25b">max_blocks</a>*<a class="code hl_variable" href="namespacemod__global__parameters.html#a879ff9a3d86e228553c9e44151a31574">npe</a>,mpi_logical,mpi_lor, &amp;</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                          <a class="code hl_variable" href="namespacemod__global__parameters.html#a5704f1c57aa09935d3491f65ad240861">icomm</a>,<a class="code hl_variable" href="namespacemod__global__parameters.html#a701c9a9b2d5f02bb7c7a8181f09df2ae">ierrmpi</a>)</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>       <a class="code hl_variable" href="namespacemod__forest.html#a10676f2b0d4b8a9e41c032ffc46ca1b2">refine</a>=refine2</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>       sendbuf(:)=<a class="code hl_variable" href="namespacemod__forest.html#a10676f2b0d4b8a9e41c032ffc46ca1b2">refine</a>(:,<a class="code hl_variable" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a>)</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>       <span class="keyword">call </span>mpi_allgather(sendbuf,<a class="code hl_variable" href="namespacemod__global__parameters.html#ad92f0d9f4cbc71571fb26c74cd2be25b">max_blocks</a>,mpi_logical,<a class="code hl_variable" href="namespacemod__forest.html#a10676f2b0d4b8a9e41c032ffc46ca1b2">refine</a>,<a class="code hl_variable" href="namespacemod__global__parameters.html#ad92f0d9f4cbc71571fb26c74cd2be25b">max_blocks</a>, &amp;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                          mpi_logical,<a class="code hl_variable" href="namespacemod__global__parameters.html#a5704f1c57aa09935d3491f65ad240861">icomm</a>,<a class="code hl_variable" href="namespacemod__global__parameters.html#a701c9a9b2d5f02bb7c7a8181f09df2ae">ierrmpi</a>)</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keywordflow">    end if</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keywordflow">do</span> level=min(<a class="code hl_variable" href="namespacemod__global__parameters.html#ac103339f015a822b2021a6f4f3b53edc">levmax</a>,<a class="code hl_variable" href="namespacemod__global__parameters.html#ad3ffd4e35e76a0b86495789e5458fdd8">refine_max_level</a>-1),<a class="code hl_variable" href="namespacemod__global__parameters.html#ada8ed41cad56938dba0a13009b2b66a5">levmin</a>+1,-1</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>       tree%node =&gt; <a class="code hl_variable" href="namespacemod__forest.html#af2e6b2de6c6a66d696a681f6f5567a15">level_head</a>(level)%node</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>       <span class="keywordflow">do</span></div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>          <span class="keywordflow">if</span> (.not.<span class="keyword">associated</span>(tree%node)) <span class="keywordflow">exit</span></div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>          <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacemod__forest.html#a10676f2b0d4b8a9e41c032ffc46ca1b2">refine</a>(tree%node%igrid,tree%node%ipe)) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>             ic^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>=1+modulo(tree%node%ig^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>-1,2);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>             {<span class="keywordflow">do</span> inp^db=ic^db-2,ic^db-1\}</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                <span class="keywordflow">if</span> (inp^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>==0|.and.) cycle</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                p_neighbor%node =&gt; tree%node%parent%node</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                {<span class="keywordflow">if</span> (inp^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>/=0) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                   p_neighbor%node =&gt; p_neighbor%node%neighbor(ic^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>)%node</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                   <span class="keywordflow">if</span> (.not.<span class="keyword">associated</span>(p_neighbor%node)) cycle</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                <span class="keyword">end </span>if\}</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                <span class="keywordflow">if</span> (p_neighbor%node%leaf) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                   refine(p_neighbor%node%igrid,p_neighbor%node%ipe)=.true.</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="keywordflow">                end if</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>             {<span class="keyword">end </span>do\}</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keywordflow">          end if</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__coarsen__refine.html#a90d7cd8cbcd1b2de285dee4d58973632">amr_coarsen_refine</a></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment"></span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment">  !&gt; For all grids on all processors, do a check on refinement flags. Make</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment">  !&gt; sure that neighbors will not differ more than one level of refinement.</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="keyword">subroutine </span>proper_nesting</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__forest.html">mod_forest</a></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__amr__neighbors.html">mod_amr_neighbors</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__amr__neighbors.html#a686f8e8a5eace464a27777d6efd0a762">find_neighbor</a></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordtype">logical</span>, <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> :: refine2</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordtype">integer</span> :: iigrid, igrid, level, ic^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>, inp^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>, i^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>, my_neighbor_type,ipe</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordtype">logical</span> :: coarsening, pole(<a class="code hl_variable" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), sendbuf(<a class="code hl_variable" href="namespacemod__global__parameters.html#ad92f0d9f4cbc71571fb26c74cd2be25b">max_blocks</a>)</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordtype">type</span>(<a class="code hl_struct" href="structmod__forest_1_1tree__node__ptr.html">tree_node_ptr</a>) :: tree, p_neighbor, my_parent, sibling, my_neighbor, &amp;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                           neighborchild</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacemod__global__parameters.html#aac1731aeb6f288269458ed77b7317e88">nbufferx</a>^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>/=0|.or.) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>       <span class="keyword">allocate</span>(refine2(<a class="code hl_variable" href="namespacemod__global__parameters.html#ad92f0d9f4cbc71571fb26c74cd2be25b">max_blocks</a>,<a class="code hl_variable" href="namespacemod__global__parameters.html#a879ff9a3d86e228553c9e44151a31574">npe</a>))</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>       <span class="keyword">call </span>mpi_allreduce(<a class="code hl_variable" href="namespacemod__forest.html#a10676f2b0d4b8a9e41c032ffc46ca1b2">refine</a>,refine2,<a class="code hl_variable" href="namespacemod__global__parameters.html#ad92f0d9f4cbc71571fb26c74cd2be25b">max_blocks</a>*<a class="code hl_variable" href="namespacemod__global__parameters.html#a879ff9a3d86e228553c9e44151a31574">npe</a>,mpi_logical,mpi_lor, &amp;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                          <a class="code hl_variable" href="namespacemod__global__parameters.html#a5704f1c57aa09935d3491f65ad240861">icomm</a>,<a class="code hl_variable" href="namespacemod__global__parameters.html#a701c9a9b2d5f02bb7c7a8181f09df2ae">ierrmpi</a>)</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>       <a class="code hl_variable" href="namespacemod__forest.html#a10676f2b0d4b8a9e41c032ffc46ca1b2">refine</a>=refine2</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>       sendbuf(:)=<a class="code hl_variable" href="namespacemod__forest.html#a10676f2b0d4b8a9e41c032ffc46ca1b2">refine</a>(:,<a class="code hl_variable" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a>)</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>       <span class="keyword">call </span>mpi_allgather(sendbuf,<a class="code hl_variable" href="namespacemod__global__parameters.html#ad92f0d9f4cbc71571fb26c74cd2be25b">max_blocks</a>,mpi_logical,<a class="code hl_variable" href="namespacemod__forest.html#a10676f2b0d4b8a9e41c032ffc46ca1b2">refine</a>,<a class="code hl_variable" href="namespacemod__global__parameters.html#ad92f0d9f4cbc71571fb26c74cd2be25b">max_blocks</a>, &amp;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                          mpi_logical,<a class="code hl_variable" href="namespacemod__global__parameters.html#a5704f1c57aa09935d3491f65ad240861">icomm</a>,<a class="code hl_variable" href="namespacemod__global__parameters.html#a701c9a9b2d5f02bb7c7a8181f09df2ae">ierrmpi</a>)</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="keywordflow">    end if</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keywordflow">do</span> level=min(<a class="code hl_variable" href="namespacemod__global__parameters.html#ac103339f015a822b2021a6f4f3b53edc">levmax</a>,<a class="code hl_variable" href="namespacemod__global__parameters.html#ad3ffd4e35e76a0b86495789e5458fdd8">refine_max_level</a>-1),<a class="code hl_variable" href="namespacemod__global__parameters.html#ada8ed41cad56938dba0a13009b2b66a5">levmin</a>+1,-1</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>       tree%node =&gt; <a class="code hl_variable" href="namespacemod__forest.html#af2e6b2de6c6a66d696a681f6f5567a15">level_head</a>(level)%node</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>       <span class="keywordflow">do</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>          <span class="keywordflow">if</span> (.not.<span class="keyword">associated</span>(tree%node)) <span class="keywordflow">exit</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>          <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacemod__forest.html#a10676f2b0d4b8a9e41c032ffc46ca1b2">refine</a>(tree%node%igrid,tree%node%ipe)) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>             ic^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>=1+modulo(tree%node%ig^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>-1,2);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>             {<span class="keywordflow">do</span> inp^db=ic^db-2,ic^db-1\}</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                <span class="keywordflow">if</span> (inp^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>==0|.and.) cycle</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                p_neighbor%node =&gt; tree%node%parent%node</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                {<span class="keywordflow">if</span> (inp^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>/=0) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                   p_neighbor%node =&gt; p_neighbor%node%neighbor(ic^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>,^<a class="code hl_variable" href="namespacemod__global__parameters.html#a68549065c490d02e1de338e8a60c3f12">d</a>)%node</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                   <span class="keywordflow">if</span> (.not.<span class="keyword">associated</span>(p_neighbor%node)) cycle</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                <span class="keyword">end </span>if\}</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                <span class="keywordflow">if</span> (p_neighbor%node%leaf) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                   refine(p_neighbor%node%igrid,p_neighbor%node%ipe)=.true.</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="keywordflow">                end if</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>             {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="keywordflow">          end if</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>          tree%node =&gt; tree%node%next%node</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keywordflow">       end do</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keywordflow">    end do</span></div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>          tree%node =&gt; tree%node%next%node</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="keywordflow">       end do</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keywordflow">    end do</span></div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="comment">! On each processor locally, check if grids set for coarsening are already</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="comment">! set for refinement.</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="comment">! On each processor locally, check if grids set for coarsening are already</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="comment">! set for refinement.</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">do</span> iigrid=1,igridstail; igrid=igrids(iigrid);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>       <span class="keywordflow">if</span> (refine(igrid,mype).and.coarsen(igrid,mype)) coarsen(igrid,mype)=.false.</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="keywordflow">    end do</span></div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keywordflow">do</span> iigrid=1,igridstail; igrid=igrids(iigrid);</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>       <span class="keywordflow">if</span> (refine(igrid,mype).and.coarsen(igrid,mype)) coarsen(igrid,mype)=.false.</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="keywordflow">    end do</span></div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="comment">! For all grids on all processors, do a check on coarse refinement flags</span></div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    sendbuf(:)=coarsen(:,mype)</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keyword">call </span>mpi_allgather(sendbuf,max_blocks,mpi_logical,coarsen,max_blocks, &amp;</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                       mpi_logical,icomm,ierrmpi)</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordflow">do</span> level=levmax,max(2,levmin),-1</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>       tree%node =&gt; level_head(level)%node</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>       <span class="keywordflow">do</span></div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>          <span class="keywordflow">if</span> (.not.<span class="keyword">associated</span>(tree%node)) <span class="keywordflow">exit</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="comment">! For all grids on all processors, do a check on coarse refinement flags</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    sendbuf(:)=coarsen(:,mype)</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="keyword">call </span>mpi_allgather(sendbuf,max_blocks,mpi_logical,coarsen,max_blocks, &amp;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                       mpi_logical,icomm,ierrmpi)</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordflow">do</span> level=levmax,max(2,levmin),-1</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>       tree%node =&gt; level_head(level)%node</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>       <span class="keywordflow">do</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>          <span class="keywordflow">if</span> (.not.<span class="keyword">associated</span>(tree%node)) <span class="keywordflow">exit</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>          <span class="keywordflow">if</span> (coarsen(tree%node%igrid,tree%node%ipe)) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>             coarsening=.true.</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>             my_parent%node =&gt; tree%node%parent%node</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>          <span class="keywordflow">if</span> (coarsen(tree%node%igrid,tree%node%ipe)) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>             coarsening=.true.</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>             my_parent%node =&gt; tree%node%parent%node</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>             <span class="comment">! are all siblings flagged for coarsen ?</span></div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    check1:  {<span class="keywordflow">do</span> ic^db=1,2\}</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                sibling%node =&gt; my_parent%node%child(ic^d)%node</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                <span class="keywordflow">if</span> (sibling%node%leaf) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                   <span class="keywordflow">if</span> (coarsen(sibling%node%igrid,sibling%node%ipe)) cycle</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="keywordflow">                end if</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                <span class="keyword">call </span><a class="code hl_function" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                <span class="keywordflow">exit</span> check1</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>             {<span class="keyword">end </span>do\} check1</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>             <span class="comment">! Make sure that neighbors will not differ more than one level of</span></div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>             <span class="comment">! refinement, otherwise unflag all siblings</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>             <span class="keywordflow">if</span> (coarsening) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    check2:     {<span class="keywordflow">do</span> ic^db=1,2\}</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                   sibling%node =&gt; my_parent%node%child(ic^d)%node</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                   {<span class="keywordflow">do</span> i^db=ic^db-2,ic^db-1\}</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                      <span class="keywordflow">if</span> (i^d==0|.and.) cycle</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                      <span class="keyword">call </span>find_neighbor(my_neighbor,my_neighbor_type, &amp;</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                                         sibling,i^d,pole)</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                      <span class="keywordflow">select case</span> (my_neighbor_type)</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                      <span class="keywordflow">case</span> (neighbor_sibling)</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                         <span class="keywordflow">if</span> (refine(my_neighbor%node%igrid, &amp;</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                                    my_neighbor%node%ipe)) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                            <span class="keyword">call </span><a class="code hl_function" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                            <span class="keywordflow">exit</span> check2</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                         <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                            cycle</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="keywordflow">                         end if</span></div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                      <span class="keywordflow">case</span> (neighbor_fine)</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                         neighborchild%node=&gt;my_neighbor%node%child(1^d&amp;)%node</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                         <span class="keywordflow">if</span> (neighborchild%node%leaf) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                            <span class="keywordflow">if</span> (coarsen(neighborchild%node%igrid, &amp;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                                        neighborchild%node%ipe)) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                               cycle</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="keywordflow">                            end if</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="keywordflow">                         end if</span></div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                         <span class="keyword">call </span><a class="code hl_function" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                         <span class="keywordflow">exit</span> check2</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="keywordflow">                      end select</span></div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                   {<span class="keyword">end </span>do\}</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                {<span class="keyword">end </span>do\} check2</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="keywordflow">             end if</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="keywordflow">          end if</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>             <span class="comment">! are all siblings flagged for coarsen ?</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    check1:  {<span class="keywordflow">do</span> ic^db=1,2\}</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                sibling%node =&gt; my_parent%node%child(ic^d)%node</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                <span class="keywordflow">if</span> (sibling%node%leaf) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                   <span class="keywordflow">if</span> (coarsen(sibling%node%igrid,sibling%node%ipe)) cycle</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="keywordflow">                end if</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                <span class="keyword">call </span><a class="code hl_function" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                <span class="keywordflow">exit</span> check1</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>             {<span class="keyword">end </span>do\} check1</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>             <span class="comment">! Make sure that neighbors will not differ more than one level of</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>             <span class="comment">! refinement, otherwise unflag all siblings</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>             <span class="keywordflow">if</span> (coarsening) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    check2:     {<span class="keywordflow">do</span> ic^db=1,2\}</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                   sibling%node =&gt; my_parent%node%child(ic^d)%node</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                   {<span class="keywordflow">do</span> i^db=ic^db-2,ic^db-1\}</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                      <span class="keywordflow">if</span> (i^d==0|.and.) cycle</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                      <span class="keyword">call </span>find_neighbor(my_neighbor,my_neighbor_type, &amp;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                                         sibling,i^d,pole)</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                      <span class="keywordflow">select case</span> (my_neighbor_type)</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                      <span class="keywordflow">case</span> (neighbor_sibling)</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                         <span class="keywordflow">if</span> (refine(my_neighbor%node%igrid, &amp;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                                    my_neighbor%node%ipe)) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                            <span class="keyword">call </span><a class="code hl_function" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                            <span class="keywordflow">exit</span> check2</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                         <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                            cycle</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="keywordflow">                         end if</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                      <span class="keywordflow">case</span> (neighbor_fine)</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                         neighborchild%node=&gt;my_neighbor%node%child(1^d&amp;)%node</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                         <span class="keywordflow">if</span> (neighborchild%node%leaf) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                            <span class="keywordflow">if</span> (coarsen(neighborchild%node%igrid, &amp;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                                        neighborchild%node%ipe)) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                               cycle</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><span class="keywordflow">                            end if</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="keywordflow">                         end if</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                         <span class="keyword">call </span><a class="code hl_function" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                         <span class="keywordflow">exit</span> check2</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="keywordflow">                      end select</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                   {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                {<span class="keyword">end </span>do\} check2</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="keywordflow">             end if</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="keywordflow">          end if</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>          tree%node =&gt; tree%node%next%node</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="keywordflow">       end do</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="keywordflow">    end do</span></div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>          tree%node =&gt; tree%node%next%node</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="keywordflow">       end do</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="keywordflow">    end do</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="keyword">contains</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="foldopen" id="foldopen00300" data-start="" data-end="">
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">  300</a></span>      <span class="keyword">subroutine </span><a class="code hl_function" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keyword">contains</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="foldopen" id="foldopen00304" data-start="" data-end="">
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">  304</a></span>      <span class="keyword">subroutine </span><a class="code hl_function" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      <span class="keywordtype">integer</span> :: ic^D</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      <span class="keywordtype">type</span>(tree_node_ptr) :: sibling</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      {<span class="keywordflow">do</span> ic^db=1,2\}</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>         sibling%node =&gt; my_parent%node%child(ic^d)%node</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>         <span class="keywordflow">if</span> (sibling%node%leaf) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            coarsen(sibling%node%igrid,sibling%node%ipe)=.false.</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="keywordflow">         end if</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>      {<span class="keyword">end </span>do\}</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>      coarsening=.false.</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      <span class="keywordtype">integer</span> :: ic^D</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>      <span class="keywordtype">type</span>(tree_node_ptr) :: sibling</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      {<span class="keywordflow">do</span> ic^db=1,2\}</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>         sibling%node =&gt; my_parent%node%child(ic^d)%node</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>         <span class="keywordflow">if</span> (sibling%node%leaf) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            coarsen(sibling%node%igrid,sibling%node%ipe)=.false.</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="keywordflow">         end if</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>      {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>      coarsening=.false.</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
 </div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>      <span class="keyword">end subroutine </span><a class="code hl_function" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  <span class="keyword">end subroutine </span>proper_nesting</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="comment"></span> </div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="comment">  !&gt; coarsen sibling blocks into one block</span></div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="keyword">subroutine </span>coarsen_grid_siblings(igrid,ipe,child_igrid,child_ipe,active)</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__coarsen.html">mod_coarsen</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__coarsen.html#a584590984389500a29a420b0a883c8a8">coarsen_grid</a></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__initialize__amr.html">mod_initialize_amr</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__initialize__amr.html#af51458e257138c8950600f7ada222ea7">initial_condition</a></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__amr__solution__node.html">mod_amr_solution_node</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__amr__solution__node.html#a5360422247c76466eb60cf0a2d6fd5e9">alloc_node</a></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      <span class="keyword">end subroutine </span><a class="code hl_function" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  <span class="keyword">end subroutine </span>proper_nesting</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="comment"></span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="comment">  !&gt; coarsen sibling blocks into one block</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  <span class="keyword">subroutine </span>coarsen_grid_siblings(igrid,ipe,child_igrid,child_ipe,active)</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__coarsen.html">mod_coarsen</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__coarsen.html#a584590984389500a29a420b0a883c8a8">coarsen_grid</a></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__initialize__amr.html">mod_initialize_amr</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__initialize__amr.html#af51458e257138c8950600f7ada222ea7">initial_condition</a></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__amr__solution__node.html">mod_amr_solution_node</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__amr__solution__node.html#a5360422247c76466eb60cf0a2d6fd5e9">alloc_node</a></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: igrid, ipe</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(2^D&amp;)</span>, <span class="keywordtype">intent(in)</span> :: child_igrid, child_ipe</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordtype">logical</span>, <span class="keywordtype">intent(in)</span> :: active</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: igrid, ipe</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(2^D&amp;)</span>, <span class="keywordtype">intent(in)</span> :: child_igrid, child_ipe</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="keywordtype">logical</span>, <span class="keywordtype">intent(in)</span> :: active</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keywordtype">integer</span> :: igridFi, ipeFi, ixCo^L, ixCoG^L, ixCoM^L, ic^D, idir</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <span class="keywordflow">if</span> (ipe==<a class="code hl_variable" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a>) <span class="keyword">call </span><a class="code hl_function" href="namespacemod__amr__solution__node.html#a5360422247c76466eb60cf0a2d6fd5e9">alloc_node</a>(igrid)</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keywordtype">integer</span> :: igridFi, ipeFi, ixCo^L, ixCoG^L, ixCoM^L, ic^D, idir</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="keywordflow">if</span> (ipe==<a class="code hl_variable" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a>) <span class="keyword">call </span><a class="code hl_function" href="namespacemod__amr__solution__node.html#a5360422247c76466eb60cf0a2d6fd5e9">alloc_node</a>(igrid)</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <span class="comment">! New passive cell, coarsen from initial condition:</span></div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keywordflow">if</span> (.not. active) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>       <span class="keywordflow">if</span> (ipe == <a class="code hl_variable" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a>) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>          <span class="keyword">call </span><a class="code hl_function" href="namespacemod__initialize__amr.html#af51458e257138c8950600f7ada222ea7">initial_condition</a>(igrid)</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>          {<span class="keywordflow">do</span> ic^db=1,2\}</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>          igridfi=child_igrid(ic^d)</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>          ipefi=child_ipe(ic^d)</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>          <span class="comment">!if (ipeFi==mype) then</span></div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>          <span class="comment">!   ! remove solution space of child      </span></div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>          <span class="comment">!   call dealloc_node(igridFi)</span></div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>          <span class="comment">!end if</span></div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>          {<span class="keyword">end </span>do\}</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="keywordflow">       end if</span></div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>       <span class="keywordflow">return</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="keywordflow">    end if</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="comment">! New passive cell, coarsen from initial condition:</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keywordflow">if</span> (.not. active) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>       <span class="keywordflow">if</span> (ipe == <a class="code hl_variable" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a>) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>          <span class="keyword">call </span><a class="code hl_function" href="namespacemod__initialize__amr.html#af51458e257138c8950600f7ada222ea7">initial_condition</a>(igrid)</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>          {<span class="keywordflow">do</span> ic^db=1,2\}</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>          igridfi=child_igrid(ic^d)</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>          ipefi=child_ipe(ic^d)</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>          <span class="comment">!if (ipeFi==mype) then</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>          <span class="comment">!   ! remove solution space of child      </span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>          <span class="comment">!   call dealloc_node(igridFi)</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>          <span class="comment">!end if</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>          {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span><span class="keywordflow">       end if</span></div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>       <span class="keywordflow">return</span></div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span><span class="keywordflow">    end if</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    {<span class="keywordflow">do</span> ic^db=1,2\}</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>       igridfi=child_igrid(ic^d)</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>       ipefi=child_ipe(ic^d)</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    {<span class="keywordflow">do</span> ic^db=1,2\}</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>       igridfi=child_igrid(ic^d)</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>       ipefi=child_ipe(ic^d)</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>       <span class="keywordflow">if</span> (ipefi==mype) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>          ^d&amp;dxlevel(^d)=rnode(rpdx^d_,igridfi);</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>          <span class="keywordflow">if</span> (ipe==mype) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>             ixcomin^d=ixmlo^d+(ic^d-1)*(ixmhi^d-ixmlo^d+1)/2;</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>             ixcomax^d=ixmhi^d+(ic^d-2)*(ixmhi^d-ixmlo^d+1)/2;</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>             <span class="keyword">call </span>coarsen_grid(ps(igridfi),ixg^ll,ixm^ll,ps(igrid),ixg^ll,ixco^l)</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>             <span class="comment">! remove solution space of child</span></div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>             <span class="comment">!call dealloc_node(igridFi)</span></div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>          <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>             ixcogmin^d=1;</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>             ixcogmax^d=ixghi^d/2+nghostcells;</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>             ixcom^l=ixcog^l^lsubnghostcells;</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>             <span class="keyword">call </span>coarsen_grid(ps(igridfi),ixg^ll,ixm^ll,psc(igridfi), &amp;</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                               ixcog^l,ixcom^l)</div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span> </div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>             <span class="comment">!itag=ipeFi*max_blocks+igridFi</span></div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>             itag=ipefi+igridfi</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>             isend=isend+1</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>             <span class="keyword">call </span>mpi_isend(psc(igridfi)%w,1,type_coarse_block,ipe,itag, &amp;</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                            icomm,sendrequest(isend),ierrmpi)</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>             <span class="keywordflow">if</span>(stagger_grid) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>               <span class="keywordflow">do</span> idir=1,ndim</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                 <span class="comment">!itag_stg=(npe+ipeFi+1)*max_blocks+igridFi*(ndir-1+idir)</span></div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                 itag_stg=(npe+ipefi+1)+igridfi*(ndir-1+idir)</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                 <span class="keyword">call </span>mpi_isend(psc(igridfi)%ws,1,type_coarse_block_stg(idir,ic^d),ipe,itag_stg, &amp;</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                              icomm,sendrequest_stg(isend),ierrmpi)</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="keywordflow">               end do</span></div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="keywordflow">             end if</span></div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="keywordflow">          end if</span></div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>       <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>          <span class="keywordflow">if</span> (ipe==mype) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>             <span class="comment">!itag=ipeFi*max_blocks+igridFi</span></div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>             itag=ipefi+igridfi</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>             irecv=irecv+1</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>             <span class="keyword">call </span>mpi_irecv(ps(igrid)%w,1,type_sub_block(ic^d),ipefi,itag, &amp;</div>
-<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                            icomm,recvrequest(irecv),ierrmpi)</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>             <span class="keywordflow">if</span>(stagger_grid) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>               <span class="keywordflow">do</span> idir=1,ndim</div>
-<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>                 <span class="comment">!itag_stg=(npe+ipeFi+1)*max_blocks+igridFi*(ndir-1+idir)</span></div>
-<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>                 itag_stg=(npe+ipefi+1)+igridfi*(ndir-1+idir)</div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>                 <span class="keyword">call </span>mpi_irecv(ps(igrid)%ws,1,type_sub_block_stg(idir,ic^d),ipefi,itag_stg, &amp;</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>                                icomm,recvrequest_stg(irecv),ierrmpi)</div>
-<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="keywordflow">               end do</span></div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="keywordflow">             end if</span></div>
-<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="keywordflow">          end if</span></div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span><span class="keywordflow">       end if</span></div>
-<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    {<span class="keyword">end </span>do\}</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>  <span class="keyword">end subroutine </span>coarsen_grid_siblings</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__coarsen__refine.html">mod_coarsen_refine</a></div>
-<div class="ttc" id="amod__coarsen__refine_8t_html_adbdb5c3b209cb26da159a3a80033ba26"><div class="ttname"><a href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div><div class="ttdeci">subroutine unflag_coarsen_siblings</div><div class="ttdef"><b>Definition</b> <a href="mod__coarsen__refine_8t_source.html#l00304">mod_coarsen_refine.t:305</a></div></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>       <span class="keywordflow">if</span> (ipefi==mype) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>          ^d&amp;dxlevel(^d)=rnode(rpdx^d_,igridfi);</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>          <span class="keywordflow">if</span> (ipe==mype) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>             ixcomin^d=ixmlo^d+(ic^d-1)*(ixmhi^d-ixmlo^d+1)/2;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>             ixcomax^d=ixmhi^d+(ic^d-2)*(ixmhi^d-ixmlo^d+1)/2;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>             <span class="keyword">call </span>coarsen_grid(ps(igridfi),ixg^ll,ixm^ll,ps(igrid),ixg^ll,ixco^l)</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>             <span class="comment">! remove solution space of child</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>             <span class="comment">!call dealloc_node(igridFi)</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>          <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>             ixcogmin^d=1;</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>             ixcogmax^d=ixghi^d/2+nghostcells;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>             ixcom^l=ixcog^l^lsubnghostcells;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>             <span class="keyword">call </span>coarsen_grid(ps(igridfi),ixg^ll,ixm^ll,psc(igridfi), &amp;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                               ixcog^l,ixcom^l)</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>             <span class="comment">!itag=ipeFi*max_blocks+igridFi</span></div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>             itag=ipefi+igridfi</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>             isend=isend+1</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>             <span class="keyword">call </span>mpi_isend(psc(igridfi)%w,1,type_coarse_block,ipe,itag, &amp;</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                            icomm,sendrequest(isend),ierrmpi)</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>             <span class="keywordflow">if</span>(stagger_grid) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>               <span class="keywordflow">do</span> idir=1,ndim</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>                 <span class="comment">!itag_stg=(npe+ipeFi+1)*max_blocks+igridFi*(ndir-1+idir)</span></div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>                 itag_stg=(npe+ipefi+1)+igridfi*(ndir-1+idir)</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                 <span class="keyword">call </span>mpi_isend(psc(igridfi)%ws,1,type_coarse_block_stg(idir,ic^d),ipe,itag_stg, &amp;</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                              icomm,sendrequest_stg(isend),ierrmpi)</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="keywordflow">               end do</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="keywordflow">             end if</span></div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="keywordflow">          end if</span></div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>       <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>          <span class="keywordflow">if</span> (ipe==mype) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>             <span class="comment">!itag=ipeFi*max_blocks+igridFi</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>             itag=ipefi+igridfi</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>             irecv=irecv+1</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>             <span class="keyword">call </span>mpi_irecv(ps(igrid)%w,1,type_sub_block(ic^d),ipefi,itag, &amp;</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                            icomm,recvrequest(irecv),ierrmpi)</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>             <span class="keywordflow">if</span>(stagger_grid) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>               <span class="keywordflow">do</span> idir=1,ndim</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                 <span class="comment">!itag_stg=(npe+ipeFi+1)*max_blocks+igridFi*(ndir-1+idir)</span></div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                 itag_stg=(npe+ipefi+1)+igridfi*(ndir-1+idir)</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                 <span class="keyword">call </span>mpi_irecv(ps(igrid)%ws,1,type_sub_block_stg(idir,ic^d),ipefi,itag_stg, &amp;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                                icomm,recvrequest_stg(irecv),ierrmpi)</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="keywordflow">               end do</span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="keywordflow">             end if</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="keywordflow">          end if</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="keywordflow">       end if</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    {<span class="keyword">end </span>do\}</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span> </div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>  <span class="keyword">end subroutine </span>coarsen_grid_siblings</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span> </div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__coarsen__refine.html">mod_coarsen_refine</a></div>
+<div class="ttc" id="amod__coarsen__refine_8t_html_adbdb5c3b209cb26da159a3a80033ba26"><div class="ttname"><a href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></div><div class="ttdeci">subroutine unflag_coarsen_siblings</div><div class="ttdef"><b>Definition</b> <a href="mod__coarsen__refine_8t_source.html#l00300">mod_coarsen_refine.t:301</a></div></div>
 <div class="ttc" id="anamespacemod__amr__fct_html"><div class="ttname"><a href="namespacemod__amr__fct.html">mod_amr_fct</a></div><div class="ttdef"><b>Definition</b> <a href="mod__amr__fct_8t_source.html#l00001">mod_amr_fct.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__amr__fct_html_a6742566c4457a0931b368db9539791b9"><div class="ttname"><a href="namespacemod__amr__fct.html#a6742566c4457a0931b368db9539791b9">mod_amr_fct::store_faces</a></div><div class="ttdeci">subroutine, public store_faces</div><div class="ttdoc">To achive consistency and thus conservation of divergence, when refining a block we take into account...</div><div class="ttdef"><b>Definition</b> <a href="mod__amr__fct_8t_source.html#l00452">mod_amr_fct.t:453</a></div></div>
 <div class="ttc" id="anamespacemod__amr__fct_html_a7b0f4490bde4c832fd63c3651eb174da"><div class="ttname"><a href="namespacemod__amr__fct.html#a7b0f4490bde4c832fd63c3651eb174da">mod_amr_fct::comm_faces</a></div><div class="ttdeci">subroutine, public comm_faces</div><div class="ttdoc">When refining a coarse block with fine neighbours, it is necessary prolong consistently with the alre...</div><div class="ttdef"><b>Definition</b> <a href="mod__amr__fct_8t_source.html#l00523">mod_amr_fct.t:524</a></div></div>
