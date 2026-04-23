@@ -8,7 +8,7 @@ var searchData=
   ['h_5fvalc_5',['h_valc',['../namespacemod__solar__atmosphere.html#aa1827b76d72bada3e6dba0a77c833b71',1,'mod_solar_atmosphere']]],
   ['half_6',['half',['../namespacemod__constants.html#a3f0de4f07b907ebb3b322fc5cef30724',1,'mod_constants']]],
   ['hall_20mhd_7',['Can the MHD module handle Hall-MHD?',['../md_doc_2faq.html#faq-hall-mhd',1,'']]],
-  ['halley_5fmethod_8',['halley_method',['../namespacemod__fld.html#aae00cd585d53d7f497426872a6b7a36c',1,'mod_fld']]],
+  ['halley_5fmethod_8',['halley_method',['../namespacemod__fld.html#aff132cf5ef0c298927087f2b99f572c6',1,'mod_fld']]],
   ['hancock_9',['hancock',['../namespacemod__finite__volume.html#af45f9ba91539e8a29b7ebfe257a97f7c',1,'mod_finite_volume']]],
   ['hancockmf_10',['hancockmf',['../namespacemod__magnetofriction.html#a21e5c84c992a098dc677feb57efff858',1,'mod_magnetofriction']]],
   ['handle_20hall_20mhd_11',['Can the MHD module handle Hall-MHD?',['../md_doc_2faq.html#faq-hall-mhd',1,'']]],

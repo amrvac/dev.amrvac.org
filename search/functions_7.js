@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['halley_5fmethod_0',['halley_method',['../namespacemod__fld.html#aae00cd585d53d7f497426872a6b7a36c',1,'mod_fld']]],
+  ['halley_5fmethod_0',['halley_method',['../namespacemod__fld.html#aff132cf5ef0c298927087f2b99f572c6',1,'mod_fld']]],
   ['hancock_1',['hancock',['../namespacemod__finite__volume.html#af45f9ba91539e8a29b7ebfe257a97f7c',1,'mod_finite_volume']]],
   ['hancockmf_2',['hancockmf',['../namespacemod__magnetofriction.html#a21e5c84c992a098dc677feb57efff858',1,'mod_magnetofriction']]],
   ['handle_5fparticles_3',['handle_particles',['../namespacemod__particle__base.html#a6ff9e2fbe7d77c6678c39ec52c521d0d',1,'mod_particle_base']]],

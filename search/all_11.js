@@ -68,7 +68,7 @@ var searchData=
   ['new_20problem_65',['Setting up a new problem',['../md_doc_2amrvacusr.html',1,'']]],
   ['new_20setup_66',['Creating a New Setup',['../md_doc_2amrvacusr.html#user_setup',1,'']]],
   ['new_20users_67',['Introduction for new users',['../doc-contents.html#intro_new_users',1,'']]],
-  ['newton_5fmethod_68',['newton_method',['../namespacemod__fld.html#ab77a233aa68b193411dcd4d51348ead7',1,'mod_fld']]],
+  ['newton_5fmethod_68',['newton_method',['../namespacemod__fld.html#a8b2326716b3c63aeede877a5f91c7f6e',1,'mod_fld']]],
   ['next_69',['next',['../structmod__convert_1_1convert__vars__method.html#a74e0af91714590399a5675ff851041d1',1,'mod_convert::convert_vars_method::next'],['../structmod__forest_1_1tree__node.html#a892f466f62cd599accca7f7b8a61b665',1,'mod_forest::tree_node::next'],['../structmod__random_1_1rng__t.html#a092fcc612cf5065a15edbc80e24ff65d',1,'mod_random::rng_t::next()']]],
   ['nfile_70',['nfile',['../namespacemod__global__parameters.html#ad8e2f2407305f395e212d838cbd366a0',1,'mod_global_parameters']]],
   ['ng_71',['ng',['../namespacemod__global__parameters.html#a5a0c4ff10aba586a1a4b285e4b93e8d1',1,'mod_global_parameters']]],
