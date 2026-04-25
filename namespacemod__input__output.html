@@ -133,12 +133,12 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a846c54d7767425c6f966c4db1ad1c235" id="r_a846c54d7767425c6f966c4db1ad1c235"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#a846c54d7767425c6f966c4db1ad1c235">get_volume_average_func</a> (func, f_avg, volume)</td></tr>
 <tr class="memdesc:a846c54d7767425c6f966c4db1ad1c235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the volume average of func(w) over the leaves of the grid.  <br /></td></tr>
 <tr class="separator:a846c54d7767425c6f966c4db1ad1c235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86886a7d99e5a874352cfb6385dbd1f0" id="r_a86886a7d99e5a874352cfb6385dbd1f0"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#a86886a7d99e5a874352cfb6385dbd1f0">get_global_maxima</a> (wmax)</td></tr>
-<tr class="memdesc:a86886a7d99e5a874352cfb6385dbd1f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute global maxima of iw variables over the leaves of the grid.  <br /></td></tr>
-<tr class="separator:a86886a7d99e5a874352cfb6385dbd1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84c632bdd9b080c72ef3b930138ee80a" id="r_a84c632bdd9b080c72ef3b930138ee80a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#a84c632bdd9b080c72ef3b930138ee80a">get_global_minima</a> (wmin)</td></tr>
-<tr class="memdesc:a84c632bdd9b080c72ef3b930138ee80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute global minima of iw variables over the leaves of the grid.  <br /></td></tr>
-<tr class="separator:a84c632bdd9b080c72ef3b930138ee80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd6b389838e694b913ff56fe430e1c3" id="r_aebd6b389838e694b913ff56fe430e1c3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#aebd6b389838e694b913ff56fe430e1c3">get_global_maxima</a> (wmax, psa)</td></tr>
+<tr class="memdesc:aebd6b389838e694b913ff56fe430e1c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute global maxima of iw variables over the leaves of the grid.  <br /></td></tr>
+<tr class="separator:aebd6b389838e694b913ff56fe430e1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac402d8e169b9f90fc0958630718b925e" id="r_ac402d8e169b9f90fc0958630718b925e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#ac402d8e169b9f90fc0958630718b925e">get_global_minima</a> (wmin, psa)</td></tr>
+<tr class="memdesc:ac402d8e169b9f90fc0958630718b925e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute global minima of iw variables over the leaves of the grid.  <br /></td></tr>
+<tr class="separator:ac402d8e169b9f90fc0958630718b925e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -224,8 +224,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a86886a7d99e5a874352cfb6385dbd1f0" name="a86886a7d99e5a874352cfb6385dbd1f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86886a7d99e5a874352cfb6385dbd1f0">&#9670;&#160;</a></span>get_global_maxima()</h2>
+<a id="aebd6b389838e694b913ff56fe430e1c3" name="aebd6b389838e694b913ff56fe430e1c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd6b389838e694b913ff56fe430e1c3">&#9670;&#160;</a></span>get_global_maxima()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,8 +234,18 @@ Variables</h2></td></tr>
           <td class="memname">subroutine mod_input_output::get_global_maxima </td>
           <td>(</td>
           <td class="paramtype">double precision, dimension(nw), intent(out)&#160;</td>
-          <td class="paramname"><em>wmax</em></td><td>)</td>
+          <td class="paramname"><em>wmax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__physicaldata_1_1state.html">state</a>), dimension(max_blocks), target&#160;</td>
+          <td class="paramname"><em>psa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -252,8 +262,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a84c632bdd9b080c72ef3b930138ee80a" name="a84c632bdd9b080c72ef3b930138ee80a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84c632bdd9b080c72ef3b930138ee80a">&#9670;&#160;</a></span>get_global_minima()</h2>
+<a id="ac402d8e169b9f90fc0958630718b925e" name="ac402d8e169b9f90fc0958630718b925e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac402d8e169b9f90fc0958630718b925e">&#9670;&#160;</a></span>get_global_minima()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,8 +272,18 @@ Variables</h2></td></tr>
           <td class="memname">subroutine mod_input_output::get_global_minima </td>
           <td>(</td>
           <td class="paramtype">double precision, dimension(nw), intent(out)&#160;</td>
-          <td class="paramname"><em>wmin</em></td><td>)</td>
+          <td class="paramname"><em>wmin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__physicaldata_1_1state.html">state</a>), dimension(max_blocks), target&#160;</td>
+          <td class="paramname"><em>psa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -276,7 +296,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02833">2833</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02834">2834</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>

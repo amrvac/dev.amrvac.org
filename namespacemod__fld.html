@@ -170,8 +170,10 @@ Variables</h2></td></tr>
 <tr class="memitem:a23d86935a2e8d953c3ef8e5270eac0ff" id="r_a23d86935a2e8d953c3ef8e5270eac0ff"><td class="memItemLeft" align="right" valign="top">double precision, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#a23d86935a2e8d953c3ef8e5270eac0ff">fld_diff_tol</a> = 1.d-4</td></tr>
 <tr class="memdesc:a23d86935a2e8d953c3ef8e5270eac0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tolerance for radiative Energy diffusion.  <br /></td></tr>
 <tr class="separator:a23d86935a2e8d953c3ef8e5270eac0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5b5b17974356044af5c8e82dec5979" id="r_a1f5b5b17974356044af5c8e82dec5979"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#a1f5b5b17974356044af5c8e82dec5979">fld_force_mg_converged</a> = .true.</td></tr>
+<tr class="memdesc:a1f5b5b17974356044af5c8e82dec5979"><td class="mdescLeft">&#160;</td><td class="mdescRight">switches for local debug purposes  <br /></td></tr>
+<tr class="separator:a1f5b5b17974356044af5c8e82dec5979"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7d5c85edb37153b1bb8875ab18d3a3d" id="r_ab7d5c85edb37153b1bb8875ab18d3a3d"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#ab7d5c85edb37153b1bb8875ab18d3a3d">fld_debug</a></td></tr>
-<tr class="memdesc:ab7d5c85edb37153b1bb8875ab18d3a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">switches for local debug purposes  <br /></td></tr>
 <tr class="separator:ab7d5c85edb37153b1bb8875ab18d3a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f8dd5bb32854bc46679ea40c1da8a3f" id="r_a0f8dd5bb32854bc46679ea40c1da8a3f"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#a0f8dd5bb32854bc46679ea40c1da8a3f">fld_no_mg</a></td></tr>
 <tr class="separator:a0f8dd5bb32854bc46679ea40c1da8a3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,6 +194,9 @@ Variables</h2></td></tr>
 <tr class="memitem:aa4182ef629d7d3348c95954ca72e6aeb" id="r_aa4182ef629d7d3348c95954ca72e6aeb"><td class="memItemLeft" align="right" valign="top">character(len=40)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#aa4182ef629d7d3348c95954ca72e6aeb">fld_interaction_method</a> = 'Halley'</td></tr>
 <tr class="memdesc:aa4182ef629d7d3348c95954ca72e6aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Which method to find the root for the energy interaction polynomial.  <br /></td></tr>
 <tr class="separator:aa4182ef629d7d3348c95954ca72e6aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a9a602b08c6702521f5e2998419363" id="r_a28a9a602b08c6702521f5e2998419363"><td class="memItemLeft" align="right" valign="top">double precision, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__fld.html#a28a9a602b08c6702521f5e2998419363">fld_gamma</a></td></tr>
+<tr class="memdesc:a28a9a602b08c6702521f5e2998419363"><td class="mdescLeft">&#160;</td><td class="mdescRight">A copy of (m)hd_gamma.  <br /></td></tr>
+<tr class="separator:a28a9a602b08c6702521f5e2998419363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module for flux limited diffusion (FLD)-approximation in Radiation-(Magneto)hydrodynamics simulations. </p>
@@ -289,7 +294,7 @@ Variables</h2></td></tr>
 <p>Update gas-energy in w, internal + kinetic</p>
 <p>Update rad-energy in w</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00185">185</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00186">186</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -350,7 +355,7 @@ Here is the call graph for this function:</div>
 
 <p>Find the root of the 4th degree polynomial using the bisection method. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00905">905</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00920">920</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -398,7 +403,7 @@ Here is the call graph for this function:</div>
 
 <p>Evaluate second derivative of polynomial at argument e_gas. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l01046">1046</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l01061">1061</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -436,7 +441,7 @@ Here is the call graph for this function:</div>
 
 <p>Evaluate first derivative of polynomial at argument e_gas. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l01036">1036</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l01051">1051</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -486,7 +491,7 @@ Here is the call graph for this function:</div>
 
 <p>inplace update of psa==&gt;F_im(psa) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00822">822</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00837">837</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -518,7 +523,7 @@ Here is the call graph for this function:</div>
 
 <p>inplace update of psa==&gt;F_im(psa) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00802">802</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00817">817</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -586,7 +591,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculates cell-centered diffusion coefficient to be used in multigrid. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00858">858</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00873">873</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -679,7 +684,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate Eddington-tensor (where w is primitive) also feeds back the flux limiter lambda and R. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00619">619</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00620">620</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -766,7 +771,7 @@ Here is the call graph for this function:</div>
 
 <p>This subroutine calculates flux limiter lambda according to fld_fluxlimiter It also calculates fld_R which is ratio of radiation scaleheight and mean free path NOTE: nth and ixI and ixO not free to choose here: TODO. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00484">484</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00485">485</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -850,7 +855,7 @@ Here is the call graph for this function:</div>
 
 <p>This subroutine calculates flux limiter lambda according to fld_fluxlimiter It also calculates fld_R which is ratio of radiation scaleheight and mean free path NOTE: this one operates on primitives NOTE: nth and ixI and ixO not free to choose. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00506">506</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00507">507</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -924,7 +929,7 @@ Here is the call graph for this function:</div>
 
 <p>Sets the opacity in the w-array by calling <a class="el" href="namespacemod__opal__opacity.html" title="This module reads in Rosseland-mean opacities from OPAL tables. Table opacity values are given in bas...">mod_opal_opacity</a> NOTE: assumes primitives in w NOTE: assuming opacity is local, not ok with cak line force. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00412">412</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00413">413</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -997,7 +1002,7 @@ Here is the call graph for this function:</div>
 <p>Calculate Radiation Flux NOTE: only for diagnostics purposes (w conservative on entry) This returns cell centered values for radiation flux. </p>
 <p>Calculate the Flux using the fld closure relation F = -c*lambda/(kappa*rho) *grad E</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00588">588</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00589">589</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1075,7 +1080,7 @@ Here is the call graph for this function:</div>
 
 <p>Returns Radiation Pressure as tensor NOTE: w is primitive on entry. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00451">451</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00452">452</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1135,16 +1140,16 @@ Here is the call graph for this function:</div>
 
 <p>Calling all subroutines to perform the multigrid method Communicates rad_e and diff_coeff to multigrid library Advance psa=psb+dtfactor*qdt*F_im(psa) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00670">670</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00671">671</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__fld_af84fc6e1d9d991a23def9a1f3e304f80_cgraph.png" border="0" usemap="#anamespacemod__fld_af84fc6e1d9d991a23def9a1f3e304f80_cgraph" alt=""/></div>
 <map name="anamespacemod__fld_af84fc6e1d9d991a23def9a1f3e304f80_cgraph" id="anamespacemod__fld_af84fc6e1d9d991a23def9a1f3e304f80_cgraph">
 <area shape="rect" title="Calling all subroutines to perform the multigrid method Communicates rad_e and diff_coeff to multigri..." alt="" coords="5,133,160,173"/>
-<area shape="rect" href="namespacemod__input__output.html#a86886a7d99e5a874352cfb6385dbd1f0" title="Compute global maxima of iw variables over the leaves of the grid." alt="" coords="217,5,386,45"/>
+<area shape="rect" href="namespacemod__input__output.html#aebd6b389838e694b913ff56fe430e1c3" title="Compute global maxima of iw variables over the leaves of the grid." alt="" coords="217,5,386,45"/>
 <area shape="poly" title=" " alt="" coords="104,131,149,93,207,55,220,48,223,53,209,60,152,97,107,135"/>
-<area shape="rect" href="namespacemod__input__output.html#a84c632bdd9b080c72ef3b930138ee80a" title="Compute global minima of iw variables over the leaves of the grid." alt="" coords="217,69,386,109"/>
+<area shape="rect" href="namespacemod__input__output.html#ac402d8e169b9f90fc0958630718b925e" title="Compute global minima of iw variables over the leaves of the grid." alt="" coords="217,69,386,109"/>
 <area shape="poly" title=" " alt="" coords="151,131,219,111,220,116,153,136"/>
 <area shape="rect" href="namespacemod__multigrid__coupling.html#adba5ed257a7b740fc0152041faa8f490" title="Copy from multigrid tree with one layer of ghost cells. Corner ghost cells are not used/set." alt="" coords="210,133,393,173"/>
 <area shape="poly" title=" " alt="" coords="160,151,196,151,196,156,160,156"/>
@@ -1177,7 +1182,7 @@ Here is the call graph for this function:</div>
 <p>set gamma</p>
 <p>Read in opacity table if necesary</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00077">77</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00078">78</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1220,7 +1225,7 @@ Here is the call graph for this function:</div>
 <p>public methods these are called in <a class="el" href="namespacemod__hd__phys.html" title="Hydrodynamics physics module.">mod_hd_phys</a> or <a class="el" href="namespacemod__mhd__phys.html" title="Magneto-hydrodynamics module.">mod_mhd_phys</a> </p>
 <p>Reading in fld-list parameters from .par file </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00057">57</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00058">58</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -1294,7 +1299,7 @@ Here is the call graph for this function:</div>
 
 <p>get dt limit for radiation force and FLD explicit source additions NOTE: w is primitive on entry </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00341">341</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00342">342</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1325,7 +1330,7 @@ Here is the call graph for this function:</div>
 
 <p>Set the boundaries for the diffusion of E. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00138">138</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00139">139</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -1364,7 +1369,7 @@ Here is the call graph for this function:</div>
 <p>Find the root of the 4th degree polynomial using the Halley method. </p>
 <p>Compare error with dx = dx/dy dy</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00995">995</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l01010">1010</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1421,7 +1426,7 @@ Here is the call graph for this function:</div>
 <p>Find the root of the 4th degree polynomial using the Newton method. </p>
 <p>Compare error with dx = dx/dy dy</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00966">966</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00981">981</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1474,7 +1479,7 @@ Here is the call graph for this function:</div>
 
 <p>Evaluate polynomial at argument e_gas. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l01026">1026</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l01041">1041</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -1494,7 +1499,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00785">785</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00800">800</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1539,9 +1544,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>switches for local debug purposes </p>
-
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00027">27</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00028">28</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -1577,7 +1580,43 @@ Here is the call graph for this function:</div>
 
 <p>flux limiter choice </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00032">32</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00033">33</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+
+</div>
+</div>
+<a id="a1f5b5b17974356044af5c8e82dec5979" name="a1f5b5b17974356044af5c8e82dec5979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f5b5b17974356044af5c8e82dec5979">&#9670;&#160;</a></span>fld_force_mg_converged</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical mod_fld::fld_force_mg_converged = .true.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>switches for local debug purposes </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00027">27</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+
+</div>
+</div>
+<a id="a28a9a602b08c6702521f5e2998419363" name="a28a9a602b08c6702521f5e2998419363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a9a602b08c6702521f5e2998419363">&#9670;&#160;</a></span>fld_gamma</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public mod_fld::fld_gamma</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A copy of (m)hd_gamma. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00041">41</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -1595,7 +1634,7 @@ Here is the call graph for this function:</div>
 
 <p>Which method to find the root for the energy interaction polynomial. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00038">38</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00039">39</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -1629,7 +1668,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00027">27</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00028">28</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -1647,7 +1686,7 @@ Here is the call graph for this function:</div>
 
 <p>switches for opacity </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00029">29</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00030">30</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -1663,7 +1702,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00030">30</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00031">31</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -1699,7 +1738,7 @@ Here is the call graph for this function:</div>
 
 <p>diffusion coefficient for multigrid method </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00034">34</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00035">35</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
@@ -1717,7 +1756,7 @@ Here is the call graph for this function:</div>
 
 <p>diffusion coefficient stencil control </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00036">36</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__fld_8t_source.html#l00037">37</a> of file <a class="el" href="mod__fld_8t_source.html">mod_fld.t</a>.</p>
 
 </div>
 </div>
