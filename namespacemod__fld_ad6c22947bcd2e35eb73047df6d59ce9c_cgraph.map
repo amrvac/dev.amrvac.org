@@ -1,8 +1,11 @@
 <map id="mod_fld::fld_radforce_get_dt" name="mod_fld::fld_radforce_get_dt">
-<area shape="rect" id="Node000001" title="get dt limit for radiation force and FLD explicit source additions NOTE: w is primitive on entry" alt="" coords="5,23,164,63"/>
-<area shape="rect" id="Node000002" href="$namespacemod__fld.html#ad05b0928f8ebff99afae67ae92b11afb" title="This subroutine calculates flux limiter lambda according to fld_fluxlimiter It also calculates fld_R ..." alt="" coords="212,5,449,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,33,198,29,198,34,165,38"/>
-<area shape="rect" id="Node000006" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="497,31,680,56"/>
-<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="164,41,484,41,484,46,164,46"/>
-<area shape="poly" id="edge2_Node000002_Node000006" title=" " alt="" coords="450,27,484,30,483,36,449,32"/>
+<area shape="rect" id="Node000001" title="get dt limit for radiation force and FLD explicit source additions NOTE: w is primitive on entry" alt="" coords="5,22,164,62"/>
+<area shape="rect" id="Node000002" href="$namespacemod__fld.html#ad05b0928f8ebff99afae67ae92b11afb" title="This subroutine calculates flux limiter lambda according to fld_fluxlimiter It also calculates fld_R ..." alt="" coords="212,29,449,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,39,198,39,198,45,164,45"/>
+<area shape="rect" id="Node000003" href="$namespacemod__fld.html#a95deadfe8c5887b2e43cebd150713832" title="Sets the opacity in the w&#45;array by calling mod_opal_opacity NOTE: assumes primitives in w NOTE: assum..." alt="" coords="497,5,716,31"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="164,21,212,14,352,7,483,8,483,14,352,12,212,19,165,26"/>
+<area shape="rect" id="Node000006" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="515,55,698,80"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="165,58,212,65,364,72,502,70,502,76,364,78,212,70,164,63"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="449,29,483,26,484,31,450,34"/>
+<area shape="poly" id="edge3_Node000002_Node000006" title=" " alt="" coords="450,50,502,55,501,60,449,56"/>
 </map>
