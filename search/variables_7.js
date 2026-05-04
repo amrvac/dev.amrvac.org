@@ -38,5 +38,5 @@ var searchData=
   ['head_5fsts_5fterms_35',['head_sts_terms',['../namespacemod__supertimestepping.html#a955e58cb11f828fb14ba5834e4d00aa0',1,'mod_supertimestepping']]],
   ['helmholtz_5flambda_36',['helmholtz_lambda',['../namespacem__octree__mg__2d.html#aecc7e536333ec9eb9d0b7a3bebd3b587',1,'m_octree_mg_2d::helmholtz_lambda'],['../namespacem__octree__mg__1d.html#a8a27bcca1325d68f36c5e555887c86cc',1,'m_octree_mg_1d::helmholtz_lambda'],['../namespacem__octree__mg__3d.html#ae7d2757a56158e1a96a690c8b81a20a3',1,'m_octree_mg_3d::helmholtz_lambda']]],
   ['highest_5flvl_37',['highest_lvl',['../structm__octree__mg__1d_1_1mg__t.html#a7020785dfcf862029c0ad8f9eff7f5ab',1,'m_octree_mg_1d::mg_t::highest_lvl'],['../structm__octree__mg__3d_1_1mg__t.html#a68548c772b159c8336657ebf59f8175b',1,'m_octree_mg_3d::mg_t::highest_lvl'],['../structm__octree__mg__2d_1_1mg__t.html#ab535eb57d4327ab76dfdee4c6c11e372',1,'m_octree_mg_2d::mg_t::highest_lvl']]],
-  ['hypertc_5fkappa_38',['hypertc_kappa',['../namespacemod__ffhd__phys.html#a09bf74f83c91548305bfd3f0f4885557',1,'mod_ffhd_phys::hypertc_kappa'],['../namespacemod__mhd__phys.html#a73639d3ce4cc2a0b3e89fc6688a85610',1,'mod_mhd_phys::hypertc_kappa']]]
+  ['hyperbolic_5ftc_5fkappa_38',['hyperbolic_tc_kappa',['../namespacemod__ffhd__phys.html#a1bc20579dd48438ce57405a9401e12e5',1,'mod_ffhd_phys']]]
 ];
