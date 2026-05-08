@@ -92,10 +92,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a88d005a7454ed6754db8967832b1c358" id="r_a88d005a7454ed6754db8967832b1c358"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a88d005a7454ed6754db8967832b1c358">rad_cut_hgt</a></td></tr>
-<tr class="separator:a88d005a7454ed6754db8967832b1c358"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05b8ff842556cafff470f19f88767067" id="r_a05b8ff842556cafff470f19f88767067"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a05b8ff842556cafff470f19f88767067">rad_cut_dey</a></td></tr>
-<tr class="separator:a05b8ff842556cafff470f19f88767067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6df707fd5d4af61f4a4dcd7838f146" id="r_a1c6df707fd5d4af61f4a4dcd7838f146"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a1c6df707fd5d4af61f4a4dcd7838f146">rad_damp_height</a></td></tr>
+<tr class="separator:a1c6df707fd5d4af61f4a4dcd7838f146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b99ca297856d336cb500cc768f7d5ad" id="r_a6b99ca297856d336cb500cc768f7d5ad"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a6b99ca297856d336cb500cc768f7d5ad">rad_damp_scale</a></td></tr>
+<tr class="separator:a6b99ca297856d336cb500cc768f7d5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28d992581830b72e99da55dc45285dfb" id="r_a28d992581830b72e99da55dc45285dfb"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a28d992581830b72e99da55dc45285dfb">tcool</a></td></tr>
 <tr class="separator:a28d992581830b72e99da55dc45285dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00a9b7506123fe01859f4aea72114bfb" id="r_a00a9b7506123fe01859f4aea72114bfb"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a00a9b7506123fe01859f4aea72114bfb">lcool</a></td></tr>
@@ -148,15 +148,29 @@ Public Attributes</h2></td></tr>
 <tr class="separator:abf2972f8be00cd4b7a2493575856e1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d5e19a4e9d43e62648d3d5ec6741293" id="r_a3d5e19a4e9d43e62648d3d5ec6741293"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a3d5e19a4e9d43e62648d3d5ec6741293">isppl</a> = .false.</td></tr>
 <tr class="separator:a3d5e19a4e9d43e62648d3d5ec6741293"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a851dd22c0b5ebcfb037a2770bcaa941c" id="r_a851dd22c0b5ebcfb037a2770bcaa941c"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a851dd22c0b5ebcfb037a2770bcaa941c">rad_cut</a></td></tr>
-<tr class="memdesc:a851dd22c0b5ebcfb037a2770bcaa941c"><td class="mdescLeft">&#160;</td><td class="mdescRight">cutoff radiative cooling below rad_cut_hgt  <br /></td></tr>
-<tr class="separator:a851dd22c0b5ebcfb037a2770bcaa941c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff770621c49b7e47cb480e922212069a" id="r_aff770621c49b7e47cb480e922212069a"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#aff770621c49b7e47cb480e922212069a">rad_damp</a></td></tr>
+<tr class="memdesc:aff770621c49b7e47cb480e922212069a"><td class="mdescLeft">&#160;</td><td class="mdescRight">cutoff radiative cooling below rad_damp_height  <br /></td></tr>
+<tr class="separator:aff770621c49b7e47cb480e922212069a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f90671190ac181af3ca22a0782093c8" id="r_a7f90671190ac181af3ca22a0782093c8"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a7f90671190ac181af3ca22a0782093c8">has_equi</a> = .false.</td></tr>
 <tr class="memdesc:a7f90671190ac181af3ca22a0782093c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether background equilibrium contribution is split off  <br /></td></tr>
 <tr class="separator:a7f90671190ac181af3ca22a0782093c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a465f64edbff41e413c3579394e4ccfdc" id="r_a465f64edbff41e413c3579394e4ccfdc"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a465f64edbff41e413c3579394e4ccfdc">subtract_equi</a> = .false.</td></tr>
 <tr class="memdesc:a465f64edbff41e413c3579394e4ccfdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether background equilibrium is compensated in thermal balance  <br /></td></tr>
 <tr class="separator:a465f64edbff41e413c3579394e4ccfdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a739e0194447103732a5d5fc9f7605b98" id="r_a739e0194447103732a5d5fc9f7605b98"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a739e0194447103732a5d5fc9f7605b98">frac_lowfip</a></td></tr>
+<tr class="separator:a739e0194447103732a5d5fc9f7605b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b36a8a6ad32253901ab4e437fd6a672" id="r_a9b36a8a6ad32253901ab4e437fd6a672"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a9b36a8a6ad32253901ab4e437fd6a672">fip_</a> = -1</td></tr>
+<tr class="memdesc:a9b36a8a6ad32253901ab4e437fd6a672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of primitive FIP abundance variable, -1 if disabled.  <br /></td></tr>
+<tr class="separator:a9b36a8a6ad32253901ab4e437fd6a672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d831fe0b0a3c837c2510c15698ebd1" id="r_a02d831fe0b0a3c837c2510c15698ebd1"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a02d831fe0b0a3c837c2510c15698ebd1">rad_newton</a> = .false.</td></tr>
+<tr class="memdesc:a02d831fe0b0a3c837c2510c15698ebd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable local Newton cooling/heating approximation for optically thick losses.  <br /></td></tr>
+<tr class="separator:a02d831fe0b0a3c837c2510c15698ebd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd45b20d4aa3336e888d5dbc55b35a2" id="r_a5fd45b20d4aa3336e888d5dbc55b35a2"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a5fd45b20d4aa3336e888d5dbc55b35a2">rad_newton_pthick</a> = 25.d0</td></tr>
+<tr class="separator:a5fd45b20d4aa3336e888d5dbc55b35a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bbed2808fa1f439603fbd57ac32a32d" id="r_a8bbed2808fa1f439603fbd57ac32a32d"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a8bbed2808fa1f439603fbd57ac32a32d">rad_newton_trad</a> = 0.006d0</td></tr>
+<tr class="separator:a8bbed2808fa1f439603fbd57ac32a32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b6d2143253316c6fb877c71e45f7d7" id="r_a53b6d2143253316c6fb877c71e45f7d7"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a53b6d2143253316c6fb877c71e45f7d7">rad_newton_rhosurf</a> = 1.d4</td></tr>
+<tr class="separator:a53b6d2143253316c6fb877c71e45f7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d70720d09580eeb6a87c37666d32113" id="r_a4d70720d09580eeb6a87c37666d32113"><td class="memItemLeft" align="right" valign="top">character(len=std_len)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html#a4d70720d09580eeb6a87c37666d32113">coolcurve</a></td></tr>
 <tr class="memdesc:a4d70720d09580eeb6a87c37666d32113"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of cooling curve.  <br /></td></tr>
 <tr class="separator:a4d70720d09580eeb6a87c37666d32113"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,7 +224,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Name of cooling curve. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00084">84</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00093">93</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -248,6 +262,40 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a9b36a8a6ad32253901ab4e437fd6a672" name="a9b36a8a6ad32253901ab4e437fd6a672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b36a8a6ad32253901ab4e437fd6a672">&#9670;&#160;</a></span>fip_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer mod_radiative_cooling::rc_fluid::fip_ = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Index of primitive FIP abundance variable, -1 if disabled. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00085">85</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
+<a id="a739e0194447103732a5d5fc9f7605b98" name="a739e0194447103732a5d5fc9f7605b98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a739e0194447103732a5d5fc9f7605b98">&#9670;&#160;</a></span>frac_lowfip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, dimension(:), allocatable mod_radiative_cooling::rc_fluid::frac_lowfip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00083">83</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
 <a id="acf87441c4d69d38df953485620364cd1" name="acf87441c4d69d38df953485620364cd1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf87441c4d69d38df953485620364cd1">&#9670;&#160;</a></span>get_pthermal</h2>
 
@@ -268,7 +316,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00088">88</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00097">97</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -292,7 +340,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00089">89</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00098">98</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -316,7 +364,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00086">86</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00095">95</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -340,7 +388,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00087">87</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00096">96</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -364,7 +412,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00091">91</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00100">100</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -388,7 +436,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00090">90</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00099">99</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -556,32 +604,48 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a851dd22c0b5ebcfb037a2770bcaa941c" name="a851dd22c0b5ebcfb037a2770bcaa941c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a851dd22c0b5ebcfb037a2770bcaa941c">&#9670;&#160;</a></span>rad_cut</h2>
+<a id="aff770621c49b7e47cb480e922212069a" name="aff770621c49b7e47cb480e922212069a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff770621c49b7e47cb480e922212069a">&#9670;&#160;</a></span>rad_damp</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">logical mod_radiative_cooling::rc_fluid::rad_cut</td>
+          <td class="memname">logical mod_radiative_cooling::rc_fluid::rad_damp</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>cutoff radiative cooling below rad_cut_hgt </p>
+<p>cutoff radiative cooling below rad_damp_height </p>
 
 <p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00077">77</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
-<a id="a05b8ff842556cafff470f19f88767067" name="a05b8ff842556cafff470f19f88767067"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05b8ff842556cafff470f19f88767067">&#9670;&#160;</a></span>rad_cut_dey</h2>
+<a id="a1c6df707fd5d4af61f4a4dcd7838f146" name="a1c6df707fd5d4af61f4a4dcd7838f146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6df707fd5d4af61f4a4dcd7838f146">&#9670;&#160;</a></span>rad_damp_height</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double precision mod_radiative_cooling::rc_fluid::rad_cut_dey</td>
+          <td class="memname">double precision mod_radiative_cooling::rc_fluid::rad_damp_height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00041">41</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
+<a id="a6b99ca297856d336cb500cc768f7d5ad" name="a6b99ca297856d336cb500cc768f7d5ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b99ca297856d336cb500cc768f7d5ad">&#9670;&#160;</a></span>rad_damp_scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_radiative_cooling::rc_fluid::rad_damp_scale</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -590,19 +654,69 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a88d005a7454ed6754db8967832b1c358" name="a88d005a7454ed6754db8967832b1c358"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88d005a7454ed6754db8967832b1c358">&#9670;&#160;</a></span>rad_cut_hgt</h2>
+<a id="a02d831fe0b0a3c837c2510c15698ebd1" name="a02d831fe0b0a3c837c2510c15698ebd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d831fe0b0a3c837c2510c15698ebd1">&#9670;&#160;</a></span>rad_newton</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double precision mod_radiative_cooling::rc_fluid::rad_cut_hgt</td>
+          <td class="memname">logical mod_radiative_cooling::rc_fluid::rad_newton = .false.</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00041">41</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p>Enable local Newton cooling/heating approximation for optically thick losses. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00087">87</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
+<a id="a5fd45b20d4aa3336e888d5dbc55b35a2" name="a5fd45b20d4aa3336e888d5dbc55b35a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fd45b20d4aa3336e888d5dbc55b35a2">&#9670;&#160;</a></span>rad_newton_pthick</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_radiative_cooling::rc_fluid::rad_newton_pthick = 25.d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00088">88</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
+<a id="a53b6d2143253316c6fb877c71e45f7d7" name="a53b6d2143253316c6fb877c71e45f7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b6d2143253316c6fb877c71e45f7d7">&#9670;&#160;</a></span>rad_newton_rhosurf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_radiative_cooling::rc_fluid::rad_newton_rhosurf = 1.d4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00090">90</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
+<a id="a8bbed2808fa1f439603fbd57ac32a32d" name="a8bbed2808fa1f439603fbd57ac32a32d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bbed2808fa1f439603fbd57ac32a32d">&#9670;&#160;</a></span>rad_newton_trad</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_radiative_cooling::rc_fluid::rad_newton_trad = 0.006d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00089">89</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
