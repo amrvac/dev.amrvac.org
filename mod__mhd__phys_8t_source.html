@@ -2590,7 +2590,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02492" name="l02492"></a><span class="lineno"> 2492</span>        <span class="keywordflow">if</span>(.not.primitive) <span class="keywordflow">then</span></div>
 <div class="line"><a id="l02493" name="l02493"></a><span class="lineno"> 2493</span>          <span class="comment">! change to primitive variables</span></div>
 <div class="line"><a id="l02494" name="l02494"></a><span class="lineno"> 2494</span>          w(ixo^s,<a class="code hl_variable" href="namespacemod__mhd__phys.html#a12c911e7c3dc6e3f66434f31bd5f5def">mom</a>(1:ndir))=v(ixo^s,1:ndir)</div>
-<div class="line"><a id="l02495" name="l02495"></a><span class="lineno"> 2495</span>          w(ixo^s,<a class="code hl_variable" href="namespacemod__mhd__phys.html#af2b9bdeeb09848cd198ccab0f78b68fd">e_</a>)=pressure(ixo^s)</div>
+<div class="line"><a id="l02495" name="l02495"></a><span class="lineno"> 2495</span>          <span class="keywordflow">if</span>(<a class="code hl_variable" href="namespacemod__mhd__phys.html#a8ff14228800ce9c34c8a67eb24439e53">mhd_energy</a>) w(ixo^s,<a class="code hl_variable" href="namespacemod__mhd__phys.html#af2b9bdeeb09848cd198ccab0f78b68fd">e_</a>)=pressure(ixo^s)</div>
 <div class="line"><a id="l02496" name="l02496"></a><span class="lineno"> 2496</span><span class="keywordflow">        end if</span></div>
 <div class="line"><a id="l02497" name="l02497"></a><span class="lineno"> 2497</span>        <span class="keyword">call </span>small_values_error(w, x, ixi^l, ixo^l, flag, subname)</div>
 <div class="line"><a id="l02498" name="l02498"></a><span class="lineno"> 2498</span><span class="keywordflow">      end select</span></div>
