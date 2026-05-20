@@ -1256,7 +1256,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>                  +gradt(ix1,ix2,ix3+1,idims)*block%surfaceC(ix1,ix2,ix3+1,1)&amp;</div>
 <div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>                +gradt(ix1,ix2+1,ix3+1,idims)*block%surfaceC(ix1,ix2+1,ix3+1,1))/&amp;</div>
 <div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>              (block%surfaceC(ix1,ix2,ix3,1)+block%surfaceC(ix1,ix2+1,ix3,1)&amp;</div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>              +block%surfaceC(ix1,ix2,ix3+1,1)+block%surfaceC(ix1,ix2+1,ix3+1,1))</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>              +block%surfaceC(ix1,ix2,ix3+1,1)+block%surfaceC(ix1,ix2+1,ix3+1,1)+smalldouble)</div>
 <div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>       {<span class="keyword">end </span>do\}</div>
 <div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(idims==2) <span class="keywordflow">then</span></div>
 <div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>       {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
@@ -1265,7 +1265,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>                  +gradt(ix1,ix2,ix3+1,idims)*block%surfaceC(ix1,ix2,ix3+1,2)&amp;</div>
 <div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>                +gradt(ix1+1,ix2,ix3+1,idims)*block%surfaceC(ix1+1,ix2,ix3+1,2))/&amp;</div>
 <div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>            (block%surfaceC(ix1,ix2,ix3,2)+block%surfaceC(ix1+1,ix2,ix3,2)&amp;</div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>          +block%surfaceC(ix1,ix2,ix3+1,2)+block%surfaceC(ix1+1,ix2,ix3+1,2)+1.d-300)</div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>          +block%surfaceC(ix1,ix2,ix3+1,2)+block%surfaceC(ix1+1,ix2,ix3+1,2)+smalldouble)</div>
 <div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>       {<span class="keyword">end </span>do\}</div>
 <div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>      <span class="keywordflow">else</span></div>
 <div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span>       {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
@@ -1289,7 +1289,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>       {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
 <div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>          qdd(ix^d)=(gradt(ix1,ix2,idims)*block%surfaceC(ix1,ix2,2)&amp;</div>
 <div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>                  +gradt(ix1+1,ix2,idims)*block%surfaceC(ix1+1,ix2,2))/&amp;</div>
-<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>               (block%surfaceC(ix1,ix2,2)+block%surfaceC(ix1+1,ix2,2)+1.d-300)</div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>               (block%surfaceC(ix1,ix2,2)+block%surfaceC(ix1+1,ix2,2)+smalldouble)</div>
 <div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>       {<span class="keyword">end </span>do\}</div>
 <div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span><span class="keywordflow">      end if</span></div>
 <div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>     }</div>
@@ -1849,7 +1849,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>                     +ke(ix1,ix2,ix3+1)*<a class="code hl_variable" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>%surfaceC(ix1,ix2,ix3+1,1)&amp;</div>
 <div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span>                   +ke(ix1,ix2+1,ix3+1)*<a class="code hl_variable" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>%surfaceC(ix1,ix2+1,ix3+1,1))/&amp;</div>
 <div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span>            (<a class="code hl_variable" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>%surfaceC(ix1,ix2,ix3,1)+<a class="code hl_variable" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>%surfaceC(ix1,ix2+1,ix3,1)&amp;</div>
-<div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span>          +<a class="code hl_variable" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>%surfaceC(ix1,ix2,ix3+1,1)+<a class="code hl_variable" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>%surfaceC(ix1,ix2+1,ix3+1,1))</div>
+<div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span>          +<a class="code hl_variable" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>%surfaceC(ix1,ix2,ix3+1,1)+<a class="code hl_variable" href="namespacemod__global__parameters.html#a026d4f7c417820e04a0731db6833204b">block</a>%surfaceC(ix1,ix2+1,ix3+1,1)+smalldouble)</div>
 <div class="line"><a id="l01734" name="l01734"></a><span class="lineno"> 1734</span>       {<span class="keyword">end </span>do\}</div>
 <div class="line"><a id="l01735" name="l01735"></a><span class="lineno"> 1735</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(idims==2) <span class="keywordflow">then</span></div>
 <div class="line"><a id="l01736" name="l01736"></a><span class="lineno"> 1736</span>       {<span class="keywordflow">do</span> ix^db=ixcmin^db,ixcmax^db\}</div>
@@ -1858,7 +1858,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>                     +ke(ix1,ix2,ix3+1)*block%surfaceC(ix1,ix2,ix3+1,2)&amp;</div>
 <div class="line"><a id="l01740" name="l01740"></a><span class="lineno"> 1740</span>                   +ke(ix1+1,ix2,ix3+1)*block%surfaceC(ix1+1,ix2,ix3+1,2))/&amp;</div>
 <div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span>            (block%surfaceC(ix1,ix2,ix3,2)+block%surfaceC(ix1+1,ix2,ix3,2)&amp;</div>
-<div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span>          +block%surfaceC(ix1,ix2,ix3+1,2)+block%surfaceC(ix1+1,ix2,ix3+1,2)+1.d-300)</div>
+<div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span>          +block%surfaceC(ix1,ix2,ix3+1,2)+block%surfaceC(ix1+1,ix2,ix3+1,2)+smalldouble)</div>
 <div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span>          <span class="comment">! zero theta-normal surface area at pole axis</span></div>
 <div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>       {<span class="keyword">end </span>do\}</div>
 <div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>      <span class="keywordflow">else</span></div>

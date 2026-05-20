@@ -48,10 +48,11 @@ var searchData=
   ['amr_5fcoarsen_5frefine_45',['amr_coarsen_refine',['../namespacemod__coarsen__refine.html#a90d7cd8cbcd1b2de285dee4d58973632',1,'mod_coarsen_refine']]],
   ['amr_5fmorton_5forder_46',['amr_morton_order',['../namespacemod__space__filling__curve.html#ad8dde932d2a33294824c0b76241af4e8',1,'mod_space_filling_curve']]],
   ['amrvac_47',['amrvac',['../amrvac_8t.html#a8d1c183fe6d835d905a98ecc7ac3668b',1,'amrvac.t']]],
-  ['append_5fto_5fsnapshot_48',['append_to_snapshot',['../namespacemod__particle__base.html#adba75a2e2c5e77705b3a05400541f343',1,'mod_particle_base']]],
-  ['apply_5fperiodb_49',['apply_periodb',['../namespacemod__particle__base.html#adc89985d56d34c0aa8f19240df55eeb5',1,'mod_particle_base']]],
-  ['ard_5factivate_50',['ard_activate',['../namespacemod__ard.html#afe6ff9fa0133d4d9ccce4b8e68b19a59',1,'mod_ard']]],
-  ['ard_5fphys_5finit_51',['ard_phys_init',['../namespacemod__ard__phys.html#a3fdfd1533a8e947fa9c840d7f086ed75',1,'mod_ard_phys']]],
-  ['asign_5ftree_5fneighbor_52',['asign_tree_neighbor',['../namespacemod__amr__neighbors.html#a729cf3a8b2f89fc63c916a3973af4093',1,'mod_amr_neighbors']]],
-  ['aux_5foutput_53',['aux_output',['../interfacemod__usr__methods_1_1aux__output.html#a44e2cdc24269b71c03ee1234ec0573a7',1,'mod_usr_methods::aux_output']]]
+  ['analytics_5flog_48',['analytics_log',['../namespacemod__gimli.html#a4cf61672c7a66aa4801bf083c1897157',1,'mod_gimli']]],
+  ['append_5fto_5fsnapshot_49',['append_to_snapshot',['../namespacemod__particle__base.html#adba75a2e2c5e77705b3a05400541f343',1,'mod_particle_base']]],
+  ['apply_5fperiodb_50',['apply_periodb',['../namespacemod__particle__base.html#adc89985d56d34c0aa8f19240df55eeb5',1,'mod_particle_base']]],
+  ['ard_5factivate_51',['ard_activate',['../namespacemod__ard.html#afe6ff9fa0133d4d9ccce4b8e68b19a59',1,'mod_ard']]],
+  ['ard_5fphys_5finit_52',['ard_phys_init',['../namespacemod__ard__phys.html#a3fdfd1533a8e947fa9c840d7f086ed75',1,'mod_ard_phys']]],
+  ['asign_5ftree_5fneighbor_53',['asign_tree_neighbor',['../namespacemod__amr__neighbors.html#a729cf3a8b2f89fc63c916a3973af4093',1,'mod_amr_neighbors']]],
+  ['aux_5foutput_54',['aux_output',['../interfacemod__usr__methods_1_1aux__output.html#a44e2cdc24269b71c03ee1234ec0573a7',1,'mod_usr_methods::aux_output']]]
 ];
