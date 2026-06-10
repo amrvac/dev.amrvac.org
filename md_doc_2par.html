@@ -642,8 +642,7 @@ Synthetic EUV/SXR/whitelight emission</h2>
   instrument_resolution_factor=INTEGER
 /
 </pre><h2>Splitting of the hydrostatic equilibrium</h2>
-<p>set </p><div class="fragment"><div class="line">has_equi_pe0 = .true.</div>
-<div class="line">has_equi_rho0 = .true.</div>
+<p>set </p><div class="fragment"><div class="line">has_equi_rho_and_p = .true.</div>
 </div><!-- fragment --><p> to true in <em><b>mhd_list</b></em> and implement usr_set_equi_vars in mod_ust.t file</p>
 <div class="fragment"><div class="line">subroutine usr_init()</div>
 <div class="line"> </div>
