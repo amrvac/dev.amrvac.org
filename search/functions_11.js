@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['r_5fideal_5fgas_5flaw_5fpartial_5fionization_0',['r_ideal_gas_law_partial_ionization',['../namespacemod__ionization__degree.html#a68d0c67bd337624d39f9aa6e72d64e45',1,'mod_ionization_degree']]],
-  ['radiative_5fcooling_5fadd_5fsource_1',['radiative_cooling_add_source',['../namespacemod__radiative__cooling.html#a76304d7766df7b067cc8ab02651ba133',1,'mod_radiative_cooling']]],
+  ['radiative_5fcooling_5fadd_5fsource_0',['radiative_cooling_add_source',['../namespacemod__radiative__cooling.html#a76304d7766df7b067cc8ab02651ba133',1,'mod_radiative_cooling']]],
+  ['radiative_5fcooling_5fbuild_5feion_5ftable_1',['radiative_cooling_build_eion_table',['../namespacemod__radiative__cooling.html#a6d18ddd22fe571bd3d4a030db3ad3db6',1,'mod_radiative_cooling']]],
   ['radiative_5fcooling_5finit_2',['radiative_cooling_init',['../namespacemod__radiative__cooling.html#a2c0aab05964e01b97b9ae65c6d2ea830',1,'mod_radiative_cooling']]],
   ['radiative_5fcooling_5finit_5fparams_3',['radiative_cooling_init_params',['../namespacemod__radiative__cooling.html#a1af126a415ceee3e65eb49567e74be29',1,'mod_radiative_cooling']]],
   ['randomt_4',['randomt',['../namespacemod__random__heating__3d.html#a977f5a6ca30994895e4656b9c9877eeb',1,'mod_random_heating_3d::randomt()'],['../namespacemod__random__heating.html#af46f06ffd0bea7aa8637ba284d43f058',1,'mod_random_heating::randomt(tb, vtim, periods, variation, filename)']]],

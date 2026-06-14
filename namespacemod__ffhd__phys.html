@@ -151,6 +151,11 @@ Variables</h2></td></tr>
 <tr class="memitem:a6802d43871e813d2a90f79d67dd7dc8d" id="r_a6802d43871e813d2a90f79d67dd7dc8d"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ffhd__phys.html#a6802d43871e813d2a90f79d67dd7dc8d">ffhd_partial_ionization</a> = .false.</td></tr>
 <tr class="memdesc:a6802d43871e813d2a90f79d67dd7dc8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether plasma is partially ionized.  <br /></td></tr>
 <tr class="separator:a6802d43871e813d2a90f79d67dd7dc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a788cfceeab23900c029d6bd0d076513a" id="r_a788cfceeab23900c029d6bd0d076513a"><td class="memItemLeft" align="right" valign="top">character(len=32), public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ffhd__phys.html#a788cfceeab23900c029d6bd0d076513a">ffhd_ionization_table</a> = &quot;chromosphere&quot;</td></tr>
+<tr class="separator:a788cfceeab23900c029d6bd0d076513a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16e8c690cf9fee54a2fbf3542f14ec67" id="r_a16e8c690cf9fee54a2fbf3542f14ec67"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ffhd__phys.html#a16e8c690cf9fee54a2fbf3542f14ec67">ffhd_include_ionization_energy</a> = .false.</td></tr>
+<tr class="memdesc:a16e8c690cf9fee54a2fbf3542f14ec67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether hydrogen ionization energy is included in the thermal energy.  <br /></td></tr>
+<tr class="separator:a16e8c690cf9fee54a2fbf3542f14ec67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5278c6394562f75a50f860247232cfab" id="r_a5278c6394562f75a50f860247232cfab"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ffhd__phys.html#a5278c6394562f75a50f860247232cfab">rho_</a></td></tr>
 <tr class="memdesc:a5278c6394562f75a50f860247232cfab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the density (in the w array)  <br /></td></tr>
 <tr class="separator:a5278c6394562f75a50f860247232cfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,9 +168,6 @@ Variables</h2></td></tr>
 <tr class="memitem:ade52055dea74df81dfdb92663dd6776d" id="r_ade52055dea74df81dfdb92663dd6776d"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ffhd__phys.html#ade52055dea74df81dfdb92663dd6776d">p_</a></td></tr>
 <tr class="memdesc:ade52055dea74df81dfdb92663dd6776d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the gas pressure (-1 if not present) should equal e_.  <br /></td></tr>
 <tr class="separator:ade52055dea74df81dfdb92663dd6776d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00e553276f9ccfab163d91e038ca7dae" id="r_a00e553276f9ccfab163d91e038ca7dae"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ffhd__phys.html#a00e553276f9ccfab163d91e038ca7dae">te_</a></td></tr>
-<tr class="memdesc:a00e553276f9ccfab163d91e038ca7dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indices of temperature.  <br /></td></tr>
-<tr class="separator:a00e553276f9ccfab163d91e038ca7dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58f9d981590572c7c51534861f5047bf" id="r_a58f9d981590572c7c51534861f5047bf"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ffhd__phys.html#a58f9d981590572c7c51534861f5047bf">tcoff_</a></td></tr>
 <tr class="memdesc:a58f9d981590572c7c51534861f5047bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the cutoff temperature for the TRAC method.  <br /></td></tr>
 <tr class="separator:a58f9d981590572c7c51534861f5047bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -264,22 +266,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00766">766</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00861">861</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__ffhd__phys_afe11ff52a2c462a09c3378a75168098e_cgraph.png" border="0" usemap="#anamespacemod__ffhd__phys_afe11ff52a2c462a09c3378a75168098e_cgraph" alt=""/></div>
 <map name="anamespacemod__ffhd__phys_afe11ff52a2c462a09c3378a75168098e_cgraph" id="anamespacemod__ffhd__phys_afe11ff52a2c462a09c3378a75168098e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,63,160,103"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#a5a9d8c58337847af6590a9d592f94904" title=" " alt="" coords="208,63,363,103"/>
-<area shape="poly" title=" " alt="" coords="160,80,194,80,194,85,160,85"/>
-<area shape="rect" href="namespacemod__small__values.html#a102d6945f93b389506b859f24c5f7a37" title=" " alt="" coords="411,5,599,45"/>
-<area shape="poly" title=" " alt="" coords="117,60,159,40,207,24,255,16,304,12,397,13,397,18,305,18,256,21,209,29,161,45,119,65"/>
-<area shape="rect" href="namespacemod__small__values.html#a71e8c14b4394080d8f59716c4e5a1529" title=" " alt="" coords="411,92,599,132"/>
-<area shape="poly" title=" " alt="" coords="150,100,208,112,305,118,397,117,397,123,305,124,208,117,149,105"/>
-<area shape="poly" title=" " alt="" coords="247,63,245,53,251,44,265,38,285,36,309,39,322,46,319,51,307,44,285,41,266,43,254,48,250,54,252,62"/>
-<area shape="poly" title=" " alt="" coords="362,60,414,46,415,51,363,65"/>
-<area shape="poly" title=" " alt="" coords="363,90,397,95,397,100,363,96"/>
+<area shape="rect" title=" " alt="" coords="5,29,160,69"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#a5a9d8c58337847af6590a9d592f94904" title=" " alt="" coords="208,29,363,69"/>
+<area shape="poly" title=" " alt="" coords="160,47,194,47,194,52,160,52"/>
+<area shape="poly" title=" " alt="" coords="247,30,245,20,251,11,265,5,285,3,309,6,322,13,319,18,307,11,285,8,266,10,254,15,250,21,252,28"/>
 </map>
 </div>
 
@@ -335,7 +331,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00757">757</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00852">852</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -395,7 +391,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l01166">1166</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l01405">1405</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -472,22 +468,27 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l01279">1279</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l01541">1541</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__ffhd__phys_a5a9d8c58337847af6590a9d592f94904_cgraph.png" border="0" usemap="#anamespacemod__ffhd__phys_a5a9d8c58337847af6590a9d592f94904_cgraph" alt=""/></div>
 <map name="anamespacemod__ffhd__phys_a5a9d8c58337847af6590a9d592f94904_cgraph" id="anamespacemod__ffhd__phys_a5a9d8c58337847af6590a9d592f94904_cgraph">
-<area shape="rect" title=" " alt="" coords="5,113,160,153"/>
-<area shape="poly" title=" " alt="" coords="42,114,39,104,46,94,60,89,83,87,108,90,122,97,120,102,107,95,83,92,62,94,49,99,44,105,47,112"/>
-<area shape="rect" href="namespacemod__gravity.html#a831142d24c1d9520a6d05108a2b265ef" title=" " alt="" coords="223,5,381,45"/>
-<area shape="poly" title=" " alt="" coords="112,111,156,83,207,55,223,48,225,53,209,60,158,87,114,115"/>
-<area shape="rect" href="namespacemod__ionization__degree.html#a6962e885e888b499a67ad341d025b8b5" title=" " alt="" coords="210,70,394,125"/>
-<area shape="poly" title=" " alt="" coords="160,118,196,112,197,117,161,123"/>
-<area shape="rect" href="namespacemod__small__values.html#a102d6945f93b389506b859f24c5f7a37" title=" " alt="" coords="208,149,396,189"/>
-<area shape="poly" title=" " alt="" coords="161,143,195,149,194,154,160,149"/>
-<area shape="rect" href="namespacemod__small__values.html#a71e8c14b4394080d8f59716c4e5a1529" title=" " alt="" coords="208,213,396,253"/>
-<area shape="poly" title=" " alt="" coords="118,151,209,199,226,206,224,211,207,204,116,156"/>
+<area shape="rect" title=" " alt="" coords="5,160,160,200"/>
+<area shape="poly" title=" " alt="" coords="41,160,39,150,45,141,60,135,83,133,109,136,123,144,120,148,107,141,83,139,61,141,49,145,44,151,46,159"/>
+<area shape="rect" href="namespacemod__gravity.html#a831142d24c1d9520a6d05108a2b265ef" title=" " alt="" coords="227,5,384,45"/>
+<area shape="poly" title=" " alt="" coords="97,158,143,107,173,79,207,55,218,49,221,53,209,60,177,83,147,111,101,161"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a18bf98257644d18d9fab7f53c1f17c94" title=" " alt="" coords="208,69,403,109"/>
+<area shape="poly" title=" " alt="" coords="131,157,207,126,240,112,242,117,209,130,133,162"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a2121ee6882826b74a9cdbaa4fa4496e8" title=" " alt="" coords="451,91,625,146"/>
+<area shape="poly" title=" " alt="" coords="160,167,436,130,437,135,161,172"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a6fc7ca14bfcf3a921ed6f40a0a35c7cd" title=" " alt="" coords="218,185,393,239"/>
+<area shape="poly" title=" " alt="" coords="161,188,205,195,204,200,160,194"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a19cf1884793194ca81868efe60d6f2aa" title=" " alt="" coords="218,263,393,318"/>
+<area shape="poly" title=" " alt="" coords="118,198,209,248,224,255,222,260,207,253,115,202"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a7004b2e1495848e89a35734d60d7f40c" title=" " alt="" coords="218,342,393,397"/>
+<area shape="poly" title=" " alt="" coords="98,199,143,261,174,296,210,327,218,333,215,337,206,331,170,300,139,264,94,202"/>
+<area shape="poly" title=" " alt="" coords="403,99,437,103,436,109,403,104"/>
 </map>
 </div>
 
@@ -555,19 +556,21 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00846">846</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00990">990</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__ffhd__phys_aac7cfcdeca83e2e46c9d07a6e7f2bf6f_cgraph.png" border="0" usemap="#anamespacemod__ffhd__phys_aac7cfcdeca83e2e46c9d07a6e7f2bf6f_cgraph" alt=""/></div>
 <map name="anamespacemod__ffhd__phys_aac7cfcdeca83e2e46c9d07a6e7f2bf6f_cgraph" id="anamespacemod__ffhd__phys_aac7cfcdeca83e2e46c9d07a6e7f2bf6f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,63,160,103"/>
+<area shape="rect" title=" " alt="" coords="5,88,160,128"/>
 <area shape="rect" href="namespacemod__ffhd__phys.html#a862a2a1806189befd54c964bcec30b96" title=" " alt="" coords="222,5,377,45"/>
-<area shape="poly" title=" " alt="" coords="158,60,210,46,211,51,160,65"/>
+<area shape="poly" title=" " alt="" coords="135,86,232,48,234,53,137,90"/>
 <area shape="rect" href="namespacemod__ffhd__phys.html#a5a9d8c58337847af6590a9d592f94904" title=" " alt="" coords="439,35,593,75"/>
-<area shape="poly" title=" " alt="" coords="160,75,424,58,425,63,160,80"/>
+<area shape="poly" title=" " alt="" coords="160,96,425,63,425,68,160,101"/>
 <area shape="rect" href="namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="208,121,391,146"/>
-<area shape="poly" title=" " alt="" coords="161,98,231,115,230,120,159,103"/>
+<area shape="poly" title=" " alt="" coords="160,114,195,118,194,124,160,120"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a128a8af7f9b63c8ad89a8c9b34ccd09b" title=" " alt="" coords="212,171,387,211"/>
+<area shape="poly" title=" " alt="" coords="135,126,209,155,231,163,230,168,207,160,133,131"/>
 <area shape="poly" title=" " alt="" coords="377,33,425,40,425,45,376,38"/>
 <area shape="poly" title=" " alt="" coords="475,35,473,25,480,16,494,10,516,8,541,11,555,18,553,23,540,16,516,13,495,15,483,20,478,26,481,34"/>
 </map>
@@ -587,55 +590,75 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00179">179</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00180">180</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__ffhd__phys_a75d51189f43884f84c71e7ecbabe1e70_cgraph.png" border="0" usemap="#anamespacemod__ffhd__phys_a75d51189f43884f84c71e7ecbabe1e70_cgraph" alt=""/></div>
 <map name="anamespacemod__ffhd__phys_a75d51189f43884f84c71e7ecbabe1e70_cgraph" id="anamespacemod__ffhd__phys_a75d51189f43884f84c71e7ecbabe1e70_cgraph">
-<area shape="rect" title=" " alt="" coords="5,597,160,637"/>
-<area shape="rect" href="namespacemod__convert.html#aaa0d8f3b2be317c7b2be1924cdad1c57" title=" " alt="" coords="208,5,403,45"/>
-<area shape="poly" title=" " alt="" coords="83,597,95,486,120,324,136,240,156,163,179,99,206,56,209,52,213,56,210,59,184,102,161,165,141,241,125,325,101,487,88,597"/>
-<area shape="rect" href="namespacemod__supertimestepping.html#a7b8ba942141441da1810e653facd035c" title="subroutine which added programatically a term to be calculated using STS Params: sts_getdt function c..." alt="" coords="215,69,395,109"/>
-<area shape="poly" title=" " alt="" coords="84,597,98,497,123,354,140,281,160,214,182,158,206,120,209,116,213,120,210,123,186,160,165,215,145,282,129,356,103,498,89,598"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#afe11ff52a2c462a09c3378a75168098e" title=" " alt="" coords="228,133,383,173"/>
-<area shape="poly" title=" " alt="" coords="81,597,86,523,102,415,118,355,140,296,169,240,206,190,219,179,223,183,210,194,173,243,144,299,123,357,107,416,91,523,87,597"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#a5a9d8c58337847af6590a9d592f94904" title=" " alt="" coords="451,163,605,203"/>
-<area shape="poly" title=" " alt="" coords="81,597,85,527,101,428,117,375,139,323,168,275,206,234,223,223,246,215,304,201,437,185,437,190,305,206,247,220,225,228,210,238,172,278,144,326,122,377,106,430,90,528,86,597"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#ad3418da655c172d48c6fe1c71919ee4b" title=" " alt="" coords="228,248,383,288"/>
-<area shape="poly" title=" " alt="" coords="83,597,93,538,114,459,130,415,150,373,175,333,206,298,214,291,218,295,210,302,180,336,155,376,134,418,119,460,98,540,89,597"/>
-<area shape="rect" href="namespacemod__thermal__emission.html#a159fb3c1b066f6de4fee75cb5141bc2f" title=" " alt="" coords="218,312,393,352"/>
-<area shape="poly" title=" " alt="" coords="86,597,99,549,122,486,157,420,180,389,206,362,213,357,216,361,210,366,184,393,162,423,127,488,104,551,91,598"/>
-<area shape="rect" href="namespacemod__thermal__emission.html#adf0fb0ee2b1bfd1c734f0a86070c37ec" title=" " alt="" coords="218,376,393,416"/>
-<area shape="poly" title=" " alt="" coords="89,596,106,560,131,514,165,467,206,426,214,421,217,425,210,430,169,470,136,517,111,562,94,598"/>
-<area shape="rect" href="namespacemod__thermal__emission.html#a8c9910c8edf1623c3705458a5b337b62" title=" " alt="" coords="218,440,393,480"/>
-<area shape="poly" title=" " alt="" coords="97,595,142,543,173,515,207,490,218,483,221,488,209,494,176,519,146,547,101,599"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a17b4756aab5213e0be7b3525ebcb4785" title="Get the explicit timestep for the TC (mhd implementation) Note: for multi&#45;D MHD (1D MHD will use HD f..." alt="" coords="212,504,399,544"/>
-<area shape="poly" title=" " alt="" coords="120,595,207,554,226,546,228,551,209,558,123,600"/>
-<area shape="rect" href="namespacemod__thermal__emission.html#af29ccd138f3aca890abf25d1dbc02b97" title=" " alt="" coords="218,568,393,608"/>
-<area shape="poly" title=" " alt="" coords="160,605,204,599,205,604,161,610"/>
-<area shape="rect" href="namespacemod__gravity.html#ac77da47869e83fdec592fa926333722c" title="Initialize the module." alt="" coords="213,633,398,658"/>
-<area shape="poly" title=" " alt="" coords="161,624,199,629,199,635,160,630"/>
-<area shape="rect" href="namespacemod__ionization__degree.html#a98f8df508ab03ff6431b97782de7be8d" title=" " alt="" coords="218,683,393,723"/>
-<area shape="poly" title=" " alt="" coords="131,635,209,667,233,676,231,681,207,672,129,640"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a2c0aab05964e01b97b9ae65c6d2ea830" title=" " alt="" coords="220,747,391,787"/>
-<area shape="poly" title=" " alt="" coords="102,636,148,684,177,710,209,732,221,739,219,743,207,737,174,714,144,688,98,639"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a1af126a415ceee3e65eb49567e74be29" title="Radiative cooling initialization." alt="" coords="220,811,391,866"/>
-<area shape="poly" title=" " alt="" coords="95,636,138,713,171,758,210,797,217,802,214,806,206,801,167,761,134,716,91,639"/>
-<area shape="rect" href="namespacemod__supertimestepping.html#aa6c319b28911c6e73c1218f56f66d850" title="Set the hooks called before the first cycle and after the last cycle in the STS update This method sh..." alt="" coords="209,890,401,945"/>
-<area shape="poly" title=" " alt="" coords="91,637,104,685,127,748,162,816,184,847,210,875,215,880,211,884,206,879,180,851,158,819,122,750,99,686,86,638"/>
-<area shape="rect" href="namespacemod__supertimestepping.html#ab8f1d9807c6320de449a5983500bd7c8" title="Set the hook of error handling in the STS update. This method is called before updating the BC...." alt="" coords="215,969,395,1023"/>
-<area shape="poly" title=" " alt="" coords="88,637,97,698,118,782,134,828,154,873,179,916,210,954,214,958,211,962,206,958,175,919,149,876,129,830,113,783,92,699,83,638"/>
-<area shape="rect" href="namespacemod__supertimestepping.html#ae300305fc391679ed668a2d0eb686b67" title="Initialize sts module." alt="" coords="215,1048,395,1088"/>
-<area shape="poly" title=" " alt="" coords="87,637,90,711,107,816,122,874,144,931,173,985,210,1033,215,1038,211,1042,206,1036,168,988,139,934,117,876,102,817,85,711,81,638"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a591ee12c87621f338cc65935a9c5fa20" title="anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computation..." alt="" coords="212,1112,399,1152"/>
-<area shape="poly" title=" " alt="" coords="89,637,104,734,130,873,146,944,166,1009,187,1062,210,1098,214,1102,210,1106,206,1102,182,1065,160,1011,141,945,124,874,98,735,84,638"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a06712e83dc81e2953a38bee9f3109661" title="Init TC coefficients: HD case." alt="" coords="212,1176,399,1216"/>
-<area shape="poly" title=" " alt="" coords="89,637,101,746,126,904,142,985,162,1059,185,1121,210,1162,213,1165,209,1169,206,1166,180,1123,157,1061,137,986,120,905,96,747,83,638"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="212,1240,399,1280"/>
-<area shape="poly" title=" " alt="" coords="88,637,99,757,122,934,138,1026,158,1110,182,1179,196,1206,210,1226,213,1229,209,1233,206,1230,191,1209,177,1181,153,1111,133,1027,116,934,94,757,83,638"/>
-<area shape="poly" title=" " alt="" coords="383,161,437,168,437,173,383,166"/>
-<area shape="poly" title=" " alt="" coords="487,163,484,153,491,144,506,138,528,136,554,139,568,146,566,151,552,144,528,141,507,143,494,148,489,154,492,162"/>
+<area shape="rect" title=" " alt="" coords="5,777,160,817"/>
+<area shape="rect" href="namespacemod__convert.html#aaa0d8f3b2be317c7b2be1924cdad1c57" title=" " alt="" coords="216,5,411,45"/>
+<area shape="poly" title=" " alt="" coords="82,777,89,635,108,419,124,305,145,201,172,115,188,81,206,56,209,52,213,56,210,59,193,84,177,117,150,203,129,306,114,419,94,635,87,777"/>
+<area shape="rect" href="namespacemod__supertimestepping.html#a7b8ba942141441da1810e653facd035c" title="subroutine which added programatically a term to be calculated using STS Params: sts_getdt function c..." alt="" coords="223,69,403,109"/>
+<area shape="poly" title=" " alt="" coords="82,777,92,647,114,452,130,351,151,258,176,180,190,150,206,126,218,115,222,119,210,130,195,152,181,182,156,259,135,352,119,453,97,647,88,777"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#afe11ff52a2c462a09c3378a75168098e" title=" " alt="" coords="236,285,391,325"/>
+<area shape="poly" title=" " alt="" coords="81,777,83,698,88,643,98,583,114,519,136,456,166,396,206,342,222,329,226,333,210,346,171,398,141,458,119,521,103,584,94,644,88,698,86,777"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#a5a9d8c58337847af6590a9d592f94904" title=" " alt="" coords="477,272,631,312"/>
+<area shape="poly" title=" " alt="" coords="83,777,94,670,116,516,133,437,153,366,177,309,191,287,206,271,239,251,276,239,314,233,353,233,429,245,494,265,492,270,428,250,353,239,314,239,277,244,242,256,210,275,195,290,182,311,158,368,138,439,121,517,99,671,88,778"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a2121ee6882826b74a9cdbaa4fa4496e8" title=" " alt="" coords="689,335,864,390"/>
+<area shape="poly" title=" " alt="" coords="84,777,99,691,125,572,142,512,161,458,183,415,206,386,242,368,290,355,349,348,415,344,552,344,676,351,676,356,552,350,415,349,349,353,291,361,243,373,210,390,187,417,166,460,147,514,130,574,104,692,90,778"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a57004a23af00ef24421cb02f1e307a61" title=" " alt="" coords="912,617,1147,657"/>
+<area shape="poly" title=" " alt="" coords="105,816,150,853,178,871,209,884,266,899,312,902,359,896,418,884,501,864,585,839,744,777,880,714,979,662,982,667,883,719,746,782,586,844,503,869,419,889,360,901,312,907,265,904,207,889,176,876,147,857,102,820"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a7004b2e1495848e89a35734d60d7f40c" title=" " alt="" coords="689,214,864,269"/>
+<area shape="poly" title=" " alt="" coords="83,777,92,663,113,497,130,412,150,335,175,273,190,250,206,233,241,215,290,204,349,199,414,199,552,208,676,223,675,228,551,213,414,204,349,205,291,209,243,220,210,237,194,253,180,276,155,337,135,413,119,498,97,664,88,777"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#ad3418da655c172d48c6fe1c71919ee4b" title=" " alt="" coords="236,400,391,440"/>
+<area shape="poly" title=" " alt="" coords="83,777,90,714,109,627,125,579,146,532,173,489,206,450,222,438,225,442,210,454,177,492,151,535,130,581,114,628,95,715,88,778"/>
+<area shape="rect" href="namespacemod__thermal__emission.html#a159fb3c1b066f6de4fee75cb5141bc2f" title=" " alt="" coords="226,464,401,504"/>
+<area shape="poly" title=" " alt="" coords="84,777,96,724,118,654,134,616,153,579,178,544,206,514,213,509,216,513,210,518,182,548,158,582,138,618,123,656,101,726,90,778"/>
+<area shape="rect" href="namespacemod__thermal__emission.html#adf0fb0ee2b1bfd1c734f0a86070c37ec" title=" " alt="" coords="226,528,401,568"/>
+<area shape="poly" title=" " alt="" coords="87,776,102,735,126,681,161,626,182,600,206,578,214,573,217,577,210,582,186,604,165,629,131,684,107,737,92,778"/>
+<area shape="rect" href="namespacemod__thermal__emission.html#a8c9910c8edf1623c3705458a5b337b62" title=" " alt="" coords="226,592,401,632"/>
+<area shape="poly" title=" " alt="" coords="93,776,137,710,169,673,206,642,216,636,219,640,210,646,173,677,141,713,97,779"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a17b4756aab5213e0be7b3525ebcb4785" title="Get the explicit timestep for the TC (mhd implementation) Note: for multi&#45;D MHD (1D MHD will use HD f..." alt="" coords="220,656,407,696"/>
+<area shape="poly" title=" " alt="" coords="106,775,151,740,207,706,223,698,225,703,209,710,154,744,109,779"/>
+<area shape="rect" href="namespacemod__thermal__emission.html#af29ccd138f3aca890abf25d1dbc02b97" title=" " alt="" coords="226,720,401,760"/>
+<area shape="poly" title=" " alt="" coords="160,775,218,761,220,766,161,781"/>
+<area shape="rect" href="namespacemod__gravity.html#ac77da47869e83fdec592fa926333722c" title="Initialize the module." alt="" coords="221,785,406,810"/>
+<area shape="poly" title=" " alt="" coords="161,795,207,795,207,800,161,800"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a6be523877ccb70588b58005e6479be51" title=" " alt="" coords="208,835,419,875"/>
+<area shape="poly" title=" " alt="" coords="161,814,220,829,218,834,160,819"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#ae9b7d4a62e5fa86551f68e7b856ddb74" title=" " alt="" coords="467,985,641,1025"/>
+<area shape="poly" title=" " alt="" coords="91,817,103,861,126,917,161,972,183,996,209,1015,241,1030,276,1040,311,1045,347,1046,418,1040,479,1027,480,1032,418,1045,348,1051,311,1050,275,1045,240,1035,207,1020,180,1000,157,975,121,919,98,863,86,818"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#af03167e91fe60b53a446dbc865cb2140" title=" " alt="" coords="226,950,401,1005"/>
+<area shape="poly" title=" " alt="" coords="101,816,146,871,176,901,210,929,230,941,227,946,206,933,173,905,142,874,97,819"/>
+<area shape="rect" href="namespacemod__ionization__degree.html#a1c518cf1563f0e36e2244a36da4712d1" title=" " alt="" coords="467,105,641,159"/>
+<area shape="poly" title=" " alt="" coords="82,777,91,655,112,473,128,379,149,294,175,224,190,197,206,177,224,165,248,156,310,142,382,134,453,130,453,136,382,140,310,147,249,161,226,170,210,181,194,200,179,226,154,295,133,380,117,474,96,655,88,778"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a6d18ddd22fe571bd3d4a030db3ad3db6" title=" " alt="" coords="223,1081,404,1135"/>
+<area shape="poly" title=" " alt="" coords="91,817,104,865,128,930,162,998,184,1031,210,1059,224,1071,220,1075,206,1063,180,1034,158,1001,123,932,99,867,86,818"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a2c0aab05964e01b97b9ae65c6d2ea830" title=" " alt="" coords="228,1160,399,1200"/>
+<area shape="poly" title=" " alt="" coords="88,817,95,881,114,969,130,1017,150,1064,177,1108,210,1146,218,1153,215,1157,206,1150,173,1111,146,1066,125,1019,109,971,90,882,82,818"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a1af126a415ceee3e65eb49567e74be29" title="Radiative cooling initialization." alt="" coords="228,1225,399,1279"/>
+<area shape="poly" title=" " alt="" coords="87,817,91,890,108,995,124,1052,145,1109,174,1162,210,1210,218,1218,215,1222,206,1214,169,1165,140,1111,119,1054,103,996,86,891,81,818"/>
+<area shape="rect" href="namespacemod__supertimestepping.html#aa6c319b28911c6e73c1218f56f66d850" title="Set the hooks called before the first cycle and after the last cycle in the STS update This method sh..." alt="" coords="217,1303,409,1358"/>
+<area shape="poly" title=" " alt="" coords="89,818,104,917,129,1059,146,1131,166,1198,187,1253,210,1290,212,1292,208,1296,206,1294,182,1255,160,1200,141,1133,124,1060,98,918,84,818"/>
+<area shape="rect" href="namespacemod__supertimestepping.html#ab8f1d9807c6320de449a5983500bd7c8" title="Set the hook of error handling in the STS update. This method is called before updating the BC...." alt="" coords="223,1382,403,1437"/>
+<area shape="poly" title=" " alt="" coords="88,818,101,931,125,1096,141,1182,161,1260,184,1325,210,1369,214,1373,210,1377,206,1372,179,1327,156,1262,136,1183,119,1097,95,931,83,818"/>
+<area shape="rect" href="namespacemod__supertimestepping.html#ae300305fc391679ed668a2d0eb686b67" title="Initialize sts module." alt="" coords="223,1461,403,1501"/>
+<area shape="poly" title=" " alt="" coords="88,817,97,944,119,1134,135,1232,155,1323,180,1397,195,1426,210,1448,214,1452,210,1456,206,1451,190,1429,176,1399,150,1324,130,1233,113,1134,92,945,82,818"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a591ee12c87621f338cc65935a9c5fa20" title="anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computation..." alt="" coords="220,1525,407,1565"/>
+<area shape="poly" title=" " alt="" coords="87,817,95,955,115,1164,131,1273,152,1373,178,1456,193,1488,210,1512,213,1515,209,1518,206,1515,189,1490,173,1458,147,1375,126,1274,110,1165,90,956,82,818"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a06712e83dc81e2953a38bee9f3109661" title="Init TC coefficients: HD case." alt="" coords="220,1589,407,1629"/>
+<area shape="poly" title=" " alt="" coords="87,817,93,966,111,1194,127,1314,148,1424,176,1514,192,1549,210,1576,213,1579,209,1582,206,1579,187,1552,171,1516,143,1425,122,1314,106,1195,88,966,82,818"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="220,1653,407,1693"/>
+<area shape="poly" title=" " alt="" coords="87,818,91,977,108,1224,123,1354,145,1474,173,1573,191,1611,210,1640,213,1643,209,1646,206,1643,186,1613,168,1575,139,1475,118,1355,102,1225,86,977,81,818"/>
+<area shape="poly" title=" " alt="" coords="391,298,463,294,463,300,391,304"/>
+<area shape="poly" title=" " alt="" coords="513,272,510,262,517,253,532,247,554,245,580,248,594,256,592,260,578,253,554,251,533,253,520,257,515,263,518,271"/>
+<area shape="poly" title=" " alt="" coords="619,310,678,329,676,334,617,315"/>
+<area shape="poly" title=" " alt="" coords="631,272,675,262,676,267,632,277"/>
+<area shape="poly" title=" " alt="" coords="805,388,1002,605,998,609,801,392"/>
+<area shape="poly" title=" " alt="" coords="983,618,980,608,987,598,1004,593,1029,591,1058,594,1074,601,1072,606,1057,599,1029,596,1005,598,990,603,985,609,988,616"/>
+<area shape="poly" title=" " alt="" coords="641,1000,695,993,753,980,810,959,862,929,894,901,921,868,966,797,997,726,1017,670,1022,671,1002,728,971,799,925,872,897,904,866,933,813,964,754,985,696,998,642,1005"/>
+<area shape="poly" title=" " alt="" coords="642,127,697,132,756,144,814,166,841,181,866,199,908,245,943,297,970,354,991,412,1007,468,1018,521,1028,603,1023,604,1012,522,1002,470,986,413,965,356,938,300,904,248,862,203,838,185,812,171,755,149,696,138,641,133"/>
 </map>
 </div>
 
@@ -656,7 +679,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the energy density (-1 if not present) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00062">62</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00064">64</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -672,7 +695,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00102">102</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00101">101</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -690,7 +713,7 @@ Here is the call graph for this function:</div>
 
 <p>The adiabatic constant. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00079">79</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00078">78</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -726,7 +749,7 @@ Here is the call graph for this function:</div>
 
 <p>The adiabatic index. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00076">76</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00075">75</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -742,7 +765,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00123">123</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00122">122</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -758,7 +781,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00125">125</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00124">124</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -774,7 +797,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00126">126</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00125">125</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -850,6 +873,40 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a16e8c690cf9fee54a2fbf3542f14ec67" name="a16e8c690cf9fee54a2fbf3542f14ec67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e8c690cf9fee54a2fbf3542f14ec67">&#9670;&#160;</a></span>ffhd_include_ionization_energy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical, public, protected mod_ffhd_phys::ffhd_include_ionization_energy = .false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether hydrogen ionization energy is included in the thermal energy. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00056">56</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a788cfceeab23900c029d6bd0d076513a" name="a788cfceeab23900c029d6bd0d076513a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788cfceeab23900c029d6bd0d076513a">&#9670;&#160;</a></span>ffhd_ionization_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">character(len=32), public, protected mod_ffhd_phys::ffhd_ionization_table = &quot;chromosphere&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00054">54</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+
+</div>
+</div>
 <a id="a750cb57ac21a59e8c23e0b67c3a41f4d" name="a750cb57ac21a59e8c23e0b67c3a41f4d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a750cb57ac21a59e8c23e0b67c3a41f4d">&#9670;&#160;</a></span>ffhd_kin_en</h2>
 
@@ -862,7 +919,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00127">127</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00126">126</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -932,7 +989,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00121">121</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00120">120</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -948,7 +1005,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00120">120</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00119">119</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1038,7 +1095,7 @@ Here is the call graph for this function:</div>
 
 <p>Ionization fraction of H H_ion_fr = H+/(H+ + H) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00088">88</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00087">87</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1056,7 +1113,7 @@ Here is the call graph for this function:</div>
 
 <p>Helium abundance over Hydrogen. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00085">85</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00084">84</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1074,7 +1131,7 @@ Here is the call graph for this function:</div>
 
 <p>Ionization fraction of He He_ion_fr = (He2+ + He+)/(He2+ + He+ + He) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00091">91</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00090">90</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1092,7 +1149,7 @@ Here is the call graph for this function:</div>
 
 <p>Ratio of number He2+ / number He+ + He2+ He_ion_fr2 = He2+/(He2+ + He+) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00094">94</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00093">93</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1110,7 +1167,7 @@ Here is the call graph for this function:</div>
 
 <p>The thermal conductivity kappa in hyperbolic thermal conduction. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00082">82</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00081">81</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1128,7 +1185,7 @@ Here is the call graph for this function:</div>
 
 <p>Indices of the momentum density. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00059">59</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00061">61</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1146,7 +1203,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the gas pressure (-1 if not present) should equal e_. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00065">65</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00067">67</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1162,7 +1219,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00073">73</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00072">72</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1198,7 +1255,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the density (in the w array) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00056">56</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00058">58</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1214,7 +1271,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00098">98</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00097">97</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1250,25 +1307,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the cutoff temperature for the TRAC method. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00071">71</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
-
-</div>
-</div>
-<a id="a00e553276f9ccfab163d91e038ca7dae" name="a00e553276f9ccfab163d91e038ca7dae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00e553276f9ccfab163d91e038ca7dae">&#9670;&#160;</a></span>te_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer, public, protected mod_ffhd_phys::te_</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Indices of temperature. </p>
-
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00068">68</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00070">70</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1302,7 +1341,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00072">72</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__phys_8t_source.html#l00071">71</a> of file <a class="el" href="mod__ffhd__phys_8t_source.html">mod_ffhd_phys.t</a>.</p>
 
 </div>
 </div>

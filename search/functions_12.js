@@ -130,6 +130,5 @@ var searchData=
   ['sub_5fspecial_5fadvance_127',['sub_special_advance',['../interfacemod__physics_1_1sub__special__advance.html#a5d01f925bafb062c7cde03954fef452f',1,'mod_physics::sub_special_advance']]],
   ['sub_5ftrac_5fafter_5fsetdt_128',['sub_trac_after_setdt',['../interfacemod__physics_1_1sub__trac__after__setdt.html#afeb2779c7f64366c1f4269eeb5b56d2c',1,'mod_physics::sub_trac_after_setdt']]],
   ['sub_5fupdate_5ffaces_129',['sub_update_faces',['../interfacemod__physics_1_1sub__update__faces.html#a83de2f7b0d81436348f7fa8ac1e6cfdf',1,'mod_physics::sub_update_faces']]],
-  ['sub_5fupdate_5ftemperature_130',['sub_update_temperature',['../interfacemod__physics_1_1sub__update__temperature.html#a473f52416c9a31f5030cf396cea5649b',1,'mod_physics::sub_update_temperature']]],
-  ['sub_5fwrite_5finfo_131',['sub_write_info',['../interfacemod__physics_1_1sub__write__info.html#a980b0c0b8b93bc35f91eeb7ab11f4ca0',1,'mod_physics::sub_write_info']]]
+  ['sub_5fwrite_5finfo_130',['sub_write_info',['../interfacemod__physics_1_1sub__write__info.html#a980b0c0b8b93bc35f91eeb7ab11f4ca0',1,'mod_physics::sub_write_info']]]
 ];

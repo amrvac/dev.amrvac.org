@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MPI-AMRVAC: mod_physics::sub_update_temperature Interface Reference</title>
+<title>MPI-AMRVAC: mod_radiative_cooling::get_eps_derivative_t Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,28 +78,28 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespacemod__physics.html">mod_physics</a></li><li class="navelem"><a class="el" href="interfacemod__physics_1_1sub__update__temperature.html">sub_update_temperature</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacemod__radiative__cooling.html">mod_radiative_cooling</a></li><li class="navelem"><a class="el" href="interfacemod__radiative__cooling_1_1get__eps__derivative__t.html">get_eps_derivative_t</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="interfacemod__physics_1_1sub__update__temperature-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">mod_physics::sub_update_temperature Interface Reference</div></div>
+<a href="interfacemod__radiative__cooling_1_1get__eps__derivative__t-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">mod_radiative_cooling::get_eps_derivative_t Interface Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a473f52416c9a31f5030cf396cea5649b" id="r_a473f52416c9a31f5030cf396cea5649b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__physics_1_1sub__update__temperature.html#a473f52416c9a31f5030cf396cea5649b">sub_update_temperature</a> (ixil, ixol, wct, w, x)</td></tr>
-<tr class="separator:a473f52416c9a31f5030cf396cea5649b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57c8bbe1300f83dc24a1dc1c7df0c9b" id="r_ad57c8bbe1300f83dc24a1dc1c7df0c9b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__radiative__cooling_1_1get__eps__derivative__t.html#ad57c8bbe1300f83dc24a1dc1c7df0c9b">get_eps_derivative_t</a> (t, invgam, eps, deps_dt, dq_dt)</td></tr>
+<tr class="separator:ad57c8bbe1300f83dc24a1dc1c7df0c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00351">351</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00055">55</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a473f52416c9a31f5030cf396cea5649b" name="a473f52416c9a31f5030cf396cea5649b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a473f52416c9a31f5030cf396cea5649b">&#9670;&#160;</a></span>sub_update_temperature()</h2>
+<a id="ad57c8bbe1300f83dc24a1dc1c7df0c9b" name="ad57c8bbe1300f83dc24a1dc1c7df0c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57c8bbe1300f83dc24a1dc1c7df0c9b">&#9670;&#160;</a></span>get_eps_derivative_t()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -108,46 +108,34 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">subroutine mod_physics::sub_update_temperature::sub_update_temperature </td>
+          <td class="memname">subroutine mod_radiative_cooling::get_eps_derivative_t::get_eps_derivative_t </td>
           <td>(</td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>ixi</em>, </td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>invgam</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>ixo</em>, </td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>eps</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>deps_dt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,nw), intent(in)&#160;</td>
-          <td class="paramname"><em>wct</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,nw), intent(inout)&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,1:ndim), intent(in)&#160;</td>
-          <td class="paramname"><em>x</em>&#160;</td>
+          <td class="paramtype">double precision, intent(out), optional&#160;</td>
+          <td class="paramname"><em>dq_dt</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -162,12 +150,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physics_8t_source.html#l00351">351</a> of file <a class="el" href="mod__physics_8t_source.html">mod_physics.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00055">55</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>src/physics/<a class="el" href="mod__physics_8t_source.html">mod_physics.t</a></li>
+<li>src/physics/<a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

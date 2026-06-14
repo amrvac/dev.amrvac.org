@@ -66,6 +66,5 @@ var searchData=
   ['sub_5fspecial_5fadvance_63',['sub_special_advance',['../interfacemod__physics_1_1sub__special__advance.html',1,'mod_physics']]],
   ['sub_5ftrac_5fafter_5fsetdt_64',['sub_trac_after_setdt',['../interfacemod__physics_1_1sub__trac__after__setdt.html',1,'mod_physics']]],
   ['sub_5fupdate_5ffaces_65',['sub_update_faces',['../interfacemod__physics_1_1sub__update__faces.html',1,'mod_physics']]],
-  ['sub_5fupdate_5ftemperature_66',['sub_update_temperature',['../interfacemod__physics_1_1sub__update__temperature.html',1,'mod_physics']]],
-  ['sub_5fwrite_5finfo_67',['sub_write_info',['../interfacemod__physics_1_1sub__write__info.html',1,'mod_physics']]]
+  ['sub_5fwrite_5finfo_66',['sub_write_info',['../interfacemod__physics_1_1sub__write__info.html',1,'mod_physics']]]
 ];

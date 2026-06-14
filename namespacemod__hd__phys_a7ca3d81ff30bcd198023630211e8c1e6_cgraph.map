@@ -1,5 +1,11 @@
 <map id="mod_hd_phys::hd_to_conserved" name="mod_hd_phys::hd_to_conserved">
-<area shape="rect" id="Node000001" title="Transform primitive variables into conservative ones." alt="" coords="5,5,161,45"/>
-<area shape="rect" id="Node000002" href="$namespacemod__dust.html#a8e13243ca47ce296b568cbd9feb6840e" title=" " alt="" coords="209,13,425,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,23,196,23,196,28,162,28"/>
+<area shape="rect" id="Node000001" title="Transform primitive variables into conservative ones." alt="" coords="5,79,161,119"/>
+<area shape="rect" id="Node000002" href="$namespacemod__dust.html#a8e13243ca47ce296b568cbd9feb6840e" title=" " alt="" coords="209,5,425,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,77,208,41,239,32,241,37,210,46,125,82"/>
+<area shape="rect" id="Node000004" href="$namespacemod__hd__phys.html#ad3fc92802c816bfb5f39888fbeeda2bd" title=" " alt="" coords="219,79,416,119"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="162,97,205,97,205,102,162,102"/>
+<area shape="rect" id="Node000011" href="$namespacemod__ionization__degree.html#a7004b2e1495848e89a35734d60d7f40c" title=" " alt="" coords="473,101,648,156"/>
+<area shape="poly" id="edge5_Node000001_Node000011" title=" " alt="" coords="151,117,210,129,274,134,339,137,459,134,459,139,339,142,274,140,209,134,150,122"/>
+<area shape="poly" id="edge3_Node000004_Node000004" title=" " alt="" coords="274,80,271,70,278,60,294,55,317,53,344,56,359,63,357,68,343,61,317,58,295,60,282,65,277,71,279,78"/>
+<area shape="poly" id="edge4_Node000004_Node000011" title=" " alt="" coords="417,109,460,114,459,119,416,114"/>
 </map>

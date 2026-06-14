@@ -1,5 +1,5 @@
 <map id="mod_hd_phys::hd_get_temperature_from_prim" name="mod_hd_phys::hd_get_temperature_from_prim">
-<area shape="rect" id="Node000001" title="Calculate temperature=p/rho when in we work in primitives (hence e_ is p_)" alt="" coords="5,376,191,416"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,376,191,416"/>
 <area shape="rect" id="Node000002" href="$namespacemod__fld.html#ab47011fb824722631ccb86571eea920c" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles th..." alt="" coords="251,5,408,45"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,375,111,314,135,228,153,182,176,136,203,93,237,55,242,51,245,55,241,59,208,97,180,139,158,184,140,230,116,315,105,376"/>
 <area shape="rect" id="Node000016" href="$namespacemod__cak__force.html#a6cf762353c1aecaa5af0c8c4371c11a0" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="253,69,405,109"/>
@@ -18,12 +18,12 @@
 <area shape="poly" id="edge8_Node000001_Node000026" title=" " alt="" coords="172,414,244,434,243,439,170,419"/>
 <area shape="rect" id="Node000027" href="$namespacemod__gravity.html#a831142d24c1d9520a6d05108a2b265ef" title=" " alt="" coords="251,504,408,544"/>
 <area shape="poly" id="edge9_Node000001_Node000027" title=" " alt="" coords="126,414,177,452,240,490,254,496,251,501,237,494,174,456,123,418"/>
-<area shape="rect" id="Node000028" href="$namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff" title="Calculate thermal pressure=(gamma&#45;1)*(e&#45;0.5*m**2/rho) within ixO^L." alt="" coords="247,568,411,608"/>
+<area shape="rect" id="Node000028" href="$namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff" title="Calculate thermal pressure from conserved energy using the active EOS." alt="" coords="247,568,411,608"/>
 <area shape="poly" id="edge10_Node000001_Node000028" title=" " alt="" coords="114,415,164,482,200,521,240,554,250,560,247,564,237,558,196,524,160,486,110,418"/>
-<area shape="rect" id="Node000035" href="$namespacemod__radiative__cooling.html#a76304d7766df7b067cc8ab02651ba133" title=" " alt="" coords="243,633,416,687"/>
-<area shape="poly" id="edge11_Node000001_Node000035" title=" " alt="" coords="109,415,128,457,156,510,194,567,240,618,246,623,243,627,237,622,190,571,151,513,123,459,105,417"/>
-<area shape="rect" id="Node000043" href="$namespacemod__rotating__frame.html#ac392a303c8ded459efff6c36f3eb8754" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="250,711,409,766"/>
-<area shape="poly" id="edge12_Node000001_Node000043" title=" " alt="" coords="106,415,120,470,146,545,186,625,211,663,241,697,245,701,241,705,237,701,207,666,181,628,141,547,115,472,101,417"/>
-<area shape="rect" id="Node000044" href="$namespacemod__viscosity.html#a47c036a5bc2f4d638bed624391419c82" title=" " alt="" coords="239,791,420,831"/>
-<area shape="poly" id="edge13_Node000001_Node000044" title=" " alt="" coords="104,416,113,483,135,580,153,632,176,684,205,732,241,775,247,781,243,785,237,779,201,735,171,686,148,634,130,581,107,484,98,416"/>
+<area shape="rect" id="Node000038" href="$namespacemod__radiative__cooling.html#a76304d7766df7b067cc8ab02651ba133" title=" " alt="" coords="243,633,416,687"/>
+<area shape="poly" id="edge11_Node000001_Node000038" title=" " alt="" coords="109,415,128,457,156,510,194,567,240,618,246,623,243,627,237,622,190,571,151,513,123,459,105,417"/>
+<area shape="rect" id="Node000052" href="$namespacemod__rotating__frame.html#ac392a303c8ded459efff6c36f3eb8754" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="250,711,409,766"/>
+<area shape="poly" id="edge12_Node000001_Node000052" title=" " alt="" coords="106,415,120,470,146,545,186,625,211,663,241,697,245,701,241,705,237,701,207,666,181,628,141,547,115,472,101,417"/>
+<area shape="rect" id="Node000053" href="$namespacemod__viscosity.html#a47c036a5bc2f4d638bed624391419c82" title=" " alt="" coords="239,791,420,831"/>
+<area shape="poly" id="edge13_Node000001_Node000053" title=" " alt="" coords="104,416,113,483,135,580,153,632,176,684,205,732,241,775,247,781,243,785,237,779,201,735,171,686,148,634,130,581,107,484,98,416"/>
 </map>

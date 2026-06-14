@@ -1,0 +1,11 @@
+<map id="mod_ionization_degree::ionization_degree_init" name="mod_ionization_degree::ionization_degree_init">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,180,133"/>
+<area shape="rect" id="Node000002" href="$namespacemod__ionization__degree.html#a57004a23af00ef24421cb02f1e307a61" title=" " alt="" coords="228,29,463,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,91,252,70,253,75,173,96"/>
+<area shape="rect" id="Node000003" href="$namespacemod__ionization__degree.html#a836122f4595b4552e4c8465ee4d412ae" title=" " alt="" coords="258,93,433,133"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="180,111,244,111,244,116,180,116"/>
+<area shape="rect" id="Node000004" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="511,130,693,155"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="165,131,228,143,298,148,368,151,497,148,497,153,368,156,297,154,228,148,164,136"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="299,30,296,20,303,10,320,5,345,3,374,6,390,13,388,18,373,11,345,8,321,10,306,15,301,21,304,28"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="433,121,497,128,497,133,433,126"/>
+</map>

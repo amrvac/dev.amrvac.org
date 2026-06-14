@@ -121,10 +121,10 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:afea7981754014b2f57fa8b3b191ac30f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform total energy to internal energy.  <br /></td></tr>
 <tr class="separator:afea7981754014b2f57fa8b3b191ac30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44f30d12946c0f46f8c64c835aa589f6" id="r_a44f30d12946c0f46f8c64c835aa589f6"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a44f30d12946c0f46f8c64c835aa589f6">mod_hd_phys::hd_get_csound2</a> (w, x, ixil, ixol, csound2)</td></tr>
-<tr class="memdesc:a44f30d12946c0f46f8c64c835aa589f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the square of the thermal sound speed csound2 within ixO^L. csound2=gamma*p/rho.  <br /></td></tr>
+<tr class="memdesc:a44f30d12946c0f46f8c64c835aa589f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the square of the thermal sound speed using the active EOS within ixO^L.  <br /></td></tr>
 <tr class="separator:a44f30d12946c0f46f8c64c835aa589f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af17430a2cacc3c6b8c497f916273daff" id="r_af17430a2cacc3c6b8c497f916273daff"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff">mod_hd_phys::hd_get_pthermal</a> (w, x, ixil, ixol, pth)</td></tr>
-<tr class="memdesc:af17430a2cacc3c6b8c497f916273daff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate thermal pressure=(gamma-1)*(e-0.5*m**2/rho) within ixO^L.  <br /></td></tr>
+<tr class="memdesc:af17430a2cacc3c6b8c497f916273daff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate thermal pressure from conserved energy using the active EOS.  <br /></td></tr>
 <tr class="separator:af17430a2cacc3c6b8c497f916273daff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9654fea8ea56204cbdc52d7bc76badc3" id="r_a9654fea8ea56204cbdc52d7bc76badc3"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a9654fea8ea56204cbdc52d7bc76badc3">mod_hd_phys::hd_get_csrad2</a> (w, x, ixil, ixol, csound)</td></tr>
 <tr class="memdesc:a9654fea8ea56204cbdc52d7bc76badc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate modified squared sound speed for FLD NOTE: only for diagnostic purposes, unused subroutine.  <br /></td></tr>
@@ -142,13 +142,14 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:aaca88bcdd2b9e28086f70746d466a59f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates radiation temperature.  <br /></td></tr>
 <tr class="separator:aaca88bcdd2b9e28086f70746d466a59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d425169b2267a6bc747bab19d62bfa5" id="r_a1d425169b2267a6bc747bab19d62bfa5"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a1d425169b2267a6bc747bab19d62bfa5">mod_hd_phys::hd_get_temperature_from_etot</a> (w, x, ixil, ixol, res)</td></tr>
-<tr class="memdesc:a1d425169b2267a6bc747bab19d62bfa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate temperature=p/rho when in e_ the total energy is stored.  <br /></td></tr>
+<tr class="memdesc:a1d425169b2267a6bc747bab19d62bfa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">recover temperature from rho and pthermal using active EOS  <br /></td></tr>
 <tr class="separator:a1d425169b2267a6bc747bab19d62bfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15a69e2d55d5897e560307f39f1b4d93" id="r_a15a69e2d55d5897e560307f39f1b4d93"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a15a69e2d55d5897e560307f39f1b4d93">mod_hd_phys::hd_get_temperature_from_prim</a> (w, x, ixil, ixol, res)</td></tr>
-<tr class="memdesc:a15a69e2d55d5897e560307f39f1b4d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate temperature=p/rho when in we work in primitives (hence e_ is p_)  <br /></td></tr>
 <tr class="separator:a15a69e2d55d5897e560307f39f1b4d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ab9a58df979c6e5d1f183e012fb1842" id="r_a7ab9a58df979c6e5d1f183e012fb1842"><td class="memItemLeft" align="right" valign="top">double precision function, dimension(ixo^s), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a7ab9a58df979c6e5d1f183e012fb1842">mod_hd_phys::hd_kin_en</a> (w, ixil, ixol, inv_rho)</td></tr>
 <tr class="separator:a7ab9a58df979c6e5d1f183e012fb1842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3fc92802c816bfb5f39888fbeeda2bd" id="r_ad3fc92802c816bfb5f39888fbeeda2bd"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#ad3fc92802c816bfb5f39888fbeeda2bd">mod_hd_phys::hd_get_p_eint_rfactor_from_rho_t</a> (rho, t, pthermal, eint, <a class="el" href="interfacemod__usr__methods_1_1rfactor.html">rfactor</a>)</td></tr>
+<tr class="separator:ad3fc92802c816bfb5f39888fbeeda2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -197,6 +198,11 @@ Variables</h2></td></tr>
 <tr class="memitem:abc46ec55ad8c22019aa9d432c2edf696" id="r_abc46ec55ad8c22019aa9d432c2edf696"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#abc46ec55ad8c22019aa9d432c2edf696">mod_hd_phys::hd_partial_ionization</a> = .false.</td></tr>
 <tr class="memdesc:abc46ec55ad8c22019aa9d432c2edf696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether plasma is partially ionized.  <br /></td></tr>
 <tr class="separator:abc46ec55ad8c22019aa9d432c2edf696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e09ca4da1704647aa8cd31aa7ae599" id="r_a85e09ca4da1704647aa8cd31aa7ae599"><td class="memItemLeft" align="right" valign="top">character(len=32), public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a85e09ca4da1704647aa8cd31aa7ae599">mod_hd_phys::hd_ionization_table</a> = &quot;chromosphere&quot;</td></tr>
+<tr class="separator:a85e09ca4da1704647aa8cd31aa7ae599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee24501032dd7db3321aec6ddfe45ec7" id="r_aee24501032dd7db3321aec6ddfe45ec7"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#aee24501032dd7db3321aec6ddfe45ec7">mod_hd_phys::hd_include_ionization_energy</a> = .false.</td></tr>
+<tr class="memdesc:aee24501032dd7db3321aec6ddfe45ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Include hydrogen ionization energy in the HD internal energy.  <br /></td></tr>
+<tr class="separator:aee24501032dd7db3321aec6ddfe45ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1684505bcef5ec118de29c11165c02f" id="r_ab1684505bcef5ec118de29c11165c02f"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#ab1684505bcef5ec118de29c11165c02f">mod_hd_phys::rho_</a></td></tr>
 <tr class="memdesc:ab1684505bcef5ec118de29c11165c02f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the density (in the w array)  <br /></td></tr>
 <tr class="separator:ab1684505bcef5ec118de29c11165c02f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,9 +228,6 @@ Variables</h2></td></tr>
 <tr class="memitem:a32c4408104292f266820dea08f29960b" id="r_a32c4408104292f266820dea08f29960b"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a32c4408104292f266820dea08f29960b">mod_hd_phys::r_e</a></td></tr>
 <tr class="memdesc:a32c4408104292f266820dea08f29960b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the radiation energy (when fld active)  <br /></td></tr>
 <tr class="separator:a32c4408104292f266820dea08f29960b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc7155997b8b175aade4ce8dd028742" id="r_a5cc7155997b8b175aade4ce8dd028742"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a5cc7155997b8b175aade4ce8dd028742">mod_hd_phys::te_</a></td></tr>
-<tr class="memdesc:a5cc7155997b8b175aade4ce8dd028742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indices of temperature.  <br /></td></tr>
-<tr class="separator:a5cc7155997b8b175aade4ce8dd028742"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adee2d68191f069cea40d0b588c538b74" id="r_adee2d68191f069cea40d0b588c538b74"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#adee2d68191f069cea40d0b588c538b74">mod_hd_phys::fip_</a> = -1</td></tr>
 <tr class="memdesc:adee2d68191f069cea40d0b588c538b74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the FIP passive scalar rho*fip in conserved form, fip in primitive form.  <br /></td></tr>
 <tr class="separator:adee2d68191f069cea40d0b588c538b74"><td class="memSeparator" colspan="2">&#160;</td></tr>

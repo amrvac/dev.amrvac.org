@@ -1,0 +1,7 @@
+<map id="mod_radiative_cooling::radiative_cooling_build_eion_table" name="mod_radiative_cooling::radiative_cooling_build_eion_table">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,187,82"/>
+<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="241,5,411,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,40,227,35,228,41,188,46"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="235,70,417,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,63,221,67,220,73,187,68"/>
+</map>

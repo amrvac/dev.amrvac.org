@@ -1,7 +1,10 @@
 <map id="mod_mhd_phys::b_from_vector_potential" name="mod_mhd_phys::b_from_vector_potential">
-<area shape="rect" id="Node000001" title="calculate magnetic field from vector potential" alt="" coords="5,41,184,81"/>
-<area shape="rect" id="Node000002" href="$namespacemod__constrained__transport.html#a25f8b180b123dbde3aeb06a78fe5d054" title="calculate magnetic field from vector potential A at cell edges" alt="" coords="232,5,432,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,45,218,40,219,45,184,50"/>
-<area shape="rect" id="Node000003" href="$namespacemod__ionization__degree.html#a6962e885e888b499a67ad341d025b8b5" title=" " alt="" coords="240,70,424,125"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,72,227,79,226,84,184,77"/>
+<area shape="rect" id="Node000001" title="calculate magnetic field from vector potential" alt="" coords="5,69,184,109"/>
+<area shape="rect" id="Node000002" href="$namespacemod__constrained__transport.html#a25f8b180b123dbde3aeb06a78fe5d054" title="calculate magnetic field from vector potential A at cell edges" alt="" coords="241,5,441,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,67,250,46,251,51,173,72"/>
+<area shape="rect" id="Node000003" href="$namespacemod__ionization__degree.html#a128a8af7f9b63c8ad89a8c9b34ccd09b" title=" " alt="" coords="254,69,429,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,87,240,87,240,92,184,92"/>
+<area shape="rect" id="Node000007" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="232,158,451,183"/>
+<area shape="poly" id="edge3_Node000001_Node000007" title=" " alt="" coords="157,107,289,151,288,156,155,112"/>
+<area shape="poly" id="edge4_Node000007_Node000007" title=" " alt="" coords="302,160,293,150,297,140,314,134,341,131,376,135,386,140,390,146,385,149,382,144,375,140,341,137,315,139,301,144,298,149,305,156"/>
 </map>
