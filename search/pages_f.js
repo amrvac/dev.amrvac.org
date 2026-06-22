@@ -11,6 +11,7 @@ var searchData=
   ['problem_3a_202d_20hd_20liska_20wendroff_8',['Implosion test problem: 2D HD Liska-Wendroff',['../md_tests_2hd_2implosion__2D_2implosion.html',1,'']]],
   ['problems_9',['Riemann 2D test problems',['../md_tests_2hd_2Riemann__2D_2Riemann__2D.html',1,'']]],
   ['problems_3a_20isothermal_20hd_20variant_10',['Riemann 2D test problems: isothermal HD variant',['../md_tests_2hd_2Riemann__hdiso__2D_2Riemann__iso__2D.html',1,'']]],
-  ['publications_20related_20to_20mpi_20amrvac_11',['Publications related to MPI-AMRVAC',['../md_doc_2publications.html',1,'']]],
-  ['python_20tools_12',['Setting up the python tools',['../md_doc_2python__setup.html',1,'']]]
+  ['products_11',['Magnetic Topology and QSL Products',['../md_doc_2magnetic__topology__qsl.html',1,'']]],
+  ['publications_20related_20to_20mpi_20amrvac_12',['Publications related to MPI-AMRVAC',['../md_doc_2publications.html',1,'']]],
+  ['python_20tools_13',['Setting up the python tools',['../md_doc_2python__setup.html',1,'']]]
 ];

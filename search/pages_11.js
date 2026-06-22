@@ -8,10 +8,11 @@ var searchData=
   ['reading_20the_20vtk_20files_5',['Reading the vtk files',['../md_doc_2python__vtkfiles.html',1,'']]],
   ['readme_6',['README',['../md_tests_2mhd_2icarus_2README.html',1,'']]],
   ['refinement_7',['Adaptive Mesh Refinement',['../md_doc_2amrstructure.html',1,'']]],
-  ['related_20to_20mpi_20amrvac_8',['Publications related to MPI-AMRVAC',['../md_doc_2publications.html',1,'']]],
-  ['rhd_9',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]],
-  ['richtmeyer_20meshkov_202d_20test_20problem_10',['Richtmeyer Meshkov 2D test problem',['../md_tests_2hd_2Richtmyer__Meshkov_2Richtmeyer__Meshkov.html',1,'']]],
-  ['riemann_202d_20test_20problems_11',['Riemann 2D test problems',['../md_tests_2hd_2Riemann__2D_2Riemann__2D.html',1,'']]],
-  ['riemann_202d_20test_20problems_3a_20isothermal_20hd_20variant_12',['Riemann 2D test problems: isothermal HD variant',['../md_tests_2hd_2Riemann__hdiso__2D_2Riemann__iso__2D.html',1,'']]],
-  ['rotating_20frame_20for_20hd_20mhd_20rhd_13',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]]
+  ['regression_8',['Magnetic Topology/QSL Regression',['../md_tests_2mhd_2magnetic__topology__qsl_2README.html',1,'']]],
+  ['related_20to_20mpi_20amrvac_9',['Publications related to MPI-AMRVAC',['../md_doc_2publications.html',1,'']]],
+  ['rhd_10',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]],
+  ['richtmeyer_20meshkov_202d_20test_20problem_11',['Richtmeyer Meshkov 2D test problem',['../md_tests_2hd_2Richtmyer__Meshkov_2Richtmeyer__Meshkov.html',1,'']]],
+  ['riemann_202d_20test_20problems_12',['Riemann 2D test problems',['../md_tests_2hd_2Riemann__2D_2Riemann__2D.html',1,'']]],
+  ['riemann_202d_20test_20problems_3a_20isothermal_20hd_20variant_13',['Riemann 2D test problems: isothermal HD variant',['../md_tests_2hd_2Riemann__hdiso__2D_2Riemann__iso__2D.html',1,'']]],
+  ['rotating_20frame_20for_20hd_20mhd_20rhd_14',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]]
 ];
