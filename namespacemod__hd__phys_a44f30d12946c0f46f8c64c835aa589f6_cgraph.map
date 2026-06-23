@@ -1,13 +1,5 @@
 <map id="mod_hd_phys::hd_get_csound2" name="mod_hd_phys::hd_get_csound2">
-<area shape="rect" id="Node000001" title="Calculate the square of the thermal sound speed using the active EOS within ixO^L." alt="" coords="5,61,169,101"/>
-<area shape="rect" id="Node000002" href="$namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff" title="Calculate thermal pressure from conserved energy using the active EOS." alt="" coords="460,29,624,69"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,59,163,34,217,15,271,5,314,3,412,15,461,23,460,29,412,20,314,9,271,10,218,20,165,39,120,64"/>
-<area shape="rect" id="Node000013" href="$namespacemod__hd__phys.html#a1d425169b2267a6bc747bab19d62bfa5" title="recover temperature from rho and pthermal using active EOS" alt="" coords="224,29,405,69"/>
-<area shape="poly" id="edge2_Node000001_Node000013" title=" " alt="" coords="169,67,210,61,211,67,170,72"/>
-<area shape="rect" id="Node000014" href="$namespacemod__hd__phys.html#a15a69e2d55d5897e560307f39f1b4d93" title=" " alt="" coords="222,93,407,133"/>
-<area shape="poly" id="edge4_Node000001_Node000014" title=" " alt="" coords="170,90,209,96,208,101,169,95"/>
-<area shape="rect" id="Node000056" href="$namespacemod__ionization__degree.html#a18bf98257644d18d9fab7f53c1f17c94" title=" " alt="" coords="217,157,412,197"/>
-<area shape="poly" id="edge6_Node000001_Node000056" title=" " alt="" coords="127,99,218,143,237,150,235,155,216,148,125,104"/>
-<area shape="poly" id="edge3_Node000013_Node000002" title=" " alt="" coords="405,47,446,47,446,52,405,52"/>
-<area shape="poly" id="edge5_Node000014_Node000002" title=" " alt="" coords="386,91,456,71,458,76,387,96"/>
+<area shape="rect" id="Node000001" title="Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pther..." alt="" coords="5,5,169,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte.html#ac730b189d6c6880f51a5d2f17745e9e5" title="Gamma_1 from pressure&#45;indexed table: (log10 nH, log10 p/nH) &#45;&gt; Gamma_1. For &#39;entropy&#39; the conversion ..." alt="" coords="217,5,388,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,23,203,23,203,28,170,28"/>
 </map>

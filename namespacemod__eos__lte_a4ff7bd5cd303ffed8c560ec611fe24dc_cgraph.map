@@ -1,0 +1,13 @@
+<map id="mod_eos_lte::eos_finalise_lte" name="mod_eos_lte::eos_finalise_lte">
+<area shape="rect" id="Node000001" title="LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per..." alt="" coords="5,141,220,166"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__saha.html#a0d63c9614df050a85d86a3dcf29dbe56" title="Analytic&#45;method finalise (H&#45;only Saha): no table unit conversion needed; build the Gamma1 table only ..." alt="" coords="268,5,467,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,138,189,98,267,55,284,48,286,53,269,60,192,103,133,143"/>
+<area shape="rect" id="Node000004" href="$namespacemod__eos__lte__entropy.html#a7c88e88863af72fb5439071533ce39f3" title="Entropy&#45;method finalise: shift each loaded table&#39;s axes from CGS to code units and run the standard p..." alt="" coords="286,69,449,109"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="164,138,273,110,274,115,165,143"/>
+<area shape="rect" id="Node000005" href="$namespacemod__eos__lte__state.html#a3ca5cc61ff895ba76b9c551ef8a7a5b6" title="Table&#45;based method finalise: shift the loaded T/neOnH (and ionE&#45;derived) tables to code units,..." alt="" coords="291,133,444,173"/>
+<area shape="poly" id="edge3_Node000001_Node000005" title=" " alt="" coords="220,151,277,151,277,156,220,156"/>
+<area shape="rect" id="Node000012" href="$namespacemod__eos__lte.html#ad1e325f142fa31bedb6a09fc519d7061" title="Temperature from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic &#45;&gt; Saha bisection/Newt..." alt="" coords="289,197,445,237"/>
+<area shape="poly" id="edge4_Node000001_Node000012" title=" " alt="" coords="165,164,276,192,275,197,164,169"/>
+<area shape="rect" id="Node000015" href="$namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="Ionization fraction from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic &#45;&gt; Saha quadra..." alt="" coords="288,261,447,301"/>
+<area shape="poly" id="edge5_Node000001_Node000015" title=" " alt="" coords="133,164,192,204,269,247,286,254,284,259,267,252,189,208,130,168"/>
+</map>

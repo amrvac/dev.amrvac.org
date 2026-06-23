@@ -1,0 +1,5 @@
+<map id="mod_eos_lte::p2eint_from_nh_p" name="mod_eos_lte::p2eint_from_nh_p">
+<area shape="rect" id="Node000001" title="Pressure&#45;to&#45;eint ratio from (log10 nH, log10 p/nH) in code units. Dispatches: analytic &#45;&gt; Saha solve ..." alt="" coords="5,5,160,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__entropy.html#aa5897be54cd252b89fa14c22c826a3df" title="Inverse: log10(eint/nH) from (log nH, log p/nH). Single bicubic Hermite eval of the eintP table...." alt="" coords="208,5,396,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,23,194,23,194,28,160,28"/>
+</map>

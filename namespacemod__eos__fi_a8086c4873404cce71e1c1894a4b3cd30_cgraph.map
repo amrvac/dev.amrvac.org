@@ -1,0 +1,5 @@
+<map id="mod_eos_fi::eos_init_fi" name="mod_eos_fi::eos_init_fi">
+<area shape="rect" id="Node000001" title="get_Te_FI is PRIVATE: bound to eosget_Te inside eos_finalise_FI only. The rest stay public: update_eo..." alt="" coords="5,13,176,38"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__fi.html#a87bd75eba5e4320a1a94f84516c12cc5" title="FI temperature from primitive pressure: T = p / (R * rho). w is PRIMITIVE here, so iw_e holds the the..." alt="" coords="224,5,437,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,23,210,23,210,28,176,28"/>
+</map>

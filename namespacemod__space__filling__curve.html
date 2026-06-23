@@ -99,6 +99,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a934e4e04b49eba5a4caa84f0e7c11e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78b11db7520ea27645b3e16a3ccdf352" id="r_a78b11db7520ea27645b3e16a3ccdf352"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__space__filling__curve.html#a78b11db7520ea27645b3e16a3ccdf352">get_morton_range_active</a></td></tr>
 <tr class="separator:a78b11db7520ea27645b3e16a3ccdf352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e0dfa31c5050ad974fe1e13849be773" id="r_a2e0dfa31c5050ad974fe1e13849be773"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__space__filling__curve.html#a2e0dfa31c5050ad974fe1e13849be773">get_morton_range_costed</a></td></tr>
+<tr class="memdesc:a2e0dfa31c5050ad974fe1e13849be773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cost-weighted SFC partition. Reduces the per-rank block_cost array into a global Morton-indexed cost, EWMA-blends with the persistent costlist, and partitions the Morton order so each rank's cumulative cost is balanced. Falls back to equal-block-count if all costs are zero (cold start before the first measured step).  <br /></td></tr>
+<tr class="separator:a2e0dfa31c5050ad974fe1e13849be773"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="ad8dde932d2a33294824c0b76241af4e8" name="ad8dde932d2a33294824c0b76241af4e8"></a>
@@ -163,6 +166,34 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="mod__space__filling__curve_8t_source.html#l00167">167</a> of file <a class="el" href="mod__space__filling__curve_8t_source.html">mod_space_filling_curve.t</a>.</p>
+
+</div>
+</div>
+<a id="a2e0dfa31c5050ad974fe1e13849be773" name="a2e0dfa31c5050ad974fe1e13849be773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e0dfa31c5050ad974fe1e13849be773">&#9670;&#160;</a></span>get_morton_range_costed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_space_filling_curve::get_morton_range_costed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cost-weighted SFC partition. Reduces the per-rank block_cost array into a global Morton-indexed cost, EWMA-blends with the persistent costlist, and partitions the Morton order so each rank's cumulative cost is balanced. Falls back to equal-block-count if all costs are zero (cold start before the first measured step). </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__space__filling__curve_8t_source.html#l00253">253</a> of file <a class="el" href="mod__space__filling__curve_8t_source.html">mod_space_filling_curve.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__space__filling__curve_a2e0dfa31c5050ad974fe1e13849be773_cgraph.png" border="0" usemap="#anamespacemod__space__filling__curve_a2e0dfa31c5050ad974fe1e13849be773_cgraph" alt=""/></div>
+<map name="anamespacemod__space__filling__curve_a2e0dfa31c5050ad974fe1e13849be773_cgraph" id="anamespacemod__space__filling__curve_a2e0dfa31c5050ad974fe1e13849be773_cgraph">
+<area shape="rect" title="Cost&#45;weighted SFC partition. Reduces the per&#45;rank block_cost array into a global Morton&#45;indexed cost,..." alt="" coords="5,5,204,45"/>
+<area shape="rect" href="namespacemod__space__filling__curve.html#a934e4e04b49eba5a4caa84f0e7c11e69" title="Set the Morton range for each processor." alt="" coords="252,5,435,45"/>
+<area shape="poly" title=" " alt="" coords="204,23,238,23,238,28,204,28"/>
+</map>
+</div>
 
 </div>
 </div>

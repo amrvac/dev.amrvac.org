@@ -118,6 +118,19 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a32db0baa1896af41da67972a8016a15f" id="r_a32db0baa1896af41da67972a8016a15f"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html#a32db0baa1896af41da67972a8016a15f">tc_saturate</a> =.false.</td></tr>
 <tr class="memdesc:a32db0baa1896af41da67972a8016a15f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consider thermal conduction saturation effect (.true.) or not (.false.)  <br /></td></tr>
 <tr class="separator:a32db0baa1896af41da67972a8016a15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4338915ef0a9ef58a99dbb93ba82109" id="r_af4338915ef0a9ef58a99dbb93ba82109"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html#af4338915ef0a9ef58a99dbb93ba82109">tc_patch_eint</a> =.false.</td></tr>
+<tr class="memdesc:af4338915ef0a9ef58a99dbb93ba82109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patch cells where e_int &lt; 0 during STS Chebyshev substeps by neighbor-averaging the temperature. Prevents NaN from sqrt(T&lt;0) in the Spitzer conductivity when the RKL2 polynomial overshoots.  <br /></td></tr>
+<tr class="separator:af4338915ef0a9ef58a99dbb93ba82109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaefd8543406c0bca0718837cba973210" id="r_aaefd8543406c0bca0718837cba973210"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html#aaefd8543406c0bca0718837cba973210">trac_t_floor</a> =0.d0</td></tr>
+<tr class="memdesc:aaefd8543406c0bca0718837cba973210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum temperature (code units) below which TRAC does not modify conductivity. Below this T, the energy balance is dominated by optically thick radiation and recombination, not optically thin cooling + Spitzer conduction, so TRAC's broadening assumption does not apply. Read in Kelvin via tc_list (trac_T_floor), converted to code units during init. Default 1e4 K.  <br /></td></tr>
+<tr class="separator:aaefd8543406c0bca0718837cba973210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaa5d6396c13920a9b07e674be82aa3f" id="r_abaa5d6396c13920a9b07e674be82aa3f"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html#abaa5d6396c13920a9b07e674be82aa3f">inv_gamma_minus_1</a></td></tr>
+<tr class="memdesc:abaa5d6396c13920a9b07e674be82aa3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">EoS snapshots + inverse accessor (set in bind_eos_to_source); let TC reach thermodynamics only through this object, never <a class="el" href="namespacemod__eos.html" title="Equation of state for AMRVAC, handled through a single eos_container object.">mod_eos</a> directly.  <br /></td></tr>
+<tr class="separator:abaa5d6396c13920a9b07e674be82aa3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce5e73ae0f41de29e2166f2bca9adf9" id="r_acce5e73ae0f41de29e2166f2bca9adf9"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html#acce5e73ae0f41de29e2166f2bca9adf9">nh2rhofactor</a></td></tr>
+<tr class="separator:acce5e73ae0f41de29e2166f2bca9adf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77accc00ec7856a69826b8c5ed0ffc80" id="r_a77accc00ec7856a69826b8c5ed0ffc80"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html#a77accc00ec7856a69826b8c5ed0ffc80">log_t_floor</a></td></tr>
+<tr class="separator:a77accc00ec7856a69826b8c5ed0ffc80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -131,10 +144,16 @@ Static Public Attributes</h2></td></tr>
 <tr class="separator:a81195f666514824070c75855896e7cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ede359a129a670fce65368cd8000303" id="r_a9ede359a129a670fce65368cd8000303"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__thermal__conduction_1_1get__var__subr.html">get_var_subr</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html#a9ede359a129a670fce65368cd8000303">get_temperature_equi</a> =&gt; null()</td></tr>
 <tr class="separator:a9ede359a129a670fce65368cd8000303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac16558af1d31b9bad5f735da35489553" id="r_ac16558af1d31b9bad5f735da35489553"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__thermal__conduction_1_1get__2var__subr.html">get_2var_subr</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html#ac16558af1d31b9bad5f735da35489553">get_ne_nh</a> =&gt; null()</td></tr>
+<tr class="separator:ac16558af1d31b9bad5f735da35489553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a56fc8d4c5a777dee720f2d2dc209a7" id="r_a7a56fc8d4c5a777dee720f2d2dc209a7"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__thermal__conduction_1_1get__var__subr.html">get_var_subr</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html#a7a56fc8d4c5a777dee720f2d2dc209a7">get_var_rfactor</a> =&gt; null()</td></tr>
+<tr class="separator:a7a56fc8d4c5a777dee720f2d2dc209a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732546e449481ff9d2e6f145b5e3fb4a" id="r_a732546e449481ff9d2e6f145b5e3fb4a"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__thermal__conduction_1_1eos__scalar2__func.html">eos_scalar2_func</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html#a732546e449481ff9d2e6f145b5e3fb4a">eint_from_t</a> =&gt; null()</td></tr>
+<tr class="separator:a732546e449481ff9d2e6f145b5e3fb4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00064">64</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00076">76</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="aa6d99f819a9f89f801d666fe9ac2cff9" name="aa6d99f819a9f89f801d666fe9ac2cff9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6d99f819a9f89f801d666fe9ac2cff9">&#9670;&#160;</a></span>e_</h2>
@@ -150,7 +169,55 @@ Static Public Attributes</h2></td></tr>
 
 <p>Indices of the variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00074">74</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00086">86</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="a732546e449481ff9d2e6f145b5e3fb4a" name="a732546e449481ff9d2e6f145b5e3fb4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a732546e449481ff9d2e6f145b5e3fb4a">&#9670;&#160;</a></span>eint_from_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__thermal__conduction_1_1eos__scalar2__func.html">eos_scalar2_func</a>), pointer, nopass mod_thermal_conduction::tc_fluid::eint_from_t =&gt; null()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00128">128</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="ac16558af1d31b9bad5f735da35489553" name="ac16558af1d31b9bad5f735da35489553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac16558af1d31b9bad5f735da35489553">&#9670;&#160;</a></span>get_ne_nh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__thermal__conduction_1_1get__2var__subr.html">get_2var_subr</a>), pointer, nopass mod_thermal_conduction::tc_fluid::get_ne_nh =&gt; null()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00121">121</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -174,7 +241,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00092">92</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00116">116</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -198,7 +265,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00093">93</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00117">117</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -222,7 +289,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00096">96</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00120">120</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -246,7 +313,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00095">95</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00119">119</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -270,7 +337,81 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00094">94</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00118">118</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="a7a56fc8d4c5a777dee720f2d2dc209a7" name="a7a56fc8d4c5a777dee720f2d2dc209a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a56fc8d4c5a777dee720f2d2dc209a7">&#9670;&#160;</a></span>get_var_rfactor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__thermal__conduction_1_1get__var__subr.html">get_var_subr</a>), pointer, nopass mod_thermal_conduction::tc_fluid::get_var_rfactor =&gt; null()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00122">122</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="abaa5d6396c13920a9b07e674be82aa3f" name="abaa5d6396c13920a9b07e674be82aa3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaa5d6396c13920a9b07e674be82aa3f">&#9670;&#160;</a></span>inv_gamma_minus_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_thermal_conduction::tc_fluid::inv_gamma_minus_1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EoS snapshots + inverse accessor (set in bind_eos_to_source); let TC reach thermodynamics only through this object, never <a class="el" href="namespacemod__eos.html" title="Equation of state for AMRVAC, handled through a single eos_container object.">mod_eos</a> directly. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00125">125</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="a77accc00ec7856a69826b8c5ed0ffc80" name="a77accc00ec7856a69826b8c5ed0ffc80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77accc00ec7856a69826b8c5ed0ffc80">&#9670;&#160;</a></span>log_t_floor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_thermal_conduction::tc_fluid::log_t_floor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00127">127</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="acce5e73ae0f41de29e2166f2bca9adf9" name="acce5e73ae0f41de29e2166f2bca9adf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce5e73ae0f41de29e2166f2bca9adf9">&#9670;&#160;</a></span>nh2rhofactor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_thermal_conduction::tc_fluid::nh2rhofactor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00126">126</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -286,7 +427,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00081">81</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00093">93</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -304,7 +445,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Logical switch for test constant conductivity. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00084">84</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00096">96</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -322,7 +463,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Coefficient of thermal conductivity (parallel to magnetic field) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00068">68</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00080">80</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -340,7 +481,25 @@ Static Public Attributes</h2></td></tr>
 
 <p>Coefficient of thermal conductivity perpendicular to magnetic field. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00071">71</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00083">83</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="af4338915ef0a9ef58a99dbb93ba82109" name="af4338915ef0a9ef58a99dbb93ba82109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4338915ef0a9ef58a99dbb93ba82109">&#9670;&#160;</a></span>tc_patch_eint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical mod_thermal_conduction::tc_fluid::tc_patch_eint =.false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Patch cells where e_int &lt; 0 during STS Chebyshev substeps by neighbor-averaging the temperature. Prevents NaN from sqrt(T&lt;0) in the Spitzer conductivity when the RKL2 polynomial overshoots. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00107">107</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -358,7 +517,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Calculate thermal conduction perpendicular to magnetic field (.true.) or not (.false.) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00087">87</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00099">99</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -376,7 +535,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Consider thermal conduction saturation effect (.true.) or not (.false.) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00090">90</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00102">102</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -394,7 +553,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Name of slope limiter for transverse component of thermal flux. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00078">78</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00090">90</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -412,7 +571,25 @@ Static Public Attributes</h2></td></tr>
 
 <p>Index of cut off temperature for TRAC. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00076">76</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00088">88</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="aaefd8543406c0bca0718837cba973210" name="aaefd8543406c0bca0718837cba973210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaefd8543406c0bca0718837cba973210">&#9670;&#160;</a></span>trac_t_floor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_thermal_conduction::tc_fluid::trac_t_floor =0.d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum temperature (code units) below which TRAC does not modify conductivity. Below this T, the energy balance is dominated by optically thick radiation and recombination, not optically thin cooling + Spitzer conduction, so TRAC's broadening assumption does not apply. Read in Kelvin via tc_list (trac_T_floor), converted to code units during init. Default 1e4 K. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00114">114</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>

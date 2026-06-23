@@ -1,7 +1,5 @@
 <map id="mod_hd_roe::hd_roe_init" name="mod_hd_roe::hd_roe_init">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,188,60"/>
-<area shape="rect" id="Node000002" href="$namespacemod__tvd.html#ae8748c5ff719141fefc2ac786f5b4acd" title=" " alt="" coords="241,5,395,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,33,227,27,228,33,189,38"/>
-<area shape="rect" id="Node000004" href="$namespacemod__hd__phys.html#af17430a2cacc3c6b8c497f916273daff" title="Calculate thermal pressure from conserved energy using the active EOS." alt="" coords="236,55,400,95"/>
-<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="189,56,223,61,222,66,188,62"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,188,31"/>
+<area shape="rect" id="Node000002" href="$namespacemod__tvd.html#ae8748c5ff719141fefc2ac786f5b4acd" title=" " alt="" coords="236,5,389,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,15,222,15,222,21,188,21"/>
 </map>

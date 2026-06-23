@@ -1,12 +1,12 @@
 <map id="mod_hd_phys::hd_e_to_ei" name="mod_hd_phys::hd_e_to_ei">
 <area shape="rect" id="Node000001" title="Transform total energy to internal energy." alt="" coords="5,95,196,120"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="62,96,53,86,58,76,74,70,101,68,134,72,147,81,144,86,132,77,101,73,75,75,61,80,59,86,66,93"/>
 <area shape="rect" id="Node000002" href="$namespacemod__dust.html#aa8f0323bbd86a80c96eb9cdd1838cd46" title=" " alt="" coords="244,5,437,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,92,179,67,243,41,272,32,273,37,245,46,181,72,128,97"/>
 <area shape="rect" id="Node000003" href="$namespacemod__dust.html#ac1c2ed9a82c30e325a4a2a2922e0f409" title=" " alt="" coords="265,55,416,95"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,92,251,85,252,90,196,97"/>
-<area shape="rect" id="Node000004" href="$namespacemod__hd__phys.html#a44f30d12946c0f46f8c64c835aa589f6" title="Calculate the square of the thermal sound speed using the active EOS within ixO^L." alt="" coords="259,119,423,159"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,117,245,124,245,129,196,123"/>
-<area shape="rect" id="Node000017" href="$namespacemod__hd__phys.html#a15a69e2d55d5897e560307f39f1b4d93" title=" " alt="" coords="485,149,671,189"/>
-<area shape="poly" id="edge5_Node000001_Node000017" title=" " alt="" coords="124,118,177,145,210,159,245,169,302,178,361,181,472,178,472,184,361,187,302,183,243,174,209,164,175,150,121,122"/>
-<area shape="poly" id="edge4_Node000004_Node000017" title=" " alt="" coords="423,147,472,153,471,158,422,152"/>
+<area shape="rect" id="Node000004" href="$namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="255,119,426,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,117,242,124,241,129,196,123"/>
+<area shape="rect" id="Node000005" href="$namespacemod__hd__phys.html#a44f30d12946c0f46f8c64c835aa589f6" title="Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pther..." alt="" coords="259,183,423,223"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="129,118,245,169,265,176,263,181,243,174,127,123"/>
 </map>

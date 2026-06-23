@@ -1,0 +1,8 @@
+<map id="mod_radiative_cooling::voigt_escape_init_table" name="mod_radiative_cooling::voigt_escape_init_table">
+<area shape="rect" id="Node000001" title="Build the Voigt escape probability lookup table. Called once (guarded by voigt_table_ready flag)...." alt="" coords="5,49,189,89"/>
+<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a0a513826e1393ead094f386155695a7f" title="Gauss&#45;Legendre quadrature nodes and weights on [a,b]. Uses the Golub&#45;Welsch algorithm for n points." alt="" coords="237,5,409,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,49,223,42,224,47,190,54"/>
+<area shape="rect" id="Node000003" href="$namespacemod__radiative__cooling.html#a021e7857fc29d60332302aa525b6ab34" title="Voigt profile ratio phi(x)/phi(0) using Humlicek (1982) Region I/II approx. For the small&#45;a regime (a..." alt="" coords="238,93,409,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,85,225,91,224,97,189,90"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="281,94,279,84,286,74,301,69,323,67,349,70,364,77,361,82,348,75,323,72,302,74,289,79,284,85,287,92"/>
+</map>

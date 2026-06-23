@@ -1,0 +1,5 @@
+<map id="mod_eos_lte::eint_from_p_bisect" name="mod_eos_lte::eint_from_p_bisect">
+<area shape="rect" id="Node000001" title="Given log10(nH) and log10(p), find log10(eint/nH) by table&#45;guessed bisection on the forward pressure ..." alt="" coords="5,5,181,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte.html#a4a9da8961173fdb2bd397004a5c543ce" title="Pressure&#45;to&#45;eint ratio from (log10 nH, log10 p/nH) in code units. Dispatches: analytic &#45;&gt; Saha solve ..." alt="" coords="229,5,384,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,23,215,23,215,28,182,28"/>
+</map>

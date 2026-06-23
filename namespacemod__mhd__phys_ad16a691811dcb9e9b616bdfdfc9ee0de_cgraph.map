@@ -1,11 +1,9 @@
 <map id="mod_mhd_phys::mhd_get_v" name="mod_mhd_phys::mhd_get_v">
-<area shape="rect" id="Node000001" title="Calculate v vector." alt="" coords="5,51,211,76"/>
-<area shape="rect" id="Node000002" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="525,14,708,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,48,193,28,258,12,324,5,390,3,512,10,512,15,390,8,324,10,259,17,194,33,139,53"/>
-<area shape="rect" id="Node000003" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="259,51,477,76"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,61,245,61,245,66,211,66"/>
-<area shape="rect" id="Node000062" href="$namespacemod__mhd__phys.html#a361a8f917d2f3e926982e28aebe7c9bf" title=" " alt="" coords="273,101,463,141"/>
-<area shape="poly" id="edge5_Node000001_Node000062" title=" " alt="" coords="167,74,264,95,263,101,166,79"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="453,48,518,38,519,44,453,54"/>
-<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="328,53,319,43,324,33,340,26,368,24,403,28,413,33,417,39,412,42,409,37,402,33,368,30,341,32,327,36,324,42,332,49"/>
+<area shape="rect" id="Node000001" title="Calculate v vector." alt="" coords="5,8,211,33"/>
+<area shape="rect" id="Node000002" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="525,8,708,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,8,259,6,368,3,477,6,512,8,512,13,477,11,368,8,259,11,211,14"/>
+<area shape="rect" id="Node000003" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="259,45,477,70"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,30,266,40,265,46,196,36"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="453,42,518,33,519,38,453,48"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="328,47,319,37,324,27,340,21,368,18,403,22,413,27,417,33,412,36,409,31,402,27,368,24,341,26,327,31,324,36,332,43"/>
 </map>

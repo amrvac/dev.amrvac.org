@@ -1,0 +1,5 @@
+<map id="mod_eos_lte::p_nh_from_eint" name="mod_eos_lte::p_nh_from_eint">
+<area shape="rect" id="Node000001" title="p/nH from (log10 nH, log10 eint/nH) in code units. Returns (1+He+y)*T directly – single lookup replac..." alt="" coords="5,13,220,38"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__entropy.html#a21f1ad5ba5a26b7d02f9235d25e509f9" title=" " alt="" coords="268,5,456,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,23,254,23,254,28,220,28"/>
+</map>

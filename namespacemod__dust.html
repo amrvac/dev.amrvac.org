@@ -94,8 +94,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:ae39df6d084f2ff5bd3e9ff6408cbd39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac9be1c49bbffe25b1de9e17c608392" id="r_abac9be1c49bbffe25b1de9e17c608392"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#abac9be1c49bbffe25b1de9e17c608392">dust_check_params</a> ()</td></tr>
 <tr class="separator:abac9be1c49bbffe25b1de9e17c608392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b7b1fbd71389ded5339829a9283016a" id="r_a9b7b1fbd71389ded5339829a9283016a"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a9b7b1fbd71389ded5339829a9283016a">dust_check_w</a> (ixil, ixol, w, flag)</td></tr>
-<tr class="separator:a9b7b1fbd71389ded5339829a9283016a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0274fc3fdcd65349b002c04f83dbe0f" id="r_ab0274fc3fdcd65349b002c04f83dbe0f"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#ab0274fc3fdcd65349b002c04f83dbe0f">dust_check_w</a> (ixil, ixol, w, x, flag)</td></tr>
+<tr class="separator:ab0274fc3fdcd65349b002c04f83dbe0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e13243ca47ce296b568cbd9feb6840e" id="r_a8e13243ca47ce296b568cbd9feb6840e"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a8e13243ca47ce296b568cbd9feb6840e">dust_to_conserved</a> (ixil, ixol, w, x)</td></tr>
 <tr class="separator:a8e13243ca47ce296b568cbd9feb6840e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bebf3d46a4b790c0988ba3acade6288" id="r_a6bebf3d46a4b790c0988ba3acade6288"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__dust.html#a6bebf3d46a4b790c0988ba3acade6288">dust_to_primitive</a> (ixil, ixol, w, x)</td></tr>
@@ -229,7 +229,7 @@ Variables</h2></td></tr>
 
 <p>w[iw]= w[iw]+qdt*S[wCT, x] where S is the source based on wCT within ixO </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00531">531</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00532">532</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -249,8 +249,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9b7b1fbd71389ded5339829a9283016a" name="a9b7b1fbd71389ded5339829a9283016a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b7b1fbd71389ded5339829a9283016a">&#9670;&#160;</a></span>dust_check_w()</h2>
+<a id="ab0274fc3fdcd65349b002c04f83dbe0f" name="ab0274fc3fdcd65349b002c04f83dbe0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0274fc3fdcd65349b002c04f83dbe0f">&#9670;&#160;</a></span>dust_check_w()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,6 +284,12 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in)&#160;</td>
           <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s, 1:ndim), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -331,7 +337,7 @@ Variables</h2></td></tr>
 
 <p>inplace update of psa==&gt;F_im(psa) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00584">584</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00585">585</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -403,7 +409,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01017">1017</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01018">1018</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -475,7 +481,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01041">1041</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l01042">1042</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -549,7 +555,7 @@ Variables</h2></td></tr>
 
 <p>Get dt related to dust and gas stopping time (Laibe 2011) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00899">899</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00900">900</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -615,7 +621,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00251">251</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00252">252</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -681,7 +687,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00274">274</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00275">275</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -731,7 +737,7 @@ Variables</h2></td></tr>
 
 <p>Implicit solve of psb=psa+dtfactor*dt*F_im(psb) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00653">653</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00654">654</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>
@@ -821,7 +827,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00207">207</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00208">208</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -885,7 +891,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00227">227</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00228">228</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -949,7 +955,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00326">326</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__dust_8t_source.html#l00327">327</a> of file <a class="el" href="mod__dust_8t_source.html">mod_dust.t</a>.</p>
 
 </div>
 </div>

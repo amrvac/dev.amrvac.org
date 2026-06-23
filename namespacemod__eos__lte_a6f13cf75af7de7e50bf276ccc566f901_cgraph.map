@@ -1,0 +1,7 @@
+<map id="mod_eos_lte::eint_nh_from_t" name="mod_eos_lte::eint_nh_from_t">
+<area shape="rect" id="Node000001" title="Internal energy per nH from (log10 nH, log10 T) in code units. Uses the bisection&#45;built inverse table..." alt="" coords="5,37,167,77"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__entropy.html#a0b6ed1ef1e78d8d5b7362c24d99aad34" title="Inverse: log10(eint/nH) from (log nH, log T). Single bicubic Hermite eval of the eintT table." alt="" coords="215,5,400,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,43,201,38,202,43,167,48"/>
+<area shape="rect" id="Node000010" href="$namespacemod__lookup__table.html#ab0ad52148ce35bc3631ed25345d51347" title="Binary search of sorted list for the smallest ix such that list(ix) &gt;= val. On failure,..." alt="" coords="221,69,394,109"/>
+<area shape="poly" id="edge2_Node000001_Node000010" title=" " alt="" coords="167,66,208,72,207,78,167,72"/>
+</map>

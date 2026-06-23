@@ -1,0 +1,9 @@
+<map id="mod_eos_pi::eos_finalise_pi" name="mod_eos_pi::eos_finalise_pi">
+<area shape="rect" id="Node000001" title="PI arm of eos_finalise (after unit_* are set): ride FI&#39;s ideal&#45;gas getter set and RR=1 normalisation ..." alt="" coords="5,77,209,102"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__pi.html#a85327a7077e8020e5a842e8d7e4d964d" title="Adiabatic sound speed squared from primitive (rho, p)." alt="" coords="283,5,445,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,74,269,46,271,51,160,79"/>
+<area shape="rect" id="Node000003" href="$namespacemod__eos__fi.html#ad6f2f969e3a45b74235800aeb4ccf82f" title="Temperature from internal energy, fully&#45;ionised ideal gas: T = pth/(rho*R)." alt="" coords="257,69,471,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,87,244,87,244,92,209,92"/>
+<area shape="rect" id="Node000004" href="$namespacemod__eos__pi__tables.html#a6771b646acf84c65b4cc7a227dbf9e7f" title=" " alt="" coords="281,133,447,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,100,271,127,269,133,159,105"/>
+</map>

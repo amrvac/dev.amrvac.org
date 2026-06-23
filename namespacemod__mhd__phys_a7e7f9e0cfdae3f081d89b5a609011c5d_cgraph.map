@@ -1,35 +1,29 @@
 <map id="mod_mhd_phys::multiplyambicoef" name="mod_mhd_phys::multiplyambicoef">
-<area shape="rect" id="Node000001" title="multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as &#45;mhd_eta_ambi/rh..." alt="" coords="5,271,253,297"/>
-<area shape="rect" id="Node000002" href="$namespacemod__fld.html#ab47011fb824722631ccb86571eea920c" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles th..." alt="" coords="332,5,489,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,270,157,230,194,174,242,114,270,86,300,62,321,49,324,54,303,66,273,90,246,118,198,177,162,233,140,272"/>
+<area shape="rect" id="Node000001" title="multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as &#45;mhd_eta_ambi/rh..." alt="" coords="5,221,253,246"/>
+<area shape="rect" id="Node000002" href="$namespacemod__fld.html#a96b4e94e4ba1ecfcf9743db901ad0a9e" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO This subroutine handles th..." alt="" coords="332,5,489,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,219,201,146,248,101,300,62,325,48,328,53,303,66,251,105,205,149,142,222"/>
 <area shape="rect" id="Node000010" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="580,70,763,95"/>
-<area shape="poly" id="edge8_Node000001_Node000010" title=" " alt="" coords="140,269,204,208,249,173,300,144,367,120,436,102,504,91,566,84,567,89,505,96,437,107,368,125,302,149,252,178,207,212,144,273"/>
-<area shape="rect" id="Node000016" href="$namespacemod__cak__force.html#a6cf762353c1aecaa5af0c8c4371c11a0" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="335,448,487,488"/>
-<area shape="poly" id="edge3_Node000001_Node000016" title=" " alt="" coords="145,295,209,357,254,394,303,427,330,440,327,445,300,432,251,398,205,361,141,299"/>
-<area shape="rect" id="Node000021" href="$namespacemod__global__parameters.html#a1ba907b301287b1559121df9aeb35f03" title="Cross product of two vectors." alt="" coords="581,123,761,163"/>
-<area shape="poly" id="edge4_Node000001_Node000021" title=" " alt="" coords="145,269,211,225,254,201,300,181,368,163,438,151,567,140,568,145,439,156,369,168,302,187,256,206,213,229,148,273"/>
-<area shape="rect" id="Node000022" href="$namespacemod__geometry.html#a34777249130c0a609ca96597bb403b30" title=" " alt="" coords="577,194,766,219"/>
-<area shape="poly" id="edge5_Node000001_Node000022" title=" " alt="" coords="151,269,216,236,258,219,301,207,368,196,437,191,563,193,563,199,437,197,369,202,302,212,259,224,219,240,154,273"/>
-<area shape="rect" id="Node000023" href="$namespacemod__mhd__phys.html#ac7bf1b8d5fd9dac730901cb6319ced4d" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="568,279,775,305"/>
-<area shape="poly" id="edge6_Node000001_Node000023" title=" " alt="" coords="253,283,554,288,554,293,253,288"/>
-<area shape="rect" id="Node000030" href="$namespacemod__gravity.html#aff7761066ee7cbde8f2b809c38f681c9" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="332,512,489,552"/>
-<area shape="poly" id="edge9_Node000001_Node000030" title=" " alt="" coords="139,296,162,335,198,390,245,448,273,475,303,498,321,508,318,512,300,502,269,479,241,452,193,393,157,338,135,298"/>
-<area shape="rect" id="Node000031" href="$namespacemod__ionization__degree.html#a18bf98257644d18d9fab7f53c1f17c94" title=" " alt="" coords="574,333,769,373"/>
-<area shape="poly" id="edge10_Node000001_Node000031" title=" " alt="" coords="230,294,561,337,560,342,229,299"/>
-<area shape="rect" id="Node000032" href="$namespacemod__ionization__degree.html#a2121ee6882826b74a9cdbaa4fa4496e8" title=" " alt="" coords="823,355,997,410"/>
-<area shape="poly" id="edge12_Node000001_Node000032" title=" " alt="" coords="166,294,229,315,302,336,434,366,568,383,671,386,775,383,809,382,809,388,775,388,671,391,568,388,433,372,301,341,228,320,165,299"/>
-<area shape="rect" id="Node000035" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="301,246,520,271"/>
-<area shape="poly" id="edge13_Node000001_Node000035" title=" " alt="" coords="253,279,338,270,339,276,254,284"/>
-<area shape="rect" id="Node000047" href="$namespacemod__radiative__cooling.html#a76304d7766df7b067cc8ab02651ba133" title=" " alt="" coords="324,577,497,631"/>
-<area shape="poly" id="edge21_Node000001_Node000047" title=" " alt="" coords="138,296,157,346,191,417,240,494,270,530,303,562,314,570,311,574,300,566,266,534,236,497,186,419,152,348,133,298"/>
+<area shape="poly" id="edge8_Node000001_Node000010" title=" " alt="" coords="145,218,211,174,254,149,300,129,368,110,437,97,566,83,566,88,438,102,369,115,302,135,257,154,213,178,148,223"/>
+<area shape="rect" id="Node000016" href="$namespacemod__cak__force.html#a6cf762353c1aecaa5af0c8c4371c11a0" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="335,347,487,387"/>
+<area shape="poly" id="edge3_Node000001_Node000016" title=" " alt="" coords="152,244,218,282,302,326,336,339,334,344,300,330,216,287,150,248"/>
+<area shape="rect" id="Node000021" href="$namespacemod__global__parameters.html#a1ba907b301287b1559121df9aeb35f03" title="Cross product of two vectors." alt="" coords="581,132,761,172"/>
+<area shape="poly" id="edge4_Node000001_Node000021" title=" " alt="" coords="151,218,216,185,258,169,301,156,369,145,439,140,567,141,567,146,440,145,370,150,302,161,259,174,219,190,154,223"/>
+<area shape="rect" id="Node000022" href="$namespacemod__geometry.html#a34777249130c0a609ca96597bb403b30" title=" " alt="" coords="577,209,766,234"/>
+<area shape="poly" id="edge5_Node000001_Node000022" title=" " alt="" coords="253,233,382,234,520,231,563,228,563,234,520,236,382,239,253,239"/>
+<area shape="rect" id="Node000023" href="$namespacemod__mhd__phys.html#ac7bf1b8d5fd9dac730901cb6319ced4d" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="568,289,775,314"/>
+<area shape="poly" id="edge6_Node000001_Node000023" title=" " alt="" coords="232,243,556,284,556,290,231,249"/>
+<area shape="rect" id="Node000047" href="$namespacemod__gravity.html#aff7761066ee7cbde8f2b809c38f681c9" title="w[iw]=w[iw]+qdt*S[wCT,qtC,x] where S is the source based on wCT within ixO" alt="" coords="332,411,489,451"/>
+<area shape="poly" id="edge9_Node000001_Node000047" title=" " alt="" coords="142,244,205,316,251,359,303,396,320,405,318,410,300,401,247,363,201,320,138,248"/>
+<area shape="rect" id="Node000048" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="301,195,520,221"/>
+<area shape="poly" id="edge10_Node000001_Node000048" title=" " alt="" coords="253,228,338,220,339,225,254,234"/>
+<area shape="rect" id="Node000057" href="$namespacemod__radiative__cooling.html#a76304d7766df7b067cc8ab02651ba133" title=" " alt="" coords="324,475,497,530"/>
+<area shape="poly" id="edge17_Node000001_Node000057" title=" " alt="" coords="139,245,161,286,197,344,245,406,273,435,303,461,313,468,310,472,300,465,269,439,241,410,193,347,157,289,135,248"/>
 <area shape="poly" id="edge2_Node000002_Node000010" title=" " alt="" coords="490,40,600,64,599,70,489,45"/>
-<area shape="poly" id="edge7_Node000023_Node000023" title=" " alt="" coords="633,281,624,271,629,261,645,255,671,253,705,257,717,266,714,270,703,261,671,258,646,260,632,265,630,270,637,277"/>
-<area shape="poly" id="edge11_Node000031_Node000032" title=" " alt="" coords="769,363,809,368,809,373,769,368"/>
-<area shape="poly" id="edge20_Node000035_Node000001" title=" " alt="" coords="301,262,202,272,202,267,301,257"/>
-<area shape="poly" id="edge17_Node000035_Node000010" title=" " alt="" coords="420,244,477,179,519,141,567,108,591,97,593,102,569,113,523,145,481,183,424,248"/>
-<area shape="poly" id="edge14_Node000035_Node000021" title=" " alt="" coords="435,243,567,179,600,165,602,170,569,184,437,248"/>
-<area shape="poly" id="edge15_Node000035_Node000022" title=" " alt="" coords="475,243,593,219,594,225,476,249"/>
-<area shape="poly" id="edge16_Node000035_Node000023" title=" " alt="" coords="511,269,559,275,558,280,510,274"/>
-<area shape="poly" id="edge18_Node000035_Node000031" title=" " alt="" coords="448,269,569,313,603,326,601,331,567,319,446,274"/>
-<area shape="poly" id="edge19_Node000035_Node000035" title=" " alt="" coords="369,248,360,238,364,228,382,221,411,219,447,223,457,228,461,234,457,237,454,232,446,228,411,225,383,227,368,232,365,237,373,244"/>
+<area shape="poly" id="edge7_Node000023_Node000023" title=" " alt="" coords="630,290,620,280,625,270,642,264,671,262,708,266,718,271,722,276,718,279,715,275,706,271,671,267,644,269,629,274,626,280,633,287"/>
+<area shape="poly" id="edge16_Node000048_Node000001" title=" " alt="" coords="301,212,202,222,202,216,301,206"/>
+<area shape="poly" id="edge14_Node000048_Node000010" title=" " alt="" coords="431,193,491,157,567,118,617,97,619,102,569,122,493,162,433,198"/>
+<area shape="poly" id="edge11_Node000048_Node000021" title=" " alt="" coords="470,193,568,171,569,177,471,198"/>
+<area shape="poly" id="edge12_Node000048_Node000022" title=" " alt="" coords="520,211,563,213,563,218,520,216"/>
+<area shape="poly" id="edge13_Node000048_Node000023" title=" " alt="" coords="448,218,623,281,621,286,446,223"/>
+<area shape="poly" id="edge15_Node000048_Node000048" title=" " alt="" coords="369,197,360,187,364,177,382,171,411,169,447,173,457,177,461,183,457,186,454,181,446,178,411,174,383,176,368,181,365,186,373,193"/>
 </map>

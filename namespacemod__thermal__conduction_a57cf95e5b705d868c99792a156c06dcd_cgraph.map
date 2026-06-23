@@ -1,9 +1,11 @@
 <map id="mod_thermal_conduction::sts_set_source_tc_hd" name="mod_thermal_conduction::sts_set_source_tc_hd">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,192,109"/>
-<area shape="rect" id="Node000002" href="$namespacemod__thermal__conduction.html#ae7b3ea6235802277a9d72602e17c6e78" title="get HD thermal conduction source and flux in uniform Cartesian grid" alt="" coords="253,5,439,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,67,254,46,256,51,177,72"/>
-<area shape="rect" id="Node000003" href="$namespacemod__thermal__conduction.html#a9d2565cdf0387ab66da2e065f75e3803" title="get HD thermal conduction source and flux in non&#45;uniform geometry grid" alt="" coords="253,69,439,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,87,239,87,239,92,192,92"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,99,192,139"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__conduction.html#ae7b3ea6235802277a9d72602e17c6e78" title=" " alt="" coords="253,5,439,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,96,239,55,261,47,263,52,241,60,143,101"/>
+<area shape="rect" id="Node000003" href="$namespacemod__thermal__conduction.html#a9d2565cdf0387ab66da2e065f75e3803" title=" " alt="" coords="253,69,439,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,105,239,99,239,105,192,110"/>
 <area shape="rect" id="Node000004" href="$namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="240,134,452,159"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="186,107,278,128,277,134,185,112"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,127,227,130,226,136,192,132"/>
+<area shape="rect" id="Node000005" href="$namespacemod__thermal__conduction.html#a508ea7544942721373d494e78f1ec61c" title="Patch cells where e_int &lt;= 0 by neighbor&#45;averaging the temperature AND repairing the conserved intern..." alt="" coords="253,184,439,224"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="153,136,241,168,267,177,266,182,239,173,151,141"/>
 </map>

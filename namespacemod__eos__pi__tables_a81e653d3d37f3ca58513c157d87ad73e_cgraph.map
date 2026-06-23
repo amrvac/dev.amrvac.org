@@ -1,0 +1,5 @@
+<map id="mod_eos_pi_tables::ionization_degree_from_temperature" name="mod_eos_pi_tables::ionization_degree_from_temperature">
+<area shape="rect" id="Node000001" title="Array interface for T &#45;&gt; ionization degrees. Used by get_Rfactor_tonly_PI (mod_eos_PI) to build the n..." alt="" coords="5,5,181,60"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="229,20,412,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,30,215,30,215,35,182,35"/>
+</map>

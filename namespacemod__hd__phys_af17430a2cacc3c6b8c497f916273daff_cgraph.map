@@ -1,7 +1,0 @@
-<map id="mod_hd_phys::hd_get_pthermal" name="mod_hd_phys::hd_get_pthermal">
-<area shape="rect" id="Node000001" title="Calculate thermal pressure from conserved energy using the active EOS." alt="" coords="5,22,169,62"/>
-<area shape="rect" id="Node000002" href="$namespacemod__hd__phys.html#a7ab9a58df979c6e5d1f183e012fb1842" title=" " alt="" coords="217,29,404,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,48,204,48,204,54,170,53"/>
-<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="217,36,183,36,183,30,217,30"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="275,31,267,21,271,11,286,5,311,3,341,6,354,15,350,20,339,11,311,8,287,10,274,15,272,20,279,28"/>
-</map>

@@ -1,0 +1,11 @@
+<map id="mod_radiative_cooling::build_y_mod_table" name="mod_radiative_cooling::build_y_mod_table">
+<area shape="rect" id="Node000001" title="===================================================================" alt="" coords="5,101,176,141"/>
+<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a62805444feab0b05bd400f7369071575" title="Composite Boole&#39;s rule on (N+1) equally spaced samples (N a multiple of 4). Each 4&#45;step block contrib..." alt="" coords="224,5,395,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,99,223,55,239,48,241,53,225,60,133,104"/>
+<area shape="rect" id="Node000003" href="$namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="224,69,395,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,106,210,101,211,106,177,112"/>
+<area shape="rect" id="Node000004" href="$namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="224,133,395,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="177,131,211,136,210,142,176,136"/>
+<area shape="rect" id="Node000005" href="$namespacemod__radiative__cooling.html#af2ed4be8f441d9da08d5020a4919e76a" title="Composite Simpson&#39;s rule on (N+1) equally spaced samples (N even). N must be a positive even integer;..." alt="" coords="224,197,395,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="133,139,225,183,241,190,239,195,223,188,130,144"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="mod_eos_lte_entropy::entropy_eint_from_nh_t" name="mod_eos_lte_entropy::entropy_eint_from_nh_t">
+<area shape="rect" id="Node000001" title="Inverse: log10(eint/nH) from (log nH, log T). Single bicubic Hermite eval of the eintT table." alt="" coords="5,165,191,205"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__tables.html#aa18be867ee9a7a2543ee1500642d4646" title="Ensure tcvar1_nodes / tcvar2_nodes are allocated and populated so that build_*_table routines and oth..." alt="" coords="267,5,422,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,163,166,110,200,80,237,55,254,47,256,52,240,60,203,85,169,113,118,167"/>
+<area shape="rect" id="Node000003" href="$namespacemod__eos__lte__tables.html#ab21258116c3f901e1f65a1c1182ce1b7" title="Build guard (bucket) arrays so that adaptive index lookup is O(1). No&#45;op for uniform tables...." alt="" coords="269,69,421,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,163,238,119,259,111,261,116,240,124,141,168"/>
+<area shape="rect" id="Node000004" href="$namespacemod__eos__lte__tables.html#a18f3ed1da91b272a77212af73bee3d09" title="Defensive consistency check for one table after init. Aborts with a diagnostic message if any silent&#45;..." alt="" coords="268,133,421,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,171,254,162,255,168,191,176"/>
+<area shape="rect" id="Node000006" href="$namespacemod__eos__interp.html#afc3e0cf0b1c55925665c40ec818beff4" title=" " alt="" coords="239,197,451,237"/>
+<area shape="poly" id="edge4_Node000001_Node000006" title=" " alt="" coords="191,195,225,199,225,204,191,200"/>
+<area shape="rect" id="Node000007" href="$namespacemod__eos__lte__tables.html#a8051c3fc2d1cb07f408256ce326fb6a2" title="Shift a table&#39;s (log_nH, log_eint/nH) axes – and adaptive node arrays if present – from CGS storage t..." alt="" coords="269,261,421,301"/>
+<area shape="poly" id="edge5_Node000001_Node000007" title=" " alt="" coords="141,203,240,247,261,254,259,259,238,252,138,208"/>
+<area shape="rect" id="Node000008" href="$namespacemod__eos__lte__tables.html#a9373edf8fcccc5c2b656d0992e91ed78" title=" " alt="" coords="263,325,426,365"/>
+<area shape="poly" id="edge6_Node000001_Node000008" title=" " alt="" coords="118,204,169,257,203,286,240,311,253,318,250,322,237,316,200,290,166,261,114,207"/>
+</map>

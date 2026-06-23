@@ -1,0 +1,5 @@
+<map id="mod_eos_lte_saha::saha_state_from_nh_p" name="mod_eos_lte_saha::saha_state_from_nh_p">
+<area shape="rect" id="Node000001" title="Given (nH, p) in CODE UNITS, find T and y by solving p = nH*(1+y(T))*T_code. Uses bisection on T...." alt="" coords="5,5,188,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="236,13,419,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,23,222,23,222,28,188,28"/>
+</map>

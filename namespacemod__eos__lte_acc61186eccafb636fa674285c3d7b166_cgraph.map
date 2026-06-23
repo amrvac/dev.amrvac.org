@@ -1,0 +1,9 @@
+<map id="mod_eos_lte::eos_init_lte" name="mod_eos_lte::eos_init_lte">
+<area shape="rect" id="Node000001" title="update_eos_LTE, get_Te_LTE, get_temperature_from_eint_LTE and Rfactor_from_LTE are PRIVATE: all bound..." alt="" coords="5,77,193,102"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__saha.html#a7e32164bc0eee2fd9ec3a6d564b3e2bd" title="Analytic&#45;method load: no binary tables (on&#45;the&#45;fly Saha solve); just announce the method." alt="" coords="241,5,420,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,74,244,46,245,52,147,79"/>
+<area shape="rect" id="Node000003" href="$namespacemod__eos__lte__entropy.html#ad1324d7843b8c914d9c8351b3ca4a247" title="Forward (log nH, log eint/nH) &#45;&gt; thermodynamic state." alt="" coords="249,69,412,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,87,236,87,236,92,194,92"/>
+<area shape="rect" id="Node000006" href="$namespacemod__eos__lte__state.html#a87707a70ada14d5255297a985ef3ac2a" title="state arms of the eos_init / eos_finalise dispatchers (mod_eos_LTE)" alt="" coords="254,133,407,173"/>
+<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="147,100,245,127,244,132,146,105"/>
+</map>

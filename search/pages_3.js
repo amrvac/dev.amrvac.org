@@ -22,8 +22,9 @@ var searchData=
   ['and_20qsl_20products_19',['Magnetic Topology and QSL Products',['../md_doc_2magnetic__topology__qsl.html',1,'']]],
   ['and_20translational_20symmetry_20',['Using axial and translational symmetry',['../md_doc_2axial.html',1,'']]],
   ['and_20yt_21',['AMRVAC datasets and YT',['../md_doc_2yt__usage.html',1,'']]],
-  ['asked_20questions_22',['Frequently Asked Questions',['../md_doc_2faq.html',1,'']]],
-  ['at_20line_20integrated_20quantities_23',['Looking at line-integrated quantities',['../md_doc_2collapsed.html',1,'']]],
-  ['auxiliary_20variables_20nw_24',['Auxiliary variables (nw...)',['../md_doc_2mpiamrvac__nw.html',1,'']]],
-  ['axial_20and_20translational_20symmetry_25',['Using axial and translational symmetry',['../md_doc_2axial.html',1,'']]]
+  ['arbitrary_20fields_20for_20debugging_22',['Dumping arbitrary fields for debugging',['../debug_field_dump.html',1,'']]],
+  ['asked_20questions_23',['Frequently Asked Questions',['../md_doc_2faq.html',1,'']]],
+  ['at_20line_20integrated_20quantities_24',['Looking at line-integrated quantities',['../md_doc_2collapsed.html',1,'']]],
+  ['auxiliary_20variables_20nw_25',['Auxiliary variables (nw...)',['../md_doc_2mpiamrvac__nw.html',1,'']]],
+  ['axial_20and_20translational_20symmetry_26',['Using axial and translational symmetry',['../md_doc_2axial.html',1,'']]]
 ];

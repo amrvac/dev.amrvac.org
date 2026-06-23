@@ -113,6 +113,12 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:ae860a54ebdb7a0bee2fed1821d67cc99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1d4a41dcf32cae3752c48ef73f42364" id="r_ae1d4a41dcf32cae3752c48ef73f42364"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#ae1d4a41dcf32cae3752c48ef73f42364">write_snapshot</a></td></tr>
 <tr class="separator:ae1d4a41dcf32cae3752c48ef73f42364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc30dcbd915903d7d10980921afef85c" id="r_adc30dcbd915903d7d10980921afef85c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#adc30dcbd915903d7d10980921afef85c">debug_alloc</a> (n, names)</td></tr>
+<tr class="memdesc:adc30dcbd915903d7d10980921afef85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the debug field dump: register n named slots. Capture fields with <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(igrid)</a>wdebug(...,islot) anywhere in a block loop (lazy per-block allocation at the capture site), then flush with save_wdebug.  <br /></td></tr>
+<tr class="separator:adc30dcbd915903d7d10980921afef85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d4927174efb627c8ec2ab96f7bd972" id="r_a88d4927174efb627c8ec2ab96f7bd972"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#a88d4927174efb627c8ec2ab96f7bd972">save_wdebug</a> (suffix)</td></tr>
+<tr class="memdesc:a88d4927174efb627c8ec2ab96f7bd972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(:)</a>wdebug to a standalone cell-centred .dat (no staggered), readable by the standard AMRVAC .dat readers. Collective; call at a barrier-safe point (end of a step), NOT inside a block loop.  <br /></td></tr>
+<tr class="separator:a88d4927174efb627c8ec2ab96f7bd972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2d00e56c4444b0b4806a9c13ce2eff7" id="r_aa2d00e56c4444b0b4806a9c13ce2eff7"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#aa2d00e56c4444b0b4806a9c13ce2eff7">read_snapshot</a></td></tr>
 <tr class="memdesc:aa2d00e56c4444b0b4806a9c13ce2eff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to read in snapshots (.dat files). When it cannot recognize the file version, it will automatically try the 'old' reader.  <br /></td></tr>
 <tr class="separator:aa2d00e56c4444b0b4806a9c13ce2eff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +148,9 @@ Functions/Subroutines</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a683b4174922f2d3d41e83e50ac4b7a93" id="r_a683b4174922f2d3d41e83e50ac4b7a93"><td class="memItemLeft" align="right" valign="top">character(len=name_len), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#a683b4174922f2d3d41e83e50ac4b7a93">wdebug_names</a></td></tr>
+<tr class="memdesc:a683b4174922f2d3d41e83e50ac4b7a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">debug field-dump variable names (set by debug_alloc, used by save_wdebug)  <br /></td></tr>
+<tr class="separator:a683b4174922f2d3d41e83e50ac4b7a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6450e39c0d1c69b17bbbb5db487231a" id="r_af6450e39c0d1c69b17bbbb5db487231a"><td class="memItemLeft" align="right" valign="top">integer, dimension(3), parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#af6450e39c0d1c69b17bbbb5db487231a">compatible_versions</a> = [3, 4, 5]</td></tr>
 <tr class="memdesc:af6450e39c0d1c69b17bbbb5db487231a"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of compatible versions.  <br /></td></tr>
 <tr class="separator:af6450e39c0d1c69b17bbbb5db487231a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +167,38 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module for reading input and writing output. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a id="adc30dcbd915903d7d10980921afef85c" name="adc30dcbd915903d7d10980921afef85c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc30dcbd915903d7d10980921afef85c">&#9670;&#160;</a></span>debug_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_input_output::debug_alloc </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(len=*), dimension(n), intent(in)&#160;</td>
+          <td class="paramname"><em>names</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable the debug field dump: register n named slots. Capture fields with <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(igrid)</a>wdebug(...,islot) anywhere in a block loop (lazy per-block allocation at the capture site), then flush with save_wdebug. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02194">2194</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+
+</div>
+</div>
 <a id="ab2d0a28e065926627226ed89b96ada9d" name="ab2d0a28e065926627226ed89b96ada9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2d0a28e065926627226ed89b96ada9d">&#9670;&#160;</a></span>get_fields_string()</h2>
 
@@ -220,7 +261,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01698">1698</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01707">1707</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>
@@ -258,7 +299,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02810">2810</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02940">2940</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>
@@ -296,7 +337,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02838">2838</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02968">2968</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>
@@ -316,7 +357,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01811">1811</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01820">1820</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -371,7 +412,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02702">2702</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02832">2832</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>
@@ -416,7 +457,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02767">2767</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02897">2897</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>
@@ -438,7 +479,7 @@ Here is the call graph for this function:</div>
 
 <p>Compute how much of the domain is covered by each grid level. This routine does not take a non-Cartesian geometry into account. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02741">2741</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02871">2871</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>
@@ -456,7 +497,7 @@ Here is the call graph for this function:</div>
 
 <p>Write volume-averaged values and other information to the log file. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02530">2530</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02660">2660</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -486,7 +527,7 @@ Here is the call graph for this function:</div>
 
 <p>Print a log that can be used to check whether the code still produces the same output (regression test) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02661">2661</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02791">2791</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -514,7 +555,7 @@ Here is the call graph for this function:</div>
 
 <p>Read the command line arguments passed to amrvac. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00035">35</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00039">39</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -550,7 +591,7 @@ Here is the call graph for this function:</div>
 <p>Limiter used for prolongation to refined grids and ghost cells</p>
 <p>How to compute the CFL-limited time step. Options are 'maxsum': max(sum(c/dx)); 'summax': sum(max(c/dx)) and 'minimum: max(c/dx), where the summations loop over the grid dimensions and c is the velocity. The default 'maxsum' is the conventiontal way of computing CFL-limited time steps.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00173">173</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00177">177</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -586,7 +627,7 @@ Here is the call graph for this function:</div>
 
 <p>Routine to read in snapshots (.dat files). When it cannot recognize the file version, it will automatically try the 'old' reader. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02184">2184</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02314">2314</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -627,7 +668,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02389">2389</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02519">2519</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -638,6 +679,48 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="183,42,217,37,218,43,183,48"/>
 <area shape="rect" href="namespacemod__functions__forest.html#a693fb7f8cc66f54e57220b83e219320e" title=" " alt="" coords="241,69,403,109"/>
 <area shape="poly" title=" " alt="" coords="183,67,228,73,227,79,183,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a88d4927174efb627c8ec2ab96f7bd972" name="a88d4927174efb627c8ec2ab96f7bd972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d4927174efb627c8ec2ab96f7bd972">&#9670;&#160;</a></span>save_wdebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_input_output::save_wdebug </td>
+          <td>(</td>
+          <td class="paramtype">character(len=*), intent(in)&#160;</td>
+          <td class="paramname"><em>suffix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flush <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(:)</a>wdebug to a standalone cell-centred .dat (no staggered), readable by the standard AMRVAC .dat readers. Collective; call at a barrier-safe point (end of a step), NOT inside a block loop. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02211">2211</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__input__output_a88d4927174efb627c8ec2ab96f7bd972_cgraph.png" border="0" usemap="#anamespacemod__input__output_a88d4927174efb627c8ec2ab96f7bd972_cgraph" alt=""/></div>
+<map name="anamespacemod__input__output_a88d4927174efb627c8ec2ab96f7bd972_cgraph" id="anamespacemod__input__output_a88d4927174efb627c8ec2ab96f7bd972_cgraph">
+<area shape="rect" title="Flush ps(:)wdebug to a standalone cell&#45;centred .dat (no staggered), readable by the standard AMRVAC ...." alt="" coords="5,120,184,160"/>
+<area shape="rect" href="namespacemod__input__output__helper.html#a63ddb5cbb8a7faff9ac4c9e3575b9a3b" title="Determine the shape of a block for output (whether to include ghost cells, and on which sides)" alt="" coords="233,5,421,45"/>
+<area shape="poly" title=" " alt="" coords="128,117,231,62,260,48,263,53,233,66,131,122"/>
+<area shape="rect" href="namespacemod__input__output__helper.html#ac371917cf06d0aa8ca7a401981d3a5e6" title="Compute number of elements in index range." alt="" coords="469,35,657,75"/>
+<area shape="poly" title=" " alt="" coords="176,117,231,105,455,67,456,73,233,111,178,123"/>
+<area shape="rect" href="namespacemod__input__output__helper.html#a208f91df2b8f3fdbcbbd029668802c26" title="Standard method for creating a new output file." alt="" coords="233,120,421,160"/>
+<area shape="poly" title=" " alt="" coords="184,137,219,137,219,143,184,143"/>
+<area shape="rect" href="namespacemod__input__output__helper.html#a9b3e3365ae87d58b382931ee36cb6d7e" title="Write header for a snapshot, generalize cons_wnames and nw." alt="" coords="232,184,421,224"/>
+<area shape="poly" title=" " alt="" coords="169,158,241,178,240,183,167,163"/>
+<area shape="rect" href="namespacemod__functions__forest.html#a5fe089544b6f559e305b5b6e41544191" title=" " alt="" coords="245,248,408,288"/>
+<area shape="poly" title=" " alt="" coords="122,158,172,196,233,234,248,240,245,245,231,238,169,200,119,162"/>
+<area shape="poly" title=" " alt="" coords="421,34,456,39,455,44,420,40"/>
+<area shape="poly" title=" " alt="" coords="520,35,517,25,524,16,540,10,563,8,591,11,606,18,603,23,589,16,563,13,541,15,527,20,522,26,525,34"/>
 </map>
 </div>
 
@@ -659,7 +742,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01746">1746</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01755">1755</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -705,7 +788,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01802">1802</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01811">1811</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -760,7 +843,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01841">1841</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01850">1850</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -817,7 +900,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01826">1826</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l01835">1835</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -843,7 +926,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02012">2012</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02021">2021</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -882,7 +965,7 @@ Here is the call graph for this function:</div>
 
 <p>List of compatible versions. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00013">13</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00017">17</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>
@@ -898,7 +981,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00027">27</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00031">31</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>
@@ -914,7 +997,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00025">25</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00029">29</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>
@@ -930,7 +1013,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00026">26</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00030">30</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>
@@ -948,7 +1031,25 @@ Here is the call graph for this function:</div>
 
 <p>number of w found in dat files </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00016">16</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00020">20</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
+
+</div>
+</div>
+<a id="a683b4174922f2d3d41e83e50ac4b7a93" name="a683b4174922f2d3d41e83e50ac4b7a93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a683b4174922f2d3d41e83e50ac4b7a93">&#9670;&#160;</a></span>wdebug_names</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">character(len=name_len), dimension(:), allocatable mod_input_output::wdebug_names</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>debug field-dump variable names (set by debug_alloc, used by save_wdebug) </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l00014">14</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
 </div>
 </div>

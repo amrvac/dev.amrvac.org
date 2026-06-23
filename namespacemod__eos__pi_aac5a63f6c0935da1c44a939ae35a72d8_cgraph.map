@@ -1,0 +1,5 @@
+<map id="mod_eos_pi::eos_init_pi" name="mod_eos_pi::eos_init_pi">
+<area shape="rect" id="Node000001" title="Lifecycle (PI arms of the eos_init / eos_finalise dispatchers). The eos% block getters (update_eos_PI..." alt="" coords="5,13,184,38"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__fi.html#a87bd75eba5e4320a1a94f84516c12cc5" title="FI temperature from primitive pressure: T = p / (R * rho). w is PRIMITIVE here, so iw_e holds the the..." alt="" coords="232,5,445,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,23,218,23,218,28,184,28"/>
+</map>

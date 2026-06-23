@@ -102,6 +102,12 @@ Variables</h2></td></tr>
 <tr class="memitem:aa8e92d9bcd343a17d613451b0ba163c9" id="r_aa8e92d9bcd343a17d613451b0ba163c9"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmod__physicaldata_1_1state.html">state</a>)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physicaldata.html#aa8e92d9bcd343a17d613451b0ba163c9">pole_buf</a></td></tr>
 <tr class="memdesc:aa8e92d9bcd343a17d613451b0ba163c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">buffer for pole boundary  <br /></td></tr>
 <tr class="separator:aa8e92d9bcd343a17d613451b0ba163c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2db8b2261a1a82851bcb8ff46c6cb1" id="r_adf2db8b2261a1a82851bcb8ff46c6cb1"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physicaldata.html#adf2db8b2261a1a82851bcb8ff46c6cb1">wdebug_on</a> = .false.</td></tr>
+<tr class="memdesc:adf2db8b2261a1a82851bcb8ff46c6cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">&mdash; debug field dump (flushed by save_wdebug in <a class="el" href="namespacemod__input__output.html" title="Module for reading input and writing output.">mod_input_output</a>) &mdash; when .true., intermediate fields captured in <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(:)</a>wdebug are written out  <br /></td></tr>
+<tr class="separator:adf2db8b2261a1a82851bcb8ff46c6cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dbd4ee9453437bf50c567f2e4b5bfde" id="r_a8dbd4ee9453437bf50c567f2e4b5bfde"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physicaldata.html#a8dbd4ee9453437bf50c567f2e4b5bfde">n_wdebug</a> = 0</td></tr>
+<tr class="memdesc:a8dbd4ee9453437bf50c567f2e4b5bfde"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of debug slots allocated in <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(:)</a>wdebug  <br /></td></tr>
+<tr class="separator:a8dbd4ee9453437bf50c567f2e4b5bfde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6685ba795d306f649e8e9fc6f8ca30ea" id="r_a6685ba795d306f649e8e9fc6f8ca30ea"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmod__physicaldata_1_1state.html">state</a>), dimension(:), allocatable, target&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea">ps</a></td></tr>
 <tr class="memdesc:a6685ba795d306f649e8e9fc6f8ca30ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">array of physical states for all blocks on my processor  <br /></td></tr>
 <tr class="separator:a6685ba795d306f649e8e9fc6f8ca30ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,7 +148,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00128">128</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00137">137</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
 
 </div>
 </div>
@@ -160,7 +166,25 @@ Variables</h2></td></tr>
 
 <p>array of physical blocks of meshed fields for particles </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00134">134</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00143">143</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+
+</div>
+</div>
+<a id="a8dbd4ee9453437bf50c567f2e4b5bfde" name="a8dbd4ee9453437bf50c567f2e4b5bfde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dbd4ee9453437bf50c567f2e4b5bfde">&#9670;&#160;</a></span>n_wdebug</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer mod_physicaldata::n_wdebug = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>number of debug slots allocated in <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(:)</a>wdebug </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00118">118</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
 
 </div>
 </div>
@@ -178,7 +202,7 @@ Variables</h2></td></tr>
 
 <p>buffer for pole boundary </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00109">109</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00112">112</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
 
 </div>
 </div>
@@ -196,7 +220,7 @@ Variables</h2></td></tr>
 
 <p>array of physical states for all blocks on my processor </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00112">112</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00121">121</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
 
 </div>
 </div>
@@ -214,7 +238,7 @@ Variables</h2></td></tr>
 
 <p>array of physical states, temp 1 for multi-step time integrator </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00114">114</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00123">123</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
 
 </div>
 </div>
@@ -232,7 +256,7 @@ Variables</h2></td></tr>
 
 <p>array of physical states, temp 2 for multi-step time integrator </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00116">116</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00125">125</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
 
 </div>
 </div>
@@ -250,7 +274,7 @@ Variables</h2></td></tr>
 
 <p>array of physical states, temp 3 for multi-step time integrator </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00118">118</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00127">127</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
 
 </div>
 </div>
@@ -268,7 +292,7 @@ Variables</h2></td></tr>
 
 <p>array of physical states, temp 4 for multi-step time integrator </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00120">120</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00129">129</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
 
 </div>
 </div>
@@ -286,7 +310,7 @@ Variables</h2></td></tr>
 
 <p>array of physical blocks in reduced dimension </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00125">125</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00134">134</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
 
 </div>
 </div>
@@ -304,7 +328,25 @@ Variables</h2></td></tr>
 
 <p>array of physical blocks, one level coarser representative </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00122">122</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00131">131</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
+
+</div>
+</div>
+<a id="adf2db8b2261a1a82851bcb8ff46c6cb1" name="adf2db8b2261a1a82851bcb8ff46c6cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2db8b2261a1a82851bcb8ff46c6cb1">&#9670;&#160;</a></span>wdebug_on</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical mod_physicaldata::wdebug_on = .false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>&mdash; debug field dump (flushed by save_wdebug in <a class="el" href="namespacemod__input__output.html" title="Module for reading input and writing output.">mod_input_output</a>) &mdash; when .true., intermediate fields captured in <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(:)</a>wdebug are written out </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__physicaldata_8t_source.html#l00116">116</a> of file <a class="el" href="mod__physicaldata_8t_source.html">mod_physicaldata.t</a>.</p>
 
 </div>
 </div>

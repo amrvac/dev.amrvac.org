@@ -80,7 +80,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Types</a> &#124;
-<a href="#func-members">Functions/Subroutines</a>  </div>
+<a href="#func-members">Functions/Subroutines</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">mod_radiative_cooling Module Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -90,13 +91,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Types</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__radiative__cooling_1_1get__eps__derivative__t.html">get_eps_derivative_t</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__radiative__cooling_1_1eos__scalar2__func.html">eos_scalar2_func</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar EoS inverse, e.g. fleint_from_T(log_nH, log_T)  <a href="interfacemod__radiative__cooling_1_1eos__scalar2__func.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__radiative__cooling_1_1get__pthermal__eint__rfactor__rho__t.html">get_pthermal_eint_rfactor_rho_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__radiative__cooling_1_1get__pthermal__rfactor__rho__t.html">get_pthermal_rfactor_rho_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__radiative__cooling_1_1get__rfactor__t.html">get_rfactor_t</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__radiative__cooling_1_1get__2var__subr.html">get_2var_subr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__radiative__cooling_1_1get__subr1.html">get_subr1</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -108,10 +106,20 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a1af126a415ceee3e65eb49567e74be29" id="r_a1af126a415ceee3e65eb49567e74be29"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a1af126a415ceee3e65eb49567e74be29">radiative_cooling_init_params</a> (<a class="el" href="namespacemod__physics.html#acd5c12827a0427c2b14e969cdebff01a">phys_gamma</a>, he_abund)</td></tr>
 <tr class="memdesc:a1af126a415ceee3e65eb49567e74be29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radiative cooling initialization.  <br /></td></tr>
 <tr class="separator:a1af126a415ceee3e65eb49567e74be29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d61fedcf758ebf7cfab8b805dca1c2" id="r_a48d61fedcf758ebf7cfab8b805dca1c2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a48d61fedcf758ebf7cfab8b805dca1c2">voigt_escape_init_table</a> ()</td></tr>
+<tr class="memdesc:a48d61fedcf758ebf7cfab8b805dca1c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the Voigt escape probability lookup table. Called once (guarded by voigt_table_ready flag). Uses 64-point Gauss-Legendre quadrature on [0, x_max] to evaluate E(tau_0) = (2 phi(0)/tau_0) * integral_0^{x_max} [1-exp(-tau_0 g(x))] dx where g(x) = phi(x)/phi(0) for the Voigt profile H(a,x) truncated at x_max.  <br /></td></tr>
+<tr class="separator:a48d61fedcf758ebf7cfab8b805dca1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a021e7857fc29d60332302aa525b6ab34" id="r_a021e7857fc29d60332302aa525b6ab34"><td class="memItemLeft" align="right" valign="top">double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a021e7857fc29d60332302aa525b6ab34">voigt_profile_ratio</a> (a, x)</td></tr>
+<tr class="memdesc:a021e7857fc29d60332302aa525b6ab34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Voigt profile ratio phi(x)/phi(0) using Humlicek (1982) Region I/II approx. For the small-a regime (a &lt; 0.01), this simplifies to: H(a,x)/H(a,0) ≈ exp(-x^2) + a*sqrt(pi)/x^2 for |x| &gt; ~2 We use the exact Gaussian core + Lorentzian wing decomposition.  <br /></td></tr>
+<tr class="separator:a021e7857fc29d60332302aa525b6ab34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e74389dbb8b8d78bdf6eeebb9bc6e90" id="r_a8e74389dbb8b8d78bdf6eeebb9bc6e90"><td class="memItemLeft" align="right" valign="top">double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a8e74389dbb8b8d78bdf6eeebb9bc6e90">voigt_escape_lookup</a> (tau)</td></tr>
+<tr class="memdesc:a8e74389dbb8b8d78bdf6eeebb9bc6e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up the Voigt escape probability for a given tau. Uses linear interpolation in log10(tau) space.  <br /></td></tr>
+<tr class="separator:a8e74389dbb8b8d78bdf6eeebb9bc6e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a513826e1393ead094f386155695a7f" id="r_a0a513826e1393ead094f386155695a7f"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a0a513826e1393ead094f386155695a7f">voigt_gauss_legendre</a> (a, b, n, x, w)</td></tr>
+<tr class="memdesc:a0a513826e1393ead094f386155695a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gauss-Legendre quadrature nodes and weights on [a,b]. Uses the Golub-Welsch algorithm for n points.  <br /></td></tr>
+<tr class="separator:a0a513826e1393ead094f386155695a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c0aab05964e01b97b9ae65c6d2ea830" id="r_a2c0aab05964e01b97b9ae65c6d2ea830"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a2c0aab05964e01b97b9ae65c6d2ea830">radiative_cooling_init</a> (fl, read_params)</td></tr>
 <tr class="separator:a2c0aab05964e01b97b9ae65c6d2ea830"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d18ddd22fe571bd3d4a030db3ad3db6" id="r_a6d18ddd22fe571bd3d4a030db3ad3db6"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a6d18ddd22fe571bd3d4a030db3ad3db6">radiative_cooling_build_eion_table</a> (fl)</td></tr>
-<tr class="separator:a6d18ddd22fe571bd3d4a030db3ad3db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e673c837df3fbd572820caf874c3c7f" id="r_a5e673c837df3fbd572820caf874c3c7f"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a5e673c837df3fbd572820caf874c3c7f">create_y_ppl</a> (fl)</td></tr>
 <tr class="separator:a5e673c837df3fbd572820caf874c3c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10e2dbb5f17c0319178f54e914f8efb4" id="r_a10e2dbb5f17c0319178f54e914f8efb4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a10e2dbb5f17c0319178f54e914f8efb4">getvar_cooling</a> (ixil, ixol, w, x, coolrate, fl)</td></tr>
@@ -122,16 +130,10 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a76304d7766df7b067cc8ab02651ba133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa19b525e143eab6061d44286ba2249c9" id="r_aa19b525e143eab6061d44286ba2249c9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#aa19b525e143eab6061d44286ba2249c9">floortemperature</a> (qdt, ixil, ixol, wct, w, x, fl)</td></tr>
 <tr class="separator:aa19b525e143eab6061d44286ba2249c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58da51978da2397c68dac8296c1794c4" id="r_a58da51978da2397c68dac8296c1794c4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a58da51978da2397c68dac8296c1794c4">radiative_cooling_taper</a> (ixd, x_ndim, rho_val, te_val, fl, factor)</td></tr>
+<tr class="separator:a58da51978da2397c68dac8296c1794c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24ac5424c9ca4f7cf7cdddb38e084c89" id="r_a24ac5424c9ca4f7cf7cdddb38e084c89"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a24ac5424c9ca4f7cf7cdddb38e084c89">get_cool_equi</a> (qdt, ixil, ixol, wct, w, x, fl, res)</td></tr>
 <tr class="separator:a24ac5424c9ca4f7cf7cdddb38e084c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25d6e8a1e5c5b687d5990a3ccfbc27f6" id="r_a25d6e8a1e5c5b687d5990a3ccfbc27f6"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a25d6e8a1e5c5b687d5990a3ccfbc27f6">cooling_get_rfactor_t</a> (fl, t, rold, rnew)</td></tr>
-<tr class="separator:a25d6e8a1e5c5b687d5990a3ccfbc27f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a50ab42a10d2f78d44428c437b97b2a" id="r_a3a50ab42a10d2f78d44428c437b97b2a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a3a50ab42a10d2f78d44428c437b97b2a">cooling_get_pthermal_rfactor</a> (fl, rho, t, rold, pnew, rnew)</td></tr>
-<tr class="separator:a3a50ab42a10d2f78d44428c437b97b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80c571a771ebe516c760d855bfab090d" id="r_a80c571a771ebe516c760d855bfab090d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a80c571a771ebe516c760d855bfab090d">cooling_get_pthermal_eint_rfactor</a> (fl, rho, t, rold, pnew, eint_new, rnew)</td></tr>
-<tr class="separator:a80c571a771ebe516c760d855bfab090d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1926f39abc5bb0345c71fcfcd84effa5" id="r_a1926f39abc5bb0345c71fcfcd84effa5"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a1926f39abc5bb0345c71fcfcd84effa5">cooling_get_eint</a> (fl, w, x, ixil, ixol, pthermal, eint)</td></tr>
-<tr class="separator:a1926f39abc5bb0345c71fcfcd84effa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88661f11a99d3b6462c409a89956c128" id="r_a88661f11a99d3b6462c409a89956c128"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a88661f11a99d3b6462c409a89956c128">cool_exact</a> (qdt, ixil, ixol, wct, wctprim, w, x, fl)</td></tr>
 <tr class="separator:a88661f11a99d3b6462c409a89956c128"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7961a939e49a748f32727184fafd6718" id="r_a7961a939e49a748f32727184fafd6718"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718">calc_l_extended</a> (tpoint, lpoint, fl)</td></tr>
@@ -142,18 +144,126 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a1b83b5c9023a36e54f17b94790c062d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc796e69f3a078d992911ee36792678d" id="r_afc796e69f3a078d992911ee36792678d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#afc796e69f3a078d992911ee36792678d">findy</a> (tpoint, ypoint, fl)</td></tr>
 <tr class="separator:afc796e69f3a078d992911ee36792678d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2800a0e58c4806e404711af4d286a064" id="r_a2800a0e58c4806e404711af4d286a064"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a2800a0e58c4806e404711af4d286a064">findy_eion</a> (tpoint, ypoint, fl)</td></tr>
-<tr class="separator:a2800a0e58c4806e404711af4d286a064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a64aa6cb7c2be55247c345678086604" id="r_a8a64aa6cb7c2be55247c345678086604"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a8a64aa6cb7c2be55247c345678086604">findt</a> (tpoint, ypoint, fl)</td></tr>
 <tr class="separator:a8a64aa6cb7c2be55247c345678086604"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a174fe54b5e525135480517711a1457b3" id="r_a174fe54b5e525135480517711a1457b3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a174fe54b5e525135480517711a1457b3">findt_eion</a> (tpoint, ypoint, fl)</td></tr>
-<tr class="separator:a174fe54b5e525135480517711a1457b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ed54b69ceae1b9a334d94bf4bda7d41" id="r_a2ed54b69ceae1b9a334d94bf4bda7d41"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a2ed54b69ceae1b9a334d94bf4bda7d41">finddldt</a> (tpoint, dlpoint, fl)</td></tr>
+<tr class="separator:a2ed54b69ceae1b9a334d94bf4bda7d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6734611e0cdf1279b4fb32cb3322dbaa" id="r_a6734611e0cdf1279b4fb32cb3322dbaa"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a6734611e0cdf1279b4fb32cb3322dbaa">build_y_mod_table</a> (fl)</td></tr>
+<tr class="memdesc:a6734611e0cdf1279b4fb32cb3322dbaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">===================================================================  <br /></td></tr>
+<tr class="separator:a6734611e0cdf1279b4fb32cb3322dbaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2ed4be8f441d9da08d5020a4919e76a" id="r_af2ed4be8f441d9da08d5020a4919e76a"><td class="memItemLeft" align="right" valign="top">double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#af2ed4be8f441d9da08d5020a4919e76a">simpson_composite</a> (f, n, h)</td></tr>
+<tr class="memdesc:af2ed4be8f441d9da08d5020a4919e76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Composite Simpson's rule on (N+1) equally spaced samples (N even). N must be a positive even integer; h is the step size.  <br /></td></tr>
+<tr class="separator:af2ed4be8f441d9da08d5020a4919e76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62805444feab0b05bd400f7369071575" id="r_a62805444feab0b05bd400f7369071575"><td class="memItemLeft" align="right" valign="top">double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a62805444feab0b05bd400f7369071575">boole_composite</a> (f, n, h)</td></tr>
+<tr class="memdesc:a62805444feab0b05bd400f7369071575"><td class="mdescLeft">&#160;</td><td class="mdescRight">Composite Boole's rule on (N+1) equally spaced samples (N a multiple of 4). Each 4-step block contributes (2h/45)*(7 f0 + 32 f1 + 12 f2 + 32 f3 + 7 f4).  <br /></td></tr>
+<tr class="separator:a62805444feab0b05bd400f7369071575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1642a1fde6a32ce82ba5430b937ae97d" id="r_a1642a1fde6a32ce82ba5430b937ae97d"><td class="memItemLeft" align="right" valign="top">double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a1642a1fde6a32ce82ba5430b937ae97d">invert_row_bisect</a> (y_row, t_grid, ncool, y_target)</td></tr>
+<tr class="memdesc:a1642a1fde6a32ce82ba5430b937ae97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bisection on a single Y_mod row to find log10(T) such that Y_mod_row(i) = y_target. The row is monotonically increasing in <em>decreasing</em> i (since Y(ncool)=0 grows toward Y(1)=Y_max). Returns log10 T (code units).  <br /></td></tr>
+<tr class="separator:a1642a1fde6a32ce82ba5430b937ae97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81cd0f81479e631065613db1f2242837" id="r_a81cd0f81479e631065613db1f2242837"><td class="memItemLeft" align="right" valign="top">double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a81cd0f81479e631065613db1f2242837">findy_mod</a> (te_loc, nh_loc, fl)</td></tr>
+<tr class="memdesc:a81cd0f81479e631065613db1f2242837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forward Y_mod lookup: bilinear interpolation in (log10 nH, log10 T) on the precomputed Y_mod table. Both axes are uniform in log space.  <br /></td></tr>
+<tr class="separator:a81cd0f81479e631065613db1f2242837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a212aed250bd6178bb546267a1afce854" id="r_a212aed250bd6178bb546267a1afce854"><td class="memItemLeft" align="right" valign="top">double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a212aed250bd6178bb546267a1afce854">findt_mod</a> (y_target, nh_loc, fl)</td></tr>
+<tr class="memdesc:a212aed250bd6178bb546267a1afce854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse Y_mod lookup: given Y_target and nH, return T such that Y_mod(log10 nH, log10 T) = Y_target. Bisection on the cooling-table i index using values interpolated linearly between the two adjacent nH rows (same convention as the classical findT). Saturates at the table extremes when Y_target falls outside [Y(tcoolmax), Y(tcoolmin)].  <br /></td></tr>
+<tr class="separator:a212aed250bd6178bb546267a1afce854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a4d632c0397eadef66d79db4ed3e2ea04" id="r_a4d632c0397eadef66d79db4ed3e2ea04"><td class="memItemLeft" align="right" valign="top">double precision, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__radiative__cooling.html#a4d632c0397eadef66d79db4ed3e2ea04">lb_cool_accum</a> = 0.0d0</td></tr>
+<tr class="memdesc:a4d632c0397eadef66d79db4ed3e2ea04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-rank cooling-only compute accumulator for lb_diagnose. Sums the wall time spent inside radiative_cooling_add_source across all blocks and substages within one full advance() call. Reset by <a class="el" href="namespacemod__advance.html#a3abc5d81403e5443dc97a4db696acfd1" title="Advance all the grids over one time step, including all sources.">mod_advance::advance</a> at the start of each step. Note: this is a subset of lb_compute_accum (which already encloses the whole advect1 block loop); it isolates the cooling Newton/exact-solver kernel cost from the surrounding finite-volume work.  <br /></td></tr>
+<tr class="separator:a4d632c0397eadef66d79db4ed3e2ea04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>module radiative cooling &ndash; add optically thin radiative cooling </p>
 <p>only uses the (Townsend) exact integration method, can be used in HD, ffhd, MHD, twofl</p>
-<p>Cooling curves assume an H/He plasma and ionization equilibrium. The gas temperature is supplied by the active physics EOS; the cooling table composition and abundance assumptions remain curve-dependent. Formula: Q=-n_H*n_e*f(T), where f(T) is tabulated or piecewise power law. </p>
+<p>Assumptions: full ionized plasma dominated by H and He, ionization equilibrium Formula: Q=-n_H*n_e*f(T), positive f(T) function is pre-computed and tabulated or a piecewise power law Uses the various cooling tables stored in <a class="el" href="mod__radloss__tables_8t.html">mod_radloss_tables.t</a> </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a id="a62805444feab0b05bd400f7369071575" name="a62805444feab0b05bd400f7369071575"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62805444feab0b05bd400f7369071575">&#9670;&#160;</a></span>boole_composite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision function mod_radiative_cooling::boole_composite </td>
+          <td>(</td>
+          <td class="paramtype">double precision, dimension(0:n), intent(in)&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Composite Boole's rule on (N+1) equally spaced samples (N a multiple of 4). Each 4-step block contributes (2h/45)*(7 f0 + 32 f1 + 12 f2 + 32 f3 + 7 f4). </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01970">1970</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
+<a id="a6734611e0cdf1279b4fb32cb3322dbaa" name="a6734611e0cdf1279b4fb32cb3322dbaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6734611e0cdf1279b4fb32cb3322dbaa">&#9670;&#160;</a></span>build_y_mod_table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_radiative_cooling::build_y_mod_table </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html">rc_fluid</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>fl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>=================================================================== </p>
+<h1>Variable-c_V Townsend extension (Y_mod) </h1>
+<p>The original Townsend (2009) exact integration scheme assumes a constant heat capacity c_V = ρR/(γ-1). For LTE plasmas with H/He ionisation, c_V is a strong function of temperature in the recombination zone (Ibañez 1985, 1992 thermal-instability buffering).</p>
+<p>The derivation defines a modified TEF Ỹ(T; ρ) ≡ ∫_T^{T_ref} c_V(T'; ρ) / (n_H n_e(T'; ρ) Λ(T')) dT' with c_V the LTE volumetric heat capacity <em>including</em> the ionisation-energy reservoir. The integral is recast via the change of variables u = e_int/n_H so that the discrete construction never finite-differences c_V — both integrand and energy update are driven by the same eint_from_T table, guaranteeing bit-consistent energy conservation.</p>
+<p>Must be called <em>after</em> eos_finalise() so that eoseint_from_T, eosT (forward), and eosneOnH are all in code units. The hook is bind_eos_to_source() in <a class="el" href="mod__hd__eos_8t.html">mod_hd_eos.t</a> / <a class="el" href="mod__mhd__eos_8t.html">mod_mhd_eos.t</a>.</p>
+<p>Algorithm: change of variables from T to u = e_int/n_H. For each log10 nH grid point j (taken from the eoseint_from_T table's nH axis):</p><ol type="1">
+<li>Cache u_i = e_int/n_H at every cooling-curve T_i.</li>
+<li>Walk i = ncool-1 down to 1 and accumulate Y_mod(j, i) = Y_mod(j, i+1) + ∫_{u_i}^{u_{i+1}} du / (n_e Λ) using a composite Simpson (3-point, O(h^4)) or Boole (5-point, O(h^6)) rule with N_sub sub-intervals.</li>
+<li>The integrand evaluates n_e via y_from_nH_eint and Λ via findL (with T from T_from_nH_eint).</li>
+</ol>
+<p>Per-row inverse table T_mod_inv(j, k) is also built for the 'table' inverse method (alternative to bisection). </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01795">1795</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__radiative__cooling_a6734611e0cdf1279b4fb32cb3322dbaa_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a6734611e0cdf1279b4fb32cb3322dbaa_cgraph" alt=""/></div>
+<map name="anamespacemod__radiative__cooling_a6734611e0cdf1279b4fb32cb3322dbaa_cgraph" id="anamespacemod__radiative__cooling_a6734611e0cdf1279b4fb32cb3322dbaa_cgraph">
+<area shape="rect" title="===================================================================" alt="" coords="5,101,176,141"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a62805444feab0b05bd400f7369071575" title="Composite Boole&#39;s rule on (N+1) equally spaced samples (N a multiple of 4). Each 4&#45;step block contrib..." alt="" coords="224,5,395,45"/>
+<area shape="poly" title=" " alt="" coords="130,99,223,55,239,48,241,53,225,60,133,104"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="224,69,395,109"/>
+<area shape="poly" title=" " alt="" coords="176,106,210,101,211,106,177,112"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="224,133,395,173"/>
+<area shape="poly" title=" " alt="" coords="177,131,211,136,210,142,176,136"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#af2ed4be8f441d9da08d5020a4919e76a" title="Composite Simpson&#39;s rule on (N+1) equally spaced samples (N even). N must be a positive even integer;..." alt="" coords="224,197,395,237"/>
+<area shape="poly" title=" " alt="" coords="133,139,225,183,241,190,239,195,223,188,130,144"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a7961a939e49a748f32727184fafd6718" name="a7961a939e49a748f32727184fafd6718"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7961a939e49a748f32727184fafd6718">&#9670;&#160;</a></span>calc_l_extended()</h2>
 
@@ -186,7 +296,7 @@ Functions/Subroutines</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01248">1248</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01567">1567</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -263,281 +373,35 @@ Functions/Subroutines</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Always compute the CLASSICAL Townsend advance first. This gives Tlocal2 using the same path as ionE=false. If the resulting dT is small (saturated y region), the classical kinetic form is exact and we're done. If dT is large (recombination zone), we redo the advance with the Y_mod path to capture variable-c_V dynamics from ionisation buffering.</p>
+<p>Upgrade to Y_mod only in the recombination zone (large dT). Guard: if findY_mod overflows (cooling curve near-zero at this T), keep the classical result &ndash; variable c_V is irrelevant where Lambda ~ 0.</p>
+<p>Recombination zone: use table-based de for variable c_V.</p>
+<p>Saturated y or non-ionE: classical Townsend kinetic form.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01077">1077</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01381">1381</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__radiative__cooling_a88661f11a99d3b6462c409a89956c128_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a88661f11a99d3b6462c409a89956c128_cgraph" alt=""/></div>
 <map name="anamespacemod__radiative__cooling_a88661f11a99d3b6462c409a89956c128_cgraph" id="anamespacemod__radiative__cooling_a88661f11a99d3b6462c409a89956c128_cgraph">
-<area shape="rect" title=" " alt="" coords="5,245,176,285"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="224,5,395,45"/>
-<area shape="poly" title=" " alt="" coords="97,244,115,205,141,154,177,102,222,55,229,50,232,55,226,59,182,105,146,157,119,207,102,246"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a1926f39abc5bb0345c71fcfcd84effa5" title=" " alt="" coords="224,69,395,109"/>
-<area shape="poly" title=" " alt="" coords="104,243,152,183,185,149,222,119,232,113,235,118,226,124,189,153,156,186,108,247"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a80c571a771ebe516c760d855bfab090d" title=" " alt="" coords="224,134,395,189"/>
-<area shape="poly" title=" " alt="" coords="132,243,223,199,237,192,239,197,225,204,135,247"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a8a64aa6cb7c2be55247c345678086604" title=" " alt="" coords="224,213,395,253"/>
-<area shape="poly" title=" " alt="" coords="176,250,210,245,211,250,177,256"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a174fe54b5e525135480517711a1457b3" title=" " alt="" coords="224,277,395,317"/>
-<area shape="poly" title=" " alt="" coords="177,275,211,280,210,286,176,280"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#afc796e69f3a078d992911ee36792678d" title=" " alt="" coords="224,341,395,381"/>
-<area shape="poly" title=" " alt="" coords="133,283,225,327,241,334,239,339,223,332,130,288"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a2800a0e58c4806e404711af4d286a064" title=" " alt="" coords="224,405,395,445"/>
-<area shape="poly" title=" " alt="" coords="110,284,159,337,191,366,225,391,236,397,233,402,223,396,187,370,155,340,106,288"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a7b55b04b9aeaa544e239aa8b396cd7a1" title=" " alt="" coords="224,493,395,533"/>
-<area shape="poly" title=" " alt="" coords="105,284,152,364,187,411,226,455,262,484,259,488,222,459,183,415,148,367,100,287"/>
-<area shape="poly" title=" " alt="" coords="268,494,266,484,272,474,287,469,309,467,335,470,349,477,346,482,333,475,309,472,288,474,276,479,271,485,273,492"/>
+<area shape="rect" title=" " alt="" coords="5,197,176,237"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="230,5,401,45"/>
+<area shape="poly" title=" " alt="" coords="101,196,149,127,183,89,222,55,231,50,234,54,226,59,187,93,153,131,106,199"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a8a64aa6cb7c2be55247c345678086604" title=" " alt="" coords="230,69,401,109"/>
+<area shape="poly" title=" " alt="" coords="114,195,162,157,223,119,236,112,239,117,225,124,165,162,117,199"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a212aed250bd6178bb546267a1afce854" title="Inverse Y_mod lookup: given Y_target and nH, return T such that Y_mod(log10 nH, log10 T) = Y_target...." alt="" coords="230,133,401,173"/>
+<area shape="poly" title=" " alt="" coords="161,195,231,175,232,180,162,200"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#afc796e69f3a078d992911ee36792678d" title=" " alt="" coords="230,197,401,237"/>
+<area shape="poly" title=" " alt="" coords="177,215,216,215,216,220,177,220"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a81cd0f81479e631065613db1f2242837" title="Forward Y_mod lookup: bilinear interpolation in (log10 nH, log10 T) on the precomputed Y_mod table...." alt="" coords="230,261,401,301"/>
+<area shape="poly" title=" " alt="" coords="162,235,232,255,231,260,161,240"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a7b55b04b9aeaa544e239aa8b396cd7a1" title=" " alt="" coords="230,349,401,389"/>
+<area shape="poly" title=" " alt="" coords="120,235,225,311,270,340,267,344,223,316,117,240"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a58da51978da2397c68dac8296c1794c4" title=" " alt="" coords="224,413,407,453"/>
+<area shape="poly" title=" " alt="" coords="104,236,122,271,149,315,184,360,226,399,233,404,230,409,222,403,180,364,145,318,117,274,99,239"/>
+<area shape="poly" title=" " alt="" coords="273,350,271,340,278,330,293,325,315,323,341,326,356,333,353,338,340,331,315,328,294,330,281,335,276,341,279,348"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a1926f39abc5bb0345c71fcfcd84effa5" name="a1926f39abc5bb0345c71fcfcd84effa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1926f39abc5bb0345c71fcfcd84effa5">&#9670;&#160;</a></span>cooling_get_eint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine mod_radiative_cooling::cooling_get_eint </td>
-          <td>(</td>
-          <td class="paramtype">type(<a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html">rc_fluid</a>), intent(in)&#160;</td>
-          <td class="paramname"><em>fl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in)&#160;</td>
-          <td class="paramname"><em>w</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,1:ndim), intent(in)&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>ixi</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>ixo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s), intent(in)&#160;</td>
-          <td class="paramname"><em>pthermal</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s), intent(out)&#160;</td>
-          <td class="paramname"><em>eint</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01059">1059</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
-
-</div>
-</div>
-<a id="a80c571a771ebe516c760d855bfab090d" name="a80c571a771ebe516c760d855bfab090d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80c571a771ebe516c760d855bfab090d">&#9670;&#160;</a></span>cooling_get_pthermal_eint_rfactor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine mod_radiative_cooling::cooling_get_pthermal_eint_rfactor </td>
-          <td>(</td>
-          <td class="paramtype">type(<a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html">rc_fluid</a>), intent(in)&#160;</td>
-          <td class="paramname"><em>fl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>rho</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>rold</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(out)&#160;</td>
-          <td class="paramname"><em>pnew</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(out)&#160;</td>
-          <td class="paramname"><em>eint_new</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(out)&#160;</td>
-          <td class="paramname"><em>rnew</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01043">1043</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemod__radiative__cooling_a80c571a771ebe516c760d855bfab090d_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a80c571a771ebe516c760d855bfab090d_cgraph" alt=""/></div>
-<map name="anamespacemod__radiative__cooling_a80c571a771ebe516c760d855bfab090d_cgraph" id="anamespacemod__radiative__cooling_a80c571a771ebe516c760d855bfab090d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,176,60"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a3a50ab42a10d2f78d44428c437b97b2a" title=" " alt="" coords="224,5,395,60"/>
-<area shape="poly" title=" " alt="" coords="176,30,210,30,210,35,176,35"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a3a50ab42a10d2f78d44428c437b97b2a" name="a3a50ab42a10d2f78d44428c437b97b2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a50ab42a10d2f78d44428c437b97b2a">&#9670;&#160;</a></span>cooling_get_pthermal_rfactor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine mod_radiative_cooling::cooling_get_pthermal_rfactor </td>
-          <td>(</td>
-          <td class="paramtype">type(<a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html">rc_fluid</a>), intent(in)&#160;</td>
-          <td class="paramname"><em>fl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>rho</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>rold</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(out)&#160;</td>
-          <td class="paramname"><em>pnew</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(out)&#160;</td>
-          <td class="paramname"><em>rnew</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01030">1030</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemod__radiative__cooling_a3a50ab42a10d2f78d44428c437b97b2a_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a3a50ab42a10d2f78d44428c437b97b2a_cgraph" alt=""/></div>
-<map name="anamespacemod__radiative__cooling_a3a50ab42a10d2f78d44428c437b97b2a_cgraph" id="anamespacemod__radiative__cooling_a3a50ab42a10d2f78d44428c437b97b2a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,176,60"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a25d6e8a1e5c5b687d5990a3ccfbc27f6" title=" " alt="" coords="224,13,395,53"/>
-<area shape="poly" title=" " alt="" coords="176,30,210,30,210,35,176,35"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a25d6e8a1e5c5b687d5990a3ccfbc27f6" name="a25d6e8a1e5c5b687d5990a3ccfbc27f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25d6e8a1e5c5b687d5990a3ccfbc27f6">&#9670;&#160;</a></span>cooling_get_rfactor_t()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine mod_radiative_cooling::cooling_get_rfactor_t </td>
-          <td>(</td>
-          <td class="paramtype">type(<a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html">rc_fluid</a>), intent(in)&#160;</td>
-          <td class="paramname"><em>fl</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>rold</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(out)&#160;</td>
-          <td class="paramname"><em>rnew</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01018">1018</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -557,7 +421,43 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00675">675</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00964">964</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
+<a id="a2ed54b69ceae1b9a334d94bf4bda7d41" name="a2ed54b69ceae1b9a334d94bf4bda7d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ed54b69ceae1b9a334d94bf4bda7d41">&#9670;&#160;</a></span>finddldt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_radiative_cooling::finddldt </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>tpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>dlpoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html">rc_fluid</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>fl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01719">1719</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -593,7 +493,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01290">1290</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01609">1609</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -629,27 +529,27 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01378">1378</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01672">1672</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
-<a id="a174fe54b5e525135480517711a1457b3" name="a174fe54b5e525135480517711a1457b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a174fe54b5e525135480517711a1457b3">&#9670;&#160;</a></span>findt_eion()</h2>
+<a id="a212aed250bd6178bb546267a1afce854" name="a212aed250bd6178bb546267a1afce854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a212aed250bd6178bb546267a1afce854">&#9670;&#160;</a></span>findt_mod()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">subroutine mod_radiative_cooling::findt_eion </td>
+          <td class="memname">double precision function mod_radiative_cooling::findt_mod </td>
           <td>(</td>
-          <td class="paramtype">double precision, intent(out)&#160;</td>
-          <td class="paramname"><em>tpoint</em>, </td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>y_target</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>ypoint</em>, </td>
+          <td class="paramname"><em>nh_loc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -665,7 +565,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01425">1425</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p>Inverse Y_mod lookup: given Y_target and nH, return T such that Y_mod(log10 nH, log10 T) = Y_target. Bisection on the cooling-table i index using values interpolated linearly between the two adjacent nH rows (same convention as the classical findT). Saturates at the table extremes when Y_target falls outside [Y(tcoolmax), Y(tcoolmin)]. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l02067">2067</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -701,27 +603,27 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01320">1320</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01634">1634</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
-<a id="a2800a0e58c4806e404711af4d286a064" name="a2800a0e58c4806e404711af4d286a064"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2800a0e58c4806e404711af4d286a064">&#9670;&#160;</a></span>findy_eion()</h2>
+<a id="a81cd0f81479e631065613db1f2242837" name="a81cd0f81479e631065613db1f2242837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81cd0f81479e631065613db1f2242837">&#9670;&#160;</a></span>findy_mod()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">subroutine mod_radiative_cooling::findy_eion </td>
+          <td class="memname">double precision function mod_radiative_cooling::findy_mod </td>
           <td>(</td>
           <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>tpoint</em>, </td>
+          <td class="paramname"><em>te_loc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, intent(out)&#160;</td>
-          <td class="paramname"><em>ypoint</em>, </td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>nh_loc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -737,7 +639,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01351">1351</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p>Forward Y_mod lookup: bilinear interpolation in (log10 nH, log10 T) on the precomputed Y_mod table. Both axes are uniform in log space. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l02032">2032</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -808,20 +712,17 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ixi</td><td>This will need revisiting in LTE</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>This will need revisiting in LTE</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ixo</td><td>This will need revisiting in LTE</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>This will need revisiting in LTE </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00883">883</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemod__radiative__cooling_aa19b525e143eab6061d44286ba2249c9_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_aa19b525e143eab6061d44286ba2249c9_cgraph" alt=""/></div>
-<map name="anamespacemod__radiative__cooling_aa19b525e143eab6061d44286ba2249c9_cgraph" id="anamespacemod__radiative__cooling_aa19b525e143eab6061d44286ba2249c9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,41,176,81"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a1926f39abc5bb0345c71fcfcd84effa5" title=" " alt="" coords="224,5,395,45"/>
-<area shape="poly" title=" " alt="" coords="176,45,210,39,211,44,177,50"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a80c571a771ebe516c760d855bfab090d" title=" " alt="" coords="224,70,395,125"/>
-<area shape="poly" title=" " alt="" coords="177,73,211,78,210,84,176,78"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01170">1170</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -898,26 +799,27 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Always classical Townsend first. Upgrade to Y_mod only in the recombination zone (large ΔT) — saturated y uses the identical formula as ionE=false, removing per-substep asymmetry.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00937">937</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01262">1262</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__radiative__cooling_a24ac5424c9ca4f7cf7cdddb38e084c89_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a24ac5424c9ca4f7cf7cdddb38e084c89_cgraph" alt=""/></div>
 <map name="anamespacemod__radiative__cooling_a24ac5424c9ca4f7cf7cdddb38e084c89_cgraph" id="anamespacemod__radiative__cooling_a24ac5424c9ca4f7cf7cdddb38e084c89_cgraph">
-<area shape="rect" title=" " alt="" coords="5,181,176,221"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="224,5,395,45"/>
-<area shape="poly" title=" " alt="" coords="104,179,152,119,185,85,222,55,232,49,235,54,226,60,189,89,156,122,108,183"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a80c571a771ebe516c760d855bfab090d" title=" " alt="" coords="224,70,395,125"/>
-<area shape="poly" title=" " alt="" coords="132,179,223,135,237,128,239,133,225,140,135,183"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a8a64aa6cb7c2be55247c345678086604" title=" " alt="" coords="224,149,395,189"/>
-<area shape="poly" title=" " alt="" coords="176,186,210,181,211,186,177,192"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a174fe54b5e525135480517711a1457b3" title=" " alt="" coords="224,213,395,253"/>
-<area shape="poly" title=" " alt="" coords="177,211,211,216,210,222,176,216"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#afc796e69f3a078d992911ee36792678d" title=" " alt="" coords="224,277,395,317"/>
-<area shape="poly" title=" " alt="" coords="133,219,225,263,241,270,239,275,223,268,130,224"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a2800a0e58c4806e404711af4d286a064" title=" " alt="" coords="224,341,395,381"/>
-<area shape="poly" title=" " alt="" coords="110,220,159,273,191,302,225,327,236,333,233,338,223,332,187,306,155,276,106,224"/>
+<area shape="rect" title=" " alt="" coords="5,165,176,205"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="230,5,401,45"/>
+<area shape="poly" title=" " alt="" coords="106,163,155,110,187,81,223,55,234,49,236,54,225,60,190,85,158,114,110,167"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a8a64aa6cb7c2be55247c345678086604" title=" " alt="" coords="230,69,401,109"/>
+<area shape="poly" title=" " alt="" coords="130,163,223,119,241,112,243,117,225,124,132,168"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a212aed250bd6178bb546267a1afce854" title="Inverse Y_mod lookup: given Y_target and nH, return T such that Y_mod(log10 nH, log10 T) = Y_target...." alt="" coords="230,133,401,173"/>
+<area shape="poly" title=" " alt="" coords="176,171,216,165,216,170,177,176"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#afc796e69f3a078d992911ee36792678d" title=" " alt="" coords="230,197,401,237"/>
+<area shape="poly" title=" " alt="" coords="177,195,216,201,216,206,176,200"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a81cd0f81479e631065613db1f2242837" title="Forward Y_mod lookup: bilinear interpolation in (log10 nH, log10 T) on the precomputed Y_mod table...." alt="" coords="230,261,401,301"/>
+<area shape="poly" title=" " alt="" coords="132,203,225,247,243,254,241,259,223,252,130,208"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a58da51978da2397c68dac8296c1794c4" title=" " alt="" coords="224,325,407,365"/>
+<area shape="poly" title=" " alt="" coords="110,204,158,257,190,286,225,311,236,317,234,322,223,316,187,290,155,260,106,207"/>
 </map>
 </div>
 
@@ -985,20 +887,19 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00699">699</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00988">988</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__radiative__cooling_a10e2dbb5f17c0319178f54e914f8efb4_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a10e2dbb5f17c0319178f54e914f8efb4_cgraph" alt=""/></div>
 <map name="anamespacemod__radiative__cooling_a10e2dbb5f17c0319178f54e914f8efb4_cgraph" id="anamespacemod__radiative__cooling_a10e2dbb5f17c0319178f54e914f8efb4_cgraph">
 <area shape="rect" title=" " alt="" coords="5,69,176,109"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="224,5,395,45"/>
-<area shape="poly" title=" " alt="" coords="159,67,227,47,228,52,161,72"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="224,69,395,109"/>
-<area shape="poly" title=" " alt="" coords="176,87,210,87,210,92,176,92"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a7b55b04b9aeaa544e239aa8b396cd7a1" title=" " alt="" coords="224,157,395,197"/>
-<area shape="poly" title=" " alt="" coords="143,107,247,150,245,155,141,112"/>
-<area shape="poly" title=" " alt="" coords="268,158,266,148,272,138,287,133,309,131,335,134,349,141,346,146,333,139,309,136,288,138,276,143,271,149,273,156"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="230,5,401,45"/>
+<area shape="poly" title=" " alt="" coords="161,67,231,47,232,52,162,72"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="230,69,401,109"/>
+<area shape="poly" title=" " alt="" coords="177,87,216,87,216,92,177,92"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a58da51978da2397c68dac8296c1794c4" title=" " alt="" coords="224,133,407,173"/>
+<area shape="poly" title=" " alt="" coords="162,107,232,127,231,132,161,112"/>
 </map>
 </div>
 
@@ -1043,19 +944,19 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in)&#160;</td>
+          <td class="paramtype">double precision, dimension(ixi^s, 1:nw), intent(in)&#160;</td>
           <td class="paramname"><em>wct</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,1:nw), intent(in)&#160;</td>
+          <td class="paramtype">double precision, dimension(ixi^s, 1:nw)&#160;</td>
           <td class="paramname"><em>w</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,1:ndim), intent(in)&#160;</td>
+          <td class="paramtype">double precision, dimension(ixi^s, 1:ndim), intent(in)&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -1077,30 +978,75 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Always classical Townsend first. Upgrade to Y_mod only where ionisation buffering matters (large ΔT, recombination zone).</p>
+<p>Recombination zone: table-based de for variable c_V.</p>
+<p>Saturated y or non-ionE: identical Townsend kinetic form.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00771">771</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01034">1034</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__radiative__cooling_ace21ede6027b6baae280b3a08b6a2149_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_ace21ede6027b6baae280b3a08b6a2149_cgraph" alt=""/></div>
 <map name="anamespacemod__radiative__cooling_ace21ede6027b6baae280b3a08b6a2149_cgraph" id="anamespacemod__radiative__cooling_ace21ede6027b6baae280b3a08b6a2149_cgraph">
-<area shape="rect" title=" " alt="" coords="5,213,176,253"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="224,5,395,45"/>
-<area shape="poly" title=" " alt="" coords="100,212,146,136,181,93,222,55,230,50,233,54,226,59,185,97,151,140,105,214"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a1926f39abc5bb0345c71fcfcd84effa5" title=" " alt="" coords="224,69,395,109"/>
-<area shape="poly" title=" " alt="" coords="110,211,159,166,223,119,234,113,237,117,225,124,162,170,113,215"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a80c571a771ebe516c760d855bfab090d" title=" " alt="" coords="224,134,395,189"/>
-<area shape="poly" title=" " alt="" coords="151,211,212,190,214,195,153,216"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a8a64aa6cb7c2be55247c345678086604" title=" " alt="" coords="224,213,395,253"/>
-<area shape="poly" title=" " alt="" coords="176,231,210,231,210,236,176,236"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a174fe54b5e525135480517711a1457b3" title=" " alt="" coords="224,277,395,317"/>
-<area shape="poly" title=" " alt="" coords="161,251,228,271,227,276,159,256"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#afc796e69f3a078d992911ee36792678d" title=" " alt="" coords="224,341,395,381"/>
-<area shape="poly" title=" " alt="" coords="117,251,166,289,225,327,238,333,236,338,223,332,163,293,114,256"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a2800a0e58c4806e404711af4d286a064" title=" " alt="" coords="224,405,395,445"/>
-<area shape="poly" title=" " alt="" coords="106,252,153,320,187,358,226,391,233,396,230,401,222,395,183,361,149,323,101,255"/>
+<area shape="rect" title=" " alt="" coords="5,165,176,205"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="230,5,401,45"/>
+<area shape="poly" title=" " alt="" coords="106,163,155,110,187,81,223,55,234,49,236,54,225,60,190,85,158,114,110,167"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a8a64aa6cb7c2be55247c345678086604" title=" " alt="" coords="230,69,401,109"/>
+<area shape="poly" title=" " alt="" coords="130,163,223,119,241,112,243,117,225,124,132,168"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a212aed250bd6178bb546267a1afce854" title="Inverse Y_mod lookup: given Y_target and nH, return T such that Y_mod(log10 nH, log10 T) = Y_target...." alt="" coords="230,133,401,173"/>
+<area shape="poly" title=" " alt="" coords="176,171,216,165,216,170,177,176"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#afc796e69f3a078d992911ee36792678d" title=" " alt="" coords="230,197,401,237"/>
+<area shape="poly" title=" " alt="" coords="177,195,216,201,216,206,176,200"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a81cd0f81479e631065613db1f2242837" title="Forward Y_mod lookup: bilinear interpolation in (log10 nH, log10 T) on the precomputed Y_mod table...." alt="" coords="230,261,401,301"/>
+<area shape="poly" title=" " alt="" coords="132,203,225,247,243,254,241,259,223,252,130,208"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a58da51978da2397c68dac8296c1794c4" title=" " alt="" coords="224,325,407,365"/>
+<area shape="poly" title=" " alt="" coords="110,204,158,257,190,286,225,311,236,317,234,322,223,316,187,290,155,260,106,207"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a1642a1fde6a32ce82ba5430b937ae97d" name="a1642a1fde6a32ce82ba5430b937ae97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1642a1fde6a32ce82ba5430b937ae97d">&#9670;&#160;</a></span>invert_row_bisect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision function mod_radiative_cooling::invert_row_bisect </td>
+          <td>(</td>
+          <td class="paramtype">double precision, dimension(ncool), intent(in)&#160;</td>
+          <td class="paramname"><em>y_row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ncool), intent(in)&#160;</td>
+          <td class="paramname"><em>t_grid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ncool</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>y_target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bisection on a single Y_mod row to find log10(T) such that Y_mod_row(i) = y_target. The row is monotonically increasing in <em>decreasing</em> i (since Y(ncool)=0 grows toward Y(1)=Y_max). Returns log10 T (code units). </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01990">1990</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>
@@ -1130,7 +1076,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01263">1263</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01582">1582</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1229,7 +1175,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00858">858</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01142">1142</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1242,38 +1188,6 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="179,87,213,87,213,92,179,92"/>
 <area shape="rect" href="namespacemod__radiative__cooling.html#a24ac5424c9ca4f7cf7cdddb38e084c89" title=" " alt="" coords="227,133,397,173"/>
 <area shape="poly" title=" " alt="" coords="180,112,230,127,229,132,178,117"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a6d18ddd22fe571bd3d4a030db3ad3db6" name="a6d18ddd22fe571bd3d4a030db3ad3db6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d18ddd22fe571bd3d4a030db3ad3db6">&#9670;&#160;</a></span>radiative_cooling_build_eion_table()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine mod_radiative_cooling::radiative_cooling_build_eion_table </td>
-          <td>(</td>
-          <td class="paramtype">type(<a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html">rc_fluid</a>), intent(inout)&#160;</td>
-          <td class="paramname"><em>fl</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00613">613</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemod__radiative__cooling_a6d18ddd22fe571bd3d4a030db3ad3db6_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a6d18ddd22fe571bd3d4a030db3ad3db6_cgraph" alt=""/></div>
-<map name="anamespacemod__radiative__cooling_a6d18ddd22fe571bd3d4a030db3ad3db6_cgraph" id="anamespacemod__radiative__cooling_a6d18ddd22fe571bd3d4a030db3ad3db6_cgraph">
-<area shape="rect" title=" " alt="" coords="5,27,187,82"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="241,5,411,45"/>
-<area shape="poly" title=" " alt="" coords="187,40,227,35,228,41,188,46"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="235,70,417,95"/>
-<area shape="poly" title=" " alt="" coords="188,63,221,67,220,73,187,68"/>
 </map>
 </div>
 
@@ -1305,19 +1219,21 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00152">152</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00446">446</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__radiative__cooling_a2c0aab05964e01b97b9ae65c6d2ea830_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a2c0aab05964e01b97b9ae65c6d2ea830_cgraph" alt=""/></div>
 <map name="anamespacemod__radiative__cooling_a2c0aab05964e01b97b9ae65c6d2ea830_cgraph" id="anamespacemod__radiative__cooling_a2c0aab05964e01b97b9ae65c6d2ea830_cgraph">
-<area shape="rect" title=" " alt="" coords="5,69,176,109"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a5e673c837df3fbd572820caf874c3c7f" title=" " alt="" coords="230,5,401,45"/>
-<area shape="poly" title=" " alt="" coords="161,67,231,47,232,52,162,72"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="230,69,401,109"/>
-<area shape="poly" title=" " alt="" coords="177,87,216,87,216,92,177,92"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="224,134,407,159"/>
-<area shape="poly" title=" " alt="" coords="170,107,252,128,251,133,169,112"/>
+<area shape="rect" title=" " alt="" coords="5,99,176,139"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a5e673c837df3fbd572820caf874c3c7f" title=" " alt="" coords="231,5,401,45"/>
+<area shape="poly" title=" " alt="" coords="131,96,223,55,241,48,243,53,225,60,134,101"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="231,69,401,109"/>
+<area shape="poly" title=" " alt="" coords="176,105,217,100,217,105,177,110"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="225,134,407,159"/>
+<area shape="poly" title=" " alt="" coords="177,127,211,131,211,136,176,132"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a48d61fedcf758ebf7cfab8b805dca1c2" title="Build the Voigt escape probability lookup table. Called once (guarded by voigt_table_ready flag)...." alt="" coords="224,184,408,224"/>
+<area shape="poly" title=" " alt="" coords="143,136,225,168,248,177,246,182,223,173,141,141"/>
 </map>
 </div>
 
@@ -1351,7 +1267,295 @@ Here is the call graph for this function:</div>
 
 <p>Radiative cooling initialization. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00144">144</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00262">262</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
+<a id="a58da51978da2397c68dac8296c1794c4" name="a58da51978da2397c68dac8296c1794c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58da51978da2397c68dac8296c1794c4">&#9670;&#160;</a></span>radiative_cooling_taper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_radiative_cooling::radiative_cooling_taper </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>x_ndim</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>rho_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>te_val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html">rc_fluid</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>fl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>factor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ix</td><td>Compute multiplicative taper factor for radiative cooling. Returns 1.0 when no tapering applies; &lt; 1.0 near boundaries, at high density, or in optically thick regions (escape probability).</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td>Compute multiplicative taper factor for radiative cooling. Returns 1.0 when no tapering applies; &lt; 1.0 near boundaries, at high density, or in optically thick regions (escape probability). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01191">1191</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__radiative__cooling_a58da51978da2397c68dac8296c1794c4_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a58da51978da2397c68dac8296c1794c4_cgraph" alt=""/></div>
+<map name="anamespacemod__radiative__cooling_a58da51978da2397c68dac8296c1794c4_cgraph" id="anamespacemod__radiative__cooling_a58da51978da2397c68dac8296c1794c4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,188,69"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a8e74389dbb8b8d78bdf6eeebb9bc6e90" title="Look up the Voigt escape probability for a given tau. Uses linear interpolation in log10(tau) space." alt="" coords="236,29,407,69"/>
+<area shape="poly" title=" " alt="" coords="188,47,222,47,222,52,188,52"/>
+<area shape="poly" title=" " alt="" coords="279,30,277,20,284,10,299,5,321,3,347,6,362,13,359,18,346,11,321,8,300,10,287,15,282,21,285,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af2ed4be8f441d9da08d5020a4919e76a" name="af2ed4be8f441d9da08d5020a4919e76a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2ed4be8f441d9da08d5020a4919e76a">&#9670;&#160;</a></span>simpson_composite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision function mod_radiative_cooling::simpson_composite </td>
+          <td>(</td>
+          <td class="paramtype">double precision, dimension(0:n), intent(in)&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Composite Simpson's rule on (N+1) equally spaced samples (N even). N must be a positive even integer; h is the step size. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l01953">1953</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
+<a id="a48d61fedcf758ebf7cfab8b805dca1c2" name="a48d61fedcf758ebf7cfab8b805dca1c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d61fedcf758ebf7cfab8b805dca1c2">&#9670;&#160;</a></span>voigt_escape_init_table()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_radiative_cooling::voigt_escape_init_table</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Build the Voigt escape probability lookup table. Called once (guarded by voigt_table_ready flag). Uses 64-point Gauss-Legendre quadrature on [0, x_max] to evaluate E(tau_0) = (2 phi(0)/tau_0) * integral_0^{x_max} [1-exp(-tau_0 g(x))] dx where g(x) = phi(x)/phi(0) for the Voigt profile H(a,x) truncated at x_max. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00275">275</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__radiative__cooling_a48d61fedcf758ebf7cfab8b805dca1c2_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a48d61fedcf758ebf7cfab8b805dca1c2_cgraph" alt=""/></div>
+<map name="anamespacemod__radiative__cooling_a48d61fedcf758ebf7cfab8b805dca1c2_cgraph" id="anamespacemod__radiative__cooling_a48d61fedcf758ebf7cfab8b805dca1c2_cgraph">
+<area shape="rect" title="Build the Voigt escape probability lookup table. Called once (guarded by voigt_table_ready flag)...." alt="" coords="5,49,189,89"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a0a513826e1393ead094f386155695a7f" title="Gauss&#45;Legendre quadrature nodes and weights on [a,b]. Uses the Golub&#45;Welsch algorithm for n points." alt="" coords="237,5,409,45"/>
+<area shape="poly" title=" " alt="" coords="189,49,223,42,224,47,190,54"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a021e7857fc29d60332302aa525b6ab34" title="Voigt profile ratio phi(x)/phi(0) using Humlicek (1982) Region I/II approx. For the small&#45;a regime (a..." alt="" coords="238,93,409,133"/>
+<area shape="poly" title=" " alt="" coords="190,85,225,91,224,97,189,90"/>
+<area shape="poly" title=" " alt="" coords="281,94,279,84,286,74,301,69,323,67,349,70,364,77,361,82,348,75,323,72,302,74,289,79,284,85,287,92"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e74389dbb8b8d78bdf6eeebb9bc6e90" name="a8e74389dbb8b8d78bdf6eeebb9bc6e90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e74389dbb8b8d78bdf6eeebb9bc6e90">&#9670;&#160;</a></span>voigt_escape_lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision function mod_radiative_cooling::voigt_escape_lookup </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>tau</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Look up the Voigt escape probability for a given tau. Uses linear interpolation in log10(tau) space. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00365">365</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__radiative__cooling_a8e74389dbb8b8d78bdf6eeebb9bc6e90_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a8e74389dbb8b8d78bdf6eeebb9bc6e90_cgraph" alt=""/></div>
+<map name="anamespacemod__radiative__cooling_a8e74389dbb8b8d78bdf6eeebb9bc6e90_cgraph" id="anamespacemod__radiative__cooling_a8e74389dbb8b8d78bdf6eeebb9bc6e90_cgraph">
+<area shape="rect" title="Look up the Voigt escape probability for a given tau. Uses linear interpolation in log10(tau) space." alt="" coords="5,29,176,69"/>
+<area shape="poly" title=" " alt="" coords="58,30,56,20,61,11,73,5,91,3,111,6,122,13,119,17,109,11,91,8,75,10,65,15,61,21,63,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0a513826e1393ead094f386155695a7f" name="a0a513826e1393ead094f386155695a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a513826e1393ead094f386155695a7f">&#9670;&#160;</a></span>voigt_gauss_legendre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_radiative_cooling::voigt_gauss_legendre </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(n), intent(out)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(n), intent(out)&#160;</td>
+          <td class="paramname"><em>w</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gauss-Legendre quadrature nodes and weights on [a,b]. Uses the Golub-Welsch algorithm for n points. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00403">403</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+
+</div>
+</div>
+<a id="a021e7857fc29d60332302aa525b6ab34" name="a021e7857fc29d60332302aa525b6ab34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a021e7857fc29d60332302aa525b6ab34">&#9670;&#160;</a></span>voigt_profile_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision function mod_radiative_cooling::voigt_profile_ratio </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Voigt profile ratio phi(x)/phi(0) using Humlicek (1982) Region I/II approx. For the small-a regime (a &lt; 0.01), this simplifies to: H(a,x)/H(a,0) ≈ exp(-x^2) + a*sqrt(pi)/x^2 for |x| &gt; ~2 We use the exact Gaussian core + Lorentzian wing decomposition. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00339">339</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__radiative__cooling_a021e7857fc29d60332302aa525b6ab34_cgraph.png" border="0" usemap="#anamespacemod__radiative__cooling_a021e7857fc29d60332302aa525b6ab34_cgraph" alt=""/></div>
+<map name="anamespacemod__radiative__cooling_a021e7857fc29d60332302aa525b6ab34_cgraph" id="anamespacemod__radiative__cooling_a021e7857fc29d60332302aa525b6ab34_cgraph">
+<area shape="rect" title="Voigt profile ratio phi(x)/phi(0) using Humlicek (1982) Region I/II approx. For the small&#45;a regime (a..." alt="" coords="5,29,176,69"/>
+<area shape="poly" title=" " alt="" coords="58,30,56,20,61,11,73,5,91,3,111,6,122,13,119,17,109,11,91,8,75,10,65,15,61,21,63,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a4d632c0397eadef66d79db4ed3e2ea04" name="a4d632c0397eadef66d79db4ed3e2ea04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d632c0397eadef66d79db4ed3e2ea04">&#9670;&#160;</a></span>lb_cool_accum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public mod_radiative_cooling::lb_cool_accum = 0.0d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Per-rank cooling-only compute accumulator for lb_diagnose. Sums the wall time spent inside radiative_cooling_add_source across all blocks and substages within one full advance() call. Reset by <a class="el" href="namespacemod__advance.html#a3abc5d81403e5443dc97a4db696acfd1" title="Advance all the grids over one time step, including all sources.">mod_advance::advance</a> at the start of each step. Note: this is a subset of lb_compute_accum (which already encloses the whole advect1 block loop); it isolates the cooling Newton/exact-solver kernel cost from the surrounding finite-volume work. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__radiative__cooling_8t_source.html#l00024">24</a> of file <a class="el" href="mod__radiative__cooling_8t_source.html">mod_radiative_cooling.t</a>.</p>
 
 </div>
 </div>

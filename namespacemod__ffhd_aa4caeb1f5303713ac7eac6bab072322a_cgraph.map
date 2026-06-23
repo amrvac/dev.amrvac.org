@@ -1,5 +1,7 @@
 <map id="mod_ffhd::ffhd_activate" name="mod_ffhd::ffhd_activate">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,181,38"/>
-<area shape="rect" id="Node000002" href="$namespacemod__ffhd__phys.html#a75d51189f43884f84c71e7ecbabe1e70" title=" " alt="" coords="229,5,384,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,23,215,23,215,28,182,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,45,181,70"/>
+<area shape="rect" id="Node000002" href="$namespacemod__ffhd__eos.html#a1f1ff64d857d7bf69ad107612b339978" title="Link the appropriate EoS conversion/closure routines per eos_type. Called from ffhd_activate after ff..." alt="" coords="233,5,380,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,42,219,36,220,41,179,47"/>
+<area shape="rect" id="Node000065" href="$namespacemod__ffhd__phys.html#a75d51189f43884f84c71e7ecbabe1e70" title=" " alt="" coords="229,69,384,109"/>
+<area shape="poly" id="edge2_Node000001_Node000065" title=" " alt="" coords="179,67,216,73,216,78,178,73"/>
 </map>

@@ -1,0 +1,7 @@
+<map id="mod_eos_lte_saha::saha_gamma1_from_nh_t" name="mod_eos_lte_saha::saha_gamma1_from_nh_t">
+<area shape="rect" id="Node000001" title="Look up Gamma1 from the analytical 2D table (nH, T axes in code units). For use when eosmethod == &#39;an..." alt="" coords="5,35,188,75"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__interp.html#ae8a904568b5e9e92c8b329470374567b" title="Dispatch wrapper: bicubic lookup that branches on the table&#39;s is_uniform flag. Hides the uniform&#45;vs&#45;a..." alt="" coords="237,5,417,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,40,224,36,224,41,188,46"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="236,70,419,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,63,223,67,222,73,188,68"/>
+</map>

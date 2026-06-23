@@ -1,0 +1,7 @@
+<map id="mod_eos_lte::t_from_nh_eint" name="mod_eos_lte::t_from_nh_eint">
+<area shape="rect" id="Node000001" title="Temperature from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic &#45;&gt; Saha bisection/Newt..." alt="" coords="5,49,161,89"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__entropy.html#a96ef8d86882b4474a8082020184da9fc" title="Forward: T and y from (log nH, log eint/nH) – combined for the update_eos_LTE hot path that needs bot..." alt="" coords="214,5,390,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,53,200,47,201,52,162,59"/>
+<area shape="rect" id="Node000003" href="$namespacemod__eos__lte__entropy.html#a6a9b182e03e2bfcab5eb3c6b0aba6f7e" title="Public wrappers – code&#45;unit out." alt="" coords="209,85,395,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,79,196,85,195,90,161,84"/>
+</map>

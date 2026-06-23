@@ -1,0 +1,7 @@
+<map id="mod_eos_fi::eos_finalise_fi" name="mod_eos_fi::eos_finalise_fi">
+<area shape="rect" id="Node000001" title="FI arm of eos_finalise: wire the ideal&#45;gas getter set and the fully&#45;ionised particle counts (2 + 3*A_..." alt="" coords="5,45,201,70"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__fi.html#ad6f2f969e3a45b74235800aeb4ccf82f" title="Temperature from internal energy, fully&#45;ionised ideal gas: T = pth/(rho*R)." alt="" coords="249,5,463,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,42,235,38,236,43,202,48"/>
+<area shape="rect" id="Node000003" href="$namespacemod__eos__fi.html#a0955641516eea38885f9f16f733434cd" title="FI update_eos: nothing to cache for an ideal gas. Called each RK substep." alt="" coords="281,69,431,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,67,268,76,267,81,201,72"/>
+</map>

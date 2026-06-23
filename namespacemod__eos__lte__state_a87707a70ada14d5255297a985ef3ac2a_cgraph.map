@@ -1,0 +1,8 @@
+<map id="mod_eos_lte_state::load_state_lte" name="mod_eos_lte_state::load_state_lte">
+<area shape="rect" id="Node000001" title="state arms of the eos_init / eos_finalise dispatchers (mod_eos_LTE)" alt="" coords="5,5,159,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__tables.html#a2510131ae7d8528d4a74db15f6e38e4d" title="Read one named table file into its eos% container. The filename encodes the composition (H or HHe) an..." alt="" coords="409,5,561,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,20,207,19,361,19,395,19,395,25,361,24,207,24,159,25"/>
+<area shape="rect" id="Node000004" href="$namespacemod__eos__lte__tables.html#a1246d0f0e3285cf4b65f34c582f08509" title="Attempt to load pre&#45;computed table from binary file. If the file does not exist, silently skip and th..." alt="" coords="207,33,361,73"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="159,33,194,38,193,43,158,39"/>
+<area shape="poly" id="edge3_Node000004_Node000002" title=" " alt="" coords="361,40,395,35,396,40,362,45"/>
+</map>

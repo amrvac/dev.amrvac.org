@@ -1,7 +1,0 @@
-<map id="mod_radiative_cooling::floortemperature" name="mod_radiative_cooling::floortemperature">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,41,176,81"/>
-<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a1926f39abc5bb0345c71fcfcd84effa5" title=" " alt="" coords="224,5,395,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,45,210,39,211,44,177,50"/>
-<area shape="rect" id="Node000003" href="$namespacemod__radiative__cooling.html#a80c571a771ebe516c760d855bfab090d" title=" " alt="" coords="224,70,395,125"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,73,211,78,210,84,176,78"/>
-</map>

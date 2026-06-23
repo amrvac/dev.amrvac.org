@@ -119,14 +119,17 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Advance all the grids over one time step, including all sources. </p>
+<p>calculates temperature based on conservative state</p>
+<p>calculates temperature based on conservative state</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00017">17</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00022">22</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__advance_a3abc5d81403e5443dc97a4db696acfd1_cgraph.png" border="0" usemap="#anamespacemod__advance_a3abc5d81403e5443dc97a4db696acfd1_cgraph" alt=""/></div>
 <map name="anamespacemod__advance_a3abc5d81403e5443dc97a4db696acfd1_cgraph" id="anamespacemod__advance_a3abc5d81403e5443dc97a4db696acfd1_cgraph">
 <area shape="rect" title="Advance all the grids over one time step, including all sources." alt="" coords="5,464,181,490"/>
+<area shape="poly" title=" " alt="" coords="54,466,45,456,49,446,66,440,93,438,128,441,138,446,142,452,137,455,134,450,127,447,93,443,67,445,53,450,50,455,57,462"/>
 <area shape="rect" href="namespacemod__source.html#ade000a04c13e706d440c104d28b71cfa" title=" " alt="" coords="255,132,423,172"/>
 <area shape="poly" title=" " alt="" coords="94,464,105,412,129,336,147,294,169,253,195,215,228,182,242,172,245,176,231,186,200,218,173,256,151,296,134,337,110,413,99,465"/>
 <area shape="rect" href="namespacemod__source.html#a5968f73a47943fc0490e07e46ee13858" title="Add source within ixO for iws: w=w+qdt*S[wCT]." alt="" coords="497,260,681,286"/>
@@ -204,7 +207,7 @@ Here is the call graph for this function:</div>
 
 <p>process is a user entry in time loop, before output and advance allows to modify solution, add extra variables, etc. Warning: CFL dt already determined (and is not recomputed)! </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00734">734</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00882">882</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -246,7 +249,7 @@ Here is the call graph for this function:</div>
 
 <p>process_advanced is user entry in time loop, just after advance allows to modify solution, add extra variables, etc. added for handling two-way coupled PIC-MHD Warning: w is now at global_time^(n+1), global time and iteration at global_time^n, it^n </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00766">766</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__advance_8t_source.html#l00914">914</a> of file <a class="el" href="mod__advance_8t_source.html">mod_advance.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

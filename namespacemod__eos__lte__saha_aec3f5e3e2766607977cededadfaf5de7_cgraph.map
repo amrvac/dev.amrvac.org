@@ -1,0 +1,5 @@
+<map id="mod_eos_lte_saha::saha_eint_from_nh_t" name="mod_eos_lte_saha::saha_eint_from_nh_t">
+<area shape="rect" id="Node000001" title="Internal energy per nH from analytical Saha, in CODE UNITS. eint_nH = 1.5*(1+y)*kB*T [+ y*chi_H] in C..." alt="" coords="5,5,188,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="236,13,419,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,23,222,23,222,28,188,28"/>
+</map>

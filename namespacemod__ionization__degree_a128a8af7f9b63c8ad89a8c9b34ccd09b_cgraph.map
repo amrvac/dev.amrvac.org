@@ -1,8 +1,0 @@
-<map id="mod_ionization_degree::ionization_get_state" name="mod_ionization_degree::ionization_get_state">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,46,180,86"/>
-<area shape="rect" id="Node000002" href="$namespacemod__ionization__degree.html#a7004b2e1495848e89a35734d60d7f40c" title=" " alt="" coords="228,5,403,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,50,214,45,215,50,181,56"/>
-<area shape="rect" id="Node000004" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="451,53,633,79"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,67,228,69,403,69,437,68,437,73,403,74,228,74,180,73"/>
-<area shape="poly" id="edge2_Node000002_Node000004" title=" " alt="" coords="404,43,442,49,442,54,403,48"/>
-</map>

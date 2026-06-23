@@ -100,7 +100,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Set the "eta" array for resistive MHD based on w or the "current" variable which has components between idirmin and 3. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00314">314</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00322">322</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4e9fa4b0fba07155259c88b4205cf793" name="a4e9fa4b0fba07155259c88b4205cf793"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e9fa4b0fba07155259c88b4205cf793">&#9670;&#160;</a></span>special_resistivity()</h2>
@@ -156,13 +156,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s,7-2*ndir:3)&#160;</td>
+          <td class="paramtype">double precision, dimension(ixi^s,7-2*ndir:3), intent(in)&#160;</td>
           <td class="paramname"><em>current</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s)&#160;</td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(out)&#160;</td>
           <td class="paramname"><em>eta</em>&#160;</td>
         </tr>
         <tr>
@@ -178,7 +178,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00314">314</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00322">322</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>

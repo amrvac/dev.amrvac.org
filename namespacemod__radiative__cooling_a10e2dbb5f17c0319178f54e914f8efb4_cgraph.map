@@ -1,10 +1,9 @@
 <map id="mod_radiative_cooling::getvar_cooling" name="mod_radiative_cooling::getvar_cooling">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,69,176,109"/>
-<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="224,5,395,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,67,227,47,228,52,161,72"/>
-<area shape="rect" id="Node000003" href="$namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="224,69,395,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,87,210,87,210,92,176,92"/>
-<area shape="rect" id="Node000004" href="$namespacemod__radiative__cooling.html#a7b55b04b9aeaa544e239aa8b396cd7a1" title=" " alt="" coords="224,157,395,197"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,107,247,150,245,155,141,112"/>
-<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="268,158,266,148,272,138,287,133,309,131,335,134,349,141,346,146,333,139,309,136,288,138,276,143,271,149,273,156"/>
+<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="230,5,401,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,67,231,47,232,52,162,72"/>
+<area shape="rect" id="Node000003" href="$namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="230,69,401,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,87,216,87,216,92,177,92"/>
+<area shape="rect" id="Node000004" href="$namespacemod__radiative__cooling.html#a58da51978da2397c68dac8296c1794c4" title=" " alt="" coords="224,133,407,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="162,107,232,127,231,132,161,112"/>
 </map>

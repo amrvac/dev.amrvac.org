@@ -89,9 +89,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:aa36892e970f3dbef0bf425a5085c9c59" id="r_aa36892e970f3dbef0bf425a5085c9c59"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__boundary__conditions.html#aa36892e970f3dbef0bf425a5085c9c59">bc_phys</a> (iside, idims, time, qdt, s, ixgl, ixbl)</td></tr>
 <tr class="memdesc:aa36892e970f3dbef0bf425a5085c9c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill ghost cells at a physical boundary  <br /></td></tr>
 <tr class="separator:aa36892e970f3dbef0bf425a5085c9c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09d482271df0b4e2cd8e3336a96911e8" id="r_a09d482271df0b4e2cd8e3336a96911e8"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__boundary__conditions.html#a09d482271df0b4e2cd8e3336a96911e8">getintbc</a> (time, ixgl)</td></tr>
-<tr class="memdesc:a09d482271df0b4e2cd8e3336a96911e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill inner boundary values  <br /></td></tr>
-<tr class="separator:a09d482271df0b4e2cd8e3336a96911e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad401474baa658d15f2121661ede17648" id="r_ad401474baa658d15f2121661ede17648"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__boundary__conditions.html#ad401474baa658d15f2121661ede17648">getintbc</a> (time, qdt, ixgl)</td></tr>
+<tr class="memdesc:ad401474baa658d15f2121661ede17648"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill inner boundary values  <br /></td></tr>
+<tr class="separator:ad401474baa658d15f2121661ede17648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="aa36892e970f3dbef0bf425a5085c9c59" name="aa36892e970f3dbef0bf425a5085c9c59"></a>
@@ -183,8 +183,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a09d482271df0b4e2cd8e3336a96911e8" name="a09d482271df0b4e2cd8e3336a96911e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09d482271df0b4e2cd8e3336a96911e8">&#9670;&#160;</a></span>getintbc()</h2>
+<a id="ad401474baa658d15f2121661ede17648" name="ad401474baa658d15f2121661ede17648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad401474baa658d15f2121661ede17648">&#9670;&#160;</a></span>getintbc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,6 +194,12 @@ Here is the call graph for this function:</div>
           <td>(</td>
           <td class="paramtype">double precision, intent(in)&#160;</td>
           <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>qdt</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

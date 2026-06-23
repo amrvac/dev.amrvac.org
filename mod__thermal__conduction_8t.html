@@ -97,6 +97,11 @@ $(function() {
 Data Types</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__thermal__conduction_1_1get__var__subr.html">mod_thermal_conduction::get_var_subr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__thermal__conduction_1_1get__2var__subr.html">mod_thermal_conduction::get_2var_subr</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__thermal__conduction_1_1eos__scalar2__func.html">mod_thermal_conduction::eos_scalar2_func</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar EoS inverse, e.g. eint_nH_from_T(log_nH, log_T)  <a href="interfacemod__thermal__conduction_1_1eos__scalar2__func.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">mod_thermal_conduction::tc_fluid</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -134,11 +139,12 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a57cf95e5b705d868c99792a156c06dcd" id="r_a57cf95e5b705d868c99792a156c06dcd"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a57cf95e5b705d868c99792a156c06dcd">mod_thermal_conduction::sts_set_source_tc_hd</a> (ixil, ixol, w, x, wres, fix_conserve_at_step, my_dt, igrid, nflux, fl)</td></tr>
 <tr class="separator:a57cf95e5b705d868c99792a156c06dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7b3ea6235802277a9d72602e17c6e78" id="r_ae7b3ea6235802277a9d72602e17c6e78"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#ae7b3ea6235802277a9d72602e17c6e78">mod_thermal_conduction::set_source_tc_hd</a> (ixil, ixol, w, x, fl, qvec, rho, te)</td></tr>
-<tr class="memdesc:ae7b3ea6235802277a9d72602e17c6e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">get HD thermal conduction source and flux in uniform Cartesian grid  <br /></td></tr>
 <tr class="separator:ae7b3ea6235802277a9d72602e17c6e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d2565cdf0387ab66da2e065f75e3803" id="r_a9d2565cdf0387ab66da2e065f75e3803"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a9d2565cdf0387ab66da2e065f75e3803">mod_thermal_conduction::set_source_tc_hd_geo</a> (ixil, ixol, w, x, fl, qvec, rho, te)</td></tr>
-<tr class="memdesc:a9d2565cdf0387ab66da2e065f75e3803"><td class="mdescLeft">&#160;</td><td class="mdescRight">get HD thermal conduction source and flux in non-uniform geometry grid  <br /></td></tr>
 <tr class="separator:a9d2565cdf0387ab66da2e065f75e3803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508ea7544942721373d494e78f1ec61c" id="r_a508ea7544942721373d494e78f1ec61c"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__thermal__conduction.html#a508ea7544942721373d494e78f1ec61c">mod_thermal_conduction::tc_patch_negative_eint</a> (w, x, ixil, ixol, te, ie, fl)</td></tr>
+<tr class="memdesc:a508ea7544942721373d494e78f1ec61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patch cells where e_int &lt;= 0 by neighbor-averaging the temperature AND repairing the conserved internal energy w(:, ie) in place. Called after get_temperature_from_eint in the TC source routines when tc_patch_eint is .true. During STS RKL2 Chebyshev substeps the polynomial can overshoot e_int to negative values at low-density coronal cells. A negative T would produce NaN via sqrt(T) in the Spitzer conductivity. This routine replaces those cells' T with the average of valid (e_int &gt; 0) neighbors and writes the matching e_int back to w(ix, ie) via the EoS inverse helper eint_nH_from_T, so the next STS substep does not re-read negative w and amplify it.  <br /></td></tr>
+<tr class="separator:a508ea7544942721373d494e78f1ec61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>

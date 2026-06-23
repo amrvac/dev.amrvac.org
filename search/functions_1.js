@@ -1,16 +1,20 @@
 var searchData=
 [
-  ['b_5ffrom_5fvector_5fpotential_0',['b_from_vector_potential',['../namespacemod__mf__phys.html#a227454e2877a911abe899ec7ae652028',1,'mod_mf_phys::b_from_vector_potential()'],['../namespacemod__mhd__phys.html#a840c0f0809aade6ef6acfe0afcf83bf3',1,'mod_mhd_phys::b_from_vector_potential()'],['../namespacemod__twofl__phys.html#a0390e89c7004a9cbc5303a6f83ebf916',1,'mod_twofl_phys::b_from_vector_potential()']]],
+  ['b_5ffrom_5fvector_5fpotential_0',['b_from_vector_potential',['../namespacemod__mhd__phys.html#a840c0f0809aade6ef6acfe0afcf83bf3',1,'mod_mhd_phys::b_from_vector_potential()'],['../namespacemod__twofl__phys.html#a0390e89c7004a9cbc5303a6f83ebf916',1,'mod_twofl_phys::b_from_vector_potential()'],['../namespacemod__mf__phys.html#a227454e2877a911abe899ec7ae652028',1,'mod_mf_phys::b_from_vector_potential()']]],
   ['b_5ffrom_5fvector_5fpotentiala_1',['b_from_vector_potentiala',['../namespacemod__constrained__transport.html#a25f8b180b123dbde3aeb06a78fe5d054',1,'mod_constrained_transport']]],
   ['bc_5fdata_5fget_5f2d_2',['bc_data_get_2d',['../namespacemod__bc__data.html#a64c84a14d5d9b7a14cb84988232a563d',1,'mod_bc_data']]],
   ['bc_5fdata_5fget_5f3d_3',['bc_data_get_3d',['../namespacemod__bc__data.html#aa9044317516169ad6a005c0a9e20bb84',1,'mod_bc_data']]],
   ['bc_5fdata_5finit_4',['bc_data_init',['../namespacemod__bc__data.html#ad538a8f959099a8987f483568f917dc4',1,'mod_bc_data']]],
   ['bc_5fdata_5fset_5',['bc_data_set',['../namespacemod__bc__data.html#a191646a9b65151cbc2befbd7a23ace46',1,'mod_bc_data']]],
   ['bc_5fphys_6',['bc_phys',['../namespacemod__boundary__conditions.html#aa36892e970f3dbef0bf425a5085c9c59',1,'mod_boundary_conditions']]],
-  ['bisection_5fmethod_7',['bisection_method',['../namespacemod__fld.html#ae1213f223fdcd0fbe4123e76b5c0df51',1,'mod_fld']]],
-  ['block_5fshape_5fio_8',['block_shape_io',['../namespacemod__input__output__helper.html#a63ddb5cbb8a7faff9ac4c9e3575b9a3b',1,'mod_input_output_helper']]],
-  ['bremcross_5fbetheheitler_9',['bremcross_betheheitler',['../namespacemod__bremsstrahlung.html#aa0f901a8cec7a4bb924fd3550b0f62c9',1,'mod_bremsstrahlung']]],
-  ['bremcross_5fhaug_10',['bremcross_haug',['../namespacemod__bremsstrahlung.html#a30661b5dea0c8ebbbddfdfcef597a6bd',1,'mod_bremsstrahlung']]],
-  ['bremcross_5fkramers_11',['bremcross_kramers',['../namespacemod__bremsstrahlung.html#a9192b33420a3a566b916830ca6b0a8b2',1,'mod_bremsstrahlung']]],
-  ['build_5fconnectivity_12',['build_connectivity',['../namespacemod__functions__connectivity.html#ad0f896bb9a50442f121e8fa63b365b15',1,'mod_functions_connectivity']]]
+  ['bicubic_5flookup_7',['bicubic_lookup',['../namespacemod__eos__interp.html#ae8a904568b5e9e92c8b329470374567b',1,'mod_eos_interp']]],
+  ['bilinear_5flookup_8',['bilinear_lookup',['../namespacemod__eos__interp.html#a42ce57592e86addb6a4ef267a783abc8',1,'mod_eos_interp']]],
+  ['bisection_5fmethod_9',['bisection_method',['../namespacemod__fld.html#ae1213f223fdcd0fbe4123e76b5c0df51',1,'mod_fld']]],
+  ['block_5fshape_5fio_10',['block_shape_io',['../namespacemod__input__output__helper.html#a63ddb5cbb8a7faff9ac4c9e3575b9a3b',1,'mod_input_output_helper']]],
+  ['boole_5fcomposite_11',['boole_composite',['../namespacemod__radiative__cooling.html#a62805444feab0b05bd400f7369071575',1,'mod_radiative_cooling']]],
+  ['bremcross_5fbetheheitler_12',['bremcross_betheheitler',['../namespacemod__bremsstrahlung.html#aa0f901a8cec7a4bb924fd3550b0f62c9',1,'mod_bremsstrahlung']]],
+  ['bremcross_5fhaug_13',['bremcross_haug',['../namespacemod__bremsstrahlung.html#a30661b5dea0c8ebbbddfdfcef597a6bd',1,'mod_bremsstrahlung']]],
+  ['bremcross_5fkramers_14',['bremcross_kramers',['../namespacemod__bremsstrahlung.html#a9192b33420a3a566b916830ca6b0a8b2',1,'mod_bremsstrahlung']]],
+  ['build_5fconnectivity_15',['build_connectivity',['../namespacemod__functions__connectivity.html#ad0f896bb9a50442f121e8fa63b365b15',1,'mod_functions_connectivity']]],
+  ['build_5fy_5fmod_5ftable_16',['build_y_mod_table',['../namespacemod__radiative__cooling.html#a6734611e0cdf1279b4fb32cb3322dbaa',1,'mod_radiative_cooling']]]
 ];

@@ -1,0 +1,21 @@
+<map id="mod_hd_eos::hd_get_pthermal" name="mod_hd_eos::hd_get_pthermal">
+<area shape="rect" id="Node000001" title="Calculate thermal pressure within ixO^L. For energy runs delegates to eosget_thermal_pressure; for no..." alt="" coords="5,233,161,273"/>
+<area shape="rect" id="Node000002" href="$namespacemod__dust.html#a8e13243ca47ce296b568cbd9feb6840e" title=" " alt="" coords="209,5,425,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,231,103,190,127,138,162,85,183,61,208,40,216,35,219,39,211,44,187,64,166,88,132,141,108,192,93,233"/>
+<area shape="rect" id="Node000004" href="$namespacemod__dust.html#a6bebf3d46a4b790c0988ba3acade6288" title=" " alt="" coords="213,55,421,80"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="92,231,110,200,136,161,169,123,208,90,222,83,224,88,211,95,172,127,140,165,115,202,97,234"/>
+<area shape="rect" id="Node000005" href="$namespacemod__eos__pi.html#ac47cc5c316d6a5b0328da0804fb3f2ad" title="Primitive pressure &#45;&gt; GAS internal energy (prim &#45;&gt; conserved direction): invert (rho,..." alt="" coords="232,105,403,145"/>
+<area shape="poly" id="edge3_Node000001_Node000005" title=" " alt="" coords="104,230,150,192,208,154,224,147,226,152,211,159,153,196,108,234"/>
+<area shape="rect" id="Node000006" href="$namespacemod__eos__lte.html#ac730b189d6c6880f51a5d2f17745e9e5" title="Gamma_1 from pressure&#45;indexed table: (log10 nH, log10 p/nH) &#45;&gt; Gamma_1. For &#39;entropy&#39; the conversion ..." alt="" coords="232,169,403,209"/>
+<area shape="poly" id="edge4_Node000001_Node000006" title=" " alt="" coords="157,230,230,210,231,215,158,235"/>
+<area shape="rect" id="Node000008" href="$namespacemod__hd__phys.html#ab3a3d3d13a2371ddb8ee456cc10e1fe4" title=" " alt="" coords="224,233,411,273"/>
+<area shape="poly" id="edge5_Node000001_Node000008" title=" " alt="" coords="162,250,210,250,210,255,162,255"/>
+<area shape="rect" id="Node000014" href="$namespacemod__eos__lte__saha.html#a095d57f0221a542e6a1c741a59f415a8" title="Look up Gamma1 from the analytical 2D table (nH, T axes in code units). For use when eosmethod == &#39;an..." alt="" coords="226,297,409,337"/>
+<area shape="poly" id="edge6_Node000001_Node000014" title=" " alt="" coords="158,270,231,290,230,296,157,275"/>
+<area shape="rect" id="Node000017" href="$namespacemod__eos__lte__saha.html#a66c038b79273b7311fe23600001948be" title="Temperature inversion: given (nH, eint/nH) in CODE UNITS, find T in CODE UNITS, by bisection (guarant..." alt="" coords="226,361,409,401"/>
+<area shape="poly" id="edge7_Node000001_Node000017" title=" " alt="" coords="108,271,153,309,211,346,226,353,224,358,208,351,150,313,104,275"/>
+<area shape="rect" id="Node000019" href="$namespacemod__eos__pi.html#af4ce33028810a5d33f2cbeb4c95b3d6f" title="Conserved gas internal energy &#45;&gt; temperature, thermal pressure, R. Inverse of p_eint_from_rho_T_PI...." alt="" coords="228,425,407,465"/>
+<area shape="poly" id="edge8_Node000001_Node000019" title=" " alt="" coords="97,272,141,340,173,378,211,411,220,416,217,421,208,415,169,382,137,343,93,275"/>
+<area shape="rect" id="Node000020" href="$namespacemod__eos__lte.html#ad1e325f142fa31bedb6a09fc519d7061" title="Temperature from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic &#45;&gt; Saha bisection/Newt..." alt="" coords="239,489,395,529"/>
+<area shape="poly" id="edge9_Node000001_Node000020" title=" " alt="" coords="93,272,107,314,131,369,166,426,187,452,211,475,228,486,225,490,208,479,183,456,161,429,126,372,102,316,88,274"/>
+</map>
