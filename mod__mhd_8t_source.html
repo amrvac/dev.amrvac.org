@@ -96,25 +96,27 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>  <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__mhd__hllc.html">mod_mhd_hllc</a></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>  <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__mhd__roe.html">mod_mhd_roe</a></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>  <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__mhd__eos.html">mod_mhd_eos</a></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__amrvac.html">mod_amrvac</a></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  <span class="keywordtype">implicit none</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keywordtype">public</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">contains</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="" data-end="">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacemod__mhd.html#a7a866250156ff45efd487369fe6e21d0">   15</a></span>  <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__mhd.html#a7a866250156ff45efd487369fe6e21d0">mhd_activate</a>()</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">call </span><a class="code hl_function" href="namespacemod__mhd__phys.html#ad7d98b0addb883f4aa58a876eee8025e">mhd_phys_init</a>()</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">call </span><a class="code hl_function" href="namespacemod__mhd__hllc.html#a348634cd8122197d331e1a06d555568b">mhd_hllc_init</a>()</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">call </span><a class="code hl_function" href="namespacemod__mhd__roe.html#a5cb3b297639ad9e15d27ad211ef95f61">mhd_roe_init</a>()</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">call </span><a class="code hl_function" href="namespacemod__mhd__eos.html#a04e0c133e48738f415b967f31dfb2214">mhd_link_eos</a>()</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>  <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__eos.html">mod_eos</a>, <span class="keywordtype">only</span>: eos</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__amrvac.html">mod_amrvac</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keywordtype">implicit none</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keywordtype">public</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">contains</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="" data-end="">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespacemod__mhd.html#a7a866250156ff45efd487369fe6e21d0">   16</a></span>  <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__mhd.html#a7a866250156ff45efd487369fe6e21d0">mhd_activate</a>()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">call </span><a class="code hl_function" href="namespacemod__mhd__phys.html#ad7d98b0addb883f4aa58a876eee8025e">mhd_phys_init</a>()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">call </span><a class="code hl_function" href="namespacemod__mhd__hllc.html#a348634cd8122197d331e1a06d555568b">mhd_hllc_init</a>()</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">call </span><a class="code hl_function" href="namespacemod__mhd__roe.html#a5cb3b297639ad9e15d27ad211ef95f61">mhd_roe_init</a>()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">call </span><a class="code hl_function" href="namespacemod__mhd__eos.html#a04e0c133e48738f415b967f31dfb2214">mhd_link_eos</a>()</div>
 </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__mhd.html#a7a866250156ff45efd487369fe6e21d0">mhd_activate</a></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__mhd.html">mod_mhd</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__mhd.html#a7a866250156ff45efd487369fe6e21d0">mhd_activate</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__mhd.html">mod_mhd</a></div>
 <div class="ttc" id="anamespacemod__amrvac_html"><div class="ttname"><a href="namespacemod__amrvac.html">mod_amrvac</a></div><div class="ttdoc">This module contains modules that users could want to have in their mod_usr.t code,...</div><div class="ttdef"><b>Definition</b> <a href="mod__amrvac_8t_source.html#l00003">mod_amrvac.t:3</a></div></div>
+<div class="ttc" id="anamespacemod__eos_html"><div class="ttname"><a href="namespacemod__eos.html">mod_eos</a></div><div class="ttdoc">Equation of state for AMRVAC, handled through a single eos_container object.</div><div class="ttdef"><b>Definition</b> <a href="mod__eos_8t_source.html#l00030">mod_eos.t:30</a></div></div>
 <div class="ttc" id="anamespacemod__functions__bfield_html"><div class="ttname"><a href="namespacemod__functions__bfield.html">mod_functions_bfield</a></div><div class="ttdef"><b>Definition</b> <a href="mod__functions__bfield_8t_source.html#l00001">mod_functions_bfield.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__functions__bfield_html_a9325934e82e214dd9a5fc608b174fbb9"><div class="ttname"><a href="namespacemod__functions__bfield.html#a9325934e82e214dd9a5fc608b174fbb9">mod_functions_bfield::mag</a></div><div class="ttdeci">integer, dimension(:), allocatable, public mag</div><div class="ttdoc">Indices of the magnetic field.</div><div class="ttdef"><b>Definition</b> <a href="mod__functions__bfield_8t_source.html#l00009">mod_functions_bfield.t:9</a></div></div>
 <div class="ttc" id="anamespacemod__mhd__eos_html"><div class="ttname"><a href="namespacemod__mhd__eos.html">mod_mhd_eos</a></div><div class="ttdoc">MHD &lt;-&gt; EoS seam: binds the eos% authority into magnetohydrodynamics.</div><div class="ttdef"><b>Definition</b> <a href="mod__mhd__eos_8t_source.html#l00016">mod_mhd_eos.t:16</a></div></div>
@@ -126,7 +128,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="anamespacemod__mhd__roe_html"><div class="ttname"><a href="namespacemod__mhd__roe.html">mod_mhd_roe</a></div><div class="ttdoc">Subroutines for Roe-type Riemann solver for MHD.</div><div class="ttdef"><b>Definition</b> <a href="mod__mhd__roe_8t_source.html#l00002">mod_mhd_roe.t:2</a></div></div>
 <div class="ttc" id="anamespacemod__mhd__roe_html_a5cb3b297639ad9e15d27ad211ef95f61"><div class="ttname"><a href="namespacemod__mhd__roe.html#a5cb3b297639ad9e15d27ad211ef95f61">mod_mhd_roe::mhd_roe_init</a></div><div class="ttdeci">subroutine, public mhd_roe_init()</div><div class="ttdef"><b>Definition</b> <a href="mod__mhd__roe_8t_source.html#l00018">mod_mhd_roe.t:19</a></div></div>
 <div class="ttc" id="anamespacemod__mhd_html"><div class="ttname"><a href="namespacemod__mhd.html">mod_mhd</a></div><div class="ttdef"><b>Definition</b> <a href="mod__mhd_8t_source.html#l00001">mod_mhd.t:1</a></div></div>
-<div class="ttc" id="anamespacemod__mhd_html_a7a866250156ff45efd487369fe6e21d0"><div class="ttname"><a href="namespacemod__mhd.html#a7a866250156ff45efd487369fe6e21d0">mod_mhd::mhd_activate</a></div><div class="ttdeci">subroutine mhd_activate()</div><div class="ttdef"><b>Definition</b> <a href="mod__mhd_8t_source.html#l00015">mod_mhd.t:16</a></div></div>
+<div class="ttc" id="anamespacemod__mhd_html_a7a866250156ff45efd487369fe6e21d0"><div class="ttname"><a href="namespacemod__mhd.html#a7a866250156ff45efd487369fe6e21d0">mod_mhd::mhd_activate</a></div><div class="ttdeci">subroutine mhd_activate()</div><div class="ttdef"><b>Definition</b> <a href="mod__mhd_8t_source.html#l00016">mod_mhd.t:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

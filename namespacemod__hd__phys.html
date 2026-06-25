@@ -299,6 +299,10 @@ Variables</h2></td></tr>
 <tr class="separator:a47488b4ebf144483b272a47e451af268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a182282a752f3a793d371f78842eb2438" id="r_a182282a752f3a793d371f78842eb2438"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a182282a752f3a793d371f78842eb2438">rr</a> =1d0</td></tr>
 <tr class="separator:a182282a752f3a793d371f78842eb2438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a944b56310a8565160a61059f77d5c03c" id="r_a944b56310a8565160a61059f77d5c03c"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a944b56310a8565160a61059f77d5c03c">hd_to_primitive</a> =&gt; null()</td></tr>
+<tr class="separator:a944b56310a8565160a61059f77d5c03c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3a95169a2eb435bd07a09cee29d3ea" id="r_a5b3a95169a2eb435bd07a09cee29d3ea"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__phys.html#a5b3a95169a2eb435bd07a09cee29d3ea">hd_to_conserved</a> =&gt; null()</td></tr>
+<tr class="separator:a5b3a95169a2eb435bd07a09cee29d3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Hydrodynamics physics module. </p>
@@ -1215,7 +1219,7 @@ Here is the call graph for this function:</div>
 <p>The implicit (MG diffusion) hooks need the fld_fl object, so they are wired here to physics-module wrappers that inject it.</p>
 <p>Cache log10(nH) in wextra for LTE+IonE TC (density invariant during STS)</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00289">289</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00291">291</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1894,6 +1898,38 @@ Here is the call graph for this function:</div>
 <p>Whether thermal conduction is added. </p>
 
 <p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00017">17</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a5b3a95169a2eb435bd07a09cee29d3ea" name="a5b3a95169a2eb435bd07a09cee29d3ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3a95169a2eb435bd07a09cee29d3ea">&#9670;&#160;</a></span>hd_to_conserved</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public mod_hd_phys::hd_to_conserved =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00215">215</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a944b56310a8565160a61059f77d5c03c" name="a944b56310a8565160a61059f77d5c03c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a944b56310a8565160a61059f77d5c03c">&#9670;&#160;</a></span>hd_to_primitive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public mod_hd_phys::hd_to_primitive =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00214">214</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
