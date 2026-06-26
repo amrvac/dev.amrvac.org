@@ -96,9 +96,18 @@ Functions/Subroutines</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a32e2aecf53695c0278148f0bc1262acd" id="r_a32e2aecf53695c0278148f0bc1262acd"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__get__pthermal.html">sub_get_pthermal</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__eos.html#a32e2aecf53695c0278148f0bc1262acd">mhd_get_pthermal</a> =&gt; null()</td></tr>
+<tr class="memdesc:a32e2aecf53695c0278148f0bc1262acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thermal pressure pointer: set by mhd_link_eos based on energy formulation. Internal to <a class="el" href="namespacemod__mhd__eos.html" title="MHD &lt;-&gt; EoS seam: binds the eos% authority into magnetohydrodynamics.">mod_mhd_eos</a> — external callers use eosget_thermal_pressure.  <br /></td></tr>
+<tr class="separator:a32e2aecf53695c0278148f0bc1262acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ad7b04a80715a16e19a23038cf6170b" id="r_a0ad7b04a80715a16e19a23038cf6170b"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__get__pthermal.html">sub_get_pthermal</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__eos.html#a0ad7b04a80715a16e19a23038cf6170b">mhd_get_temperature</a> =&gt; null()</td></tr>
 <tr class="memdesc:a0ad7b04a80715a16e19a23038cf6170b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temperature pointer: set by mhd_link_eos based on EoS type and energy formulation.  <br /></td></tr>
 <tr class="separator:a0ad7b04a80715a16e19a23038cf6170b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d530860789f35c7477f4f8b017e832" id="r_af1d530860789f35c7477f4f8b017e832"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__eos.html#af1d530860789f35c7477f4f8b017e832">mhd_to_primitive</a> =&gt; null()</td></tr>
+<tr class="memdesc:af1d530860789f35c7477f4f8b017e832"><td class="mdescLeft">&#160;</td><td class="mdescRight">use habitual name of converting to primitive  <br /></td></tr>
+<tr class="separator:af1d530860789f35c7477f4f8b017e832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59eb304391bcd17e5b818d6496009740" id="r_a59eb304391bcd17e5b818d6496009740"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__eos.html#a59eb304391bcd17e5b818d6496009740">mhd_to_conserved</a> =&gt; null()</td></tr>
+<tr class="memdesc:a59eb304391bcd17e5b818d6496009740"><td class="mdescLeft">&#160;</td><td class="mdescRight">use habitual name of converting to conserved  <br /></td></tr>
+<tr class="separator:a59eb304391bcd17e5b818d6496009740"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>MHD &lt;-&gt; EoS seam: binds the eos% authority into magnetohydrodynamics. </p>
@@ -131,7 +140,7 @@ Variables</h2></td></tr>
 <p>PI energy-mode overrides (eos_type='PI', ionE=.true.)</p>
 <p>eosget_csound2 =&gt; get_csound2_PI is physics-independent: set in eos_finalise_PI (ionE arm) so the target stays private.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__eos_8t_source.html#l00047">47</a> of file <a class="el" href="mod__mhd__eos_8t_source.html">mod_mhd_eos.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__eos_8t_source.html#l00051">51</a> of file <a class="el" href="mod__mhd__eos_8t_source.html">mod_mhd_eos.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -170,6 +179,24 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a32e2aecf53695c0278148f0bc1262acd" name="a32e2aecf53695c0278148f0bc1262acd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e2aecf53695c0278148f0bc1262acd">&#9670;&#160;</a></span>mhd_get_pthermal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__physics_1_1sub__get__pthermal.html">sub_get_pthermal</a>), pointer, public mod_mhd_eos::mhd_get_pthermal =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Thermal pressure pointer: set by mhd_link_eos based on energy formulation. Internal to <a class="el" href="namespacemod__mhd__eos.html" title="MHD &lt;-&gt; EoS seam: binds the eos% authority into magnetohydrodynamics.">mod_mhd_eos</a> — external callers use eosget_thermal_pressure. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__eos_8t_source.html#l00038">38</a> of file <a class="el" href="mod__mhd__eos_8t_source.html">mod_mhd_eos.t</a>.</p>
+
+</div>
+</div>
 <a id="a0ad7b04a80715a16e19a23038cf6170b" name="a0ad7b04a80715a16e19a23038cf6170b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ad7b04a80715a16e19a23038cf6170b">&#9670;&#160;</a></span>mhd_get_temperature</h2>
 
@@ -185,6 +212,42 @@ Here is the call graph for this function:</div>
 <p>Temperature pointer: set by mhd_link_eos based on EoS type and energy formulation. </p>
 
 <p class="definition">Definition at line <a class="el" href="mod__mhd__eos_8t_source.html#l00041">41</a> of file <a class="el" href="mod__mhd__eos_8t_source.html">mod_mhd_eos.t</a>.</p>
+
+</div>
+</div>
+<a id="a59eb304391bcd17e5b818d6496009740" name="a59eb304391bcd17e5b818d6496009740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59eb304391bcd17e5b818d6496009740">&#9670;&#160;</a></span>mhd_to_conserved</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public mod_mhd_eos::mhd_to_conserved =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>use habitual name of converting to conserved </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__eos_8t_source.html#l00045">45</a> of file <a class="el" href="mod__mhd__eos_8t_source.html">mod_mhd_eos.t</a>.</p>
+
+</div>
+</div>
+<a id="af1d530860789f35c7477f4f8b017e832" name="af1d530860789f35c7477f4f8b017e832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1d530860789f35c7477f4f8b017e832">&#9670;&#160;</a></span>mhd_to_primitive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public mod_mhd_eos::mhd_to_primitive =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>use habitual name of converting to primitive </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__eos_8t_source.html#l00043">43</a> of file <a class="el" href="mod__mhd__eos_8t_source.html">mod_mhd_eos.t</a>.</p>
 
 </div>
 </div>

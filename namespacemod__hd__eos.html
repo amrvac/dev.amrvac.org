@@ -79,7 +79,8 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions/Subroutines</a>  </div>
+<a href="#func-members">Functions/Subroutines</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">mod_hd_eos Module Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -95,6 +96,13 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a2f71e240aaa252b4cd0c836d078ecb6e" id="r_a2f71e240aaa252b4cd0c836d078ecb6e"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__eos.html#a2f71e240aaa252b4cd0c836d078ecb6e">hd_get_pthermal</a> (w, x, ixil, ixol, pth)</td></tr>
 <tr class="memdesc:a2f71e240aaa252b4cd0c836d078ecb6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate thermal pressure within ixO^L. For energy runs delegates to eosget_thermal_pressure; for no-energy (isothermal) uses the adiabatic relation p = adiab * rho^gamma.  <br /></td></tr>
 <tr class="separator:a2f71e240aaa252b4cd0c836d078ecb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ad6eb42bdf09a1c558f4a9d5a325ff3bf" id="r_ad6eb42bdf09a1c558f4a9d5a325ff3bf"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__eos.html#ad6eb42bdf09a1c558f4a9d5a325ff3bf">hd_to_primitive</a> =&gt; null()</td></tr>
+<tr class="separator:ad6eb42bdf09a1c558f4a9d5a325ff3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7121719c2a05b0b0ab06a2bb8a79e6" id="r_a4c7121719c2a05b0b0ab06a2bb8a79e6"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__hd__eos.html#a4c7121719c2a05b0b0ab06a2bb8a79e6">hd_to_conserved</a> =&gt; null()</td></tr>
+<tr class="separator:a4c7121719c2a05b0b0ab06a2bb8a79e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HD &lt;-&gt; EoS seam: binds the eos% authority into hydrodynamics. </p>
@@ -159,7 +167,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Calculate thermal pressure within ixO^L. For energy runs delegates to eosget_thermal_pressure; for no-energy (isothermal) uses the adiabatic relation p = adiab * rho^gamma. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__eos_8t_source.html#l00426">426</a> of file <a class="el" href="mod__hd__eos_8t_source.html">mod_hd_eos.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__eos_8t_source.html#l00429">429</a> of file <a class="el" href="mod__hd__eos_8t_source.html">mod_hd_eos.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -206,7 +214,7 @@ Here is the call graph for this function:</div>
 <p>PI energy-mode overrides (eos_type='PI', ionE=.true.)</p>
 <p>eosget_csound2 =&gt; get_csound2_PI set in eos_finalise_PI (private target)</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__eos_8t_source.html#l00039">39</a> of file <a class="el" href="mod__hd__eos_8t_source.html">mod_hd_eos.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__eos_8t_source.html#l00042">42</a> of file <a class="el" href="mod__hd__eos_8t_source.html">mod_hd_eos.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -261,6 +269,39 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="445,802,516,794,516,800,446,807"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a4c7121719c2a05b0b0ab06a2bb8a79e6" name="a4c7121719c2a05b0b0ab06a2bb8a79e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7121719c2a05b0b0ab06a2bb8a79e6">&#9670;&#160;</a></span>hd_to_conserved</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public mod_hd_eos::hd_to_conserved =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__hd__eos_8t_source.html#l00035">35</a> of file <a class="el" href="mod__hd__eos_8t_source.html">mod_hd_eos.t</a>.</p>
+
+</div>
+</div>
+<a id="ad6eb42bdf09a1c558f4a9d5a325ff3bf" name="ad6eb42bdf09a1c558f4a9d5a325ff3bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6eb42bdf09a1c558f4a9d5a325ff3bf">&#9670;&#160;</a></span>hd_to_primitive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__physics_1_1sub__convert.html">sub_convert</a>), pointer, public mod_hd_eos::hd_to_primitive =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__hd__eos_8t_source.html#l00034">34</a> of file <a class="el" href="mod__hd__eos_8t_source.html">mod_hd_eos.t</a>.</p>
 
 </div>
 </div>
