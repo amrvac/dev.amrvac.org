@@ -22,10 +22,9 @@ var searchData=
   ['to_20mpi_20amrvac_20and_20its_20documentation_19',['Contributing to MPI-AMRVAC and its documentation',['../md_doc_2contributing.html',1,'']]],
   ['tools_20',['Setting up the python tools',['../md_doc_2python__setup.html',1,'']]],
   ['topology_20and_20qsl_20products_21',['Magnetic Topology and QSL Products',['../md_doc_2magnetic__topology__qsl.html',1,'']]],
-  ['topology_20qsl_203d_20demo_22',['AMRVAC4 Magnetic Topology QSL 3D Demo',['../md_tests_2demo_2AMRVAC4__MagneticTopologyQSL__3D_2README.html',1,'']]],
-  ['topology_20qsl_20namelist_20tasks_23',['Minimal &lt;tt&gt;mod_usr.t&lt;/tt&gt; Hook for Topology/QSL Namelist Tasks',['../md_doc_2examples_2magnetic__topology_2mod__usr__topology__runner__example.html',1,'']]],
-  ['topology_20qsl_20regression_24',['Magnetic Topology/QSL Regression',['../md_tests_2mhd_2magnetic__topology__qsl_2README.html',1,'']]],
-  ['translational_20symmetry_25',['Using axial and translational symmetry',['../md_doc_2axial.html',1,'']]],
-  ['tt_20mod_5fusr_20t_20tt_20hook_20for_20topology_20qsl_20namelist_20tasks_26',['Minimal &lt;tt&gt;mod_usr.t&lt;/tt&gt; Hook for Topology/QSL Namelist Tasks',['../md_doc_2examples_2magnetic__topology_2mod__usr__topology__runner__example.html',1,'']]],
-  ['two_20fluid_20equations_27',['Two fluid equations',['../md_doc_2twofluid.html',1,'']]]
+  ['topology_20qsl_20namelist_20tasks_22',['Minimal &lt;tt&gt;mod_usr.t&lt;/tt&gt; Hook for Topology/QSL Namelist Tasks',['../md_doc_2examples_2magnetic__topology_2mod__usr__topology__runner__example.html',1,'']]],
+  ['topology_20qsl_20regression_23',['Magnetic Topology/QSL Regression',['../md_tests_2mhd_2magnetic__topology__qsl_2README.html',1,'']]],
+  ['translational_20symmetry_24',['Using axial and translational symmetry',['../md_doc_2axial.html',1,'']]],
+  ['tt_20mod_5fusr_20t_20tt_20hook_20for_20topology_20qsl_20namelist_20tasks_25',['Minimal &lt;tt&gt;mod_usr.t&lt;/tt&gt; Hook for Topology/QSL Namelist Tasks',['../md_doc_2examples_2magnetic__topology_2mod__usr__topology__runner__example.html',1,'']]],
+  ['two_20fluid_20equations_26',['Two fluid equations',['../md_doc_2twofluid.html',1,'']]]
 ];

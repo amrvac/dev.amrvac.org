@@ -81,57 +81,77 @@ $(function() {
   <div class="headertitle"><div class="title">Magnetic Topology and QSL Products</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This module provides field-line topology products for Cartesian MHD data:</p>
+<div class="textblock"><p>This module provides field-line topology products for Cartesian and spherical MHD data:</p>
 <ul>
 <li>field-line length;</li>
 <li>twist number <code>Tw</code>;</li>
-<li>ordinary-like axis-plane <code>Q</code> computed as Scott q0 by tangent-vector transport;</li>
+<li>standard <code>Q</code> / <code>logQ</code> computed by tangent-vector transport;</li>
 <li>perpendicular squashing factor <code>Qperp</code>.</li>
 </ul>
-<p>The user-facing <code>q</code> / <code>logQ</code> product is Scott q0. It is not the former endpoint finite-difference Q, and it is not the Qperp scalar renamed as Q. Qperp remains an independent perpendicular squashing diagnostic.</p>
+<p>The user-facing <code>q</code> / <code>logQ</code> product is not the former endpoint finite-difference Q, and it is not the Qperp scalar renamed as Q. Product geometry determines where Q is sampled. The standard-Q mapping is determined by the field-line endpoint boundary pair. Cartesian standard <code>logQ</code> is the Cartesian six-face boundary mapping sampled at product points. Spherical standard <code>logQ</code> is radial-boundary mapping sampled at product points, admitting only <code>rmin -&gt; rmin</code>, <code>rmin -&gt; rmax</code>, and <code>rmax -&gt; rmin</code> endpoint pairs. Qperp remains an independent perpendicular squashing diagnostic using endpoint sections perpendicular to the local magnetic field.</p>
 <h1>Product Policy</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Workflow   </th><th class="markdownTableHeadNone">Public products   </th><th class="markdownTableHeadNone">Notes    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>axis_plane_full_vtu</code>   </td><td class="markdownTableBodyNone">length, <code>Tw</code>, <code>logQ</code>, <code>connection_type_Q</code>, Qperp   </td><td class="markdownTableBodyNone"><code>length_total</code>, <code>logQ</code>, and Qperp come from the Scott/Qperp tangent trace. <code>connection_type_Q</code> is the minimal mask field.    </td></tr>
+<td class="markdownTableBodyNone"><code>axis_plane_full_vtu</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional <code>logQ</code>, optional Qperp in minimal VTI; full diagnostics in VTU   </td><td class="markdownTableBodyNone">Minimal output is a singleton-dimension VTI coordinate plane. Full VTU diagnostics still use the fixed full product set. RK2 and RK45 support uniform, stretched, and AMR Cartesian grids.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>axis_plane_csv</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional Qperp   </td><td class="markdownTableBodyNone">CSV mode does not write ordinary Q.    </td></tr>
+<td class="markdownTableBodyNone"><code>axis_plane_csv</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional <code>logQ</code>, optional Qperp   </td><td class="markdownTableBodyNone">CSV files are split by product suffix, but requested science arrays share the seedset trace. RK2 and RK45 support uniform, stretched, and AMR Cartesian grids.    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>seed_products</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional Qperp   </td><td class="markdownTableBodyNone">No ordinary Q or mapping product.    </td></tr>
+<td class="markdownTableBodyNone"><code>seed_products</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional <code>logQ</code>, optional Qperp   </td><td class="markdownTableBodyNone">Cartesian point sampling and spherical point sampling. Spherical standard <code>logQ</code> uses the admitted radial-boundary endpoint policy.    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>arbitrary_plane_products</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional Qperp   </td><td class="markdownTableBodyNone">No ordinary Q or mapping product.    </td></tr>
+<td class="markdownTableBodyNone"><code>arbitrary_plane_products</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional <code>logQ</code>, optional Qperp   </td><td class="markdownTableBodyNone">The arbitrary plane is sampling geometry, not the Q mapping surface.    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>volume_vti</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional Qperp   </td><td class="markdownTableBodyNone">No volume ordinary Q or mapping product.   </td></tr>
+<td class="markdownTableBodyNone"><code>volume_vti</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional <code>logQ</code>, optional Qperp   </td><td class="markdownTableBodyNone">VTI only; CSV is intentionally absent. RK2 and RK45 support uniform, stretched, and AMR Cartesian simulation grids.    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>spherical_surface_products</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional <code>logQ</code>, optional Qperp   </td><td class="markdownTableBodyNone">Curved/cut spherical product sampling at rmin, rconst, theta_const, phi_const, or radial_plane points. Standard <code>logQ</code> is radial-boundary endpoint mapping Q, not a theta/phi/cut-surface Q.    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>spherical_cloud_products</code>   </td><td class="markdownTableBodyNone">length, optional <code>Tw</code>, optional <code>logQ</code>, optional Qperp   </td><td class="markdownTableBodyNone">VTU-only spherical r/theta/phi cloud sampling. Spherical standard <code>logQ</code> uses the admitted radial-boundary endpoint policy.   </td></tr>
 </table>
 <p>Former endpoint finite-difference Q, robust stencil modes, endpoint-stencil quality diagnostics, mixed-source Q fields, and Q-specific <code>*_vis</code> aliases are not user-facing products.</p>
-<h1>Axis-Plane VTU Fields</h1>
-<p>Axis-plane QSL 1.0 minimal VTU output contains:</p>
+<p>Spherical surface products, <code>seed_products</code>, and <code>spherical_cloud_products</code> support RK2 and <code>rk45_spherical</code> for Q-only, Qperp-only, and fused combined Q+Qperp requests.</p>
+<h1>Minimal Visualization Output</h1>
+<p>Minimal visualization output contains only requested science arrays:</p>
 <ul>
-<li><code>length_total</code></li>
-<li><code>twist_total</code></li>
-<li><code>logQ</code></li>
-<li><code>logQperp</code></li>
-<li><code>connection_type_Q</code></li>
+<li><code>length_total</code>, when <code>mt_compute_length=.true.</code> (the default)</li>
+<li><code>twist_total</code>, when requested</li>
+<li><code>logQ</code>, when requested</li>
+<li><code>logQperp</code>, when requested</li>
 </ul>
-<p>Full-detail axis-plane VTU may include raw and diagnostic endpoint/tangent fields, validity/status metadata, mapping metadata, and twist component diagnostics, but it does not expose old endpoint-FD, mixed-source, Scott-alias, or Q-visual-alias fields. If raw <code>q</code> is written, it is the same Scott q0 product represented by <code>logQ</code>.</p>
-<p>Use <code>connection_type_Q</code> for minimal-output visualization masks in ParaView. No separate <code>Q visual alias</code> field is written.</p>
+<p>Minimal VTU/VTI output does not include diagnostic-heavy arrays such as validity/status flags, endpoint coordinates, boundary faces, split forward/backward lengths, <code>N2</code>, <code>bfactor</code>, or connection masks. Full-detail VTU/VTI and CSV paths may include those diagnostics. If raw <code>q</code> is written in full output, it is the same Scott q0 product represented by <code>logQ</code>.</p>
+<h1>Output Format Policy</h1>
+<p>Axis-plane minimal science output is VTI because each coordinate plane is a structured, axis-aligned sampling lattice: <code>xy</code> uses <code>nx x ny x 1</code>, <code>xz</code> uses <code>nx x 1 x nz</code>, and <code>yz</code> uses <code>1 x ny x nz</code>. The VTI lattice is the requested output sampling grid and remains valid when tracing through stretched or AMR Cartesian simulation grids. Axis-plane full diagnostics remain VTU, and axis-plane CSV remains a diagnostic/export path.</p>
+<p><code>volume_vti</code> remains VTI-only. <code>seed_products</code> and <code>arbitrary_plane_products</code> use VTU for minimal visualization because they are respectively a point cloud and an arbitrarily oriented embedded surface.</p>
 <h1>OpenMP Post-Processing</h1>
 <p>The tested OpenMP route is the gfortran <code>ARCH=openmp</code> build, which enables <code>-fopenmp</code>. The default <code>ARCH=default</code> build is serial/non-OpenMP. No Intel <code>ifx</code>/<code>ifort</code> OpenMP architecture is added here.</p>
 <p>Build the AMRVAC4 magnetic-topology QSL demo with OpenMP, for example:</p>
-<div class="fragment"><div class="line">cd /home/nanami/codes/amrvac_qsl/tests/demo/AMRVAC4_MagneticTopologyQSL_3D</div>
-<div class="line">AMRVAC_DIR=/home/nanami/codes/amrvac_qsl make ARCH=openmp -j4</div>
+<div class="fragment"><div class="line">cd /home/nanami/codes/amrvac4/tests/demo/AMRVAC4_MagneticTopologyQSL_3D</div>
+<div class="line">AMRVAC_DIR=/home/nanami/codes/amrvac4 make ARCH=openmp -j4</div>
 </div><!-- fragment --><p>Run one process with OpenMP threads for local post-processing:</p>
 <div class="fragment"><div class="line">OMP_NUM_THREADS=8 OMP_PROC_BIND=close OMP_PLACES=cores \</div>
-<div class="line">  ./amrvac -i par_showcase/showcase_ref_amr_l3_yz_vertical_512.par</div>
-</div><!-- fragment --><p>The AMRVAC4 demo organizes reproducible TDm/RBSL snapshot setup and QSL post-processing examples under <code>tests/demo/AMRVAC4_MagneticTopologyQSL_3D/</code>: snapshot-generation par files are in the demo root, showcase examples in <code>par_showcase/</code>, seed-resolution examples in <code>par_resolution/</code>, and timing/efficiency examples in <code>par_benchmark/</code>.</p>
+<div class="line">  ./amrvac -i par_showcase/showcase_zstretch_yz_vertical_512_rk45.par</div>
+</div><!-- fragment --><p>The AMRVAC4 demo organizes reproducible TDm/RBSL snapshot setup and QSL post-processing examples under <code>tests/demo/AMRVAC4_MagneticTopologyQSL_3D/</code>: snapshot-generation par files are in <code>par_init/</code>, showcase examples in <code>par_showcase/</code>, timing/efficiency examples in <code>par_benchmark/</code>, and focused tracing diagnostics in <code>diagnostics/</code>.</p>
 <p>OpenMP currently accelerates seed-level tracing for <code>axis_plane_full_vtu</code> with both &lsquo;mt_vtk_detail = 'minimal&rsquo;<code>and</code>mt_vtk_detail = 'full'<code>. It also covers the seed-level product loops for</code>arbitrary_plane_products<code>,</code>seed_products<code>, and</code>volume_vti<code>. VTU/VTI/CSV writing remains serial. Start with </code>OMP_NUM_THREADS=4<code>or</code>8` and benchmark locally; avoid oversubscription such as running many MPI ranks while each rank also uses many OpenMP threads. Very large volume products can still be expensive because snapshot loading, final product arrays, and VTI writing are not distributed.</p>
 <h1>Namelist Runner</h1>
-<p>Typical axis-plane VTU use:</p>
+<p>Recommended Cartesian showcase settings use RK45 with local cell-fraction step control:</p>
+<div class="fragment"><div class="line">mt_trace_integrator   = <span class="stringliteral">&#39;rk45_cartesian&#39;</span></div>
+<div class="line">mt_step_control       = <span class="stringliteral">&#39;cell_fraction&#39;</span></div>
+<div class="line">mt_step_fraction      = 4.0d0</div>
+<div class="line">mt_max_steps          = -1</div>
+<div class="line">mt_rk45_rtol          = 1.d-4</div>
+<div class="line">mt_rk45_tangent_rtol  = 1.d-3</div>
+</div><!-- fragment --><p>The practical RK2 alternative is:</p>
+<div class="fragment"><div class="line">mt_trace_integrator   = <span class="stringliteral">&#39;rk2&#39;</span></div>
+<div class="line">mt_step_control       = <span class="stringliteral">&#39;cell_fraction&#39;</span></div>
+<div class="line">mt_step_fraction      = 2.0d0</div>
+<div class="line">mt_max_steps          = -1</div>
+</div><!-- fragment --><p>Fixed-step RK2, for example <code>mt_dL=0.08d0</code> with <code>mt_max_steps=1600</code>, is retained in the Cartesian demo only as a historical/debug comparison. These recommendations are Cartesian product settings; spherical products have their own demo-local smoke/showcase pars.</p>
+<p>Typical axis-plane minimal VTI use:</p>
 <div class="fragment"><div class="line">&amp;magnetic_topology_list</div>
 <div class="line">  mt_enable = .true.</div>
 <div class="line">  mt_mode = <span class="stringliteral">&#39;axis_plane_full_vtu&#39;</span></div>
-<div class="line">  mt_output_file = <span class="stringliteral">&#39;qsl_axis_xy.vtu&#39;</span></div>
+<div class="line">  mt_output_file = <span class="stringliteral">&#39;qsl_axis_xy.vti&#39;</span></div>
+<div class="line">  mt_vtk_detail = <span class="stringliteral">&#39;minimal&#39;</span></div>
 <div class="line">  mt_plane = <span class="stringliteral">&#39;xy&#39;</span></div>
 <div class="line">  mt_xmin = -1.d0</div>
 <div class="line">  mt_xmax =  1.d0</div>
@@ -140,12 +160,17 @@ $(function() {
 <div class="line">  mt_ymax =  1.d0</div>
 <div class="line">  mt_ny = 128</div>
 <div class="line">  mt_z0 = 0.d0</div>
-<div class="line">  mt_dl = 0.05d0</div>
-<div class="line">  mt_max_steps = 1000</div>
-<div class="line">  mt_vtk_detail = <span class="stringliteral">&#39;minimal&#39;</span></div>
+<div class="line">  mt_trace_integrator = <span class="stringliteral">&#39;rk45_cartesian&#39;</span></div>
+<div class="line">  mt_step_control = <span class="stringliteral">&#39;cell_fraction&#39;</span></div>
+<div class="line">  mt_step_fraction = 4.0d0</div>
+<div class="line">  mt_rk45_rtol = 1.d-4</div>
+<div class="line">  mt_rk45_tangent_rtol = 1.d-3</div>
+<div class="line">  mt_max_steps = -1</div>
+<div class="line">  mt_compute_twist = .true.</div>
+<div class="line">  mt_compute_q = .true.</div>
 <div class="line">  mt_compute_qperp = .true.</div>
 <div class="line">/</div>
-</div><!-- fragment --><p><code>axis_plane_full_vtu</code> always computes the Scott/Qperp trace used by <code>length_total</code>, <code>logQ</code>, and Qperp. It also writes <code>twist_total</code> as the axis-plane twist integral product. <code>mt_compute_twist</code> and <code>mt_compute_qperp</code> are ignored in this mode because the coordinate-plane VTU product set is fixed by <code>mt_vtk_detail</code>.</p>
+</div><!-- fragment --><p>With &lsquo;mt_vtk_detail='minimal&rsquo;<code>,</code>axis_plane_full_vtu<code>writes VTI and respects the compute flags:</code>length_total<code>is controlled by</code>mt_compute_length<code>(default </code>.true.<code>), and</code>twist_total<code>,</code>logQ<code>, and</code>logQperp<code>are written only when requested. With</code>mt_vtk_detail='full'`, the same task writes VTU full diagnostics and keeps the fixed full product set.</p>
 <p>Typical axis-plane CSV use:</p>
 <div class="fragment"><div class="line">&amp;magnetic_topology_list</div>
 <div class="line">  mt_enable = .true.</div>
@@ -162,36 +187,37 @@ $(function() {
 <div class="line">  mt_dl = 0.05d0</div>
 <div class="line">  mt_max_steps = 1000</div>
 <div class="line">  mt_compute_twist = .true.</div>
+<div class="line">  mt_compute_q = .true.</div>
 <div class="line">  mt_compute_qperp = .true.</div>
 <div class="line">/</div>
-</div><!-- fragment --><p>The CSV runner writes length by default, plus twist and Qperp when enabled. It does not write ordinary Q.</p>
+</div><!-- fragment --><p>The CSV runner writes length by default, plus twist, standard <code>logQ</code>, and Qperp when enabled. Standard <code>logQ</code> is written to the <code>_q.csv</code> product file; Qperp is written to <code>_qperp_method2.csv</code>. When length, twist, standard <code>logQ</code>, and Qperp are all requested, the CSV runner uses the same shared Qperp-capable tangent trace as the generic Cartesian seedset products.</p>
 <h1>Direct Wrappers</h1>
 <p>Coordinate-plane wrappers:</p>
 <ul>
-<li><code>mt_qsl_plane_vtu_xy/xz/yz</code>: ParaView-ready axis-plane VTU with Scott q0 <code>Q</code> and optional Qperp.</li>
-<li><code>mt_topology_plane_xy/xz/yz</code>: shared length/twist/mapping CSV trace, without ordinary Q.</li>
+<li><code>mt_qsl_plane_vtu_xy/xz/yz</code>: direct/legacy axis-plane VTU writers with Scott q0 <code>Q</code> and optional Qperp. The namelist minimal visualization path uses VTI.</li>
+<li><code>mt_topology_plane_xy/xz/yz</code>: shared length/twist/mapping CSV trace.</li>
+<li><code>mt_q_plane_xy/xz/yz</code>: standard Cartesian <code>logQ</code> CSV.</li>
 <li><code>mt_qperp_plane_xy/xz/yz</code>: Qperp-only CSV.</li>
 </ul>
 <p>Other product wrappers:</p>
 <ul>
-<li><code>mt_fieldline_products_seeds</code>: seed-set length, optional twist, optional Qperp.</li>
-<li><code>mt_fieldline_products_plane_arbitrary</code>: arbitrary orthonormal-plane length, optional twist, optional Qperp.</li>
-<li><code>mt_fieldline_products_volume_vti</code>: Cartesian volume length, optional twist, optional Qperp.</li>
+<li><code>mt_fieldline_products_seeds</code>: seed-set length, optional twist, optional Cartesian <code>logQ</code>, optional Qperp.</li>
+<li><code>mt_fieldline_products_plane_arbitrary</code>: arbitrary orthonormal-plane length, optional twist, optional Cartesian <code>logQ</code>, optional Qperp.</li>
+<li><code>mt_fieldline_products_volume_vti</code>: Cartesian volume length, optional twist, optional Cartesian <code>logQ</code>, optional Qperp.</li>
 </ul>
 <h1>Interpretation</h1>
-<p><code>logQ</code> and <code>logQperp</code> are related but distinct diagnostics. <code>logQ</code> is an ordinary-like Scott q0 quantity using endpoint boundary normals and tangent-vector transport. <code>logQperp</code> is the perpendicular squashing factor. For vertical and arbitrary cuts, Qperp remains the primary squashing diagnostic; axis-plane <code>logQ</code> is provided as an ordinary-like companion product. In minimal output, <code>connection_type_Q</code> is the public mask field; full-detail output may include additional validity/status metadata.</p>
+<p><code>logQ</code> and <code>logQperp</code> are related but distinct diagnostics. Cartesian <code>logQ</code> is a Scott q0 quantity using endpoint boundary-face normals and tangent-vector transport on the Cartesian six-face boundary mapping. Spherical <code>logQ</code> uses tangent-vector transport on admitted radial-boundary endpoint mappings: <code>rmin -&gt; rmin</code>, <code>rmin -&gt; rmax</code>, and <code>rmax -&gt; rmin</code>. It does not enable <code>rmax -&gt; rmax</code>, theta/phi boundary Q, mixed radial-theta/radial-phi Q, or theta-phi Q. Product geometry, including seed clouds, coordinate planes, arbitrary planes, and volumes, is only the sampling strategy. <code>logQperp</code> is the perpendicular squashing factor computed from endpoint sections perpendicular to the local magnetic field. Minimal visualization output intentionally omits connection masks and status fields. Full-detail output and CSV diagnostics may include connection masks, endpoint statuses, termination faces, and validity metadata.</p>
 <p>Unsupported or intentionally absent products:</p>
 <ul>
 <li>endpoint finite-difference endpoint-FD Q;</li>
 <li>endpoint-stencil diagnostics;</li>
 <li>mixed-source Q fields;</li>
 <li>Q-specific visual aliases;</li>
-<li>arbitrary-plane ordinary Q;</li>
-<li>seed-set ordinary Q;</li>
-<li>volume ordinary Q or <code>Qlocal</code>;</li>
-<li>AMR-native topology output.</li>
+<li>endpoint finite-difference substitutes for standard <code>logQ</code>;</li>
+<li>spherical standard <code>logQ</code> outside the admitted radial-boundary endpoint policy;</li>
+<li>CSV output for <code>volume_vti</code>.</li>
 </ul>
-<p>MPI distributed tracing, RK45/adaptive tracing, and volume/AMR scaling performance are outside the axis-plane QSL 1.0 scope unless validated and documented separately. </p>
+<p>MPI distributed tracing and large AMR scaling performance are outside the axis-plane QSL 1.0 scope unless validated and documented separately. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
