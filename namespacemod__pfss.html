@@ -105,13 +105,16 @@ Variables</h2></td></tr>
 <tr class="separator:ac7fc04cbbb1bd5cc6c6f8e2fd23ba9f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af43b94dad4a2a2af6c1cee173174b6ab" id="r_af43b94dad4a2a2af6c1cee173174b6ab"><td class="memItemLeft" align="right" valign="top">logical, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__pfss.html#af43b94dad4a2a2af6c1cee173174b6ab">trunc</a> =.false.</td></tr>
 <tr class="separator:af43b94dad4a2a2af6c1cee173174b6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5337f786a614a428aa53cf1c48d67a98" id="r_a5337f786a614a428aa53cf1c48d67a98"><td class="memItemLeft" align="right" valign="top">character(len=20), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__pfss.html#a5337f786a614a428aa53cf1c48d67a98">pfss_theta_quadrature</a> ='cell_area'</td></tr>
+<tr class="separator:a5337f786a614a428aa53cf1c48d67a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>module <a class="el" href="mod__pfss_8t.html">mod_pfss.t</a> &ndash; potential field source surface model PURPOSE : to extrapolate global potential magnetic field of the sun from synoptic magnetograms 2013.11.04 Developed by S. Moschou and C. Xia 2014.04.01 Allow to change source surface (C. Xia) PRECONDITIONS: </p>
 <ol type="1">
 <li>3D spherical coordinates</li>
 <li>A synoptic magnetogram in a binary file contains nphi, ntheta, theta(ntheta), phi(nphi), B_r(nphi,ntheta) succesively.</li>
-<li><p class="startli">nphi, ntheta are long integers and other arrays are double precision. theta contains decreasing radians with increasing indice (Pi to 0) phi contains increasing radians with increasing indice (0 to 2*Pi) USAGE: example for a magnetogram with name 'mdicr2020.dat':</p>
+<li>nphi, ntheta are long integers and other arrays are double precision. theta contains decreasing radians with increasing indice (Pi to 0) phi contains increasing radians with increasing indice (0 to 2*Pi)</li>
+<li><p class="startli">By default, theta points are interpreted as cell centers and harmonic coefficients use cell-area quadrature in mu=cos(theta). To reproduce the old Gauss-Legendre quadrature, set pfss_theta_quadrature='gauss_legendre' before calling harm_coef. If a mapname.coef file already exists, it is reused and this setting does not take effect until that coefficient file is regenerated. USAGE: example for a magnetogram with name 'mdicr2020.dat':</p>
 <p class="startli">subroutine initglobaldata_usr ... R_0=1.d0 ! dimensionless Solar radius (default 1.0) R_s=2.5d0 ! dimensionless radius of source surface (default 2.5) lmax=120 ! use a fixed value instead of the value determined by the resolution of input magnetogram trunc=.true. ! use less spherical harmonics at larger distances call harm_coef('mdicr2020.dat') end subroutine initglobaldata_usr</p>
 <p class="startli">subroutine initonegrid_usr(ixI^L,ixO^L,w,x) ... double precision :: bpf(ixI^S,1:ndir) ... call pfss(ixI^L,ixO^L,bpf,x) w(ix^S,mag(:))=bpf(ix^S,:)</p>
 <p class="startli">end subroutine initonegrid_usr </p>
@@ -134,7 +137,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00052">52</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00059">59</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -198,7 +201,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00267">267</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00328">328</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
 
 </div>
 </div>
@@ -215,7 +218,23 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00042">42</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00048">48</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
+
+</div>
+</div>
+<a id="a5337f786a614a428aa53cf1c48d67a98" name="a5337f786a614a428aa53cf1c48d67a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5337f786a614a428aa53cf1c48d67a98">&#9670;&#160;</a></span>pfss_theta_quadrature</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">character(len=20), public mod_pfss::pfss_theta_quadrature ='cell_area'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00050">50</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
 
 </div>
 </div>
@@ -231,7 +250,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00040">40</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00046">46</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
 
 </div>
 </div>
@@ -247,7 +266,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00040">40</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00046">46</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
 
 </div>
 </div>
@@ -263,7 +282,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00043">43</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__pfss_8t_source.html#l00049">49</a> of file <a class="el" href="mod__pfss_8t_source.html">mod_pfss.t</a>.</p>
 
 </div>
 </div>
