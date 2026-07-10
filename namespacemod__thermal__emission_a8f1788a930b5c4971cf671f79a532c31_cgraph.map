@@ -1,0 +1,5 @@
+<map id="mod_thermal_emission::check_synthetic_emission_options" name="mod_thermal_emission::check_synthetic_emission_options">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,207,60"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="255,20,437,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,30,241,30,241,35,207,35"/>
+</map>

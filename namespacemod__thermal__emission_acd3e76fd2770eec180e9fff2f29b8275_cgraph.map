@@ -1,0 +1,10 @@
+<map id="mod_thermal_emission::integrate_euv_thick_datresol_buffered" name="mod_thermal_emission::integrate_euv_thick_datresol_buffered">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,62,180,117"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#af49384ae59d12d978836e02f57cfee66" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,62,231,47,232,52,181,67"/>
+<area shape="rect" id="Node000005" href="$namespacemod__thermal__emission.html#aed50f255b5f3bea55b52fc44eb36515b" title=" " alt="" coords="228,69,403,109"/>
+<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="180,87,214,87,214,92,180,92"/>
+<area shape="rect" id="Node000007" href="$namespacemod__thermal__emission.html#a41d9372e825b38c2fbe929c33c3cf89a" title=" " alt="" coords="228,157,403,197"/>
+<area shape="poly" id="edge3_Node000001_Node000007" title=" " alt="" coords="163,114,252,150,250,155,161,119"/>
+<area shape="poly" id="edge4_Node000007_Node000007" title=" " alt="" coords="274,158,271,148,278,138,293,133,315,131,341,134,355,141,353,146,340,139,315,136,294,138,281,143,277,149,279,156"/>
+</map>

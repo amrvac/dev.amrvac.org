@@ -16,12 +16,15 @@ var searchData=
   ['xa2_13',['xa2',['../namespacemod__lfff.html#ac46e4d8479397894718341a638add773',1,'mod_lfff']]],
   ['xc_14',['xc',['../structmod__physicaldata_1_1state__sub.html#ac363132fbf56dcf6705623b36276f580',1,'mod_physicaldata::state_sub::xc'],['../structmod__physicaldata_1_1state__sub.html#a536a4207862fc49f7b39c3c1bcdc58c8',1,'mod_physicaldata::state_sub::xc']]],
   ['xcoarse_15',['xcoarse',['../structmod__physicaldata_1_1state__sub.html#a9ba5e64cd863db224a1413d3df33f950',1,'mod_physicaldata::state_sub::xcoarse'],['../structmod__physicaldata_1_1state__sub.html#af3925e75b948bb491d0758857419ca61',1,'mod_physicaldata::state_sub::xcoarse']]],
-  ['xi_5f_16',['xi_',['../namespacemod__srhd__phys.html#ae98a4a149cd0f40fd07f851cd41f1759',1,'mod_srhd_phys']]],
-  ['xload_17',['xload',['../namespacemod__global__parameters.html#a035d6325e94a0902078a9bb3e97a0565',1,'mod_global_parameters']]],
-  ['xmemory_18',['xmemory',['../namespacemod__global__parameters.html#ae7afe8b1acfca6926173e1a276056e2c',1,'mod_global_parameters']]],
-  ['xoneblock_19',['xoneblock',['../namespacemod__oneblock.html#a66ed27f0b58c3519e56e2a9e62a60dd1',1,'mod_oneblock']]],
-  ['xprob_20',['xprob',['../namespacemod__global__parameters.html#a37c2dd951c58acfe58a69763e53d6bf4',1,'mod_global_parameters']]],
-  ['xprobmax_20d_21',['refine_max_level, max_blocks, domain_nx^D, block_nx^D, xprobmin^D, xprobmax^D',['../md_doc_2par.html#par_refine_max_level',1,'']]],
-  ['xprobmin_20d_20xprobmax_20d_22',['refine_max_level, max_blocks, domain_nx^D, block_nx^D, xprobmin^D, xprobmax^D',['../md_doc_2par.html#par_refine_max_level',1,'']]],
-  ['xstretch_23',['xstretch',['../namespacemod__global__parameters.html#a317b8e7a18961301891e1e53bf8cefa1',1,'mod_global_parameters']]]
+  ['xface1_16',['xface1',['../structmod__thermal__emission_1_1radsyn__euv__cache.html#afcc02087848531b6851bebfe643e071e',1,'mod_thermal_emission::radsyn_euv_cache']]],
+  ['xface2_17',['xface2',['../structmod__thermal__emission_1_1radsyn__euv__cache.html#a637db4f0865e42bdd8151b699e176977',1,'mod_thermal_emission::radsyn_euv_cache']]],
+  ['xface3_18',['xface3',['../structmod__thermal__emission_1_1radsyn__euv__cache.html#a5e9526c714a77b4f6c8e72bb918542c6',1,'mod_thermal_emission::radsyn_euv_cache']]],
+  ['xi_5f_19',['xi_',['../namespacemod__srhd__phys.html#ae98a4a149cd0f40fd07f851cd41f1759',1,'mod_srhd_phys']]],
+  ['xload_20',['xload',['../namespacemod__global__parameters.html#a035d6325e94a0902078a9bb3e97a0565',1,'mod_global_parameters']]],
+  ['xmemory_21',['xmemory',['../namespacemod__global__parameters.html#ae7afe8b1acfca6926173e1a276056e2c',1,'mod_global_parameters']]],
+  ['xoneblock_22',['xoneblock',['../namespacemod__oneblock.html#a66ed27f0b58c3519e56e2a9e62a60dd1',1,'mod_oneblock']]],
+  ['xprob_23',['xprob',['../namespacemod__global__parameters.html#a37c2dd951c58acfe58a69763e53d6bf4',1,'mod_global_parameters']]],
+  ['xprobmax_20d_24',['refine_max_level, max_blocks, domain_nx^D, block_nx^D, xprobmin^D, xprobmax^D',['../md_doc_2par.html#par_refine_max_level',1,'']]],
+  ['xprobmin_20d_20xprobmax_20d_25',['refine_max_level, max_blocks, domain_nx^D, block_nx^D, xprobmin^D, xprobmax^D',['../md_doc_2par.html#par_refine_max_level',1,'']]],
+  ['xstretch_26',['xstretch',['../namespacemod__global__parameters.html#a317b8e7a18961301891e1e53bf8cefa1',1,'mod_global_parameters']]]
 ];

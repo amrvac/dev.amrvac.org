@@ -1,9 +1,23 @@
 <map id="mod_thermal_emission::get_image_datresol" name="mod_thermal_emission::get_image_datresol">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,180,109"/>
-<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a4c07f3a3720c411e7d3b65cb8de41d5c" title=" " alt="" coords="228,5,408,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,67,233,47,234,52,165,72"/>
-<area shape="rect" id="Node000005" href="$namespacemod__thermal__emission.html#ab58c23e03a79352d521dca4a4ff46105" title=" " alt="" coords="230,69,406,109"/>
-<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="180,87,216,87,216,92,180,92"/>
-<area shape="rect" id="Node000007" href="$namespacemod__thermal__emission.html#ac97d12f33117a202d49629a059dae17a" title=" " alt="" coords="231,133,405,173"/>
-<area shape="poly" id="edge3_Node000001_Node000007" title=" " alt="" coords="165,107,234,127,233,132,163,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,328,180,368"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a4ab0fb8cd2792330536a9b26ce0ef9e7" title=" " alt="" coords="273,5,448,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,327,107,273,130,199,148,160,169,121,195,86,226,55,259,37,262,41,230,59,199,89,174,124,153,162,135,201,112,274,100,328"/>
+<area shape="rect" id="Node000004" href="$namespacemod__thermal__emission.html#a9331c81857c90348800db8b06a24bc7d" title=" " alt="" coords="273,69,448,109"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="97,327,113,283,140,227,177,169,200,142,226,119,259,102,262,106,230,124,204,146,181,172,144,229,118,285,103,329"/>
+<area shape="rect" id="Node000006" href="$namespacemod__thermal__emission.html#af1c1121f9f307f84ffbae2a73c129977" title=" " alt="" coords="273,134,448,189"/>
+<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="105,326,153,263,188,228,227,198,259,182,261,186,229,202,191,232,157,266,109,329"/>
+<area shape="rect" id="Node000019" href="$namespacemod__thermal__emission.html#a526a20f2bbab58ec3cb9f31980fb7e5b" title=" " alt="" coords="273,213,448,267"/>
+<area shape="poly" id="edge4_Node000001_Node000019" title=" " alt="" coords="128,325,227,278,259,266,261,271,229,282,131,330"/>
+<area shape="rect" id="Node000029" href="$namespacemod__thermal__emission.html#a4c07f3a3720c411e7d3b65cb8de41d5c" title=" " alt="" coords="271,292,451,332"/>
+<area shape="poly" id="edge5_Node000001_Node000029" title=" " alt="" coords="180,334,257,323,257,329,181,339"/>
+<area shape="rect" id="Node000030" href="$namespacemod__thermal__emission.html#ac683b244c6010a87591f502057c96441" title=" " alt="" coords="273,357,448,411"/>
+<area shape="poly" id="edge6_Node000001_Node000030" title=" " alt="" coords="181,357,260,368,259,373,180,362"/>
+<area shape="rect" id="Node000031" href="$namespacemod__thermal__emission.html#ab58c23e03a79352d521dca4a4ff46105" title=" " alt="" coords="273,436,449,476"/>
+<area shape="poly" id="edge7_Node000001_Node000031" title=" " alt="" coords="126,366,174,394,229,420,260,431,259,436,227,425,171,398,123,371"/>
+<area shape="rect" id="Node000033" href="$namespacemod__thermal__emission.html#ac97d12f33117a202d49629a059dae17a" title=" " alt="" coords="273,500,448,540"/>
+<area shape="poly" id="edge8_Node000001_Node000033" title=" " alt="" coords="110,366,158,426,191,459,229,486,261,500,259,505,227,490,188,463,154,430,105,370"/>
+<area shape="rect" id="Node000036" href="$namespacemod__thermal__emission.html#afec94e91cc2cfde1c73ab42d7b82823f" title=" " alt="" coords="228,564,493,604"/>
+<area shape="poly" id="edge9_Node000001_Node000036" title=" " alt="" coords="104,367,121,407,148,456,184,507,206,530,230,550,238,555,235,560,226,554,202,534,180,511,143,459,116,409,99,370"/>
+<area shape="rect" id="Node000038" href="$namespacemod__thermal__emission.html#a1d14762e6c60415ff69c8df00c20ad46" title=" " alt="" coords="241,628,481,668"/>
+<area shape="poly" id="edge10_Node000001_Node000038" title=" " alt="" coords="101,367,114,418,138,485,156,520,176,555,201,587,230,614,236,619,233,623,226,618,197,590,172,558,151,523,133,487,109,419,95,369"/>
 </map>

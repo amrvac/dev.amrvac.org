@@ -11,5 +11,6 @@ var searchData=
   ['started_8',['Getting started',['../md_doc_2getting__started.html',1,'']]],
   ['style_20guide_9',['Code style guide',['../md_doc_2code__style__guide.html',1,'']]],
   ['subroutine_10',['Writing a custom analysis subroutine',['../md_doc_2analysis.html',1,'']]],
-  ['symmetry_11',['Using axial and translational symmetry',['../md_doc_2axial.html',1,'']]]
+  ['symmetry_11',['Using axial and translational symmetry',['../md_doc_2axial.html',1,'']]],
+  ['synthesis_20validation_20notes_12',['Radiation Synthesis Validation Notes',['../md_doc_2radiation__synthesis__validation.html',1,'']]]
 ];

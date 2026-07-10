@@ -1,0 +1,7 @@
+<map id="mod_thermal_emission::get_sph_intersection_image_bounds" name="mod_thermal_emission::get_sph_intersection_image_bounds">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,30,180,85"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#ae234843713e8da1b6745bce79c0bbb73" title=" " alt="" coords="228,5,447,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,43,214,39,215,44,180,49"/>
+<area shape="rect" id="Node000003" href="$namespacemod__thermal__emission.html#a7af4c6d3fcf23e43ae346803b99e78b4" title=" " alt="" coords="241,69,433,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,66,228,72,228,78,180,71"/>
+</map>

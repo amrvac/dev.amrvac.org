@@ -1,5 +1,7 @@
 <map id="mod_thermal_emission::get_whitelight_image" name="mod_thermal_emission::get_whitelight_image">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,180,45"/>
-<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a81c1a6b6a21d847902b5f2383f0dc129" title=" " alt="" coords="228,5,403,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,23,214,23,214,28,180,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,49,180,89"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a8f1788a930b5c4971cf671f79a532c31" title=" " alt="" coords="228,5,429,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,53,214,47,215,53,181,58"/>
+<area shape="rect" id="Node000004" href="$namespacemod__thermal__emission.html#a81c1a6b6a21d847902b5f2383f0dc129" title=" " alt="" coords="241,85,416,125"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="181,79,228,87,227,92,180,85"/>
 </map>

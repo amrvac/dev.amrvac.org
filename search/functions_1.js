@@ -15,6 +15,8 @@ var searchData=
   ['bremcross_5fbetheheitler_12',['bremcross_betheheitler',['../namespacemod__bremsstrahlung.html#aa0f901a8cec7a4bb924fd3550b0f62c9',1,'mod_bremsstrahlung']]],
   ['bremcross_5fhaug_13',['bremcross_haug',['../namespacemod__bremsstrahlung.html#a30661b5dea0c8ebbbddfdfcef597a6bd',1,'mod_bremsstrahlung']]],
   ['bremcross_5fkramers_14',['bremcross_kramers',['../namespacemod__bremsstrahlung.html#a9192b33420a3a566b916830ca6b0a8b2',1,'mod_bremsstrahlung']]],
-  ['build_5fconnectivity_15',['build_connectivity',['../namespacemod__functions__connectivity.html#ad0f896bb9a50442f121e8fa63b365b15',1,'mod_functions_connectivity']]],
-  ['build_5fy_5fmod_5ftable_16',['build_y_mod_table',['../namespacemod__radiative__cooling.html#a6734611e0cdf1279b4fb32cb3322dbaa',1,'mod_radiative_cooling']]]
+  ['build_5fcart_5fdda_5ffaces_15',['build_cart_dda_faces',['../namespacemod__thermal__emission.html#af54cba6a082624f8d0fd4660d46d2186',1,'mod_thermal_emission']]],
+  ['build_5fconnectivity_16',['build_connectivity',['../namespacemod__functions__connectivity.html#ad0f896bb9a50442f121e8fa63b365b15',1,'mod_functions_connectivity']]],
+  ['build_5fsph_5fintersection_5ffaces_17',['build_sph_intersection_faces',['../namespacemod__thermal__emission.html#ae234843713e8da1b6745bce79c0bbb73',1,'mod_thermal_emission']]],
+  ['build_5fy_5fmod_5ftable_18',['build_y_mod_table',['../namespacemod__radiative__cooling.html#a6734611e0cdf1279b4fb32cb3322dbaa',1,'mod_radiative_cooling']]]
 ];

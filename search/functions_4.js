@@ -35,5 +35,6 @@ var searchData=
   ['errormsg_32',['errormsg',['../namespacemod__variables.html#a67d7a43716758f18d4a148274819a39a',1,'mod_variables']]],
   ['escape_5fprob_5fcompute_5fcolmass_33',['escape_prob_compute_colmass',['../namespacemod__escape__probability.html#a5a4045207e1226f7075cab3647211b29',1,'mod_escape_probability']]],
   ['escape_5fprob_5finit_34',['escape_prob_init',['../namespacemod__escape__probability.html#abd51b3a43f78d50b3ec44fd28f5298ac',1,'mod_escape_probability']]],
-  ['evaluate_5fdiffterm_5fonegrid_35',['evaluate_diffterm_onegrid',['../namespacemod__fld.html#a5bc7da4fdd7a34dfc265c91589f0efab',1,'mod_fld']]]
+  ['evaluate_5fdiffterm_5fonegrid_35',['evaluate_diffterm_onegrid',['../namespacemod__fld.html#a5bc7da4fdd7a34dfc265c91589f0efab',1,'mod_fld']]],
+  ['exp_5fclamped_36',['exp_clamped',['../namespacemod__thermal__emission.html#a43aeebfd3770e24fbd18025f34e4a58c',1,'mod_thermal_emission']]]
 ];

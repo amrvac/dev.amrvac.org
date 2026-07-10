@@ -1,5 +1,9 @@
 <map id="mod_thermal_emission::integrate_euv_datresol" name="mod_thermal_emission::integrate_euv_datresol">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,185,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,185,109"/>
 <area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#af49384ae59d12d978836e02f57cfee66" title=" " alt="" coords="233,5,408,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,23,220,23,220,28,186,28"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,67,236,47,237,52,167,72"/>
+<area shape="rect" id="Node000005" href="$namespacemod__thermal__emission.html#a3d15c949bd109d9eccc4e6643864e1dc" title=" " alt="" coords="233,69,408,109"/>
+<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="186,87,220,87,220,92,186,92"/>
+<area shape="rect" id="Node000006" href="$namespacemod__thermal__emission.html#abf39001d8727e5195e200ace94766549" title=" " alt="" coords="233,134,408,189"/>
+<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="160,107,222,127,221,132,158,112"/>
 </map>

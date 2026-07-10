@@ -1,0 +1,9 @@
+<map id="mod_thermal_emission::acc_euv_cart_dda" name="mod_thermal_emission::acc_euv_cart_dda">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,180,109"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a3b216971e790e050986b01ae2199bee5" title=" " alt="" coords="228,5,411,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,67,234,47,235,52,165,72"/>
+<area shape="rect" id="Node000003" href="$namespacemod__thermal__emission.html#aed151d638bde77fc2aec77d3bc403c35" title=" " alt="" coords="232,69,407,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,87,218,87,218,92,181,92"/>
+<area shape="rect" id="Node000004" href="$namespacemod__thermal__emission.html#a97306ca8ed3ea67a480c54762d92589b" title=" " alt="" coords="231,133,407,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,107,235,127,234,132,164,112"/>
+</map>
