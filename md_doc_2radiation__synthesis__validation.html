@@ -85,18 +85,18 @@ $(function() {
 <h1>Compatibility baseline</h1>
 <p>The default <code>&amp;emissionlist</code> behavior remains unchanged:</p>
 <ul>
-<li>&lsquo;radiation_transfer='thin&rsquo;<code> -</code>ray_method='legacy'<code> -</code>emission_model='auto'<code> -</code>output_tau=.false.<code> -</code>output_absorption_fraction=.false.<code> -</code>instrument_postprocess=.false.<code> -</code>radio_frequency=17.d9<code> -</code>radio_beam_fwhm=0.d0<code> -</code>radio_beam_pixel_size=0.d0`</li>
+<li>&lsquo;radiation_transfer='thin&rsquo;<code> -</code>ray_method='auto'<code> -</code>emission_model='auto'<code> -</code>output_tau=.false.<code> -</code>output_absorption_fraction=.false.<code> -</code>instrument_postprocess=.false.<code> -</code>radio_frequency=17.d9<code> -</code>radio_beam_fwhm=0.d0<code> -</code>radio_beam_pixel_size=0.d0`</li>
 </ul>
-<p>Existing &lsquo;convert_type='EIvtiCCmpi&rsquo;<code>,</code>EIvtuCCmpi<code>,</code>SI...<code>, and</code>WI...` inputs therefore continue to use the historical optically thin path unless a new option is explicitly selected.</p>
+<p>Existing &lsquo;convert_type='SI...&rsquo;<code>and</code>WI...<code>inputs continue to use the historical paths. EUV images use</code>ray_method='auto'<code>by default: Cartesian dat-resolution EUV uses the native Cartesian ray tracer, spherical EUV uses the native spherical ray/mesh-intersection path, and unsupported combinations fall back to</code>legacy<code>. Set</code>ray_method='legacy'` to force the old projector.</p>
 <h1>Current product matrix</h1>
 <p>The current implementation is intended to keep the historical workflow (<code>convert_type</code> plus <code>&amp;emissionlist</code>) while adding explicit transfer and ray choices for Cartesian post-processing.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Product   </th><th class="markdownTableHeadNone">Legacy instrument grid   </th><th class="markdownTableHeadNone">Cartesian dat-resolution   </th><th class="markdownTableHeadNone">Cartesian <code>cart_dda</code> arbitrary LOS   </th><th class="markdownTableHeadNone">Thick transfer   </th><th class="markdownTableHeadNone">Post-process to observational grid   </th><th class="markdownTableHeadNone">Spherical    </th></tr>
+<th class="markdownTableHeadNone">Product   </th><th class="markdownTableHeadNone">Legacy instrument grid   </th><th class="markdownTableHeadNone">Cartesian dat-resolution   </th><th class="markdownTableHeadNone">Cartesian <code>cart</code> arbitrary LOS   </th><th class="markdownTableHeadNone">Thick transfer   </th><th class="markdownTableHeadNone">Post-process to observational grid   </th><th class="markdownTableHeadNone">Spherical    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">EUV AIA/IRIS/EIS image   </td><td class="markdownTableBodyNone">yes, thin   </td><td class="markdownTableBodyNone">yes, axis-aligned thin/thick   </td><td class="markdownTableBodyNone">yes, thin/thick   </td><td class="markdownTableBodyNone">yes, H/He absorption   </td><td class="markdownTableBodyNone">yes, AIA-style PSF for EUV images   </td><td class="markdownTableBodyNone">legacy thin plus native <code>sph_intersection</code> thin/thick EUV instrument-grid    </td></tr>
+<td class="markdownTableBodyNone">EUV AIA/IRIS/EIS image   </td><td class="markdownTableBodyNone">yes, thin   </td><td class="markdownTableBodyNone">yes, axis-aligned thin/thick   </td><td class="markdownTableBodyNone">yes, thin/thick   </td><td class="markdownTableBodyNone">yes, H/He absorption   </td><td class="markdownTableBodyNone">yes, AIA-style PSF for Cartesian native EUV images   </td><td class="markdownTableBodyNone">legacy thin plus native <code>spherical</code> thin/thick EUV instrument-grid and dat-resolution    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">SXR image   </td><td class="markdownTableBodyNone">yes, thin   </td><td class="markdownTableBodyNone">yes, axis-aligned thin   </td><td class="markdownTableBodyNone">no   </td><td class="markdownTableBodyNone">no   </td><td class="markdownTableBodyNone">no DDA post-process   </td><td class="markdownTableBodyNone">legacy thin instrument-grid only    </td></tr>
+<td class="markdownTableBodyNone">SXR image   </td><td class="markdownTableBodyNone">yes, thin   </td><td class="markdownTableBodyNone">yes, axis-aligned thin   </td><td class="markdownTableBodyNone">no   </td><td class="markdownTableBodyNone">no   </td><td class="markdownTableBodyNone">no native post-process   </td><td class="markdownTableBodyNone">legacy thin instrument-grid only    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">White light   </td><td class="markdownTableBodyNone">spherical legacy   </td><td class="markdownTableBodyNone">no   </td><td class="markdownTableBodyNone">no   </td><td class="markdownTableBodyNone">no   </td><td class="markdownTableBodyNone">legacy LASCO-like PSF   </td><td class="markdownTableBodyNone">yes, primary supported path    </td></tr>
 <tr class="markdownTableRowEven">
@@ -106,10 +106,10 @@ $(function() {
 </table>
 <p>Practical recommendations:</p>
 <ul>
-<li>For cold-material EUV absorption in Cartesian data, use &lsquo;radiation_transfer='thick&rsquo;<code>; for non-axis-aligned views, also use </code>ray_method='cart_dda'<code>.</code></li>
-<li><code>For Cartesian stretched dat-resolution data, use VTU output. VTI is only safe for uniform image spacing.</code></li>
+<li>For cold-material EUV absorption in Cartesian data, use &lsquo;radiation_transfer='thick&rsquo;<code>; for non-axis-aligned views, also use </code>ray_method='cart'<code>.</code></li>
+<li><code>For dat-resolution data with non-uniform output spacing, use VTU output. VTI is allowed only when the emitted image-plane grid is uniform.</code></li>
 <li><code>For radio quick-look products, the current</code>radio_ff<code>path is sufficient for multi-view brightness-temperature images. Use</code>radio_beam_fwhm<code>only when an observational beam is needed.</code></li>
-<li><code>For spherical data, use the legacy instrument-resolution projection for optically thin SXR and white light. For native EUV ray tracing, use </code>ray_method='sph_intersection'<code>with</code>dat_resolution=.false.<code>and </code>radiation_transfer='thin'<code>or</code>'thick'`.</li>
+<li><code>For spherical data, use the legacy instrument-resolution projection for optically thin SXR and white light. For native EUV ray tracing, use </code>ray_method='spherical'<code>with</code>radiation_transfer='thin'<code>or </code>'thick'`; both instrument-resolution and dat-resolution EUV images are supported.</li>
 </ul>
 <h1>Local demo guards</h1>
 <p>The radiation-synthesis examples documented here are intended as local demo and developer guards. They are not wired into the top-level autotest/CI suites by default, because the full 3D convert cases are heavier than the regular regression matrix.</p>
@@ -117,7 +117,7 @@ $(function() {
 <p>The Cartesian demo case is <code>tests/demo4/RadiationSynthesis_3D</code>. It builds a small TDm/prominence AMR cube and keeps two thick EUV reference views:</p>
 <ul>
 <li>axis-aligned optically thick AIA 171 image with <code>tau</code> and <code>absorption_fraction</code>, using <code>convert_171_thick.par</code>.</li>
-<li>oblique Cartesian DDA optically thick AIA 171 image with <code>tau</code> and <code>absorption_fraction</code>, using <code>convert_171_cart_dda_thick_oblique.par</code>.</li>
+<li>oblique native Cartesian optically thick AIA 171 image with <code>tau</code> and <code>absorption_fraction</code>, using <code>convert_171_cart_dda_thick_oblique.par</code>.</li>
 </ul>
 <p>Run the 3D Cartesian demo manually with:</p>
 <div class="fragment"><div class="line">make -C tests/demo4/RadiationSynthesis_3D -f test.make</div>
@@ -126,7 +126,7 @@ $(function() {
 <p>The current performance-sensitive paths are:</p>
 <ul>
 <li>axis-aligned thick transfer, which streams LOS layers in small batches instead of allocating a full <code>Npix * Nlos</code> column buffer.</li>
-<li><code>cart_dda</code>, which preselects block footprints on the image plane and routes per-pixel ray segments to owner MPI ranks before sorting. It emits lightweight profile counters for ray tests, ray hits, segment counts, MPI exchange volume, and sorting work in the per-conversion logs.</li>
+<li><code>cart</code>, which preselects block footprints on the image plane and routes per-pixel ray segments to owner MPI ranks before sorting. It emits lightweight profile counters for ray tests, ray hits, segment counts, MPI exchange volume, and sorting work in the per-conversion logs.</li>
 </ul>
 <p>For quick performance comparisons, use the same TDm/prominence demo case and record wall time for the retained reference conversions:</p>
 <ul>
@@ -135,11 +135,11 @@ $(function() {
 </ul>
 <p>The most useful next profile points are ray-box intersection counts, collected segment counts, <code>MPI_ALLTOALLV</code> volume, and same-pixel segment sorting time.</p>
 <h1>Spherical-coordinate support</h1>
-<p>The default spherical path is the historical instrument-resolution projector. It initializes a LOS/image-plane basis from <code>LOS_theta</code>, <code>LOS_phi</code>, and <code>image_rotate</code>, sub-samples spherical cells in <code>r/theta/phi</code>, maps each sub-sample to the image plane, and distributes the contribution through the instrument PSF. A native ray/mesh-intersection path is also available for EUV images with &lsquo;ray_method='sph_intersection&rsquo;`.</p>
+<p>The legacy spherical path is the historical instrument-resolution projector. It initializes a LOS/image-plane basis from <code>LOS_theta</code>, <code>LOS_phi</code>, and <code>image_rotate</code>, sub-samples spherical cells in <code>r/theta/phi</code>, maps each sub-sample to the image plane, and distributes the contribution through the instrument PSF. A native ray/mesh-intersection path is also available for EUV images with &lsquo;ray_method='spherical&rsquo;`.</p>
 <p>Supported today:</p>
 <ul>
 <li>optically thin EUV instrument-resolution images on spherical grids.</li>
-<li>native spherical thin and thick EUV images with &lsquo;ray_method='sph_intersection&rsquo;<code>,</code>dat_resolution=.false.<code>, and </code>radiation_transfer='thin'<code>or</code>'thick'<code>.</code></li>
+<li>native spherical thin and thick EUV images with &lsquo;ray_method='spherical&rsquo;<code>and</code>radiation_transfer='thin'<code>or</code>'thick'<code>; both instrument-resolution and dat-resolution image grids are supported.</code></li>
 <li><code>spherical thick EUV diagnostic maps</code>tau<code>and</code>absorption_fraction<code>.</code></li>
 <li><code>optically thin SXR instrument-resolution images on spherical grids.</code></li>
 <li><code>LASCO-like white-light</code>B<code>and</code>pB<code>images on spherical grids.</code></li>
@@ -148,14 +148,14 @@ $(function() {
 </ul>
 <p>Not supported yet:</p>
 <ul>
-<li>spherical .dat-resolution EUV/SXR images.</li>
-<li><code>cart_dda</code> on spherical data.</li>
+<li>spherical .dat-resolution SXR images.</li>
+<li><code>cart</code> on spherical data.</li>
 <li><code>instrument_postprocess</code> on spherical data.</li>
 <li><code>radio_ff</code> or <code>pseudo_current</code> as validated spherical products.</li>
-<li><code>sph_intersection</code> for SXR, white light, radio, pseudo-current, polar-axis crossing domains, or phi-wrapping domains.</li>
+<li><code>spherical</code> for SXR, white light, radio, pseudo-current, polar-axis crossing domains, or phi-wrapping domains.</li>
 </ul>
-<p>The native spherical path constructs ray intersections with spherical grid faces, sorts path points by LOS distance, and in thick EUV mode reuses the <code>j/kappa</code> transfer layer for strict front-to-back integration. It still rejects polar-axis crossing, phi-wrapping, non-EUV products, and dat-resolution output.</p>
-<p>The spherical demo case is <code>tests/demo4/RadiationSynthesisSphericalTDm_3D</code>. It builds a lightweight spherical TDm/prominence-style AMR shell and keeps two native <code>sph_intersection</code> thick EUV reference views:</p>
+<p>The native spherical path constructs ray intersections with spherical grid faces, sorts path points by LOS distance, and in thick EUV mode reuses the <code>j/kappa</code> transfer layer for strict front-to-back integration. It still rejects polar-axis crossing, phi-wrapping, and non-EUV products.</p>
+<p>The spherical demo case is <code>tests/demo4/RadiationSynthesisSphericalTDm_3D</code>. It builds a lightweight spherical TDm/prominence-style AMR shell and keeps two native <code>spherical</code> thick EUV reference views:</p>
 <ul>
 <li>top-down thick AIA 171, using <code>convert_171_sph_native_topdown_thick.par</code>.</li>
 <li>45-degree top-corner thick AIA 171, using <code>convert_171_sph_native_corner45_top_thick.par</code>.</li>
@@ -165,9 +165,10 @@ $(function() {
 </div><!-- fragment --><p>The generated VTI files contain <code>AIA171_thick</code>, <code>tau</code>, and <code>absorption_fraction</code> and are intended for ParaView inspection.</p>
 <h1>Remaining known scope limits</h1>
 <ul>
-<li><code>cart_dda</code> currently requires Cartesian slab dat-resolution grids.</li>
-<li>Stretched Cartesian dat-resolution images should use VTU output; VTI remains restricted to uniform image spacing.</li>
-<li><code>sph_intersection</code> currently supports only spherical EUV instrument-resolution images.</li>
+<li><code>cart</code> currently requires Cartesian slab dat-resolution grids.</li>
+<li>Dat-resolution VTI output is restricted to uniform image-plane spacing; use VTU for non-uniform image grids.</li>
+<li><code>spherical</code> currently supports only spherical EUV images. In dat-resolution mode it outputs AIA intensity, plus optional <code>tau</code> and <code>absorption_fraction</code> in thick mode; Doppler and instrument post-processing are not yet defined for this path.</li>
+<li>The old names <code>cart_dda</code> and <code>sph_intersection</code> are accepted as aliases for <code>cart</code> and <code>spherical</code>.</li>
 <li><code>pseudo_current</code> is optically thin only.</li>
 <li><code>radio_ff</code> is a first thermal free-free implementation with a compact Gaunt-factor approximation, brightness-temperature output, and optional Gaussian beam post-processing. </li>
 </ul>
