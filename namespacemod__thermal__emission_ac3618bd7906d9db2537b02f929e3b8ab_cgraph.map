@@ -1,0 +1,9 @@
+<map id="mod_thermal_emission::sph_next_cell_exit" name="mod_thermal_emission::sph_next_cell_exit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,180,109"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#af975134d34f96e27a1cebb589ff7f605" title=" " alt="" coords="241,5,423,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,67,243,46,244,51,169,72"/>
+<area shape="rect" id="Node000003" href="$namespacemod__thermal__emission.html#ad1c44d4508e6195e7cccfbf4fc4e60ae" title=" " alt="" coords="228,69,436,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,87,214,87,214,92,180,92"/>
+<area shape="rect" id="Node000004" href="$namespacemod__thermal__emission.html#abbc84627328facd2373720976b8c7791" title=" " alt="" coords="245,134,419,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="161,107,232,128,230,134,159,112"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="mod_thermal_emission::collect_euv_sph_dda_segments" name="mod_thermal_emission::collect_euv_sph_dda_segments">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,121,180,176"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#aa9690a93aad60871a0e64747d344eb3c" title=" " alt="" coords="250,5,425,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,119,227,77,257,63,259,68,229,82,146,124"/>
+<area shape="rect" id="Node000004" href="$namespacemod__thermal__emission.html#add8f168666f57d60d2af2706e422ea41" title=" " alt="" coords="495,46,669,86"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="180,131,481,80,482,86,181,137"/>
+<area shape="rect" id="Node000011" href="$namespacemod__thermal__emission.html#a2ddc2a8dde0d25e200cad0e4610b3b2c" title=" " alt="" coords="228,187,447,241"/>
+<area shape="poly" id="edge3_Node000001_Node000011" title=" " alt="" coords="181,169,222,180,221,186,179,174"/>
+<area shape="rect" id="Node000012" href="$namespacemod__thermal__emission.html#a51437ea43455cfffb09cdf25e160621b" title=" " alt="" coords="495,169,669,209"/>
+<area shape="poly" id="edge6_Node000001_Node000012" title=" " alt="" coords="181,151,447,171,481,175,481,180,446,177,180,157"/>
+<area shape="rect" id="Node000013" href="$namespacemod__thermal__emission.html#a921ca279daea5e162241e6a12a4a1d39" title=" " alt="" coords="495,233,669,273"/>
+<area shape="poly" id="edge8_Node000001_Node000013" title=" " alt="" coords="120,174,168,217,197,237,229,251,292,267,358,273,422,273,480,268,481,273,422,278,358,279,291,272,227,257,194,241,164,221,117,178"/>
+<area shape="poly" id="edge2_Node000002_Node000004" title=" " alt="" coords="425,42,481,50,481,55,424,47"/>
+<area shape="poly" id="edge4_Node000011_Node000012" title=" " alt="" coords="447,200,481,196,481,202,447,205"/>
+<area shape="poly" id="edge5_Node000011_Node000013" title=" " alt="" coords="447,229,482,234,481,239,447,234"/>
+</map>

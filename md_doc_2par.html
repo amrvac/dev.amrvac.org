@@ -330,12 +330,17 @@ check_small_values= F | T
 fix_small_values= F | T
 trace_small_values= F | T
 small_values_fix_iw= LOGICAL, LOGICAL, LOGICAL, ...
+ghostcell_comm_batched= F | T
+ghostcell_comm_batch_size= INTEGER
 
 typegrad = 'central' | 'limited'
 typediv = 'central' | 'limited'
 typecurl = 'central' | 'Gaussbased' | 'Stokesbased'
 /
-</pre> <h3><a class="anchor" id="par_time_integrator"></a>
+</pre> <h3><a class="anchor" id="par_ghostcell_comm"></a>
+Ghost-cell communication batching</h3>
+<p>The <code>ghostcell_comm_batched</code> switch limits the number of outstanding ghost-cell send requests by waiting after every <code>ghostcell_comm_batch_size</code> sends. The default is <code>ghostcell_comm_batched=T</code>. In large-scale MHD tests, the original all-at-once ghost-cell exchange could stall during spherical u512 initialization, while u256 5-step tests showed less than 0.1% total runtime difference with batching enabled. The original communication pattern is still available by setting <code>ghostcell_comm_batched=F</code>. If the batched path remains stable in broader tests, the old path can be removed later. The default batch size is 64.</p>
+<h3><a class="anchor" id="par_time_integrator"></a>
 time_stepper, time_integrator, flux_scheme</h3>
 <p>The <code>time_stepper</code> variable determines the time integration procedure. The default procedure is a second order predictor-corrector type 'twostep' scheme (suitable for TVDLF, TVD-MUSCL schemes), and a simple 'onestep' algorithm for the temporally second order TVD method, or the first order TVDLF1, TVDMU1, TVD1 schemes. It is not possible to mix different step size methods across the AMR grid levels. The temporally first order but spatially second order TVD1 algorithm is best suited for steady state calculations as a 'onestep' scheme. The TVDLF and TVD-MUSCL schemes can be forced to be first order, and linear in the time step, which is good for getting a steady state, by setting &lsquo;time_stepper='onestep&rsquo;`.</p>
 <p>There is also a fourth order Runge-Kutta type method, when &lsquo;time_stepper='fourstep&rsquo;<code> and one sets </code>time_integrator='rk4'`. It can be used with <em>dimsplit=.true.</em>. These higher order time integration methods can be most useful in conjunction with higher order spatial discretizations. See also <a class="el" href="md_doc_2discretization.html">discretization</a> and <a class="el" href="md_doc_2time__discretization.html">time_discretization</a>.</p>
@@ -627,7 +632,8 @@ Synthetic EUV/SXR/whitelight emission</h2>
 <li><code>Use</code>ray_method='spherical'<code>for spherical EUV images when native ray/mesh intersections are preferred over legacy spherical deposition. It supports arbitrary viewing angles for both instrument-resolution and dat-resolution EUV images, including stretched spherical grids. Thick mode uses the same H I / He I / He II opacity model as Cartesian thick EUV and can output</code>tau<code>and</code>absorption_fraction<code>. Dat-resolution</code>spherical<code> outputs AIA intensity only, plus those optional thick diagnostics; Doppler and</code>instrument_postprocess<code>are not yet defined for this path.</code></li>
 <li><code>The older names</code>ray_method='cart_dda'<code>and </code>ray_method='sph_intersection'<code>are accepted as compatibility aliases for </code>cart<code>and</code>spherical<code>.</code></li>
 <li><code>Use</code>instrument_postprocess=.true.<code>after Cartesian native dat-resolution products when an observational image grid is desired. EUV AIA images use the existing AIA-style Gaussian PSF. Radio free-free images use an independent Gaussian beam controlled by</code>radio_beam_fwhm<code>and </code>radio_beam_pixel_size<code>, both in arcsec; if</code>radio_beam_pixel_size<code>is non-positive, it defaults to one third of the beam FWHM.</code></li>
-<li><code>Use</code>radsyn_pixel_batch<code>to cap the number of image pixels processed in one native Cartesian/spherical thick-transfer segment batch. The default is 128. Set</code>radsyn_verbose=.true.` to print ray tests, segment counts, MPI volume, and sort-work counters for profiling.</li>
+<li><code>Use</code>radsyn_pixel_batch<code>to cap the number of image pixels processed in one native Cartesian/spherical thick-transfer segment batch. The default is 128. Set</code>radsyn_verbose=.true.<code>to print ray tests, segment counts, MPI volume, and sort-work counters for profiling.</code></li>
+<li><code>Use</code>radsyn_segment_batch_factor<code>and</code>radsyn_segment_comm_factor<code>to tune native thick-transfer segment batching. By default</code>radsyn_segment_batch_factor=256<code>, which allows up to </code>256*radsyn_pixel_batch<code>ray segments in one image-pixel batch. Set </code>radsyn_segment_batch_factor&lt;=0<code>to choose the per-batch segment limit from </code>radsyn_segment_memory_mb<code>instead. The default memory budget is 8 MiB per MPI rank, which is conservative for the temporary segment, communication, and sorting arrays. Increasing </code>radsyn_segment_comm_factor` allows more ray segments per segmented MPI all-to-all round; its default is 16.</li>
 <li>Use VTU output for non-uniform dat-resolution image grids. VTI is allowed only when the emitted image-plane spacing is uniform.</li>
 </ul>
 <p>The first optically thick EUV model uses H I / He I / He II photoionization opacity and reduces to the thin result when opacity is zero. The flags 'output_tau' and 'output_absorption_fraction' add diagnostic maps for thick EUV and radio products. The model 'radio_ff' reuses the EUV image convert types for thermal free-free radio synthesis. It uses the observing frequency 'radio_frequency' in Hz and outputs brightness temperature as 'radio_brightness_temperature' or 'radio_brightness_temperature_thick'. The model 'pseudo_current' reuses the EUV image convert types as a magnetic-structure visualization mode: it integrates |curl B|^2 along the LOS with optically thin transfer and labels the output variable 'pseudo_current'. </p><pre class="fragment">&amp;emissionlist
@@ -650,6 +656,9 @@ Synthetic EUV/SXR/whitelight emission</h2>
   radio_beam_fwhm= DOUBLE
   radio_beam_pixel_size= DOUBLE
   radsyn_pixel_batch= INTEGER
+  radsyn_segment_batch_factor= INTEGER
+  radsyn_segment_memory_mb= DOUBLE
+  radsyn_segment_comm_factor= INTEGER
   radsyn_verbose= LOGICAL
   spectrum_wl= 1354 | 263 | 264| 192 | 255
   spectrum_window_min= DOUBLE

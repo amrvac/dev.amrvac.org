@@ -1,0 +1,9 @@
+<map id="mod_thermal_emission::collect_euv_sph_dda_interval" name="mod_thermal_emission::collect_euv_sph_dda_interval">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,62,180,117"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a6d37aa39e18137338c59a0ed5784566a" title=" " alt="" coords="228,5,433,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,63,242,46,243,52,181,68"/>
+<area shape="rect" id="Node000003" href="$namespacemod__thermal__emission.html#add8f168666f57d60d2af2706e422ea41" title=" " alt="" coords="243,69,418,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,87,229,87,229,92,180,92"/>
+<area shape="rect" id="Node000006" href="$namespacemod__thermal__emission.html#ac3618bd7906d9db2537b02f929e3b8ab" title=" " alt="" coords="243,133,418,173"/>
+<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="181,110,243,127,242,132,180,115"/>
+</map>

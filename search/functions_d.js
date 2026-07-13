@@ -9,5 +9,6 @@ var searchData=
   ['nonlinear_5fget_5fv_6',['nonlinear_get_v',['../namespacemod__nonlinear__phys.html#aa82481243c39b896fb37e8f655a0f2ba',1,'mod_nonlinear_phys']]],
   ['nonlinear_5fphys_5finit_7',['nonlinear_phys_init',['../namespacemod__nonlinear__phys.html#a96cf02dc7d105fe6bf4abe259182c83d',1,'mod_nonlinear_phys']]],
   ['nonlinear_5froe_5finit_8',['nonlinear_roe_init',['../namespacemod__nonlinear__roe.html#ab22acac8ecf131d8227d2d1cacf45c8b',1,'mod_nonlinear_roe']]],
-  ['normal_9',['normal',['../structmod__random_1_1rng__t.html#a82f2a8bbeb277c41609cde1d19497627',1,'mod_random::rng_t']]]
+  ['normal_9',['normal',['../structmod__random_1_1rng__t.html#a82f2a8bbeb277c41609cde1d19497627',1,'mod_random::rng_t']]],
+  ['normalize_5feuv_5fdoppler_10',['normalize_euv_doppler',['../namespacemod__thermal__emission.html#a11661024f1c0474541fe7fa399438eb7',1,'mod_thermal_emission']]]
 ];

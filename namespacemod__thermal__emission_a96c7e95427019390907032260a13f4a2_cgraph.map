@@ -1,0 +1,9 @@
+<map id="mod_thermal_emission::sort_segment_indices_near_to_far" name="mod_thermal_emission::sort_segment_indices_near_to_far">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,180,60"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a84f3bf9e93ce9c450e971ef4149f0721" title=" " alt="" coords="483,5,665,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,18,228,14,331,10,435,14,469,17,469,22,435,19,331,15,228,19,180,24"/>
+<area shape="rect" id="Node000003" href="$namespacemod__thermal__emission.html#a2f3fe29ee316d73b8e97332c29c270e9" title=" " alt="" coords="228,53,435,93"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,45,215,50,214,56,180,50"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="434,53,469,47,470,53,435,58"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="287,53,284,43,292,34,307,28,331,26,359,29,374,36,372,41,358,34,331,31,308,33,295,38,290,44,292,52"/>
+</map>

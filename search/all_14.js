@@ -20,5 +20,6 @@ var searchData=
   ['quarter_17',['quarter',['../namespacemod__constants.html#a15bec2c410fe36d787465534027e91f0',1,'mod_constants']]],
   ['questions_18',['questions',['../md_doc_2faq.html',1,'Frequently Asked Questions'],['../md_doc_2faq.html#faq-list',1,'List of questions']]],
   ['quick_20links_19',['Quick links',['../index.html#quick_links',1,'']]],
-  ['quicksort_5finteger_20',['quicksort_integer',['../namespacemod__slice.html#af810fa0cba1eb5efe962eb5b9fc00f05',1,'mod_slice']]]
+  ['quicksort_5finteger_20',['quicksort_integer',['../namespacemod__slice.html#af810fa0cba1eb5efe962eb5b9fc00f05',1,'mod_slice']]],
+  ['quicksort_5fsegment_5findices_21',['quicksort_segment_indices',['../namespacemod__thermal__emission.html#a2f3fe29ee316d73b8e97332c29c270e9',1,'mod_thermal_emission']]]
 ];
