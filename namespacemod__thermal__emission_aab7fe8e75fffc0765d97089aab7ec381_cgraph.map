@@ -1,0 +1,7 @@
+<map id="mod_thermal_emission::get_native_datresol_spacing" name="mod_thermal_emission::get_native_datresol_spacing">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,45,180,100"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a0384a68ea7e137c2e226c4442b7228aa" title=" " alt="" coords="228,5,409,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,55,214,48,215,54,181,60"/>
+<area shape="rect" id="Node000003" href="$namespacemod__thermal__emission.html#a85a452bfa8debdc875ead7545631f66b" title=" " alt="" coords="231,84,406,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,85,218,91,217,97,180,90"/>
+</map>

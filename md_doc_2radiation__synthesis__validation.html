@@ -85,7 +85,7 @@ $(function() {
 <h1>Compatibility baseline</h1>
 <p>The default <code>&amp;emissionlist</code> behavior remains unchanged:</p>
 <ul>
-<li>&lsquo;radiation_transfer='thin&rsquo;<code> -</code>ray_method='auto'<code> -</code>emission_model='auto'<code> -</code>output_tau=.false.<code> -</code>output_absorption_fraction=.false.<code> -</code>instrument_postprocess=.false.<code> -</code>radio_frequency=17.d9<code> -</code>radio_beam_fwhm=0.d0<code> -</code>radio_beam_pixel_size=0.d0`</li>
+<li>&lsquo;radiation_transfer='thin&rsquo;<code> -</code>ray_method='auto'<code> -</code>dat_resolution_mode='nominal'<code> -</code>emission_model='auto'<code> -</code>output_tau=.false.<code> -</code>output_absorption_fraction=.false.<code> -</code>instrument_postprocess=.false.<code> -</code>radio_frequency=17.d9<code> -</code>radio_beam_fwhm=0.d0<code> -</code>radio_beam_pixel_size=0.d0`</li>
 </ul>
 <p>Existing &lsquo;convert_type='SI...&rsquo;<code>and</code>WI...<code>inputs continue to use the historical paths. EUV images use</code>ray_method='auto'<code>by default: Cartesian dat-resolution EUV uses the native Cartesian ray tracer, spherical EUV uses the native spherical ray/mesh-intersection path, and unsupported combinations fall back to</code>legacy<code>. Set</code>ray_method='legacy'` to force the old projector.</p>
 <h1>Current product matrix</h1>
