@@ -1,0 +1,6 @@
+<map id="mod_thermal_emission::get_euv_saha_fractions" name="mod_thermal_emission::get_euv_saha_fractions">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,189,69"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#af56bcf2be5c4e3eed8bc84cb1c153685" title=" " alt="" coords="237,29,412,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,47,223,47,223,52,189,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="282,30,280,20,287,10,302,5,325,3,351,6,366,13,363,18,350,11,325,8,303,10,290,15,285,21,287,28"/>
+</map>

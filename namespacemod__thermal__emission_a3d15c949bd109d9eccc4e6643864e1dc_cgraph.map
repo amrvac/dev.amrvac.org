@@ -1,0 +1,7 @@
+<map id="mod_thermal_emission::get_pseudo_current" name="mod_thermal_emission::get_pseudo_current">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,180,63"/>
+<area shape="rect" id="Node000002" href="$namespacemod__geometry.html#a9af21193cc064e92debf8e7b96f86a60" title="Calculate curl of a vector qvec within ixL Options to employ standard second order CD evaluations use..." alt="" coords="228,5,421,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,31,214,27,215,33,180,36"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="233,55,416,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,50,220,54,219,59,180,55"/>
+</map>

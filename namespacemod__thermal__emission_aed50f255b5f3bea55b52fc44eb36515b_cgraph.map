@@ -1,6 +1,10 @@
 <map id="mod_thermal_emission::get_euv_hhe_opacity" name="mod_thermal_emission::get_euv_hhe_opacity">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,180,69"/>
-<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#af56bcf2be5c4e3eed8bc84cb1c153685" title=" " alt="" coords="228,29,403,69"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,47,214,47,214,52,180,52"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="274,30,271,20,278,10,293,5,315,3,341,6,355,13,353,18,340,11,315,8,294,10,281,15,277,21,279,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,180,67"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#af1c872a294fdc01637f88d174254726d" title=" " alt="" coords="501,31,685,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,24,228,12,341,3,390,5,454,12,516,24,515,30,453,17,390,10,341,8,228,17,165,29"/>
+<area shape="rect" id="Node000004" href="$namespacemod__eos__pi__tables.html#abc7a6cc85762866893b6d54efaf9ccef" title=" " alt="" coords="263,27,418,67"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="180,44,249,44,249,49,180,49"/>
+<area shape="rect" id="Node000006" href="$namespacemod__thermal__emission.html#a1fc2e4756e81bb5c4fdc39c403c01f92" title=" " alt="" coords="228,91,453,131"/>
+<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="172,64,250,85,249,90,170,69"/>
+<area shape="poly" id="edge4_Node000006_Node000002" title=" " alt="" coords="425,88,495,71,496,76,426,93"/>
 </map>
