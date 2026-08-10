@@ -92,6 +92,17 @@ $(function() {
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a8b6150d6d41cd0f725d7385e3ca2ab0b" id="r_a8b6150d6d41cd0f725d7385e3ca2ab0b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#a8b6150d6d41cd0f725d7385e3ca2ab0b">init_b_fff_data</a> (magnetogramname, qlunit, qbunit)</td></tr>
 <tr class="separator:a8b6150d6d41cd0f725d7385e3ca2ab0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa73721950cc3f750936886fbd7208896" id="r_aa73721950cc3f750936886fbd7208896"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#aa73721950cc3f750936886fbd7208896">init_b_fff_data_driven_boundary</a> (boundaryname, qlunit, qbunit, qxc1, qxc2)</td></tr>
+<tr class="separator:aa73721950cc3f750936886fbd7208896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4fbc0b51bd345db2e6e9218f94cc5a" id="r_a7e4fbc0b51bd345db2e6e9218f94cc5a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#a7e4fbc0b51bd345db2e6e9218f94cc5a">lfff_balance_bottom_flux</a> (bz, treatment, max_imbalance, imbalance_before, imbalance_after, mean_correction, status)</td></tr>
+<tr class="memdesc:a7e4fbc0b51bd345db2e6e9218f94cc5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check a constant-alpha magnetogram and optionally remove its core mean. Status: 0 accepted unchanged, 1 mean removed, 2 invalid treatment, 3 invalid threshold, 4 strict-mode imbalance, 5 above auto-balance limit.  <br /></td></tr>
+<tr class="separator:a7e4fbc0b51bd345db2e6e9218f94cc5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0373e8a4d398c79dbec30ecddf99cf5" id="r_ae0373e8a4d398c79dbec30ecddf99cf5"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#ae0373e8a4d398c79dbec30ecddf99cf5">extrapolate_potential_fft</a> (iw_b, padding_factor, source_plane_depth, alpha, top_boundary, flux_treatment, max_flux_imbalance)</td></tr>
+<tr class="memdesc:ae0373e8a4d398c79dbec30ecddf99cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extrapolate a Cartesian potential field with horizontal Fourier modes. The bottom magnetogram must match the level-one physical cell centers. Results are streamed one AMRVAC block layer at a time and written directly to the distributed cell-centered magnetic variables.  <br /></td></tr>
+<tr class="separator:ae0373e8a4d398c79dbec30ecddf99cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7889010247926211bee83eb344af33aa" id="r_a7889010247926211bee83eb344af33aa"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#a7889010247926211bee83eb344af33aa">lfff_fft_transfer</a> (k2, alpha, z, top_height, top_closed, transfer_b, transfer_d, status)</td></tr>
+<tr class="memdesc:a7889010247926211bee83eb344af33aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vertical transfer functions for one nonzero horizontal constant-alpha Fourier mode. transfer_b multiplies Bz0, while transfer_d=-<a class="el" href="namespacemod__global__parameters.html#a71ee003132d53879487a9076243b2402">d(transfer_b)</a>/dz enters the horizontal field. status is zero on success, one for an oscillatory mode in an open half-space, two for a closed-box resonance, and three for invalid geometry.  <br /></td></tr>
+<tr class="separator:a7889010247926211bee83eb344af33aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3e1fe97345478263cb22308feb6362d" id="r_aa3e1fe97345478263cb22308feb6362d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#aa3e1fe97345478263cb22308feb6362d">calc_lin_fff</a> (ixil, ixol, bf, x, alpha, zshift, idir)</td></tr>
 <tr class="separator:aa3e1fe97345478263cb22308feb6362d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae62a14ac58e05c9c9d5891887d31bdef" id="r_ae62a14ac58e05c9c9d5891887d31bdef"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#ae62a14ac58e05c9c9d5891887d31bdef">get_potential_field_potential</a> (ixil, ixol, potential, x, zshift)</td></tr>
@@ -124,6 +135,12 @@ Variables</h2></td></tr>
 <tr class="separator:a57571732dd6f8862594f402d4d2fb0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab933f87ec30a5e5fe667265277f2e22f" id="r_ab933f87ec30a5e5fe667265277f2e22f"><td class="memItemLeft" align="right" valign="top">integer, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#ab933f87ec30a5e5fe667265277f2e22f">nx2</a></td></tr>
 <tr class="separator:ab933f87ec30a5e5fe667265277f2e22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728330e7db1cd78149e07f33f309dbe8" id="r_a728330e7db1cd78149e07f33f309dbe8"><td class="memItemLeft" align="right" valign="top">double precision, parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#a728330e7db1cd78149e07f33f309dbe8">lfff_mode_tolerance</a> =1.d-12</td></tr>
+<tr class="separator:a728330e7db1cd78149e07f33f309dbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d152078688ab6e7174d93f44ec5fd09" id="r_a7d152078688ab6e7174d93f44ec5fd09"><td class="memItemLeft" align="right" valign="top">double precision, parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#a7d152078688ab6e7174d93f44ec5fd09">lfff_resonance_tolerance</a> =1.d-10</td></tr>
+<tr class="separator:a7d152078688ab6e7174d93f44ec5fd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8d1eb8ef23a2b8986f15894ef649404" id="r_ab8d1eb8ef23a2b8986f15894ef649404"><td class="memItemLeft" align="right" valign="top">double precision, parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#ab8d1eb8ef23a2b8986f15894ef649404">lfff_flux_balance_tolerance</a> =1.d-8</td></tr>
+<tr class="separator:ab8d1eb8ef23a2b8986f15894ef649404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Program to extrapolate linear force-free fields in 3D Cartesian coordinates, based on exact Green function method (Chiu &amp; Hilton 1977 ApJ 212,873). </p>
@@ -200,7 +217,95 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00101">101</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00716">716</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+
+</div>
+</div>
+<a id="ae0373e8a4d398c79dbec30ecddf99cf5" name="ae0373e8a4d398c79dbec30ecddf99cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0373e8a4d398c79dbec30ecddf99cf5">&#9670;&#160;</a></span>extrapolate_potential_fft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_lfff::extrapolate_potential_fft </td>
+          <td>(</td>
+          <td class="paramtype">integer, dimension(3), intent(in)&#160;</td>
+          <td class="paramname"><em>iw_b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in), optional&#160;</td>
+          <td class="paramname"><em>padding_factor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in), optional&#160;</td>
+          <td class="paramname"><em>source_plane_depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in), optional&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(len=*), intent(in), optional&#160;</td>
+          <td class="paramname"><em>top_boundary</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(len=*), intent(in), optional&#160;</td>
+          <td class="paramname"><em>flux_treatment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in), optional&#160;</td>
+          <td class="paramname"><em>max_flux_imbalance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extrapolate a Cartesian potential field with horizontal Fourier modes. The bottom magnetogram must match the level-one physical cell centers. Results are streamed one AMRVAC block layer at a time and written directly to the distributed cell-centered magnetic variables. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00220">220</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__lfff_ae0373e8a4d398c79dbec30ecddf99cf5_cgraph.png" border="0" usemap="#anamespacemod__lfff_ae0373e8a4d398c79dbec30ecddf99cf5_cgraph" alt=""/></div>
+<map name="anamespacemod__lfff_ae0373e8a4d398c79dbec30ecddf99cf5_cgraph" id="anamespacemod__lfff_ae0373e8a4d398c79dbec30ecddf99cf5_cgraph">
+<area shape="rect" title="Extrapolate a Cartesian potential field with horizontal Fourier modes. The bottom magnetogram must ma..." alt="" coords="5,173,164,213"/>
+<area shape="rect" href="namespacemod__fft.html#a027570beb7cf5073389ce2fd0a217254" title="In&#45;place two&#45;dimensional FFT on split real/imaginary storage. This avoids allocation and copying in r..." alt="" coords="219,5,408,31"/>
+<area shape="poly" title=" " alt="" coords="96,171,142,110,174,77,211,48,240,33,243,38,213,52,178,81,146,114,101,174"/>
+<area shape="rect" href="namespacemod__fft.html#a8e208b39ee499c9ffcd572048482ce7b" title="Return whether the legacy mixed&#45;radix workspace can handle a transform." alt="" coords="463,56,661,81"/>
+<area shape="poly" title=" " alt="" coords="102,171,148,129,178,108,211,92,270,74,332,63,393,58,449,58,449,63,393,64,333,68,272,79,213,96,181,112,152,133,106,174"/>
+<area shape="rect" href="namespacemod__fft.html#a2d6483c480a32bca647341fa259f30e9" title="Human&#45;readable prime factorization used in unsupported&#45;size diagnostics." alt="" coords="222,107,405,132"/>
+<area shape="poly" title=" " alt="" coords="132,170,211,141,239,133,240,138,213,146,134,175"/>
+<area shape="rect" href="namespacemod__fft.html#a7116951f1758d54941e50d6bf3ae3251" title=" " alt="" coords="212,180,415,205"/>
+<area shape="poly" title=" " alt="" coords="164,190,198,190,198,195,164,195"/>
+<area shape="rect" href="namespacemod__lfff.html#a7e4fbc0b51bd345db2e6e9218f94cc5a" title="Check a constant&#45;alpha magnetogram and optionally remove its core mean. Status: 0 accepted unchanged,..." alt="" coords="234,230,393,270"/>
+<area shape="poly" title=" " alt="" coords="165,210,221,224,220,229,164,215"/>
+<area shape="rect" href="namespacemod__lfff.html#a7889010247926211bee83eb344af33aa" title="Vertical transfer functions for one nonzero horizontal constant&#45;alpha Fourier mode...." alt="" coords="252,294,375,334"/>
+<area shape="poly" title=" " alt="" coords="111,211,157,245,213,280,240,291,238,296,211,284,154,250,108,215"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="222,359,405,384"/>
+<area shape="poly" title=" " alt="" coords="99,212,143,277,176,313,213,344,227,351,225,356,211,348,172,317,139,281,95,215"/>
+<area shape="poly" title=" " alt="" coords="377,28,486,51,485,56,376,33"/>
+<area shape="poly" title=" " alt="" coords="522,58,513,48,518,38,534,32,562,29,597,33,607,38,611,44,606,47,603,42,596,38,562,35,535,37,521,42,518,47,526,54"/>
+<area shape="poly" title=" " alt="" coords="339,178,413,141,523,85,525,90,416,146,342,182"/>
+<area shape="poly" title=" " alt="" coords="276,182,268,172,273,162,288,156,313,153,345,157,357,167,354,171,343,162,313,159,289,161,276,166,274,171,280,178"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -260,7 +365,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00171">171</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00821">821</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
 
 </div>
 </div>
@@ -278,7 +383,7 @@ Variables</h2></td></tr>
 
 <p>Solve Poisson equation of scalar potential using multigrid solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00290">290</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00940">940</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -368,7 +473,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00206">206</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00856">856</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
 
 </div>
 </div>
@@ -404,7 +509,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00037">37</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00040">40</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -415,6 +520,196 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="182,15,215,15,215,21,182,21"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="aa73721950cc3f750936886fbd7208896" name="aa73721950cc3f750936886fbd7208896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa73721950cc3f750936886fbd7208896">&#9670;&#160;</a></span>init_b_fff_data_driven_boundary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_lfff::init_b_fff_data_driven_boundary </td>
+          <td>(</td>
+          <td class="paramtype">character(len=*), intent(in)&#160;</td>
+          <td class="paramname"><em>boundaryname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>qlunit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>qbunit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in), optional&#160;</td>
+          <td class="paramname"><em>qxc1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in), optional&#160;</td>
+          <td class="paramname"><em>qxc2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00103">103</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__lfff_aa73721950cc3f750936886fbd7208896_cgraph.png" border="0" usemap="#anamespacemod__lfff_aa73721950cc3f750936886fbd7208896_cgraph" alt=""/></div>
+<map name="anamespacemod__lfff_aa73721950cc3f750936886fbd7208896_cgraph" id="anamespacemod__lfff_aa73721950cc3f750936886fbd7208896_cgraph">
+<area shape="rect" title=" " alt="" coords="5,27,180,67"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="265,5,448,31"/>
+<area shape="poly" title=" " alt="" coords="180,35,251,27,252,32,181,40"/>
+<area shape="rect" href="namespacemod__data__driven__boundary.html#aa18aa65e52f50aa891a97729d21468e8" title=" " alt="" coords="228,55,485,95"/>
+<area shape="poly" title=" " alt="" coords="181,54,214,58,214,63,180,59"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7e4fbc0b51bd345db2e6e9218f94cc5a" name="a7e4fbc0b51bd345db2e6e9218f94cc5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4fbc0b51bd345db2e6e9218f94cc5a">&#9670;&#160;</a></span>lfff_balance_bottom_flux()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_lfff::lfff_balance_bottom_flux </td>
+          <td>(</td>
+          <td class="paramtype">double precision, dimension(:,:), intent(inout)&#160;</td>
+          <td class="paramname"><em>bz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">character(len=*), intent(in)&#160;</td>
+          <td class="paramname"><em>treatment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>max_imbalance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>imbalance_before</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>imbalance_after</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>mean_correction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(out)&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check a constant-alpha magnetogram and optionally remove its core mean. Status: 0 accepted unchanged, 1 mean removed, 2 invalid treatment, 3 invalid threshold, 4 strict-mode imbalance, 5 above auto-balance limit. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00173">173</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+
+</div>
+</div>
+<a id="a7889010247926211bee83eb344af33aa" name="a7889010247926211bee83eb344af33aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7889010247926211bee83eb344af33aa">&#9670;&#160;</a></span>lfff_fft_transfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_lfff::lfff_fft_transfer </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>k2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>z</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>top_height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">logical, intent(in)&#160;</td>
+          <td class="paramname"><em>top_closed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>transfer_b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>transfer_d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(out)&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vertical transfer functions for one nonzero horizontal constant-alpha Fourier mode. transfer_b multiplies Bz0, while transfer_d=-<a class="el" href="namespacemod__global__parameters.html#a71ee003132d53879487a9076243b2402">d(transfer_b)</a>/dz enters the horizontal field. status is zero on success, one for an oscillatory mode in an open half-space, two for a closed-box resonance, and three for invalid geometry. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00660">660</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
 
 </div>
 </div>
@@ -478,7 +773,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00320">320</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00970">970</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
 
 </div>
 </div>
@@ -500,7 +795,7 @@ Here is the call graph for this function:</div>
 
 <p>get potential magnetic field energy given normal B on all boundaries </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00253">253</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00903">903</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -562,6 +857,54 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00030">30</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+
+</div>
+</div>
+<a id="ab8d1eb8ef23a2b8986f15894ef649404" name="ab8d1eb8ef23a2b8986f15894ef649404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8d1eb8ef23a2b8986f15894ef649404">&#9670;&#160;</a></span>lfff_flux_balance_tolerance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, parameter mod_lfff::lfff_flux_balance_tolerance =1.d-8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00036">36</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+
+</div>
+</div>
+<a id="a728330e7db1cd78149e07f33f309dbe8" name="a728330e7db1cd78149e07f33f309dbe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728330e7db1cd78149e07f33f309dbe8">&#9670;&#160;</a></span>lfff_mode_tolerance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, parameter mod_lfff::lfff_mode_tolerance =1.d-12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00034">34</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
+
+</div>
+</div>
+<a id="a7d152078688ab6e7174d93f44ec5fd09" name="a7d152078688ab6e7174d93f44ec5fd09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d152078688ab6e7174d93f44ec5fd09">&#9670;&#160;</a></span>lfff_resonance_tolerance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, parameter mod_lfff::lfff_resonance_tolerance =1.d-10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__lfff_8t_source.html#l00035">35</a> of file <a class="el" href="mod__lfff_8t_source.html">mod_lfff.t</a>.</p>
 
 </div>
 </div>

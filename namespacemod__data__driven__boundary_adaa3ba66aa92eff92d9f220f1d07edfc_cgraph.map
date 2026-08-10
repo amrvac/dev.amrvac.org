@@ -1,0 +1,8 @@
+<map id="mod_data_driven_boundary::load_data_driven_boundary_cache_slot" name="mod_data_driven_boundary::load_data_driven_boundary_cache_slot">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,216,60"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="523,20,705,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,24,264,22,369,20,475,22,509,23,509,29,475,27,369,25,264,27,216,29"/>
+<area shape="rect" id="Node000003" href="$namespacemod__data__driven__boundary.html#a89d9e1005cf053f5666c7d57fc02cd55" title=" " alt="" coords="264,37,475,92"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,43,251,47,250,53,216,48"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="474,48,509,44,510,49,475,54"/>
+</map>

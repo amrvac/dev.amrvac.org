@@ -1,0 +1,21 @@
+<map id="mod_lfff::extrapolate_potential_fft" name="mod_lfff::extrapolate_potential_fft">
+<area shape="rect" id="Node000001" title="Extrapolate a Cartesian potential field with horizontal Fourier modes. The bottom magnetogram must ma..." alt="" coords="5,173,164,213"/>
+<area shape="rect" id="Node000002" href="$namespacemod__fft.html#a027570beb7cf5073389ce2fd0a217254" title="In&#45;place two&#45;dimensional FFT on split real/imaginary storage. This avoids allocation and copying in r..." alt="" coords="219,5,408,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,171,142,110,174,77,211,48,240,33,243,38,213,52,178,81,146,114,101,174"/>
+<area shape="rect" id="Node000004" href="$namespacemod__fft.html#a8e208b39ee499c9ffcd572048482ce7b" title="Return whether the legacy mixed&#45;radix workspace can handle a transform." alt="" coords="463,56,661,81"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="102,171,148,129,178,108,211,92,270,74,332,63,393,58,449,58,449,63,393,64,333,68,272,79,213,96,181,112,152,133,106,174"/>
+<area shape="rect" id="Node000005" href="$namespacemod__fft.html#a2d6483c480a32bca647341fa259f30e9" title="Human&#45;readable prime factorization used in unsupported&#45;size diagnostics." alt="" coords="222,107,405,132"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="132,170,211,141,239,133,240,138,213,146,134,175"/>
+<area shape="rect" id="Node000006" href="$namespacemod__fft.html#a7116951f1758d54941e50d6bf3ae3251" title=" " alt="" coords="212,180,415,205"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="164,190,198,190,198,195,164,195"/>
+<area shape="rect" id="Node000007" href="$namespacemod__lfff.html#a7e4fbc0b51bd345db2e6e9218f94cc5a" title="Check a constant&#45;alpha magnetogram and optionally remove its core mean. Status: 0 accepted unchanged,..." alt="" coords="234,230,393,270"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="165,210,221,224,220,229,164,215"/>
+<area shape="rect" id="Node000008" href="$namespacemod__lfff.html#a7889010247926211bee83eb344af33aa" title="Vertical transfer functions for one nonzero horizontal constant&#45;alpha Fourier mode...." alt="" coords="252,294,375,334"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="111,211,157,245,213,280,240,291,238,296,211,284,154,250,108,215"/>
+<area shape="rect" id="Node000009" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="222,359,405,384"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="99,212,143,277,176,313,213,344,227,351,225,356,211,348,172,317,139,281,95,215"/>
+<area shape="poly" id="edge2_Node000002_Node000004" title=" " alt="" coords="377,28,486,51,485,56,376,33"/>
+<area shape="poly" id="edge3_Node000004_Node000004" title=" " alt="" coords="522,58,513,48,518,38,534,32,562,29,597,33,607,38,611,44,606,47,603,42,596,38,562,35,535,37,521,42,518,47,526,54"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="339,178,413,141,523,85,525,90,416,146,342,182"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="276,182,268,172,273,162,288,156,313,153,345,157,357,167,354,171,343,162,313,159,289,161,276,166,274,171,280,178"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="mod_data_driven_boundary::read_data_driven_boundary_frame_into" name="mod_data_driven_boundary::read_data_driven_boundary_frame_into">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,216,60"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="575,20,757,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,27,264,26,527,26,561,27,561,32,527,31,264,31,216,32"/>
+<area shape="rect" id="Node000003" href="$namespacemod__data__driven__boundary.html#a113ced1e9e43de9952ba6526abb4adea" title=" " alt="" coords="264,41,527,81"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,40,251,44,250,49,216,46"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="526,44,561,41,561,46,527,50"/>
+</map>

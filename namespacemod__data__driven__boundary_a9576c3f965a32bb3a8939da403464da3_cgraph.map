@@ -1,0 +1,7 @@
+<map id="mod_data_driven_boundary::interpolate_data_driven_boundary_scaled" name="mod_data_driven_boundary::interpolate_data_driven_boundary_scaled">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,208,92"/>
+<area shape="rect" id="Node000002" href="$namespacemod__data__driven__boundary.html#a7e899565546c8d686321f88f8065ce75" title=" " alt="" coords="256,5,459,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,49,242,45,243,50,208,54"/>
+<area shape="rect" id="Node000005" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="266,84,449,109"/>
+<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="208,75,253,81,252,86,208,80"/>
+</map>

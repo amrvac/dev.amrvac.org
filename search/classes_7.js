@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['lt2_5floc_5ft_0',['lt2_loc_t',['../structmod__lookup__table_1_1lt2__loc__t.html',1,'mod_lookup_table']]],
-  ['lt2_5ft_1',['lt2_t',['../structmod__lookup__table_1_1lt2__t.html',1,'mod_lookup_table']]],
-  ['lt3_5floc_5ft_2',['lt3_loc_t',['../structmod__lookup__table_1_1lt3__loc__t.html',1,'mod_lookup_table']]],
-  ['lt3_5ft_3',['lt3_t',['../structmod__lookup__table_1_1lt3__t.html',1,'mod_lookup_table']]],
-  ['lt_5floc_5ft_4',['lt_loc_t',['../structmod__lookup__table_1_1lt__loc__t.html',1,'mod_lookup_table']]],
-  ['lt_5ft_5',['lt_t',['../structmod__lookup__table_1_1lt__t.html',1,'mod_lookup_table']]]
+  ['init_5fone_5fgrid_0',['init_one_grid',['../interfacemod__usr__methods_1_1init__one__grid.html',1,'mod_usr_methods']]],
+  ['init_5fvector_5fpotential_1',['init_vector_potential',['../interfacemod__usr__methods_1_1init__vector__potential.html',1,'mod_usr_methods']]],
+  ['internal_5fbc_2',['internal_bc',['../interfacemod__usr__methods_1_1internal__bc.html',1,'mod_usr_methods']]]
 ];

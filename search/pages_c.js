@@ -1,22 +1,10 @@
 var searchData=
 [
-  ['magnetic_20topology_20and_20qsl_20products_0',['Magnetic Topology and QSL Products',['../md_doc_2magnetic__topology__qsl.html',1,'']]],
-  ['magnetic_20topology_20qsl_20regression_1',['Magnetic Topology/QSL Regression',['../md_tests_2mhd_2magnetic__topology__qsl_2README.html',1,'']]],
-  ['meetings_2',['Meetings',['../md_doc_2meetings.html',1,'']]],
-  ['mesh_20refinement_3',['Adaptive Mesh Refinement',['../md_doc_2amrstructure.html',1,'']]],
-  ['meshkov_202d_20test_20problem_4',['Richtmeyer Meshkov 2D test problem',['../md_tests_2hd_2Richtmyer__Meshkov_2Richtmeyer__Meshkov.html',1,'']]],
-  ['methods_5',['Numerical methods',['../md_doc_2methods.html',1,'']]],
-  ['mhd_6',['mhd',['../md_doc_2cakforce.html',1,'CAK radiation force module for HD/MHD'],['../md_doc_2particle.html',1,'Test particle module for HD/MHD']]],
-  ['mhd_20rhd_7',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]],
-  ['minimal_20tt_20mod_5fusr_20t_20tt_20hook_20for_20topology_20qsl_20namelist_20tasks_8',['Minimal &lt;tt&gt;mod_usr.t&lt;/tt&gt; Hook for Topology/QSL Namelist Tasks',['../md_doc_2examples_2magnetic__topology_2mod__usr__topology__runner__example.html',1,'']]],
-  ['mod_5fusr_20t_20tt_20hook_20for_20topology_20qsl_20namelist_20tasks_9',['Minimal &lt;tt&gt;mod_usr.t&lt;/tt&gt; Hook for Topology/QSL Namelist Tasks',['../md_doc_2examples_2magnetic__topology_2mod__usr__topology__runner__example.html',1,'']]],
-  ['module_10',['module',['../md_doc_2advection__reaction__diffusion.html',1,'Advection-reaction-diffusion module'],['../md_doc_2reaction__diffusion.html',1,'Reaction-diffusion module']]],
-  ['module_20for_20hd_20mhd_11',['module for hd mhd',['../md_doc_2cakforce.html',1,'CAK radiation force module for HD/MHD'],['../md_doc_2particle.html',1,'Test particle module for HD/MHD']]],
-  ['module_20to_20mpi_20amrvac_12',['Adding a physics module to MPI-AMRVAC',['../md_doc_2addmodule.html',1,'']]],
-  ['modules_20and_20equations_13',['Physics modules and equations',['../md_doc_2equations.html',1,'']]],
-  ['mpi_20amrvac_14',['mpi amrvac',['../md_doc_2addmodule.html',1,'Adding a physics module to MPI-AMRVAC'],['../md_doc_2dust.html',1,'Dust in MPI-AMRVAC'],['../md_doc_2publications.html',1,'Publications related to MPI-AMRVAC'],['../md_doc_2radiative__cooling.html',1,'Radiative cooling in MPI-AMRVAC'],['../md_doc_2smallvalues.html',1,'Small values options in MPI-AMRVAC'],['../md_doc_2thermal__conduction.html',1,'Thermal conduction in MPI-AMRVAC']]],
-  ['mpi_20amrvac_203_200_20demo_20simulations_15',['MPI-AMRVAC 3.0 Demo simulations',['../md_doc_2demo-movies.html',1,'']]],
-  ['mpi_20amrvac_20and_20its_20documentation_16',['Contributing to MPI-AMRVAC and its documentation',['../md_doc_2contributing.html',1,'']]],
-  ['mpi_20amrvac_20data_20file_20format_17',['MPI-AMRVAC data file format',['../md_doc_2fileformat.html',1,'']]],
-  ['mpi_20amrvac_20documentation_18',['About the MPI-AMRVAC documentation',['../md_doc_2documentation.html',1,'']]]
+  ['language_0',['Source language',['../md_doc_2source.html',1,'']]],
+  ['limiters_1',['Slope Limiters',['../md_doc_2limiter.html',1,'']]],
+  ['line_20integrated_20quantities_2',['Looking at line-integrated quantities',['../md_doc_2collapsed.html',1,'']]],
+  ['line_20parameters_3',['Command line parameters',['../md_doc_2commandline.html',1,'']]],
+  ['liska_20wendroff_4',['Implosion test problem: 2D HD Liska-Wendroff',['../md_tests_2hd_2implosion__2D_2implosion.html',1,'']]],
+  ['list_5',['Test List',['../test.html',1,'']]],
+  ['looking_20at_20line_20integrated_20quantities_6',['Looking at line-integrated quantities',['../md_doc_2collapsed.html',1,'']]]
 ];

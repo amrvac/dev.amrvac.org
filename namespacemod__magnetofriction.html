@@ -180,10 +180,19 @@ Variables</h2></td></tr>
 <tr class="separator:a9390b7bdb9a1d00af91423c94f42d7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56bb5d411470d6a1668c3cabf3de3623" id="r_a56bb5d411470d6a1668c3cabf3de3623"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__magnetofriction.html#a56bb5d411470d6a1668c3cabf3de3623">mf_it</a></td></tr>
 <tr class="separator:a56bb5d411470d6a1668c3cabf3de3623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e65e4e9bdef93edfef9e6d43877e88" id="r_a79e65e4e9bdef93edfef9e6d43877e88"><td class="memItemLeft" align="right" valign="top">character(len=16)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__magnetofriction.html#a79e65e4e9bdef93edfef9e6d43877e88">mf_log_mode</a></td></tr>
+<tr class="memdesc:a79e65e4e9bdef93edfef9e6d43877e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">How to open the MF diagnostics CSV: auto, append, or replace.  <br /></td></tr>
+<tr class="separator:a79e65e4e9bdef93edfef9e6d43877e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4283201f858ea8cec991eaba5670877" id="r_ac4283201f858ea8cec991eaba5670877"><td class="memItemLeft" align="right" valign="top">character(len=256)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__magnetofriction.html#ac4283201f858ea8cec991eaba5670877">mf_log_filename</a></td></tr>
+<tr class="memdesc:ac4283201f858ea8cec991eaba5670877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional diagnostics filename; empty uses &lt;base_filename&gt;_mflog.csv.  <br /></td></tr>
+<tr class="separator:ac4283201f858ea8cec991eaba5670877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f78d5b8112d683a53575e6e7b92dfb3" id="r_a5f78d5b8112d683a53575e6e7b92dfb3"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__magnetofriction.html#a5f78d5b8112d683a53575e6e7b92dfb3">mf_advance</a></td></tr>
 <tr class="separator:a5f78d5b8112d683a53575e6e7b92dfb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab256d38cce1f427fc4ea6fee8b3c47b9" id="r_ab256d38cce1f427fc4ea6fee8b3c47b9"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__magnetofriction.html#ab256d38cce1f427fc4ea6fee8b3c47b9">fix_conserve_at_step</a> = .true.</td></tr>
 <tr class="separator:ab256d38cce1f427fc4ea6fee8b3c47b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3cfc1a3fe1ed447c73b71b9f1bda0f3" id="r_aa3cfc1a3fe1ed447c73b71b9f1bda0f3"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__magnetofriction.html#aa3cfc1a3fe1ed447c73b71b9f1bda0f3">mf_continue_run</a> = .false.</td></tr>
+<tr class="memdesc:aa3cfc1a3fe1ed447c73b71b9f1bda0f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this run continues an existing MF diagnostics series.  <br /></td></tr>
+<tr class="separator:aa3cfc1a3fe1ed447c73b71b9f1bda0f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>module <a class="el" href="mod__magnetofriction_8t.html">mod_magnetofriction.t</a> Purpose: use magnetofrictional method to relax 3D magnetic field to force-free field 01.04.2016 developed by Chun Xia and Yang Guo 04.10.2017 modulized by Chun Xia Usage: in amrvac.par: &amp;methodlist time_stepper='onestep' ! time marching scheme, or 'twostep','threestep' flux_method=13*'cd4' ! or 'tvdlf', 'fd' limiter= 13*'koren' ! or 'vanleer','cada3','mp5' so on / &amp;meshlist ditregrid=20 ! set iteration interval for adjusting AMR / &amp;mhd_list mhd_magnetofriction=.true. / &amp;mf_list mf_it_max=60000 ! set the maximum iteration number mf_ditsave=20000 ! set iteration interval for data output mf_cc=0.3 ! stability coefficient controls numerical stability mf_cy=0.2 ! frictional velocity coefficient mf_cdivb=0.01 ! divb cleaning coefficient controls diffusion speed of divb / </p>
@@ -250,7 +259,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01335">1335</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01380">1380</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 
 </div>
 </div>
@@ -322,7 +331,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00681">681</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00726">726</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -384,7 +393,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00624">624</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00669">669</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -506,7 +515,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01158">1158</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01203">1203</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -594,7 +603,7 @@ Here is the call graph for this function:</div>
 
 <p>Clean divergence of magnetic field by Janhunen's and Linde's source terms. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01296">1296</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01341">1341</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -714,7 +723,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01020">1020</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01065">1065</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -798,7 +807,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00554">554</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00599">599</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 
 </div>
 </div>
@@ -860,7 +869,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate idirmin and the idirmin:3 components of the common current array make sure that <a class="el" href="namespacemod__global__parameters.html#ac487446056522027f949f42ba64b2e11" title="store unstretched cell size of current level">dxlevel(^D)</a> is set correctly. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01397">1397</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01442">1442</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -926,7 +935,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate div B within ixO. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01421">1421</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01466">1466</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -998,7 +1007,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01277">1277</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01322">1322</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 
 </div>
 </div>
@@ -1058,7 +1067,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01245">1245</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01290">1290</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1140,7 +1149,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00837">837</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00882">882</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 
 </div>
 </div>
@@ -1242,7 +1251,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00959">959</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01004">1004</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1274,7 +1283,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00113">113</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00123">123</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1320,7 +1329,7 @@ Here is the call graph for this function:</div>
 
 <p>Initialize the module. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00080">80</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00088">88</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1354,7 +1363,7 @@ Here is the call graph for this function:</div>
 
 <p>Read this module"s parameters from a file. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00063">63</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00070">70</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 
 </div>
 </div>
@@ -1374,7 +1383,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00476">476</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00521">521</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1470,7 +1479,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00742">742</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00787">787</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1553,7 +1562,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01077">1077</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01122">1122</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1623,7 +1632,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01118">1118</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l01163">1163</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1741,7 +1750,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00861">861</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00906">906</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1851,7 +1860,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00789">789</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00834">834</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1921,7 +1930,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00501">501</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00546">546</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1984,7 +1993,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00059">59</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00063">63</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 
 </div>
 </div>
@@ -2000,7 +2009,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00058">58</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00062">62</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 
 </div>
 </div>
@@ -2053,6 +2062,24 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00034">34</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+
+</div>
+</div>
+<a id="aa3cfc1a3fe1ed447c73b71b9f1bda0f3" name="aa3cfc1a3fe1ed447c73b71b9f1bda0f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3cfc1a3fe1ed447c73b71b9f1bda0f3">&#9670;&#160;</a></span>mf_continue_run</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical mod_magnetofriction::mf_continue_run = .false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether this run continues an existing MF diagnostics series. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00066">66</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 
 </div>
 </div>
@@ -2135,6 +2162,42 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00056">56</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+
+</div>
+</div>
+<a id="ac4283201f858ea8cec991eaba5670877" name="ac4283201f858ea8cec991eaba5670877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4283201f858ea8cec991eaba5670877">&#9670;&#160;</a></span>mf_log_filename</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">character(len=256) mod_magnetofriction::mf_log_filename</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optional diagnostics filename; empty uses &lt;base_filename&gt;_mflog.csv. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00061">61</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
+
+</div>
+</div>
+<a id="a79e65e4e9bdef93edfef9e6d43877e88" name="a79e65e4e9bdef93edfef9e6d43877e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e65e4e9bdef93edfef9e6d43877e88">&#9670;&#160;</a></span>mf_log_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">character(len=16) mod_magnetofriction::mf_log_mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>How to open the MF diagnostics CSV: auto, append, or replace. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__magnetofriction_8t_source.html#l00059">59</a> of file <a class="el" href="mod__magnetofriction_8t_source.html">mod_magnetofriction.t</a>.</p>
 
 </div>
 </div>
