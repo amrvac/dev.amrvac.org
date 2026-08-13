@@ -1,5 +1,27 @@
 var searchData=
 [
-  ['equations_0',['equations',['../md_doc_2equations.html',1,'Physics modules and equations'],['../md_doc_2twofluid.html',1,'Two fluid equations']]],
-  ['example_20simulations_1',['Example simulations',['../md_doc_2examples.html',1,'']]]
+  ['dat_20files_0',['dat files',['../md_doc_2dat__convert.html',1,'Dump variables to dat files'],['../md_doc_2python__datfiles.html',1,'Reading the dat files']]],
+  ['data_20driven_20data_20constrained_20mhd_1',['Data-Driven Data-Constrained MHD',['../md_tests_2demo4_2Data__Driven_2DataConstrained_2README.html',1,'']]],
+  ['data_20driven_20magnetofrictional_20relaxation_2',['Data-Driven Magnetofrictional Relaxation',['../md_tests_2demo4_2Data__Driven_2MagnetofrictionalRelaxation_2README.html',1,'']]],
+  ['data_20driven_20mhd_3',['B-only data-driven MHD',['../md_tests_2demo4_2Data__Driven_2DataDriven_2README.html',1,'']]],
+  ['data_20driven_20potential_20field_4',['Data-Driven Potential Field',['../md_tests_2demo4_2Data__Driven_2PotentialField_2README.html',1,'']]],
+  ['data_20file_20conversion_5',['Data file conversion',['../md_doc_2convert.html',1,'']]],
+  ['data_20file_20format_6',['MPI-AMRVAC data file format',['../md_doc_2fileformat.html',1,'']]],
+  ['datasets_20and_20yt_7',['AMRVAC datasets and YT',['../md_doc_2yt__usage.html',1,'']]],
+  ['debugging_8',['Dumping arbitrary fields for debugging',['../debug_field_dump.html',1,'']]],
+  ['demo_20simulations_9',['MPI-AMRVAC 3.0 Demo simulations',['../md_doc_2demo-movies.html',1,'']]],
+  ['demonstration_10',['demonstration',['../md_tests_2demo4_2HyperbolicConduction__CSHKP_2README.html',1,'Flare current-sheet transverse-conduction demonstration'],['../md_tests_2demo4_2HyperbolicConduction__Fourier_2README.html',1,'Oblique Fourier thermal-conduction demonstration']]],
+  ['dependent_20magnetofriction_11',['Time-dependent magnetofriction',['../md_tests_2demo4_2Data__Driven_2TimeDependentMagnetofriction_2README.html',1,'']]],
+  ['diffusion_20module_12',['diffusion module',['../md_doc_2advection__reaction__diffusion.html',1,'Advection-reaction-diffusion module'],['../md_doc_2reaction__diffusion.html',1,'Reaction-diffusion module']]],
+  ['dimensional_20regression_20tests_13',['UAWSoM one-dimensional regression tests',['../md_tests_2mhd_2UAWSoM__1D_2README.html',1,'']]],
+  ['directory_20files_14',['directory files',['../md_src_2tables_2OPAL__tables_2README.html',1,'Overview of directory files'],['../md_src_2tables_2CAK__tables_2README.html',1,'Overview of directory files']]],
+  ['discretization_15',['discretization',['../md_doc_2discretization.html',1,'Discretization'],['../md_doc_2time__discretization.html',1,'Time Discretization']]],
+  ['documentation_16',['documentation',['../md_doc_2documentation.html',1,'About the MPI-AMRVAC documentation'],['../md_doc_2contributing.html',1,'Contributing to MPI-AMRVAC and its documentation']]],
+  ['driven_20data_20constrained_20mhd_17',['Data-Driven Data-Constrained MHD',['../md_tests_2demo4_2Data__Driven_2DataConstrained_2README.html',1,'']]],
+  ['driven_20magnetofrictional_20relaxation_18',['Data-Driven Magnetofrictional Relaxation',['../md_tests_2demo4_2Data__Driven_2MagnetofrictionalRelaxation_2README.html',1,'']]],
+  ['driven_20mhd_19',['B-only data-driven MHD',['../md_tests_2demo4_2Data__Driven_2DataDriven_2README.html',1,'']]],
+  ['driven_20potential_20field_20',['Data-Driven Potential Field',['../md_tests_2demo4_2Data__Driven_2PotentialField_2README.html',1,'']]],
+  ['dump_20variables_20to_20dat_20files_21',['Dump variables to dat files',['../md_doc_2dat__convert.html',1,'']]],
+  ['dumping_20arbitrary_20fields_20for_20debugging_22',['Dumping arbitrary fields for debugging',['../debug_field_dump.html',1,'']]],
+  ['dust_20in_20mpi_20amrvac_23',['Dust in MPI-AMRVAC',['../md_doc_2dust.html',1,'']]]
 ];

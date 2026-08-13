@@ -1,8 +1,18 @@
 var searchData=
 [
-  ['qsl_20namelist_20tasks_0',['Minimal &lt;tt&gt;mod_usr.t&lt;/tt&gt; Hook for Topology/QSL Namelist Tasks',['../md_doc_2examples_2magnetic__topology_2mod__usr__topology__runner__example.html',1,'']]],
-  ['qsl_20products_1',['Magnetic Topology and QSL Products',['../md_doc_2magnetic__topology__qsl.html',1,'']]],
-  ['qsl_20regression_2',['Magnetic Topology/QSL Regression',['../md_tests_2mhd_2magnetic__topology__qsl_2README.html',1,'']]],
-  ['quantities_3',['Looking at line-integrated quantities',['../md_doc_2collapsed.html',1,'']]],
-  ['questions_4',['Frequently Asked Questions',['../md_doc_2faq.html',1,'']]]
+  ['page_0',['Welcome page',['../index.html',1,'']]],
+  ['parameters_1',['parameters',['../md_doc_2commandline.html',1,'Command line parameters'],['../md_doc_2par.html',1,'Setting parameters']]],
+  ['particle_20module_20for_20hd_20mhd_2',['Test particle module for HD/MHD',['../md_doc_2particle.html',1,'']]],
+  ['physics_20module_20to_20mpi_20amrvac_3',['Adding a physics module to MPI-AMRVAC',['../md_doc_2addmodule.html',1,'']]],
+  ['physics_20modules_20and_20equations_4',['Physics modules and equations',['../md_doc_2equations.html',1,'']]],
+  ['potential_20field_5',['Data-Driven Potential Field',['../md_tests_2demo4_2Data__Driven_2PotentialField_2README.html',1,'']]],
+  ['preprocessor_6',['The VAC preprocessor',['../md_doc_2vacpp.html',1,'']]],
+  ['printing_7',['3D Printing',['../md_doc_2print3D.html',1,'']]],
+  ['problem_8',['problem',['../md_tests_2mhd_2alfvenwing__3D_2alfvenwing.html',1,'Alfven wing test problem'],['../md_tests_2hd_2Richtmyer__Meshkov_2Richtmeyer__Meshkov.html',1,'Richtmeyer Meshkov 2D test problem'],['../md_doc_2amrvacusr.html',1,'Setting up a new problem'],['../md_tests_2hd_2Woodward__Collela__2D_2Woodward__Collela__2d.html',1,'Woodward-Collela 2D test problem']]],
+  ['problem_3a_202d_20hd_20liska_20wendroff_9',['Implosion test problem: 2D HD Liska-Wendroff',['../md_tests_2hd_2implosion__2D_2implosion.html',1,'']]],
+  ['problems_10',['Riemann 2D test problems',['../md_tests_2hd_2Riemann__2D_2Riemann__2D.html',1,'']]],
+  ['problems_3a_20isothermal_20hd_20variant_11',['Riemann 2D test problems: isothermal HD variant',['../md_tests_2hd_2Riemann__hdiso__2D_2Riemann__iso__2D.html',1,'']]],
+  ['products_12',['Magnetic Topology and QSL Products',['../md_doc_2magnetic__topology__qsl.html',1,'']]],
+  ['publications_20related_20to_20mpi_20amrvac_13',['Publications related to MPI-AMRVAC',['../md_doc_2publications.html',1,'']]],
+  ['python_20tools_14',['Setting up the python tools',['../md_doc_2python__setup.html',1,'']]]
 ];

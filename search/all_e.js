@@ -1,23 +1,6 @@
 var searchData=
 [
-  ['k_0',['k',['../structmod__eos__container_1_1eos__container.html#af8aca8283e753c1ea690b29aecd3a73e',1,'mod_eos_container::eos_container']]],
-  ['k2_1',['k2',['../namespacemod__gimli.html#aac5e26b134ad8138022f33623336f425',1,'mod_gimli']]],
-  ['k3_2',['k3',['../namespacemod__gimli.html#a7b979f6925d00c27ecf57992651e47d6',1,'mod_gimli']]],
-  ['kappa_5fvals_3',['kappa_vals',['../namespacemod__opal__opacity.html#a7dd97579ace2715cddebb4296ab3101f',1,'mod_opal_opacity']]],
-  ['kappae_5fvals_4',['kappae_vals',['../namespacemod__cak__opacity.html#adbf22c7880102b71259e10a7bbda2479',1,'mod_cak_opacity']]],
-  ['kb_5fcgs_5',['kb_cgs',['../namespacemod__constants.html#a33660422af2eb7bceb7c9162c04c0688',1,'mod_constants']]],
-  ['kb_5fsi_6',['kb_si',['../namespacemod__constants.html#a9cf643c04abeb836326c027924b53d7c',1,'mod_constants']]],
-  ['kdv_5fadd_5fsource_7',['kdv_add_source',['../namespacemod__kdv.html#a5fd1c2503f3e14a9891b1b5d1e59608f',1,'mod_kdv']]],
-  ['kdv_5fdelta_8',['kdv_delta',['../namespacemod__kdv.html#abc5190eca5496e7f28668f0d9d92251f',1,'mod_kdv']]],
-  ['kdv_5fget_5fdt_9',['kdv_get_dt',['../namespacemod__kdv.html#a9be6e9b5ad71480b66baf6af024babdf',1,'mod_kdv']]],
-  ['kdv_5finit_10',['kdv_init',['../namespacemod__kdv.html#a62c481ac932c61a252c909316d01ca93',1,'mod_kdv']]],
-  ['kdv_5forder_11',['kdv_order',['../namespacemod__kdv.html#a6d24bd8450000c731e6505d07e5046de',1,'mod_kdv']]],
-  ['kdv_5fparams_5fread_12',['kdv_params_read',['../namespacemod__kdv.html#a7996531684b665567e1f2297e0c9f4a8',1,'mod_kdv']]],
-  ['kdv_5fsource_5fterm_13',['kdv_source_term',['../namespacemod__nonlinear__phys.html#a673d1030c11f7d04b8102184cde63dd6',1,'mod_nonlinear_phys']]],
-  ['kdv_5fsplit_14',['kdv_split',['../namespacemod__kdv.html#ad8ce6e5248e6db5c86d1e4e8b1635f4e',1,'mod_kdv']]],
-  ['kelvin_20helmholtz_20evolution_15',['2D hydro Kelvin-Helmholtz evolution',['../md_doc_2demo-movies.html#demo_kh',1,'']]],
-  ['kelvin_20helmholtz_20simulation_16',['2D gas-dust coupled Kelvin-Helmholtz simulation',['../md_doc_2demo-movies.html#demo_khdust',1,'']]],
-  ['keys_17',['keys',['../structmod__phys__dict_1_1phys__dict.html#a80df9624382b99201f43c18dd61e35a6',1,'mod_phys_dict::phys_dict']]],
-  ['kmaxx_18',['kmaxx',['../namespacemod__odeint.html#a4dd539fe2bf3bc713ff7b1275efecbd5',1,'mod_odeint']]],
-  ['kr_19',['kr',['../namespacemod__global__parameters.html#a31226ca76b94f6c33496105fd25e8fd9',1,'mod_global_parameters']]]
+  ['j0_0',['j0',['../structmod__physicaldata_1_1state.html#a8ef5e24992970cfc8041736018e41f57',1,'mod_physicaldata::state']]],
+  ['jp_1',['jp',['../namespacemod__particle__base.html#ad90e636f187a854645a5107012b60831',1,'mod_particle_base']]],
+  ['jump_2',['jump',['../structmod__random_1_1rng__t.html#a6c18fb62018913badfe48386df729067',1,'mod_random::rng_t']]]
 ];

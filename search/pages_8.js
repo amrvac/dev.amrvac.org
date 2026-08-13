@@ -1,20 +1,6 @@
 var searchData=
 [
-  ['features_20overview_0',['Features overview',['../md_doc_2features.html',1,'']]],
-  ['field_1',['Data-Driven Potential Field',['../md_tests_2demo4_2Data__Driven_2PotentialField_2README.html',1,'']]],
-  ['fields_20for_20debugging_2',['Dumping arbitrary fields for debugging',['../debug_field_dump.html',1,'']]],
-  ['file_20conversion_3',['Data file conversion',['../md_doc_2convert.html',1,'']]],
-  ['file_20format_4',['MPI-AMRVAC data file format',['../md_doc_2fileformat.html',1,'']]],
-  ['files_5',['files',['../md_doc_2dat__convert.html',1,'Dump variables to dat files'],['../md_src_2tables_2OPAL__tables_2README.html',1,'Overview of directory files'],['../md_src_2tables_2CAK__tables_2README.html',1,'Overview of directory files'],['../md_doc_2python__datfiles.html',1,'Reading the dat files'],['../md_doc_2python__vtkfiles.html',1,'Reading the vtk files']]],
-  ['flare_20current_20sheet_20transverse_20conduction_20demonstration_6',['Flare current-sheet transverse-conduction demonstration',['../md_tests_2demo4_2HyperbolicConduction__CSHKP_2README.html',1,'']]],
-  ['fluid_20equations_7',['Two fluid equations',['../md_doc_2twofluid.html',1,'']]],
-  ['for_20debugging_8',['Dumping arbitrary fields for debugging',['../debug_field_dump.html',1,'']]],
-  ['for_20hd_20mhd_9',['for hd mhd',['../md_doc_2cakforce.html',1,'CAK radiation force module for HD/MHD'],['../md_doc_2particle.html',1,'Test particle module for HD/MHD']]],
-  ['for_20hd_20mhd_20rhd_10',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]],
-  ['for_20topology_20qsl_20namelist_20tasks_11',['Minimal &lt;tt&gt;mod_usr.t&lt;/tt&gt; Hook for Topology/QSL Namelist Tasks',['../md_doc_2examples_2magnetic__topology_2mod__usr__topology__runner__example.html',1,'']]],
-  ['force_20module_20for_20hd_20mhd_12',['CAK radiation force module for HD/MHD',['../md_doc_2cakforce.html',1,'']]],
-  ['format_13',['MPI-AMRVAC data file format',['../md_doc_2fileformat.html',1,'']]],
-  ['fourier_20thermal_20conduction_20demonstration_14',['Oblique Fourier thermal-conduction demonstration',['../md_tests_2demo4_2HyperbolicConduction__Fourier_2README.html',1,'']]],
-  ['frame_20for_20hd_20mhd_20rhd_15',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]],
-  ['frequently_20asked_20questions_16',['Frequently Asked Questions',['../md_doc_2faq.html',1,'']]]
+  ['equation_20and_20implementation_20map_0',['UAWSoM equation and implementation map',['../md_doc_2uawsom__equation__map.html',1,'']]],
+  ['equations_1',['equations',['../md_doc_2equations.html',1,'Physics modules and equations'],['../md_doc_2twofluid.html',1,'Two fluid equations']]],
+  ['example_20simulations_2',['Example simulations',['../md_doc_2examples.html',1,'']]]
 ];

@@ -1,15 +1,17 @@
 <map id="mod_radiative_cooling::get_cool_equi" name="mod_radiative_cooling::get_cool_equi">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,165,176,205"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,197,176,237"/>
 <area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="230,5,401,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,163,155,110,187,81,223,55,234,49,236,54,225,60,190,85,158,114,110,167"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,196,149,127,183,89,222,55,231,50,234,54,226,59,187,93,153,131,106,199"/>
 <area shape="rect" id="Node000003" href="$namespacemod__radiative__cooling.html#a8a64aa6cb7c2be55247c345678086604" title=" " alt="" coords="230,69,401,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,163,223,119,241,112,243,117,225,124,132,168"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="114,195,162,157,223,119,236,112,239,117,225,124,165,162,117,199"/>
 <area shape="rect" id="Node000004" href="$namespacemod__radiative__cooling.html#a212aed250bd6178bb546267a1afce854" title="Inverse Y_mod lookup: given Y_target and nH, return T such that Y_mod(log10 nH, log10 T) = Y_target...." alt="" coords="230,133,401,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,171,216,165,216,170,177,176"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="161,195,231,175,232,180,162,200"/>
 <area shape="rect" id="Node000005" href="$namespacemod__radiative__cooling.html#afc796e69f3a078d992911ee36792678d" title=" " alt="" coords="230,197,401,237"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="177,195,216,201,216,206,176,200"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="177,215,216,215,216,220,177,220"/>
 <area shape="rect" id="Node000006" href="$namespacemod__radiative__cooling.html#a81cd0f81479e631065613db1f2242837" title="Forward Y_mod lookup: bilinear interpolation in (log10 nH, log10 T) on the precomputed Y_mod table...." alt="" coords="230,261,401,301"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="132,203,225,247,243,254,241,259,223,252,130,208"/>
-<area shape="rect" id="Node000007" href="$namespacemod__radiative__cooling.html#a58da51978da2397c68dac8296c1794c4" title=" " alt="" coords="224,325,407,365"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="110,204,158,257,190,286,225,311,236,317,234,322,223,316,187,290,155,260,106,207"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="162,235,232,255,231,260,161,240"/>
+<area shape="rect" id="Node000007" href="$namespacemod__radiative__cooling.html#a18a139f447b98088d873ff395f344f60" title=" " alt="" coords="226,326,405,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="118,235,166,272,225,311,237,317,234,322,223,316,163,277,115,239"/>
+<area shape="rect" id="Node000008" href="$namespacemod__radiative__cooling.html#a58da51978da2397c68dac8296c1794c4" title=" " alt="" coords="224,405,407,445"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="105,236,151,311,185,353,226,390,236,397,233,401,222,394,181,357,146,314,100,239"/>
 </map>

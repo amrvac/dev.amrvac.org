@@ -223,6 +223,8 @@ Data Types</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1transform__w.html">transform_w</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">adjust w when restart from dat file with different w variables  <a href="interfacemod__usr__methods_1_1transform__w.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1uawsom__coefficients.html">uawsom_coefficients</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1update__payload.html">update_payload</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update payload of particles.  <a href="interfacemod__usr__methods_1_1update__payload.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -344,6 +346,9 @@ Variables</h2></td></tr>
 <tr class="separator:a15358b971276ac5a6bd8a3affa1d4f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a173195e924efa404b4b70f48cc47f900" id="r_a173195e924efa404b4b70f48cc47f900"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1set__adiab.html">set_adiab</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__usr__methods.html#a173195e924efa404b4b70f48cc47f900">usr_set_gamma</a> =&gt; null()</td></tr>
 <tr class="separator:a173195e924efa404b4b70f48cc47f900"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c8435ed1de74abc6e774a3e59c2df7" id="r_a81c8435ed1de74abc6e774a3e59c2df7"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1uawsom__coefficients.html">uawsom_coefficients</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__usr__methods.html#a81c8435ed1de74abc6e774a3e59c2df7">usr_uawsom_coefficients</a> =&gt; null()</td></tr>
+<tr class="memdesc:a81c8435ed1de74abc6e774a3e59c2df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally provide local UAWSoM closure coefficients. The returned thread radius and Alfven correlation length are in code length units.  <br /></td></tr>
+<tr class="separator:a81c8435ed1de74abc6e774a3e59c2df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module with all the methods that users can customize in AMRVAC. </p>
@@ -1182,6 +1187,24 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00024">24</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+
+</div>
+</div>
+<a id="a81c8435ed1de74abc6e774a3e59c2df7" name="a81c8435ed1de74abc6e774a3e59c2df7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81c8435ed1de74abc6e774a3e59c2df7">&#9670;&#160;</a></span>usr_uawsom_coefficients</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__usr__methods_1_1uawsom__coefficients.html">uawsom_coefficients</a>), pointer mod_usr_methods::usr_uawsom_coefficients =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optionally provide local UAWSoM closure coefficients. The returned thread radius and Alfven correlation length are in code length units. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00118">118</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>

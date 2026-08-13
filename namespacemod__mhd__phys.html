@@ -93,6 +93,14 @@ $(function() {
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:ad7d98b0addb883f4aa58a876eee8025e" id="r_ad7d98b0addb883f4aa58a876eee8025e"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#ad7d98b0addb883f4aa58a876eee8025e">mhd_phys_init</a> ()</td></tr>
 <tr class="separator:ad7d98b0addb883f4aa58a876eee8025e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad0ebf876d39ffe0626d80bc47848417" id="r_aad0ebf876d39ffe0626d80bc47848417"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aad0ebf876d39ffe0626d80bc47848417">mhd_uawsom_rho2_factor</a> (ixil, ixol, w, x, factor)</td></tr>
+<tr class="separator:aad0ebf876d39ffe0626d80bc47848417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa541bef16e1f2aa4081ba4738ac3cb9d" id="r_aa541bef16e1f2aa4081ba4738ac3cb9d"><td class="memItemLeft" align="right" valign="top">elemental pure double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aa541bef16e1f2aa4081ba4738ac3cb9d">mhd_uawsom_rho2_factor_cell</a> (zeta)</td></tr>
+<tr class="separator:aa541bef16e1f2aa4081ba4738ac3cb9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf54917ed4ea17469ce42ec87a36aa4b" id="r_abf54917ed4ea17469ce42ec87a36aa4b"><td class="memItemLeft" align="right" valign="top">pure double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#abf54917ed4ea17469ce42ec87a36aa4b">mhd_uawsom_wave_pressure_cell</a> (wcell, zeta)</td></tr>
+<tr class="separator:abf54917ed4ea17469ce42ec87a36aa4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d60fcea37cd005281d33dfba1976131" id="r_a7d60fcea37cd005281d33dfba1976131"><td class="memItemLeft" align="right" valign="top">pure double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a7d60fcea37cd005281d33dfba1976131">mhd_uawsom_wave_energy_cell</a> (wcell)</td></tr>
+<tr class="separator:a7d60fcea37cd005281d33dfba1976131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0bab1b3ad07312a82c867579d3714b3" id="r_af0bab1b3ad07312a82c867579d3714b3"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#af0bab1b3ad07312a82c867579d3714b3">mhd_ei_to_e</a> (ixil, ixol, w, x)</td></tr>
 <tr class="memdesc:af0bab1b3ad07312a82c867579d3714b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform internal energy to total energy.  <br /></td></tr>
 <tr class="separator:af0bab1b3ad07312a82c867579d3714b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,6 +246,41 @@ Variables</h2></td></tr>
 <tr class="memitem:ad41ade678e1b435cdb8efa83928e8aa4" id="r_ad41ade678e1b435cdb8efa83928e8aa4"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#ad41ade678e1b435cdb8efa83928e8aa4">mhd_fip</a> = .false.</td></tr>
 <tr class="memdesc:ad41ade678e1b435cdb8efa83928e8aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether FIP passive scalar is enabled.  <br /></td></tr>
 <tr class="separator:ad41ade678e1b435cdb8efa83928e8aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f4aa92239d3defc5e85df027f7add8" id="r_af8f4aa92239d3defc5e85df027f7add8"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#af8f4aa92239d3defc5e85df027f7add8">mhd_uawsom</a> = .false.</td></tr>
+<tr class="memdesc:af8f4aa92239d3defc5e85df027f7add8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the Uniturbulence and Alfven Wave Solar Model extension.  <br /></td></tr>
+<tr class="separator:af8f4aa92239d3defc5e85df027f7add8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e803d6ad3292e71d2e264daa402fbc7" id="r_a9e803d6ad3292e71d2e264daa402fbc7"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a9e803d6ad3292e71d2e264daa402fbc7">mhd_uawsom_reflection</a> = .false.</td></tr>
+<tr class="memdesc:a9e803d6ad3292e71d2e264daa402fbc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the conservative Alfven-wave reflection source (McMurdo et al. 2026, Eq. 34)  <br /></td></tr>
+<tr class="separator:a9e803d6ad3292e71d2e264daa402fbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a3d30921cba7b315117185b9ee1192d" id="r_a3a3d30921cba7b315117185b9ee1192d"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a3a3d30921cba7b315117185b9ee1192d">mhd_uawsom_sigma</a> = 0.d0</td></tr>
+<tr class="memdesc:a3a3d30921cba7b315117185b9ee1192d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dimensionless multiplier in the Alfven-wave reflection source.  <br /></td></tr>
+<tr class="separator:a3a3d30921cba7b315117185b9ee1192d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a04a07e37dfeb329509eabdf295e85" id="r_a46a04a07e37dfeb329509eabdf295e85"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a46a04a07e37dfeb329509eabdf295e85">mhd_uawsom_height_dim</a> = -1</td></tr>
+<tr class="memdesc:a46a04a07e37dfeb329509eabdf295e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cartesian direction used for the prescribed density contrast and reflection gradient.  <br /></td></tr>
+<tr class="separator:a46a04a07e37dfeb329509eabdf295e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61da54ba012d6f57bca2171f76b2deb8" id="r_a61da54ba012d6f57bca2171f76b2deb8"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a61da54ba012d6f57bca2171f76b2deb8">mhd_uawsom_zeta0</a> = 5.d0</td></tr>
+<tr class="memdesc:a61da54ba012d6f57bca2171f76b2deb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base transverse density contrast and filling factor.  <br /></td></tr>
+<tr class="separator:a61da54ba012d6f57bca2171f76b2deb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9841fac77671203af32b0fb021fa6f5" id="r_aa9841fac77671203af32b0fb021fa6f5"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aa9841fac77671203af32b0fb021fa6f5">mhd_uawsom_filling_factor</a> = 0.1d0</td></tr>
+<tr class="separator:aa9841fac77671203af32b0fb021fa6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d18fe0964d49ca5542ae140ee42189" id="r_a95d18fe0964d49ca5542ae140ee42189"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a95d18fe0964d49ca5542ae140ee42189">mhd_uawsom_zeta_scale</a> = -1.d0</td></tr>
+<tr class="memdesc:a95d18fe0964d49ca5542ae140ee42189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Physical input scales (lengths and magnetic field); converted to code units at init.  <br /></td></tr>
+<tr class="separator:a95d18fe0964d49ca5542ae140ee42189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46273d1e812b74da9b3af1445ece6df9" id="r_a46273d1e812b74da9b3af1445ece6df9"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a46273d1e812b74da9b3af1445ece6df9">mhd_uawsom_thread_radius0</a> = -1.d0</td></tr>
+<tr class="separator:a46273d1e812b74da9b3af1445ece6df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae73f3126ffebb89b3078d6f9b504d90b" id="r_ae73f3126ffebb89b3078d6f9b504d90b"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#ae73f3126ffebb89b3078d6f9b504d90b">mhd_uawsom_bref</a> = -1.d0</td></tr>
+<tr class="separator:ae73f3126ffebb89b3078d6f9b504d90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf52b6c8b834186012bcfe0f09ddc4a" id="r_aadf52b6c8b834186012bcfe0f09ddc4a"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aadf52b6c8b834186012bcfe0f09ddc4a">mhd_uawsom_alfven_corr_length0</a> = -1.d0</td></tr>
+<tr class="separator:aadf52b6c8b834186012bcfe0f09ddc4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab717c0eb43a835a69521eef7cc131f" id="r_aaab717c0eb43a835a69521eef7cc131f"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#aaab717c0eb43a835a69521eef7cc131f">waplus_</a> =-1</td></tr>
+<tr class="memdesc:aaab717c0eb43a835a69521eef7cc131f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conserved wave-energy indices. The plus variables propagate against B.  <br /></td></tr>
+<tr class="separator:aaab717c0eb43a835a69521eef7cc131f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87375e1db5231565b72e5a53272f0c3e" id="r_a87375e1db5231565b72e5a53272f0c3e"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a87375e1db5231565b72e5a53272f0c3e">waminus_</a> =-1</td></tr>
+<tr class="separator:a87375e1db5231565b72e5a53272f0c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade81ffa113469402c2928e0364aa7c19" id="r_ade81ffa113469402c2928e0364aa7c19"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#ade81ffa113469402c2928e0364aa7c19">wkplus_</a> =-1</td></tr>
+<tr class="separator:ade81ffa113469402c2928e0364aa7c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3edb409252283b69b97e28398eeebd90" id="r_a3edb409252283b69b97e28398eeebd90"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#a3edb409252283b69b97e28398eeebd90">wkminus_</a> =-1</td></tr>
+<tr class="separator:a3edb409252283b69b97e28398eeebd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3c701067cd8d89cab9e0e33d14f8d56" id="r_af3c701067cd8d89cab9e0e33d14f8d56"><td class="memItemLeft" align="right" valign="top">integer, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__mhd__phys.html#af3c701067cd8d89cab9e0e33d14f8d56">tcoff_</a></td></tr>
 <tr class="memdesc:af3c701067cd8d89cab9e0e33d14f8d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the cutoff temperature for the TRAC method.  <br /></td></tr>
 <tr class="separator:af3c701067cd8d89cab9e0e33d14f8d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -453,7 +496,7 @@ Variables</h2></td></tr>
 
 <p>calculate magnetic field from vector potential </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08159">8159</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08509">8509</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -525,7 +568,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate idirmin and the idirmin:3 components of the common current array make sure that <a class="el" href="namespacemod__global__parameters.html#ac487446056522027f949f42ba64b2e11" title="store unstretched cell size of current level">dxlevel(^D)</a> is set correctly. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06109">6109</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06459">6459</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -606,7 +649,7 @@ Here is the call graph for this function:</div>
 
 <p>get dimensionless div B = |divB| * volume / area / |B| </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06075">6075</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06425">6425</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -660,7 +703,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l07305">7305</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l07655">7655</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -739,14 +782,17 @@ Here is the call graph for this function:</div>
 
 <p>Transform total energy to internal energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l01971">1971</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02214">2214</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__mhd__phys_a2496b6220ad0dcae99878a0e22ca3e54_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_a2496b6220ad0dcae99878a0e22ca3e54_cgraph" alt=""/></div>
 <map name="anamespacemod__mhd__phys_a2496b6220ad0dcae99878a0e22ca3e54_cgraph" id="anamespacemod__mhd__phys_a2496b6220ad0dcae99878a0e22ca3e54_cgraph">
 <area shape="rect" title="Transform total energy to internal energy." alt="" coords="5,29,183,69"/>
-<area shape="poly" title=" " alt="" coords="60,30,58,20,64,11,76,5,94,3,115,6,126,13,123,17,113,11,94,8,77,10,67,15,64,21,66,28"/>
+<area shape="poly" title=" " alt="" coords="48,30,45,20,53,10,69,5,94,3,123,6,139,13,136,18,121,11,94,8,70,10,56,15,50,21,53,28"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#a7d60fcea37cd005281d33dfba1976131" title=" " alt="" coords="231,29,455,69"/>
+<area shape="poly" title=" " alt="" coords="183,47,217,47,217,52,183,52"/>
+<area shape="poly" title=" " alt="" coords="297,30,294,20,301,10,318,5,343,3,371,6,387,13,385,18,370,11,343,8,319,10,304,15,299,21,302,28"/>
 </map>
 </div>
 
@@ -804,7 +850,18 @@ Here is the call graph for this function:</div>
 
 <p>Transform internal energy to total energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l01914">1914</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02156">2156</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__mhd__phys_af0bab1b3ad07312a82c867579d3714b3_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_af0bab1b3ad07312a82c867579d3714b3_cgraph" alt=""/></div>
+<map name="anamespacemod__mhd__phys_af0bab1b3ad07312a82c867579d3714b3_cgraph" id="anamespacemod__mhd__phys_af0bab1b3ad07312a82c867579d3714b3_cgraph">
+<area shape="rect" title="Transform internal energy to total energy." alt="" coords="5,37,221,62"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#a7d60fcea37cd005281d33dfba1976131" title=" " alt="" coords="269,29,493,69"/>
+<area shape="poly" title=" " alt="" coords="221,47,256,47,256,52,221,52"/>
+<area shape="poly" title=" " alt="" coords="332,30,329,20,337,10,354,5,381,3,412,5,429,13,427,18,411,11,381,8,355,10,340,15,334,21,337,28"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -842,7 +899,7 @@ Here is the call graph for this function:</div>
 
 <p>calculate cell-center values from face-center values </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08094">8094</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l08444">8444</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -904,7 +961,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate modified squared sound speed for FLD NOTE: only for diagnostic purposes, unused subroutine. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03305">3305</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03585">3585</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -976,7 +1033,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate modified squared fast wave speed for FLD NOTE: w is primitive on entry here! NOTE: used in FLD module as phys_get_csrad2. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03324">3324</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03604">3604</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1048,7 +1105,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate radiation pressure within ixO^L. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03567">3567</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03847">3847</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1120,7 +1177,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculates the sum of the gas pressure and the max Prad tensor element. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03580">3580</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03860">3860</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1190,7 +1247,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l05249">5249</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l05599">5599</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1293,38 +1350,41 @@ Here is the call graph for this function:</div>
 
 <p>Calculates radiation temperature. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03602">3602</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l03882">3882</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__mhd__phys_a00f5ac87efddbe7d816697ae34160ec7_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_a00f5ac87efddbe7d816697ae34160ec7_cgraph" alt=""/></div>
 <map name="anamespacemod__mhd__phys_a00f5ac87efddbe7d816697ae34160ec7_cgraph" id="anamespacemod__mhd__phys_a00f5ac87efddbe7d816697ae34160ec7_cgraph">
-<area shape="rect" title="Calculates radiation temperature." alt="" coords="5,200,228,225"/>
-<area shape="rect" href="namespacemod__global__parameters.html#a1ba907b301287b1559121df9aeb35f03" title="Cross product of two vectors." alt="" coords="853,34,1033,74"/>
-<area shape="poly" title=" " alt="" coords="125,198,148,169,182,131,225,93,275,62,347,35,423,16,501,6,579,3,654,5,725,11,844,29,844,34,724,16,653,10,579,8,502,11,424,22,349,40,277,67,229,97,186,135,152,172,129,201"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#ac7bf1b8d5fd9dac730901cb6319ced4d" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="840,171,1047,196"/>
-<area shape="poly" title=" " alt="" coords="180,223,295,241,447,257,532,261,619,261,707,255,791,242,853,224,906,200,908,205,855,229,793,247,707,260,619,266,532,266,447,263,294,247,179,228"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="277,143,495,168"/>
-<area shape="poly" title=" " alt="" coords="177,197,312,168,313,174,178,203"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#a7cefae9319d59d3d9182e9b35bad1e28" title="Compute 2 times total magnetic energy." alt="" coords="569,193,767,233"/>
-<area shape="poly" title=" " alt="" coords="228,210,555,210,555,215,228,215"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#a7e7f9e0cfdae3f081d89b5a609011c5d" title="multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as &#45;mhd_eta_ambi/rh..." alt="" coords="544,41,792,67"/>
-<area shape="poly" title=" " alt="" coords="130,198,190,151,231,125,275,104,338,84,404,69,530,54,531,60,405,75,340,89,277,109,234,129,193,155,134,202"/>
-<area shape="rect" href="namespacemod__fix__conserve.html#accd8011113a5f7b3efeec90d42bd9dad" title=" " alt="" coords="276,308,496,333"/>
-<area shape="poly" title=" " alt="" coords="143,223,203,254,277,286,323,302,321,307,275,291,201,259,140,228"/>
-<area shape="rect" href="namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="280,357,492,383"/>
-<area shape="poly" title=" " alt="" coords="131,224,190,282,231,316,277,344,294,351,292,356,275,348,228,320,186,286,127,228"/>
-<area shape="poly" title=" " alt="" coords="899,173,889,162,894,152,913,146,943,144,983,148,993,153,997,159,993,162,990,157,981,153,943,149,914,152,898,156,895,162,903,169"/>
-<area shape="poly" title=" " alt="" coords="457,140,839,70,840,75,457,145"/>
-<area shape="poly" title=" " alt="" coords="496,158,826,175,826,180,495,164"/>
-<area shape="poly" title=" " alt="" coords="343,145,333,134,338,124,356,118,386,116,425,120,435,125,439,131,434,134,432,129,423,125,386,121,357,124,341,128,338,134,346,141"/>
-<area shape="poly" title=" " alt="" coords="421,166,555,196,554,201,419,171"/>
-<area shape="poly" title=" " alt="" coords="433,140,543,96,633,69,634,74,545,101,435,145"/>
-<area shape="poly" title=" " alt="" coords="767,200,826,193,827,199,768,205"/>
-<area shape="poly" title=" " alt="" coords="605,195,504,173,506,168,606,190"/>
-<area shape="poly" title=" " alt="" coords="792,51,840,51,840,57,792,57"/>
-<area shape="poly" title=" " alt="" coords="698,65,904,162,902,167,695,69"/>
-<area shape="poly" title=" " alt="" coords="567,69,545,77,472,106,412,138,410,133,470,102,543,72,566,64"/>
+<area shape="rect" title="Calculates radiation temperature." alt="" coords="5,236,228,261"/>
+<area shape="rect" href="namespacemod__global__parameters.html#a1ba907b301287b1559121df9aeb35f03" title="Cross product of two vectors." alt="" coords="857,41,1037,81"/>
+<area shape="poly" title=" " alt="" coords="123,234,144,200,177,154,221,106,247,85,275,68,348,36,426,16,506,6,586,3,664,6,736,14,858,35,857,40,736,19,663,11,586,8,507,11,427,22,350,41,277,72,250,89,225,110,181,157,148,203,127,237"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#ac7bf1b8d5fd9dac730901cb6319ced4d" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="844,177,1051,203"/>
+<area shape="poly" title=" " alt="" coords="219,259,337,268,482,274,639,269,718,261,795,249,857,230,910,206,912,211,859,235,797,254,719,266,640,274,482,279,337,274,219,264"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="279,149,497,175"/>
+<area shape="poly" title=" " alt="" coords="157,233,333,176,335,181,158,238"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#a7cefae9319d59d3d9182e9b35bad1e28" title="Compute 2 times total magnetic energy." alt="" coords="573,199,771,239"/>
+<area shape="poly" title=" " alt="" coords="228,240,558,223,559,228,229,245"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#a7e7f9e0cfdae3f081d89b5a609011c5d" title="multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as &#45;mhd_eta_ambi/rh..." alt="" coords="548,48,796,73"/>
+<area shape="poly" title=" " alt="" coords="126,234,184,173,227,138,275,110,339,87,406,71,472,62,534,57,535,62,473,67,407,76,340,92,277,115,230,142,188,177,130,238"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#abf54917ed4ea17469ce42ec87a36aa4b" title=" " alt="" coords="276,335,500,375"/>
+<area shape="poly" title=" " alt="" coords="151,259,325,328,323,333,149,264"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#accd8011113a5f7b3efeec90d42bd9dad" title=" " alt="" coords="278,400,498,425"/>
+<area shape="poly" title=" " alt="" coords="131,260,189,321,231,355,277,385,297,393,295,398,275,390,228,360,185,324,127,263"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="282,449,494,475"/>
+<area shape="poly" title=" " alt="" coords="127,260,148,296,181,344,225,394,250,416,277,436,289,442,287,446,275,440,247,421,221,398,177,347,143,299,123,263"/>
+<area shape="poly" title=" " alt="" coords="903,179,893,169,898,159,917,153,947,151,987,155,997,160,1001,166,997,168,994,164,985,160,947,156,918,158,902,163,899,168,907,175"/>
+<area shape="poly" title=" " alt="" coords="459,147,843,77,844,82,460,152"/>
+<area shape="poly" title=" " alt="" coords="498,165,830,181,830,187,498,170"/>
+<area shape="poly" title=" " alt="" coords="345,151,335,141,340,131,358,125,388,123,427,127,437,132,441,138,436,140,434,136,425,132,388,128,359,130,343,135,340,140,348,147"/>
+<area shape="poly" title=" " alt="" coords="423,172,559,203,558,208,422,177"/>
+<area shape="poly" title=" " alt="" coords="435,147,547,102,637,75,638,80,549,107,437,152"/>
+<area shape="poly" title=" " alt="" coords="771,206,830,200,831,205,772,211"/>
+<area shape="poly" title=" " alt="" coords="609,202,507,180,508,175,610,197"/>
+<area shape="poly" title=" " alt="" coords="796,58,844,58,844,63,796,63"/>
+<area shape="poly" title=" " alt="" coords="702,71,908,169,906,174,699,76"/>
+<area shape="poly" title=" " alt="" coords="571,76,549,83,475,113,415,144,412,139,473,108,547,78,570,71"/>
+<area shape="poly" title=" " alt="" coords="338,336,335,325,343,316,361,311,388,309,419,311,436,319,434,324,418,317,388,314,362,316,346,321,340,327,343,334"/>
 </map>
 </div>
 
@@ -1388,7 +1448,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate v vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02420">2420</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02680">2680</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1452,7 +1512,7 @@ Here is the call graph for this function:</div>
 
 <p>Compute 2 times total magnetic energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l06772">6772</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l07122">7122</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1494,79 +1554,260 @@ Here is the call graph for this function:</div>
 <p>EOS module: phys_to_primitive / phys_to_conserved are bound by <a class="el" href="namespacemod__mhd__eos.html" title="MHD &lt;-&gt; EoS seam: binds the eos% authority into magnetohydrodynamics.">mod_mhd_eos</a>:bind_eos_to_source to route through the EoS layer; mhd_to_primitive / mhd_to_conserved pointers are NOT used - every call to convert state goes through eosto_primitive / eosto_conserved. eosinv_squared_c{0,} are set in mhd_physical_units (called below) after inv_squared_c{0,} are computed.</p>
 <p>Cache log10(nH) in wextra for LTE+IonE TC (density invariant during STS)</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00319">319</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00345">345</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__mhd__phys_ad7d98b0addb883f4aa58a876eee8025e_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_ad7d98b0addb883f4aa58a876eee8025e_cgraph" alt=""/></div>
 <map name="anamespacemod__mhd__phys_ad7d98b0addb883f4aa58a876eee8025e_cgraph" id="anamespacemod__mhd__phys_ad7d98b0addb883f4aa58a876eee8025e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,935,233,961"/>
+<area shape="rect" title=" " alt="" coords="5,961,233,986"/>
 <area shape="rect" href="namespacemod__convert.html#aaa0d8f3b2be317c7b2be1924cdad1c57" title=" " alt="" coords="292,5,487,45"/>
-<area shape="poly" title=" " alt="" coords="119,935,128,775,139,650,154,511,175,369,202,238,219,180,237,130,257,88,279,56,283,52,286,56,283,59,262,90,242,132,224,182,207,240,180,370,159,511,144,650,133,776,124,935"/>
+<area shape="poly" title=" " alt="" coords="118,960,127,796,138,667,153,524,173,378,201,243,217,184,236,132,256,88,279,56,283,52,286,56,283,59,261,91,241,134,222,186,206,245,179,379,158,524,143,667,133,796,124,960"/>
 <area shape="rect" href="namespacemod__supertimestepping.html#a7b8ba942141441da1810e653facd035c" title="subroutine which added programatically a term to be calculated using STS Params: sts_getdt function c..." alt="" coords="299,69,479,109"/>
-<area shape="poly" title=" " alt="" coords="119,935,130,785,158,539,179,409,206,288,239,188,258,149,279,120,286,113,290,117,283,123,263,152,244,190,211,289,184,410,163,540,135,785,124,935"/>
+<area shape="poly" title=" " alt="" coords="119,960,129,807,156,554,177,419,204,294,238,190,258,150,279,120,286,113,290,117,283,123,262,153,243,192,210,295,183,420,161,554,134,807,124,961"/>
 <area shape="rect" href="namespacemod__cak__force.html#a3ea4d69b0566bbe50c6d7900abbdce5d" title="Initialize the module." alt="" coords="299,134,479,159"/>
-<area shape="poly" title=" " alt="" coords="119,935,130,792,159,561,180,438,207,325,240,232,259,196,279,169,286,163,289,167,283,172,263,199,245,234,212,326,185,439,164,562,136,793,124,935"/>
+<area shape="poly" title=" " alt="" coords="119,960,130,814,157,575,178,448,205,331,239,234,258,197,279,169,286,163,289,167,283,172,263,200,244,236,210,332,183,449,162,576,135,815,124,961"/>
 <area shape="rect" href="namespacemod__fld.html#afbe0696b261a9a09241c7dbe7ebddc0e" title="Initialising FLD&#45;module Read opacities Initialise Multigrid and adimensionalise kappa." alt="" coords="326,183,453,209"/>
-<area shape="poly" title=" " alt="" coords="119,935,132,801,162,585,184,471,210,365,242,278,260,245,279,219,295,208,312,200,314,205,297,212,283,223,264,248,247,280,215,367,189,472,167,586,137,802,124,935"/>
+<area shape="poly" title=" " alt="" coords="119,960,131,822,160,598,182,480,209,370,241,280,259,246,279,219,294,208,312,200,314,205,297,212,283,223,264,248,246,282,214,372,187,481,166,599,137,822,124,960"/>
 <area shape="rect" href="namespacemod__thermal__emission.html#a159fb3c1b066f6de4fee75cb5141bc2f" title=" " alt="" coords="302,233,477,273"/>
-<area shape="poly" title=" " alt="" coords="119,934,135,811,167,615,189,512,215,416,245,337,262,307,279,284,288,275,292,279,283,287,266,310,250,340,220,418,194,513,172,616,140,812,125,935"/>
+<area shape="poly" title=" " alt="" coords="119,960,134,833,166,629,188,521,214,422,244,340,261,308,279,284,288,275,292,279,283,287,266,311,249,342,219,423,193,522,171,630,139,833,125,961"/>
 <area shape="rect" href="namespacemod__thermal__emission.html#adf0fb0ee2b1bfd1c734f0a86070c37ec" title=" " alt="" coords="302,297,477,337"/>
-<area shape="poly" title=" " alt="" coords="120,935,137,822,171,645,193,552,219,467,248,396,263,368,279,347,289,339,292,344,283,351,268,371,252,398,224,468,198,554,176,647,142,823,125,935"/>
+<area shape="poly" title=" " alt="" coords="120,960,136,843,169,659,192,562,217,472,247,398,263,369,279,348,289,339,292,343,283,351,267,372,252,400,223,474,197,563,175,660,141,844,125,961"/>
 <area shape="rect" href="namespacemod__thermal__emission.html#a8c9910c8edf1623c3705458a5b337b62" title=" " alt="" coords="302,361,477,401"/>
-<area shape="poly" title=" " alt="" coords="118,935,121,847,127,782,140,707,159,629,188,550,227,476,252,442,279,411,289,404,292,408,283,415,256,446,232,479,193,552,164,630,145,708,133,782,126,848,123,935"/>
+<area shape="poly" title=" " alt="" coords="118,961,119,870,125,801,137,723,156,640,185,558,226,480,251,444,279,411,288,404,291,408,283,415,255,447,230,483,190,560,161,642,142,724,130,801,125,870,123,961"/>
 <area shape="rect" href="namespacemod__thermal__conduction.html#a209af8dfb2abc0762cdfa89e6f840c80" title="Get the explicit timestep for the TC (hd implementation) Note: also used in 1D MHD (or for neutrals i..." alt="" coords="296,425,483,465"/>
-<area shape="poly" title=" " alt="" coords="118,935,125,857,133,799,147,734,167,665,195,596,232,532,279,475,284,471,288,475,283,479,236,535,200,599,172,666,152,735,138,800,130,857,124,936"/>
+<area shape="poly" title=" " alt="" coords="118,960,123,878,131,817,144,748,164,676,192,603,230,535,253,504,279,475,284,471,288,475,283,479,258,507,235,538,197,605,169,677,149,750,136,818,128,879,123,961"/>
 <area shape="rect" href="namespacemod__thermal__conduction.html#a17b4756aab5213e0be7b3525ebcb4785" title="Get the explicit timestep for the TC (mhd implementation) Note: for multi&#45;D MHD (1D MHD will use HD f..." alt="" coords="296,489,483,529"/>
-<area shape="poly" title=" " alt="" coords="119,935,129,866,154,760,175,701,202,642,237,587,279,539,285,535,288,539,283,543,241,590,207,645,180,703,159,761,134,867,124,936"/>
+<area shape="poly" title=" " alt="" coords="119,960,127,887,137,834,151,774,172,712,199,649,235,591,279,539,285,535,288,539,283,543,239,594,204,652,177,714,156,776,142,835,132,888,124,961"/>
 <area shape="rect" href="namespacemod__thermal__emission.html#af29ccd138f3aca890abf25d1dbc02b97" title=" " alt="" coords="302,553,477,593"/>
-<area shape="poly" title=" " alt="" coords="120,935,133,875,162,786,183,737,209,688,241,643,280,603,288,597,291,601,283,607,246,646,214,691,188,739,167,788,139,876,125,936"/>
+<area shape="poly" title=" " alt="" coords="120,960,132,897,159,801,180,748,207,695,240,646,280,603,288,597,291,601,283,607,244,650,211,698,185,750,164,803,137,898,125,961"/>
 <area shape="rect" href="namespacemod__gravity.html#ac77da47869e83fdec592fa926333722c" title="Initialize the module." alt="" coords="297,618,482,643"/>
-<area shape="poly" title=" " alt="" coords="121,934,137,882,167,806,188,764,214,724,244,686,280,654,290,647,293,651,283,658,248,690,218,727,193,767,172,808,142,884,126,936"/>
+<area shape="poly" title=" " alt="" coords="121,960,135,904,164,821,185,775,211,731,242,689,280,654,290,647,293,652,283,658,246,693,215,734,190,778,169,823,140,905,126,961"/>
 <area shape="rect" href="namespacemod__magnetofriction.html#a7a760a33229888d9d1388aa2bb2f874e" title="Initialize the module." alt="" coords="308,668,471,708"/>
-<area shape="poly" title=" " alt="" coords="124,934,143,892,177,834,222,772,250,743,280,718,294,709,297,714,283,722,253,747,227,775,181,837,148,894,129,936"/>
+<area shape="poly" title=" " alt="" coords="123,960,141,914,173,849,219,779,248,746,280,718,294,709,297,713,283,722,252,750,224,782,178,851,146,916,128,962"/>
 <area shape="rect" href="namespacemod__mhd__phys.html#a146ddbc522f5c61e67c327808e6a8220" title=" " alt="" coords="287,732,491,772"/>
-<area shape="poly" title=" " alt="" coords="129,933,188,866,231,825,280,788,305,775,307,780,283,793,235,829,192,869,133,937"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#ac54ab9cded448f662757e2a9fb5f8bd1" title="calculate cell&#45;center values from face&#45;center values" alt="" coords="556,761,753,801"/>
-<area shape="poly" title=" " alt="" coords="132,933,193,883,235,855,280,832,346,811,414,796,481,786,542,781,543,786,482,792,415,801,347,816,282,837,237,860,196,887,136,937"/>
+<area shape="poly" title=" " alt="" coords="127,959,184,880,228,831,280,788,303,775,305,780,283,793,232,835,188,883,131,962"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#ac54ab9cded448f662757e2a9fb5f8bd1" title="calculate cell&#45;center values from face&#45;center values" alt="" coords="559,761,756,801"/>
+<area shape="poly" title=" " alt="" coords="129,958,188,896,231,861,280,832,346,808,415,792,482,783,545,778,545,784,483,788,416,798,347,813,282,837,235,865,192,900,133,962"/>
 <area shape="rect" href="namespacemod__mhd__phys.html#a2496b6220ad0dcae99878a0e22ca3e54" title="Transform total energy to internal energy." alt="" coords="301,871,478,911"/>
-<area shape="poly" title=" " alt="" coords="179,933,287,910,288,915,181,938"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#af0bab1b3ad07312a82c867579d3714b3" title="Transform internal energy to total energy." alt="" coords="281,935,497,961"/>
-<area shape="poly" title=" " alt="" coords="234,945,267,945,267,951,234,951"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#ab17661cbcc97327c5b017bd1626829a0" title="Calculate modified squared fast wave speed for FLD NOTE: w is primitive on entry here!..." alt="" coords="294,985,485,1025"/>
-<area shape="poly" title=" " alt="" coords="181,958,282,980,281,985,179,963"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="545,1075,764,1101"/>
-<area shape="poly" title=" " alt="" coords="140,959,201,997,241,1018,282,1035,345,1052,409,1065,532,1080,531,1085,409,1071,344,1058,280,1040,238,1023,198,1002,137,963"/>
-<area shape="rect" href="namespacemod__mhd__phys.html#ad16a691811dcb9e9b616bdfdfc9ee0de" title="Calculate v vector." alt="" coords="287,1101,492,1126"/>
-<area shape="poly" title=" " alt="" coords="135,959,195,1016,237,1050,283,1079,319,1094,317,1099,280,1084,234,1054,191,1021,131,963"/>
-<area shape="rect" href="namespacemod__particles.html#a7a89b126b34bb788a3911955880ddd8f" title="Initialize particle data and parameters." alt="" coords="286,1150,493,1175"/>
-<area shape="poly" title=" " alt="" coords="130,960,151,996,185,1044,230,1094,255,1117,283,1136,294,1142,292,1147,280,1141,252,1121,226,1098,181,1047,147,999,125,963"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a2c0aab05964e01b97b9ae65c6d2ea830" title=" " alt="" coords="304,1200,475,1240"/>
-<area shape="poly" title=" " alt="" coords="128,960,147,1003,179,1064,225,1130,252,1160,283,1186,293,1193,290,1197,280,1190,249,1164,221,1133,175,1067,142,1005,123,962"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a1af126a415ceee3e65eb49567e74be29" title="Radiative cooling initialization." alt="" coords="304,1265,475,1319"/>
-<area shape="poly" title=" " alt="" coords="126,960,143,1013,173,1091,194,1133,220,1175,249,1215,283,1250,294,1258,290,1262,280,1254,245,1219,215,1178,190,1136,168,1093,138,1015,121,962"/>
-<area shape="rect" href="namespacemod__rotating__frame.html#ac4472518b3e7e80ad298502342cfb9ef" title="Initialize the module." alt="" coords="312,1344,467,1384"/>
-<area shape="poly" title=" " alt="" coords="125,960,136,1026,162,1126,183,1181,209,1235,243,1286,283,1330,301,1342,298,1347,280,1334,238,1289,205,1238,178,1183,157,1127,130,1027,119,961"/>
-<area shape="rect" href="namespacemod__supertimestepping.html#aa6c319b28911c6e73c1218f56f66d850" title="Set the hooks called before the first cycle and after the last cycle in the STS update This method sh..." alt="" coords="293,1409,485,1463"/>
-<area shape="poly" title=" " alt="" coords="124,960,133,1034,157,1150,177,1215,204,1279,239,1340,283,1394,288,1398,284,1402,279,1398,235,1343,200,1282,172,1216,152,1151,127,1035,119,961"/>
-<area shape="rect" href="namespacemod__supertimestepping.html#ab8f1d9807c6320de449a5983500bd7c8" title="Set the hook of error handling in the STS update. This method is called before updating the BC...." alt="" coords="299,1487,479,1542"/>
-<area shape="poly" title=" " alt="" coords="123,961,128,1046,135,1110,148,1183,167,1260,196,1337,234,1410,257,1443,283,1474,290,1480,286,1484,279,1478,253,1447,229,1413,191,1339,162,1261,142,1184,130,1111,122,1046,118,961"/>
-<area shape="rect" href="namespacemod__supertimestepping.html#ae300305fc391679ed668a2d0eb686b67" title="Initialize sts module." alt="" coords="299,1567,479,1607"/>
-<area shape="poly" title=" " alt="" coords="125,961,142,1074,176,1253,198,1347,224,1434,252,1505,267,1532,283,1553,290,1559,286,1563,279,1556,263,1535,247,1508,218,1436,193,1349,170,1255,137,1075,120,962"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a57cf95e5b705d868c99792a156c06dcd" title=" " alt="" coords="296,1631,483,1671"/>
-<area shape="poly" title=" " alt="" coords="125,960,140,1084,172,1283,194,1388,220,1484,250,1564,266,1594,283,1617,287,1620,283,1624,279,1620,262,1597,245,1566,215,1486,189,1389,166,1284,135,1085,119,961"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a591ee12c87621f338cc65935a9c5fa20" title="anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computation..." alt="" coords="296,1695,483,1735"/>
-<area shape="poly" title=" " alt="" coords="124,961,138,1095,168,1313,190,1428,216,1534,247,1622,265,1656,283,1681,286,1684,283,1688,279,1684,260,1658,243,1624,211,1536,185,1429,163,1313,133,1096,119,961"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a8c9c30e2196550623da28cc61d017793" title="Init TC coefficients: MHD case." alt="" coords="296,1759,483,1799"/>
-<area shape="poly" title=" " alt="" coords="124,961,136,1105,164,1342,186,1468,213,1584,245,1680,263,1717,283,1745,287,1749,283,1752,279,1748,259,1720,240,1682,207,1586,181,1469,159,1343,131,1106,119,961"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="296,1823,483,1863"/>
-<area shape="poly" title=" " alt="" coords="124,961,134,1116,161,1372,182,1509,209,1635,243,1739,262,1779,283,1809,287,1813,283,1816,279,1812,258,1782,238,1741,204,1636,177,1510,156,1373,129,1117,119,961"/>
-<area shape="rect" href="namespacemod__viscosity.html#afc8d45a6d4c2b06749d67d2d56a89a5b" title="Initialize the module." alt="" coords="285,1887,494,1913"/>
-<area shape="poly" title=" " alt="" coords="124,961,131,1127,141,1257,155,1403,176,1550,204,1686,220,1746,239,1798,260,1841,283,1873,288,1878,285,1881,279,1876,255,1844,234,1800,215,1748,198,1687,171,1551,150,1403,136,1258,126,1127,118,961"/>
-<area shape="poly" title=" " alt="" coords="492,761,543,766,542,772,491,766"/>
-<area shape="poly" title=" " alt="" coords="340,871,337,861,345,852,363,846,389,844,420,847,437,854,434,859,419,852,389,849,364,851,348,856,343,862,345,869"/>
-<area shape="poly" title=" " alt="" coords="612,1077,603,1067,608,1057,625,1051,655,1049,693,1053,703,1058,706,1064,702,1066,699,1062,691,1058,655,1054,626,1056,611,1061,608,1066,616,1073"/>
-<area shape="poly" title=" " alt="" coords="492,1101,531,1097,532,1102,492,1106"/>
+<area shape="poly" title=" " alt="" coords="161,958,309,912,310,917,163,963"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#a7d60fcea37cd005281d33dfba1976131" title=" " alt="" coords="545,949,769,989"/>
+<area shape="poly" title=" " alt="" coords="234,970,531,968,532,973,234,975"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#ad16a691811dcb9e9b616bdfdfc9ee0de" title="Calculate v vector." alt="" coords="817,1037,1023,1062"/>
+<area shape="poly" title=" " alt="" coords="154,984,213,1004,282,1021,421,1040,562,1049,693,1052,803,1051,803,1057,693,1058,562,1054,421,1045,281,1027,211,1009,152,989"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="1071,1062,1289,1087"/>
+<area shape="poly" title=" " alt="" coords="141,984,202,1019,241,1037,282,1051,386,1073,493,1088,601,1097,707,1101,902,1097,1059,1086,1060,1091,903,1103,707,1106,601,1102,493,1093,385,1078,281,1056,239,1042,200,1024,139,989"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#af0bab1b3ad07312a82c867579d3714b3" title="Transform internal energy to total energy." alt="" coords="281,986,497,1011"/>
+<area shape="poly" title=" " alt="" coords="234,981,268,985,267,990,233,987"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#ab17661cbcc97327c5b017bd1626829a0" title="Calculate modified squared fast wave speed for FLD NOTE: w is primitive on entry here!..." alt="" coords="294,1137,485,1177"/>
+<area shape="poly" title=" " alt="" coords="133,984,193,1046,236,1083,283,1116,309,1130,306,1134,280,1121,233,1088,190,1050,130,988"/>
+<area shape="rect" href="namespacemod__particles.html#a7a89b126b34bb788a3911955880ddd8f" title="Initialize particle data and parameters." alt="" coords="286,1202,493,1227"/>
+<area shape="poly" title=" " alt="" coords="129,985,149,1025,182,1080,227,1138,254,1165,283,1187,296,1194,293,1199,280,1192,250,1169,223,1142,177,1083,144,1028,124,988"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a2c0aab05964e01b97b9ae65c6d2ea830" title=" " alt="" coords="304,1252,475,1292"/>
+<area shape="poly" title=" " alt="" coords="127,985,145,1033,176,1101,222,1175,251,1209,283,1238,293,1245,290,1249,280,1242,247,1212,218,1178,171,1104,140,1035,122,987"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a1af126a415ceee3e65eb49567e74be29" title="Radiative cooling initialization." alt="" coords="304,1317,475,1371"/>
+<area shape="poly" title=" " alt="" coords="126,985,140,1042,170,1127,191,1174,217,1220,247,1264,283,1302,294,1310,290,1314,280,1306,243,1267,212,1223,186,1176,165,1129,135,1044,121,987"/>
+<area shape="rect" href="namespacemod__rotating__frame.html#ac4472518b3e7e80ad298502342cfb9ef" title="Initialize the module." alt="" coords="312,1396,467,1436"/>
+<area shape="poly" title=" " alt="" coords="124,986,134,1055,159,1162,180,1221,207,1280,241,1334,283,1382,301,1395,298,1399,280,1386,237,1338,202,1282,175,1223,154,1164,129,1056,119,987"/>
+<area shape="rect" href="namespacemod__supertimestepping.html#aa6c319b28911c6e73c1218f56f66d850" title="Set the hooks called before the first cycle and after the last cycle in the STS update This method sh..." alt="" coords="293,1461,485,1515"/>
+<area shape="poly" title=" " alt="" coords="124,986,131,1064,140,1122,154,1187,174,1255,202,1324,238,1389,283,1446,288,1450,284,1454,279,1450,233,1392,197,1326,169,1257,149,1188,135,1123,126,1065,119,987"/>
+<area shape="rect" href="namespacemod__supertimestepping.html#ab8f1d9807c6320de449a5983500bd7c8" title="Set the hook of error handling in the STS update. This method is called before updating the BC...." alt="" coords="299,1539,479,1594"/>
+<area shape="poly" title=" " alt="" coords="123,986,126,1075,133,1143,145,1219,164,1300,193,1381,232,1458,256,1494,283,1526,290,1533,286,1536,279,1530,252,1497,227,1461,188,1384,159,1302,140,1220,127,1143,121,1076,118,986"/>
+<area shape="rect" href="namespacemod__supertimestepping.html#ae300305fc391679ed668a2d0eb686b67" title="Initialize sts module." alt="" coords="299,1619,479,1659"/>
+<area shape="poly" title=" " alt="" coords="125,986,141,1104,174,1291,196,1390,222,1480,251,1555,267,1583,283,1605,290,1611,286,1615,279,1608,262,1586,246,1557,217,1482,191,1391,169,1292,136,1105,120,987"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a57cf95e5b705d868c99792a156c06dcd" title=" " alt="" coords="296,1683,483,1723"/>
+<area shape="poly" title=" " alt="" coords="125,986,139,1114,170,1320,192,1430,218,1530,249,1613,266,1645,283,1669,286,1672,283,1676,279,1672,261,1648,244,1615,213,1532,187,1431,165,1321,134,1115,119,986"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a591ee12c87621f338cc65935a9c5fa20" title="anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computation..." alt="" coords="296,1747,483,1787"/>
+<area shape="poly" title=" " alt="" coords="124,986,137,1124,166,1350,188,1470,215,1580,246,1672,264,1707,283,1733,286,1736,283,1740,279,1736,260,1709,242,1674,210,1582,183,1471,161,1351,132,1125,119,986"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a8c9c30e2196550623da28cc61d017793" title="Init TC coefficients: MHD case." alt="" coords="296,1811,483,1851"/>
+<area shape="poly" title=" " alt="" coords="124,986,135,1136,163,1380,184,1511,211,1631,244,1730,263,1768,283,1797,287,1801,283,1804,279,1800,258,1771,239,1732,206,1632,179,1512,158,1381,130,1136,119,987"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="296,1875,483,1915"/>
+<area shape="poly" title=" " alt="" coords="124,986,133,1145,144,1270,159,1409,180,1550,207,1681,224,1738,242,1788,262,1830,283,1861,287,1865,283,1868,279,1864,257,1833,237,1790,219,1740,202,1682,175,1551,154,1410,139,1271,128,1146,119,986"/>
+<area shape="rect" href="namespacemod__viscosity.html#afc8d45a6d4c2b06749d67d2d56a89a5b" title="Initialize the module." alt="" coords="285,1939,494,1965"/>
+<area shape="poly" title=" " alt="" coords="124,986,131,1157,140,1291,154,1441,174,1593,202,1733,219,1794,238,1848,259,1892,283,1925,288,1930,285,1933,279,1928,255,1895,233,1850,214,1796,197,1734,169,1593,149,1442,134,1292,125,1157,118,987"/>
+<area shape="poly" title=" " alt="" coords="492,760,545,766,545,772,491,766"/>
+<area shape="poly" title=" " alt="" coords="340,871,337,861,345,852,362,846,389,844,420,847,437,854,435,859,419,852,389,849,363,851,348,856,342,862,345,869"/>
+<area shape="poly" title=" " alt="" coords="459,908,576,943,575,948,458,913"/>
+<area shape="poly" title=" " alt="" coords="609,950,606,940,614,930,631,925,657,923,688,926,704,933,702,938,686,931,657,928,632,930,617,935,611,941,614,948"/>
+<area shape="poly" title=" " alt="" coords="725,987,865,1030,863,1035,723,992"/>
+<area shape="poly" title=" " alt="" coords="1023,1057,1057,1060,1057,1065,1022,1062"/>
+<area shape="poly" title=" " alt="" coords="1138,1064,1129,1054,1134,1044,1151,1037,1180,1035,1217,1039,1227,1044,1231,1050,1226,1053,1223,1048,1215,1044,1180,1041,1152,1043,1137,1048,1134,1053,1142,1060"/>
+<area shape="poly" title=" " alt="" coords="497,984,531,980,532,986,498,990"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aad0ebf876d39ffe0626d80bc47848417" name="aad0ebf876d39ffe0626d80bc47848417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad0ebf876d39ffe0626d80bc47848417">&#9670;&#160;</a></span>mhd_uawsom_rho2_factor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine, public mod_mhd_phys::mhd_uawsom_rho2_factor </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)&#160;</td>
+          <td class="paramname"><em>ixo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__variables.html#a0bc18ad8d488cfdb57d9bd182a490250">nw</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(out)&#160;</td>
+          <td class="paramname"><em>factor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02044">2044</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__mhd__phys_aad0ebf876d39ffe0626d80bc47848417_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_aad0ebf876d39ffe0626d80bc47848417_cgraph" alt=""/></div>
+<map name="anamespacemod__mhd__phys_aad0ebf876d39ffe0626d80bc47848417_cgraph" id="anamespacemod__mhd__phys_aad0ebf876d39ffe0626d80bc47848417_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,229,69"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#aa541bef16e1f2aa4081ba4738ac3cb9d" title=" " alt="" coords="277,29,501,69"/>
+<area shape="poly" title=" " alt="" coords="229,47,264,47,264,52,229,52"/>
+<area shape="poly" title=" " alt="" coords="339,30,336,20,345,10,362,5,389,3,421,5,438,13,435,18,419,11,389,8,363,10,347,15,342,21,345,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa541bef16e1f2aa4081ba4738ac3cb9d" name="aa541bef16e1f2aa4081ba4738ac3cb9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa541bef16e1f2aa4081ba4738ac3cb9d">&#9670;&#160;</a></span>mhd_uawsom_rho2_factor_cell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">elemental pure double precision function, public mod_mhd_phys::mhd_uawsom_rho2_factor_cell </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>zeta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02054">2054</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__mhd__phys_aa541bef16e1f2aa4081ba4738ac3cb9d_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_aa541bef16e1f2aa4081ba4738ac3cb9d_cgraph" alt=""/></div>
+<map name="anamespacemod__mhd__phys_aa541bef16e1f2aa4081ba4738ac3cb9d_cgraph" id="anamespacemod__mhd__phys_aa541bef16e1f2aa4081ba4738ac3cb9d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,229,69"/>
+<area shape="poly" title=" " alt="" coords="76,30,73,20,80,10,95,5,117,3,143,6,157,13,155,18,142,11,117,8,96,10,83,15,79,21,81,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7d60fcea37cd005281d33dfba1976131" name="a7d60fcea37cd005281d33dfba1976131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d60fcea37cd005281d33dfba1976131">&#9670;&#160;</a></span>mhd_uawsom_wave_energy_cell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pure double precision function, public mod_mhd_phys::mhd_uawsom_wave_energy_cell </td>
+          <td>(</td>
+          <td class="paramtype">double precision, dimension(:), intent(in)&#160;</td>
+          <td class="paramname"><em>wcell</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02068">2068</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__mhd__phys_a7d60fcea37cd005281d33dfba1976131_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_a7d60fcea37cd005281d33dfba1976131_cgraph" alt=""/></div>
+<map name="anamespacemod__mhd__phys_a7d60fcea37cd005281d33dfba1976131_cgraph" id="anamespacemod__mhd__phys_a7d60fcea37cd005281d33dfba1976131_cgraph">
+<area shape="rect" title=" " alt="" coords="5,49,229,89"/>
+<area shape="poly" title=" " alt="" coords="69,49,66,39,74,30,91,24,117,22,148,25,164,32,162,37,146,30,117,27,92,29,77,34,71,40,74,47"/>
+<area shape="rect" href="namespacemod__geometry.html#a34777249130c0a609ca96597bb403b30" title=" " alt="" coords="285,5,475,31"/>
+<area shape="poly" title=" " alt="" coords="221,46,300,31,301,36,222,51"/>
+<area shape="rect" href="namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="531,81,713,107"/>
+<area shape="poly" title=" " alt="" coords="230,72,517,86,516,91,229,77"/>
+<area shape="rect" href="namespacemod__mhd__phys.html#ad16a691811dcb9e9b616bdfdfc9ee0de" title="Calculate v vector." alt="" coords="277,107,483,132"/>
+<area shape="poly" title=" " alt="" coords="222,86,301,101,300,107,221,91"/>
+<area shape="poly" title=" " alt="" coords="483,106,516,102,517,108,483,111"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abf54917ed4ea17469ce42ec87a36aa4b" name="abf54917ed4ea17469ce42ec87a36aa4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf54917ed4ea17469ce42ec87a36aa4b">&#9670;&#160;</a></span>mhd_uawsom_wave_pressure_cell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pure double precision function, public mod_mhd_phys::mhd_uawsom_wave_pressure_cell </td>
+          <td>(</td>
+          <td class="paramtype">double precision, dimension(:), intent(in)&#160;</td>
+          <td class="paramname"><em>wcell</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>zeta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l02062">2062</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__mhd__phys_abf54917ed4ea17469ce42ec87a36aa4b_cgraph.png" border="0" usemap="#anamespacemod__mhd__phys_abf54917ed4ea17469ce42ec87a36aa4b_cgraph" alt=""/></div>
+<map name="anamespacemod__mhd__phys_abf54917ed4ea17469ce42ec87a36aa4b_cgraph" id="anamespacemod__mhd__phys_abf54917ed4ea17469ce42ec87a36aa4b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,229,69"/>
+<area shape="poly" title=" " alt="" coords="76,30,73,20,80,10,95,5,117,3,143,6,157,13,155,18,142,11,117,8,96,10,83,15,79,21,81,28"/>
 </map>
 </div>
 
@@ -1630,7 +1871,7 @@ Here is the call graph for this function:</div>
 
 <p>multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as -mhd_eta_ambi/rho^2 The user may mask its value in the user file by implementing usr_mask_ambipolar subroutine </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04560">4560</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l04906">4906</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1699,7 +1940,7 @@ Here is the call graph for this function:</div>
 
 <p>B0 field is force-free. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00195">195</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00213">213</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1717,7 +1958,7 @@ Here is the call graph for this function:</div>
 
 <p>To control divB=0 fix for boundary. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00193">193</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00211">211</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1735,7 +1976,7 @@ Here is the call graph for this function:</div>
 
 <p>To skip * layer of ghost cells during divB=0 fix for boundary. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00099">99</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00117">117</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1788,7 +2029,7 @@ Here is the call graph for this function:</div>
 
 <p>clean initial divB </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00191">191</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00209">209</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1824,7 +2065,7 @@ Here is the call graph for this function:</div>
 
 <p>Add divB wave in Roe solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00189">189</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00207">207</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1912,7 +2153,7 @@ Here is the call graph for this function:</div>
 
 <p>Radiation fluid object (gas-EoS callbacks for FLD), wired in mhd_link_eos. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00180">180</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00198">198</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1948,7 +2189,7 @@ Here is the call graph for this function:</div>
 
 <p>whether split off equilibrium density and pressure </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00182">182</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00200">200</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2036,7 +2277,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether Ambipolar term is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00147">147</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00165">165</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2054,7 +2295,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether Ambipolar term is implemented explicitly. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00151">151</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00169">169</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2072,7 +2313,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether Ambipolar term is implemented using supertimestepping. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00149">149</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00167">167</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2090,7 +2331,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether plasma is partially ionized Whether CAK radiation line force is activated. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00176">176</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00194">194</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2108,7 +2349,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether divB is computed with a fourth order approximation. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00187">187</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00205">205</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2126,7 +2367,7 @@ Here is the call graph for this function:</div>
 
 <p>whether dump full variables (when splitting is used) in a separate dat file </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00185">185</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00203">203</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2144,7 +2385,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether an energy equation is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00112">112</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00130">130</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2160,7 +2401,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00183">183</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00201">201</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2268,7 +2509,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether GLM-MHD is used to control div B. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00157">157</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00175">175</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2304,7 +2545,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether extended GLM-MHD is used with additional sources. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00159">159</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00177">177</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2322,7 +2563,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether gravity is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00141">141</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00159">159</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2340,7 +2581,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether Hall-MHD is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00145">145</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00163">163</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2358,7 +2599,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether hydrodynamic energy is solved instead of total energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00169">169</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00187">187</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2376,7 +2617,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether thermal conduction is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00118">118</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00136">136</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2394,7 +2635,7 @@ Here is the call graph for this function:</div>
 
 <p>Field-strength transition scale for perpendicular closure. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00134">134</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00152">152</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2428,7 +2669,7 @@ Here is the call graph for this function:</div>
 
 <p>Constant Coulomb logarithm used by the simplified electron-magnetization closure. It is a namelist parameter so changing it has no per-cell cost. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00137">137</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00155">155</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2464,7 +2705,7 @@ Here is the call graph for this function:</div>
 
 <p>Relative perpendicular hyperbolic-TC coefficient in fixed/strong-field limit: kappa_perp0 = mhd_hyperbolic_tc_kappa_perp_factor * kappa_parallel. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00132">132</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00150">150</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2482,7 +2723,7 @@ Here is the call graph for this function:</div>
 
 <p>Perpendicular hyperbolic-TC closure mode: 'off' = disabled 'fixed_reference' = fixed classical ratio at the reference normalisation 'weak_field_isotropization' = empirical transition using a prescribed Bmin 'electron_magnetization' = simplified ratio 1/(1+chi_e^2) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00129">129</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00147">147</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2500,7 +2741,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether saturation is considered for hyperbolic TC. When the perpendicular channel is active, the limiter uses sqrt(q_parallel^2+q_perp^2). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00121">121</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00139">139</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2518,7 +2759,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether the perpendicular hyperbolic-TC channel is enabled. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00123">123</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00141">141</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2536,7 +2777,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether internal energy is solved instead of total energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00167">167</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00185">185</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2554,7 +2795,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether magnetofriction is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00155">155</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00173">173</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2590,7 +2831,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether particles module is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00153">153</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00171">171</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2608,7 +2849,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether radiation-gas interaction is handled using flux limited diffusion. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00178">178</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00196">196</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2626,7 +2867,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether radiative cooling is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00116">116</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00134">134</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2662,7 +2903,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether rotating frame is activated. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00143">143</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00161">161</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2680,7 +2921,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether semirelativistic MHD equations (Gombosi 2002 JCP) are solved. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00173">173</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00191">191</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2698,7 +2939,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether thermal conduction is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00114">114</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00132">132</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2716,7 +2957,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether TRAC method is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00161">161</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00179">179</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2734,7 +2975,7 @@ Here is the call graph for this function:</div>
 
 <p>Distance between two adjacent traced magnetic field lines (in finest cell size) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00165">165</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00183">183</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2770,7 +3011,179 @@ Here is the call graph for this function:</div>
 
 <p>Which TRAC method is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00163">163</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00181">181</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="af8f4aa92239d3defc5e85df027f7add8" name="af8f4aa92239d3defc5e85df027f7add8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8f4aa92239d3defc5e85df027f7add8">&#9670;&#160;</a></span>mhd_uawsom</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical, public, protected mod_mhd_phys::mhd_uawsom = .false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable the Uniturbulence and Alfven Wave Solar Model extension. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00090">90</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="aadf52b6c8b834186012bcfe0f09ddc4a" name="aadf52b6c8b834186012bcfe0f09ddc4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf52b6c8b834186012bcfe0f09ddc4a">&#9670;&#160;</a></span>mhd_uawsom_alfven_corr_length0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public, protected mod_mhd_phys::mhd_uawsom_alfven_corr_length0 = -1.d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00104">104</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="ae73f3126ffebb89b3078d6f9b504d90b" name="ae73f3126ffebb89b3078d6f9b504d90b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae73f3126ffebb89b3078d6f9b504d90b">&#9670;&#160;</a></span>mhd_uawsom_bref</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public, protected mod_mhd_phys::mhd_uawsom_bref = -1.d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00103">103</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="aa9841fac77671203af32b0fb021fa6f5" name="aa9841fac77671203af32b0fb021fa6f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9841fac77671203af32b0fb021fa6f5">&#9670;&#160;</a></span>mhd_uawsom_filling_factor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public, protected mod_mhd_phys::mhd_uawsom_filling_factor = 0.1d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00099">99</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a46a04a07e37dfeb329509eabdf295e85" name="a46a04a07e37dfeb329509eabdf295e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a04a07e37dfeb329509eabdf295e85">&#9670;&#160;</a></span>mhd_uawsom_height_dim</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, public, protected mod_mhd_phys::mhd_uawsom_height_dim = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cartesian direction used for the prescribed density contrast and reflection gradient. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00096">96</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a9e803d6ad3292e71d2e264daa402fbc7" name="a9e803d6ad3292e71d2e264daa402fbc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e803d6ad3292e71d2e264daa402fbc7">&#9670;&#160;</a></span>mhd_uawsom_reflection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical, public, protected mod_mhd_phys::mhd_uawsom_reflection = .false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable the conservative Alfven-wave reflection source (McMurdo et al. 2026, Eq. 34) </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00092">92</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a3a3d30921cba7b315117185b9ee1192d" name="a3a3d30921cba7b315117185b9ee1192d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a3d30921cba7b315117185b9ee1192d">&#9670;&#160;</a></span>mhd_uawsom_sigma</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public, protected mod_mhd_phys::mhd_uawsom_sigma = 0.d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dimensionless multiplier in the Alfven-wave reflection source. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00094">94</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a46273d1e812b74da9b3af1445ece6df9" name="a46273d1e812b74da9b3af1445ece6df9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46273d1e812b74da9b3af1445ece6df9">&#9670;&#160;</a></span>mhd_uawsom_thread_radius0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public, protected mod_mhd_phys::mhd_uawsom_thread_radius0 = -1.d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00102">102</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a61da54ba012d6f57bca2171f76b2deb8" name="a61da54ba012d6f57bca2171f76b2deb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61da54ba012d6f57bca2171f76b2deb8">&#9670;&#160;</a></span>mhd_uawsom_zeta0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public, protected mod_mhd_phys::mhd_uawsom_zeta0 = 5.d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Base transverse density contrast and filling factor. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00098">98</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a95d18fe0964d49ca5542ae140ee42189" name="a95d18fe0964d49ca5542ae140ee42189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95d18fe0964d49ca5542ae140ee42189">&#9670;&#160;</a></span>mhd_uawsom_zeta_scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public, protected mod_mhd_phys::mhd_uawsom_zeta_scale = -1.d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Physical input scales (lengths and magnetic field); converted to code units at init. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00101">101</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2788,7 +3201,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether viscosity is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00139">139</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00157">157</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2842,7 +3255,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether numerical resistive heating is included when solving partial energy equation. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00199">199</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00217">217</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2950,7 +3363,7 @@ Here is the call graph for this function:</div>
 
 <p>type of fluid for radiative cooling </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00213">213</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00231">231</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3002,7 +3415,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether divB cleaning sources are added splitting from fluid solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00171">171</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00189">189</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3020,7 +3433,7 @@ Here is the call graph for this function:</div>
 
 <p>type of fluid for thermal conduction </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00209">209</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00227">227</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3038,7 +3451,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the cutoff temperature for the TRAC method. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00090">90</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00108">108</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3074,7 +3487,7 @@ Here is the call graph for this function:</div>
 
 <p>type of fluid for thermal emission synthesis </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00211">211</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00229">229</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3092,7 +3505,7 @@ Here is the call graph for this function:</div>
 
 <p>Indices of the tracers. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00093">93</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00111">111</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3108,7 +3521,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00091">91</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00109">109</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3126,7 +3539,7 @@ Here is the call graph for this function:</div>
 
 <p>Method type of constrained transport. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00205">205</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00223">223</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3144,7 +3557,7 @@ Here is the call graph for this function:</div>
 
 <p>Method type to clean divergence of B. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00203">203</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00221">221</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -3160,7 +3573,73 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00228">228</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00246">246</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a87375e1db5231565b72e5a53272f0c3e" name="a87375e1db5231565b72e5a53272f0c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87375e1db5231565b72e5a53272f0c3e">&#9670;&#160;</a></span>waminus_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, public, protected mod_mhd_phys::waminus_ =-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00106">106</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="aaab717c0eb43a835a69521eef7cc131f" name="aaab717c0eb43a835a69521eef7cc131f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaab717c0eb43a835a69521eef7cc131f">&#9670;&#160;</a></span>waplus_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, public, protected mod_mhd_phys::waplus_ =-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Conserved wave-energy indices. The plus variables propagate against B. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00106">106</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a3edb409252283b69b97e28398eeebd90" name="a3edb409252283b69b97e28398eeebd90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3edb409252283b69b97e28398eeebd90">&#9670;&#160;</a></span>wkminus_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, public, protected mod_mhd_phys::wkminus_ =-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00106">106</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="ade81ffa113469402c2928e0364aa7c19" name="ade81ffa113469402c2928e0364aa7c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade81ffa113469402c2928e0364aa7c19">&#9670;&#160;</a></span>wkplus_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, public, protected mod_mhd_phys::wkplus_ =-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__mhd__phys_8t_source.html#l00106">106</a> of file <a class="el" href="mod__mhd__phys_8t_source.html">mod_mhd_phys.t</a>.</p>
 
 </div>
 </div>

@@ -566,6 +566,16 @@ MHD list</h2>
  mhd_trac_finegrid= INTEGER
  mhd_hyperbolic_thermal_conduction= F | T
  mhd_htc_sat = F | T
+ mhd_uawsom= F | T (default F)
+ mhd_uawsom_reflection= F | T (default F)
+ mhd_uawsom_sigma= non-negative DOUBLE (default 0)
+ mhd_uawsom_height_dim= INTEGER from 1 to ndim (default ndim)
+ mhd_uawsom_zeta0= DOUBLE greater than 1 (default 5)
+ mhd_uawsom_filling_factor= DOUBLE between 0 and 1 (default 0.1)
+ mhd_uawsom_zeta_scale= positive DOUBLE (physical length; default -1 selects automatic value)
+ mhd_uawsom_thread_radius0= positive DOUBLE (physical length; default -1 selects automatic value)
+ mhd_uawsom_Bref= positive DOUBLE (physical magnetic field; default -1 selects automatic value)
+ mhd_uawsom_alfven_corr_length0= positive DOUBLE (physical length; default -1 selects automatic value)
  typedivbfix= 'linde'|'ct'|'glm'|'powel'|'lindejanhunen'|'lindepowel'|'lindeglm'|'multigrid'|'none'
  type_ct='uct_contact'|'uct_hll'|'average'
  source_split_divb= F | T
@@ -583,7 +593,11 @@ MHD list</h2>
  He_abundance= DOUBLE from 0 to 1
  SI_unit= F | T
 /
-</pre> <h3><a class="anchor" id="par_divbfix"></a>
+</pre><p> The optional UAWSoM equations are disabled by default. Length and magnetic field inputs use physical units (cm and G in cgs mode; m and T in SI mode) and are converted once during initialization. The default closure profile uses the selected Cartesian direction and measures height from that direction's lower problem boundary. A problem can instead assign <code>usr_uawsom_coefficients</code> to return local <code>zeta</code>, thread radius, and Alfvén correlation length in code units. The callback also receives a <code>primitive</code> flag so that state-dependent closures can recover thermodynamic quantities from the correct representation.</p>
+<p>For the four physical scales, the <code>-1</code> sentinel selects cgs defaults of <code>3.4805e11 cm</code>, <code>1e7 cm</code>, <code>10 G</code>, and <code>1.5e9 cm</code>, respectively. In SI mode the equivalent inputs are <code>3.4805e9 m</code>, <code>1e5 m</code>, <code>1e-3 T</code>, and <code>1.5e7 m</code>.</p>
+<p>The initial, boundary, and output state can access the public indices <code>wAplus_</code>, <code>wAminus_</code>, <code>wkplus_</code>, and <code>wkminus_</code>. The <code>plus</code> variables propagate against the magnetic field. Initial primitive states must set all four wave energies before calling the normal MHD/EOS conserved conversion.</p>
+<p>The first implementation supports uniform Cartesian 1D/2D/3D total-energy MHD with the fixed-ionization EOS, including B0 splitting. It rejects semirelativistic MHD, equilibrium density/pressure splitting, FLD, no-energy, internal-energy, and hydrodynamic-energy formulations at startup.</p>
+<h3><a class="anchor" id="par_divbfix"></a>
 Magnetic field divergence fixes</h3>
 <p>The upwind constrained transport methods <b>typedivbfix='ct'</b> by Gardiner and Stone in <em>Journal of Computational Physics, 205, 509-539 (2005)</em> <b>type_ct='uct_contact'</b> (default), or by Del Zanna, L., Zanotti, O., Bucciantini, N., &amp; Londrillo, P. in <em>Astronomy &amp; Astrophysics , 473, 11 (2007)</em> <b>type_ct='uct_hll'</b>, using staggered grid for magnetic field, can preserve initial div B to round off errors. A simple non-upwinding version of ct is through averaging electric fields from neighbors <b>type_ct='average'</b>. And it only works with HLL, HLLC, and HLLD schemes in the current implementation. It works in Cartesian and non-Cartesian coordinates with or without grid stretching. It works with finite non-zero resistivity. Initial conditions and boundary conditions for magnetic field have to be given at corresponding cell faces instead, or vector potential is given at corresponding cell edges, see examples: <b>tests/mhd/solar_atmosphere_2.5D</b>. Note that when using AMR, the div B preserving prolongation for CT requires even number of ghost cell layers and odd number of ghost layers for some slope limiters, e.g. mp5, is added by one to become even.</p>
 <p>In cell-center based magnetic fields, sources proportionate to the numerical monopole errors can be added, in a source-split way, to momemtum, energy, and induction equation (the 'powel' type), or to the induction equation alone (the 'janhunen' type) for cleaning divB errors. The <code>divbwave</code> switch is effective for the Riemann type solvers for multi-D MHD only. The default true value corresponds to Powell divergence wave which stabilizes the Riemann solver.</p>

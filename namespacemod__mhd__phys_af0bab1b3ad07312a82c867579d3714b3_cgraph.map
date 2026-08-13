@@ -1,0 +1,6 @@
+<map id="mod_mhd_phys::mhd_ei_to_e" name="mod_mhd_phys::mhd_ei_to_e">
+<area shape="rect" id="Node000001" title="Transform internal energy to total energy." alt="" coords="5,37,221,62"/>
+<area shape="rect" id="Node000002" href="$namespacemod__mhd__phys.html#a7d60fcea37cd005281d33dfba1976131" title=" " alt="" coords="269,29,493,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,47,256,47,256,52,221,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="332,30,329,20,337,10,354,5,381,3,412,5,429,13,427,18,411,11,381,8,355,10,340,15,334,21,337,28"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="mod_mhd_phys::mhd_uawsom_wave_energy_cell" name="mod_mhd_phys::mhd_uawsom_wave_energy_cell">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,49,229,89"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="69,49,66,39,74,30,91,24,117,22,148,25,164,32,162,37,146,30,117,27,92,29,77,34,71,40,74,47"/>
+<area shape="rect" id="Node000002" href="$namespacemod__geometry.html#a34777249130c0a609ca96597bb403b30" title=" " alt="" coords="285,5,475,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,46,300,31,301,36,222,51"/>
+<area shape="rect" id="Node000003" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="531,81,713,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,72,517,86,516,91,229,77"/>
+<area shape="rect" id="Node000004" href="$namespacemod__mhd__phys.html#ad16a691811dcb9e9b616bdfdfc9ee0de" title="Calculate v vector." alt="" coords="277,107,483,132"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="222,86,301,101,300,107,221,91"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="483,106,516,102,517,108,483,111"/>
+</map>
