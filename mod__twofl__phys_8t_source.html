@@ -2669,7 +2669,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l02571" name="l02571"></a><span class="lineno"> 2571</span>    vcts%vbarLC(ixo^s,idim,2)=wlp(ixo^s,<a class="code hl_variable" href="namespacemod__twofl__phys.html#a74405b485d3340c1b9a2cb6faa9c9c45">mom_c</a>(idime))</div>
 <div class="line"><a id="l02572" name="l02572"></a><span class="lineno"> 2572</span>    vcts%vbarRC(ixo^s,idim,2)=wrp(ixo^s,<a class="code hl_variable" href="namespacemod__twofl__phys.html#a74405b485d3340c1b9a2cb6faa9c9c45">mom_c</a>(idime))</div>
 <div class="line"><a id="l02573" name="l02573"></a><span class="lineno"> 2573</span>    vcts%vbarC(ixo^s,idim,2)=(vcts%cbarmax(ixo^s,idim)*vcts%vbarLC(ixo^s,idim,2) &amp;</div>
-<div class="line"><a id="l02574" name="l02574"></a><span class="lineno"> 2574</span>         +vcts%cbarmin(ixo^s,idim)*vcts%vbarRC(ixo^s,idim,1))&amp;</div>
+<div class="line"><a id="l02574" name="l02574"></a><span class="lineno"> 2574</span>         +vcts%cbarmin(ixo^s,idim)*vcts%vbarRC(ixo^s,idim,2))&amp;</div>
 <div class="line"><a id="l02575" name="l02575"></a><span class="lineno"> 2575</span>        /(vcts%cbarmax(ixo^s,idim)+vcts%cbarmin(ixo^s,idim))</div>
 <div class="line"><a id="l02576" name="l02576"></a><span class="lineno"> 2576</span> </div>
 <div class="line"><a id="l02577" name="l02577"></a><span class="lineno"> 2577</span>  <span class="keyword">end subroutine </span>twofl_get_ct_velocity_hll</div>
