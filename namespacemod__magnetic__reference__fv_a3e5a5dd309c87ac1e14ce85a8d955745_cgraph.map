@@ -1,0 +1,7 @@
+<map id="mod_magnetic_reference_fv::free_magnetic_reference_field" name="mod_magnetic_reference_fv::free_magnetic_reference_field">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,252,67"/>
+<area shape="rect" id="Node000002" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="309,5,492,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,31,295,27,296,32,252,37"/>
+<area shape="rect" id="Node000003" href="$namespacemod__magnetic__reference__fv.html#a2313341f762560ea511179a0526b8871" title="Supply d(phi)/dx_i = B_i on a physical multigrid boundary." alt="" coords="300,55,501,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="252,57,287,61,286,66,252,63"/>
+</map>

@@ -7,5 +7,6 @@ var searchData=
   ['variables_20nw_4',['Auxiliary variables (nw...)',['../md_doc_2mpiamrvac__nw.html',1,'']]],
   ['variables_20to_20dat_20files_5',['Dump variables to dat files',['../md_doc_2dat__convert.html',1,'']]],
   ['variant_6',['Riemann 2D test problems: isothermal HD variant',['../md_tests_2hd_2Riemann__hdiso__2D_2Riemann__iso__2D.html',1,'']]],
-  ['vtk_20files_7',['Reading the vtk files',['../md_doc_2python__vtkfiles.html',1,'']]]
+  ['volume_20magnetic_20helicity_7',['volume magnetic helicity',['../md_tests_2demo4_2MagneticHelicity__Cart_2README.html',1,'Cartesian finite-volume magnetic helicity'],['../md_doc_2magnetic__helicity.html',1,'Finite-volume magnetic helicity']]],
+  ['vtk_20files_8',['Reading the vtk files',['../md_doc_2python__vtkfiles.html',1,'']]]
 ];

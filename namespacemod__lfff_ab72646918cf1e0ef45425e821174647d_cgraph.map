@@ -1,7 +1,8 @@
 <map id="mod_lfff::potential_field_energy_mg" name="mod_lfff::potential_field_energy_mg">
-<area shape="rect" id="Node000001" title="get potential magnetic field energy given normal B on all boundaries" alt="" coords="5,35,147,75"/>
-<area shape="rect" id="Node000002" href="$namespacemod__lfff.html#aa0491e688dc5adc1c54fa02046093150" title="Solve Poisson equation of scalar potential using multigrid solver." alt="" coords="201,5,371,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,42,187,36,188,42,147,47"/>
-<area shape="rect" id="Node000005" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="195,70,377,95"/>
-<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="147,61,181,66,181,71,147,67"/>
+<area shape="rect" id="Node000001" title="get potential magnetic field energy given normal B on all boundaries" alt="" coords="5,5,147,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__magnetic__reference__fv.html#a3e5a5dd309c87ac1e14ce85a8d955745" title=" " alt="" coords="484,5,731,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,20,195,19,436,19,470,19,470,25,436,24,195,24,147,25"/>
+<area shape="rect" id="Node000005" href="$namespacemod__magnetic__reference__fv.html#a3101132132bcdf82c4ef053fc1836f28" title=" " alt="" coords="195,33,436,73"/>
+<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="147,31,182,35,181,40,147,36"/>
+<area shape="poly" id="edge3_Node000005_Node000002" title=" " alt="" coords="436,39,470,36,471,41,436,44"/>
 </map>

@@ -4,5 +4,6 @@ var searchData=
   ['hd_20mhd_1',['hd mhd',['../md_doc_2cakforce.html',1,'CAK radiation force module for HD/MHD'],['../md_doc_2particle.html',1,'Test particle module for HD/MHD']]],
   ['hd_20mhd_20rhd_2',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]],
   ['hd_20variant_3',['Riemann 2D test problems: isothermal HD variant',['../md_tests_2hd_2Riemann__hdiso__2D_2Riemann__iso__2D.html',1,'']]],
-  ['hook_20for_20topology_20qsl_20namelist_20tasks_4',['Minimal &lt;tt&gt;mod_usr.t&lt;/tt&gt; Hook for Topology/QSL Namelist Tasks',['../md_doc_2examples_2magnetic__topology_2mod__usr__topology__runner__example.html',1,'']]]
+  ['helicity_4',['helicity',['../md_tests_2demo4_2MagneticHelicity__Cart_2README.html',1,'Cartesian finite-volume magnetic helicity'],['../md_doc_2magnetic__helicity.html',1,'Finite-volume magnetic helicity']]],
+  ['hook_20for_20topology_20qsl_20namelist_20tasks_5',['Minimal &lt;tt&gt;mod_usr.t&lt;/tt&gt; Hook for Topology/QSL Namelist Tasks',['../md_doc_2examples_2magnetic__topology_2mod__usr__topology__runner__example.html',1,'']]]
 ];

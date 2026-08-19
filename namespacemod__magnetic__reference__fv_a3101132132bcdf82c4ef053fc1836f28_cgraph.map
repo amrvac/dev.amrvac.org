@@ -1,0 +1,12 @@
+<map id="mod_magnetic_reference_fv::solve_magnetic_reference_fv" name="mod_magnetic_reference_fv::solve_magnetic_reference_fv">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,92,247,132"/>
+<area shape="rect" id="Node000002" href="$namespacemod__magnetic__reference__fv.html#a3e5a5dd309c87ac1e14ce85a8d955745" title=" " alt="" coords="295,5,541,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,89,336,47,337,52,195,94"/>
+<area shape="rect" id="Node000004" href="$namespacemod__magnetic__reference__fv.html#a2313341f762560ea511179a0526b8871" title="Supply d(phi)/dx_i = B_i on a physical multigrid boundary." alt="" coords="589,35,791,75"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="246,97,575,64,576,69,247,102"/>
+<area shape="rect" id="Node000005" href="$namespacemod__multigrid__coupling.html#aec3563c8809267a23e94c236093a2b12" title="Setup multigrid for usage." alt="" coords="329,120,507,160"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="247,121,315,128,315,133,246,126"/>
+<area shape="rect" id="Node000029" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="327,185,509,210"/>
+<area shape="poly" id="edge5_Node000001_Node000029" title=" " alt="" coords="178,130,295,169,335,179,333,184,294,175,177,135"/>
+<area shape="poly" id="edge2_Node000002_Node000004" title=" " alt="" coords="542,36,576,40,576,45,541,41"/>
+</map>

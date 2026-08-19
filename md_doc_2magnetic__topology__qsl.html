@@ -123,7 +123,12 @@ $(function() {
 <p>Axis-plane minimal science output is VTI because each coordinate plane is a structured, axis-aligned sampling lattice: <code>xy</code> uses <code>nx x ny x 1</code>, <code>xz</code> uses <code>nx x 1 x nz</code>, and <code>yz</code> uses <code>1 x ny x nz</code>. The VTI lattice is the requested output sampling grid and remains valid when tracing through stretched or AMR Cartesian simulation grids. Axis-plane full diagnostics remain VTU, and axis-plane CSV remains a diagnostic/export path.</p>
 <p><code>volume_vti</code> remains VTI-only. <code>seed_products</code> and <code>arbitrary_plane_products</code> use VTU for minimal visualization because they are respectively a point cloud and an arbitrarily oriented embedded surface.</p>
 <h1>OpenMP Post-Processing</h1>
+<p>Magnetic-topology conversion is a single-MPI-rank backend. Run it with &lsquo;convert_type='magnetic_topology&rsquo;` and use OpenMP threads inside that rank:</p>
+<div class="fragment"><div class="line">OMP_NUM_THREADS=8 OMP_PROC_BIND=close OMP_PLACES=cores \</div>
+<div class="line">  mpirun -np 1 ./amrvac -convert -if snapshot.dat -i amrvac.par topology.par</div>
+</div><!-- fragment --><p>Do not launch this conversion with multiple MPI ranks. The separate &lsquo;convert_type='magnetic_helicity&rsquo;` backend is the MPI-parallel path.</p>
 <p>The tested OpenMP route is the gfortran <code>ARCH=openmp</code> build, which enables <code>-fopenmp</code>. The default <code>ARCH=default</code> build is serial/non-OpenMP. No Intel <code>ifx</code>/<code>ifort</code> OpenMP architecture is added here.</p>
+<p>Finite-volume relative magnetic helicity is a separate MPI conversion backend; see <a class="el" href="md_doc_2magnetic__helicity.html">`magnetic_helicity.md`</a>. It is not combined with the OpenMP topology task in one conversion.</p>
 <p>Build the AMRVAC4 magnetic-topology QSL demo with OpenMP, for example:</p>
 <div class="fragment"><div class="line">cd /home/nanami/codes/amrvac4/tests/demo/AMRVAC4_MagneticTopologyQSL_3D</div>
 <div class="line">AMRVAC_DIR=/home/nanami/codes/amrvac4 make ARCH=openmp -j4</div>
@@ -148,7 +153,6 @@ $(function() {
 </div><!-- fragment --><p>Fixed-step RK2, for example <code>mt_dL=0.08d0</code> with <code>mt_max_steps=1600</code>, is retained in the Cartesian demo only as a historical/debug comparison. These recommendations are Cartesian product settings; spherical products have their own demo-local smoke/showcase pars.</p>
 <p>Typical axis-plane minimal VTI use:</p>
 <div class="fragment"><div class="line">&amp;magnetic_topology_list</div>
-<div class="line">  mt_enable = .true.</div>
 <div class="line">  mt_mode = <span class="stringliteral">&#39;axis_plane_full_vtu&#39;</span></div>
 <div class="line">  mt_output_file = <span class="stringliteral">&#39;qsl_axis_xy.vti&#39;</span></div>
 <div class="line">  mt_vtk_detail = <span class="stringliteral">&#39;minimal&#39;</span></div>
@@ -173,7 +177,6 @@ $(function() {
 </div><!-- fragment --><p>With &lsquo;mt_vtk_detail='minimal&rsquo;<code>,</code>axis_plane_full_vtu<code>writes VTI and respects the compute flags:</code>length_total<code>is controlled by</code>mt_compute_length<code>(default </code>.true.<code>), and</code>twist_total<code>,</code>logQ<code>, and</code>logQperp<code>are written only when requested. With</code>mt_vtk_detail='full'`, the same task writes VTU full diagnostics and keeps the fixed full product set.</p>
 <p>Typical axis-plane CSV use:</p>
 <div class="fragment"><div class="line">&amp;magnetic_topology_list</div>
-<div class="line">  mt_enable = .true.</div>
 <div class="line">  mt_mode = <span class="stringliteral">&#39;axis_plane_csv&#39;</span></div>
 <div class="line">  mt_output_prefix = <span class="stringliteral">&#39;qsl_axis_csv&#39;</span></div>
 <div class="line">  mt_plane = <span class="stringliteral">&#39;xy&#39;</span></div>

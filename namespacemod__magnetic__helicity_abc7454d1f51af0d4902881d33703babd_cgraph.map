@@ -1,0 +1,5 @@
+<map id="mod_magnetic_helicity::compute_magnetic_helicity_fv" name="mod_magnetic_helicity::compute_magnetic_helicity_fv">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,236,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="284,13,467,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,23,270,23,270,28,236,28"/>
+</map>

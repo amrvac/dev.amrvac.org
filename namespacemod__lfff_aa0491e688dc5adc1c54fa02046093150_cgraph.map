@@ -1,7 +1,8 @@
 <map id="mod_lfff::get_potential_field_potential_mg" name="mod_lfff::get_potential_field_potential_mg">
-<area shape="rect" id="Node000001" title="Solve Poisson equation of scalar potential using multigrid solver." alt="" coords="5,23,175,63"/>
-<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="223,5,405,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,31,209,27,210,32,175,36"/>
-<area shape="rect" id="Node000003" href="$namespacemod__lfff.html#a2dfde2312d44bebae1dd490a3828886b" title="To set boundary condition on physical boundaries for mg Poisson solver." alt="" coords="232,55,396,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,50,218,54,218,60,175,55"/>
+<area shape="rect" id="Node000001" title="Solve Poisson equation of scalar potential using multigrid solver." alt="" coords="5,5,175,45"/>
+<area shape="rect" id="Node000002" href="$namespacemod__magnetic__reference__fv.html#a3e5a5dd309c87ac1e14ce85a8d955745" title=" " alt="" coords="512,5,759,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,20,223,19,464,19,498,19,498,25,464,24,223,24,175,25"/>
+<area shape="rect" id="Node000005" href="$namespacemod__magnetic__reference__fv.html#a3101132132bcdf82c4ef053fc1836f28" title=" " alt="" coords="223,33,464,73"/>
+<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="175,32,209,36,208,41,175,37"/>
+<area shape="poly" id="edge3_Node000005_Node000002" title=" " alt="" coords="464,39,498,36,499,41,464,44"/>
 </map>

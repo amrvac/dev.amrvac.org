@@ -76,6 +76,7 @@ var searchData=
   ['fld_5fset_5fmg_5fbounds_73',['fld_set_mg_bounds',['../namespacemod__fld.html#ab1005959b4146c138fabb3da5510b74b',1,'mod_fld']]],
   ['floortemperature_74',['floortemperature',['../namespacemod__radiative__cooling.html#aa19b525e143eab6061d44286ba2249c9',1,'mod_radiative_cooling']]],
   ['forcedrefine_5fgrid_5fio_75',['forcedrefine_grid_io',['../namespacemod__errest.html#afc51c345dca154e0f6c3a3fe3bcfbfd3',1,'mod_errest']]],
-  ['frictional_5fvelocity_76',['frictional_velocity',['../namespacemod__magnetofriction.html#aa4a703b6c5a713294594ba0c13fa6d1c',1,'mod_magnetofriction']]],
-  ['fun_5fdestroy_77',['fun_destroy',['../interfacemod__particle__base_1_1fun__destroy.html#ad3f48d4f5d821d7c4e7cc2d3c25a444f',1,'mod_particle_base::fun_destroy']]]
+  ['free_5fmagnetic_5freference_5ffield_76',['free_magnetic_reference_field',['../namespacemod__magnetic__reference__fv.html#a3e5a5dd309c87ac1e14ce85a8d955745',1,'mod_magnetic_reference_fv']]],
+  ['frictional_5fvelocity_77',['frictional_velocity',['../namespacemod__magnetofriction.html#aa4a703b6c5a713294594ba0c13fa6d1c',1,'mod_magnetofriction']]],
+  ['fun_5fdestroy_78',['fun_destroy',['../interfacemod__particle__base_1_1fun__destroy.html#ad3f48d4f5d821d7c4e7cc2d3c25a444f',1,'mod_particle_base::fun_destroy']]]
 ];

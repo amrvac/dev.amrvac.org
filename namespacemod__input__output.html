@@ -114,10 +114,10 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:ae1d4a41dcf32cae3752c48ef73f42364" id="r_ae1d4a41dcf32cae3752c48ef73f42364"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#ae1d4a41dcf32cae3752c48ef73f42364">write_snapshot</a></td></tr>
 <tr class="separator:ae1d4a41dcf32cae3752c48ef73f42364"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc30dcbd915903d7d10980921afef85c" id="r_adc30dcbd915903d7d10980921afef85c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#adc30dcbd915903d7d10980921afef85c">debug_alloc</a> (n, names)</td></tr>
-<tr class="memdesc:adc30dcbd915903d7d10980921afef85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the debug field dump: register n named slots. Capture fields with <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(igrid)</a>wdebug(...,islot) anywhere in a block loop (lazy per-block allocation at the capture site), then flush with save_wdebug.  <br /></td></tr>
+<tr class="memdesc:adc30dcbd915903d7d10980921afef85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the debug field dump: register n named slots. Capture fields with ps(igrid)wdebug(...,islot) anywhere in a block loop (lazy per-block allocation at the capture site), then flush with save_wdebug.  <br /></td></tr>
 <tr class="separator:adc30dcbd915903d7d10980921afef85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88d4927174efb627c8ec2ab96f7bd972" id="r_a88d4927174efb627c8ec2ab96f7bd972"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#a88d4927174efb627c8ec2ab96f7bd972">save_wdebug</a> (suffix)</td></tr>
-<tr class="memdesc:a88d4927174efb627c8ec2ab96f7bd972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(:)</a>wdebug to a standalone cell-centred .dat (no staggered), readable by the standard AMRVAC .dat readers. Collective; call at a barrier-safe point (end of a step), NOT inside a block loop.  <br /></td></tr>
+<tr class="memdesc:a88d4927174efb627c8ec2ab96f7bd972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush ps(:)wdebug to a standalone cell-centred .dat (no staggered), readable by the standard AMRVAC .dat readers. Collective; call at a barrier-safe point (end of a step), NOT inside a block loop.  <br /></td></tr>
 <tr class="separator:a88d4927174efb627c8ec2ab96f7bd972"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2d00e56c4444b0b4806a9c13ce2eff7" id="r_aa2d00e56c4444b0b4806a9c13ce2eff7"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__input__output.html#aa2d00e56c4444b0b4806a9c13ce2eff7">read_snapshot</a></td></tr>
 <tr class="memdesc:aa2d00e56c4444b0b4806a9c13ce2eff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine to read in snapshots (.dat files). When it cannot recognize the file version, it will automatically try the 'old' reader.  <br /></td></tr>
@@ -193,7 +193,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enable the debug field dump: register n named slots. Capture fields with <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(igrid)</a>wdebug(...,islot) anywhere in a block loop (lazy per-block allocation at the capture site), then flush with save_wdebug. </p>
+<p>Enable the debug field dump: register n named slots. Capture fields with ps(igrid)wdebug(...,islot) anywhere in a block loop (lazy per-block allocation at the capture site), then flush with save_wdebug. </p>
 
 <p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02218">2218</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 
@@ -700,7 +700,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Flush <a class="el" href="namespacemod__physicaldata.html#a6685ba795d306f649e8e9fc6f8ca30ea" title="array of physical states for all blocks on my processor">ps(:)</a>wdebug to a standalone cell-centred .dat (no staggered), readable by the standard AMRVAC .dat readers. Collective; call at a barrier-safe point (end of a step), NOT inside a block loop. </p>
+<p>Flush ps(:)wdebug to a standalone cell-centred .dat (no staggered), readable by the standard AMRVAC .dat readers. Collective; call at a barrier-safe point (end of a step), NOT inside a block loop. </p>
 
 <p class="definition">Definition at line <a class="el" href="mod__input__output_8t_source.html#l02235">2235</a> of file <a class="el" href="mod__input__output_8t_source.html">mod_input_output.t</a>.</p>
 <div class="dynheader">
