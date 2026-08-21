@@ -159,6 +159,7 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Given log10(nH) and log10(p), find log10(eint/nH) by table-guessed bisection on the forward pressure table. Wraps the bracketing logic and log_p_bisect_cached into a single call for use by both HD and MHD from_conserved routines. </p>
+<p>eint-axis limits. var2_min/var2_max are populated for uniform tables only; with an adaptive (non-uniform) log_p table they are meaningless, so the guess/bracket clamps below let log_eint run out of range -&gt; out-of-bounds stencil load in bicubic_lookup (SIGSEGV at init). log_p_bisect_cached already branches on is_uniform; this wrapper did not.</p>
 
 <p class="definition">Definition at line <a class="el" href="mod__eos__LTE_8t_source.html#l00758">758</a> of file <a class="el" href="mod__eos__LTE_8t_source.html">mod_eos_LTE.t</a>.</p>
 <div class="dynheader">
@@ -291,7 +292,7 @@ Here is the call graph for this function:</div>
 <h6></h6>
 <p>Table-metadata helpers: expose inverse-table grid bounds without reaching into EoS table internals. </p><h6></h6>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE_8t_source.html#l00813">813</a> of file <a class="el" href="mod__eos__LTE_8t_source.html">mod_eos_LTE.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE_8t_source.html#l00826">826</a> of file <a class="el" href="mod__eos__LTE_8t_source.html">mod_eos_LTE.t</a>.</p>
 
 </div>
 </div>

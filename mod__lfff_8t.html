@@ -128,6 +128,11 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a2dfde2312d44bebae1dd490a3828886b" id="r_a2dfde2312d44bebae1dd490a3828886b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#a2dfde2312d44bebae1dd490a3828886b">mod_lfff::multigrid_bc</a> (box, nc, iv, nb, bc_type, bc)</td></tr>
 <tr class="memdesc:a2dfde2312d44bebae1dd490a3828886b"><td class="mdescLeft">&#160;</td><td class="mdescRight">To set boundary condition on physical boundaries for mg Poisson solver.  <br /></td></tr>
 <tr class="separator:a2dfde2312d44bebae1dd490a3828886b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ecc15b78da203a4d07ac7713cb4e8f2" id="r_a7ecc15b78da203a4d07ac7713cb4e8f2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#a7ecc15b78da203a4d07ac7713cb4e8f2">mod_lfff::init_lfff_2d</a> (bn_bottom, nx, qalpha, qy0, qtop_closed, qy_top, flux_treatment, nmodes_keep)</td></tr>
+<tr class="separator:a7ecc15b78da203a4d07ac7713cb4e8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add14380bd643211e1521a41115df76af" id="r_add14380bd643211e1521a41115df76af"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#add14380bd643211e1521a41115df76af">mod_lfff::calc_lfff_2d</a> (ixil, ixol, x, bf)</td></tr>
+<tr class="memdesc:add14380bd643211e1521a41115df76af"><td class="mdescLeft">&#160;</td><td class="mdescRight">B from the stored modes at arbitrary points; Bf(:,:,1:3)=(Bx,By,Bz=alpha*A)  <br /></td></tr>
+<tr class="separator:add14380bd643211e1521a41115df76af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -151,6 +156,26 @@ Variables</h2></td></tr>
 <tr class="separator:a7d152078688ab6e7174d93f44ec5fd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8d1eb8ef23a2b8986f15894ef649404" id="r_ab8d1eb8ef23a2b8986f15894ef649404"><td class="memItemLeft" align="right" valign="top">double precision, parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#ab8d1eb8ef23a2b8986f15894ef649404">mod_lfff::lfff_flux_balance_tolerance</a> =1.d-8</td></tr>
 <tr class="separator:ab8d1eb8ef23a2b8986f15894ef649404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2fd97347290ed1c82addb3f7c35c95" id="r_aca2fd97347290ed1c82addb3f7c35c95"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:), allocatable, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#aca2fd97347290ed1c82addb3f7c35c95">mod_lfff::l2d_br</a></td></tr>
+<tr class="separator:aca2fd97347290ed1c82addb3f7c35c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc22b7ac959a62c8198764e4b8ee7938" id="r_afc22b7ac959a62c8198764e4b8ee7938"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:), allocatable, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#afc22b7ac959a62c8198764e4b8ee7938">mod_lfff::l2d_bi</a></td></tr>
+<tr class="separator:afc22b7ac959a62c8198764e4b8ee7938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1501531e15c333a9b1cf28ecb69c823" id="r_ac1501531e15c333a9b1cf28ecb69c823"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:), allocatable, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#ac1501531e15c333a9b1cf28ecb69c823">mod_lfff::l2d_k</a></td></tr>
+<tr class="separator:ac1501531e15c333a9b1cf28ecb69c823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54dc8a40dacbdb73d9bcf41f7d732fc8" id="r_a54dc8a40dacbdb73d9bcf41f7d732fc8"><td class="memItemLeft" align="right" valign="top">double precision, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#a54dc8a40dacbdb73d9bcf41f7d732fc8">mod_lfff::l2d_b0</a></td></tr>
+<tr class="separator:a54dc8a40dacbdb73d9bcf41f7d732fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb92a47e02072fc636406ee2788ad321" id="r_adb92a47e02072fc636406ee2788ad321"><td class="memItemLeft" align="right" valign="top">double precision, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#adb92a47e02072fc636406ee2788ad321">mod_lfff::l2d_alpha</a></td></tr>
+<tr class="separator:adb92a47e02072fc636406ee2788ad321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84d8d82f4d08e671f8403a269907fcd" id="r_aa84d8d82f4d08e671f8403a269907fcd"><td class="memItemLeft" align="right" valign="top">double precision, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#aa84d8d82f4d08e671f8403a269907fcd">mod_lfff::l2d_y0</a></td></tr>
+<tr class="separator:aa84d8d82f4d08e671f8403a269907fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75d700ed78d2ec4f54a456c2d22ca55" id="r_ae75d700ed78d2ec4f54a456c2d22ca55"><td class="memItemLeft" align="right" valign="top">double precision, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#ae75d700ed78d2ec4f54a456c2d22ca55">mod_lfff::l2d_ytop</a></td></tr>
+<tr class="separator:ae75d700ed78d2ec4f54a456c2d22ca55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdab2e1416f7c0ee91d2c2f194dc3606" id="r_abdab2e1416f7c0ee91d2c2f194dc3606"><td class="memItemLeft" align="right" valign="top">integer, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#abdab2e1416f7c0ee91d2c2f194dc3606">mod_lfff::l2d_nm</a></td></tr>
+<tr class="separator:abdab2e1416f7c0ee91d2c2f194dc3606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce27640f945c4ba4b37ec326bf0fa7c" id="r_adce27640f945c4ba4b37ec326bf0fa7c"><td class="memItemLeft" align="right" valign="top">logical, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#adce27640f945c4ba4b37ec326bf0fa7c">mod_lfff::l2d_closed</a></td></tr>
+<tr class="separator:adce27640f945c4ba4b37ec326bf0fa7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355b05e46a2854388702b31bf8f5880a" id="r_a355b05e46a2854388702b31bf8f5880a"><td class="memItemLeft" align="right" valign="top">logical, save&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__lfff.html#a355b05e46a2854388702b31bf8f5880a">mod_lfff::l2d_ready</a> =.false.</td></tr>
+<tr class="separator:a355b05e46a2854388702b31bf8f5880a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

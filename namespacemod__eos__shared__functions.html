@@ -95,9 +95,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a97cb508f2b497e12981cfc2dc9cbd73a" id="r_a97cb508f2b497e12981cfc2dc9cbd73a"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__shared__functions.html#a97cb508f2b497e12981cfc2dc9cbd73a">get_nh</a> (w, x, ixil, ixol, nh)</td></tr>
 <tr class="memdesc:a97cb508f2b497e12981cfc2dc9cbd73a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hydrogen number density: nH = rho / nH2rhoFactor.  <br /></td></tr>
 <tr class="separator:a97cb508f2b497e12981cfc2dc9cbd73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c2752a263438b85484df6bc498a67fa" id="r_a0c2752a263438b85484df6bc498a67fa"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__shared__functions.html#a0c2752a263438b85484df6bc498a67fa">get_ne_nh</a> (ixil, ixol, w, ne, nh)</td></tr>
-<tr class="memdesc:a0c2752a263438b85484df6bc498a67fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return electron and hydrogen number densities in code units. For LTE (iw_ne allocated): ne from Saha EoS, nH from rho/nH2rhoFactor. For FI (iw_ne not allocated): ne = nH * neOnH_FI (full ionisation).  <br /></td></tr>
-<tr class="separator:a0c2752a263438b85484df6bc498a67fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053e11b8ad00ad1defa33ecc7cdd6ce1" id="r_a053e11b8ad00ad1defa33ecc7cdd6ce1"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__shared__functions.html#a053e11b8ad00ad1defa33ecc7cdd6ce1">get_ne_nh</a> (ixil, ixol, w, x, ne, nh)</td></tr>
+<tr class="memdesc:a053e11b8ad00ad1defa33ecc7cdd6ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return electron and hydrogen number densities in code units. For LTE (iw_ne allocated): ne from Saha EoS, nH from rho/nH2rhoFactor. For FI (iw_ne not allocated): ne = nH * neOnH_FI (full ionisation).  <br /></td></tr>
+<tr class="separator:a053e11b8ad00ad1defa33ecc7cdd6ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9979ee3b779e85589d5c3c2fd56bafcb" id="r_a9979ee3b779e85589d5c3c2fd56bafcb"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__shared__functions.html#a9979ee3b779e85589d5c3c2fd56bafcb">get_temperature_from_etot</a> (w, x, ixil, ixol, res)</td></tr>
 <tr class="memdesc:a9979ee3b779e85589d5c3c2fd56bafcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temperature from the TOTAL energy: strip kinetic (+magnetic) energy via phys_e_to_ei, then delegate to the type-specific eosget_temperature_from_eint.  <br /></td></tr>
 <tr class="separator:a9979ee3b779e85589d5c3c2fd56bafcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,12 +123,12 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Lower log10(T) bound for the (rho,T) inverse table; FI (no tables) floors at log10(smalldouble). Used by the TC fluid-port log_T_floor. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__shared__functions_8t_source.html#l00082">82</a> of file <a class="el" href="mod__eos__shared__functions_8t_source.html">mod_eos_shared_functions.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__shared__functions_8t_source.html#l00098">98</a> of file <a class="el" href="mod__eos__shared__functions_8t_source.html">mod_eos_shared_functions.t</a>.</p>
 
 </div>
 </div>
-<a id="a0c2752a263438b85484df6bc498a67fa" name="a0c2752a263438b85484df6bc498a67fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c2752a263438b85484df6bc498a67fa">&#9670;&#160;</a></span>get_ne_nh()</h2>
+<a id="a053e11b8ad00ad1defa33ecc7cdd6ce1" name="a053e11b8ad00ad1defa33ecc7cdd6ce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053e11b8ad00ad1defa33ecc7cdd6ce1">&#9670;&#160;</a></span>get_ne_nh()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,6 +166,12 @@ Functions/Subroutines</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s, 1:<a class="el" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">double precision, dimension(ixi^s), intent(out)&#160;</td>
           <td class="paramname"><em>ne</em>, </td>
         </tr>
@@ -184,8 +190,19 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return electron and hydrogen number densities in code units. For LTE (iw_ne allocated): ne from Saha EoS, nH from rho/nH2rhoFactor. For FI (iw_ne not allocated): ne = nH * neOnH_FI (full ionisation). </p>
+<p>x is unused here but keeps the signature uniform with get_rho/get_nH, so the density can be taken from get_nH and the equilibrium-splitting check stays in get_rho alone. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__shared__functions_8t_source.html#l00049">49</a> of file <a class="el" href="mod__eos__shared__functions_8t_source.html">mod_eos_shared_functions.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__shared__functions_8t_source.html#l00064">64</a> of file <a class="el" href="mod__eos__shared__functions_8t_source.html">mod_eos_shared_functions.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__eos__shared__functions_a053e11b8ad00ad1defa33ecc7cdd6ce1_cgraph.png" border="0" usemap="#anamespacemod__eos__shared__functions_a053e11b8ad00ad1defa33ecc7cdd6ce1_cgraph" alt=""/></div>
+<map name="anamespacemod__eos__shared__functions_a053e11b8ad00ad1defa33ecc7cdd6ce1_cgraph" id="anamespacemod__eos__shared__functions_a053e11b8ad00ad1defa33ecc7cdd6ce1_cgraph">
+<area shape="rect" title="Return electron and hydrogen number densities in code units. For LTE (iw_ne allocated): ne from Saha ..." alt="" coords="5,5,204,45"/>
+<area shape="rect" href="namespacemod__eos__shared__functions.html#a97cb508f2b497e12981cfc2dc9cbd73a" title="Hydrogen number density: nH = rho / nH2rhoFactor." alt="" coords="252,5,451,45"/>
+<area shape="poly" title=" " alt="" coords="204,23,238,23,238,28,204,28"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -247,7 +264,17 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Hydrogen number density: nH = rho / nH2rhoFactor. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__shared__functions_8t_source.html#l00036">36</a> of file <a class="el" href="mod__eos__shared__functions_8t_source.html">mod_eos_shared_functions.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__shared__functions_8t_source.html#l00046">46</a> of file <a class="el" href="mod__eos__shared__functions_8t_source.html">mod_eos_shared_functions.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__eos__shared__functions_a97cb508f2b497e12981cfc2dc9cbd73a_cgraph.png" border="0" usemap="#anamespacemod__eos__shared__functions_a97cb508f2b497e12981cfc2dc9cbd73a_cgraph" alt=""/></div>
+<map name="anamespacemod__eos__shared__functions_a97cb508f2b497e12981cfc2dc9cbd73a_cgraph" id="anamespacemod__eos__shared__functions_a97cb508f2b497e12981cfc2dc9cbd73a_cgraph">
+<area shape="rect" title="Hydrogen number density: nH = rho / nH2rhoFactor." alt="" coords="5,5,204,45"/>
+<area shape="rect" href="namespacemod__eos__shared__functions.html#ac3c43effd08e59ad3907ec349239f665" title="Mass density (code units)." alt="" coords="252,5,451,45"/>
+<area shape="poly" title=" " alt="" coords="204,23,238,23,238,28,204,28"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -308,8 +335,9 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Mass density (code units). </p>
+<p>Under equilibrium splitting (iw_equi_rho&gt;0) the rho slot carries only the perturbation about the static background, so the background is added back here. This is the single place that check lives: get_nH and get_ne_nH both route through this routine rather than reading the rho slot themselves. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__shared__functions_8t_source.html#l00025">25</a> of file <a class="el" href="mod__eos__shared__functions_8t_source.html">mod_eos_shared_functions.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__shared__functions_8t_source.html#l00030">30</a> of file <a class="el" href="mod__eos__shared__functions_8t_source.html">mod_eos_shared_functions.t</a>.</p>
 
 </div>
 </div>
@@ -372,7 +400,7 @@ Functions/Subroutines</h2></td></tr>
 <p>Temperature from the TOTAL energy: strip kinetic (+magnetic) energy via phys_e_to_ei, then delegate to the type-specific eosget_temperature_from_eint. </p>
 <p>No timing here: get_temperature_from_eint is already timed. The array copy and e_to_ei subtraction are trivial.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__shared__functions_8t_source.html#l00064">64</a> of file <a class="el" href="mod__eos__shared__functions_8t_source.html">mod_eos_shared_functions.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__shared__functions_8t_source.html#l00080">80</a> of file <a class="el" href="mod__eos__shared__functions_8t_source.html">mod_eos_shared_functions.t</a>.</p>
 
 </div>
 </div>

@@ -109,6 +109,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:aa5897be54cd252b89fa14c22c826a3df" id="r_aa5897be54cd252b89fa14c22c826a3df"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte__entropy.html#aa5897be54cd252b89fa14c22c826a3df">entropy_eint_from_nh_p</a> (eintp, eintp_x, eintp_y, eintp_xy, log_nh_code, log_p_nh_code)</td></tr>
 <tr class="memdesc:aa5897be54cd252b89fa14c22c826a3df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse: log10(eint/nH) from (log nH, log p/nH). Single bicubic Hermite eval of the eintP table. Replaces p2eint bisection.  <br /></td></tr>
 <tr class="separator:aa5897be54cd252b89fa14c22c826a3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f3a1b6163a5f6111e8aa2184537763a" id="r_a2f3a1b6163a5f6111e8aa2184537763a"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte__entropy.html#a2f3a1b6163a5f6111e8aa2184537763a">entropy_eint_from_p_bisect</a> (pfwd, pfwd_x, pfwd_y, pfwd_xy, eintp, eintp_x, eintp_y, eintp_xy, log_nh_code, log_p_nh_code, log_eint_nh_code)</td></tr>
+<tr class="memdesc:a2f3a1b6163a5f6111e8aa2184537763a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bisection inverse for the entropy table set: find log10(eint/nH) [code] such that p(nH, eint) = p_target exactly, using the forward pfwd table. The eintP table only supplies the initial guess. This is the entropy-mode counterpart of eint_from_p_bisect (mod_eos_LTE), which is bound to eoslog_p - a table that is not loaded when eos_method='entropy' (its use there segfaulted on an unallocated array).  <br /></td></tr>
+<tr class="separator:a2f3a1b6163a5f6111e8aa2184537763a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a73d4054341c0598653743005dcddb7" id="r_a8a73d4054341c0598653743005dcddb7"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte__entropy.html#a8a73d4054341c0598653743005dcddb7">entropy_gamma1_from_nh_p</a> (g1p, g1p_x, g1p_y, g1p_xy, log_nh_code, log_p_nh_code)</td></tr>
 <tr class="memdesc:a8a73d4054341c0598653743005dcddb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverse: Gamma_1 from (log nH, log p/nH). Bicubic Hermite of g1p.  <br /></td></tr>
 <tr class="separator:a8a73d4054341c0598653743005dcddb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,7 +121,7 @@ Functions/Subroutines</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Entropy-method LTE EoS: every query is ONE bicubic Hermite evaluation. </p>
-<p>Each quantity is stored as four tables &ndash; the value plus its three derivatives (d/dx, d/dy, d2/dxdy) at every node &ndash; which fully determine the bicubic Hermite polynomial in each cell: exact at nodes, O(h^4) inside, no closure. No Newton, bisection, or iteration on the hot path; the iterative work is done offline against the analytic Saha solver (see entropy/generate_all_tables.py).</p>
+<p>Each quantity is stored as four tables &ndash; the value plus its three derivatives (d/dx, d/dy, d2/dxdy) at every node &ndash; which fully determine the bicubic Hermite polynomial in each cell: exact at nodes, O(h^4) inside, no closure. No Newton, bisection, or iteration on the hot path; the iterative work is done offline against the analytic Saha solver (see entropy128/generate_entropy_tables.py).</p>
 <p>Forward tables, axes (log10 nH, log10 eint/nH): Tfwd -&gt; T pfwd -&gt; p neOnH -&gt; ne/nH Inverse tables: eintP (log nH, log p/nH) -&gt; log10(eint/nH) eintT (log nH, log T) -&gt; log10(eint/nH) g1p (log nH, log p/nH) -&gt; Gamma_1</p>
 <p>Gamma_1 is tabulated directly (g1p) rather than recovered from second derivatives, so the lookup stays smooth; values are Maxwell-consistent with (p, T) by construction. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
@@ -183,7 +186,7 @@ Functions/Subroutines</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00362">362</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00363">363</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -248,7 +251,7 @@ Functions/Subroutines</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00389">389</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00459">459</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -267,6 +270,108 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="141,203,240,247,261,254,259,259,238,252,138,208"/>
 <area shape="rect" href="namespacemod__eos__lte__tables.html#a9373edf8fcccc5c2b656d0992e91ed78" title=" " alt="" coords="263,325,426,365"/>
 <area shape="poly" title=" " alt="" coords="118,204,169,257,203,286,240,311,253,318,250,322,237,316,200,290,166,261,114,207"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2f3a1b6163a5f6111e8aa2184537763a" name="a2f3a1b6163a5f6111e8aa2184537763a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f3a1b6163a5f6111e8aa2184537763a">&#9670;&#160;</a></span>entropy_eint_from_p_bisect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine, public mod_eos_lte_entropy::entropy_eint_from_p_bisect </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structmod__eos__container_1_1eos__table__container.html">eos_table_container</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>pfwd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__eos__container_1_1eos__table__container.html">eos_table_container</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>pfwd_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__eos__container_1_1eos__table__container.html">eos_table_container</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>pfwd_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__eos__container_1_1eos__table__container.html">eos_table_container</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>pfwd_xy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__eos__container_1_1eos__table__container.html">eos_table_container</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>eintp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__eos__container_1_1eos__table__container.html">eos_table_container</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>eintp_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__eos__container_1_1eos__table__container.html">eos_table_container</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>eintp_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__eos__container_1_1eos__table__container.html">eos_table_container</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>eintp_xy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>log_nh_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>log_p_nh_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>log_eint_nh_code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bisection inverse for the entropy table set: find log10(eint/nH) [code] such that p(nH, eint) = p_target exactly, using the forward pfwd table. The eintP table only supplies the initial guess. This is the entropy-mode counterpart of eint_from_p_bisect (mod_eos_LTE), which is bound to eoslog_p - a table that is not loaded when eos_method='entropy' (its use there segfaulted on an unallocated array). </p>
+<p>eint-axis limits of the forward table (uniform vs adaptive grid)</p>
+<p>initial guess from the inverse table</p>
+<p>bracket, expanding until the target is straddled</p>
+<p>no bracket (target outside the table range) -&gt; keep the table guess</p>
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00383">383</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__eos__lte__entropy_a2f3a1b6163a5f6111e8aa2184537763a_cgraph.png" border="0" usemap="#anamespacemod__eos__lte__entropy_a2f3a1b6163a5f6111e8aa2184537763a_cgraph" alt=""/></div>
+<map name="anamespacemod__eos__lte__entropy_a2f3a1b6163a5f6111e8aa2184537763a_cgraph" id="anamespacemod__eos__lte__entropy_a2f3a1b6163a5f6111e8aa2184537763a_cgraph">
+<area shape="rect" title="Bisection inverse for the entropy table set: find log10(eint/nH) [code] such that p(nH,..." alt="" coords="5,30,168,85"/>
+<area shape="rect" href="namespacemod__eos__lte__entropy.html#aa5897be54cd252b89fa14c22c826a3df" title="Inverse: log10(eint/nH) from (log nH, log p/nH). Single bicubic Hermite eval of the eintP table...." alt="" coords="216,5,404,45"/>
+<area shape="poly" title=" " alt="" coords="168,43,202,38,203,43,169,48"/>
+<area shape="rect" href="namespacemod__eos__lte__entropy.html#a21f1ad5ba5a26b7d02f9235d25e509f9" title=" " alt="" coords="216,69,404,109"/>
+<area shape="poly" title=" " alt="" coords="169,66,203,71,202,77,168,72"/>
 </map>
 </div>
 
@@ -324,7 +429,7 @@ Here is the call graph for this function:</div>
 
 <p>Inverse: Gamma_1 from (log nH, log p/nH). Bicubic Hermite of g1p. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00378">378</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00448">448</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -378,7 +483,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00261">261</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00262">262</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -479,7 +584,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00286">286</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00287">287</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -535,7 +640,7 @@ Here is the call graph for this function:</div>
 
 <p>Public wrappers &ndash; code-unit out. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00250">250</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00251">251</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -591,7 +696,7 @@ Here is the call graph for this function:</div>
 
 <p>Forward: ne/nH from (log nH, log eint/nH). Single bicubic Hermite eval of the neOnH table. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00275">275</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00276">276</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -610,7 +715,7 @@ Here is the call graph for this function:</div>
 <p>Entropy-method finalise: shift each loaded table's axes from CGS to code units and run the standard prepare. No aux builds &ndash; every runtime quantity is a single Hermite lookup. neOnH/Tfwd/pfwd/eintP/g1p are on (log nH, log eint/nH) (axis2_is_T=.false.); eintT is on (log nH, log T) (axis2_is_T=.true.). Each quantity ships value + three derivative tables. </p>
 <p>The entropy method never loads eosT, but several callers read eosTvar{1,2}_{min,max} (the cold-cell eint floor, FI-fallback checks). Source them from eosTfwd, on the same forward grid.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00075">75</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00076">76</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -637,9 +742,9 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Forward (log nH, log eint/nH) -&gt; thermodynamic state. </p>
-<p>Inverse (log nH, log p/nH) -&gt; eint/p ratio, Gamma_1 Inverse (log nH, log T) -&gt; log10(eint/nH) Entropy-method load: six quantities, each a value table plus its three derivative tables, on the forward (nH, eint/nH), inverse-p (nH, p/nH) and inverse-T (nH, T) grids. Every runtime query is one bicubic-Hermite evaluation (see generate_all_tables.py). </p>
+<p>Inverse (log nH, log p/nH) -&gt; eint/p ratio, Gamma_1 Inverse (log nH, log T) -&gt; log10(eint/nH) Entropy-method load: six quantities, each a value table plus its three derivative tables, on the forward (nH, eint/nH), inverse-p (nH, p/nH) and inverse-T (nH, T) grids. Every runtime query is one bicubic-Hermite evaluation (see generate_entropy_tables.py). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00054">54</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__entropy_8t_source.html#l00055">55</a> of file <a class="el" href="mod__eos__LTE__entropy_8t_source.html">mod_eos_LTE_entropy.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

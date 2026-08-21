@@ -91,15 +91,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0fa2fb5c8c1059b2e945518676611a65" id="r_a0fa2fb5c8c1059b2e945518676611a65"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__thermal__conduction_1_1get__2var__subr.html#a0fa2fb5c8c1059b2e945518676611a65">get_2var_subr</a> (ixil, ixol, w, ne, nh)</td></tr>
-<tr class="separator:a0fa2fb5c8c1059b2e945518676611a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af27cc123833e45467151249990592a4b" id="r_af27cc123833e45467151249990592a4b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__thermal__conduction_1_1get__2var__subr.html#af27cc123833e45467151249990592a4b">get_2var_subr</a> (ixil, ixol, w, x, ne, nh)</td></tr>
+<tr class="separator:af27cc123833e45467151249990592a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00063">63</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0fa2fb5c8c1059b2e945518676611a65" name="a0fa2fb5c8c1059b2e945518676611a65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fa2fb5c8c1059b2e945518676611a65">&#9670;&#160;</a></span>get_2var_subr()</h2>
+<a id="af27cc123833e45467151249990592a4b" name="af27cc123833e45467151249990592a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af27cc123833e45467151249990592a4b">&#9670;&#160;</a></span>get_2var_subr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,6 +136,12 @@ Public Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">double precision, dimension(ixi^s, nw), intent(in)&#160;</td>
           <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s, 1:ndim), intent(in)&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

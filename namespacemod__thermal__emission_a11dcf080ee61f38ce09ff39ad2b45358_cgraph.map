@@ -1,7 +1,9 @@
 <map id="mod_thermal_emission::get_sph_intersection_image_bounds" name="mod_thermal_emission::get_sph_intersection_image_bounds">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,30,180,85"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,62,180,117"/>
 <area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#ae234843713e8da1b6745bce79c0bbb73" title=" " alt="" coords="228,5,447,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,43,214,39,215,44,180,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,64,246,46,248,51,181,69"/>
 <area shape="rect" id="Node000003" href="$namespacemod__thermal__emission.html#a7af4c6d3fcf23e43ae346803b99e78b4" title=" " alt="" coords="241,69,433,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,66,228,72,228,78,180,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,87,228,87,228,92,180,92"/>
+<area shape="rect" id="Node000006" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="246,134,429,159"/>
+<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="181,107,229,119,269,128,268,133,227,124,180,113"/>
 </map>

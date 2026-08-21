@@ -1,42 +1,53 @@
 <map id="mod_thermal_emission::get_image_datresol" name="mod_thermal_emission::get_image_datresol">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,643,180,683"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,663,180,703"/>
 <area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a4ab0fb8cd2792330536a9b26ce0ef9e7" title=" " alt="" coords="277,5,452,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,642,105,523,130,346,148,255,170,171,196,102,210,76,226,55,243,42,263,33,265,37,246,46,230,59,215,79,201,105,175,173,153,256,136,347,110,524,98,643"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,662,104,539,129,357,147,262,169,175,195,104,210,76,226,55,243,42,263,33,265,37,246,46,230,59,214,79,200,106,174,177,152,263,134,358,110,540,98,663"/>
 <area shape="rect" id="Node000004" href="$namespacemod__thermal__emission.html#aab7fe8e75fffc0765d97089aab7ec381" title=" " alt="" coords="277,70,452,125"/>
-<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="94,642,109,537,136,384,154,306,176,234,199,175,226,134,244,120,263,110,266,115,246,125,230,138,204,177,181,236,160,307,141,385,114,537,99,643"/>
-<area shape="rect" id="Node000007" href="$namespacemod__thermal__emission.html#a11dcf080ee61f38ce09ff39ad2b45358" title=" " alt="" coords="277,149,452,203"/>
-<area shape="poly" id="edge3_Node000001_Node000007" title=" " alt="" coords="91,642,95,563,101,509,112,449,129,386,152,324,184,265,226,214,244,200,263,190,266,195,247,205,230,218,189,268,157,326,134,388,117,450,106,510,100,564,96,643"/>
-<area shape="rect" id="Node000011" href="$namespacemod__thermal__emission.html#a9331c81857c90348800db8b06a24bc7d" title=" " alt="" coords="277,228,452,268"/>
-<area shape="poly" id="edge4_Node000001_Node000011" title=" " alt="" coords="92,642,99,573,118,474,135,421,158,369,188,320,226,278,244,266,263,257,265,261,246,270,230,282,193,323,163,371,140,423,123,476,104,573,97,643"/>
-<area shape="rect" id="Node000013" href="$namespacemod__thermal__emission.html#a84c37e09d748a888076c0f90c0a62244" title=" " alt="" coords="277,292,452,332"/>
-<area shape="poly" id="edge5_Node000001_Node000013" title=" " alt="" coords="94,642,104,583,126,502,144,458,166,416,193,376,226,342,244,330,263,321,265,326,246,335,230,346,197,379,170,418,149,460,131,503,109,584,99,643"/>
-<area shape="rect" id="Node000015" href="$namespacemod__thermal__emission.html#af1c1121f9f307f84ffbae2a73c129977" title=" " alt="" coords="277,357,452,411"/>
-<area shape="poly" id="edge6_Node000001_Node000015" title=" " alt="" coords="97,642,112,596,138,536,176,474,200,445,226,421,263,400,266,405,230,425,203,449,180,477,143,539,117,598,102,643"/>
-<area shape="rect" id="Node000030" href="$namespacemod__thermal__emission.html#a526a20f2bbab58ec3cb9f31980fb7e5b" title=" " alt="" coords="277,435,452,490"/>
-<area shape="poly" id="edge7_Node000001_Node000030" title=" " alt="" coords="103,641,151,572,186,533,227,500,263,482,266,487,229,505,190,537,155,575,108,644"/>
-<area shape="rect" id="Node000046" href="$namespacemod__thermal__emission.html#a4c07f3a3720c411e7d3b65cb8de41d5c" title=" " alt="" coords="275,515,455,555"/>
-<area shape="poly" id="edge8_Node000001_Node000046" title=" " alt="" coords="115,640,164,601,227,564,260,552,262,557,229,569,167,606,118,644"/>
-<area shape="rect" id="Node000047" href="$namespacemod__thermal__emission.html#aca1277aa73479340f927d29e2b6782a9" title=" " alt="" coords="228,579,501,619"/>
-<area shape="poly" id="edge9_Node000001_Node000047" title=" " alt="" coords="177,640,227,628,265,619,266,624,229,633,178,645"/>
-<area shape="rect" id="Node000061" href="$namespacemod__thermal__emission.html#aee15d917b830259599e02e967b695b16" title=" " alt="" coords="231,643,498,683"/>
-<area shape="poly" id="edge10_Node000001_Node000061" title=" " alt="" coords="180,660,217,660,217,665,180,665"/>
-<area shape="rect" id="Node000070" href="$namespacemod__thermal__emission.html#ac683b244c6010a87591f502057c96441" title=" " alt="" coords="277,707,452,762"/>
-<area shape="poly" id="edge11_Node000001_Node000070" title=" " alt="" coords="170,680,265,706,263,711,168,685"/>
-<area shape="rect" id="Node000071" href="$namespacemod__thermal__emission.html#ab58c23e03a79352d521dca4a4ff46105" title=" " alt="" coords="277,787,453,827"/>
-<area shape="poly" id="edge12_Node000001_Node000071" title=" " alt="" coords="115,681,164,727,195,751,229,771,265,785,263,790,227,776,192,755,160,731,111,685"/>
-<area shape="rect" id="Node000073" href="$namespacemod__thermal__emission.html#a11661024f1c0474541fe7fa399438eb7" title=" " alt="" coords="273,851,456,891"/>
-<area shape="poly" id="edge13_Node000001_Node000073" title=" " alt="" coords="106,682,125,716,152,758,187,801,229,836,261,852,259,857,227,841,183,805,148,761,120,719,101,684"/>
-<area shape="rect" id="Node000074" href="$namespacemod__thermal__emission.html#ac97d12f33117a202d49629a059dae17a" title=" " alt="" coords="277,915,452,955"/>
-<area shape="poly" id="edge14_Node000001_Node000074" title=" " alt="" coords="102,682,117,728,142,787,180,849,203,877,230,900,265,919,263,924,226,905,199,880,175,852,137,790,112,730,97,684"/>
-<area shape="rect" id="Node000077" href="$namespacemod__thermal__emission.html#a9a6351ae7ba2d58edb1c6f27346eb648" title=" " alt="" coords="267,979,463,1019"/>
-<area shape="poly" id="edge15_Node000001_Node000077" title=" " alt="" coords="99,683,110,739,134,816,151,857,172,896,198,933,230,965,255,980,252,985,226,969,194,936,168,899,146,859,128,818,105,740,94,684"/>
-<area shape="rect" id="Node000079" href="$namespacemod__thermal__emission.html#afec94e91cc2cfde1c73ab42d7b82823f" title=" " alt="" coords="232,1043,497,1083"/>
-<area shape="poly" id="edge16_Node000001_Node000079" title=" " alt="" coords="98,683,105,750,125,844,142,894,165,943,194,989,230,1029,235,1033,232,1037,226,1033,189,992,160,946,137,896,120,845,100,751,92,683"/>
-<area shape="rect" id="Node000081" href="$namespacemod__thermal__emission.html#a1d14762e6c60415ff69c8df00c20ad46" title=" " alt="" coords="245,1107,485,1147"/>
-<area shape="poly" id="edge17_Node000001_Node000081" title=" " alt="" coords="96,683,100,760,106,813,117,871,134,931,157,990,189,1045,230,1093,235,1097,231,1101,226,1097,185,1048,152,992,129,933,112,872,101,814,95,760,91,683"/>
-<area shape="rect" id="Node000082" href="$namespacemod__thermal__emission.html#a83ccab3824a1bd3f21ba8ab4d7f5a6ab" title=" " alt="" coords="269,1195,460,1250"/>
-<area shape="poly" id="edge18_Node000001_Node000082" title=" " alt="" coords="96,683,100,767,106,826,117,892,133,961,157,1031,189,1097,230,1157,247,1173,266,1187,263,1191,243,1177,226,1160,184,1100,152,1033,128,963,112,893,101,827,95,767,91,683"/>
-<area shape="rect" id="Node000083" href="$namespacemod__thermal__emission.html#a22550128a329c0f1f720e5994346ff5c" title=" " alt="" coords="266,1275,463,1315"/>
-<area shape="poly" id="edge20_Node000001_Node000083" title=" " alt="" coords="98,683,111,801,136,975,154,1065,176,1147,201,1215,215,1240,230,1259,254,1277,251,1281,226,1263,211,1243,196,1217,171,1149,149,1066,131,976,106,802,93,683"/>
-<area shape="poly" id="edge19_Node000082_Node000082" title=" " alt="" coords="312,1195,312,1185,322,1176,339,1171,365,1169,395,1172,413,1180,410,1184,394,1177,365,1174,340,1176,324,1181,317,1187,317,1195"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="94,662,109,555,136,400,155,319,176,245,200,184,226,142,243,127,263,116,266,121,246,132,230,146,204,187,181,247,160,320,142,401,114,556,99,663"/>
+<area shape="rect" id="Node000006" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="549,706,732,731"/>
+<area shape="poly" id="edge18_Node000001_Node000006" title=" " alt="" coords="94,662,107,561,134,415,152,341,173,275,198,221,212,201,226,186,251,173,284,165,365,158,446,165,479,173,503,186,518,201,533,223,558,279,580,349,599,427,625,581,639,692,634,693,620,581,593,428,575,350,553,281,528,225,514,205,500,190,477,178,445,170,365,163,285,170,253,178,230,190,216,204,202,223,178,277,157,343,139,416,113,561,99,663"/>
+<area shape="rect" id="Node000008" href="$namespacemod__thermal__emission.html#a11dcf080ee61f38ce09ff39ad2b45358" title=" " alt="" coords="277,201,452,255"/>
+<area shape="poly" id="edge4_Node000001_Node000008" title=" " alt="" coords="92,662,97,588,116,482,133,424,156,367,187,313,226,266,244,252,263,242,266,247,247,257,230,270,191,316,161,369,138,426,121,483,102,589,97,663"/>
+<area shape="rect" id="Node000012" href="$namespacemod__thermal__emission.html#a9331c81857c90348800db8b06a24bc7d" title=" " alt="" coords="277,280,452,320"/>
+<area shape="poly" id="edge6_Node000001_Node000012" title=" " alt="" coords="93,662,101,598,122,508,139,459,162,412,191,368,226,330,244,318,263,309,265,314,246,322,230,334,195,371,167,415,144,461,127,509,106,599,98,663"/>
+<area shape="rect" id="Node000014" href="$namespacemod__thermal__emission.html#a84c37e09d748a888076c0f90c0a62244" title=" " alt="" coords="277,344,452,384"/>
+<area shape="poly" id="edge7_Node000001_Node000014" title=" " alt="" coords="95,662,107,608,131,535,148,497,170,459,196,424,226,394,263,374,266,379,230,398,200,428,174,462,153,499,136,537,112,609,100,663"/>
+<area shape="rect" id="Node000016" href="$namespacemod__thermal__emission.html#af1c1121f9f307f84ffbae2a73c129977" title=" " alt="" coords="277,409,452,463"/>
+<area shape="poly" id="edge8_Node000001_Node000016" title=" " alt="" coords="99,662,116,622,143,571,180,518,202,494,226,472,263,453,265,458,230,477,206,497,184,521,147,573,121,624,104,664"/>
+<area shape="rect" id="Node000030" href="$namespacemod__thermal__emission.html#a526a20f2bbab58ec3cb9f31980fb7e5b" title=" " alt="" coords="277,487,452,542"/>
+<area shape="poly" id="edge9_Node000001_Node000030" title=" " alt="" coords="108,660,157,607,190,578,227,552,263,535,265,540,229,557,194,582,161,611,112,664"/>
+<area shape="rect" id="Node000046" href="$namespacemod__thermal__emission.html#a4c07f3a3720c411e7d3b65cb8de41d5c" title=" " alt="" coords="275,567,455,607"/>
+<area shape="poly" id="edge11_Node000001_Node000046" title=" " alt="" coords="129,660,175,637,227,616,261,606,262,611,229,621,178,642,132,665"/>
+<area shape="rect" id="Node000047" href="$namespacemod__thermal__emission.html#aca1277aa73479340f927d29e2b6782a9" title=" " alt="" coords="228,631,501,671"/>
+<area shape="poly" id="edge12_Node000001_Node000047" title=" " alt="" coords="180,670,214,666,215,671,181,675"/>
+<area shape="rect" id="Node000061" href="$namespacemod__thermal__emission.html#aee15d917b830259599e02e967b695b16" title=" " alt="" coords="231,695,498,735"/>
+<area shape="poly" id="edge14_Node000001_Node000061" title=" " alt="" coords="181,690,218,695,217,700,180,696"/>
+<area shape="rect" id="Node000070" href="$namespacemod__thermal__emission.html#ac683b244c6010a87591f502057c96441" title=" " alt="" coords="277,759,452,814"/>
+<area shape="poly" id="edge15_Node000001_Node000070" title=" " alt="" coords="133,700,229,744,265,757,263,762,227,749,131,705"/>
+<area shape="rect" id="Node000071" href="$namespacemod__thermal__emission.html#ab58c23e03a79352d521dca4a4ff46105" title=" " alt="" coords="277,839,453,879"/>
+<area shape="poly" id="edge17_Node000001_Node000071" title=" " alt="" coords="109,701,157,762,191,795,229,823,264,839,262,844,227,828,188,799,153,766,105,704"/>
+<area shape="rect" id="Node000073" href="$namespacemod__thermal__emission.html#a11661024f1c0474541fe7fa399438eb7" title=" " alt="" coords="273,903,456,943"/>
+<area shape="poly" id="edge19_Node000001_Node000073" title=" " alt="" coords="104,702,120,742,147,793,183,845,205,868,229,888,262,905,259,910,227,893,202,872,179,848,142,796,115,744,99,704"/>
+<area shape="rect" id="Node000074" href="$namespacemod__thermal__emission.html#ac97d12f33117a202d49629a059dae17a" title=" " alt="" coords="277,967,452,1007"/>
+<area shape="poly" id="edge20_Node000001_Node000074" title=" " alt="" coords="100,702,113,753,138,821,155,858,176,893,201,925,230,953,266,972,263,977,226,957,197,928,171,896,150,860,133,824,108,755,95,703"/>
+<area shape="rect" id="Node000077" href="$namespacemod__thermal__emission.html#a9a6351ae7ba2d58edb1c6f27346eb648" title=" " alt="" coords="267,1031,463,1071"/>
+<area shape="poly" id="edge22_Node000001_Node000077" title=" " alt="" coords="98,703,108,764,129,850,146,895,168,940,196,981,230,1017,255,1032,252,1037,226,1021,192,984,164,943,141,897,124,851,102,765,93,703"/>
+<area shape="rect" id="Node000079" href="$namespacemod__thermal__emission.html#afec94e91cc2cfde1c73ab42d7b82823f" title=" " alt="" coords="232,1095,497,1135"/>
+<area shape="poly" id="edge24_Node000001_Node000079" title=" " alt="" coords="97,703,102,775,121,877,138,932,161,987,191,1037,230,1081,235,1085,231,1089,226,1085,187,1040,156,989,133,934,116,878,97,775,92,703"/>
+<area shape="rect" id="Node000081" href="$namespacemod__thermal__emission.html#a1d14762e6c60415ff69c8df00c20ad46" title=" " alt="" coords="245,1159,485,1199"/>
+<area shape="poly" id="edge26_Node000001_Node000081" title=" " alt="" coords="96,703,98,785,103,842,113,904,130,969,154,1033,187,1093,230,1145,235,1149,231,1153,226,1149,182,1096,149,1036,124,971,108,905,98,842,92,785,91,703"/>
+<area shape="rect" id="Node000082" href="$namespacemod__thermal__emission.html#a83ccab3824a1bd3f21ba8ab4d7f5a6ab" title=" " alt="" coords="269,1247,460,1302"/>
+<area shape="poly" id="edge28_Node000001_Node000082" title=" " alt="" coords="96,703,98,792,103,855,113,925,130,999,154,1074,187,1145,230,1209,246,1225,265,1238,262,1243,243,1229,226,1212,182,1147,149,1076,125,1001,108,926,98,855,93,792,91,703"/>
+<area shape="rect" id="Node000083" href="$namespacemod__thermal__emission.html#a22550128a329c0f1f720e5994346ff5c" title=" " alt="" coords="266,1327,463,1367"/>
+<area shape="poly" id="edge30_Node000001_Node000083" title=" " alt="" coords="98,703,110,826,134,1010,152,1105,174,1193,200,1264,214,1291,230,1311,255,1329,252,1334,226,1315,210,1294,195,1266,169,1194,147,1107,129,1011,104,827,93,703"/>
+<area shape="poly" id="edge3_Node000004_Node000006" title=" " alt="" coords="453,110,480,123,503,142,531,186,555,250,577,327,595,411,624,575,639,692,634,693,618,576,590,412,572,328,550,251,526,189,499,146,477,128,451,115"/>
+<area shape="poly" id="edge5_Node000008_Node000006" title=" " alt="" coords="453,237,480,249,503,266,544,316,577,373,601,434,618,496,630,555,637,610,642,692,637,692,632,610,625,556,613,497,596,436,572,376,540,319,499,270,477,253,451,242"/>
+<area shape="poly" id="edge10_Node000030_Node000006" title=" " alt="" coords="453,529,503,552,543,585,578,623,627,693,623,696,574,626,540,589,500,557,451,534"/>
+<area shape="poly" id="edge13_Node000047_Node000006" title=" " alt="" coords="453,668,502,680,579,700,578,705,501,685,451,673"/>
+<area shape="poly" id="edge16_Node000070_Node000006" title=" " alt="" coords="451,763,575,732,576,737,453,768"/>
+<area shape="poly" id="edge21_Node000074_Node000006" title=" " alt="" coords="451,975,477,966,500,952,526,930,548,904,586,846,613,790,629,744,634,746,618,792,591,849,553,907,529,934,503,957,479,971,453,980"/>
+<area shape="poly" id="edge23_Node000077_Node000006" title=" " alt="" coords="462,1037,482,1028,500,1017,530,987,556,952,577,915,595,876,620,802,632,745,638,746,625,803,600,878,582,917,560,955,534,990,503,1021,484,1033,464,1042"/>
+<area shape="poly" id="edge25_Node000079_Node000006" title=" " alt="" coords="483,1092,500,1081,535,1043,563,999,586,952,604,904,626,813,635,745,640,745,631,814,609,905,591,954,568,1002,539,1046,503,1085,486,1097"/>
+<area shape="poly" id="edge27_Node000081_Node000006" title=" " alt="" coords="483,1156,500,1145,540,1099,571,1046,595,990,612,932,624,875,631,823,637,745,642,745,636,824,629,876,617,933,600,991,576,1049,544,1102,503,1149,487,1161"/>
+<area shape="poly" id="edge29_Node000082_Node000082" title=" " alt="" coords="312,1247,312,1237,322,1228,339,1223,365,1221,395,1224,413,1232,410,1236,394,1229,365,1226,340,1228,324,1233,317,1239,317,1247"/>
 </map>

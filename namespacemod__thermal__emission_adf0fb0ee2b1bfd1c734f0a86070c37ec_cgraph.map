@@ -1,12 +1,17 @@
 <map id="mod_thermal_emission::get_euv_spectrum" name="mod_thermal_emission::get_euv_spectrum">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,107,180,147"/>
-<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a8f1788a930b5c4971cf671f79a532c31" title=" " alt="" coords="228,5,429,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,105,246,63,248,68,144,110"/>
-<area shape="rect" id="Node000004" href="$namespacemod__thermal__emission.html#a3089c33eabc4b5a051bf7f3f027ef7a7" title=" " alt="" coords="477,107,652,147"/>
-<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="180,122,228,121,429,121,464,121,464,127,429,126,228,126,180,127"/>
-<area shape="rect" id="Node000005" href="$namespacemod__thermal__emission.html#a6eef9766abf5593190ce02034980caeb" title=" " alt="" coords="241,135,416,175"/>
-<area shape="poly" id="edge3_Node000001_Node000005" title=" " alt="" coords="181,135,228,141,227,146,180,140"/>
-<area shape="rect" id="Node000020" href="$namespacemod__thermal__emission.html#a08470e919d9f3bd589ac696ce11a7e03" title=" " alt="" coords="239,199,418,239"/>
-<area shape="poly" id="edge5_Node000001_Node000020" title=" " alt="" coords="137,145,229,185,250,192,248,197,227,190,135,150"/>
-<area shape="poly" id="edge4_Node000005_Node000004" title=" " alt="" coords="416,142,463,137,464,142,417,148"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,129,180,169"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a8f1788a930b5c4971cf671f79a532c31" title=" " alt="" coords="455,5,656,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,126,172,100,227,77,281,62,336,51,441,37,441,42,337,56,282,67,229,82,174,105,127,131"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="704,115,887,140"/>
+<area shape="poly" id="edge9_Node000001_Node000003" title=" " alt="" coords="180,136,228,131,442,119,656,121,690,121,690,127,656,126,442,125,228,137,180,141"/>
+<area shape="rect" id="Node000004" href="$namespacemod__thermal__emission.html#a3089c33eabc4b5a051bf7f3f027ef7a7" title=" " alt="" coords="468,135,643,175"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="181,147,454,151,454,157,180,153"/>
+<area shape="rect" id="Node000005" href="$namespacemod__thermal__emission.html#a6eef9766abf5593190ce02034980caeb" title=" " alt="" coords="230,186,405,226"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="172,166,226,180,224,185,171,171"/>
+<area shape="rect" id="Node000020" href="$namespacemod__thermal__emission.html#a08470e919d9f3bd589ac696ce11a7e03" title=" " alt="" coords="228,250,407,290"/>
+<area shape="poly" id="edge7_Node000001_Node000020" title=" " alt="" coords="122,167,170,201,229,236,243,242,241,247,227,240,168,205,119,171"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="626,58,750,107,748,112,624,63"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="642,143,690,137,691,142,643,148"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="404,185,454,174,455,179,406,190"/>
+<area shape="poly" id="edge8_Node000020_Node000003" title=" " alt="" coords="406,250,525,222,655,185,755,144,757,148,657,190,527,228,407,255"/>
 </map>

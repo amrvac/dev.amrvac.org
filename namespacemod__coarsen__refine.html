@@ -92,6 +92,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a90d7cd8cbcd1b2de285dee4d58973632" id="r_a90d7cd8cbcd1b2de285dee4d58973632"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__coarsen__refine.html#a90d7cd8cbcd1b2de285dee4d58973632">amr_coarsen_refine</a></td></tr>
 <tr class="memdesc:a90d7cd8cbcd1b2de285dee4d58973632"><td class="mdescLeft">&#160;</td><td class="mdescRight">coarsen and refine blocks to update AMR grid  <br /></td></tr>
 <tr class="separator:a90d7cd8cbcd1b2de285dee4d58973632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4011ea3d94e52c5b65013b79df60c9bb" id="r_a4011ea3d94e52c5b65013b79df60c9bb"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__coarsen__refine.html#a4011ea3d94e52c5b65013b79df60c9bb">amr_rebalance</a></td></tr>
+<tr class="memdesc:a4011ea3d94e52c5b65013b79df60c9bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cost-weighted rebalance without refine/coarsen. For static/uniform grids (refine_max_level=1) amr_coarsen_refine never runs, so the cost-weighted load_balance has no invocation point and the partition stays at the initial equal-block (cell-count) split -&gt; photosphere EoS-heavy ranks stall the rest. This migrates blocks to equalise the measured per-block cost (block_cost, populated when lb_automatic is on) then rebuilds connectivity + ghosts, mirroring the tail of amr_coarsen_refine.  <br /></td></tr>
+<tr class="separator:a4011ea3d94e52c5b65013b79df60c9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module to coarsen and refine grids for AMR. </p>
@@ -110,42 +113,83 @@ Functions/Subroutines</h2></td></tr>
 
 <p>coarsen and refine blocks to update AMR grid </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__coarsen__refine_8t_source.html#l00020">20</a> of file <a class="el" href="mod__coarsen__refine_8t_source.html">mod_coarsen_refine.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__coarsen__refine_8t_source.html#l00021">21</a> of file <a class="el" href="mod__coarsen__refine_8t_source.html">mod_coarsen_refine.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__coarsen__refine_a90d7cd8cbcd1b2de285dee4d58973632_cgraph.png" border="0" usemap="#anamespacemod__coarsen__refine_a90d7cd8cbcd1b2de285dee4d58973632_cgraph" alt=""/></div>
 <map name="anamespacemod__coarsen__refine_a90d7cd8cbcd1b2de285dee4d58973632_cgraph" id="anamespacemod__coarsen__refine_a90d7cd8cbcd1b2de285dee4d58973632_cgraph">
-<area shape="rect" title="coarsen and refine blocks to update AMR grid" alt="" coords="5,387,164,427"/>
+<area shape="rect" title="coarsen and refine blocks to update AMR grid" alt="" coords="5,336,164,376"/>
 <area shape="rect" href="namespacemod__functions__connectivity.html#ad0f896bb9a50442f121e8fa63b365b15" title=" " alt="" coords="213,5,419,45"/>
-<area shape="poly" title=" " alt="" coords="85,386,94,324,114,238,131,191,151,145,178,101,210,62,225,50,228,54,214,66,182,104,156,147,135,193,119,240,99,325,90,387"/>
-<area shape="rect" href="namespacemod__amr__neighbors.html#a686f8e8a5eace464a27777d6efd0a762" title="find neighors of all blocks" alt="" coords="468,63,631,103"/>
-<area shape="poly" title=" " alt="" coords="85,386,93,328,114,251,130,210,151,171,178,136,210,106,238,89,268,76,332,62,396,59,455,63,454,68,396,64,332,67,270,82,241,94,214,110,182,139,156,174,135,213,119,253,99,330,90,387"/>
-<area shape="rect" href="namespacemod__functions__forest.html#a987618ae3b9ab1b1f6e1d9d8d18b4448" title=" " alt="" coords="235,120,397,160"/>
-<area shape="poly" title=" " alt="" coords="89,386,103,341,127,283,163,222,185,194,210,170,221,162,224,167,214,174,189,198,167,225,132,285,108,343,94,387"/>
-<area shape="rect" href="namespacemod__amr__fct.html#a7b0f4490bde4c832fd63c3651eb174da" title="When refining a coarse block with fine neighbours, it is necessary prolong consistently with the alre..." alt="" coords="217,185,415,210"/>
-<area shape="poly" title=" " alt="" coords="92,385,108,349,134,305,168,259,210,221,223,213,225,218,214,225,172,263,138,308,113,352,96,388"/>
-<area shape="rect" href="namespacemod__functions__connectivity.html#a110e68b70f3eb0ec2de3d4855cf0901e" title=" " alt="" coords="213,235,419,275"/>
-<area shape="poly" title=" " alt="" coords="100,384,146,335,177,308,211,284,223,278,226,282,213,289,180,312,150,338,104,388"/>
-<area shape="rect" href="namespacemod__functions__connectivity.html#ad727947fbcfbbb6f3b25ab9fa7515dda" title=" " alt="" coords="213,299,419,339"/>
-<area shape="poly" title=" " alt="" coords="127,384,211,348,232,341,234,346,213,353,129,389"/>
-<area shape="rect" href="namespacemod__amr__solution__node.html#aeef76b98e4c841f25f27fefa770ce314" title="Get first available igrid on processor ipe." alt="" coords="225,387,407,427"/>
-<area shape="poly" title=" " alt="" coords="164,404,211,404,211,409,164,409"/>
-<area shape="rect" href="namespacemod__amr__solution__node.html#a24e271e2c807eb2e0881f075d6ff55c2" title=" " alt="" coords="225,451,407,491"/>
-<area shape="poly" title=" " alt="" coords="158,424,231,444,229,450,157,429"/>
-<area shape="rect" href="namespacemod__refine.html#a76d1615a759e3cbdd1fea0c20f074a2f" title="refine one block to its children blocks" alt="" coords="246,515,386,555"/>
-<area shape="poly" title=" " alt="" coords="109,425,155,463,213,500,235,510,232,515,211,505,152,467,106,429"/>
-<area shape="rect" href="namespacemod__functions__forest.html#a7d3c451c93ebfe605cf07e465147be67" title=" " alt="" coords="235,579,397,619"/>
-<area shape="poly" title=" " alt="" coords="99,426,143,494,176,532,214,565,224,571,221,575,210,569,172,536,139,497,94,429"/>
-<area shape="rect" href="namespacemod__selectgrids.html#aa15f11bf5108fe0eae81eb81aa46f3b1" title=" " alt="" coords="212,643,420,669"/>
-<area shape="poly" title=" " alt="" coords="94,426,108,469,132,524,167,581,189,606,214,629,223,635,221,639,210,633,185,610,163,584,128,526,103,471,89,428"/>
-<area shape="rect" href="namespacemod__amr__fct.html#a6742566c4457a0931b368db9539791b9" title="To achive consistency and thus conservation of divergence, when refining a block we take into account..." alt="" coords="241,693,391,733"/>
-<area shape="poly" title=" " alt="" coords="92,426,104,477,127,545,163,616,186,649,214,678,231,690,227,694,210,682,182,652,158,619,122,547,99,478,87,427"/>
-<area shape="rect" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26" title=" " alt="" coords="227,758,405,783"/>
-<area shape="poly" title=" " alt="" coords="90,427,97,489,117,575,133,621,154,666,181,707,214,743,221,749,218,753,210,747,176,711,149,668,128,623,112,576,92,490,85,427"/>
-<area shape="poly" title=" " alt="" coords="399,43,455,57,454,62,397,48"/>
-<area shape="poly" title=" " alt="" coords="273,387,271,377,277,368,293,362,316,360,343,363,357,370,355,375,341,368,316,365,294,367,281,372,276,378,278,386"/>
-<area shape="poly" title=" " alt="" coords="396,581,418,565,441,531,461,481,481,421,497,353,524,219,541,116,546,117,530,220,503,354,486,422,466,483,445,534,422,569,399,585"/>
+<area shape="poly" title=" " alt="" coords="86,335,97,280,118,205,135,165,155,125,180,88,210,55,216,51,219,55,214,59,184,91,160,128,140,167,123,207,102,282,91,336"/>
+<area shape="rect" href="namespacemod__functions__forest.html#a987618ae3b9ab1b1f6e1d9d8d18b4448" title=" " alt="" coords="235,69,397,109"/>
+<area shape="poly" title=" " alt="" coords="89,335,103,290,127,232,163,172,185,144,210,119,221,111,224,116,214,123,189,147,167,175,132,235,108,292,94,336"/>
+<area shape="rect" href="namespacemod__amr__fct.html#a7b0f4490bde4c832fd63c3651eb174da" title="When refining a coarse block with fine neighbours, it is necessary prolong consistently with the alre..." alt="" coords="217,134,415,159"/>
+<area shape="poly" title=" " alt="" coords="92,335,108,299,134,254,168,208,210,170,223,163,225,167,214,174,172,212,138,257,113,301,96,337"/>
+<area shape="rect" href="namespacemod__functions__connectivity.html#a110e68b70f3eb0ec2de3d4855cf0901e" title=" " alt="" coords="213,184,419,224"/>
+<area shape="poly" title=" " alt="" coords="100,334,146,284,177,257,211,234,223,227,226,232,213,238,180,261,150,288,104,337"/>
+<area shape="rect" href="namespacemod__functions__connectivity.html#ad727947fbcfbbb6f3b25ab9fa7515dda" title=" " alt="" coords="213,248,419,288"/>
+<area shape="poly" title=" " alt="" coords="127,333,211,298,232,290,234,295,213,302,129,338"/>
+<area shape="rect" href="namespacemod__amr__solution__node.html#aeef76b98e4c841f25f27fefa770ce314" title="Get first available igrid on processor ipe." alt="" coords="225,336,407,376"/>
+<area shape="poly" title=" " alt="" coords="164,353,211,353,211,359,164,359"/>
+<area shape="rect" href="namespacemod__amr__solution__node.html#a24e271e2c807eb2e0881f075d6ff55c2" title=" " alt="" coords="225,400,407,440"/>
+<area shape="poly" title=" " alt="" coords="158,374,231,394,229,399,157,379"/>
+<area shape="rect" href="namespacemod__refine.html#a76d1615a759e3cbdd1fea0c20f074a2f" title="refine one block to its children blocks" alt="" coords="246,464,386,504"/>
+<area shape="poly" title=" " alt="" coords="109,374,155,412,213,450,235,459,232,464,211,454,152,417,106,378"/>
+<area shape="rect" href="namespacemod__functions__forest.html#a7d3c451c93ebfe605cf07e465147be67" title=" " alt="" coords="235,528,397,568"/>
+<area shape="poly" title=" " alt="" coords="99,375,143,443,176,481,214,514,224,520,221,525,210,518,172,485,139,446,94,378"/>
+<area shape="rect" href="namespacemod__selectgrids.html#aa15f11bf5108fe0eae81eb81aa46f3b1" title=" " alt="" coords="212,593,420,618"/>
+<area shape="poly" title=" " alt="" coords="94,375,108,418,132,473,167,530,189,556,214,578,223,584,221,589,210,582,185,559,163,533,128,476,103,420,89,377"/>
+<area shape="rect" href="namespacemod__amr__fct.html#a6742566c4457a0931b368db9539791b9" title="To achive consistency and thus conservation of divergence, when refining a block we take into account..." alt="" coords="241,643,391,683"/>
+<area shape="poly" title=" " alt="" coords="92,376,104,426,127,494,163,566,186,598,214,627,231,639,227,643,210,631,182,602,158,568,122,496,99,428,87,377"/>
+<area shape="poly" title=" " alt="" coords="273,336,271,326,277,317,293,311,316,309,343,312,357,319,355,324,341,317,316,315,294,317,281,321,276,327,278,335"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4011ea3d94e52c5b65013b79df60c9bb" name="a4011ea3d94e52c5b65013b79df60c9bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4011ea3d94e52c5b65013b79df60c9bb">&#9670;&#160;</a></span>amr_rebalance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine, public mod_coarsen_refine::amr_rebalance</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cost-weighted rebalance without refine/coarsen. For static/uniform grids (refine_max_level=1) amr_coarsen_refine never runs, so the cost-weighted load_balance has no invocation point and the partition stays at the initial equal-block (cell-count) split -&gt; photosphere EoS-heavy ranks stall the rest. This migrates blocks to equalise the measured per-block cost (block_cost, populated when lb_automatic is on) then rebuilds connectivity + ghosts, mirroring the tail of amr_coarsen_refine. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__coarsen__refine_8t_source.html#l00186">186</a> of file <a class="el" href="mod__coarsen__refine_8t_source.html">mod_coarsen_refine.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__coarsen__refine_a4011ea3d94e52c5b65013b79df60c9bb_cgraph.png" border="0" usemap="#anamespacemod__coarsen__refine_a4011ea3d94e52c5b65013b79df60c9bb_cgraph" alt=""/></div>
+<map name="anamespacemod__coarsen__refine_a4011ea3d94e52c5b65013b79df60c9bb_cgraph" id="anamespacemod__coarsen__refine_a4011ea3d94e52c5b65013b79df60c9bb_cgraph">
+<area shape="rect" title="Cost&#45;weighted rebalance without refine/coarsen. For static/uniform grids (refine_max_level=1) amr_coa..." alt="" coords="5,280,159,320"/>
+<area shape="rect" href="namespacemod__space__filling__curve.html#ad8dde932d2a33294824c0b76241af4e8" title="Construct Morton&#45;order as a global recursive lexicographic ordering." alt="" coords="219,5,402,45"/>
+<area shape="poly" title=" " alt="" coords="85,279,99,233,122,173,157,110,179,81,205,55,211,50,215,55,208,59,183,84,161,113,127,175,104,235,90,280"/>
+<area shape="rect" href="namespacemod__functions__connectivity.html#ad0f896bb9a50442f121e8fa63b365b15" title=" " alt="" coords="208,69,413,109"/>
+<area shape="poly" title=" " alt="" coords="91,278,134,205,166,163,205,126,225,113,228,118,208,130,170,166,138,208,95,281"/>
+<area shape="rect" href="namespacemod__amr__neighbors.html#a686f8e8a5eace464a27777d6efd0a762" title="find neighors of all blocks" alt="" coords="463,99,625,139"/>
+<area shape="poly" title=" " alt="" coords="94,278,139,223,170,193,205,170,249,155,311,142,449,124,449,129,312,147,251,160,208,174,173,198,143,226,99,281"/>
+<area shape="rect" href="namespacemod__amr__fct.html#adbbdbcbea30b85f3f207ce8e03bc04d4" title=" " alt="" coords="217,184,405,224"/>
+<area shape="poly" title=" " alt="" coords="117,277,206,234,225,226,227,231,208,238,119,282"/>
+<area shape="rect" href="namespacemod__functions__connectivity.html#a110e68b70f3eb0ec2de3d4855cf0901e" title=" " alt="" coords="208,248,413,288"/>
+<area shape="poly" title=" " alt="" coords="159,287,194,282,195,287,160,292"/>
+<area shape="rect" href="namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="223,312,399,352"/>
+<area shape="poly" title=" " alt="" coords="160,308,209,315,209,320,159,313"/>
+<area shape="rect" href="namespacemod__functions__connectivity.html#ad727947fbcfbbb6f3b25ab9fa7515dda" title=" " alt="" coords="208,376,413,416"/>
+<area shape="poly" title=" " alt="" coords="119,318,208,362,227,369,225,374,206,366,117,323"/>
+<area shape="rect" href="namespacemod__load__balance.html#a15817905e67f4ca7528da16246b12814" title="reallocate blocks into processors for load balance" alt="" coords="221,440,401,480"/>
+<area shape="poly" title=" " alt="" coords="100,319,144,372,175,401,208,426,219,432,216,436,205,430,171,405,141,376,96,322"/>
+<area shape="rect" href="namespacemod__selectgrids.html#aa15f11bf5108fe0eae81eb81aa46f3b1" title=" " alt="" coords="207,505,415,530"/>
+<area shape="poly" title=" " alt="" coords="93,319,109,357,133,403,166,450,208,490,219,497,217,501,205,494,162,454,129,406,104,359,88,321"/>
+<area shape="rect" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26" title=" " alt="" coords="222,554,399,579"/>
+<area shape="poly" title=" " alt="" coords="90,319,103,365,126,425,160,487,183,515,208,539,218,546,215,550,205,543,179,519,156,490,121,427,98,367,85,321"/>
+<area shape="poly" title=" " alt="" coords="414,100,449,104,449,109,413,105"/>
 </map>
 </div>
 

@@ -100,10 +100,10 @@ Data Types</h2></td></tr>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a3417a3525ae4ffe14c013b3aed6fc62a" id="r_a3417a3525ae4ffe14c013b3aed6fc62a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a3417a3525ae4ffe14c013b3aed6fc62a">init_bc</a> ()</td></tr>
 <tr class="separator:a3417a3525ae4ffe14c013b3aed6fc62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a035ca86bfa7e52a61d1ba8f5d1389d" id="r_a5a035ca86bfa7e52a61d1ba8f5d1389d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a5a035ca86bfa7e52a61d1ba8f5d1389d">create_bc_mpi_datatype</a> (nwstart, nwbc)</td></tr>
-<tr class="separator:a5a035ca86bfa7e52a61d1ba8f5d1389d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af220ce2f6670740ab97991526fbc73a6" id="r_af220ce2f6670740ab97991526fbc73a6"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#af220ce2f6670740ab97991526fbc73a6">get_bc_comm_type</a> (comm_type, ixl, ixgl, nwstart, nwbc)</td></tr>
-<tr class="separator:af220ce2f6670740ab97991526fbc73a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327d9129bf4d1651e23a58a54e67f24d" id="r_a327d9129bf4d1651e23a58a54e67f24d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a327d9129bf4d1651e23a58a54e67f24d">create_bc_mpi_datatype</a> (nwstart, nwbc, nwfull)</td></tr>
+<tr class="separator:a327d9129bf4d1651e23a58a54e67f24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae797e7e897e117d714145b62abd87aa" id="r_aae797e7e897e117d714145b62abd87aa"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#aae797e7e897e117d714145b62abd87aa">get_bc_comm_type</a> (comm_type, ixl, ixgl, nwstart, nwbc, nwfull)</td></tr>
+<tr class="separator:aae797e7e897e117d714145b62abd87aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b945d19ee179d85b1b4a719a8dfcad6" id="r_a1b945d19ee179d85b1b4a719a8dfcad6"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6">getbc</a> (time, qdt, psb, nwstart, nwbc)</td></tr>
 <tr class="memdesc:a1b945d19ee179d85b1b4a719a8dfcad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">do update ghost cells of all blocks including physical boundaries  <br /></td></tr>
 <tr class="separator:a1b945d19ee179d85b1b4a719a8dfcad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -318,8 +318,8 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>update ghost cells of all blocks including physical boundaries </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a id="a5a035ca86bfa7e52a61d1ba8f5d1389d" name="a5a035ca86bfa7e52a61d1ba8f5d1389d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a035ca86bfa7e52a61d1ba8f5d1389d">&#9670;&#160;</a></span>create_bc_mpi_datatype()</h2>
+<a id="a327d9129bf4d1651e23a58a54e67f24d" name="a327d9129bf4d1651e23a58a54e67f24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a327d9129bf4d1651e23a58a54e67f24d">&#9670;&#160;</a></span>create_bc_mpi_datatype()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -334,7 +334,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>nwbc</em>&#160;</td>
+          <td class="paramname"><em>nwbc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in), optional&#160;</td>
+          <td class="paramname"><em>nwfull</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -343,23 +349,29 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nwfull</td><td>stride of the target state (its last-dim size); defaults to global nw. See get_bc_comm_type. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00318">318</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00331">331</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__ghostcells__update_a5a035ca86bfa7e52a61d1ba8f5d1389d_cgraph.png" border="0" usemap="#anamespacemod__ghostcells__update_a5a035ca86bfa7e52a61d1ba8f5d1389d_cgraph" alt=""/></div>
-<map name="anamespacemod__ghostcells__update_a5a035ca86bfa7e52a61d1ba8f5d1389d_cgraph" id="anamespacemod__ghostcells__update_a5a035ca86bfa7e52a61d1ba8f5d1389d_cgraph">
+<div class="center"><img src="namespacemod__ghostcells__update_a327d9129bf4d1651e23a58a54e67f24d_cgraph.png" border="0" usemap="#anamespacemod__ghostcells__update_a327d9129bf4d1651e23a58a54e67f24d_cgraph" alt=""/></div>
+<map name="anamespacemod__ghostcells__update_a327d9129bf4d1651e23a58a54e67f24d_cgraph" id="anamespacemod__ghostcells__update_a327d9129bf4d1651e23a58a54e67f24d_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,196,45"/>
-<area shape="rect" href="namespacemod__ghostcells__update.html#af220ce2f6670740ab97991526fbc73a6" title=" " alt="" coords="244,5,420,45"/>
+<area shape="rect" href="namespacemod__ghostcells__update.html#aae797e7e897e117d714145b62abd87aa" title=" " alt="" coords="244,5,420,45"/>
 <area shape="poly" title=" " alt="" coords="196,23,230,23,230,28,196,28"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="af220ce2f6670740ab97991526fbc73a6" name="af220ce2f6670740ab97991526fbc73a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af220ce2f6670740ab97991526fbc73a6">&#9670;&#160;</a></span>get_bc_comm_type()</h2>
+<a id="aae797e7e897e117d714145b62abd87aa" name="aae797e7e897e117d714145b62abd87aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae797e7e897e117d714145b62abd87aa">&#9670;&#160;</a></span>get_bc_comm_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -404,7 +416,13 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>nwbc</em>&#160;</td>
+          <td class="paramname"><em>nwbc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in), optional&#160;</td>
+          <td class="paramname"><em>nwfull</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -413,8 +431,14 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nwfull</td><td>total number of w-variables in the target state's last dimension (its stride). Defaults to the global nw (the hydro state). Pass the actual nw of a separate state (e.g. the RT intensity state, nw=nisw) so the MPI subarray stride matches that array's layout. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00339">339</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00368">368</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 
 </div>
 </div>
@@ -464,7 +488,7 @@ Here is the call graph for this function:</div>
 
 <p>do update ghost cells of all blocks including physical boundaries </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00361">361</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ghostcells__update_8t_source.html#l00396">396</a> of file <a class="el" href="mod__ghostcells__update_8t_source.html">mod_ghostcells_update.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

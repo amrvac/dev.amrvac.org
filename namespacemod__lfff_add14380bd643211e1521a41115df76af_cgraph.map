@@ -1,0 +1,7 @@
+<map id="mod_lfff::calc_lfff_2d" name="mod_lfff::calc_lfff_2d">
+<area shape="rect" id="Node000001" title="B from the stored modes at arbitrary points; Bf(:,:,1:3)=(Bx,By,Bz=alpha*A)" alt="" coords="5,42,163,67"/>
+<area shape="rect" id="Node000002" href="$namespacemod__lfff.html#a7889010247926211bee83eb344af33aa" title="Vertical transfer functions for one nonzero horizontal constant&#45;alpha Fourier mode...." alt="" coords="241,5,363,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,41,227,33,228,38,163,47"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="211,70,393,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,62,198,67,197,72,163,67"/>
+</map>

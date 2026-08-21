@@ -102,6 +102,9 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a90d7cd8cbcd1b2de285dee4d58973632" id="r_a90d7cd8cbcd1b2de285dee4d58973632"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__coarsen__refine.html#a90d7cd8cbcd1b2de285dee4d58973632">mod_coarsen_refine::amr_coarsen_refine</a></td></tr>
 <tr class="memdesc:a90d7cd8cbcd1b2de285dee4d58973632"><td class="mdescLeft">&#160;</td><td class="mdescRight">coarsen and refine blocks to update AMR grid  <br /></td></tr>
 <tr class="separator:a90d7cd8cbcd1b2de285dee4d58973632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4011ea3d94e52c5b65013b79df60c9bb" id="r_a4011ea3d94e52c5b65013b79df60c9bb"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__coarsen__refine.html#a4011ea3d94e52c5b65013b79df60c9bb">mod_coarsen_refine::amr_rebalance</a></td></tr>
+<tr class="memdesc:a4011ea3d94e52c5b65013b79df60c9bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cost-weighted rebalance without refine/coarsen. For static/uniform grids (refine_max_level=1) amr_coarsen_refine never runs, so the cost-weighted load_balance has no invocation point and the partition stays at the initial equal-block (cell-count) split -&gt; photosphere EoS-heavy ranks stall the rest. This migrates blocks to equalise the measured per-block cost (block_cost, populated when lb_automatic is on) then rebuilds connectivity + ghosts, mirroring the tail of amr_coarsen_refine.  <br /></td></tr>
+<tr class="separator:a4011ea3d94e52c5b65013b79df60c9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbdb5c3b209cb26da159a3a80033ba26" id="r_adbdb5c3b209cb26da159a3a80033ba26"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26">unflag_coarsen_siblings</a></td></tr>
 <tr class="separator:adbdb5c3b209cb26da159a3a80033ba26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -118,7 +121,7 @@ Functions/Subroutines</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__coarsen__refine_8t_source.html#l00300">300</a> of file <a class="el" href="mod__coarsen__refine_8t_source.html">mod_coarsen_refine.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__coarsen__refine_8t_source.html#l00328">328</a> of file <a class="el" href="mod__coarsen__refine_8t_source.html">mod_coarsen_refine.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

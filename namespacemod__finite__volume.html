@@ -219,6 +219,7 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>finite volume method </p>
+<p>undivided divergence of v at the interface, for the B19 diffusive flux</p>
 
 <p class="definition">Definition at line <a class="el" href="mod__finite__volume_8t_source.html#l00116">116</a> of file <a class="el" href="mod__finite__volume_8t_source.html">mod_finite_volume.t</a>.</p>
 <div class="dynheader">
@@ -463,8 +464,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Determine the upwinded wLC(ixL) and wRC(ixR) from w. the wCT is only used when PPM is exploited. </p>
+<p>RJV: the PPM reconstruction residual and the alternation switch</p>
+<p>scratch for a face-value velocity limiter (weno5/wenoz5/mp5): those routines write every variable at once, so they are run into a copy and only the momentum rows kept. Allocated only when such a limiter is actually requested.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__finite__volume_8t_source.html#l01122">1122</a> of file <a class="el" href="mod__finite__volume_8t_source.html">mod_finite_volume.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__finite__volume_8t_source.html#l01160">1160</a> of file <a class="el" href="mod__finite__volume_8t_source.html">mod_finite_volume.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

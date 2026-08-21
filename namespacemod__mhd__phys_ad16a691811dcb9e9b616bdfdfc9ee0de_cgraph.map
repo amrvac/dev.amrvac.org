@@ -1,9 +1,13 @@
 <map id="mod_mhd_phys::mhd_get_v" name="mod_mhd_phys::mhd_get_v">
-<area shape="rect" id="Node000001" title="Calculate v vector." alt="" coords="5,8,211,33"/>
-<area shape="rect" id="Node000002" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="525,8,708,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,8,259,6,368,3,477,6,512,8,512,13,477,11,368,8,259,11,211,14"/>
-<area shape="rect" id="Node000003" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="259,45,477,70"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,30,266,40,265,46,196,36"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="453,42,518,33,519,38,453,48"/>
-<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="328,47,319,37,324,27,340,21,368,18,403,22,413,27,417,33,412,36,409,31,402,27,368,24,341,26,327,31,324,36,332,43"/>
+<area shape="rect" id="Node000001" title="Calculate v vector." alt="" coords="5,106,211,131"/>
+<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="283,5,453,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,103,258,55,281,47,283,52,260,60,139,108"/>
+<area shape="rect" id="Node000003" href="$namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="283,69,453,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,104,268,98,269,103,211,110"/>
+<area shape="rect" id="Node000004" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="525,171,708,197"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="208,129,512,168,511,173,207,134"/>
+<area shape="rect" id="Node000005" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="259,209,477,234"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="142,129,323,201,321,206,140,134"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="453,206,518,196,519,201,453,211"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="328,210,319,200,324,190,340,184,368,182,403,186,413,191,417,196,412,199,409,195,402,191,368,187,341,189,327,194,324,200,332,207"/>
 </map>

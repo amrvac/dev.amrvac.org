@@ -78,13 +78,14 @@ var searchData=
   ['coolcurve_75',['coolcurve',['../structmod__radiative__cooling_1_1rc__fluid.html#a4d70720d09580eeb6a87c37666d32113',1,'mod_radiative_cooling::rc_fluid']]],
   ['coordinate_76',['coordinate',['../namespacemod__geometry.html#a40a838ac8eaddaaae3936f1bf6c9994f',1,'mod_geometry']]],
   ['costlist_77',['costlist',['../namespacemod__global__parameters.html#a1f9ee31e8034748c6b2e9c0ac4b74963',1,'mod_global_parameters']]],
-  ['courantpar_78',['courantpar',['../namespacemod__global__parameters.html#a6e9ec60e3266b9f605e1358cf753978d',1,'mod_global_parameters']]],
-  ['crash_79',['crash',['../namespacemod__global__parameters.html#ac423e9047236553af2021f67a3203bc0',1,'mod_global_parameters']]],
-  ['csound2_80',['csound2',['../structmod__eos__container_1_1eos__container.html#a5f2b1ba5fdc0e1c5432706bc9d2fadec',1,'mod_eos_container::eos_container']]],
-  ['csv_5fformat_81',['csv_format',['../namespacemod__particle__base.html#ad7b9c3f3f81ff3839373a2ee4b834e1c',1,'mod_particle_base']]],
-  ['csv_5fheader_82',['csv_header',['../namespacemod__particle__base.html#a77d1b86267333922cdd0f678e1ef5ac3',1,'mod_particle_base']]],
-  ['curl_5fa_5ferror_83',['curl_a_error',['../structmod__magnetic__helicity_1_1magnetic__helicity__result.html#a63930098ac60663f9e4f290714e7a551',1,'mod_magnetic_helicity::magnetic_helicity_result']]],
-  ['curl_5fap_5ferror_84',['curl_ap_error',['../structmod__magnetic__helicity_1_1magnetic__helicity__result.html#a608e2efca5170c86bf277ec7a22bb1b8',1,'mod_magnetic_helicity::magnetic_helicity_result']]],
-  ['cycles_85',['cycles',['../structmod__magnetic__reference__fv_1_1magnetic__reference__result.html#a4479dcb97d609160005d9e46e7bc36af',1,'mod_magnetic_reference_fv::magnetic_reference_result']]],
-  ['cylindrical_86',['cylindrical',['../namespacemod__geometry.html#a7dfe9570da752210b77b844ca363c0b9',1,'mod_geometry']]]
+  ['costlist_5fseen_78',['costlist_seen',['../namespacemod__global__parameters.html#a2f365a0bc12758faac6a64dc3850e234',1,'mod_global_parameters']]],
+  ['courantpar_79',['courantpar',['../namespacemod__global__parameters.html#a6e9ec60e3266b9f605e1358cf753978d',1,'mod_global_parameters']]],
+  ['crash_80',['crash',['../namespacemod__global__parameters.html#ac423e9047236553af2021f67a3203bc0',1,'mod_global_parameters']]],
+  ['csound2_81',['csound2',['../structmod__eos__container_1_1eos__container.html#a5f2b1ba5fdc0e1c5432706bc9d2fadec',1,'mod_eos_container::eos_container']]],
+  ['csv_5fformat_82',['csv_format',['../namespacemod__particle__base.html#ad7b9c3f3f81ff3839373a2ee4b834e1c',1,'mod_particle_base']]],
+  ['csv_5fheader_83',['csv_header',['../namespacemod__particle__base.html#a77d1b86267333922cdd0f678e1ef5ac3',1,'mod_particle_base']]],
+  ['curl_5fa_5ferror_84',['curl_a_error',['../structmod__magnetic__helicity_1_1magnetic__helicity__result.html#a63930098ac60663f9e4f290714e7a551',1,'mod_magnetic_helicity::magnetic_helicity_result']]],
+  ['curl_5fap_5ferror_85',['curl_ap_error',['../structmod__magnetic__helicity_1_1magnetic__helicity__result.html#a608e2efca5170c86bf277ec7a22bb1b8',1,'mod_magnetic_helicity::magnetic_helicity_result']]],
+  ['cycles_86',['cycles',['../structmod__magnetic__reference__fv_1_1magnetic__reference__result.html#a4479dcb97d609160005d9e46e7bc36af',1,'mod_magnetic_reference_fv::magnetic_reference_result']]],
+  ['cylindrical_87',['cylindrical',['../namespacemod__geometry.html#a7dfe9570da752210b77b844ca363c0b9',1,'mod_geometry']]]
 ];
