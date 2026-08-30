@@ -1,0 +1,21 @@
+<map id="mod_nlfff_grad_rubin::extrapolate_nlfff_grad_rubin" name="mod_nlfff_grad_rubin::extrapolate_nlfff_grad_rubin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,216,220,256"/>
+<area shape="rect" id="Node000002" href="$namespacemod__nlfff__diagnostics.html#a47312cd5bf4d4fa9fe911478dd013025" title="Evaluate the same metrics on a replicated uniform dense field. Plane 1 is the lower boundary and plan..." alt="" coords="273,5,495,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,215,146,180,178,137,219,93,267,55,277,49,280,53,269,60,223,97,182,140,150,183,128,217"/>
+<area shape="rect" id="Node000006" href="$namespacemod__lfff.html#a53fc9de11974b7abdf0dc19058172f87" title="Construct an open&#45;half&#45;space potential field on one dense Cartesian grid. Plane 1 is the magnetogram ..." alt="" coords="305,69,463,109"/>
+<area shape="poly" id="edge2_Node000001_Node000006" title=" " alt="" coords="137,214,194,170,267,126,298,112,301,117,269,130,197,175,140,218"/>
+<area shape="rect" id="Node000010" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="548,134,731,159"/>
+<area shape="poly" id="edge8_Node000001_Node000010" title=" " alt="" coords="152,213,205,189,267,169,336,156,406,148,534,142,534,147,406,154,337,162,269,175,207,194,154,218"/>
+<area shape="rect" id="Node000011" href="$namespacemod__nlfff__grad__rubin.html#a1197acf526fad41c06d5ce4a21dae884" title=" " alt="" coords="268,184,500,224"/>
+<area shape="poly" id="edge4_Node000001_Node000011" title=" " alt="" coords="220,221,254,217,255,222,220,226"/>
+<area shape="rect" id="Node000012" href="$namespacemod__nlfff__grad__rubin.html#a56947030b31492fd8d7f2e4df2d94bcc" title=" " alt="" coords="275,248,493,288"/>
+<area shape="poly" id="edge6_Node000001_Node000012" title=" " alt="" coords="220,246,261,251,261,256,220,251"/>
+<area shape="rect" id="Node000016" href="$namespacemod__nlfff__grad__rubin.html#a089a73325912e00481ec241ff2f06044" title=" " alt="" coords="281,312,487,352"/>
+<area shape="poly" id="edge7_Node000001_Node000016" title=" " alt="" coords="160,254,269,297,293,305,292,311,267,303,158,259"/>
+<area shape="rect" id="Node000018" href="$namespacemod__nlfff__diagnostics.html#a1ee1384d656da7b1b15851269e1a98d9" title=" " alt="" coords="301,377,467,431"/>
+<area shape="poly" id="edge9_Node000001_Node000018" title=" " alt="" coords="135,254,193,307,230,336,269,362,289,372,287,377,267,366,227,340,189,311,132,258"/>
+<area shape="rect" id="Node000019" href="$namespacemod__nlfff__diagnostics.html#a5272034b6249c1272f13fbcfd1293315" title=" " alt="" coords="293,456,475,496"/>
+<area shape="poly" id="edge10_Node000001_Node000019" title=" " alt="" coords="126,255,147,295,179,345,220,396,270,441,282,448,279,452,266,445,216,400,174,348,142,297,121,258"/>
+<area shape="poly" id="edge3_Node000006_Node000010" title=" " alt="" coords="464,104,569,128,568,134,463,110"/>
+<area shape="poly" id="edge5_Node000011_Node000010" title=" " alt="" coords="473,181,568,160,570,165,474,187"/>
+</map>

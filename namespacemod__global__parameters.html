@@ -1005,8 +1005,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a4ebd0a5ae560288eeb5dfd3b2f251429" id="r_a4ebd0a5ae560288eeb5dfd3b2f251429"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__global__parameters.html#a4ebd0a5ae560288eeb5dfd3b2f251429">stagger_grid</a> =.false.</td></tr>
 <tr class="memdesc:a4ebd0a5ae560288eeb5dfd3b2f251429"><td class="mdescLeft">&#160;</td><td class="mdescRight">True for using stagger grid.  <br /></td></tr>
 <tr class="separator:a4ebd0a5ae560288eeb5dfd3b2f251429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fb6c31e8bf8f919b74d0777f5aa0df5" id="r_a5fb6c31e8bf8f919b74d0777f5aa0df5"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__global__parameters.html#a5fb6c31e8bf8f919b74d0777f5aa0df5">ghostcell_comm_batched</a> =.true.</td></tr>
-<tr class="memdesc:a5fb6c31e8bf8f919b74d0777f5aa0df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limit outstanding ghost-cell send requests to avoid MPI request pressure. In large-scale MHD tests, the original all-at-once ghost-cell exchange could stall during spherical u512 initialization. Batching avoids that failure mode, while u256 5-step tests showed less than 0.1% total runtime difference. The original path is still available by setting this to false; if batching remains stable in broader tests, the old path can be removed later.  <br /></td></tr>
+<tr class="memitem:a5fb6c31e8bf8f919b74d0777f5aa0df5" id="r_a5fb6c31e8bf8f919b74d0777f5aa0df5"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__global__parameters.html#a5fb6c31e8bf8f919b74d0777f5aa0df5">ghostcell_comm_batched</a> =.false.</td></tr>
+<tr class="memdesc:a5fb6c31e8bf8f919b74d0777f5aa0df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limit outstanding ghost-cell send requests to avoid MPI request pressure. In large-scale MHD tests, the original all-at-once ghost-cell exchange could stall during spherical u512 initialization. Batching avoids that failure mode, while u256 5-step tests showed less than 0.1% total runtime difference. The original path is still available by setting this to false; if batching remains stable in broader tests, the old path can be removed later. Disabled by default; set this to true to opt in.  <br /></td></tr>
 <tr class="separator:a5fb6c31e8bf8f919b74d0777f5aa0df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a496663891e89f1c2a202703e6ce6830c" id="r_a496663891e89f1c2a202703e6ce6830c"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__global__parameters.html#a496663891e89f1c2a202703e6ce6830c">ghostcell_comm_batch_size</a> =64</td></tr>
 <tr class="separator:a496663891e89f1c2a202703e6ce6830c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3233,12 +3233,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">logical mod_global_parameters::ghostcell_comm_batched =.true.</td>
+          <td class="memname">logical mod_global_parameters::ghostcell_comm_batched =.false.</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Limit outstanding ghost-cell send requests to avoid MPI request pressure. In large-scale MHD tests, the original all-at-once ghost-cell exchange could stall during spherical u512 initialization. Batching avoids that failure mode, while u256 5-step tests showed less than 0.1% total runtime difference. The original path is still available by setting this to false; if batching remains stable in broader tests, the old path can be removed later. </p>
+<p>Limit outstanding ghost-cell send requests to avoid MPI request pressure. In large-scale MHD tests, the original all-at-once ghost-cell exchange could stall during spherical u512 initialization. Batching avoids that failure mode, while u256 5-step tests showed less than 0.1% total runtime difference. The original path is still available by setting this to false; if batching remains stable in broader tests, the old path can be removed later. Disabled by default; set this to true to opt in. </p>
 
 <p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00773">773</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 

@@ -109,10 +109,13 @@ $(function() {
 <div class="line">mf_cy=0.2d0            <span class="comment">! magnetofriction velocity coefficient</span></div>
 <div class="line">mf_cdivb=0.01d0        <span class="comment">! diffusive div(B) cleaning coefficient</span></div>
 <div class="line">mf_log_mode=<span class="stringliteral">&#39;auto&#39;</span>     <span class="comment">! &#39;auto&#39;, &#39;append&#39;, or &#39;replace&#39;</span></div>
-<div class="line">mf_log_filename=<span class="stringliteral">&#39;&#39;</span>     ! empty: &lt;base_filename&gt;_mflog.csv</div>
+<div class="line">mf_log_filename=<span class="stringliteral">&#39;&#39;</span>     <span class="comment">! empty: &lt;base_filename&gt;_mflog.csv</span></div>
+<div class="line">mf_write_detailed_history=.false. ! enable the legacy _mflog.csv</div>
 </div><!-- fragment --><p>With &lsquo;mf_log_mode='auto&rsquo;<code>, a run starting from a potential snapshot (</code>it=0<code>) replaces the diagnostics CSV, while a restart from an MF checkpoint (</code>it&gt;0<code>) appends to it. A nonempty</code>mf_log_filename` gives the CSV any user-selected name.</p>
 <p><code>refine_max_level=1</code> is valid and needs no AMR work. For higher levels, the Python staging helper rebuilds the restart grid immediately and the user refinement callback forces every block touching the driven lower boundary to the maximum level. Other blocks follow the magnetic-field refinement settings in <code>meshlist</code>.</p>
-<p>The relaxation writes AMRVAC checkpoint snapshots and, when <code>autoconvert</code> is enabled, cell-centered VTU files under <code>base_filename</code>. It also writes the MF diagnostics CSV containing iteration/time and force-free/divergence metrics. </p>
+<p>The relaxation writes AMRVAC checkpoint snapshots and, when <code>autoconvert</code> is enabled, cell-centered VTU files under <code>base_filename</code>. It always writes <code>&lt;base_filename&gt;_nlfff_metrics.csv</code>, using the same compact external schema as the optimization and Grad&ndash;Rubin extrapolators:</p>
+<div class="fragment"><div class="line">iteration,CW_sin_theta,epsilon_force,epsilon_div,magnetic_energy</div>
+</div><!-- fragment --><p>The existing <code>_mflog.csv</code> is available for compatibility and for its artificial MF time step, fractional-flux metric, mean current, and mean Lorentz force. It is disabled by default; add <code>detailed_history.par</code> to the input list or set <code>mf_write_detailed_history=.true.</code> in <code>mf_list</code> to enable it. The common file uses all active cells and is the preferred cross-method plot. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

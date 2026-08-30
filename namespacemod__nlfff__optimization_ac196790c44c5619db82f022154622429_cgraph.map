@@ -1,0 +1,9 @@
+<map id="mod_nlfff_optimization::nlfff_fixed_active_index" name="mod_nlfff_optimization::nlfff_fixed_active_index">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,189,79"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="54,40,52,30,59,20,74,15,97,13,124,16,139,23,136,28,123,21,97,18,75,20,62,25,57,31,60,38"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="237,5,420,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,40,243,30,244,36,190,46"/>
+<area shape="rect" id="Node000003" href="$namespacemod__nlfff__optimization.html#a2044c2bcf64ceb7c8e3efb983348a884" title=" " alt="" coords="242,79,415,119"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="190,73,229,79,228,85,189,78"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="286,80,283,70,290,60,305,55,329,53,355,56,370,63,368,68,354,61,329,58,307,60,293,65,288,71,291,78"/>
+</map>

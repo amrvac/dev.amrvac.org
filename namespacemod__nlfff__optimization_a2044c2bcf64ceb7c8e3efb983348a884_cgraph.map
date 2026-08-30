@@ -1,0 +1,10 @@
+<map id="mod_nlfff_optimization::nlfff_weight_product" name="mod_nlfff_optimization::nlfff_weight_product">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,73,179,113"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="49,74,47,64,53,54,69,49,92,47,119,50,133,57,131,62,117,55,92,52,70,54,57,59,52,65,54,72"/>
+<area shape="rect" id="Node000002" href="$namespacemod__nlfff__optimization.html#af56b3bf7c10f5dffb53a5fa3c5e9826c" title=" " alt="" coords="227,29,417,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,74,213,67,214,73,180,79"/>
+<area shape="rect" id="Node000003" href="$namespacemod__nlfff__optimization.html#a4197a6c1ea7a8d30e27dccc7a8f2bba2" title=" " alt="" coords="230,117,414,157"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="180,107,217,115,216,120,179,113"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="279,30,277,20,283,10,299,5,322,3,349,6,363,13,361,18,347,11,322,8,300,10,287,15,282,21,284,28"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="279,118,277,108,283,98,299,93,322,91,349,94,363,101,361,106,347,99,322,96,300,98,287,103,282,109,284,116"/>
+</map>

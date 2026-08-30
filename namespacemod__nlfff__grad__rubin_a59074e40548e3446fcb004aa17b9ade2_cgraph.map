@@ -1,0 +1,7 @@
+<map id="mod_nlfff_grad_rubin::init_nlfff_grad_rubin_boundary" name="mod_nlfff_grad_rubin::init_nlfff_grad_rubin_boundary">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,34,165,89"/>
+<area shape="rect" id="Node000002" href="$namespacemod__lfff.html#a2e5a5f1014bda02369ff509f4043a64d" title=" " alt="" coords="213,5,388,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,45,200,40,200,45,166,51"/>
+<area shape="rect" id="Node000007" href="$namespacemod__nlfff__grad__rubin.html#a8422acfd0442901b9e267f93ad106b13" title=" " alt="" coords="221,70,381,125"/>
+<area shape="poly" id="edge2_Node000001_Node000007" title=" " alt="" coords="166,72,207,79,206,84,165,77"/>
+</map>

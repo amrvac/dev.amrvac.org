@@ -9,13 +9,12 @@ var searchData=
   ['reading_20the_20vtk_20files_6',['Reading the vtk files',['../md_doc_2python__vtkfiles.html',1,'']]],
   ['readme_7',['README',['../md_tests_2mhd_2icarus_2README.html',1,'']]],
   ['refinement_8',['Adaptive Mesh Refinement',['../md_doc_2amrstructure.html',1,'']]],
-  ['regression_9',['Magnetic Topology/QSL Regression',['../md_tests_2mhd_2magnetic__topology__qsl_2README.html',1,'']]],
-  ['regression_20tests_10',['UAWSoM one-dimensional regression tests',['../md_tests_2mhd_2UAWSoM__1D_2README.html',1,'']]],
-  ['related_20to_20mpi_20amrvac_11',['Publications related to MPI-AMRVAC',['../md_doc_2publications.html',1,'']]],
-  ['relaxation_12',['Data-Driven Magnetofrictional Relaxation',['../md_tests_2demo4_2Data__Driven_2MagnetofrictionalRelaxation_2README.html',1,'']]],
-  ['rhd_13',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]],
-  ['richtmeyer_20meshkov_202d_20test_20problem_14',['Richtmeyer Meshkov 2D test problem',['../md_tests_2hd_2Richtmyer__Meshkov_2Richtmeyer__Meshkov.html',1,'']]],
-  ['riemann_202d_20test_20problems_15',['Riemann 2D test problems',['../md_tests_2hd_2Riemann__2D_2Riemann__2D.html',1,'']]],
-  ['riemann_202d_20test_20problems_3a_20isothermal_20hd_20variant_16',['Riemann 2D test problems: isothermal HD variant',['../md_tests_2hd_2Riemann__hdiso__2D_2Riemann__iso__2D.html',1,'']]],
-  ['rotating_20frame_20for_20hd_20mhd_20rhd_17',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]]
+  ['regression_20tests_9',['UAWSoM one-dimensional regression tests',['../md_tests_2mhd_2UAWSoM__1D_2README.html',1,'']]],
+  ['related_20to_20mpi_20amrvac_10',['Publications related to MPI-AMRVAC',['../md_doc_2publications.html',1,'']]],
+  ['relaxation_11',['Data-Driven Magnetofrictional Relaxation',['../md_tests_2demo4_2Data__Driven_2MagnetofrictionalRelaxation_2README.html',1,'']]],
+  ['rhd_12',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]],
+  ['richtmeyer_20meshkov_202d_20test_20problem_13',['Richtmeyer Meshkov 2D test problem',['../md_tests_2hd_2Richtmyer__Meshkov_2Richtmeyer__Meshkov.html',1,'']]],
+  ['riemann_202d_20test_20problems_14',['Riemann 2D test problems',['../md_tests_2hd_2Riemann__2D_2Riemann__2D.html',1,'']]],
+  ['riemann_202d_20test_20problems_3a_20isothermal_20hd_20variant_15',['Riemann 2D test problems: isothermal HD variant',['../md_tests_2hd_2Riemann__hdiso__2D_2Riemann__iso__2D.html',1,'']]],
+  ['rotating_20frame_20for_20hd_20mhd_20rhd_16',['Rotating frame for HD/MHD/RHD',['../md_doc_2rotatingframe.html',1,'']]]
 ];

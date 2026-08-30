@@ -18,12 +18,14 @@ var searchData=
   ['write_5fforest_15',['write_forest',['../namespacemod__functions__forest.html#a5fe089544b6f559e305b5b6e41544191',1,'mod_functions_forest']]],
   ['write_5fimage_5fvticc_16',['write_image_vticc',['../namespacemod__thermal__emission.html#a86ff4d9d0d3eb13ad3f25f76300aebd0',1,'mod_thermal_emission']]],
   ['write_5fimage_5fvtucc_17',['write_image_vtucc',['../namespacemod__thermal__emission.html#a4745b185e610b9bc350457092ed11d84',1,'mod_thermal_emission']]],
-  ['write_5fnode_18',['write_node',['../mod__functions__forest_8t.html#a455218bfc25a569be0695c986771743f',1,'mod_functions_forest.t']]],
-  ['write_5fparticle_5foutput_19',['write_particle_output',['../namespacemod__particle__base.html#a22d691333cb182e116559e4043a16590',1,'mod_particle_base']]],
-  ['write_5fparticles_5fsnapshot_20',['write_particles_snapshot',['../namespacemod__particle__base.html#a50c09bd15de4d2f51f730d3a73b407f2',1,'mod_particle_base']]],
-  ['write_5fpvtu_21',['write_pvtu',['../namespacemod__convert__files.html#a33f6f0d49f291822c627ff9b9f280cc4',1,'mod_convert_files']]],
-  ['write_5fslice_22',['write_slice',['../namespacemod__slice.html#a6a45feb00cf001fcff14f72e126a89c4',1,'mod_slice']]],
-  ['write_5fsnapshot_23',['write_snapshot',['../namespacemod__input__output.html#ae1d4a41dcf32cae3752c48ef73f42364',1,'mod_input_output']]],
-  ['write_5fvti_24',['write_vti',['../namespacemod__convert__files.html#a89e212aca54157b3587cb0387f0daeb9',1,'mod_convert_files']]],
-  ['write_5fvtk_25',['write_vtk',['../namespacemod__convert__files.html#a17e5b35847809de23092eab595b83b74',1,'mod_convert_files']]]
+  ['write_5fnlfff_5fmetrics_5fheader_18',['write_nlfff_metrics_header',['../namespacemod__nlfff__diagnostics.html#a1ee1384d656da7b1b15851269e1a98d9',1,'mod_nlfff_diagnostics']]],
+  ['write_5fnlfff_5fmetrics_5frow_19',['write_nlfff_metrics_row',['../namespacemod__nlfff__diagnostics.html#a5272034b6249c1272f13fbcfd1293315',1,'mod_nlfff_diagnostics']]],
+  ['write_5fnode_20',['write_node',['../mod__functions__forest_8t.html#a455218bfc25a569be0695c986771743f',1,'mod_functions_forest.t']]],
+  ['write_5fparticle_5foutput_21',['write_particle_output',['../namespacemod__particle__base.html#a22d691333cb182e116559e4043a16590',1,'mod_particle_base']]],
+  ['write_5fparticles_5fsnapshot_22',['write_particles_snapshot',['../namespacemod__particle__base.html#a50c09bd15de4d2f51f730d3a73b407f2',1,'mod_particle_base']]],
+  ['write_5fpvtu_23',['write_pvtu',['../namespacemod__convert__files.html#a33f6f0d49f291822c627ff9b9f280cc4',1,'mod_convert_files']]],
+  ['write_5fslice_24',['write_slice',['../namespacemod__slice.html#a6a45feb00cf001fcff14f72e126a89c4',1,'mod_slice']]],
+  ['write_5fsnapshot_25',['write_snapshot',['../namespacemod__input__output.html#ae1d4a41dcf32cae3752c48ef73f42364',1,'mod_input_output']]],
+  ['write_5fvti_26',['write_vti',['../namespacemod__convert__files.html#a89e212aca54157b3587cb0387f0daeb9',1,'mod_convert_files']]],
+  ['write_5fvtk_27',['write_vtk',['../namespacemod__convert__files.html#a17e5b35847809de23092eab595b83b74',1,'mod_convert_files']]]
 ];

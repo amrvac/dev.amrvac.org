@@ -9,5 +9,6 @@ var searchData=
   ['installation_6',['Installation',['../md_doc_2installation.html',1,'']]],
   ['integrated_20quantities_7',['Looking at line-integrated quantities',['../md_doc_2collapsed.html',1,'']]],
   ['isothermal_20hd_20variant_8',['Riemann 2D test problems: isothermal HD variant',['../md_tests_2hd_2Riemann__hdiso__2D_2Riemann__iso__2D.html',1,'']]],
-  ['its_20documentation_9',['Contributing to MPI-AMRVAC and its documentation',['../md_doc_2contributing.html',1,'']]]
+  ['iteration_20diagnostics_9',['Common NLFFF iteration diagnostics',['../md_doc_2nlfff__diagnostics.html',1,'']]],
+  ['its_20documentation_10',['Contributing to MPI-AMRVAC and its documentation',['../md_doc_2contributing.html',1,'']]]
 ];
