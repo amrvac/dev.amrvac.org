@@ -108,9 +108,10 @@ var searchData=
   ['examples_105',['Examples',['../md_doc_2yt__usage.html#examples',1,'']]],
   ['examples_2emd_106',['examples.md',['../examples_8md.html',1,'']]],
   ['exp_5fclamped_107',['exp_clamped',['../namespacemod__thermal__emission.html#a43aeebfd3770e24fbd18025f34e4a58c',1,'mod_thermal_emission']]],
-  ['extrapolate_5fnlfff_5fgrad_5frubin_108',['extrapolate_nlfff_grad_rubin',['../namespacemod__nlfff__grad__rubin.html#a82a422c9fa3d82f726de0ff8ba9bdcb8',1,'mod_nlfff_grad_rubin']]],
-  ['extrapolate_5fnlfff_5foptimization_109',['extrapolate_nlfff_optimization',['../namespacemod__nlfff__optimization.html#a993decd2817b6e47a18a0efcbda850b6',1,'mod_nlfff_optimization']]],
-  ['extrapolate_5fpotential_5ffft_110',['extrapolate_potential_fft',['../namespacemod__lfff.html#ae0373e8a4d398c79dbec30ecddf99cf5',1,'mod_lfff']]],
-  ['extrapolate_5fpotential_5ffft_5fdense_111',['extrapolate_potential_fft_dense',['../namespacemod__lfff.html#a53fc9de11974b7abdf0dc19058172f87',1,'mod_lfff']]],
-  ['extreme_20alfven_20speed_112',['Solve semirelativistic MHD to tackle extreme Alfven speed',['../md_doc_2par.html#par_semirelati',1,'']]]
+  ['extrapolate_108',['extrapolate',['../namespacemod__gimli.html#aa955204c3c69eef9da3d1c7be918b401',1,'mod_gimli']]],
+  ['extrapolate_5fnlfff_5fgrad_5frubin_109',['extrapolate_nlfff_grad_rubin',['../namespacemod__nlfff__grad__rubin.html#a82a422c9fa3d82f726de0ff8ba9bdcb8',1,'mod_nlfff_grad_rubin']]],
+  ['extrapolate_5fnlfff_5foptimization_110',['extrapolate_nlfff_optimization',['../namespacemod__nlfff__optimization.html#a993decd2817b6e47a18a0efcbda850b6',1,'mod_nlfff_optimization']]],
+  ['extrapolate_5fpotential_5ffft_111',['extrapolate_potential_fft',['../namespacemod__lfff.html#ae0373e8a4d398c79dbec30ecddf99cf5',1,'mod_lfff']]],
+  ['extrapolate_5fpotential_5ffft_5fdense_112',['extrapolate_potential_fft_dense',['../namespacemod__lfff.html#a53fc9de11974b7abdf0dc19058172f87',1,'mod_lfff']]],
+  ['extreme_20alfven_20speed_113',['Solve semirelativistic MHD to tackle extreme Alfven speed',['../md_doc_2par.html#par_semirelati',1,'']]]
 ];

@@ -41,8 +41,9 @@ var searchData=
   ['evaluate_5fnlfff_5fmetrics_5famrvac_38',['evaluate_nlfff_metrics_amrvac',['../namespacemod__nlfff__diagnostics.html#a58a302e7dda4b78dc1d6d58b64b01525',1,'mod_nlfff_diagnostics']]],
   ['evaluate_5fnlfff_5fmetrics_5fdense_39',['evaluate_nlfff_metrics_dense',['../namespacemod__nlfff__diagnostics.html#a47312cd5bf4d4fa9fe911478dd013025',1,'mod_nlfff_diagnostics']]],
   ['exp_5fclamped_40',['exp_clamped',['../namespacemod__thermal__emission.html#a43aeebfd3770e24fbd18025f34e4a58c',1,'mod_thermal_emission']]],
-  ['extrapolate_5fnlfff_5fgrad_5frubin_41',['extrapolate_nlfff_grad_rubin',['../namespacemod__nlfff__grad__rubin.html#a82a422c9fa3d82f726de0ff8ba9bdcb8',1,'mod_nlfff_grad_rubin']]],
-  ['extrapolate_5fnlfff_5foptimization_42',['extrapolate_nlfff_optimization',['../namespacemod__nlfff__optimization.html#a993decd2817b6e47a18a0efcbda850b6',1,'mod_nlfff_optimization']]],
-  ['extrapolate_5fpotential_5ffft_43',['extrapolate_potential_fft',['../namespacemod__lfff.html#ae0373e8a4d398c79dbec30ecddf99cf5',1,'mod_lfff']]],
-  ['extrapolate_5fpotential_5ffft_5fdense_44',['extrapolate_potential_fft_dense',['../namespacemod__lfff.html#a53fc9de11974b7abdf0dc19058172f87',1,'mod_lfff']]]
+  ['extrapolate_41',['extrapolate',['../namespacemod__gimli.html#aa955204c3c69eef9da3d1c7be918b401',1,'mod_gimli']]],
+  ['extrapolate_5fnlfff_5fgrad_5frubin_42',['extrapolate_nlfff_grad_rubin',['../namespacemod__nlfff__grad__rubin.html#a82a422c9fa3d82f726de0ff8ba9bdcb8',1,'mod_nlfff_grad_rubin']]],
+  ['extrapolate_5fnlfff_5foptimization_43',['extrapolate_nlfff_optimization',['../namespacemod__nlfff__optimization.html#a993decd2817b6e47a18a0efcbda850b6',1,'mod_nlfff_optimization']]],
+  ['extrapolate_5fpotential_5ffft_44',['extrapolate_potential_fft',['../namespacemod__lfff.html#ae0373e8a4d398c79dbec30ecddf99cf5',1,'mod_lfff']]],
+  ['extrapolate_5fpotential_5ffft_5fdense_45',['extrapolate_potential_fft_dense',['../namespacemod__lfff.html#a53fc9de11974b7abdf0dc19058172f87',1,'mod_lfff']]]
 ];
