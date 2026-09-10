@@ -69,7 +69,7 @@ var searchData=
   ['vhat_66',['vhat',['../namespacemod__magnetofriction.html#a845e3e96b21f59f061f00742839f39e6',1,'mod_magnetofriction']]],
   ['vhelmholtz_5flambda_67',['vhelmholtz_lambda',['../namespacem__octree__mg__1d.html#a61581d1bdaf9126e7a4ac2fb8aa0c374',1,'m_octree_mg_1d::vhelmholtz_lambda'],['../namespacem__octree__mg__2d.html#a9c7c878a1a3c9b8f6d349baa7e284ca1',1,'m_octree_mg_2d::vhelmholtz_lambda'],['../namespacem__octree__mg__3d.html#a9aeeec0cbe05d0c5968829b80cf55a32',1,'m_octree_mg_3d::vhelmholtz_lambda']]],
   ['vhelmholtz_5fset_5flambda_68',['vhelmholtz_set_lambda',['../namespacem__octree__mg__2d.html#ab48fe1ad0459d29bc45d190771f56fdc',1,'m_octree_mg_2d::vhelmholtz_set_lambda()'],['../namespacem__octree__mg__1d.html#a7a4d289b5adba09bbcae505f407a67be',1,'m_octree_mg_1d::vhelmholtz_set_lambda()'],['../namespacem__octree__mg__3d.html#a4344c1e34e58b185e2a7fd771d99101d',1,'m_octree_mg_3d::vhelmholtz_set_lambda()']]],
-  ['vhelmholtz_5fset_5fmethods_69',['vhelmholtz_set_methods',['../namespacem__octree__mg__1d.html#a5ca54b4b475dcb37f379f694bc578605',1,'m_octree_mg_1d::vhelmholtz_set_methods()'],['../namespacem__octree__mg__3d.html#a26eb133b4d9277442fdcde45c7f94d71',1,'m_octree_mg_3d::vhelmholtz_set_methods()'],['../namespacem__octree__mg__2d.html#a0419122d3663636f2f1f93a5f63b679d',1,'m_octree_mg_2d::vhelmholtz_set_methods()']]],
+  ['vhelmholtz_5fset_5fmethods_69',['vhelmholtz_set_methods',['../namespacem__octree__mg__1d.html#a5ca54b4b475dcb37f379f694bc578605',1,'m_octree_mg_1d::vhelmholtz_set_methods()'],['../namespacem__octree__mg__2d.html#a0419122d3663636f2f1f93a5f63b679d',1,'m_octree_mg_2d::vhelmholtz_set_methods()'],['../namespacem__octree__mg__3d.html#a26eb133b4d9277442fdcde45c7f94d71',1,'m_octree_mg_3d::vhelmholtz_set_methods()']]],
   ['views_70',['Synthetic views',['../md_doc_2python__datfiles.html#synthetic_dat',1,'']]],
   ['viscosity_5fadd_5fsource_71',['viscosity_add_source',['../namespacemod__viscosity.html#aec9be24d8fc7c3afb5cfdf9b1c06f1a2',1,'mod_viscosity']]],
   ['viscosity_5fadd_5fsource_5fcartesian_72',['viscosity_add_source_cartesian',['../namespacemod__viscosity.html#a34622258e58b61ee604aca9ed6a46cf7',1,'mod_viscosity']]],
@@ -88,5 +88,7 @@ var searchData=
   ['voigt_5fprofile_5fratio_85',['voigt_profile_ratio',['../namespacemod__radiative__cooling.html#a021e7857fc29d60332302aa525b6ab34',1,'mod_radiative_cooling']]],
   ['volume_20magnetic_20helicity_86',['volume magnetic helicity',['../md_tests_2demo4_2MagneticHelicity__Cart_2README.html',1,'Cartesian finite-volume magnetic helicity'],['../md_doc_2magnetic__helicity.html',1,'Finite-volume magnetic helicity']]],
   ['vp_87',['vp',['../namespacemod__particle__base.html#aaf063a0b45a8e523c163d101fdb1419e',1,'mod_particle_base']]],
-  ['vtk_20files_88',['vtk files',['../md_doc_2python__vtkfiles.html#introductionvtk',1,'Introduction on reading vtk files'],['../md_doc_2python__vtkfiles.html',1,'Reading the vtk files']]]
+  ['vtk_20files_88',['vtk files',['../md_doc_2python__vtkfiles.html#introductionvtk',1,'Introduction on reading vtk files'],['../md_doc_2python__vtkfiles.html',1,'Reading the vtk files']]],
+  ['vtk_5fcell_5ftype_89',['vtk_cell_type',['../namespacemod__convert__files.html#ae28f0d7b398e9ff421c493b20fc17d7c',1,'mod_convert_files']]],
+  ['vtk_5fcoordinates_5ftransformed_90',['vtk_coordinates_transformed',['../namespacemod__convert__files.html#aa0d504ebad835aec1dc4df65981e4a5d',1,'mod_convert_files']]]
 ];
