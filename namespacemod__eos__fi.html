@@ -90,7 +90,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a8086c4873404cce71e1c1894a4b3cd30" id="r_a8086c4873404cce71e1c1894a4b3cd30"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__fi.html#a8086c4873404cce71e1c1894a4b3cd30">eos_init_fi</a> ()</td></tr>
-<tr class="memdesc:a8086c4873404cce71e1c1894a4b3cd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_Te_FI is PRIVATE: bound to eosget_Te inside eos_finalise_FI only. The rest stay public: update_eos_FI (ffhd_phys), get_gamma1_FI (the seam phys_get_gamma1), get_temperature_from_{eint,pressure}_FI (reused by mod_eos_PI), and the init/finalise dispatcher arms.  <br /></td></tr>
+<tr class="memdesc:a8086c4873404cce71e1c1894a4b3cd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">get_Te_FI is PRIVATE: bound to eosget_Te inside eos_finalise_FI only. The rest stay public: update_eos_FI (ffhd_phys), get_gamma1_FI (the seam phys_get_gamma1), get_temperature_from_{eint,pressure}_FI (reused by <a class="el" href="namespacemod__eos__pi.html" title="PI (partial-ionisation, eos_type=&#39;PI&#39;) arm of the eos% family.">mod_eos_pi</a>), and the init/finalise dispatcher arms.  <br /></td></tr>
 <tr class="separator:a8086c4873404cce71e1c1894a4b3cd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcd138ac27f58ec9112aa027c7eb5bf7" id="r_abcd138ac27f58ec9112aa027c7eb5bf7"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__fi.html#abcd138ac27f58ec9112aa027c7eb5bf7">eos_finalise_fi</a> ()</td></tr>
 <tr class="memdesc:abcd138ac27f58ec9112aa027c7eb5bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">FI arm of eos_finalise: wire the ideal-gas getter set and the fully-ionised particle counts (2 + 3*A_He per H; ne/nH = 1 + 2*A_He). No tables to load.  <br /></td></tr>
@@ -127,7 +127,7 @@ Functions/Subroutines</h2></td></tr>
 <p>FI arm of eos_finalise: wire the ideal-gas getter set and the fully-ionised particle counts (2 + 3*A_He per H; ne/nH = 1 + 2*A_He). No tables to load. </p>
 <p>nothing cached for ideal gas</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__FI_8t_source.html#l00041">41</a> of file <a class="el" href="mod__eos__FI_8t_source.html">mod_eos_FI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__fi_8t_source.html#l00041">41</a> of file <a class="el" href="mod__eos__fi_8t_source.html">mod_eos_fi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -155,10 +155,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>get_Te_FI is PRIVATE: bound to eosget_Te inside eos_finalise_FI only. The rest stay public: update_eos_FI (ffhd_phys), get_gamma1_FI (the seam phys_get_gamma1), get_temperature_from_{eint,pressure}_FI (reused by mod_eos_PI), and the init/finalise dispatcher arms. </p>
+<p>get_Te_FI is PRIVATE: bound to eosget_Te inside eos_finalise_FI only. The rest stay public: update_eos_FI (ffhd_phys), get_gamma1_FI (the seam phys_get_gamma1), get_temperature_from_{eint,pressure}_FI (reused by <a class="el" href="namespacemod__eos__pi.html" title="PI (partial-ionisation, eos_type=&#39;PI&#39;) arm of the eos% family.">mod_eos_pi</a>), and the init/finalise dispatcher arms. </p>
 <p>FI arm of eos_init (before units are known): wire the FI temperature-from-pressure getter, which must be live before (m)hd_link_eos captures it into the radiation fluid object. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__FI_8t_source.html#l00035">35</a> of file <a class="el" href="mod__eos__FI_8t_source.html">mod_eos_FI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__fi_8t_source.html#l00035">35</a> of file <a class="el" href="mod__eos__fi_8t_source.html">mod_eos_fi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -230,7 +230,7 @@ Here is the call graph for this function:</div>
 
 <p>Gamma_1 for the fully-ionised ideal gas: constant eosgamma. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__FI_8t_source.html#l00057">57</a> of file <a class="el" href="mod__eos__FI_8t_source.html">mod_eos_FI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__fi_8t_source.html#l00057">57</a> of file <a class="el" href="mod__eos__fi_8t_source.html">mod_eos_fi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -312,7 +312,7 @@ Here is the call graph for this function:</div>
 </dl>
 <p>Under equilibrium splitting the e slot holds the perturbation internal energy, so the background pressure is added back to recover the total.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__FI_8t_source.html#l00087">87</a> of file <a class="el" href="mod__eos__FI_8t_source.html">mod_eos_FI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__fi_8t_source.html#l00087">87</a> of file <a class="el" href="mod__eos__fi_8t_source.html">mod_eos_fi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -384,7 +384,7 @@ Here is the call graph for this function:</div>
 
 <p>FI temperature from primitive pressure: T = p / (R * rho). w is PRIMITIVE here, so iw_e holds the thermal pressure. Lives in the EoS so hd and mhd share one routine (replaces the orphaned, never-called hd_get_temperature_from_prim that used to sit in <a class="el" href="namespacemod__hd__phys.html" title="Hydrodynamics physics module.">mod_hd_phys</a>). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__FI_8t_source.html#l00115">115</a> of file <a class="el" href="mod__eos__FI_8t_source.html">mod_eos_FI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__fi_8t_source.html#l00115">115</a> of file <a class="el" href="mod__eos__fi_8t_source.html">mod_eos_fi.t</a>.</p>
 
 </div>
 </div>
@@ -440,7 +440,7 @@ Here is the call graph for this function:</div>
 
 <p>FI update_eos: nothing to cache for an ideal gas. Called each RK substep. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__FI_8t_source.html#l00050">50</a> of file <a class="el" href="mod__eos__FI_8t_source.html">mod_eos_FI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__fi_8t_source.html#l00050">50</a> of file <a class="el" href="mod__eos__fi_8t_source.html">mod_eos_fi.t</a>.</p>
 
 </div>
 </div>

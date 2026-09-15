@@ -125,8 +125,8 @@ Functions/Subroutines</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PI (partial-ionisation, eos_type='PI') arm of the eos% family. </p>
-<p>The adapter between the ionisation backend (mod_eos_PI_tables) and the eos% authority. PI rides the FI fully-ionised ideal-gas closure (RR=1 normalisation, p=(gamma-1) eint when ionE=F) and differs only through the variable mean-mass that enters via eosget_Rfactor and &ndash; in energy mode &ndash; the ionisation energy folded into eint. mod_eos_PI_tables has no <a class="el" href="namespacemod__eos.html" title="Equation of state for AMRVAC, handled through a single eos_container object.">mod_eos</a> dependency, so eos% -&gt; ionisation is acyclic.</p>
-<p>Structure mirrors mod_eos_FI / mod_eos_LTE: A. init / finalise &ndash; wire the eos% pointer targets B. generic block getters &ndash; the eos%-interface routines bound for PI (csound2, gamma1, Rfactor, Te update); module-agnostic via iw_rho/iw_e/iw_te, so the hd/mhd/ffhd seams share ONE copy instead of three. The seam keeps only the B/KE-specific conversions. C. scalar combined-solve backend &ndash; one ionisation solve yields T,p,R(,iz) together; called per-cell by the seam conversions and by section D. D. fl-port scalar shims &ndash; f(log_nH,log_x) callbacks for the cooling / conduction port objects. <a class="el" href="namespacemod__eos.html" title="Equation of state for AMRVAC, handled through a single eos_container object.">mod_eos</a> re-exports the public names so the seams reach them through the single <code>use <a class="el" href="namespacemod__eos.html" title="Equation of state for AMRVAC, handled through a single eos_container object.">mod_eos</a></code> facade, exactly as for the FI/LTE kernels. </p>
+<p>The adapter between the ionisation backend (<a class="el" href="namespacemod__eos__pi__tables.html" title="PI (partial-ionisation) ionisation-degree backend for the eos% family.">mod_eos_pi_tables</a>) and the eos% authority. PI rides the FI fully-ionised ideal-gas closure (RR=1 normalisation, p=(gamma-1) eint when ionE=F) and differs only through the variable mean-mass that enters via eosget_Rfactor and &ndash; in energy mode &ndash; the ionisation energy folded into eint. <a class="el" href="namespacemod__eos__pi__tables.html" title="PI (partial-ionisation) ionisation-degree backend for the eos% family.">mod_eos_pi_tables</a> has no <a class="el" href="namespacemod__eos.html" title="Equation of state for AMRVAC, handled through a single eos_container object.">mod_eos</a> dependency, so eos% -&gt; ionisation is acyclic.</p>
+<p>Structure mirrors <a class="el" href="namespacemod__eos__fi.html" title="FI (fully-ionised, constant-gamma) EoS kernels for the eos% family.">mod_eos_fi</a> / <a class="el" href="namespacemod__eos__lte.html" title="LTE (Saha-table) EoS kernels and finalise for the eos% family.">mod_eos_lte</a>: A. init / finalise &ndash; wire the eos% pointer targets B. generic block getters &ndash; the eos%-interface routines bound for PI (csound2, gamma1, Rfactor, Te update); module-agnostic via iw_rho/iw_e/iw_te, so the hd/mhd/ffhd seams share ONE copy instead of three. The seam keeps only the B/KE-specific conversions. C. scalar combined-solve backend &ndash; one ionisation solve yields T,p,R(,iz) together; called per-cell by the seam conversions and by section D. D. fl-port scalar shims &ndash; f(log_nH,log_x) callbacks for the cooling / conduction port objects. <a class="el" href="namespacemod__eos.html" title="Equation of state for AMRVAC, handled through a single eos_container object.">mod_eos</a> re-exports the public names so the seams reach them through the single <code>use <a class="el" href="namespacemod__eos.html" title="Equation of state for AMRVAC, handled through a single eos_container object.">mod_eos</a></code> facade, exactly as for the FI/LTE kernels. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="a85327a7077e8020e5a842e8d7e4d964d" name="a85327a7077e8020e5a842e8d7e4d964d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a85327a7077e8020e5a842e8d7e4d964d">&#9670;&#160;</a></span>csound2_prim_pi()</h2>
@@ -162,7 +162,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Adiabatic sound speed squared from primitive (rho, p). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00311">311</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00311">311</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 
 </div>
 </div>
@@ -200,7 +200,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Primitive pressure -&gt; GAS internal energy (prim -&gt; conserved direction): invert (rho,p)-&gt;T then map T-&gt;eint, so the forward/inverse pair stay consistent. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00298">298</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00298">298</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 
 </div>
 </div>
@@ -232,7 +232,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Internal energy per H from temperature: eint/nH(T). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00328">328</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00328">328</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -266,7 +266,7 @@ Here is the call graph for this function:</div>
 <p>Initialise the ionisation backend. Under the FI normalisation the (a,b) factors are absorbed into unit_*, RR=1, and b=(2+3 A_He) is the full-ionisation reference in unit_pressure; the module's R = (1+iz_H+A_He(...))/Rfactor_norm must reduce to 1 at full ionisation, so Rfactor_norm = 2+3 A_He (the LTE a=b=1 value 1+4 A_He would be wrong).</p>
 <p>Energy mode: eint carries the ionisation energy, so swap in the backend eint-&gt;T inversion and the energy-mode csound2 (both physics-independent; get_csound2_PI was in the link arms).</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00082">82</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00082">82</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -299,7 +299,7 @@ Here is the call graph for this function:</div>
 <p>Lifecycle (PI arms of the eos_init / eos_finalise dispatchers). The eos% block getters (update_eos_PI, get_Te_PI, get_csound2_PI, get_Rfactor_*_PI) are PRIVATE: they are bound to eos% pointers inside eos_finalise_PI, so no external module needs to name them. </p>
 <p>get_gamma1_PI is bound to the phys_get_gamma1 pointer in the seam (the phys layer owns that pointer), so it must stay public. Scalar combined-solve backend, called per-cell by the seam conversions (rho = nH = 1 per H under the FI normalisation; eint is the GAS internal energy, carrying the ionisation energy in energy mode). fl-port scalar callbacks (signature f(log_nH, log_x) -&gt; scalar) for the cooling / conduction port objects. PI's T-only ionisation is nH-independent, so log_nH is ignored and quantities are evaluated per H. PI arm of eos_init (before units are known): PI shares the FI temperature-from-pressure getter &ndash; T=p/(R*rho) routed through eosget_Rfactor, which the seam points at the ionisation R-factor. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00073">73</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00073">73</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -371,7 +371,7 @@ Here is the call graph for this function:</div>
 
 <p>Effective Gamma1 = cs2 * rho / p for the same primitive state. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00145">145</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00145">145</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -415,7 +415,7 @@ Here is the call graph for this function:</div>
 
 <p>eint/p factor from pressure per H: maps p -&gt; eint = p * (this). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00335">335</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00335">335</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -487,7 +487,7 @@ Here is the call graph for this function:</div>
 
 <p>Temperature -&gt; thermal pressure and GAS internal energy (incl. ion energy) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00285">285</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00285">285</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 
 </div>
 </div>
@@ -549,7 +549,7 @@ Here is the call graph for this function:</div>
 
 <p>Conserved gas internal energy -&gt; temperature, thermal pressure, R. Inverse of p_eint_from_rho_T_PI. eint is the GAS internal energy (mechanical energy already removed by the caller). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00273">273</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00273">273</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 
 </div>
 </div>
@@ -581,7 +581,7 @@ Here is the call graph for this function:</div>
 
 <p>Temperature from internal energy per H. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00344">344</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00344">344</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -623,7 +623,7 @@ Here is the call graph for this function:</div>
 
 <p>Electron-to-hydrogen ratio ne/nH from internal energy per H. ne/nH = iz_H + A_He*iz_He*(1+iz_He) (matches the R-factor numerator's electron count; second He ionisation assumed equal to the first). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI_8t_source.html#l00353">353</a> of file <a class="el" href="mod__eos__PI_8t_source.html">mod_eos_PI.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi_8t_source.html#l00353">353</a> of file <a class="el" href="mod__eos__pi_8t_source.html">mod_eos_pi.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

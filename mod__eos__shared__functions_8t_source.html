@@ -95,7 +95,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">!&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">!&gt; Carved out of mod_eos.t (the per-type split). These operate on `eos` and the</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">!&gt; conserved/primitive state without committing to FI / LTE / PI, so they are</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">!&gt; the common dependency that mod_eos_FI / mod_eos_LTE / mod_eos_PI and the</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">!&gt; the common dependency that mod_eos_fi / mod_eos_lte / mod_eos_pi and the</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">!&gt; orchestrating mod_eos all draw on -- keeping the type-specific modules free</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">!&gt; of any back-dependency on mod_eos (no circular use). mod_eos re-exports the</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">!&gt; public names so existing `use mod_eos` callers are unaffected.</span></div>

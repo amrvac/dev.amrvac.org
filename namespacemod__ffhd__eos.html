@@ -111,7 +111,7 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Link the appropriate EoS conversion/closure routines per eos_type. Called from ffhd_activate after ffhd_phys_init (mirrors hd_activate). </p>
-<p>PI energy-mode overrides (eos_type='PI', ionE=.true.). Energy mode differs from no-energy PI only in the eint&lt;-&gt;p relation (eint carries the ionisation energy), so override exactly the routines touching it, all via the portable mod_eos_PI backend. get_Rfactor stays the Te_-addressed routine above (Te_ refreshed each step by ffhd_update_temperature_PI).</p>
+<p>PI energy-mode overrides (eos_type='PI', ionE=.true.). Energy mode differs from no-energy PI only in the eint&lt;-&gt;p relation (eint carries the ionisation energy), so override exactly the routines touching it, all via the portable <a class="el" href="namespacemod__eos__pi.html" title="PI (partial-ionisation, eos_type=&#39;PI&#39;) arm of the eos% family.">mod_eos_pi</a> backend. get_Rfactor stays the Te_-addressed routine above (Te_ refreshed each step by ffhd_update_temperature_PI).</p>
 <p>eosget_csound2 =&gt; get_csound2_PI set in eos_finalise_PI (private target)</p>
 
 <p class="definition">Definition at line <a class="el" href="mod__ffhd__eos_8t_source.html#l00043">43</a> of file <a class="el" href="mod__ffhd__eos_8t_source.html">mod_ffhd_eos.t</a>.</p>

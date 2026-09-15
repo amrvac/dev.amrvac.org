@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MPI-AMRVAC: src/eos/mod_eos_LTE.t File Reference</title>
+<title>MPI-AMRVAC: src/eos/mod_eos_lte.t File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,11 +85,11 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">Modules</a> &#124;
 <a href="#func-members">Functions/Subroutines</a>  </div>
-  <div class="headertitle"><div class="title">mod_eos_LTE.t File Reference</div></div>
+  <div class="headertitle"><div class="title">mod_eos_lte.t File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a href="mod__eos__LTE_8t_source.html">Go to the source code of this file.</a></p>
+<p><a href="mod__eos__lte_8t_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Modules</h2></td></tr>
@@ -103,7 +103,7 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:acc61186eccafb636fa674285c3d7b166"><td class="mdescLeft">&#160;</td><td class="mdescRight">update_eos_LTE, get_Te_LTE, get_temperature_from_eint_LTE and Rfactor_from_LTE are PRIVATE: all bound to eos% pointers inside eos_finalise_LTE, so no external module names them. get_temperature_from_eint_fast_LTE stays public &ndash; the seam binds it to tc_flget_temperature_from_eint (fast TC path).  <br /></td></tr>
 <tr class="separator:acc61186eccafb636fa674285c3d7b166"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ff7bd5cd303ffed8c560ec611fe24dc" id="r_a4ff7bd5cd303ffed8c560ec611fe24dc"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte.html#a4ff7bd5cd303ffed8c560ec611fe24dc">mod_eos_lte::eos_finalise_lte</a> ()</td></tr>
-<tr class="memdesc:a4ff7bd5cd303ffed8c560ec611fe24dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per-method finaliser, each owned by its method module (analytic-&gt;mod_eos_LTE_saha, entropy-&gt;mod_eos_LTE_entropy, tables-&gt;mod_eos_LTE_tables).  <br /></td></tr>
+<tr class="memdesc:a4ff7bd5cd303ffed8c560ec611fe24dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per-method finaliser, each owned by its method module (analytic-&gt;<a class="el" href="namespacemod__eos__lte__saha.html" title="Analytic H-only Saha EoS (eos_method == &#39;analytic&#39;).">mod_eos_lte_saha</a>, entropy-&gt;<a class="el" href="namespacemod__eos__lte__entropy.html" title="Entropy-method LTE EoS: every query is ONE bicubic Hermite evaluation.">mod_eos_lte_entropy</a>, tables-&gt;<a class="el" href="namespacemod__eos__lte__tables.html" title="Shared LTE lookup-table infrastructure (build/IO; not on the hot path).">mod_eos_lte_tables</a>).  <br /></td></tr>
 <tr class="separator:a4ff7bd5cd303ffed8c560ec611fe24dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7eb2db76bedf9e4a2749ac95f164028c" id="r_a7eb2db76bedf9e4a2749ac95f164028c"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte.html#a7eb2db76bedf9e4a2749ac95f164028c">mod_eos_lte::get_temperature_from_eint_fast_lte</a> (w, x, ixil, ixol, res)</td></tr>
 <tr class="separator:a7eb2db76bedf9e4a2749ac95f164028c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,7 +125,7 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a6f13cf75af7de7e50bf276ccc566f901" id="r_a6f13cf75af7de7e50bf276ccc566f901"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte.html#a6f13cf75af7de7e50bf276ccc566f901">mod_eos_lte::eint_nh_from_t</a> (log_nh, log_t)</td></tr>
 <tr class="memdesc:a6f13cf75af7de7e50bf276ccc566f901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal energy per nH from (log10 nH, log10 T) in code units. Uses the bisection-built inverse table (H+He, machine precision). Fallback: H-only Saha if table not built.  <br /></td></tr>
 <tr class="separator:a6f13cf75af7de7e50bf276ccc566f901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa781ffef273e9294c4d07a383157bea2" id="r_aa781ffef273e9294c4d07a383157bea2"><td class="memItemLeft" align="right" valign="top">pure double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mod__eos__LTE_8t.html#aa781ffef273e9294c4d07a383157bea2">pchip_1d</a> (p0, p1, p2, p3, t)</td></tr>
+<tr class="memitem:aa781ffef273e9294c4d07a383157bea2" id="r_aa781ffef273e9294c4d07a383157bea2"><td class="memItemLeft" align="right" valign="top">pure double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mod__eos__lte_8t.html#aa781ffef273e9294c4d07a383157bea2">pchip_1d</a> (p0, p1, p2, p3, t)</td></tr>
 <tr class="separator:aa781ffef273e9294c4d07a383157bea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7155ab3b6d02fbd6ebe09c3ae80f50bb" id="r_a7155ab3b6d02fbd6ebe09c3ae80f50bb"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte.html#a7155ab3b6d02fbd6ebe09c3ae80f50bb">mod_eos_lte::eint_from_p_bisect</a> (log_nh_val, log_p_val, log_eint_nh_out)</td></tr>
 <tr class="memdesc:a7155ab3b6d02fbd6ebe09c3ae80f50bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given log10(nH) and log10(p), find log10(eint/nH) by table-guessed bisection on the forward pressure table. Wraps the bracketing logic and log_p_bisect_cached into a single call for use by both HD and MHD from_conserved routines.  <br /></td></tr>
@@ -179,12 +179,12 @@ Functions/Subroutines</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE_8t_source.html#l00702">702</a> of file <a class="el" href="mod__eos__LTE_8t_source.html">mod_eos_LTE.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00702">702</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="mod__eos__LTE_8t_aa781ffef273e9294c4d07a383157bea2_cgraph.png" border="0" usemap="#amod__eos__LTE_8t_aa781ffef273e9294c4d07a383157bea2_cgraph" alt=""/></div>
-<map name="amod__eos__LTE_8t_aa781ffef273e9294c4d07a383157bea2_cgraph" id="amod__eos__LTE_8t_aa781ffef273e9294c4d07a383157bea2_cgraph">
+<div class="center"><img src="mod__eos__lte_8t_aa781ffef273e9294c4d07a383157bea2_cgraph.png" border="0" usemap="#amod__eos__lte_8t_aa781ffef273e9294c4d07a383157bea2_cgraph" alt=""/></div>
+<map name="amod__eos__lte_8t_aa781ffef273e9294c4d07a383157bea2_cgraph" id="amod__eos__lte_8t_aa781ffef273e9294c4d07a383157bea2_cgraph">
 <area shape="rect" title=" " alt="" coords="5,29,85,55"/>
 <area shape="poly" title=" " alt="" coords="31,29,30,12,35,5,45,3,57,6,62,14,57,17,53,10,45,8,38,10,35,14,36,29"/>
 </map>

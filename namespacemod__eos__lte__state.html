@@ -90,7 +90,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a87707a70ada14d5255297a985ef3ac2a" id="r_a87707a70ada14d5255297a985ef3ac2a"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte__state.html#a87707a70ada14d5255297a985ef3ac2a">load_state_lte</a> ()</td></tr>
-<tr class="memdesc:a87707a70ada14d5255297a985ef3ac2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">state arms of the eos_init / eos_finalise dispatchers (mod_eos_LTE)  <br /></td></tr>
+<tr class="memdesc:a87707a70ada14d5255297a985ef3ac2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">state arms of the eos_init / eos_finalise dispatchers (<a class="el" href="namespacemod__eos__lte.html" title="LTE (Saha-table) EoS kernels and finalise for the eos% family.">mod_eos_lte</a>)  <br /></td></tr>
 <tr class="separator:a87707a70ada14d5255297a985ef3ac2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ca5cc61ff895ba76b9c551ef8a7a5b6" id="r_a3ca5cc61ff895ba76b9c551ef8a7a5b6"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte__state.html#a3ca5cc61ff895ba76b9c551ef8a7a5b6">finalise_state_lte</a> ()</td></tr>
 <tr class="memdesc:a3ca5cc61ff895ba76b9c551ef8a7a5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Table-based method finalise: shift the loaded T/neOnH (and ionE-derived) tables to code units, build the derived tables not present on disk, then precompute step/guard arrays and validate. shift_table_to_code: axis2='eint' uses the log(p/nH) axis-2 unit, value_shift subtracted from table VALUES (T stores log T -&gt; shift by log(unit_temperature); neOnH dimensionless -&gt; 0); it also ensures node arrays exist so the build_*_table routines see a single var{1,2}_nodes path. Called from eos_finalise_LTE for eos_method='tables'.  <br /></td></tr>
@@ -98,7 +98,7 @@ Functions/Subroutines</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>'state' method (eos_method='state', legacy 'tables') of the LTE EoS family. </p>
-<p>The direct per-quantity tabulation of the Saha ionisation-equilibrium state: loads the T/neOnH (and ionE p2eint) tables, shifts them to code units, and builds the derived tables the runtime needs (gamma1, log_p, p_over_nH, the interleaved fast-path block, the pressure-indexed gamma1, and the bisected p2eint / eint-from-T inverses). The shared binary-file I/O, axis/guard/validate machinery and the FI-bypass constants live in mod_eos_LTE_tables (used by all LTE methods); this module owns only the state-method build + finalise. Runs once, during eos_init_LTE / eos_finalise_LTE. </p>
+<p>The direct per-quantity tabulation of the Saha ionisation-equilibrium state: loads the T/neOnH (and ionE p2eint) tables, shifts them to code units, and builds the derived tables the runtime needs (gamma1, log_p, p_over_nH, the interleaved fast-path block, the pressure-indexed gamma1, and the bisected p2eint / eint-from-T inverses). The shared binary-file I/O, axis/guard/validate machinery and the FI-bypass constants live in <a class="el" href="namespacemod__eos__lte__tables.html" title="Shared LTE lookup-table infrastructure (build/IO; not on the hot path).">mod_eos_lte_tables</a> (used by all LTE methods); this module owns only the state-method build + finalise. Runs once, during eos_init_LTE / eos_finalise_LTE. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="a3ca5cc61ff895ba76b9c551ef8a7a5b6" name="a3ca5cc61ff895ba76b9c551ef8a7a5b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ca5cc61ff895ba76b9c551ef8a7a5b6">&#9670;&#160;</a></span>finalise_state_lte()</h2>
@@ -119,7 +119,7 @@ Functions/Subroutines</h2></td></tr>
 <p>eint_from_T on (log_nH, log_T) CGS log10, values log10(eint/nH) CGS. axis2='T'; value shift log(p/nH).</p>
 <p>Crucial to not end up with interpolation drift...</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__state_8t_source.html#l00049">49</a> of file <a class="el" href="mod__eos__LTE__state_8t_source.html">mod_eos_LTE_state.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__state_8t_source.html#l00049">49</a> of file <a class="el" href="mod__eos__lte__state_8t_source.html">mod_eos_lte_state.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -155,16 +155,16 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>state arms of the eos_init / eos_finalise dispatchers (mod_eos_LTE) </p>
+<p>state arms of the eos_init / eos_finalise dispatchers (<a class="el" href="namespacemod__eos__lte.html" title="LTE (Saha-table) EoS kernels and finalise for the eos% family.">mod_eos_lte</a>) </p>
 <p>'tables' method load: T + neOnH, plus the ionE inverse/derived tables (p2eint loaded; gamma1 / eint_from_T loaded if available, else built later). Called from eos_init_LTE for eos_method='tables'. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__state_8t_source.html#l00032">32</a> of file <a class="el" href="mod__eos__LTE__state_8t_source.html">mod_eos_LTE_state.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__state_8t_source.html#l00032">32</a> of file <a class="el" href="mod__eos__lte__state_8t_source.html">mod_eos_lte_state.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__lte__state_a87707a70ada14d5255297a985ef3ac2a_cgraph.png" border="0" usemap="#anamespacemod__eos__lte__state_a87707a70ada14d5255297a985ef3ac2a_cgraph" alt=""/></div>
 <map name="anamespacemod__eos__lte__state_a87707a70ada14d5255297a985ef3ac2a_cgraph" id="anamespacemod__eos__lte__state_a87707a70ada14d5255297a985ef3ac2a_cgraph">
-<area shape="rect" title="state arms of the eos_init / eos_finalise dispatchers (mod_eos_LTE)" alt="" coords="5,5,159,45"/>
+<area shape="rect" title="state arms of the eos_init / eos_finalise dispatchers (mod_eos_lte)" alt="" coords="5,5,159,45"/>
 <area shape="rect" href="namespacemod__eos__lte__tables.html#a2510131ae7d8528d4a74db15f6e38e4d" title="Read one named table file into its eos% container. The filename encodes the composition (H or HHe) an..." alt="" coords="409,5,561,45"/>
 <area shape="poly" title=" " alt="" coords="159,20,207,19,361,19,395,19,395,25,361,24,207,24,159,25"/>
 <area shape="rect" href="namespacemod__eos__lte__tables.html#a1246d0f0e3285cf4b65f34c582f08509" title="Attempt to load pre&#45;computed table from binary file. If the file does not exist, silently skip and th..." alt="" coords="207,33,361,73"/>

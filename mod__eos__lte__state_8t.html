@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MPI-AMRVAC: src/eos/mod_eos_LTE_state.t File Reference</title>
+<title>MPI-AMRVAC: src/eos/mod_eos_lte_state.t File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,11 +85,11 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">Modules</a> &#124;
 <a href="#func-members">Functions/Subroutines</a>  </div>
-  <div class="headertitle"><div class="title">mod_eos_LTE_state.t File Reference</div></div>
+  <div class="headertitle"><div class="title">mod_eos_lte_state.t File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><a href="mod__eos__LTE__state_8t_source.html">Go to the source code of this file.</a></p>
+<p><a href="mod__eos__lte__state_8t_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Modules</h2></td></tr>
@@ -100,7 +100,7 @@ Modules</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a87707a70ada14d5255297a985ef3ac2a" id="r_a87707a70ada14d5255297a985ef3ac2a"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte__state.html#a87707a70ada14d5255297a985ef3ac2a">mod_eos_lte_state::load_state_lte</a> ()</td></tr>
-<tr class="memdesc:a87707a70ada14d5255297a985ef3ac2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">state arms of the eos_init / eos_finalise dispatchers (mod_eos_LTE)  <br /></td></tr>
+<tr class="memdesc:a87707a70ada14d5255297a985ef3ac2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">state arms of the eos_init / eos_finalise dispatchers (<a class="el" href="namespacemod__eos__lte.html" title="LTE (Saha-table) EoS kernels and finalise for the eos% family.">mod_eos_lte</a>)  <br /></td></tr>
 <tr class="separator:a87707a70ada14d5255297a985ef3ac2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ca5cc61ff895ba76b9c551ef8a7a5b6" id="r_a3ca5cc61ff895ba76b9c551ef8a7a5b6"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__lte__state.html#a3ca5cc61ff895ba76b9c551ef8a7a5b6">mod_eos_lte_state::finalise_state_lte</a> ()</td></tr>
 <tr class="memdesc:a3ca5cc61ff895ba76b9c551ef8a7a5b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Table-based method finalise: shift the loaded T/neOnH (and ionE-derived) tables to code units, build the derived tables not present on disk, then precompute step/guard arrays and validate. shift_table_to_code: axis2='eint' uses the log(p/nH) axis-2 unit, value_shift subtracted from table VALUES (T stores log T -&gt; shift by log(unit_temperature); neOnH dimensionless -&gt; 0); it also ensures node arrays exist so the build_*_table routines see a single var{1,2}_nodes path. Called from eos_finalise_LTE for eos_method='tables'.  <br /></td></tr>

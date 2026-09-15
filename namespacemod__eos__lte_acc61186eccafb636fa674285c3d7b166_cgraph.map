@@ -4,6 +4,6 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,74,244,46,245,52,147,79"/>
 <area shape="rect" id="Node000003" href="$namespacemod__eos__lte__entropy.html#ad1324d7843b8c914d9c8351b3ca4a247" title="Forward (log nH, log eint/nH) &#45;&gt; thermodynamic state." alt="" coords="249,69,412,109"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,87,236,87,236,92,194,92"/>
-<area shape="rect" id="Node000006" href="$namespacemod__eos__lte__state.html#a87707a70ada14d5255297a985ef3ac2a" title="state arms of the eos_init / eos_finalise dispatchers (mod_eos_LTE)" alt="" coords="254,133,407,173"/>
+<area shape="rect" id="Node000006" href="$namespacemod__eos__lte__state.html#a87707a70ada14d5255297a985ef3ac2a" title="state arms of the eos_init / eos_finalise dispatchers (mod_eos_lte)" alt="" coords="254,133,407,173"/>
 <area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="147,100,245,127,244,132,146,105"/>
 </map>

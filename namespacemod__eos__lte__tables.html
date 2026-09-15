@@ -114,7 +114,7 @@ Functions/Subroutines</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Shared LTE lookup-table infrastructure (build/IO; not on the hot path). </p>
-<p>The table-file machinery used by ALL LTE methods (state, entropy, analytic): binary-file readers (read_eos_from_file / load_tables_LTE / try_load_tables_LTE), per-container preparation (ensure_axis_nodes, code-unit axis shifts, O(1) guard arrays via eos_build_guards, eos_validate_table) and the fully-ionised bypass constants. NOT a method: 'tables' here means the literal lookup tables, not the 'state' method (which lives in mod_eos_LTE_state and consumes this infra). Everything here runs once, during eos_init_LTE / eos_finalise_LTE. </p>
+<p>The table-file machinery used by ALL LTE methods (state, entropy, analytic): binary-file readers (read_eos_from_file / load_tables_LTE / try_load_tables_LTE), per-container preparation (ensure_axis_nodes, code-unit axis shifts, O(1) guard arrays via eos_build_guards, eos_validate_table) and the fully-ionised bypass constants. NOT a method: 'tables' here means the literal lookup tables, not the 'state' method (which lives in <a class="el" href="namespacemod__eos__lte__state.html" title="&#39;state&#39; method (eos_method=&#39;state&#39;, legacy &#39;tables&#39;) of the LTE EoS family.">mod_eos_lte_state</a> and consumes this infra). Everything here runs once, during eos_init_LTE / eos_finalise_LTE. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="aa18be867ee9a7a2543ee1500642d4646" name="aa18be867ee9a7a2543ee1500642d4646"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa18be867ee9a7a2543ee1500642d4646">&#9670;&#160;</a></span>ensure_axis_nodes()</h2>
@@ -135,7 +135,7 @@ Functions/Subroutines</h2></td></tr>
 <p>Ensure tcvar1_nodes / tcvar2_nodes are allocated and populated so that build_*_table routines and other code can reference axis positions uniformly (no is_uniform branching). For uniform tables we generate evenly-spaced node arrays from var{1,2}_min/max. </p>
 <p>Lookup performance is unaffected: bicubic_lookup / bilinear_lookup still branch on tcis_uniform &ndash; uniform tables go through the affine fast path; only adaptive tables consult var{1,2}_nodes. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__tables_8t_source.html#l00038">38</a> of file <a class="el" href="mod__eos__LTE__tables_8t_source.html">mod_eos_LTE_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00038">38</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 
 </div>
 </div>
@@ -157,7 +157,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Build guard (bucket) arrays so that adaptive index lookup is O(1). No-op for uniform tables. Safe to call repeatedly. Idea here is to map nonuniform table nodes to a uniform search grid. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__tables_8t_source.html#l00093">93</a> of file <a class="el" href="mod__eos__LTE__tables_8t_source.html">mod_eos_LTE_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00093">93</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 
 </div>
 </div>
@@ -190,7 +190,7 @@ Functions/Subroutines</h2></td></tr>
 <p>Defensive consistency check for one table after init. Aborts with a diagnostic message if any silent-failure invariant is violated. </p>
 <p>Value finiteness: a NaN (e.g. from dlog10 of a non-positive stored value, or a truncated/corrupt file read) otherwise passes the structural checks and only surfaces as a runtime FPE deep in a lookup. The x /= x idiom is NaN-true without needing the ieee_arithmetic module.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__tables_8t_source.html#l00150">150</a> of file <a class="el" href="mod__eos__LTE__tables_8t_source.html">mod_eos_LTE_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00150">150</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -225,7 +225,7 @@ Here is the call graph for this function:</div>
 <p>Consider the ionisation energy?</p>
 <p>Entropy-method tables. Unit shifts MUST happen in eos_finalise (where unit_* are set), not here.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__tables_8t_source.html#l00266">266</a> of file <a class="el" href="mod__eos__LTE__tables_8t_source.html">mod_eos_LTE_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00266">266</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -258,7 +258,7 @@ Here is the call graph for this function:</div>
 <p>Bypass threshold: eint/rho value corresponding to T = 200,000 K fully ionised. Raised from 50 kK to 200 kK so that blended LTE tables (which converge to FI by 200 kK) match the bypass formula exactly at the threshold &ndash; no discontinuity in ne/nH, T, Gamma_1, or p when cells cross the boundary. eint/nH = 1.5 * n_per_nH * kB * T + eion_per_nH (all in code units) eint/rho = eint/nH / nH2rhoFactor</p>
 <p>Pressure-based threshold for primitive-variable checks: For FI gas, T = p / (rho * Rfactor_FI), so p/rho &gt; Rfactor_FI * T_thresh where Rfactor_FI = n_per_nH_FI / (1 + 4*A_He) in code units</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__tables_8t_source.html#l00209">209</a> of file <a class="el" href="mod__eos__LTE__tables_8t_source.html">mod_eos_LTE_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00209">209</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 
 </div>
 </div>
@@ -286,7 +286,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__tables_8t_source.html#l00062">62</a> of file <a class="el" href="mod__eos__LTE__tables_8t_source.html">mod_eos_LTE_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00062">62</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 
 </div>
 </div>
@@ -312,7 +312,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__tables_8t_source.html#l00076">76</a> of file <a class="el" href="mod__eos__LTE__tables_8t_source.html">mod_eos_LTE_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00076">76</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 
 </div>
 </div>
@@ -334,7 +334,7 @@ Here is the call graph for this function:</div>
 
 <p>Attempt to load pre-computed table from binary file. If the file does not exist, silently skip and the table will be built at runtime. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__tables_8t_source.html#l00391">391</a> of file <a class="el" href="mod__eos__LTE__tables_8t_source.html">mod_eos_LTE_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00391">391</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

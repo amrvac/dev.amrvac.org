@@ -126,7 +126,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Analytic-method finalise (H-only Saha): no table unit conversion needed; build the Gamma1 table only for 'exact' mode, then the shared FI-bypass constants. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__saha_8t_source.html#l00052">52</a> of file <a class="el" href="mod__eos__LTE__saha_8t_source.html">mod_eos_LTE_saha.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__saha_8t_source.html#l00052">52</a> of file <a class="el" href="mod__eos__lte__saha_8t_source.html">mod_eos_lte_saha.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -154,7 +154,7 @@ Here is the call graph for this function:</div>
 
 <p>Analytic-method load: no binary tables (on-the-fly Saha solve); just announce the method. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__saha_8t_source.html#l00042">42</a> of file <a class="el" href="mod__eos__LTE__saha_8t_source.html">mod_eos_LTE_saha.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__saha_8t_source.html#l00042">42</a> of file <a class="el" href="mod__eos__lte__saha_8t_source.html">mod_eos_lte_saha.t</a>.</p>
 
 </div>
 </div>
@@ -186,7 +186,7 @@ Here is the call graph for this function:</div>
 
 <p>Internal energy per nH from analytical Saha, in CODE UNITS. eint_nH = 1.5*(1+y)*kB*T [+ y*chi_H] in CGS, converted to code units. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__saha_8t_source.html#l00084">84</a> of file <a class="el" href="mod__eos__LTE__saha_8t_source.html">mod_eos_LTE_saha.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__saha_8t_source.html#l00084">84</a> of file <a class="el" href="mod__eos__lte__saha_8t_source.html">mod_eos_lte_saha.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -228,7 +228,7 @@ Here is the call graph for this function:</div>
 
 <p>Look up Gamma1 from the analytical 2D table (nH, T axes in code units). For use when eosmethod == 'analytic' and gamma1_method == 'exact'. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__saha_8t_source.html#l00335">335</a> of file <a class="el" href="mod__eos__LTE__saha_8t_source.html">mod_eos_LTE_saha.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__saha_8t_source.html#l00335">335</a> of file <a class="el" href="mod__eos__lte__saha_8t_source.html">mod_eos_lte_saha.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -290,7 +290,7 @@ Here is the call graph for this function:</div>
 
 <p>Given (nH, p) in CODE UNITS, find T and y by solving p = nH*(1+y(T))*T_code. Uses bisection on T. In code units, kB is absorbed: p = nH*(1+y)*T. Given (nH, p) in CODE UNITS, find T, y, and eint/nH. Bisects on p = nH*(1+y(T))*T_code, then computes eint from final T,y. Returns eint_nH in code units (avoids redundant Saha re-evaluation). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__saha_8t_source.html#l00106">106</a> of file <a class="el" href="mod__eos__LTE__saha_8t_source.html">mod_eos_LTE_saha.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__saha_8t_source.html#l00106">106</a> of file <a class="el" href="mod__eos__lte__saha_8t_source.html">mod_eos_lte_saha.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -344,7 +344,7 @@ Here is the call graph for this function:</div>
 
 <p>Temperature inversion: given (nH, eint/nH) in CODE UNITS, find T in CODE UNITS, by bisection (guaranteed convergence). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__LTE__saha_8t_source.html#l00161">161</a> of file <a class="el" href="mod__eos__LTE__saha_8t_source.html">mod_eos_LTE_saha.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__saha_8t_source.html#l00161">161</a> of file <a class="el" href="mod__eos__lte__saha_8t_source.html">mod_eos_lte_saha.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -92,7 +92,7 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a6771b646acf84c65b4cc7a227dbf9e7f" id="r_a6771b646acf84c65b4cc7a227dbf9e7f"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__pi__tables.html#a6771b646acf84c65b4cc7a227dbf9e7f">ionization_degree_init</a> (he_abundance, rfactor_norm, table_name, include_energy)</td></tr>
 <tr class="separator:a6771b646acf84c65b4cc7a227dbf9e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81e653d3d37f3ca58513c157d87ad73e" id="r_a81e653d3d37f3ca58513c157d87ad73e"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__pi__tables.html#a81e653d3d37f3ca58513c157d87ad73e">ionization_degree_from_temperature</a> (ixil, ixol, te, iz_h, iz_he)</td></tr>
-<tr class="memdesc:a81e653d3d37f3ca58513c157d87ad73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array interface for T -&gt; ionization degrees. Used by get_Rfactor_tonly_PI (mod_eos_PI) to build the no-energy chromosphere/flare R-factor block.  <br /></td></tr>
+<tr class="memdesc:a81e653d3d37f3ca58513c157d87ad73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array interface for T -&gt; ionization degrees. Used by get_Rfactor_tonly_PI (<a class="el" href="namespacemod__eos__pi.html" title="PI (partial-ionisation, eos_type=&#39;PI&#39;) arm of the eos% family.">mod_eos_pi</a>) to build the no-energy chromosphere/flare R-factor block.  <br /></td></tr>
 <tr class="separator:a81e653d3d37f3ca58513c157d87ad73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a470316b52503fe43650b5805df108011" id="r_a470316b52503fe43650b5805df108011"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__pi__tables.html#a470316b52503fe43650b5805df108011">ionization_get_state_scalar</a> (rho, p, t, rfactor, iz_h, iz_he)</td></tr>
 <tr class="separator:a470316b52503fe43650b5805df108011"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,9 +115,9 @@ Functions/Subroutines</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>PI (partial-ionisation) ionisation-degree backend for the eos% family. </p>
-<p>The physics library behind mod_eos_PI (the eos_type='PI' adapter): given the thermodynamic state it returns the hydrogen/helium ionisation degrees, the R-factor (mean inverse molecular weight) and &ndash; in energy mode &ndash; the ionisation energy. Standalone: depends only on <a class="el" href="namespacemod__global__parameters.html" title="This module contains definitions of global parameters and variables and some generic functions/subrou...">mod_global_parameters</a> / <a class="el" href="namespacemod__constants.html" title="Module for physical and numeric constants.">mod_constants</a> / <a class="el" href="namespacemod__comm__lib.html">mod_comm_lib</a>, never on mod_eos*, so eos% -&gt; ionisation is acyclic. The analogue for PI of mod_eos_LTE_tables for LTE.</p>
+<p>The physics library behind <a class="el" href="namespacemod__eos__pi.html" title="PI (partial-ionisation, eos_type=&#39;PI&#39;) arm of the eos% family.">mod_eos_pi</a> (the eos_type='PI' adapter): given the thermodynamic state it returns the hydrogen/helium ionisation degrees, the R-factor (mean inverse molecular weight) and &ndash; in energy mode &ndash; the ionisation energy. Standalone: depends only on <a class="el" href="namespacemod__global__parameters.html" title="This module contains definitions of global parameters and variables and some generic functions/subrou...">mod_global_parameters</a> / <a class="el" href="namespacemod__constants.html" title="Module for physical and numeric constants.">mod_constants</a> / <a class="el" href="namespacemod__comm__lib.html">mod_comm_lib</a>, never on mod_eos*, so eos% -&gt; ionisation is acyclic. The analogue for PI of <a class="el" href="namespacemod__eos__lte__tables.html" title="Shared LTE lookup-table infrastructure (build/IO; not on the hot path).">mod_eos_lte_tables</a> for LTE.</p>
 <p>Three interchangeable tables (eospi_table), selected at init: chromosphere &ndash; T-only H I/H fraction, Carlsson &amp; Leenaarts (2012, A&amp;A 539 A39) flare &ndash; T-only H I/H fraction, Hong, Carlsson &amp; Ding (2022, A&amp;A 661 A77) prominence &ndash; (T,p) H ionisation, Heinzel et al. (2015, A&amp;A 579 A16) + Gunar et al. (2025, A&amp;A 699 A89); model A, side illumination, L=500 km. Hydrogen ionisation is tabulated (interpolated to a 4000-point fine grid); helium is a semi-analytic Saha-like fit. The R-factor is R = (1 + iz_H + A_He*(1 + iz_He*(1 + iz_He))) / Rfactor_norm, with Rfactor_norm = 2 + 3*A_He set by the adapter so R -&gt; 1 at full ionisation under the FI code-unit normalisation. Energy mode folds 13.6 eV per ionised H into eint. The map Y(T) = R(T)*T = p/rho is monotonic, so (rho,p) -&gt; T inverts by bisection (T-only) or pressure-bisection (prominence); energy mode inverts eint -&gt; T by Newton.</p>
-<p>Public API: ionization_degree_init (once, after units) + the state-query routines consumed by mod_eos_PI (get_state[_scalar], state_Tp, solve_p_Rfactor, get_state_from_eint, get_p_eint_from_rho_T, get_eps_derivative_T, get_csound2_T, the predicates and the legacy degree-from-temperature shim). </p>
+<p>Public API: ionization_degree_init (once, after units) + the state-query routines consumed by <a class="el" href="namespacemod__eos__pi.html" title="PI (partial-ionisation, eos_type=&#39;PI&#39;) arm of the eos% family.">mod_eos_pi</a> (get_state[_scalar], state_Tp, solve_p_Rfactor, get_state_from_eint, get_p_eint_from_rho_T, get_eps_derivative_T, get_csound2_T, the predicates and the legacy degree-from-temperature shim). </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="a81e653d3d37f3ca58513c157d87ad73e" name="a81e653d3d37f3ca58513c157d87ad73e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81e653d3d37f3ca58513c157d87ad73e">&#9670;&#160;</a></span>ionization_degree_from_temperature()</h2>
@@ -175,15 +175,15 @@ Functions/Subroutines</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Array interface for T -&gt; ionization degrees. Used by get_Rfactor_tonly_PI (mod_eos_PI) to build the no-energy chromosphere/flare R-factor block. </p>
+<p>Array interface for T -&gt; ionization degrees. Used by get_Rfactor_tonly_PI (<a class="el" href="namespacemod__eos__pi.html" title="PI (partial-ionisation, eos_type=&#39;PI&#39;) arm of the eos% family.">mod_eos_pi</a>) to build the no-energy chromosphere/flare R-factor block. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l00460">460</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00460">460</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__pi__tables_a81e653d3d37f3ca58513c157d87ad73e_cgraph.png" border="0" usemap="#anamespacemod__eos__pi__tables_a81e653d3d37f3ca58513c157d87ad73e_cgraph" alt=""/></div>
 <map name="anamespacemod__eos__pi__tables_a81e653d3d37f3ca58513c157d87ad73e_cgraph" id="anamespacemod__eos__pi__tables_a81e653d3d37f3ca58513c157d87ad73e_cgraph">
-<area shape="rect" title="Array interface for T &#45;&gt; ionization degrees. Used by get_Rfactor_tonly_PI (mod_eos_PI) to build the n..." alt="" coords="5,5,181,60"/>
+<area shape="rect" title="Array interface for T &#45;&gt; ionization degrees. Used by get_Rfactor_tonly_PI (mod_eos_pi) to build the n..." alt="" coords="5,5,181,60"/>
 <area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="229,20,412,45"/>
 <area shape="poly" title=" " alt="" coords="182,30,215,30,215,35,182,35"/>
 </map>
@@ -229,7 +229,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l00209">209</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00209">209</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -282,7 +282,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l01210">1210</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l01210">1210</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 
 </div>
 </div>
@@ -348,7 +348,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l01132">1132</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l01132">1132</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -400,7 +400,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l00984">984</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00984">984</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 
 </div>
 </div>
@@ -478,7 +478,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l00714">714</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00714">714</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -561,7 +561,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l01110">1110</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l01110">1110</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -629,7 +629,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l00556">556</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00556">556</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -658,7 +658,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l00991">991</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00991">991</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -711,7 +711,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l00646">646</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00646">646</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -776,7 +776,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__PI__tables_8t_source.html#l00613">613</a> of file <a class="el" href="mod__eos__PI__tables_8t_source.html">mod_eos_PI_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00613">613</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
