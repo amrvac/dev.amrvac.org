@@ -198,7 +198,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        {<span class="keywordflow">do</span> idx^d = iximin^d, iximax^d|\}</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__gimli.html#a90f975c33477e04c34005a0f018f5500">ef_amplitude</a>(x(idx^d, 1), <a class="code hl_variable" href="namespacemod__gimli.html#a2a1237b6c2750dafb36b81a7451f176d">ef_grid</a>, values, amplitude)</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        quantity = amplitude * exp_factor(idx^d)</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        w(idx^d, w_index) = w(idx^d, w_index) + quantity%re</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        w(idx^d, w_index) = w(idx^d, w_index) + real(quantity)</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        {<span class="keyword">end </span>do|\}</div>
 </div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__gimli.html#a7deb062adde1b574a8ddd99355807941">add_perturbation_to_w_array</a></div>
@@ -589,7 +589,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__gimli.html#ad2f68c78f68cd2b7d86598ba928f7484">split_extrapolate</a></div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span> </div>
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__gimli.html">mod_gimli</a></div>
-<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>!</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span><span class="comment">!</span></div>
 <div class="ttc" id="anamespacemod__comm__lib_html"><div class="ttname"><a href="namespacemod__comm__lib.html">mod_comm_lib</a></div><div class="ttdef"><b>Definition</b> <a href="mod__comm__lib_8t_source.html#l00001">mod_comm_lib.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__comm__lib_html_a9b6f1a8fd13bc5670e3b426151c34048"><div class="ttname"><a href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mod_comm_lib::mpistop</a></div><div class="ttdeci">subroutine, public mpistop(message)</div><div class="ttdoc">Exit MPI-AMRVAC with an error message.</div><div class="ttdef"><b>Definition</b> <a href="mod__comm__lib_8t_source.html#l00207">mod_comm_lib.t:208</a></div></div>
 <div class="ttc" id="anamespacemod__eos_html"><div class="ttname"><a href="namespacemod__eos.html">mod_eos</a></div><div class="ttdoc">Equation of state for AMRVAC, handled through a single eos_container object.</div><div class="ttdef"><b>Definition</b> <a href="mod__eos_8t_source.html#l00030">mod_eos.t:30</a></div></div>
