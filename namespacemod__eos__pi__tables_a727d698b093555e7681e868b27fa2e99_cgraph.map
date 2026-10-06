@@ -1,12 +1,18 @@
 <map id="mod_eos_pi_tables::ionization_solve_p_rfactor" name="mod_eos_pi_tables::ionization_solve_p_rfactor">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,87,199,127"/>
-<area shape="rect" id="Node000002" href="$namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="247,29,473,69"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,84,255,70,256,75,193,89"/>
-<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="521,94,704,119"/>
-<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="199,104,508,104,508,109,199,109"/>
-<area shape="rect" id="Node000004" href="$namespacemod__eos__pi__tables.html#abc7a6cc85762866893b6d54efaf9ccef" title=" " alt="" coords="283,144,437,184"/>
-<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="193,124,270,141,269,147,192,129"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="313,30,311,20,318,10,335,5,360,3,389,6,405,13,403,18,388,11,360,8,336,10,321,15,316,21,318,28"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="449,67,543,88,542,94,448,72"/>
-<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="437,144,542,120,543,125,438,149"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,125,199,165"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="247,95,473,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,131,233,127,233,132,199,136"/>
+<area shape="rect" id="Node000003" href="$namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994" title=" " alt="" coords="521,29,685,84"/>
+<area shape="poly" id="edge8_Node000001_Node000003" title=" " alt="" coords="126,122,179,87,212,70,246,57,313,43,382,38,448,38,508,41,507,47,448,43,382,43,314,49,247,62,214,74,182,91,129,127"/>
+<area shape="rect" id="Node000004" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="733,135,916,160"/>
+<area shape="poly" id="edge11_Node000001_Node000004" title=" " alt="" coords="199,144,247,145,720,145,720,151,247,150,199,149"/>
+<area shape="rect" id="Node000005" href="$namespacemod__eos__pi__tables.html#abc7a6cc85762866893b6d54efaf9ccef" title=" " alt="" coords="526,210,681,250"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="157,162,247,189,386,211,512,223,512,228,385,216,246,194,155,167"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="315,96,312,86,319,76,335,71,360,69,388,72,404,79,401,84,387,77,360,74,337,76,322,81,317,87,320,94"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="473,94,511,85,512,90,474,100"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="474,120,720,138,720,143,474,126"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="522,70,427,94,425,89,520,65"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="560,29,560,19,568,10,582,5,603,3,628,6,643,14,640,18,627,11,603,8,584,10,571,15,565,21,565,29"/>
+<area shape="poly" id="edge6_Node000003_Node000004" title=" " alt="" coords="672,82,781,127,779,132,670,87"/>
+<area shape="poly" id="edge10_Node000005_Node000004" title=" " alt="" coords="657,207,776,163,778,168,659,212"/>
 </map>

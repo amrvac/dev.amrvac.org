@@ -174,7 +174,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="comment">! Prescribed rho,T -&gt; consistent pthermal and Rfactor</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordtype">public</span> :: <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a727d698b093555e7681e868b27fa2e99">ionization_solve_p_rfactor</a></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="comment">! T-only cooling callback and mode query</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">public</span> :: <a class="code hl_function" href="namespacemod__eos__pi__tables.html#af961081c7d56637bcbc84f40ca817c9e">ionization_get_rfactor_from_temperature</a></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">public</span> :: <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">public</span> :: <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordtype">public</span> :: <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a9b061ac4fe6e67dd020712bb72ee7e36">ionization_get_state_from_eint</a></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">public</span> :: <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a5b1e6cae558f310ab3b8b93272c62ba4">ionization_get_p_eint_from_rho_t</a></div>
@@ -561,7 +561,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>      <span class="keywordtype">double precision</span> :: rtmp</div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span> </div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>      {<span class="keywordflow">do</span> ix^db=ixomin^db,ixomax^db\}</div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>        <span class="keyword">call </span>ionization_state_from_temperature_scalar( &amp;</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a>( &amp;</div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>             te(ix^<a class="code hl_variable" href="namespacemod__global__parameters.html#a71ee003132d53879487a9076243b2402">d</a>), rtmp, iz_h(ix^<a class="code hl_variable" href="namespacemod__global__parameters.html#a71ee003132d53879487a9076243b2402">d</a>), iz_he(ix^<a class="code hl_variable" href="namespacemod__global__parameters.html#a71ee003132d53879487a9076243b2402">d</a>))</div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>      {<span class="keyword">end </span>do\}</div>
 </div>
@@ -764,7 +764,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span><span class="keywordflow">      end if</span></div>
 <div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span> </div>
 <div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a>()) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>        <span class="keyword">call </span>ionization_state_from_temperature_scalar(t, rfactor)</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a>(t, rfactor)</div>
 <div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>        p = rho*rfactor*t</div>
 <div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>        <span class="keywordflow">return</span></div>
 <div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span><span class="keywordflow">      end if</span></div>
@@ -896,7 +896,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>          (te_h_table(ilo+1) - te_h_table(ilo))/denom</div>
 <div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>    <span class="keyword">end subroutine </span>ionization_invert_y_scalar</div>
 <div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span> </div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>    <span class="keyword">subroutine </span>ionization_state_from_temperature_scalar(T, Rfactor, iz_H, iz_He)</div>
+<div class="foldopen" id="foldopen00795" data-start="" data-end="">
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno"><a class="line" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">  795</a></span>    <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a>(T, Rfactor, iz_H, iz_He)</div>
 <div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
 <div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span> </div>
 <div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: t</div>
@@ -920,7 +921,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span> </div>
 <div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iz_h)) iz_h = iz_h_loc</div>
 <div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iz_he)) iz_he = iz_he_loc</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>    <span class="keyword">end subroutine </span>ionization_state_from_temperature_scalar</div>
+</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a></div>
 <div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span> </div>
 <div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>    <span class="keyword">subroutine </span>ionization_check_prominence_y_table()</div>
 <div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
@@ -1030,7 +1032,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>      <span class="keywordflow">if</span> (ionization_include_energy) <span class="keyword">allocate</span>(eps_ion_h_table(1:n))</div>
 <div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span> </div>
 <div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>      <span class="keywordflow">do</span> i = 1, n</div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>        <span class="keyword">call </span>ionization_state_from_temperature_scalar( &amp;</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a>( &amp;</div>
 <div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>             te_h_table(i), rfactor_table(i), iz_h, iz_he)</div>
 <div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>        y_table(i) = rfactor_table(i)*te_h_table(i)</div>
 <div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>        <span class="keywordflow">if</span> (ionization_include_energy) <span class="keywordflow">then</span></div>
@@ -1086,271 +1088,262 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>    <span class="keyword">end function </span>ionization_eps_ion_of_degrees</div>
 <div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span> </div>
 <div class="foldopen" id="foldopen00984" data-start="" data-end="">
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno"><a class="line" href="namespacemod__eos__pi__tables.html#af961081c7d56637bcbc84f40ca817c9e">  984</a></span>    <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#af961081c7d56637bcbc84f40ca817c9e">ionization_get_rfactor_from_temperature</a>(T, Rfactor)</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span>  :: t</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: rfactor</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span> </div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>      <span class="keyword">call </span>ionization_state_from_temperature_scalar(t, rfactor)</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno"><a class="line" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">  984</a></span>    <span class="keyword">logical </span><span class="keyword">function </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a>()</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>      <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a> = &amp;</div>
+<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>            ionization_table_mode == ionization_mode_chromosphere .or. &amp;</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>            ionization_table_mode == ionization_mode_flare</div>
 </div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#af961081c7d56637bcbc84f40ca817c9e">ionization_get_rfactor_from_temperature</a></div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span> </div>
-<div class="foldopen" id="foldopen00991" data-start="" data-end="">
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno"><a class="line" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">  991</a></span>    <span class="keyword">logical </span><span class="keyword">function </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a>()</div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>      <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a> = &amp;</div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>            ionization_table_mode == ionization_mode_chromosphere .or. &amp;</div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>            ionization_table_mode == ionization_mode_flare</div>
-</div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    <span class="keyword">end function </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a></div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span> </div>
-<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>    <span class="keyword">logical </span><span class="keyword">function </span>ionization_includes_energy()</div>
-<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>      ionization_includes_energy = ionization_include_energy</div>
-<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>    <span class="keyword">end function </span>ionization_includes_energy</div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span> </div>
-<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>    <span class="keyword">double precision </span><span class="keyword">function </span>ionization_eint_table_value(i, invgam)</div>
-<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>      <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: i</div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: invgam</div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span> </div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>      ionization_eint_table_value = &amp;</div>
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>           y_table(i)*invgam + eps_ion_h_table(i)</div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>    <span class="keyword">end function </span>ionization_eint_table_value</div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span> </div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>    <span class="keyword">subroutine </span>ionization_check_eint_table(invgam)</div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: invgam</div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>      <span class="keywordtype">integer</span> :: i</div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>      <span class="keywordtype">double precision</span> :: eps1, eps2</div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span> </div>
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>      <span class="keywordflow">if</span> (.not. ionization_include_energy) <span class="keywordflow">return</span></div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>      <span class="keywordflow">if</span> (.not. <span class="keyword">allocated</span>(eps_ion_h_table)) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy table is not initialized&quot;</span>)</div>
-<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>      <span class="keywordflow">if</span> (invgam &lt;= 0.d0) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid inverse gamma minus one for ionization EOS&quot;</span>)</div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span> </div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>      <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(y_table)-1</div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>        eps1 = ionization_eint_table_value(i, invgam)</div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>        eps2 = ionization_eint_table_value(i+1, invgam)</div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>        <span class="keywordflow">if</span> (eps2 &lt;= eps1) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>          <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization specific-energy table is not monotonic&quot;</span>)</div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span><span class="keywordflow">        end if</span></div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span><span class="keywordflow">      end do</span></div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>    <span class="keyword">end subroutine </span>ionization_check_eint_table</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span> </div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>    <span class="keyword">subroutine </span>ionization_invert_eint_scalar(eps, invgam, T)</div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__global__parameters.html">mod_global_parameters</a>, <span class="keywordtype">only</span>: <a class="code hl_variable" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a></div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: eps, invgam</div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: t</div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span> </div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>      <span class="keywordtype">integer</span> :: ilo, ihi, imid, n, iter</div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>      <span class="keywordtype">double precision</span> :: eps_min, eps_max, eps_lo, eps_hi, denom</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>      <span class="keywordtype">double precision</span> :: eps_eval, slope, rfactor, iz_h, iz_he, tnew</div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span> </div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>      <span class="keywordflow">if</span> (.not. ionization_include_energy .or. &amp;</div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>          .not. <span class="keyword">allocated</span>(eps_ion_h_table)) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy EOS is not initialized&quot;</span>)</div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>      <span class="keywordflow">if</span> (invgam &lt;= 0.d0) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid inverse gamma minus one in energy inversion&quot;</span>)</div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span> </div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>      n = <span class="keyword">size</span>(y_table)</div>
-<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>      eps_min = ionization_eint_table_value(1, invgam)</div>
-<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>      eps_max = ionization_eint_table_value(n, invgam)</div>
-<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span> </div>
-<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>      <span class="keywordflow">if</span> (eps &lt; eps_min) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>        <span class="comment">! Below the tabulated eion energy range this is floor/illegal-state</span></div>
-<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        <span class="comment">! recovery, not a strictly conservative EOS inversion.</span></div>
-<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>        t = max(tiny(1.d0), &amp;</div>
-<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>             (eps-eps_ion_h_table(1))/(rfactor_table(1)*invgam))</div>
-<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span>        <span class="keywordflow">return</span></div>
-<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span> </div>
-<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>      <span class="keywordflow">if</span> (eps &gt;= eps_max) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>        t = max(tiny(1.d0), &amp;</div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>             (eps-eps_ion_h_table(n))/(rfactor_table(n)*invgam))</div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>        <span class="keywordflow">return</span></div>
-<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span> </div>
-<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>      ilo = 1</div>
-<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span>      ihi = n</div>
-<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span>      <span class="keywordflow">do</span> <span class="keywordflow">while</span> (ihi-ilo &gt; 1)</div>
-<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span>        imid = (ilo+ihi)/2</div>
-<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>        <span class="keywordflow">if</span> (eps &gt;= ionization_eint_table_value(imid, invgam)) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>          ilo = imid</div>
-<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>          ihi = imid</div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span><span class="keywordflow">        end if</span></div>
-<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span><span class="keywordflow">      end do</span></div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>    <span class="keyword">end function </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a></div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span> </div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>    <span class="keyword">logical </span><span class="keyword">function </span>ionization_includes_energy()</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>      ionization_includes_energy = ionization_include_energy</div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>    <span class="keyword">end function </span>ionization_includes_energy</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span> </div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>    <span class="keyword">double precision </span><span class="keyword">function </span>ionization_eint_table_value(i, invgam)</div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>      <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: i</div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: invgam</div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span> </div>
+<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>      ionization_eint_table_value = &amp;</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>           y_table(i)*invgam + eps_ion_h_table(i)</div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>    <span class="keyword">end function </span>ionization_eint_table_value</div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span> </div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>    <span class="keyword">subroutine </span>ionization_check_eint_table(invgam)</div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: invgam</div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>      <span class="keywordtype">integer</span> :: i</div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>      <span class="keywordtype">double precision</span> :: eps1, eps2</div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span> </div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>      <span class="keywordflow">if</span> (.not. ionization_include_energy) <span class="keywordflow">return</span></div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>      <span class="keywordflow">if</span> (.not. <span class="keyword">allocated</span>(eps_ion_h_table)) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy table is not initialized&quot;</span>)</div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>      <span class="keywordflow">if</span> (invgam &lt;= 0.d0) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid inverse gamma minus one for ionization EOS&quot;</span>)</div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span> </div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>      <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(y_table)-1</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>        eps1 = ionization_eint_table_value(i, invgam)</div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>        eps2 = ionization_eint_table_value(i+1, invgam)</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>        <span class="keywordflow">if</span> (eps2 &lt;= eps1) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>          <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization specific-energy table is not monotonic&quot;</span>)</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span><span class="keywordflow">        end if</span></div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span><span class="keywordflow">      end do</span></div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    <span class="keyword">end subroutine </span>ionization_check_eint_table</div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span> </div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span>    <span class="keyword">subroutine </span>ionization_invert_eint_scalar(eps, invgam, T)</div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__global__parameters.html">mod_global_parameters</a>, <span class="keywordtype">only</span>: <a class="code hl_variable" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a></div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: eps, invgam</div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: t</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span> </div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>      <span class="keywordtype">integer</span> :: ilo, ihi, imid, n, iter</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>      <span class="keywordtype">double precision</span> :: eps_min, eps_max, eps_lo, eps_hi, denom</div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>      <span class="keywordtype">double precision</span> :: eps_eval, slope, rfactor, iz_h, iz_he, tnew</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span> </div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>      <span class="keywordflow">if</span> (.not. ionization_include_energy .or. &amp;</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>          .not. <span class="keyword">allocated</span>(eps_ion_h_table)) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy EOS is not initialized&quot;</span>)</div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>      <span class="keywordflow">if</span> (invgam &lt;= 0.d0) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid inverse gamma minus one in energy inversion&quot;</span>)</div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span> </div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>      n = <span class="keyword">size</span>(y_table)</div>
+<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>      eps_min = ionization_eint_table_value(1, invgam)</div>
+<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>      eps_max = ionization_eint_table_value(n, invgam)</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span> </div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>      <span class="keywordflow">if</span> (eps &lt; eps_min) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>        <span class="comment">! Below the tabulated eion energy range this is floor/illegal-state</span></div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>        <span class="comment">! recovery, not a strictly conservative EOS inversion.</span></div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>        t = max(tiny(1.d0), &amp;</div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>             (eps-eps_ion_h_table(1))/(rfactor_table(1)*invgam))</div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>        <span class="keywordflow">return</span></div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span> </div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>      <span class="keywordflow">if</span> (eps &gt;= eps_max) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>        t = max(tiny(1.d0), &amp;</div>
+<div class="line"><a id="l01057" name="l01057"></a><span class="lineno"> 1057</span>             (eps-eps_ion_h_table(n))/(rfactor_table(n)*invgam))</div>
+<div class="line"><a id="l01058" name="l01058"></a><span class="lineno"> 1058</span>        <span class="keywordflow">return</span></div>
+<div class="line"><a id="l01059" name="l01059"></a><span class="lineno"> 1059</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01060" name="l01060"></a><span class="lineno"> 1060</span> </div>
+<div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span>      ilo = 1</div>
+<div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>      ihi = n</div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>      <span class="keywordflow">do</span> <span class="keywordflow">while</span> (ihi-ilo &gt; 1)</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>        imid = (ilo+ihi)/2</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>        <span class="keywordflow">if</span> (eps &gt;= ionization_eint_table_value(imid, invgam)) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span>          ilo = imid</div>
+<div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>          ihi = imid</div>
+<div class="line"><a id="l01069" name="l01069"></a><span class="lineno"> 1069</span><span class="keywordflow">        end if</span></div>
+<div class="line"><a id="l01070" name="l01070"></a><span class="lineno"> 1070</span><span class="keywordflow">      end do</span></div>
+<div class="line"><a id="l01071" name="l01071"></a><span class="lineno"> 1071</span> </div>
+<div class="line"><a id="l01072" name="l01072"></a><span class="lineno"> 1072</span>      eps_lo = ionization_eint_table_value(ilo, invgam)</div>
+<div class="line"><a id="l01073" name="l01073"></a><span class="lineno"> 1073</span>      eps_hi = ionization_eint_table_value(ilo+1, invgam)</div>
+<div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>      denom = eps_hi-eps_lo</div>
+<div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>      <span class="keywordflow">if</span> (denom &lt;= max(tiny(denom), 1.<a class="code hl_variable" href="namespacemod__global__parameters.html#a71ee003132d53879487a9076243b2402">d</a>-12*abs(eps_lo))) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid ionization-energy inversion interval&quot;</span>)</div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span><span class="keywordflow">      end if</span></div>
 <div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span> </div>
-<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>      eps_lo = ionization_eint_table_value(ilo, invgam)</div>
-<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>      eps_hi = ionization_eint_table_value(ilo+1, invgam)</div>
-<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>      denom = eps_hi-eps_lo</div>
-<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>      <span class="keywordflow">if</span> (denom &lt;= max(tiny(denom), 1.<a class="code hl_variable" href="namespacemod__global__parameters.html#a71ee003132d53879487a9076243b2402">d</a>-12*abs(eps_lo))) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid ionization-energy inversion interval&quot;</span>)</div>
-<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span> </div>
-<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>      t = te_h_table(ilo) + (eps-eps_lo) * &amp;</div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>           (te_h_table(ilo+1)-te_h_table(ilo))/denom</div>
-<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span> </div>
-<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>      <span class="comment">! The tabulated value supplies a close initial guess. Correct it against</span></div>
-<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>      <span class="comment">! the actual interpolated ionization state so rho,eint -&gt; T and</span></div>
-<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>      <span class="comment">! rho,T -&gt; eint remain mutually consistent inside each table interval.</span></div>
-<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>      slope = denom/(te_h_table(ilo+1)-te_h_table(ilo))</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>      <span class="keywordflow">do</span> iter = 1, 3</div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span>        <span class="keyword">call </span>ionization_state_from_temperature_scalar( &amp;</div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>             t, rfactor, iz_h, iz_he)</div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>        eps_eval = rfactor*t*invgam + ionization_eps_ion_of_degrees(iz_h, iz_he)</div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>        <span class="keywordflow">if</span> (abs(eps_eval-eps) &lt;= &amp;</div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>            1.<a class="code hl_variable" href="namespacemod__global__parameters.html#a71ee003132d53879487a9076243b2402">d</a>-12*max(abs(eps), tiny(1.d0))) <span class="keywordflow">exit</span></div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>        tnew = t-(eps_eval-eps)/slope</div>
-<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>        t = max(te_h_table(ilo), min(te_h_table(ilo+1), tnew))</div>
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span><span class="keywordflow">      end do</span></div>
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>      <span class="keywordflow">if</span> (iter &gt; 3 .and. .not. pi_newton_warned .and. <a class="code hl_variable" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> == 0) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>        pi_newton_warned = .true.</div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>        <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;WARNING: PI eint-&gt;T Newton inversion did not fully converge &quot;</span>, &amp;</div>
-<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>             <span class="stringliteral">&quot;in 3 iterations; using the last iterate (interval-clamped). &quot;</span>, &amp;</div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>             <span class="stringliteral">&quot;Further occurrences are not reported.&quot;</span></div>
-<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>    <span class="keyword">end subroutine </span>ionization_invert_eint_scalar</div>
-<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span> </div>
-<div class="foldopen" id="foldopen01110" data-start="" data-end="">
-<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"><a class="line" href="namespacemod__eos__pi__tables.html#a9b061ac4fe6e67dd020712bb72ee7e36"> 1110</a></span>    <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a9b061ac4fe6e67dd020712bb72ee7e36">ionization_get_state_from_eint</a>( &amp;</div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>         rho, eint, invgam, T, p, Rfactor, iz_H, iz_He)</div>
-<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
-<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: rho, eint, invgam</div>
-<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: t, p, rfactor</div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span>, <span class="keywordtype">optional</span> :: iz_h, iz_he</div>
-<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>      <span class="keywordtype">double precision</span> :: iz_h_loc, iz_he_loc</div>
-<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span> </div>
-<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>      <span class="keywordflow">if</span> (.not. ionization_include_energy) &amp;</div>
-<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>           <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy EOS is not enabled&quot;</span>)</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>      <span class="keywordflow">if</span> (.not. <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a>()) &amp;</div>
-<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>           <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy EOS requires a T-only table&quot;</span>)</div>
-<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>      <span class="keywordflow">if</span> (rho &lt;= 0.d0 .or. eint &lt;= 0.d0) &amp;</div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>           <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid rho or eint in ionization EOS&quot;</span>)</div>
-<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>      <span class="keyword">call </span>ionization_invert_eint_scalar(eint/rho, invgam, t)</div>
-<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>      <span class="keyword">call </span>ionization_state_from_temperature_scalar( &amp;</div>
-<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>           t, rfactor, iz_h_loc, iz_he_loc)</div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>      p = rho*rfactor*t</div>
-<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iz_h)) iz_h = iz_h_loc</div>
-<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iz_he)) iz_he = iz_he_loc</div>
+<div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>      t = te_h_table(ilo) + (eps-eps_lo) * &amp;</div>
+<div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>           (te_h_table(ilo+1)-te_h_table(ilo))/denom</div>
+<div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span> </div>
+<div class="line"><a id="l01082" name="l01082"></a><span class="lineno"> 1082</span>      <span class="comment">! The tabulated value supplies a close initial guess. Correct it against</span></div>
+<div class="line"><a id="l01083" name="l01083"></a><span class="lineno"> 1083</span>      <span class="comment">! the actual interpolated ionization state so rho,eint -&gt; T and</span></div>
+<div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>      <span class="comment">! rho,T -&gt; eint remain mutually consistent inside each table interval.</span></div>
+<div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>      slope = denom/(te_h_table(ilo+1)-te_h_table(ilo))</div>
+<div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>      <span class="keywordflow">do</span> iter = 1, 3</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a>( &amp;</div>
+<div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span>             t, rfactor, iz_h, iz_he)</div>
+<div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>        eps_eval = rfactor*t*invgam + ionization_eps_ion_of_degrees(iz_h, iz_he)</div>
+<div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>        <span class="keywordflow">if</span> (abs(eps_eval-eps) &lt;= &amp;</div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>            1.<a class="code hl_variable" href="namespacemod__global__parameters.html#a71ee003132d53879487a9076243b2402">d</a>-12*max(abs(eps), tiny(1.d0))) <span class="keywordflow">exit</span></div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>        tnew = t-(eps_eval-eps)/slope</div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span>        t = max(te_h_table(ilo), min(te_h_table(ilo+1), tnew))</div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span><span class="keywordflow">      end do</span></div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>      <span class="keywordflow">if</span> (iter &gt; 3 .and. .not. pi_newton_warned .and. <a class="code hl_variable" href="namespacemod__global__parameters.html#a605b2c8e7a386f644c7f8817421b6d67">mype</a> == 0) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>        pi_newton_warned = .true.</div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>        <span class="keyword">write</span>(*,*) <span class="stringliteral">&quot;WARNING: PI eint-&gt;T Newton inversion did not fully converge &quot;</span>, &amp;</div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>             <span class="stringliteral">&quot;in 3 iterations; using the last iterate (interval-clamped). &quot;</span>, &amp;</div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>             <span class="stringliteral">&quot;Further occurrences are not reported.&quot;</span></div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>    <span class="keyword">end subroutine </span>ionization_invert_eint_scalar</div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span> </div>
+<div class="foldopen" id="foldopen01103" data-start="" data-end="">
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"><a class="line" href="namespacemod__eos__pi__tables.html#a9b061ac4fe6e67dd020712bb72ee7e36"> 1103</a></span>    <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a9b061ac4fe6e67dd020712bb72ee7e36">ionization_get_state_from_eint</a>( &amp;</div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span>         rho, eint, invgam, T, p, Rfactor, iz_H, iz_He)</div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: rho, eint, invgam</div>
+<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: t, p, rfactor</div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span>, <span class="keywordtype">optional</span> :: iz_h, iz_he</div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>      <span class="keywordtype">double precision</span> :: iz_h_loc, iz_he_loc</div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span> </div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>      <span class="keywordflow">if</span> (.not. ionization_include_energy) &amp;</div>
+<div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span>           <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy EOS is not enabled&quot;</span>)</div>
+<div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>      <span class="keywordflow">if</span> (.not. <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a>()) &amp;</div>
+<div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>           <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy EOS requires a T-only table&quot;</span>)</div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>      <span class="keywordflow">if</span> (rho &lt;= 0.d0 .or. eint &lt;= 0.d0) &amp;</div>
+<div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>           <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid rho or eint in ionization EOS&quot;</span>)</div>
+<div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>      <span class="keyword">call </span>ionization_invert_eint_scalar(eint/rho, invgam, t)</div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>      <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a>( &amp;</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>           t, rfactor, iz_h_loc, iz_he_loc)</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>      p = rho*rfactor*t</div>
+<div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iz_h)) iz_h = iz_h_loc</div>
+<div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iz_he)) iz_he = iz_he_loc</div>
 </div>
-<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a9b061ac4fe6e67dd020712bb72ee7e36">ionization_get_state_from_eint</a></div>
-<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span> </div>
-<div class="foldopen" id="foldopen01132" data-start="" data-end="">
-<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"><a class="line" href="namespacemod__eos__pi__tables.html#a5b1e6cae558f310ab3b8b93272c62ba4"> 1132</a></span>    <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a5b1e6cae558f310ab3b8b93272c62ba4">ionization_get_p_eint_from_rho_t</a>( &amp;</div>
-<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>         rho, T, invgam, p, eint, Rfactor, iz_H, iz_He)</div>
-<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
-<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: rho, t, invgam</div>
-<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: p, eint, rfactor</div>
-<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span>, <span class="keywordtype">optional</span> :: iz_h, iz_he</div>
-<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>      <span class="keywordtype">double precision</span> :: iz_h_loc, iz_he_loc</div>
-<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span> </div>
-<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span>      <span class="keywordflow">if</span> (rho &lt;= 0.d0 .or. t &lt;= 0.d0 .or. invgam &lt;= 0.d0) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid state in rho,T ionization EOS mapping&quot;</span>)</div>
-<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span> </div>
-<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>      <span class="keywordflow">if</span> (ionization_include_energy) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>        <span class="keywordflow">if</span> (.not. <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a>()) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>          <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization energy requires a T-only ionization table&quot;</span>)</div>
-<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span><span class="keywordflow">        end if</span></div>
-<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>        <span class="keyword">call </span>ionization_state_from_temperature_scalar( &amp;</div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>             t, rfactor, iz_h_loc, iz_he_loc)</div>
-<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>        p = rho*rfactor*t</div>
-<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>        eint = rho*(rfactor*t*invgam + &amp;</div>
-<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>             ionization_eps_ion_of_degrees(iz_h_loc, iz_he_loc))</div>
-<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a727d698b093555e7681e868b27fa2e99">ionization_solve_p_rfactor</a>(rho, t, p, rfactor)</div>
-<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#abc7a6cc85762866893b6d54efaf9ccef">ionization_state_tp</a>(t, p, rfactor, iz_h_loc, iz_he_loc)</div>
-<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>        eint = p*invgam</div>
-<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span> </div>
-<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iz_h)) iz_h = iz_h_loc</div>
-<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iz_he)) iz_he = iz_he_loc</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a9b061ac4fe6e67dd020712bb72ee7e36">ionization_get_state_from_eint</a></div>
+<div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span> </div>
+<div class="foldopen" id="foldopen01125" data-start="" data-end="">
+<div class="line"><a id="l01125" name="l01125"></a><span class="lineno"><a class="line" href="namespacemod__eos__pi__tables.html#a5b1e6cae558f310ab3b8b93272c62ba4"> 1125</a></span>    <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a5b1e6cae558f310ab3b8b93272c62ba4">ionization_get_p_eint_from_rho_t</a>( &amp;</div>
+<div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>         rho, T, invgam, p, eint, Rfactor, iz_H, iz_He)</div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: rho, t, invgam</div>
+<div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: p, eint, rfactor</div>
+<div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span>, <span class="keywordtype">optional</span> :: iz_h, iz_he</div>
+<div class="line"><a id="l01131" name="l01131"></a><span class="lineno"> 1131</span>      <span class="keywordtype">double precision</span> :: iz_h_loc, iz_he_loc</div>
+<div class="line"><a id="l01132" name="l01132"></a><span class="lineno"> 1132</span> </div>
+<div class="line"><a id="l01133" name="l01133"></a><span class="lineno"> 1133</span>      <span class="keywordflow">if</span> (rho &lt;= 0.d0 .or. t &lt;= 0.d0 .or. invgam &lt;= 0.d0) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01134" name="l01134"></a><span class="lineno"> 1134</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid state in rho,T ionization EOS mapping&quot;</span>)</div>
+<div class="line"><a id="l01135" name="l01135"></a><span class="lineno"> 1135</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span> </div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span>      <span class="keywordflow">if</span> (ionization_include_energy) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01138" name="l01138"></a><span class="lineno"> 1138</span>        <span class="keywordflow">if</span> (.not. <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a>()) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01139" name="l01139"></a><span class="lineno"> 1139</span>          <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization energy requires a T-only ionization table&quot;</span>)</div>
+<div class="line"><a id="l01140" name="l01140"></a><span class="lineno"> 1140</span><span class="keywordflow">        end if</span></div>
+<div class="line"><a id="l01141" name="l01141"></a><span class="lineno"> 1141</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a>( &amp;</div>
+<div class="line"><a id="l01142" name="l01142"></a><span class="lineno"> 1142</span>             t, rfactor, iz_h_loc, iz_he_loc)</div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>        p = rho*rfactor*t</div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span>        eint = rho*(rfactor*t*invgam + &amp;</div>
+<div class="line"><a id="l01145" name="l01145"></a><span class="lineno"> 1145</span>             ionization_eps_ion_of_degrees(iz_h_loc, iz_he_loc))</div>
+<div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a727d698b093555e7681e868b27fa2e99">ionization_solve_p_rfactor</a>(rho, t, p, rfactor)</div>
+<div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#abc7a6cc85762866893b6d54efaf9ccef">ionization_state_tp</a>(t, p, rfactor, iz_h_loc, iz_he_loc)</div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>        eint = p*invgam</div>
+<div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span> </div>
+<div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iz_h)) iz_h = iz_h_loc</div>
+<div class="line"><a id="l01153" name="l01153"></a><span class="lineno"> 1153</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(iz_he)) iz_he = iz_he_loc</div>
 </div>
-<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a5b1e6cae558f310ab3b8b93272c62ba4">ionization_get_p_eint_from_rho_t</a></div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a5b1e6cae558f310ab3b8b93272c62ba4">ionization_get_p_eint_from_rho_t</a></div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span> </div>
+<div class="line"><a id="l01156" name="l01156"></a><span class="lineno"> 1156</span>    <span class="keyword">subroutine </span>ionization_get_eps_derivative_t( &amp;</div>
+<div class="line"><a id="l01157" name="l01157"></a><span class="lineno"> 1157</span>         T, invgam, eps, deps_dT, dq_dT_out)</div>
+<div class="line"><a id="l01158" name="l01158"></a><span class="lineno"> 1158</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
+<div class="line"><a id="l01159" name="l01159"></a><span class="lineno"> 1159</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: t, invgam</div>
+<div class="line"><a id="l01160" name="l01160"></a><span class="lineno"> 1160</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: eps, deps_dt</div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span>, <span class="keywordtype">optional</span> :: dq_dt_out</div>
 <div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span> </div>
-<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>    <span class="keyword">subroutine </span>ionization_get_eps_derivative_t( &amp;</div>
-<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>         T, invgam, eps, deps_dT, dq_dT_out)</div>
-<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span>      <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__comm__lib.html">mod_comm_lib</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a></div>
-<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: t, invgam</div>
-<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: eps, deps_dt</div>
-<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span>, <span class="keywordtype">optional</span> :: dq_dt_out</div>
-<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span> </div>
-<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>      <span class="keywordtype">integer</span> :: i, n</div>
-<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span>      <span class="keywordtype">double precision</span> :: rfactor, iz_h, iz_he, q, dq_dt, depsion_dt</div>
-<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span> </div>
-<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>      <span class="keywordflow">if</span> (.not. ionization_include_energy) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy derivative requested while disabled&quot;</span>)</div>
-<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>      <span class="keywordflow">if</span> (.not. <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a>()) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy derivative requires a T-only table&quot;</span>)</div>
-<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>      <span class="keywordflow">if</span> (t &lt;= 0.d0 .or. invgam &lt;= 0.d0) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid state in ionization-energy derivative&quot;</span>)</div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span> </div>
-<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>      n = <span class="keyword">size</span>(te_h_table)</div>
-<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>      <span class="keyword">call </span>ionization_state_from_temperature_scalar(t, rfactor, iz_h, iz_he)</div>
-<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>      q = rfactor*t</div>
-<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>      eps = q*invgam + ionization_eps_ion_of_degrees(iz_h, iz_he)</div>
-<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span> </div>
-<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>      <span class="keywordflow">if</span> (t &lt; te_table_min) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>        dq_dt = rfactor_table(1)</div>
-<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>        depsion_dt = 0.d0</div>
-<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (t &gt;= te_table_max) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>        dq_dt = rfactor_table(n)</div>
-<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>        depsion_dt = 0.d0</div>
-<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>        i = int((t-te_table_min)*inv_te_table_step) + 1</div>
-<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>        i = max(1, min(n-1, i))</div>
-<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>        dq_dt = (y_table(i+1)-y_table(i)) / &amp;</div>
-<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>             (te_h_table(i+1)-te_h_table(i))</div>
-<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span>        depsion_dt = (eps_ion_h_table(i+1)-eps_ion_h_table(i)) / &amp;</div>
-<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>             (te_h_table(i+1)-te_h_table(i))</div>
-<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01163" name="l01163"></a><span class="lineno"> 1163</span>      <span class="keywordtype">integer</span> :: i, n</div>
+<div class="line"><a id="l01164" name="l01164"></a><span class="lineno"> 1164</span>      <span class="keywordtype">double precision</span> :: rfactor, iz_h, iz_he, q, dq_dt, depsion_dt</div>
+<div class="line"><a id="l01165" name="l01165"></a><span class="lineno"> 1165</span> </div>
+<div class="line"><a id="l01166" name="l01166"></a><span class="lineno"> 1166</span>      <span class="keywordflow">if</span> (.not. ionization_include_energy) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01167" name="l01167"></a><span class="lineno"> 1167</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy derivative requested while disabled&quot;</span>)</div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span>      <span class="keywordflow">if</span> (.not. <a class="code hl_function" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a>()) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01170" name="l01170"></a><span class="lineno"> 1170</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;ionization-energy derivative requires a T-only table&quot;</span>)</div>
+<div class="line"><a id="l01171" name="l01171"></a><span class="lineno"> 1171</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01172" name="l01172"></a><span class="lineno"> 1172</span>      <span class="keywordflow">if</span> (t &lt;= 0.d0 .or. invgam &lt;= 0.d0) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01173" name="l01173"></a><span class="lineno"> 1173</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;invalid state in ionization-energy derivative&quot;</span>)</div>
+<div class="line"><a id="l01174" name="l01174"></a><span class="lineno"> 1174</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01175" name="l01175"></a><span class="lineno"> 1175</span> </div>
+<div class="line"><a id="l01176" name="l01176"></a><span class="lineno"> 1176</span>      n = <span class="keyword">size</span>(te_h_table)</div>
+<div class="line"><a id="l01177" name="l01177"></a><span class="lineno"> 1177</span>      <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a>(t, rfactor, iz_h, iz_he)</div>
+<div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>      q = rfactor*t</div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>      eps = q*invgam + ionization_eps_ion_of_degrees(iz_h, iz_he)</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span> </div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>      <span class="keywordflow">if</span> (t &lt; te_table_min) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>        dq_dt = rfactor_table(1)</div>
+<div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>        depsion_dt = 0.d0</div>
+<div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (t &gt;= te_table_max) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01185" name="l01185"></a><span class="lineno"> 1185</span>        dq_dt = rfactor_table(n)</div>
+<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>        depsion_dt = 0.d0</div>
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01188" name="l01188"></a><span class="lineno"> 1188</span>        i = int((t-te_table_min)*inv_te_table_step) + 1</div>
+<div class="line"><a id="l01189" name="l01189"></a><span class="lineno"> 1189</span>        i = max(1, min(n-1, i))</div>
+<div class="line"><a id="l01190" name="l01190"></a><span class="lineno"> 1190</span>        dq_dt = (y_table(i+1)-y_table(i)) / &amp;</div>
+<div class="line"><a id="l01191" name="l01191"></a><span class="lineno"> 1191</span>             (te_h_table(i+1)-te_h_table(i))</div>
+<div class="line"><a id="l01192" name="l01192"></a><span class="lineno"> 1192</span>        depsion_dt = (eps_ion_h_table(i+1)-eps_ion_h_table(i)) / &amp;</div>
+<div class="line"><a id="l01193" name="l01193"></a><span class="lineno"> 1193</span>             (te_h_table(i+1)-te_h_table(i))</div>
+<div class="line"><a id="l01194" name="l01194"></a><span class="lineno"> 1194</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span> </div>
+<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span>      deps_dt = dq_dt*invgam + depsion_dt</div>
+<div class="line"><a id="l01197" name="l01197"></a><span class="lineno"> 1197</span>      <span class="keywordflow">if</span> (deps_dt &lt;= 0.d0) <span class="keywordflow">then</span></div>
+<div class="line"><a id="l01198" name="l01198"></a><span class="lineno"> 1198</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;non-positive heat capacity in ionization EOS&quot;</span>)</div>
+<div class="line"><a id="l01199" name="l01199"></a><span class="lineno"> 1199</span><span class="keywordflow">      end if</span></div>
+<div class="line"><a id="l01200" name="l01200"></a><span class="lineno"> 1200</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(dq_dt_out)) dq_dt_out = dq_dt</div>
+<div class="line"><a id="l01201" name="l01201"></a><span class="lineno"> 1201</span>    <span class="keyword">end subroutine </span>ionization_get_eps_derivative_t</div>
 <div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span> </div>
-<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>      deps_dt = dq_dt*invgam + depsion_dt</div>
-<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>      <span class="keywordflow">if</span> (deps_dt &lt;= 0.d0) <span class="keywordflow">then</span></div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>        <span class="keyword">call </span><a class="code hl_function" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mpistop</a>(<span class="stringliteral">&quot;non-positive heat capacity in ionization EOS&quot;</span>)</div>
-<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>      <span class="keywordflow">if</span> (<span class="keyword">present</span>(dq_dt_out)) dq_dt_out = dq_dt</div>
-<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>    <span class="keyword">end subroutine </span>ionization_get_eps_derivative_t</div>
-<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span> </div>
-<div class="foldopen" id="foldopen01210" data-start="" data-end="">
-<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"><a class="line" href="namespacemod__eos__pi__tables.html#af3bc647f311fa8c0f4bec4ca3308f768"> 1210</a></span>    <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#af3bc647f311fa8c0f4bec4ca3308f768">ionization_get_csound2_t</a>(T, invgam, csound2)</div>
-<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: t, invgam</div>
-<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: csound2</div>
-<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span> </div>
-<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>      <span class="keywordtype">double precision</span> :: rfactor, q, eps, deps_dt, dq_dt</div>
-<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span> </div>
-<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span>      <span class="keyword">call </span>ionization_get_eps_derivative_t( &amp;</div>
-<div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span>           t, invgam, eps, deps_dt, dq_dt)</div>
-<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>      <span class="keyword">call </span>ionization_state_from_temperature_scalar(t, rfactor)</div>
-<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span>      q = rfactor*t</div>
-<div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>      csound2 = q*(1.d0+dq_dt/deps_dt)</div>
+<div class="foldopen" id="foldopen01203" data-start="" data-end="">
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"><a class="line" href="namespacemod__eos__pi__tables.html#af3bc647f311fa8c0f4bec4ca3308f768"> 1203</a></span>    <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#af3bc647f311fa8c0f4bec4ca3308f768">ionization_get_csound2_t</a>(T, invgam, csound2)</div>
+<div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(in)</span> :: t, invgam</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>      <span class="keywordtype">double precision</span>, <span class="keywordtype">intent(out)</span> :: csound2</div>
+<div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span> </div>
+<div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>      <span class="keywordtype">double precision</span> :: rfactor, q, eps, deps_dt, dq_dt</div>
+<div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span> </div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>      <span class="keyword">call </span>ionization_get_eps_derivative_t( &amp;</div>
+<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span>           t, invgam, eps, deps_dt, dq_dt)</div>
+<div class="line"><a id="l01211" name="l01211"></a><span class="lineno"> 1211</span>      <span class="keyword">call </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a>(t, rfactor)</div>
+<div class="line"><a id="l01212" name="l01212"></a><span class="lineno"> 1212</span>      q = rfactor*t</div>
+<div class="line"><a id="l01213" name="l01213"></a><span class="lineno"> 1213</span>      csound2 = q*(1.d0+dq_dt/deps_dt)</div>
 </div>
-<div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#af3bc647f311fa8c0f4bec4ca3308f768">ionization_get_csound2_t</a></div>
-<div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span> </div>
-<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__eos__pi__tables.html">mod_eos_pi_tables</a></div>
+<div class="line"><a id="l01214" name="l01214"></a><span class="lineno"> 1214</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__eos__pi__tables.html#af3bc647f311fa8c0f4bec4ca3308f768">ionization_get_csound2_t</a></div>
+<div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span> </div>
+<div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__eos__pi__tables.html">mod_eos_pi_tables</a></div>
 <div class="ttc" id="anamespacemod__comm__lib_html"><div class="ttname"><a href="namespacemod__comm__lib.html">mod_comm_lib</a></div><div class="ttdef"><b>Definition</b> <a href="mod__comm__lib_8t_source.html#l00001">mod_comm_lib.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__comm__lib_html_a9b6f1a8fd13bc5670e3b426151c34048"><div class="ttname"><a href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mod_comm_lib::mpistop</a></div><div class="ttdeci">subroutine, public mpistop(message)</div><div class="ttdoc">Exit MPI-AMRVAC with an error message.</div><div class="ttdef"><b>Definition</b> <a href="mod__comm__lib_8t_source.html#l00207">mod_comm_lib.t:208</a></div></div>
 <div class="ttc" id="anamespacemod__constants_html"><div class="ttname"><a href="namespacemod__constants.html">mod_constants</a></div><div class="ttdoc">Module for physical and numeric constants.</div><div class="ttdef"><b>Definition</b> <a href="mod__constants_8t_source.html#l00002">mod_constants.t:2</a></div></div>
 <div class="ttc" id="anamespacemod__constants_html_a0bdbd5a618184f282f2f79e9da19ed14"><div class="ttname"><a href="namespacemod__constants.html#a0bdbd5a618184f282f2f79e9da19ed14">mod_constants::const_ev</a></div><div class="ttdeci">double precision, parameter const_ev</div><div class="ttdef"><b>Definition</b> <a href="mod__constants_8t_source.html#l00072">mod_constants.t:72</a></div></div>
 <div class="ttc" id="anamespacemod__eos__pi__tables_html"><div class="ttname"><a href="namespacemod__eos__pi__tables.html">mod_eos_pi_tables</a></div><div class="ttdoc">PI (partial-ionisation) ionisation-degree backend for the eos% family.</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00030">mod_eos_pi_tables.t:30</a></div></div>
-<div class="ttc" id="anamespacemod__eos__pi__tables_html_a1d8b4747ab64747994160a8894141c88"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">mod_eos_pi_tables::ionization_is_temperature_only</a></div><div class="ttdeci">logical function, public ionization_is_temperature_only()</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00991">mod_eos_pi_tables.t:992</a></div></div>
+<div class="ttc" id="anamespacemod__eos__pi__tables_html_a1d8b4747ab64747994160a8894141c88"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">mod_eos_pi_tables::ionization_is_temperature_only</a></div><div class="ttdeci">logical function, public ionization_is_temperature_only()</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00984">mod_eos_pi_tables.t:985</a></div></div>
 <div class="ttc" id="anamespacemod__eos__pi__tables_html_a1f95895125d29a0c26a1eb22a93a5871"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a1f95895125d29a0c26a1eb22a93a5871">mod_eos_pi_tables::ionization_get_state</a></div><div class="ttdeci">subroutine, public ionization_get_state(ixil, ixol, rho, p, t, rfactor, iz_h, iz_he)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00714">mod_eos_pi_tables.t:715</a></div></div>
 <div class="ttc" id="anamespacemod__eos__pi__tables_html_a470316b52503fe43650b5805df108011"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a470316b52503fe43650b5805df108011">mod_eos_pi_tables::ionization_get_state_scalar</a></div><div class="ttdeci">subroutine, public ionization_get_state_scalar(rho, p, t, rfactor, iz_h, iz_he)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00556">mod_eos_pi_tables.t:557</a></div></div>
-<div class="ttc" id="anamespacemod__eos__pi__tables_html_a5b1e6cae558f310ab3b8b93272c62ba4"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a5b1e6cae558f310ab3b8b93272c62ba4">mod_eos_pi_tables::ionization_get_p_eint_from_rho_t</a></div><div class="ttdeci">subroutine, public ionization_get_p_eint_from_rho_t(rho, t, invgam, p, eint, rfactor, iz_h, iz_he)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l01132">mod_eos_pi_tables.t:1134</a></div></div>
+<div class="ttc" id="anamespacemod__eos__pi__tables_html_a5b1e6cae558f310ab3b8b93272c62ba4"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a5b1e6cae558f310ab3b8b93272c62ba4">mod_eos_pi_tables::ionization_get_p_eint_from_rho_t</a></div><div class="ttdeci">subroutine, public ionization_get_p_eint_from_rho_t(rho, t, invgam, p, eint, rfactor, iz_h, iz_he)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l01125">mod_eos_pi_tables.t:1127</a></div></div>
 <div class="ttc" id="anamespacemod__eos__pi__tables_html_a6771b646acf84c65b4cc7a227dbf9e7f"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a6771b646acf84c65b4cc7a227dbf9e7f">mod_eos_pi_tables::ionization_degree_init</a></div><div class="ttdeci">subroutine, public ionization_degree_init(he_abundance, rfactor_norm, table_name, include_energy)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00209">mod_eos_pi_tables.t:210</a></div></div>
+<div class="ttc" id="anamespacemod__eos__pi__tables_html_a6f0e3904877bfe5b06bb3b395c099994"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">mod_eos_pi_tables::ionization_state_from_temperature_scalar</a></div><div class="ttdeci">subroutine, public ionization_state_from_temperature_scalar(t, rfactor, iz_h, iz_he)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00795">mod_eos_pi_tables.t:796</a></div></div>
 <div class="ttc" id="anamespacemod__eos__pi__tables_html_a727d698b093555e7681e868b27fa2e99"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a727d698b093555e7681e868b27fa2e99">mod_eos_pi_tables::ionization_solve_p_rfactor</a></div><div class="ttdeci">subroutine, public ionization_solve_p_rfactor(rho, t, p, rfactor)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00646">mod_eos_pi_tables.t:647</a></div></div>
 <div class="ttc" id="anamespacemod__eos__pi__tables_html_a81e653d3d37f3ca58513c157d87ad73e"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a81e653d3d37f3ca58513c157d87ad73e">mod_eos_pi_tables::ionization_degree_from_temperature</a></div><div class="ttdeci">subroutine, public ionization_degree_from_temperature(ixil, ixol, te, iz_h, iz_he)</div><div class="ttdoc">Array interface for T -&gt; ionization degrees. Used by get_Rfactor_tonly_PI (mod_eos_pi) to build the n...</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00460">mod_eos_pi_tables.t:461</a></div></div>
-<div class="ttc" id="anamespacemod__eos__pi__tables_html_a9b061ac4fe6e67dd020712bb72ee7e36"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a9b061ac4fe6e67dd020712bb72ee7e36">mod_eos_pi_tables::ionization_get_state_from_eint</a></div><div class="ttdeci">subroutine, public ionization_get_state_from_eint(rho, eint, invgam, t, p, rfactor, iz_h, iz_he)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l01110">mod_eos_pi_tables.t:1112</a></div></div>
+<div class="ttc" id="anamespacemod__eos__pi__tables_html_a9b061ac4fe6e67dd020712bb72ee7e36"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#a9b061ac4fe6e67dd020712bb72ee7e36">mod_eos_pi_tables::ionization_get_state_from_eint</a></div><div class="ttdeci">subroutine, public ionization_get_state_from_eint(rho, eint, invgam, t, p, rfactor, iz_h, iz_he)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l01103">mod_eos_pi_tables.t:1105</a></div></div>
 <div class="ttc" id="anamespacemod__eos__pi__tables_html_abc7a6cc85762866893b6d54efaf9ccef"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#abc7a6cc85762866893b6d54efaf9ccef">mod_eos_pi_tables::ionization_state_tp</a></div><div class="ttdeci">subroutine, public ionization_state_tp(t, p, rfactor, iz_h, iz_he)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00613">mod_eos_pi_tables.t:614</a></div></div>
-<div class="ttc" id="anamespacemod__eos__pi__tables_html_af3bc647f311fa8c0f4bec4ca3308f768"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#af3bc647f311fa8c0f4bec4ca3308f768">mod_eos_pi_tables::ionization_get_csound2_t</a></div><div class="ttdeci">subroutine, public ionization_get_csound2_t(t, invgam, csound2)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l01210">mod_eos_pi_tables.t:1211</a></div></div>
-<div class="ttc" id="anamespacemod__eos__pi__tables_html_af961081c7d56637bcbc84f40ca817c9e"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#af961081c7d56637bcbc84f40ca817c9e">mod_eos_pi_tables::ionization_get_rfactor_from_temperature</a></div><div class="ttdeci">subroutine, public ionization_get_rfactor_from_temperature(t, rfactor)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l00984">mod_eos_pi_tables.t:985</a></div></div>
+<div class="ttc" id="anamespacemod__eos__pi__tables_html_af3bc647f311fa8c0f4bec4ca3308f768"><div class="ttname"><a href="namespacemod__eos__pi__tables.html#af3bc647f311fa8c0f4bec4ca3308f768">mod_eos_pi_tables::ionization_get_csound2_t</a></div><div class="ttdeci">subroutine, public ionization_get_csound2_t(t, invgam, csound2)</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__pi__tables_8t_source.html#l01203">mod_eos_pi_tables.t:1204</a></div></div>
 <div class="ttc" id="anamespacemod__global__parameters_html"><div class="ttname"><a href="namespacemod__global__parameters.html">mod_global_parameters</a></div><div class="ttdoc">This module contains definitions of global parameters and variables and some generic functions/subrou...</div><div class="ttdef"><b>Definition</b> <a href="mod__global__parameters_8t_source.html#l00004">mod_global_parameters.t:4</a></div></div>
 <div class="ttc" id="anamespacemod__global__parameters_html_a37c8bbe2457c57b29f0bca3f7e1387fa"><div class="ttname"><a href="namespacemod__global__parameters.html#a37c8bbe2457c57b29f0bca3f7e1387fa">mod_global_parameters::it</a></div><div class="ttdeci">integer it</div><div class="ttdoc">Number of time steps taken.</div><div class="ttdef"><b>Definition</b> <a href="mod__global__parameters_8t_source.html#l00531">mod_global_parameters.t:531</a></div></div>
 <div class="ttc" id="anamespacemod__global__parameters_html_a4296e156fded38497eb361e3acc27355"><div class="ttname"><a href="namespacemod__global__parameters.html#a4296e156fded38497eb361e3acc27355">mod_global_parameters::unit_numberdensity</a></div><div class="ttdeci">double precision unit_numberdensity</div><div class="ttdoc">Physical scaling factor for number density.</div><div class="ttdef"><b>Definition</b> <a href="mod__global__parameters_8t_source.html#l00093">mod_global_parameters.t:93</a></div></div>

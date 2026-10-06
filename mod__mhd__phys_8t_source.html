@@ -681,7 +681,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>      <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>        <a class="code hl_variable" href="namespacemod__mhd__phys.html#ab56d04297e06cc6fd6fb0035b16bb9a1">qperp_</a> = -1</div>
 <div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="keywordflow">      end if</span></div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>      <a class="code hl_variable" href="namespacemod__global__parameters.html#abdae450e90f9aeae06216ab1c4a5e568">need_global_cmax</a>=.true.</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>      <span class="comment">!need_global_cmax=.true.</span></div>
 <div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>    <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>      <a class="code hl_variable" href="namespacemod__mhd__phys.html#a22c5e5ba6ca45c4f3e35fdd731d65b7f">qpar_</a> = -1</div>
 <div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>      <a class="code hl_variable" href="namespacemod__mhd__phys.html#ab56d04297e06cc6fd6fb0035b16bb9a1">qperp_</a> = -1</div>
@@ -5390,7 +5390,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l05270" name="l05270"></a><span class="lineno"> 5270</span> </div>
 <div class="line"><a id="l05271" name="l05271"></a><span class="lineno"> 5271</span>      <span class="keywordflow">if</span>(<a class="code hl_variable" href="namespacemod__mhd__phys.html#a72eb3fb1b6f708c7595913feca2a3f53">mhd_hyperbolic_tc</a>) <span class="keywordflow">then</span></div>
 <div class="line"><a id="l05272" name="l05272"></a><span class="lineno"> 5272</span>        active = .true.</div>
-<div class="line"><a id="l05273" name="l05273"></a><span class="lineno"> 5273</span>        <span class="keyword">call </span>add_hyperbolic_tc_source(qdt,ixi^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,ixo^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,wct,w,x,wctprim)</div>
+<div class="line"><a id="l05273" name="l05273"></a><span class="lineno"> 5273</span>        <span class="keyword">call </span>add_source_hyperbolic_tc(qdt,ixi^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,ixo^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,wct,w,x,wctprim)</div>
 <div class="line"><a id="l05274" name="l05274"></a><span class="lineno"> 5274</span><span class="keywordflow">      end if</span></div>
 <div class="line"><a id="l05275" name="l05275"></a><span class="lineno"> 5275</span> </div>
 <div class="line"><a id="l05276" name="l05276"></a><span class="lineno"> 5276</span>      <span class="comment">! Source for B0 splitting</span></div>
@@ -5721,7 +5721,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l05601" name="l05601"></a><span class="lineno"> 5601</span>    }</div>
 <div class="line"><a id="l05602" name="l05602"></a><span class="lineno"> 5602</span>  <span class="keyword">end subroutine </span>mhd_get_hyperbolic_tc_geometry</div>
 <div class="line"><a id="l05603" name="l05603"></a><span class="lineno"> 5603</span> </div>
-<div class="line"><a id="l05604" name="l05604"></a><span class="lineno"> 5604</span>  <span class="keyword">subroutine </span>add_hyperbolic_tc_source(qdt,ixI^L,ixO^L,wCT,w,x,wCTprim)</div>
+<div class="line"><a id="l05604" name="l05604"></a><span class="lineno"> 5604</span>  <span class="keyword">subroutine </span>add_source_hyperbolic_tc(qdt,ixI^L,ixO^L,wCT,w,x,wCTprim)</div>
 <div class="line"><a id="l05605" name="l05605"></a><span class="lineno"> 5605</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__global__parameters.html">mod_global_parameters</a></div>
 <div class="line"><a id="l05606" name="l05606"></a><span class="lineno"> 5606</span>    <span class="keywordtype">use </span><a class="code hl_namespace" href="namespacemod__geometry.html">mod_geometry</a>, <span class="keywordtype">only</span>: <a class="code hl_function" href="namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69">gradient</a></div>
 <div class="line"><a id="l05607" name="l05607"></a><span class="lineno"> 5607</span>    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: ixi^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a>,ixo^<a class="code hl_variable" href="namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195">l</a></div>
@@ -5991,7 +5991,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l05871" name="l05871"></a><span class="lineno"> 5871</span><span class="keywordflow">      end do</span></div>
 <div class="line"><a id="l05872" name="l05872"></a><span class="lineno"> 5872</span><span class="keywordflow">    end do</span></div>
 <div class="line"><a id="l05873" name="l05873"></a><span class="lineno"> 5873</span>   }</div>
-<div class="line"><a id="l05874" name="l05874"></a><span class="lineno"> 5874</span>  <span class="keyword">end subroutine </span>add_hyperbolic_tc_source</div>
+<div class="line"><a id="l05874" name="l05874"></a><span class="lineno"> 5874</span>  <span class="keyword">end subroutine </span>add_source_hyperbolic_tc</div>
 <div class="line"><a id="l05875" name="l05875"></a><span class="lineno"> 5875</span><span class="comment"></span> </div>
 <div class="line"><a id="l05876" name="l05876"></a><span class="lineno"> 5876</span><span class="comment">  !&gt; Compute the Lorentz force (JxB) Note: Unused subroutine</span></div>
 <div class="line"><a id="l05877" name="l05877"></a><span class="lineno"> 5877</span><span class="comment">  !&gt; perhaps useful for post-processing when made public</span></div>

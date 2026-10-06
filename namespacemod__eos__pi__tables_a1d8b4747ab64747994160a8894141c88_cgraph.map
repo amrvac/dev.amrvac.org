@@ -1,6 +1,11 @@
 <map id="mod_eos_pi_tables::ionization_is_temperature_only" name="mod_eos_pi_tables::ionization_is_temperature_only">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,232,69"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="72,30,69,20,77,10,93,5,119,3,148,6,164,13,161,18,146,11,119,8,94,10,80,15,74,21,77,28"/>
-<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="280,37,463,62"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="232,47,266,47,266,52,232,52"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,232,77"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="73,37,71,27,78,18,94,12,119,10,147,13,162,20,160,25,145,18,119,15,95,17,81,22,76,28,79,36"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994" title=" " alt="" coords="280,29,444,84"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="232,63,266,63,266,68,232,68"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="492,77,675,103"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="188,74,280,93,362,96,444,93,478,92,478,97,444,98,362,102,280,98,187,79"/>
+<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="280,51,246,50,246,45,280,45"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="319,29,319,19,327,10,341,5,362,3,387,6,401,14,399,18,385,11,362,8,342,10,330,15,324,21,324,29"/>
+<area shape="poly" id="edge5_Node000002_Node000003" title=" " alt="" coords="445,66,485,73,485,78,444,72"/>
 </map>

@@ -102,8 +102,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a727d698b093555e7681e868b27fa2e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f95895125d29a0c26a1eb22a93a5871" id="r_a1f95895125d29a0c26a1eb22a93a5871"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__pi__tables.html#a1f95895125d29a0c26a1eb22a93a5871">ionization_get_state</a> (ixil, ixol, rho, p, t, rfactor, iz_h, iz_he)</td></tr>
 <tr class="separator:a1f95895125d29a0c26a1eb22a93a5871"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af961081c7d56637bcbc84f40ca817c9e" id="r_af961081c7d56637bcbc84f40ca817c9e"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__pi__tables.html#af961081c7d56637bcbc84f40ca817c9e">ionization_get_rfactor_from_temperature</a> (t, rfactor)</td></tr>
-<tr class="separator:af961081c7d56637bcbc84f40ca817c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0e3904877bfe5b06bb3b395c099994" id="r_a6f0e3904877bfe5b06bb3b395c099994"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994">ionization_state_from_temperature_scalar</a> (t, rfactor, iz_h, iz_he)</td></tr>
+<tr class="separator:a6f0e3904877bfe5b06bb3b395c099994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d8b4747ab64747994160a8894141c88" id="r_a1d8b4747ab64747994160a8894141c88"><td class="memItemLeft" align="right" valign="top">logical function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88">ionization_is_temperature_only</a> ()</td></tr>
 <tr class="separator:a1d8b4747ab64747994160a8894141c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b061ac4fe6e67dd020712bb72ee7e36" id="r_a9b061ac4fe6e67dd020712bb72ee7e36"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__eos__pi__tables.html#a9b061ac4fe6e67dd020712bb72ee7e36">ionization_get_state_from_eint</a> (rho, eint, invgam, t, p, rfactor, iz_h, iz_he)</td></tr>
@@ -183,9 +183,13 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__pi__tables_a81e653d3d37f3ca58513c157d87ad73e_cgraph.png" border="0" usemap="#anamespacemod__eos__pi__tables_a81e653d3d37f3ca58513c157d87ad73e_cgraph" alt=""/></div>
 <map name="anamespacemod__eos__pi__tables_a81e653d3d37f3ca58513c157d87ad73e_cgraph" id="anamespacemod__eos__pi__tables_a81e653d3d37f3ca58513c157d87ad73e_cgraph">
-<area shape="rect" title="Array interface for T &#45;&gt; ionization degrees. Used by get_Rfactor_tonly_PI (mod_eos_pi) to build the n..." alt="" coords="5,5,181,60"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="229,20,412,45"/>
-<area shape="poly" title=" " alt="" coords="182,30,215,30,215,35,182,35"/>
+<area shape="rect" title="Array interface for T &#45;&gt; ionization degrees. Used by get_Rfactor_tonly_PI (mod_eos_pi) to build the n..." alt="" coords="5,63,181,117"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994" title=" " alt="" coords="229,29,393,84"/>
+<area shape="poly" title=" " alt="" coords="181,74,216,69,216,74,182,79"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="441,77,624,103"/>
+<area shape="poly" title=" " alt="" coords="182,91,229,93,393,93,428,92,428,97,393,98,229,98,182,97"/>
+<area shape="poly" title=" " alt="" coords="269,29,269,19,277,10,291,5,311,3,336,6,350,14,347,18,334,11,311,8,292,10,280,15,274,21,274,29"/>
+<area shape="poly" title=" " alt="" coords="394,66,435,73,434,78,393,72"/>
 </map>
 </div>
 
@@ -282,7 +286,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l01210">1210</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l01203">1203</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__eos__pi__tables_af3bc647f311fa8c0f4bec4ca3308f768_cgraph.png" border="0" usemap="#anamespacemod__eos__pi__tables_af3bc647f311fa8c0f4bec4ca3308f768_cgraph" alt=""/></div>
+<map name="anamespacemod__eos__pi__tables_af3bc647f311fa8c0f4bec4ca3308f768_cgraph" id="anamespacemod__eos__pi__tables_af3bc647f311fa8c0f4bec4ca3308f768_cgraph">
+<area shape="rect" title=" " alt="" coords="5,37,192,77"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994" title=" " alt="" coords="240,29,404,84"/>
+<area shape="poly" title=" " alt="" coords="192,54,226,54,226,59,192,59"/>
+<area shape="poly" title=" " alt="" coords="279,29,279,19,287,10,301,5,322,3,347,6,361,14,359,18,345,11,322,8,302,10,290,15,284,21,284,29"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -348,59 +363,36 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l01132">1132</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l01125">1125</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__pi__tables_a5b1e6cae558f310ab3b8b93272c62ba4_cgraph.png" border="0" usemap="#anamespacemod__eos__pi__tables_a5b1e6cae558f310ab3b8b93272c62ba4_cgraph" alt=""/></div>
 <map name="anamespacemod__eos__pi__tables_a5b1e6cae558f310ab3b8b93272c62ba4_cgraph" id="anamespacemod__eos__pi__tables_a5b1e6cae558f310ab3b8b93272c62ba4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,83,167,137"/>
-<area shape="rect" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="456,61,683,101"/>
-<area shape="poly" title=" " alt="" coords="167,103,442,86,442,91,167,108"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="731,97,913,123"/>
-<area shape="poly" title=" " alt="" coords="153,80,257,46,320,29,390,15,462,6,537,3,611,8,683,22,716,35,747,51,797,87,794,91,744,56,714,39,682,27,610,13,537,8,463,11,390,21,322,35,258,51,155,85"/>
-<area shape="rect" href="namespacemod__eos__pi__tables.html#a727d698b093555e7681e868b27fa2e99" title=" " alt="" coords="215,118,408,158"/>
-<area shape="poly" title=" " alt="" coords="167,117,201,122,201,127,167,123"/>
-<area shape="rect" href="namespacemod__eos__pi__tables.html#abc7a6cc85762866893b6d54efaf9ccef" title=" " alt="" coords="492,175,647,215"/>
-<area shape="poly" title=" " alt="" coords="136,135,174,153,215,168,283,181,352,190,478,195,478,201,352,195,282,187,214,173,172,158,134,140"/>
-<area shape="poly" title=" " alt="" coords="523,61,520,51,527,42,544,36,569,34,598,37,614,44,612,49,597,42,569,39,545,41,530,46,525,52,528,60"/>
-<area shape="poly" title=" " alt="" coords="683,91,717,95,717,101,683,97"/>
-<area shape="poly" title=" " alt="" coords="401,115,465,101,466,106,403,121"/>
-<area shape="poly" title=" " alt="" coords="408,130,717,113,717,118,408,135"/>
-<area shape="poly" title=" " alt="" coords="403,156,479,173,478,178,401,161"/>
-<area shape="poly" title=" " alt="" coords="628,173,769,125,771,130,630,178"/>
+<area shape="rect" title=" " alt="" coords="5,99,167,153"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="456,49,683,89"/>
+<area shape="poly" title=" " alt="" coords="166,111,214,105,442,79,443,84,215,110,167,116"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994" title=" " alt="" coords="731,116,895,171"/>
+<area shape="poly" title=" " alt="" coords="167,125,717,138,717,144,167,131"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="943,131,1125,156"/>
+<area shape="poly" title=" " alt="" coords="155,96,214,75,342,35,445,11,495,5,549,3,683,10,792,20,838,30,896,50,958,84,1009,120,1006,124,956,88,894,55,837,35,791,25,682,15,549,8,496,10,446,16,343,40,216,80,157,101"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a727d698b093555e7681e868b27fa2e99" title=" " alt="" coords="215,163,408,203"/>
+<area shape="poly" title=" " alt="" coords="168,144,220,157,219,162,166,149"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#abc7a6cc85762866893b6d54efaf9ccef" title=" " alt="" coords="492,265,647,305"/>
+<area shape="poly" title=" " alt="" coords="120,151,164,184,216,213,282,237,352,254,479,275,478,280,351,260,281,242,214,218,161,188,117,156"/>
+<area shape="poly" title=" " alt="" coords="524,49,521,39,529,30,545,24,569,22,598,25,613,32,611,37,596,30,569,27,546,29,532,34,527,40,529,47"/>
+<area shape="poly" title=" " alt="" coords="613,86,718,120,717,125,612,91"/>
+<area shape="poly" title=" " alt="" coords="683,59,787,61,842,67,895,77,953,97,1001,121,999,126,951,102,894,82,841,72,786,66,683,64"/>
+<area shape="poly" title=" " alt="" coords="748,118,676,95,677,90,749,113"/>
+<area shape="poly" title=" " alt="" coords="769,116,770,106,777,97,792,91,813,89,838,92,852,100,849,105,836,97,813,95,793,96,780,101,775,108,775,116"/>
+<area shape="poly" title=" " alt="" coords="895,141,929,141,929,146,895,146"/>
+<area shape="poly" title=" " alt="" coords="357,161,510,92,512,97,359,165"/>
+<area shape="poly" title=" " alt="" coords="408,173,716,148,717,154,408,178"/>
+<area shape="poly" title=" " alt="" coords="408,189,509,194,631,197,763,193,894,181,941,171,985,158,987,163,943,176,895,186,763,199,631,202,509,200,408,194"/>
+<area shape="poly" title=" " alt="" coords="357,201,457,243,495,258,493,263,455,248,355,206"/>
+<area shape="poly" title=" " alt="" coords="647,284,702,282,765,275,831,263,894,243,927,227,959,206,1009,163,1012,168,962,210,930,231,896,248,832,268,766,281,703,287,647,289"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="af961081c7d56637bcbc84f40ca817c9e" name="af961081c7d56637bcbc84f40ca817c9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af961081c7d56637bcbc84f40ca817c9e">&#9670;&#160;</a></span>ionization_get_rfactor_from_temperature()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine, public mod_eos_pi_tables::ionization_get_rfactor_from_temperature </td>
-          <td>(</td>
-          <td class="paramtype">double precision, intent(in)&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double precision, intent(out)&#160;</td>
-          <td class="paramname"><em>rfactor</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00984">984</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 
 </div>
 </div>
@@ -484,16 +476,12 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__pi__tables_a1f95895125d29a0c26a1eb22a93a5871_cgraph.png" border="0" usemap="#anamespacemod__eos__pi__tables_a1f95895125d29a0c26a1eb22a93a5871_cgraph" alt=""/></div>
 <map name="anamespacemod__eos__pi__tables_a1f95895125d29a0c26a1eb22a93a5871_cgraph" id="anamespacemod__eos__pi__tables_a1f95895125d29a0c26a1eb22a93a5871_cgraph">
-<area shape="rect" title=" " alt="" coords="5,78,160,118"/>
-<area shape="rect" href="namespacemod__eos__pi__tables.html#a470316b52503fe43650b5805df108011" title=" " alt="" coords="244,5,399,60"/>
-<area shape="poly" title=" " alt="" coords="156,75,230,55,232,60,157,80"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="483,85,665,111"/>
-<area shape="poly" title=" " alt="" coords="160,95,468,95,468,101,160,101"/>
-<area shape="rect" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="208,159,435,199"/>
-<area shape="poly" title=" " alt="" coords="143,116,250,152,248,157,141,121"/>
-<area shape="poly" title=" " alt="" coords="399,50,512,79,510,84,398,55"/>
-<area shape="poly" title=" " alt="" coords="384,157,520,112,521,117,385,162"/>
-<area shape="poly" title=" " alt="" coords="277,160,274,150,282,140,297,135,321,133,349,136,364,143,362,148,348,141,321,138,298,140,285,145,280,151,282,158"/>
+<area shape="rect" title=" " alt="" coords="5,46,160,86"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a470316b52503fe43650b5805df108011" title=" " alt="" coords="208,5,363,60"/>
+<area shape="poly" title=" " alt="" coords="160,51,194,45,195,50,161,56"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="411,53,593,79"/>
+<area shape="poly" title=" " alt="" coords="160,67,208,69,363,69,397,68,397,73,363,74,208,74,160,72"/>
+<area shape="poly" title=" " alt="" coords="363,42,406,49,405,54,362,47"/>
 </map>
 </div>
 
@@ -561,19 +549,25 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l01110">1110</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l01103">1103</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__pi__tables_a9b061ac4fe6e67dd020712bb72ee7e36_cgraph.png" border="0" usemap="#anamespacemod__eos__pi__tables_a9b061ac4fe6e67dd020712bb72ee7e36_cgraph" alt=""/></div>
 <map name="anamespacemod__eos__pi__tables_a9b061ac4fe6e67dd020712bb72ee7e36_cgraph" id="anamespacemod__eos__pi__tables_a9b061ac4fe6e67dd020712bb72ee7e36_cgraph">
-<area shape="rect" title=" " alt="" coords="5,51,160,106"/>
-<area shape="rect" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="208,29,435,69"/>
-<area shape="poly" title=" " alt="" coords="160,66,194,62,195,68,161,72"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="483,66,665,91"/>
-<area shape="poly" title=" " alt="" coords="160,78,208,79,435,79,469,78,469,84,435,84,208,84,160,83"/>
-<area shape="poly" title=" " alt="" coords="277,30,274,20,282,10,297,5,321,3,349,6,364,13,362,18,348,11,321,8,298,10,285,15,280,21,282,28"/>
-<area shape="poly" title=" " alt="" coords="435,60,469,64,469,69,435,65"/>
+<area shape="rect" title=" " alt="" coords="5,88,160,143"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="208,95,435,135"/>
+<area shape="poly" title=" " alt="" coords="161,113,194,113,194,118,161,118"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994" title=" " alt="" coords="483,29,647,84"/>
+<area shape="poly" title=" " alt="" coords="131,85,168,69,207,57,275,46,344,41,469,44,469,50,344,47,276,51,209,62,170,74,134,90"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="695,109,877,135"/>
+<area shape="poly" title=" " alt="" coords="161,136,208,145,337,154,467,153,586,145,686,134,687,139,587,150,467,158,337,159,208,150,160,141"/>
+<area shape="poly" title=" " alt="" coords="277,96,274,86,282,76,297,71,321,69,349,72,364,79,362,84,348,77,321,74,298,76,285,81,280,87,282,94"/>
+<area shape="poly" title=" " alt="" coords="434,94,472,85,473,90,436,100"/>
+<area shape="poly" title=" " alt="" coords="435,114,681,118,681,123,435,120"/>
+<area shape="poly" title=" " alt="" coords="483,70,388,94,387,89,482,65"/>
+<area shape="poly" title=" " alt="" coords="521,29,522,19,529,10,544,5,565,3,590,6,604,14,601,18,588,11,565,8,545,10,532,15,527,21,527,29"/>
+<area shape="poly" title=" " alt="" coords="648,78,730,103,728,108,646,83"/>
 </map>
 </div>
 
@@ -658,16 +652,21 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00991">991</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00984">984</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__pi__tables_a1d8b4747ab64747994160a8894141c88_cgraph.png" border="0" usemap="#anamespacemod__eos__pi__tables_a1d8b4747ab64747994160a8894141c88_cgraph" alt=""/></div>
 <map name="anamespacemod__eos__pi__tables_a1d8b4747ab64747994160a8894141c88_cgraph" id="anamespacemod__eos__pi__tables_a1d8b4747ab64747994160a8894141c88_cgraph">
-<area shape="rect" title=" " alt="" coords="5,29,232,69"/>
-<area shape="poly" title=" " alt="" coords="72,30,69,20,77,10,93,5,119,3,148,6,164,13,161,18,146,11,119,8,94,10,80,15,74,21,77,28"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="280,37,463,62"/>
-<area shape="poly" title=" " alt="" coords="232,47,266,47,266,52,232,52"/>
+<area shape="rect" title=" " alt="" coords="5,37,232,77"/>
+<area shape="poly" title=" " alt="" coords="73,37,71,27,78,18,94,12,119,10,147,13,162,20,160,25,145,18,119,15,95,17,81,22,76,28,79,36"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994" title=" " alt="" coords="280,29,444,84"/>
+<area shape="poly" title=" " alt="" coords="232,63,266,63,266,68,232,68"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="492,77,675,103"/>
+<area shape="poly" title=" " alt="" coords="188,74,280,93,362,96,444,93,478,92,478,97,444,98,362,102,280,98,187,79"/>
+<area shape="poly" title=" " alt="" coords="280,51,246,50,246,45,280,45"/>
+<area shape="poly" title=" " alt="" coords="319,29,319,19,327,10,341,5,362,3,387,6,401,14,399,18,385,11,362,8,342,10,330,15,324,21,324,29"/>
+<area shape="poly" title=" " alt="" coords="445,66,485,73,485,78,444,72"/>
 </map>
 </div>
 
@@ -717,16 +716,80 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__pi__tables_a727d698b093555e7681e868b27fa2e99_cgraph.png" border="0" usemap="#anamespacemod__eos__pi__tables_a727d698b093555e7681e868b27fa2e99_cgraph" alt=""/></div>
 <map name="anamespacemod__eos__pi__tables_a727d698b093555e7681e868b27fa2e99_cgraph" id="anamespacemod__eos__pi__tables_a727d698b093555e7681e868b27fa2e99_cgraph">
-<area shape="rect" title=" " alt="" coords="5,87,199,127"/>
-<area shape="rect" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="247,29,473,69"/>
-<area shape="poly" title=" " alt="" coords="192,84,255,70,256,75,193,89"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="521,94,704,119"/>
-<area shape="poly" title=" " alt="" coords="199,104,508,104,508,109,199,109"/>
-<area shape="rect" href="namespacemod__eos__pi__tables.html#abc7a6cc85762866893b6d54efaf9ccef" title=" " alt="" coords="283,144,437,184"/>
-<area shape="poly" title=" " alt="" coords="193,124,270,141,269,147,192,129"/>
-<area shape="poly" title=" " alt="" coords="313,30,311,20,318,10,335,5,360,3,389,6,405,13,403,18,388,11,360,8,336,10,321,15,316,21,318,28"/>
-<area shape="poly" title=" " alt="" coords="449,67,543,88,542,94,448,72"/>
-<area shape="poly" title=" " alt="" coords="437,144,542,120,543,125,438,149"/>
+<area shape="rect" title=" " alt="" coords="5,125,199,165"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="247,95,473,135"/>
+<area shape="poly" title=" " alt="" coords="198,131,233,127,233,132,199,136"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a6f0e3904877bfe5b06bb3b395c099994" title=" " alt="" coords="521,29,685,84"/>
+<area shape="poly" title=" " alt="" coords="126,122,179,87,212,70,246,57,313,43,382,38,448,38,508,41,507,47,448,43,382,43,314,49,247,62,214,74,182,91,129,127"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="733,135,916,160"/>
+<area shape="poly" title=" " alt="" coords="199,144,247,145,720,145,720,151,247,150,199,149"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#abc7a6cc85762866893b6d54efaf9ccef" title=" " alt="" coords="526,210,681,250"/>
+<area shape="poly" title=" " alt="" coords="157,162,247,189,386,211,512,223,512,228,385,216,246,194,155,167"/>
+<area shape="poly" title=" " alt="" coords="315,96,312,86,319,76,335,71,360,69,388,72,404,79,401,84,387,77,360,74,337,76,322,81,317,87,320,94"/>
+<area shape="poly" title=" " alt="" coords="473,94,511,85,512,90,474,100"/>
+<area shape="poly" title=" " alt="" coords="474,120,720,138,720,143,474,126"/>
+<area shape="poly" title=" " alt="" coords="522,70,427,94,425,89,520,65"/>
+<area shape="poly" title=" " alt="" coords="560,29,560,19,568,10,582,5,603,3,628,6,643,14,640,18,627,11,603,8,584,10,571,15,565,21,565,29"/>
+<area shape="poly" title=" " alt="" coords="672,82,781,127,779,132,670,87"/>
+<area shape="poly" title=" " alt="" coords="657,207,776,163,778,168,659,212"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6f0e3904877bfe5b06bb3b395c099994" name="a6f0e3904877bfe5b06bb3b395c099994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0e3904877bfe5b06bb3b395c099994">&#9670;&#160;</a></span>ionization_state_from_temperature_scalar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine, public mod_eos_pi_tables::ionization_state_from_temperature_scalar </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out)&#160;</td>
+          <td class="paramname"><em>rfactor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out), optional&#160;</td>
+          <td class="paramname"><em>iz_h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(out), optional&#160;</td>
+          <td class="paramname"><em>iz_he</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__pi__tables_8t_source.html#l00795">795</a> of file <a class="el" href="mod__eos__pi__tables_8t_source.html">mod_eos_pi_tables.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__eos__pi__tables_a6f0e3904877bfe5b06bb3b395c099994_cgraph.png" border="0" usemap="#anamespacemod__eos__pi__tables_a6f0e3904877bfe5b06bb3b395c099994_cgraph" alt=""/></div>
+<map name="anamespacemod__eos__pi__tables_a6f0e3904877bfe5b06bb3b395c099994_cgraph" id="anamespacemod__eos__pi__tables_a6f0e3904877bfe5b06bb3b395c099994_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,169,84"/>
+<area shape="poly" title=" " alt="" coords="40,29,40,19,49,10,65,5,87,3,115,6,130,14,128,18,113,11,87,8,66,10,52,15,45,21,45,29"/>
+<area shape="rect" href="namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="217,37,444,77"/>
+<area shape="poly" title=" " alt="" coords="170,63,204,63,203,68,169,68"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="492,73,675,99"/>
+<area shape="poly" title=" " alt="" coords="170,77,218,86,285,92,353,94,478,91,478,97,353,99,285,97,217,91,169,83"/>
+<area shape="poly" title=" " alt="" coords="217,50,183,51,183,45,217,45"/>
+<area shape="poly" title=" " alt="" coords="285,37,283,27,290,18,306,12,331,10,359,13,374,20,372,25,357,18,331,15,307,17,293,22,288,28,291,36"/>
+<area shape="poly" title=" " alt="" coords="445,67,479,71,478,76,444,72"/>
 </map>
 </div>
 
