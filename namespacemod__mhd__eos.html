@@ -134,11 +134,8 @@ Variables</h2></td></tr>
 <p>Sound speed and Gamma1</p>
 <p>Prolongation</p>
 <p>Rfactor: only the FI case is physics-dependent (the usr_Rfactor user hook). The LTE and PI bindings are pure eos% routines, so they are set in eos_finalise_{LTE,PI} (which run after this and before bind_eos_to_source, so they win) &ndash; keeping those targets private.</p>
-<p>Thermal pressure routing</p>
 <p>Temperature routing</p>
 <p>Internal energy extraction</p>
-<p>PI energy-mode overrides (eos_type='PI', ionE=.true.)</p>
-<p>eosget_csound2 =&gt; get_csound2_PI is physics-independent: set in eos_finalise_PI (ionE arm) so the target stays private.</p>
 
 <p class="definition">Definition at line <a class="el" href="mod__mhd__eos_8t_source.html#l00051">51</a> of file <a class="el" href="mod__mhd__eos_8t_source.html">mod_mhd_eos.t</a>.</p>
 <div class="dynheader">
