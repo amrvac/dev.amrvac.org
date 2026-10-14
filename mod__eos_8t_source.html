@@ -379,16 +379,18 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno"><a class="line" href="namespacemod__eos.html#af2fb40a4e0c18988f08026f8b52d6057">  282</a></span>    <span class="keyword">subroutine </span><a class="code hl_function" href="namespacemod__eos.html#af2fb40a4e0c18988f08026f8b52d6057">prepare_eos_w_fields</a>()</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <span class="keywordtype">integer</span> :: iigrid, igrid</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="comment">! fill eos space of all grids, inc boundaries</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keywordflow">do</span> iigrid=1,igridstail_active; igrid=igrids_active(iigrid);</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            <span class="keyword">call </span>eos%update_eos(ixg^ll,ixg^ll,ps(igrid)%w,ps(igrid)%x)</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="keywordflow">        end do</span></div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__eos.html#af2fb40a4e0c18988f08026f8b52d6057">prepare_eos_w_fields</a></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="comment">! fill eos space of all grids, including ghost cells (boundaries)</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="comment">!$OMP PARALLEL DO PRIVATE(igrid)</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">do</span> iigrid=1,igridstail_active; igrid=igrids_active(iigrid);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            <span class="keyword">call </span>eos%update_eos(ixg^ll,ixg^ll,ps(igrid)%w,ps(igrid)%x)</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="keywordflow">        end do</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        <span class="comment">!$OMP END PARALLEL DO</span></div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__eos.html">mod_eos</a><span class="comment"></span></div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="comment">!&gt; Needs a line after to pass the preprocesor</span></div>
+</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="keyword">end subroutine </span><a class="code hl_function" href="namespacemod__eos.html#af2fb40a4e0c18988f08026f8b52d6057">prepare_eos_w_fields</a></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="keyword">end module </span><a class="code hl_namespace" href="namespacemod__eos.html">mod_eos</a><span class="comment"></span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="comment">!&gt; Needs a line after to pass the preprocesor</span></div>
 <div class="ttc" id="anamespacemod__comm__lib_html"><div class="ttname"><a href="namespacemod__comm__lib.html">mod_comm_lib</a></div><div class="ttdef"><b>Definition</b> <a href="mod__comm__lib_8t_source.html#l00001">mod_comm_lib.t:1</a></div></div>
 <div class="ttc" id="anamespacemod__comm__lib_html_a9b6f1a8fd13bc5670e3b426151c34048"><div class="ttname"><a href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048">mod_comm_lib::mpistop</a></div><div class="ttdeci">subroutine, public mpistop(message)</div><div class="ttdoc">Exit MPI-AMRVAC with an error message.</div><div class="ttdef"><b>Definition</b> <a href="mod__comm__lib_8t_source.html#l00207">mod_comm_lib.t:208</a></div></div>
 <div class="ttc" id="anamespacemod__eos__container_html"><div class="ttname"><a href="namespacemod__eos__container.html">mod_eos_container</a></div><div class="ttdoc">EoS state container – the single thermodynamic authority for AMRVAC.</div><div class="ttdef"><b>Definition</b> <a href="mod__eos__container_8t_source.html#l00016">mod_eos_container.t:16</a></div></div>
