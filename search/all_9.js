@@ -105,7 +105,7 @@ var searchData=
   ['evolution_102',['evolution',['../md_doc_2demo-movies.html#demo_kh',1,'2D hydro Kelvin-Helmholtz evolution'],['../md_doc_2demo-movies.html#demo_rd',1,'2D Reaction-Diffusion Gray-Scott evolution']]],
   ['evolvingboundary_103',['evolvingboundary',['../namespacemod__forest.html#a21bc6aeefe5747e7ba5d5c8b0d421334',1,'mod_forest']]],
   ['example_20simulations_104',['Example simulations',['../md_doc_2examples.html',1,'']]],
-  ['examples_105',['Examples',['../md_doc_2yt__usage.html#examples',1,'']]],
+  ['examples_105',['examples',['../md_doc_2yt__usage.html#examples',1,'Examples'],['../md_doc_2thermal__conduction.html#tc-examples',1,'Examples']]],
   ['examples_2emd_106',['examples.md',['../examples_8md.html',1,'']]],
   ['exp_5fclamped_107',['exp_clamped',['../namespacemod__thermal__emission.html#a43aeebfd3770e24fbd18025f34e4a58c',1,'mod_thermal_emission']]],
   ['extrapolate_108',['extrapolate',['../namespacemod__gimli.html#aa955204c3c69eef9da3d1c7be918b401',1,'mod_gimli']]],
