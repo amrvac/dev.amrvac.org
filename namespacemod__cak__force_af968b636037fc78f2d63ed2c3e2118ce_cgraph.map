@@ -1,0 +1,5 @@
+<map id="mod_cak_force::cak_init" name="mod_cak_force::cak_init">
+<area shape="rect" id="Node000001" title="Initialize the module." alt="" coords="5,5,185,33"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="233,5,415,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,17,220,19,214,19,185,22"/>
+</map>
