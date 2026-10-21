@@ -1,8 +1,8 @@
 <map id="mod_collapse::output_collapsed_vti" name="mod_collapse::output_collapsed_vti">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,168,63"/>
-<area shape="rect" id="Node000002" href="$namespacemod__calculate__xw.html#a3c777f366638d870c023352a16d4ef2e" title="get all variables names" alt="" coords="216,5,476,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,33,203,29,203,35,168,38"/>
-<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="524,31,707,56"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="168,41,510,41,510,46,168,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="477,28,511,31,510,36,476,33"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,167,67"/>
+<area shape="rect" id="Node000002" href="$namespacemod__calculate__xw.html#a3c777f366638d870c023352a16d4ef2e" title="get all variables names" alt="" coords="215,5,474,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,34,202,33,196,34,168,39"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="522,31,704,58"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="167,42,507,42,507,47,167,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="475,29,509,34,504,34,474,34"/>
 </map>

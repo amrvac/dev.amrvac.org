@@ -1,26 +1,26 @@
 <map id="mod_coarsen_refine::amr_rebalance" name="mod_coarsen_refine::amr_rebalance">
-<area shape="rect" id="Node000001" title="Cost&#45;weighted rebalance without refine/coarsen. For static/uniform grids (refine_max_level=1) amr_coa..." alt="" coords="5,312,159,352"/>
-<area shape="rect" id="Node000002" href="$namespacemod__space__filling__curve.html#ad8dde932d2a33294824c0b76241af4e8" title="Construct Morton&#45;order as a global recursive lexicographic ordering." alt="" coords="219,5,402,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,311,95,260,118,191,153,119,177,85,205,55,211,51,214,55,208,59,181,88,158,121,123,193,101,261,89,312"/>
-<area shape="rect" id="Node000005" href="$namespacemod__functions__connectivity.html#ad0f896bb9a50442f121e8fa63b365b15" title=" " alt="" coords="208,69,413,109"/>
-<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="88,311,104,272,129,223,162,171,205,126,223,113,226,118,208,130,167,174,133,225,109,274,93,313"/>
-<area shape="rect" id="Node000006" href="$namespacemod__amr__neighbors.html#a686f8e8a5eace464a27777d6efd0a762" title="find neighors of all blocks" alt="" coords="463,99,625,139"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="90,311,107,279,132,240,165,201,205,170,249,153,311,140,449,123,450,128,312,146,250,158,208,174,169,205,137,243,112,281,95,313"/>
-<area shape="rect" id="Node000008" href="$namespacemod__amr__fct.html#adbbdbcbea30b85f3f207ce8e03bc04d4" title=" " alt="" coords="217,184,405,224"/>
-<area shape="poly" id="edge4_Node000001_Node000008" title=" " alt="" coords="103,310,148,271,205,234,220,227,222,231,208,238,151,276,106,314"/>
-<area shape="rect" id="Node000009" href="$namespacemod__functions__connectivity.html#a110e68b70f3eb0ec2de3d4855cf0901e" title=" " alt="" coords="208,248,413,288"/>
-<area shape="poly" id="edge6_Node000001_Node000009" title=" " alt="" coords="153,309,225,289,227,294,155,314"/>
-<area shape="rect" id="Node000010" href="$namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="223,312,399,352"/>
-<area shape="poly" id="edge7_Node000001_Node000010" title=" " alt="" coords="159,329,209,329,209,335,159,335"/>
-<area shape="rect" id="Node000024" href="$namespacemod__functions__connectivity.html#ad727947fbcfbbb6f3b25ab9fa7515dda" title=" " alt="" coords="208,376,413,416"/>
-<area shape="poly" id="edge8_Node000001_Node000024" title=" " alt="" coords="155,350,227,370,225,375,153,355"/>
-<area shape="rect" id="Node000025" href="$namespacemod__load__balance.html#a15817905e67f4ca7528da16246b12814" title="reallocate blocks into processors for load balance" alt="" coords="221,440,401,480"/>
-<area shape="poly" id="edge9_Node000001_Node000025" title=" " alt="" coords="106,350,151,388,208,426,222,433,220,437,205,430,148,393,103,354"/>
-<area shape="rect" id="Node000036" href="$namespacemod__eos.html#af2fb40a4e0c18988f08026f8b52d6057" title=" " alt="" coords="226,504,395,544"/>
-<area shape="poly" id="edge10_Node000001_Node000036" title=" " alt="" coords="96,351,139,419,171,457,208,490,217,496,215,500,205,494,167,461,135,422,91,354"/>
-<area shape="rect" id="Node000037" href="$namespacemod__selectgrids.html#aa15f11bf5108fe0eae81eb81aa46f3b1" title=" " alt="" coords="207,569,415,594"/>
-<area shape="poly" id="edge11_Node000001_Node000037" title=" " alt="" coords="91,351,105,394,128,449,162,506,184,532,208,554,218,560,215,565,205,558,180,535,158,509,123,452,100,396,86,353"/>
-<area shape="rect" id="Node000039" href="$mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26" title=" " alt="" coords="222,618,399,643"/>
-<area shape="poly" id="edge12_Node000001_Node000039" title=" " alt="" coords="89,352,100,403,121,471,137,507,157,543,180,575,208,603,217,609,214,614,205,607,176,579,152,546,132,510,116,473,95,404,84,353"/>
-<area shape="poly" id="edge3_Node000005_Node000006" title=" " alt="" coords="414,100,449,104,449,109,413,105"/>
+<area shape="rect" id="Node000001" title="Cost&#45;weighted rebalance without refine/coarsen. For static/uniform grids (refine_max_level=1) amr_coa..." alt="" coords="5,333,158,378"/>
+<area shape="rect" id="Node000002" href="$namespacemod__space__filling__curve.html#ad8dde932d2a33294824c0b76241af4e8" title="Construct Morton&#45;order as a global recursive lexicographic ordering." alt="" coords="219,5,400,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,332,94,278,116,205,132,166,151,128,175,92,204,60,211,57,208,61,208,64,179,95,156,131,136,168,121,207,99,279,89,334"/>
+<area shape="rect" id="Node000005" href="$namespacemod__functions__connectivity.html#ad0f896bb9a50442f121e8fa63b365b15" title=" " alt="" coords="207,75,412,119"/>
+<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="88,332,103,291,128,239,161,184,204,136,223,125,219,129,207,140,165,187,132,241,108,293,93,333"/>
+<area shape="rect" id="Node000006" href="$namespacemod__amr__neighbors.html#a686f8e8a5eace464a27777d6efd0a762" title="find neighors of all blocks" alt="" coords="461,105,623,150"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="89,332,106,298,131,256,163,214,204,180,247,163,308,150,448,133,444,137,309,155,249,168,207,185,167,218,135,259,111,300,94,334"/>
+<area shape="rect" id="Node000008" href="$namespacemod__amr__fct.html#adbbdbcbea30b85f3f207ce8e03bc04d4" title=" " alt="" coords="216,195,403,239"/>
+<area shape="poly" id="edge4_Node000001_Node000008" title=" " alt="" coords="102,331,147,290,204,249,218,244,215,248,207,254,151,294,107,334"/>
+<area shape="rect" id="Node000009" href="$namespacemod__functions__connectivity.html#a110e68b70f3eb0ec2de3d4855cf0901e" title=" " alt="" coords="207,264,412,309"/>
+<area shape="poly" id="edge6_Node000001_Node000009" title=" " alt="" coords="156,331,221,312,217,316,159,335"/>
+<area shape="rect" id="Node000010" href="$namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="222,333,397,378"/>
+<area shape="poly" id="edge7_Node000001_Node000010" title=" " alt="" coords="157,353,209,354,204,357,159,358"/>
+<area shape="rect" id="Node000024" href="$namespacemod__functions__connectivity.html#ad727947fbcfbbb6f3b25ab9fa7515dda" title=" " alt="" coords="207,403,412,447"/>
+<area shape="poly" id="edge8_Node000001_Node000024" title=" " alt="" coords="157,376,221,396,216,399,158,381"/>
+<area shape="rect" id="Node000025" href="$namespacemod__load__balance.html#a15817905e67f4ca7528da16246b12814" title="reallocate blocks into processors for load balance" alt="" coords="220,472,399,517"/>
+<area shape="poly" id="edge9_Node000001_Node000025" title=" " alt="" coords="104,376,151,417,207,457,219,465,214,466,204,462,147,421,105,381"/>
+<area shape="rect" id="Node000036" href="$namespacemod__eos.html#af2fb40a4e0c18988f08026f8b52d6057" title=" " alt="" coords="225,541,394,586"/>
+<area shape="poly" id="edge10_Node000001_Node000036" title=" " alt="" coords="93,376,138,451,169,492,207,527,215,533,209,534,204,531,165,495,133,454,93,381"/>
+<area shape="rect" id="Node000037" href="$namespacemod__selectgrids.html#aa15f11bf5108fe0eae81eb81aa46f3b1" title=" " alt="" coords="206,610,413,638"/>
+<area shape="poly" id="edge11_Node000001_Node000037" title=" " alt="" coords="88,376,103,424,126,484,160,545,182,572,207,596,213,602,208,602,204,600,178,576,156,548,121,486,98,426,87,381"/>
+<area shape="rect" id="Node000039" href="$mod__coarsen__refine_8t.html#adbdb5c3b209cb26da159a3a80033ba26" title=" " alt="" coords="221,662,398,690"/>
+<area shape="poly" id="edge12_Node000001_Node000039" title=" " alt="" coords="86,376,98,433,119,506,135,544,154,582,179,617,207,647,214,654,209,653,204,651,174,620,150,585,130,547,114,508,93,434,85,381"/>
+<area shape="poly" id="edge3_Node000005_Node000006" title=" " alt="" coords="411,108,448,114,443,116,413,113"/>
 </map>

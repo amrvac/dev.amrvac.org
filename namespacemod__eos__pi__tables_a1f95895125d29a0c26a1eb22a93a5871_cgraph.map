@@ -1,8 +1,8 @@
 <map id="mod_eos_pi_tables::ionization_get_state" name="mod_eos_pi_tables::ionization_get_state">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,46,160,86"/>
-<area shape="rect" id="Node000002" href="$namespacemod__eos__pi__tables.html#a470316b52503fe43650b5805df108011" title=" " alt="" coords="208,5,363,60"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,51,194,45,195,50,161,56"/>
-<area shape="rect" id="Node000004" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="411,53,593,79"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,67,208,69,363,69,397,68,397,73,363,74,208,74,160,72"/>
-<area shape="poly" id="edge2_Node000002_Node000004" title=" " alt="" coords="363,42,406,49,405,54,362,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,48,160,93"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__pi__tables.html#a470316b52503fe43650b5805df108011" title=" " alt="" coords="208,5,362,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,55,195,51,190,52,160,60"/>
+<area shape="rect" id="Node000004" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="410,57,592,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,74,208,76,362,76,397,77,391,78,362,81,208,81,160,79"/>
+<area shape="poly" id="edge2_Node000002_Node000004" title=" " alt="" coords="362,46,398,54,393,54,362,51"/>
 </map>

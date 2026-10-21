@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['i_5fmrgrnk_0',['i_mrgrnk',['../interfacem__octree__mg__2d_1_1mrgrnk.html#aa826c74350a8969bdf15f119175cf3bc',1,'m_octree_mg_2d::mrgrnk::i_mrgrnk()'],['../interfacem__octree__mg__3d_1_1mrgrnk.html#a41a74f8d61674201dad738db790159e7',1,'m_octree_mg_3d::mrgrnk::i_mrgrnk()'],['../interfacem__octree__mg__1d_1_1mrgrnk.html#a83f14b5d478757785e303362465d3ede',1,'m_octree_mg_1d::mrgrnk::i_mrgrnk()']]],
+  ['i_5fmrgrnk_0',['i_mrgrnk',['../interfacem__octree__mg__1d_1_1mrgrnk.html#a83f14b5d478757785e303362465d3ede',1,'m_octree_mg_1d::mrgrnk::i_mrgrnk()'],['../interfacem__octree__mg__2d_1_1mrgrnk.html#aa826c74350a8969bdf15f119175cf3bc',1,'m_octree_mg_2d::mrgrnk::i_mrgrnk()'],['../interfacem__octree__mg__3d_1_1mrgrnk.html#a41a74f8d61674201dad738db790159e7',1,'m_octree_mg_3d::mrgrnk::i_mrgrnk()']]],
   ['imagedatavtk_5fmpi_1',['imagedatavtk_mpi',['../namespacemod__convert__files.html#a3a892129ab7564b4c98a229c06cec752',1,'mod_convert_files']]],
   ['improve_5finitial_5fcondition_2',['improve_initial_condition',['../namespacemod__initialize__amr.html#a0057789c0baf7737ff7d12f1c6a5ff65',1,'mod_initialize_amr']]],
   ['init_5fb_5ffff_5fdata_3',['init_b_fff_data',['../namespacemod__lfff.html#a8b6150d6d41cd0f725d7385e3ca2ab0b',1,'mod_lfff']]],

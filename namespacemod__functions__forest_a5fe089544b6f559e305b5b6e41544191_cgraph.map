@@ -1,6 +1,6 @@
 <map id="mod_functions_forest::write_forest" name="mod_functions_forest::write_forest">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,168,62"/>
-<area shape="rect" id="Node000002" href="$mod__functions__forest_8t.html#a455218bfc25a569be0695c986771743f" title=" " alt="" coords="216,29,311,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,39,202,39,202,45,168,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="234,31,228,21,231,11,243,5,263,3,288,6,298,15,294,19,285,11,263,8,245,10,235,15,233,20,238,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,21,168,66"/>
+<area shape="rect" id="Node000002" href="$mod__functions__forest_8t.html#a455218bfc25a569be0695c986771743f" title=" " alt="" coords="216,29,309,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,41,203,43,197,43,168,46"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="232,28,227,20,231,11,243,5,262,3,283,5,296,14,291,14,282,10,262,8,244,10,235,15,232,20,236,30"/>
 </map>

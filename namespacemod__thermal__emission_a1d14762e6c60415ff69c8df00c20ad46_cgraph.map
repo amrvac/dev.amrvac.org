@@ -1,8 +1,8 @@
 <map id="mod_thermal_emission::postprocess_radio_beam_image" name="mod_thermal_emission::postprocess_radio_beam_image">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,245,99"/>
-<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a43aeebfd3770e24fbd18025f34e4a58c" title=" " alt="" coords="297,29,472,69"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,62,284,58,284,63,246,68"/>
-<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="293,94,476,119"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="246,89,280,93,279,98,245,94"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="337,30,334,20,342,10,359,5,385,3,415,6,431,13,429,18,413,11,385,8,360,10,344,15,339,21,342,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,60,245,105"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a43aeebfd3770e24fbd18025f34e4a58c" title=" " alt="" coords="297,29,471,74"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,65,284,63,279,64,245,71"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="293,98,475,126"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="245,93,280,100,274,100,245,99"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="335,27,333,19,342,10,359,5,384,3,412,5,430,14,425,14,411,10,384,8,360,10,344,15,338,21,340,30"/>
 </map>

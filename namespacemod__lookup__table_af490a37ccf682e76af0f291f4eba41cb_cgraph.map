@@ -1,7 +1,7 @@
 <map id="mod_lookup_table::find_index_adaptive" name="mod_lookup_table::find_index_adaptive">
-<area shape="rect" id="Node000001" title="Adaptive search (combination of linear and binary search) of sorted list for the smallest ix such tha..." alt="" coords="5,37,179,77"/>
-<area shape="rect" id="Node000002" href="$namespacemod__lookup__table.html#ab0ad52148ce35bc3631ed25345d51347" title="Binary search of sorted list for the smallest ix such that list(ix) &gt;= val. On failure,..." alt="" coords="227,5,400,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,42,213,37,214,42,180,47"/>
-<area shape="rect" id="Node000003" href="$namespacemod__lookup__table.html#ac4256aa682324b5c72858e40a1ac4c71" title="Linear search of sorted list for the smallest ix such that list(ix) &gt;= val. On failure,..." alt="" coords="227,69,400,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,67,214,72,213,78,179,73"/>
+<area shape="rect" id="Node000001" title="Adaptive search (combination of linear and binary search) of sorted list for the smallest ix such tha..." alt="" coords="5,40,178,85"/>
+<area shape="rect" id="Node000002" href="$namespacemod__lookup__table.html#ab0ad52148ce35bc3631ed25345d51347" title="Binary search of sorted list for the smallest ix such that list(ix) &gt;= val. On failure,..." alt="" coords="226,5,398,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,46,213,43,208,44,179,51"/>
+<area shape="rect" id="Node000003" href="$namespacemod__lookup__table.html#ac4256aa682324b5c72858e40a1ac4c71" title="Linear search of sorted list for the smallest ix such that list(ix) &gt;= val. On failure,..." alt="" coords="226,75,398,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,73,213,81,208,81,178,79"/>
 </map>

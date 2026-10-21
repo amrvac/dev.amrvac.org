@@ -1,5 +1,5 @@
 <map id="mod_magnetofriction::get_current" name="mod_magnetofriction::get_current">
-<area shape="rect" id="Node000001" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="5,5,168,45"/>
-<area shape="rect" id="Node000002" href="$namespacemod__geometry.html#a9af21193cc064e92debf8e7b96f86a60" title="Calculate curl of a vector qvec within ixL Options to employ standard second order CD evaluations use..." alt="" coords="216,13,409,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,23,203,23,203,28,169,28"/>
+<area shape="rect" id="Node000001" title="Calculate idirmin and the idirmin:3 components of the common current array make sure that dxlevel(^D)..." alt="" coords="5,5,167,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__geometry.html#a9af21193cc064e92debf8e7b96f86a60" title="Calculate curl of a vector qvec within ixL Options to employ standard second order CD evaluations use..." alt="" coords="215,14,407,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,25,202,27,196,28,167,30"/>
 </map>

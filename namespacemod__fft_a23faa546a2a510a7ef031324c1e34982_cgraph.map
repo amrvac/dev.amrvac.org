@@ -1,8 +1,8 @@
 <map id="mod_fft::fft_2d" name="mod_fft::fft_2d">
-<area shape="rect" id="Node000001" title="In&#45;place complex two&#45;dimensional FFT. The inverse is normalized." alt="" coords="5,43,123,68"/>
-<area shape="rect" id="Node000002" href="$namespacemod__fft.html#a16f44d04f36e7e0521bd981b675d63a0" title=" " alt="" coords="207,5,333,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,42,193,29,194,34,124,47"/>
-<area shape="rect" id="Node000004" href="$namespacemod__fft.html#a8e208b39ee499c9ffcd572048482ce7b" title="Return whether the legacy mixed&#45;radix workspace can handle a transform." alt="" coords="171,79,369,104"/>
-<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="124,63,184,74,183,79,123,68"/>
-<area shape="poly" id="edge3_Node000004_Node000004" title=" " alt="" coords="236,80,229,70,233,60,247,54,270,52,299,56,310,65,307,69,296,61,270,57,248,59,237,64,234,70,240,77"/>
+<area shape="rect" id="Node000001" title="In&#45;place complex two&#45;dimensional FFT. The inverse is normalized." alt="" coords="5,44,122,72"/>
+<area shape="rect" id="Node000002" href="$namespacemod__fft.html#a16f44d04f36e7e0521bd981b675d63a0" title=" " alt="" coords="207,5,331,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,44,194,32,189,35,123,50"/>
+<area shape="rect" id="Node000004" href="$namespacemod__fft.html#a8e208b39ee499c9ffcd572048482ce7b" title="Return whether the legacy mixed&#45;radix workspace can handle a transform." alt="" coords="170,81,368,109"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="122,66,177,77,172,79,122,71"/>
+<area shape="poly" id="edge3_Node000004_Node000004" title=" " alt="" coords="233,80,228,72,232,63,246,57,269,55,293,57,308,66,302,66,292,62,269,60,248,62,236,67,233,72,238,82"/>
 </map>

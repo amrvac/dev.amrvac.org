@@ -1,7 +1,7 @@
 <map id="mod_lookup_table::lt2_set_col" name="mod_lookup_table::lt2_set_col">
-<area shape="rect" id="Node000001" title="Fill the column with index col_ix using linearly interpolated data." alt="" coords="5,37,172,77"/>
-<area shape="rect" id="Node000002" href="$namespacemod__lookup__table.html#a5c37452351e8703b4c9032ff4e5ccc28" title="Linearly interpolate the (x, y) input data to the new_x coordinates." alt="" coords="220,5,379,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,42,206,37,207,42,173,47"/>
-<area shape="rect" id="Node000007" href="$namespacemod__lookup__table.html#aa6db6afb6d47ff97d3159af6fb82acd1" title="Returns the x&#45;coordinates of the lookup table." alt="" coords="220,69,379,109"/>
-<area shape="poly" id="edge2_Node000001_Node000007" title=" " alt="" coords="173,67,207,73,206,78,172,73"/>
+<area shape="rect" id="Node000001" title="Fill the column with index col_ix using linearly interpolated data." alt="" coords="5,40,171,85"/>
+<area shape="rect" id="Node000002" href="$namespacemod__lookup__table.html#a5c37452351e8703b4c9032ff4e5ccc28" title="Linearly interpolate the (x, y) input data to the new_x coordinates." alt="" coords="219,5,376,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,46,206,42,201,44,172,51"/>
+<area shape="rect" id="Node000007" href="$namespacemod__lookup__table.html#aa6db6afb6d47ff97d3159af6fb82acd1" title="Returns the x&#45;coordinates of the lookup table." alt="" coords="219,75,376,119"/>
+<area shape="poly" id="edge2_Node000001_Node000007" title=" " alt="" coords="171,73,206,81,201,82,171,79"/>
 </map>

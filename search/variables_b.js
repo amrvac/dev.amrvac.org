@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['l_0',['l',['../namespacemod__ghostcells__update.html#a0c6697eb3c341d1f459d541cab97c79e',1,'mod_ghostcells_update::l'],['../namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195',1,'mod_global_parameters::l'],['../structmod__physicaldata_1_1state.html#a5184c2e48de895f766dc56f3653a39b4',1,'mod_physicaldata::state::l']]],
+  ['l_0',['l',['../structmod__physicaldata_1_1state.html#a5184c2e48de895f766dc56f3653a39b4',1,'mod_physicaldata::state::l'],['../namespacemod__ghostcells__update.html#a0c6697eb3c341d1f459d541cab97c79e',1,'mod_ghostcells_update::l'],['../namespacemod__global__parameters.html#a8242f42a9b14d7655e6eb74ee23e6195',1,'mod_global_parameters::l']]],
   ['l2d_5falpha_1',['l2d_alpha',['../namespacemod__lfff.html#adb92a47e02072fc636406ee2788ad321',1,'mod_lfff']]],
   ['l2d_5fb0_2',['l2d_b0',['../namespacemod__lfff.html#a54dc8a40dacbdb73d9bcf41f7d732fc8',1,'mod_lfff']]],
   ['l2d_5fbi_3',['l2d_bi',['../namespacemod__lfff.html#afc22b7ac959a62c8198764e4b8ee7938',1,'mod_lfff']]],
@@ -38,7 +38,7 @@ var searchData=
   ['lb_5ftc_5faccum_35',['lb_tc_accum',['../namespacemod__supertimestepping.html#a3cda8624c6f9661d148124933fff0d2f',1,'mod_supertimestepping']]],
   ['lcool_36',['lcool',['../structmod__radiative__cooling_1_1rc__fluid.html#a00a9b7506123fe01859f4aea72114bfb',1,'mod_radiative_cooling::rc_fluid']]],
   ['leaf_37',['leaf',['../structmod__forest_1_1tree__node.html#ab7bc67014e009d17b4b1c7578c826f77',1,'mod_forest::tree_node']]],
-  ['leaves_38',['leaves',['../structm__octree__mg__3d_1_1mg__lvl__t.html#aa1e8bb3164d64ce07ffa57c98ef81718',1,'m_octree_mg_3d::mg_lvl_t::leaves'],['../structm__octree__mg__2d_1_1mg__lvl__t.html#ae836765938e423a2513ee36bf05bf70c',1,'m_octree_mg_2d::mg_lvl_t::leaves'],['../structm__octree__mg__1d_1_1mg__lvl__t.html#a12f2a0095b08e437c219351f6775804f',1,'m_octree_mg_1d::mg_lvl_t::leaves']]],
+  ['leaves_38',['leaves',['../structm__octree__mg__1d_1_1mg__lvl__t.html#a12f2a0095b08e437c219351f6775804f',1,'m_octree_mg_1d::mg_lvl_t::leaves'],['../structm__octree__mg__2d_1_1mg__lvl__t.html#ae836765938e423a2513ee36bf05bf70c',1,'m_octree_mg_2d::mg_lvl_t::leaves'],['../structm__octree__mg__3d_1_1mg__lvl__t.html#aa1e8bb3164d64ce07ffa57c98ef81718',1,'m_octree_mg_3d::mg_lvl_t::leaves']]],
   ['length_5fbackward_39',['length_backward',['../structmod__trace__field_1_1trace__topology__result.html#ae0752e7d357bf881baf20a28fcf93a36',1,'mod_trace_field::trace_topology_result']]],
   ['length_5fconvert_5ffactor_40',['length_convert_factor',['../namespacemod__global__parameters.html#a6d25c8f0a568cc070ea9f329dd23f88f',1,'mod_global_parameters']]],
   ['length_5fforward_41',['length_forward',['../structmod__trace__field_1_1trace__topology__result.html#a1ea3ee8cd6903c84ad24a53fb8ee1214',1,'mod_trace_field::trace_topology_result']]],
@@ -93,7 +93,7 @@ var searchData=
   ['location_5fslit_90',['location_slit',['../namespacemod__global__parameters.html#a499251de3e6662e6956a005cfb98ea5b',1,'mod_global_parameters']]],
   ['log10_91',['log10',['../structmod__eos__container_1_1eos__container.html#ab845f956971f5c852befdc3afeb97470',1,'mod_eos_container::eos_container']]],
   ['log_5ffh_92',['log_fh',['../namespacemod__global__parameters.html#afffa1fd3e8b551b3f2ba9defbcc88f50',1,'mod_global_parameters']]],
-  ['log_5finterval_93',['log_interval',['../structmod__nlfff__optimization_1_1nlfff__optimization__config.html#a2e3ef3ce5f90ae87fb53de47bb0216a7',1,'mod_nlfff_optimization::nlfff_optimization_config::log_interval'],['../structmod__nlfff__grad__rubin_1_1nlfff__grad__rubin__config.html#a4dde8e5ac675ed6ba317e3b3f3f97f99',1,'mod_nlfff_grad_rubin::nlfff_grad_rubin_config::log_interval']]],
+  ['log_5finterval_93',['log_interval',['../structmod__nlfff__grad__rubin_1_1nlfff__grad__rubin__config.html#a4dde8e5ac675ed6ba317e3b3f3f97f99',1,'mod_nlfff_grad_rubin::nlfff_grad_rubin_config::log_interval'],['../structmod__nlfff__optimization_1_1nlfff__optimization__config.html#a2e3ef3ce5f90ae87fb53de47bb0216a7',1,'mod_nlfff_optimization::nlfff_optimization_config::log_interval']]],
   ['log_5fp_94',['log_p',['../structmod__eos__container_1_1eos__container.html#a0082fc025d4f39ac04ba62ce0ca2d986',1,'mod_eos_container::eos_container']]],
   ['log_5ft_5ffloor_95',['log_t_floor',['../structmod__thermal__conduction_1_1tc__fluid.html#a77accc00ec7856a69826b8c5ed0ffc80',1,'mod_thermal_conduction::tc_fluid']]],
   ['logd_5flist_96',['logd_list',['../namespacemod__cak__opacity.html#a88547621c27a45d21e100abfc8df586b',1,'mod_cak_opacity']]],
@@ -114,12 +114,12 @@ var searchData=
   ['los_5ftheta_111',['los_theta',['../namespacemod__global__parameters.html#aa8df2f891dca11a4a18199294bb4e018',1,'mod_global_parameters']]],
   ['losses_112',['losses',['../namespacemod__particle__base.html#a2f6e68db84ced57f098cecd754a58d3e',1,'mod_particle_base']]],
   ['low_5ffrac_113',['low_frac',['../structmod__lookup__table_1_1lt__loc__t.html#a388a4dc35d1cfeca1cf347cc27e5aef8',1,'mod_lookup_table::lt_loc_t::low_frac'],['../structmod__lookup__table_1_1lt2__loc__t.html#acb419c1d8d6b9912a3381b6231c7570d',1,'mod_lookup_table::lt2_loc_t::low_frac'],['../structmod__lookup__table_1_1lt3__loc__t.html#a67d2a54c363efec44be00258ae2e7837',1,'mod_lookup_table::lt3_loc_t::low_frac']]],
-  ['lowest_5flvl_114',['lowest_lvl',['../structm__octree__mg__3d_1_1mg__t.html#a6137f5cc48d600fe85cb0cfe51ecc6a7',1,'m_octree_mg_3d::mg_t::lowest_lvl'],['../structm__octree__mg__1d_1_1mg__t.html#af7e70270a2c3117988b4f89679eb85ea',1,'m_octree_mg_1d::mg_t::lowest_lvl'],['../structm__octree__mg__2d_1_1mg__t.html#a8ca5497ebee4f199d6c4316a15fa022e',1,'m_octree_mg_2d::mg_t::lowest_lvl']]],
+  ['lowest_5flvl_114',['lowest_lvl',['../structm__octree__mg__1d_1_1mg__t.html#af7e70270a2c3117988b4f89679eb85ea',1,'m_octree_mg_1d::mg_t::lowest_lvl'],['../structm__octree__mg__2d_1_1mg__t.html#a8ca5497ebee4f199d6c4316a15fa022e',1,'m_octree_mg_2d::mg_t::lowest_lvl'],['../structm__octree__mg__3d_1_1mg__t.html#a6137f5cc48d600fe85cb0cfe51ecc6a7',1,'m_octree_mg_3d::mg_t::lowest_lvl']]],
   ['lowfip_5ffrac_115',['lowfip_frac',['../namespacemod__radloss__tables.html#afef1e5ee9bafd7f760c0cc2cb84bb937',1,'mod_radloss_tables']]],
   ['lref_116',['lref',['../structmod__radiative__cooling_1_1rc__fluid.html#a56ca8236f7d6d966848c14977cc91cef',1,'mod_radiative_cooling::rc_fluid']]],
   ['lt_5f1d_117',['lt_1d',['../namespacemod__bc__data.html#a884ed4e1b9a328aa5674de0ac8e6af5b',1,'mod_bc_data::lt_1d'],['../namespacemod__init__datafromfile.html#a16a810efa2c9203b2f594b8294920fc9',1,'mod_init_datafromfile::lt_1d']]],
   ['lt_5f3d_118',['lt_3d',['../namespacemod__bc__data.html#a945593869504feee39444d18fbd12a42',1,'mod_bc_data']]],
   ['lvc_119',['lvc',['../namespacemod__global__parameters.html#a1d6f8608af3df2b3b6d49fc64bcd346f',1,'mod_global_parameters']]],
-  ['lvl_120',['lvl',['../structm__octree__mg__3d_1_1mg__box__t.html#a7b685eeaa0dd9885d913c81ca522dbac',1,'m_octree_mg_3d::mg_box_t::lvl'],['../structm__octree__mg__2d_1_1mg__box__t.html#ab63221601e85101662458eca879cfe5b',1,'m_octree_mg_2d::mg_box_t::lvl'],['../structm__octree__mg__1d_1_1mg__box__t.html#af82fb1c9108d976bc61b83d8648ce43b',1,'m_octree_mg_1d::mg_box_t::lvl']]],
-  ['lvls_121',['lvls',['../structm__octree__mg__3d_1_1mg__t.html#ae973de2a62cd780d5f85a7688be7d531',1,'m_octree_mg_3d::mg_t::lvls'],['../structm__octree__mg__2d_1_1mg__t.html#a39bc87e7512d35a6627d73f09a9fc707',1,'m_octree_mg_2d::mg_t::lvls'],['../structm__octree__mg__1d_1_1mg__t.html#af507e3820f17e9cf3ca6d33d101f001c',1,'m_octree_mg_1d::mg_t::lvls']]]
+  ['lvl_120',['lvl',['../structm__octree__mg__1d_1_1mg__box__t.html#af82fb1c9108d976bc61b83d8648ce43b',1,'m_octree_mg_1d::mg_box_t::lvl'],['../structm__octree__mg__2d_1_1mg__box__t.html#ab63221601e85101662458eca879cfe5b',1,'m_octree_mg_2d::mg_box_t::lvl'],['../structm__octree__mg__3d_1_1mg__box__t.html#a7b685eeaa0dd9885d913c81ca522dbac',1,'m_octree_mg_3d::mg_box_t::lvl']]],
+  ['lvls_121',['lvls',['../structm__octree__mg__1d_1_1mg__t.html#af507e3820f17e9cf3ca6d33d101f001c',1,'m_octree_mg_1d::mg_t::lvls'],['../structm__octree__mg__2d_1_1mg__t.html#a39bc87e7512d35a6627d73f09a9fc707',1,'m_octree_mg_2d::mg_t::lvls'],['../structm__octree__mg__3d_1_1mg__t.html#ae973de2a62cd780d5f85a7688be7d531',1,'m_octree_mg_3d::mg_t::lvls']]]
 ];

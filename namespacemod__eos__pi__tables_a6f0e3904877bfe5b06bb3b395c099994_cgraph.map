@@ -1,11 +1,11 @@
 <map id="mod_eos_pi_tables::ionization_state_from_temperature_scalar" name="mod_eos_pi_tables::ionization_state_from_temperature_scalar">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,169,84"/>
-<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="40,29,40,19,49,10,65,5,87,3,115,6,130,14,128,18,113,11,87,8,66,10,52,15,45,21,45,29"/>
-<area shape="rect" id="Node000002" href="$namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="217,37,444,77"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,63,204,63,203,68,169,68"/>
-<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="492,73,675,99"/>
-<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="170,77,218,86,285,92,353,94,478,91,478,97,353,99,285,97,217,91,169,83"/>
-<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="217,50,183,51,183,45,217,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="285,37,283,27,290,18,306,12,331,10,359,13,374,20,372,25,357,18,331,15,307,17,293,22,288,28,291,36"/>
-<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="445,67,479,71,478,76,444,72"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,169,91"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="39,28,41,19,49,10,65,5,87,3,112,5,130,14,124,16,111,11,87,8,66,10,52,15,45,21,44,30"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__pi__tables.html#a1d8b4747ab64747994160a8894141c88" title=" " alt="" coords="217,38,443,82"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,66,204,69,198,69,169,71"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="491,77,673,105"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="169,83,217,92,284,98,351,101,473,100,478,100,351,106,283,104,216,97,169,88"/>
+<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="214,52,185,54,184,49,219,51"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="284,36,282,28,290,19,306,13,330,11,356,14,373,23,368,22,355,19,330,16,307,18,293,23,287,29,288,39"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="444,71,478,78,473,78,443,77"/>
 </map>

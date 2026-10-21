@@ -1,8 +1,8 @@
 <map id="mod_lfff::get_potential_field_potential_mg" name="mod_lfff::get_potential_field_potential_mg">
-<area shape="rect" id="Node000001" title="Solve Poisson equation of scalar potential using multigrid solver." alt="" coords="5,5,175,45"/>
-<area shape="rect" id="Node000002" href="$namespacemod__magnetic__reference__fv.html#a3e5a5dd309c87ac1e14ce85a8d955745" title=" " alt="" coords="512,5,759,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,20,223,19,464,19,498,19,498,25,464,24,223,24,175,25"/>
-<area shape="rect" id="Node000005" href="$namespacemod__magnetic__reference__fv.html#a3101132132bcdf82c4ef053fc1836f28" title=" " alt="" coords="223,33,464,73"/>
-<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="175,32,209,36,208,41,175,37"/>
-<area shape="poly" id="edge3_Node000005_Node000002" title=" " alt="" coords="464,39,498,36,499,41,464,44"/>
+<area shape="rect" id="Node000001" title="Solve Poisson equation of scalar potential using multigrid solver." alt="" coords="5,5,174,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__magnetic__reference__fv.html#a3e5a5dd309c87ac1e14ce85a8d955745" title=" " alt="" coords="510,5,756,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,21,222,20,462,20,497,23,491,23,462,25,222,25,175,26"/>
+<area shape="rect" id="Node000005" href="$namespacemod__magnetic__reference__fv.html#a3101132132bcdf82c4ef053fc1836f28" title=" " alt="" coords="222,35,462,79"/>
+<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="174,35,209,41,203,41,174,40"/>
+<area shape="poly" id="edge3_Node000005_Node000002" title=" " alt="" coords="462,42,492,42,497,41,463,48"/>
 </map>

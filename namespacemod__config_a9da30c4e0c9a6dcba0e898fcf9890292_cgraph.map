@@ -1,5 +1,5 @@
 <map id="mod_config::cfg_update_from_arguments" name="mod_config::cfg_update_from_arguments">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,183,45"/>
-<area shape="rect" id="Node000002" href="$namespacemod__config.html#a4f598140183894cca322b7ab1d73d9f0" title="Update the variables in the configartion with the values found in &#39;filename&#39;." alt="" coords="231,13,419,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,23,217,23,217,28,183,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,182,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__config.html#a4f598140183894cca322b7ab1d73d9f0" title="Update the variables in the configartion with the values found in &#39;filename&#39;." alt="" coords="230,14,417,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,25,217,27,211,28,182,30"/>
 </map>

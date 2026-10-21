@@ -1,7 +1,7 @@
 <map id="mod_magnetofriction::magnetofriction_init" name="mod_magnetofriction::magnetofriction_init">
-<area shape="rect" id="Node000001" title="Initialize the module." alt="" coords="5,37,168,77"/>
-<area shape="rect" id="Node000002" href="$namespacemod__magnetofriction.html#a3de7430e3b56ca99143c667663732dbe" title=" " alt="" coords="216,5,379,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,42,202,37,203,42,169,48"/>
-<area shape="rect" id="Node000156" href="$namespacemod__magnetofriction.html#ae6b9161f803d020224a1ade638ccfcd2" title="Read this module&quot;s parameters from a file." alt="" coords="216,69,379,109"/>
-<area shape="poly" id="edge2_Node000001_Node000156" title=" " alt="" coords="169,67,203,72,202,78,168,72"/>
+<area shape="rect" id="Node000001" title="Initialize the module." alt="" coords="5,40,167,85"/>
+<area shape="rect" id="Node000002" href="$namespacemod__magnetofriction.html#a3de7430e3b56ca99143c667663732dbe" title=" " alt="" coords="215,5,376,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,46,202,43,197,44,168,52"/>
+<area shape="rect" id="Node000156" href="$namespacemod__magnetofriction.html#ae6b9161f803d020224a1ade638ccfcd2" title="Read this module&quot;s parameters from a file." alt="" coords="215,75,376,119"/>
+<area shape="poly" id="edge2_Node000001_Node000156" title=" " alt="" coords="167,73,202,81,197,81,167,78"/>
 </map>

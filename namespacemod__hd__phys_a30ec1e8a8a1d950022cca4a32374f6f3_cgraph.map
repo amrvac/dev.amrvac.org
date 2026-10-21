@@ -1,5 +1,5 @@
 <map id="mod_hd_phys::hd_check_w" name="mod_hd_phys::hd_check_w">
-<area shape="rect" id="Node000001" title="Returns logical argument flag where values are ok." alt="" coords="5,5,204,31"/>
-<area shape="rect" id="Node000002" href="$namespacemod__dust.html#ab0274fc3fdcd65349b002c04f83dbe0f" title=" " alt="" coords="252,5,437,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,15,238,15,238,21,204,21"/>
+<area shape="rect" id="Node000001" title="Returns logical argument flag where values are ok." alt="" coords="5,5,204,33"/>
+<area shape="rect" id="Node000002" href="$namespacemod__dust.html#ab0274fc3fdcd65349b002c04f83dbe0f" title=" " alt="" coords="252,5,436,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,17,239,19,234,19,204,22"/>
 </map>

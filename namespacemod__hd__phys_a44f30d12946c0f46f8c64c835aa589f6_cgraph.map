@@ -1,5 +1,5 @@
 <map id="mod_hd_phys::hd_get_csound2" name="mod_hd_phys::hd_get_csound2">
-<area shape="rect" id="Node000001" title="Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pther..." alt="" coords="5,5,169,45"/>
-<area shape="rect" id="Node000002" href="$namespacemod__eos__lte.html#ac730b189d6c6880f51a5d2f17745e9e5" title="Gamma_1 from pressure&#45;indexed table: (log10 nH, log10 p/nH) &#45;&gt; Gamma_1. For &#39;entropy&#39; the conversion ..." alt="" coords="217,5,388,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,23,203,23,203,28,170,28"/>
+<area shape="rect" id="Node000001" title="Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pther..." alt="" coords="5,5,169,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte.html#ac730b189d6c6880f51a5d2f17745e9e5" title="Gamma_1 from pressure&#45;indexed table: (log10 nH, log10 p/nH) &#45;&gt; Gamma_1. For &#39;entropy&#39; the conversion ..." alt="" coords="217,5,387,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,25,204,27,198,28,169,30"/>
 </map>

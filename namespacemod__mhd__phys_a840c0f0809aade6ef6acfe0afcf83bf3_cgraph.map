@@ -1,5 +1,5 @@
 <map id="mod_mhd_phys::b_from_vector_potential" name="mod_mhd_phys::b_from_vector_potential">
-<area shape="rect" id="Node000001" title="calculate magnetic field from vector potential" alt="" coords="5,5,184,45"/>
-<area shape="rect" id="Node000002" href="$namespacemod__constrained__transport.html#a25f8b180b123dbde3aeb06a78fe5d054" title="calculate magnetic field from vector potential A at cell edges" alt="" coords="232,5,432,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,23,218,23,218,28,184,28"/>
+<area shape="rect" id="Node000001" title="calculate magnetic field from vector potential" alt="" coords="5,5,184,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__constrained__transport.html#a25f8b180b123dbde3aeb06a78fe5d054" title="calculate magnetic field from vector potential A at cell edges" alt="" coords="232,5,431,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,25,219,27,213,28,184,30"/>
 </map>

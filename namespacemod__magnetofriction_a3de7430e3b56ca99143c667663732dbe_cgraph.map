@@ -1,32 +1,32 @@
 <map id="mod_magnetofriction::magnetofriction" name="mod_magnetofriction::magnetofriction">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,351,168,391"/>
-<area shape="rect" id="Node000002" href="$namespacemod__magnetofriction.html#ab4dacf3b6be62b81df0772cef04ef26c" title=" " alt="" coords="247,5,410,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,350,99,294,121,217,138,175,158,134,184,96,214,62,234,48,237,52,218,66,188,99,163,137,143,178,126,219,104,295,93,351"/>
-<area shape="rect" id="Node000010" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="489,131,672,157"/>
-<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="88,350,99,298,121,230,137,194,158,160,184,130,215,106,256,87,300,77,345,75,391,79,475,99,541,123,540,128,474,104,390,84,345,80,300,82,257,92,217,110,187,134,162,164,142,197,126,232,104,299,93,351"/>
-<area shape="rect" id="Node000043" href="$namespacemod__ghostcells__update.html#a327d9129bf4d1651e23a58a54e67f24d" title=" " alt="" coords="233,120,424,160"/>
-<area shape="poly" id="edge3_Node000001_Node000043" title=" " alt="" coords="93,349,109,311,135,263,170,213,214,170,222,165,225,169,218,174,174,216,140,265,114,313,98,351"/>
-<area shape="rect" id="Node000045" href="$namespacemod__nlfff__diagnostics.html#a58a302e7dda4b78dc1d6d58b64b01525" title="Evaluate the common metrics on all active AMRVAC cells. The local cell size makes epsilon_force and e..." alt="" coords="241,249,417,303"/>
-<area shape="poly" id="edge4_Node000001_Node000045" title=" " alt="" coords="138,348,244,306,246,311,140,353"/>
-<area shape="rect" id="Node000046" href="$mod__magnetofriction_8t.html#a0b3223c2536a1c82c3ac7b6096b98137" title=" " alt="" coords="545,329,616,354"/>
-<area shape="poly" id="edge10_Node000001_Node000046" title=" " alt="" coords="168,363,531,342,532,347,168,369"/>
-<area shape="rect" id="Node000005" href="$namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="241,184,417,224"/>
-<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="100,349,146,292,178,260,215,234,227,227,229,232,217,238,182,265,150,295,104,352"/>
-<area shape="rect" id="Node000047" href="$namespacemod__magnetofriction.html#a1dacdad96eabfb8e026e4f7e764b98e1" title=" " alt="" coords="247,379,410,419"/>
-<area shape="poly" id="edge9_Node000001_Node000047" title=" " alt="" coords="169,377,234,385,234,390,168,383"/>
-<area shape="rect" id="Node000020" href="$namespacemod__magnetofriction.html#aa80c1fdbbd16d0e4ebac788ac232f124" title=" " alt="" coords="247,443,410,483"/>
-<area shape="poly" id="edge11_Node000001_Node000020" title=" " alt="" coords="128,388,217,428,239,436,238,441,215,433,125,393"/>
-<area shape="rect" id="Node000048" href="$namespacemod__amr__grid.html#a1d21768e5b7034d71d93c87a60b14833" title="reset AMR and (de)allocate boundary flux storage at level changes" alt="" coords="237,507,420,533"/>
-<area shape="poly" id="edge13_Node000001_Node000048" title=" " alt="" coords="105,389,151,441,183,469,217,492,235,500,233,505,215,497,179,473,148,445,101,393"/>
-<area shape="rect" id="Node000076" href="$namespacemod__input__output.html#a061b50e8aaaaf828c94809adf831ccbe" title=" " alt="" coords="216,557,441,582"/>
-<area shape="poly" id="edge14_Node000001_Node000076" title=" " alt="" coords="99,390,117,424,143,466,176,508,218,543,228,549,225,553,214,548,172,512,138,469,112,427,95,392"/>
-<area shape="rect" id="Node000153" href="$namespacemod__nlfff__diagnostics.html#a1ee1384d656da7b1b15851269e1a98d9" title=" " alt="" coords="246,606,411,661"/>
-<area shape="poly" id="edge15_Node000001_Node000153" title=" " alt="" coords="97,390,112,432,137,487,172,544,194,570,218,593,235,604,232,609,214,597,190,573,168,547,133,489,107,435,92,392"/>
-<area shape="rect" id="Node000154" href="$namespacemod__nlfff__diagnostics.html#a5272034b6249c1272f13fbcfd1293315" title=" " alt="" coords="237,685,420,725"/>
-<area shape="poly" id="edge16_Node000001_Node000154" title=" " alt="" coords="93,390,104,446,125,522,142,563,162,602,188,639,218,671,227,678,224,683,214,675,183,643,158,605,137,565,120,524,98,447,88,391"/>
-<area shape="poly" id="edge2_Node000002_Node000010" title=" " alt="" coords="395,43,442,62,500,92,550,121,547,126,498,96,440,66,393,48"/>
-<area shape="poly" id="edge6_Node000045_Node000010" title=" " alt="" coords="413,246,440,234,501,198,551,163,554,167,503,203,443,238,415,251"/>
-<area shape="poly" id="edge5_Node000045_Node000046" title=" " alt="" coords="418,296,533,326,531,331,416,301"/>
-<area shape="poly" id="edge8_Node000005_Node000010" title=" " alt="" coords="413,181,513,157,514,162,414,187"/>
-<area shape="poly" id="edge17_Node000154_Node000046" title=" " alt="" coords="419,685,440,671,472,637,499,597,521,555,538,511,562,429,574,367,579,368,567,430,543,513,526,557,503,600,476,640,443,675,422,690"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,371,167,415"/>
+<area shape="rect" id="Node000002" href="$namespacemod__magnetofriction.html#ab4dacf3b6be62b81df0772cef04ef26c" title=" " alt="" coords="246,5,408,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,370,98,310,119,230,136,186,157,143,182,103,213,67,234,53,231,58,217,71,186,106,161,146,141,188,125,231,103,312,93,371"/>
+<area shape="rect" id="Node000010" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="487,139,669,167"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="87,370,97,314,118,242,134,204,155,169,181,137,213,111,253,92,296,82,341,80,386,84,469,104,537,132,532,133,468,109,385,89,341,85,297,87,255,97,216,115,185,141,160,172,139,207,123,244,102,316,92,371"/>
+<area shape="rect" id="Node000043" href="$namespacemod__ghostcells__update.html#a327d9129bf4d1651e23a58a54e67f24d" title=" " alt="" coords="232,125,422,170"/>
+<area shape="poly" id="edge3_Node000001_Node000043" title=" " alt="" coords="92,369,109,329,134,278,169,225,190,201,213,180,222,176,219,180,216,184,193,205,173,229,139,281,113,331,97,371"/>
+<area shape="rect" id="Node000045" href="$namespacemod__nlfff__diagnostics.html#a58a302e7dda4b78dc1d6d58b64b01525" title="Evaluate the common metrics on all active AMRVAC cells. The local cell size makes epsilon_force and e..." alt="" coords="239,264,414,325"/>
+<area shape="poly" id="edge4_Node000001_Node000045" title=" " alt="" coords="141,368,237,329,234,334,144,372"/>
+<area shape="rect" id="Node000046" href="$mod__magnetofriction_8t.html#a0b3223c2536a1c82c3ac7b6096b98137" title=" " alt="" coords="543,348,613,376"/>
+<area shape="poly" id="edge10_Node000001_Node000046" title=" " alt="" coords="166,385,529,363,526,368,168,391"/>
+<area shape="rect" id="Node000005" href="$namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="239,195,414,239"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="99,369,146,310,177,277,213,249,227,244,223,248,216,254,181,281,150,313,104,372"/>
+<area shape="rect" id="Node000047" href="$namespacemod__magnetofriction.html#a1dacdad96eabfb8e026e4f7e764b98e1" title=" " alt="" coords="246,400,408,445"/>
+<area shape="poly" id="edge9_Node000001_Node000047" title=" " alt="" coords="166,400,233,409,228,412,168,405"/>
+<area shape="rect" id="Node000020" href="$namespacemod__magnetofriction.html#aa80c1fdbbd16d0e4ebac788ac232f124" title=" " alt="" coords="246,469,408,514"/>
+<area shape="poly" id="edge11_Node000001_Node000020" title=" " alt="" coords="128,413,216,455,235,463,230,465,214,459,129,418"/>
+<area shape="rect" id="Node000048" href="$namespacemod__amr__grid.html#a1d21768e5b7034d71d93c87a60b14833" title="reset AMR and (de)allocate boundary flux storage at level changes" alt="" coords="236,538,418,566"/>
+<area shape="poly" id="edge13_Node000001_Node000048" title=" " alt="" coords="102,413,150,470,181,499,216,524,228,531,223,532,213,529,178,504,146,474,103,418"/>
+<area shape="rect" id="Node000076" href="$namespacemod__input__output.html#a061b50e8aaaaf828c94809adf831ccbe" title=" " alt="" coords="215,590,439,618"/>
+<area shape="poly" id="edge14_Node000001_Node000076" title=" " alt="" coords="96,413,116,450,141,494,175,538,216,575,227,583,222,583,213,579,171,542,137,497,111,453,97,418"/>
+<area shape="rect" id="Node000153" href="$namespacemod__nlfff__diagnostics.html#a1ee1384d656da7b1b15851269e1a98d9" title=" " alt="" coords="245,642,409,704"/>
+<area shape="poly" id="edge15_Node000001_Node000153" title=" " alt="" coords="94,413,112,459,136,516,171,575,192,603,216,627,234,641,228,641,213,631,188,606,167,578,132,518,107,461,94,418"/>
+<area shape="rect" id="Node000154" href="$namespacemod__nlfff__diagnostics.html#a5272034b6249c1272f13fbcfd1293315" title=" " alt="" coords="236,728,418,773"/>
+<area shape="poly" id="edge16_Node000001_Node000154" title=" " alt="" coords="90,413,102,475,123,555,140,598,160,640,186,679,217,714,225,723,220,722,213,718,181,683,156,643,135,600,118,557,97,476,89,419"/>
+<area shape="poly" id="edge2_Node000002_Node000010" title=" " alt="" coords="395,48,440,67,496,97,546,130,541,131,494,102,438,71,397,53"/>
+<area shape="poly" id="edge6_Node000045_Node000010" title=" " alt="" coords="413,261,438,249,497,212,550,175,546,179,500,216,440,254,417,265"/>
+<area shape="poly" id="edge5_Node000045_Node000046" title=" " alt="" coords="415,315,531,348,526,350,416,321"/>
+<area shape="poly" id="edge8_Node000005_Node000010" title=" " alt="" coords="414,192,508,170,504,173,416,197"/>
+<area shape="poly" id="edge17_Node000154_Node000046" title=" " alt="" coords="418,728,437,714,470,677,497,635,520,590,537,544,560,457,572,394,576,390,565,459,542,546,524,592,502,638,474,680,441,718,420,732"/>
 </map>

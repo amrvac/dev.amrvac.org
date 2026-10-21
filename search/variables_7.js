@@ -4,7 +4,7 @@ var searchData=
   ['h_5fcorrection_1',['h_correction',['../namespacemod__global__parameters.html#a05670d1e36a9ade124b86238a3f6ecbb',1,'mod_global_parameters']]],
   ['h_5ffontenla_2',['h_fontenla',['../namespacemod__solar__atmosphere.html#ab2c7fb0c2ae253cbc350ee4614fd89b2',1,'mod_solar_atmosphere']]],
   ['h_5fhong_3',['h_hong',['../namespacemod__solar__atmosphere.html#aa3de5f5290caa4fd9e6394e22c49cfd1',1,'mod_solar_atmosphere']]],
-  ['h_5fion_5ffr_4',['h_ion_fr',['../namespacemod__mhd__phys.html#a37f6f825e1df903fff1c7b5b2ec5cf9d',1,'mod_mhd_phys::h_ion_fr'],['../namespacemod__hd__phys.html#a748bde3de60ce52fb8c93aaf03af9dd9',1,'mod_hd_phys::h_ion_fr'],['../namespacemod__ffhd__phys.html#a74c96935c3819534dd4c41d5c8fd800a',1,'mod_ffhd_phys::h_ion_fr']]],
+  ['h_5fion_5ffr_4',['h_ion_fr',['../namespacemod__ffhd__phys.html#a74c96935c3819534dd4c41d5c8fd800a',1,'mod_ffhd_phys::h_ion_fr'],['../namespacemod__hd__phys.html#a748bde3de60ce52fb8c93aaf03af9dd9',1,'mod_hd_phys::h_ion_fr'],['../namespacemod__mhd__phys.html#a37f6f825e1df903fff1c7b5b2ec5cf9d',1,'mod_mhd_phys::h_ion_fr']]],
   ['h_5fvalc_5',['h_valc',['../namespacemod__solar__atmosphere.html#aa1827b76d72bada3e6dba0a77c833b71',1,'mod_solar_atmosphere']]],
   ['half_6',['half',['../namespacemod__constants.html#a3f0de4f07b907ebb3b322fc5cef30724',1,'mod_constants']]],
   ['has_5fequi_7',['has_equi',['../structmod__radiative__cooling_1_1rc__fluid.html#a7f90671190ac181af3ca22a0782093c8',1,'mod_radiative_cooling::rc_fluid']]],

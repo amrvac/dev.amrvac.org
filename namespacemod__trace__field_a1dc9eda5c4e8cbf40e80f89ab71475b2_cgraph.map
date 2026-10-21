@@ -1,5 +1,5 @@
 <map id="mod_trace_field::trace_cartesian_global_min_cell_size" name="mod_trace_field::trace_cartesian_global_min_cell_size">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,173,60"/>
-<area shape="rect" id="Node000002" href="$namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="221,13,375,53"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,30,208,30,208,35,174,35"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,173,67"/>
+<area shape="rect" id="Node000002" href="$namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="221,14,373,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,34,208,36,202,36,173,39"/>
 </map>

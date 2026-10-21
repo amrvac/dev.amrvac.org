@@ -1,10 +1,10 @@
 <map id="mod_finite_volume::hancock" name="mod_finite_volume::hancock">
-<area shape="rect" id="Node000001" title="The non&#45;conservative Hancock predictor for TVDLF." alt="" coords="5,49,160,89"/>
-<area shape="rect" id="Node000002" href="$namespacemod__source.html#a5968f73a47943fc0490e07e46ee13858" title="Add source within ixO for iws: w=w+qdt*S[wCT]." alt="" coords="208,5,392,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,48,231,31,232,36,161,53"/>
-<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="440,85,623,111"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,71,426,89,426,94,160,76"/>
-<area shape="rect" id="Node000004" href="$namespacemod__finite__volume.html#ad2db0b98318dfd688534a66f8abf9733" title="Determine the upwinded wLC(ixL) and wRC(ixR) from w. the wCT is only used when PPM is exploited." alt="" coords="223,106,377,146"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,86,211,100,210,105,158,91"/>
-<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="377,114,426,108,427,113,378,119"/>
+<area shape="rect" id="Node000001" title="The non&#45;conservative Hancock predictor for TVDLF." alt="" coords="5,48,160,92"/>
+<area shape="rect" id="Node000002" href="$namespacemod__source.html#a5968f73a47943fc0490e07e46ee13858" title="Add source within ixO for iws: w=w+qdt*S[wCT]." alt="" coords="208,5,391,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,49,225,36,220,38,161,54"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="439,87,621,114"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,72,424,91,422,96,160,78"/>
+<area shape="rect" id="Node000004" href="$namespacemod__finite__volume.html#ad2db0b98318dfd688534a66f8abf9733" title="Determine the upwinded wLC(ixL) and wRC(ixR) from w. the wCT is only used when PPM is exploited." alt="" coords="222,108,376,152"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,88,210,104,205,105,160,94"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="376,117,421,114,426,114,377,123"/>
 </map>

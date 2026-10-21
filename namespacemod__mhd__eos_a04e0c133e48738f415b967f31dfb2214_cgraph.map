@@ -1,31 +1,31 @@
 <map id="mod_mhd_eos::mhd_link_eos" name="mod_mhd_eos::mhd_link_eos">
-<area shape="rect" id="Node000001" title="Link the appropriate EOS conversion routines based on the selected EoS type." alt="" coords="5,399,220,425"/>
-<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a6734611e0cdf1279b4fb32cb3322dbaa" title="===================================================================" alt="" coords="295,5,465,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,399,124,337,150,245,170,194,196,143,228,96,266,55,280,45,284,49,270,59,232,100,201,146,175,196,155,246,129,338,118,400"/>
-<area shape="rect" id="Node000007" href="$namespacemod__eos__pi.html#a6db481882d7d8de88ef604b90d828c4d" title="Internal energy per H from temperature: eint/nH(T)." alt="" coords="279,70,481,95"/>
-<area shape="poly" id="edge2_Node000001_Node000007" title=" " alt="" coords="114,399,127,344,155,265,176,221,201,179,231,140,266,106,276,99,279,104,270,110,235,143,205,182,180,224,160,267,132,346,119,400"/>
-<area shape="rect" id="Node000009" href="$namespacemod__eos__lte.html#a6f13cf75af7de7e50bf276ccc566f901" title="Internal energy per nH from (log10 nH, log10 T) in code units. Uses the bisection&#45;built inverse table..." alt="" coords="299,120,461,160"/>
-<area shape="poly" id="edge3_Node000001_Node000009" title=" " alt="" coords="116,398,134,355,165,293,209,227,236,196,266,170,286,158,288,163,270,174,240,200,213,230,169,296,138,357,121,400"/>
-<area shape="rect" id="Node000019" href="$namespacemod__eos__lte.html#aba25e77fd2560dad035795115a1da4b7" title="log_nH grid metadata of the (log_nH, log_T) inverse table (eint from T), choosing the container by me..." alt="" coords="298,184,462,224"/>
-<area shape="poly" id="edge4_Node000001_Node000019" title=" " alt="" coords="119,398,141,365,174,320,216,274,267,234,284,224,286,229,269,238,220,278,178,324,145,368,124,401"/>
-<area shape="rect" id="Node000020" href="$namespacemod__eos__pi.html#abebe95a10a89427265c7a3b274a226c8" title="Effective Gamma1 = cs2 * rho / p for the same primitive state." alt="" coords="273,249,487,274"/>
-<area shape="poly" id="edge5_Node000001_Node000020" title=" " alt="" coords="124,397,182,342,222,311,267,284,288,276,290,281,269,289,225,315,185,346,128,401"/>
-<area shape="rect" id="Node000023" href="$namespacemod__eos__lte.html#a7eb2db76bedf9e4a2749ac95f164028c" title=" " alt="" coords="269,299,491,339"/>
-<area shape="poly" id="edge6_Node000001_Node000023" title=" " alt="" coords="143,397,267,348,291,340,293,345,269,353,145,402"/>
-<area shape="rect" id="Node000025" href="$namespacemod__mhd__phys.html#aad0ebf876d39ffe0626d80bc47848417" title=" " alt="" coords="268,363,492,403"/>
-<area shape="poly" id="edge7_Node000001_Node000025" title=" " alt="" coords="220,398,254,394,255,399,220,403"/>
-<area shape="rect" id="Node000014" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="289,427,471,453"/>
-<area shape="poly" id="edge8_Node000001_Node000014" title=" " alt="" coords="220,421,275,426,274,432,220,426"/>
-<area shape="rect" id="Node000027" href="$namespacemod__eos__lte.html#a4a9da8961173fdb2bd397004a5c543ce" title="Pressure&#45;to&#45;eint ratio from (log10 nH, log10 p/nH) in code units. Dispatches: analytic &#45;&gt; Saha solve ..." alt="" coords="303,477,457,517"/>
-<area shape="poly" id="edge9_Node000001_Node000027" title=" " alt="" coords="151,422,269,461,298,471,297,476,267,467,150,427"/>
-<area shape="rect" id="Node000029" href="$namespacemod__eos__pi.html#a2e629488e9eaf056d980f8e1ff2c3a7d" title="eint/p factor from pressure per H: maps p &#45;&gt; eint = p * (this)." alt="" coords="296,542,464,567"/>
-<area shape="poly" id="edge10_Node000001_Node000029" title=" " alt="" coords="128,423,186,474,226,503,269,527,291,535,289,540,267,532,223,507,183,478,125,427"/>
-<area shape="rect" id="Node000031" href="$namespacemod__eos__pi.html#ad9ef13a12258d8519ad41bc7b3b9a540" title="Temperature from internal energy per H." alt="" coords="305,592,455,632"/>
-<area shape="poly" id="edge11_Node000001_Node000031" title=" " alt="" coords="124,423,180,496,221,539,269,576,293,588,290,593,267,581,218,543,175,499,120,427"/>
-<area shape="rect" id="Node000032" href="$namespacemod__eos__lte.html#ad1e325f142fa31bedb6a09fc519d7061" title="Temperature from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic &#45;&gt; Saha bisection/Newt..." alt="" coords="302,656,458,696"/>
-<area shape="poly" id="edge12_Node000001_Node000032" title=" " alt="" coords="121,424,139,466,170,525,214,588,240,617,270,642,290,654,288,658,266,646,237,621,210,591,166,528,134,468,116,426"/>
-<area shape="rect" id="Node000034" href="$namespacemod__eos__pi.html#a9630051643d79b0e600206bafcf801aa" title="Electron&#45;to&#45;hydrogen ratio ne/nH from internal energy per H. ne/nH = iz_H + A_He*iz_He*(1+iz_He) (mat..." alt="" coords="303,720,457,760"/>
-<area shape="poly" id="edge13_Node000001_Node000034" title=" " alt="" coords="119,424,134,477,162,553,183,594,207,635,236,673,270,706,291,719,289,724,266,710,232,677,203,638,178,597,158,555,129,478,114,426"/>
-<area shape="rect" id="Node000035" href="$namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="Ionization fraction from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic &#45;&gt; Saha quadra..." alt="" coords="301,784,459,824"/>
-<area shape="poly" id="edge14_Node000001_Node000035" title=" " alt="" coords="118,424,129,486,155,580,175,631,200,682,232,729,270,770,289,783,286,788,266,774,227,732,195,684,170,633,150,581,124,487,113,425"/>
+<area shape="rect" id="Node000001" title="Link the appropriate EOS conversion routines based on the selected EoS type." alt="" coords="5,423,220,451"/>
+<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a6734611e0cdf1279b4fb32cb3322dbaa" title="===================================================================" alt="" coords="295,5,464,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,422,123,357,149,260,169,207,195,154,227,104,266,60,283,50,279,54,269,64,231,107,199,156,174,209,154,262,129,358,118,423"/>
+<area shape="rect" id="Node000007" href="$namespacemod__eos__pi.html#a6db481882d7d8de88ef604b90d828c4d" title="Internal energy per H from temperature: eint/nH(T)." alt="" coords="279,74,480,102"/>
+<area shape="poly" id="edge2_Node000001_Node000007" title=" " alt="" coords="114,422,126,364,153,279,173,234,199,188,229,147,266,111,274,107,271,112,269,115,233,150,203,191,178,236,158,281,131,365,119,423"/>
+<area shape="rect" id="Node000009" href="$namespacemod__eos__lte.html#a6f13cf75af7de7e50bf276ccc566f901" title="Internal energy per nH from (log10 nH, log10 T) in code units. Uses the bisection&#45;built inverse table..." alt="" coords="299,125,460,170"/>
+<area shape="poly" id="edge3_Node000001_Node000009" title=" " alt="" coords="116,422,133,376,164,311,208,241,235,208,266,180,287,169,283,173,269,184,239,212,212,244,168,313,138,378,121,424"/>
+<area shape="rect" id="Node000019" href="$namespacemod__eos__lte.html#aba25e77fd2560dad035795115a1da4b7" title="####################################################################### Table&#45;metadata helpers: expos..." alt="" coords="298,195,461,239"/>
+<area shape="poly" id="edge4_Node000001_Node000019" title=" " alt="" coords="119,421,141,386,174,340,216,292,266,249,285,241,282,245,269,254,220,295,178,343,145,389,124,424"/>
+<area shape="rect" id="Node000020" href="$namespacemod__eos__pi.html#abebe95a10a89427265c7a3b274a226c8" title="Effective Gamma1 = cs2 * rho / p for the same primitive state." alt="" coords="273,263,486,291"/>
+<area shape="poly" id="edge5_Node000001_Node000020" title=" " alt="" coords="124,421,181,362,221,328,266,300,282,295,278,298,269,305,225,333,184,366,128,424"/>
+<area shape="rect" id="Node000023" href="$namespacemod__eos__lte.html#a7eb2db76bedf9e4a2749ac95f164028c" title=" " alt="" coords="269,315,490,359"/>
+<area shape="poly" id="edge6_Node000001_Node000023" title=" " alt="" coords="144,421,267,369,289,363,285,367,269,374,147,425"/>
+<area shape="rect" id="Node000025" href="$namespacemod__mhd__phys.html#aad0ebf876d39ffe0626d80bc47848417" title=" " alt="" coords="268,384,491,429"/>
+<area shape="poly" id="edge7_Node000001_Node000025" title=" " alt="" coords="219,422,254,419,250,423,222,427"/>
+<area shape="rect" id="Node000014" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="288,452,470,480"/>
+<area shape="poly" id="edge8_Node000001_Node000014" title=" " alt="" coords="219,446,275,453,270,456,221,451"/>
+<area shape="rect" id="Node000027" href="$namespacemod__eos__lte.html#a4a9da8961173fdb2bd397004a5c543ce" title="Pressure&#45;to&#45;eint ratio from (log10 nH, log10 p/nH) in code units. Dispatches: analytic &#45;&gt; Saha solve ..." alt="" coords="303,504,456,549"/>
+<area shape="poly" id="edge9_Node000001_Node000027" title=" " alt="" coords="152,449,269,489,292,498,287,500,267,494,153,454"/>
+<area shape="rect" id="Node000029" href="$namespacemod__eos__pi.html#a2e629488e9eaf056d980f8e1ff2c3a7d" title="eint/p factor from pressure per H: maps p &#45;&gt; eint = p * (this)." alt="" coords="296,572,463,600"/>
+<area shape="poly" id="edge10_Node000001_Node000029" title=" " alt="" coords="127,449,186,503,226,533,269,559,284,566,279,568,266,563,223,538,183,507,127,454"/>
+<area shape="rect" id="Node000031" href="$namespacemod__eos__pi.html#ad9ef13a12258d8519ad41bc7b3b9a540" title="Temperature from internal energy per H." alt="" coords="304,624,454,669"/>
+<area shape="poly" id="edge11_Node000001_Node000031" title=" " alt="" coords="122,448,179,525,221,571,269,609,292,623,287,624,266,614,217,574,175,529,122,454"/>
+<area shape="rect" id="Node000032" href="$namespacemod__eos__lte.html#ad1e325f142fa31bedb6a09fc519d7061" title="Temperature from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic &#45;&gt; Saha bisection/Newt..." alt="" coords="302,693,457,738"/>
+<area shape="poly" id="edge12_Node000001_Node000032" title=" " alt="" coords="119,448,139,494,170,556,213,622,240,652,269,679,290,693,285,694,266,683,236,656,209,625,165,559,134,496,119,454"/>
+<area shape="rect" id="Node000034" href="$namespacemod__eos__pi.html#a9630051643d79b0e600206bafcf801aa" title="Electron&#45;to&#45;hydrogen ratio ne/nH from internal energy per H. ne/nH = iz_H + A_He*iz_He*(1+iz_He) (mat..." alt="" coords="303,763,456,807"/>
+<area shape="poly" id="edge13_Node000001_Node000034" title=" " alt="" coords="117,449,133,506,161,586,181,630,206,673,235,713,269,748,291,764,286,764,266,752,231,717,201,676,177,632,156,588,128,508,116,454"/>
+<area shape="rect" id="Node000035" href="$namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="####################################################################### Scalar EoS kernels: pointwise..." alt="" coords="300,832,458,877"/>
+<area shape="poly" id="edge14_Node000001_Node000035" title=" " alt="" coords="116,449,128,517,153,615,173,670,198,724,230,774,269,818,289,833,284,832,266,822,226,777,194,726,168,672,148,617,123,518,115,454"/>
 </map>

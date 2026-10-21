@@ -1,10 +1,10 @@
 <map id="mod_initialize_amr::improve_initial_condition" name="mod_initialize_amr::improve_initial_condition">
-<area shape="rect" id="Node000001" title="improve initial condition after initialization" alt="" coords="5,26,200,66"/>
-<area shape="rect" id="Node000002" href="$namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="496,30,672,70"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,23,248,11,348,3,448,11,509,23,508,29,448,16,348,8,248,16,180,28"/>
-<area shape="rect" id="Node000017" href="$namespacemod__multigrid__coupling.html#aec3563c8809267a23e94c236093a2b12" title="Setup multigrid for usage." alt="" coords="259,26,437,66"/>
-<area shape="poly" id="edge2_Node000001_Node000017" title=" " alt="" coords="200,43,245,43,245,48,200,48"/>
-<area shape="rect" id="Node000041" href="$namespacemod__constrained__transport.html#a0d59d156c7a3e6112fdc5de77d009a61" title="re&#45;calculate the magnetic field from the vector potential in a completely divergency free way" alt="" coords="248,90,448,130"/>
-<area shape="poly" id="edge3_Node000001_Node000041" title=" " alt="" coords="181,63,258,84,257,89,179,68"/>
-<area shape="poly" id="edge4_Node000041_Node000002" title=" " alt="" coords="427,87,491,70,492,76,428,92"/>
+<area shape="rect" id="Node000001" title="improve initial condition after initialization" alt="" coords="5,27,200,71"/>
+<area shape="rect" id="Node000002" href="$namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="495,32,670,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,23,247,12,347,3,391,5,447,12,506,27,501,27,447,17,391,10,348,8,248,17,185,28"/>
+<area shape="rect" id="Node000017" href="$namespacemod__multigrid__coupling.html#aec3563c8809267a23e94c236093a2b12" title="Setup multigrid for usage." alt="" coords="258,27,436,71"/>
+<area shape="poly" id="edge2_Node000001_Node000017" title=" " alt="" coords="200,46,245,48,240,50,201,51"/>
+<area shape="rect" id="Node000041" href="$namespacemod__constrained__transport.html#a0d59d156c7a3e6112fdc5de77d009a61" title="re&#45;calculate the magnetic field from the vector potential in a completely divergency free way" alt="" coords="248,96,447,141"/>
+<area shape="poly" id="edge3_Node000001_Node000041" title=" " alt="" coords="184,69,254,91,249,92,184,75"/>
+<area shape="poly" id="edge4_Node000041_Node000002" title=" " alt="" coords="431,93,480,82,486,81,433,98"/>
 </map>

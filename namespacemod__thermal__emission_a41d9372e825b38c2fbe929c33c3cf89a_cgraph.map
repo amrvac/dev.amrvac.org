@@ -1,7 +1,7 @@
 <map id="mod_thermal_emission::transfer_attenuation" name="mod_thermal_emission::transfer_attenuation">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,180,69"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="51,30,49,20,55,10,70,5,93,3,119,6,133,13,130,18,117,11,93,8,71,10,59,15,54,21,56,28"/>
-<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a43aeebfd3770e24fbd18025f34e4a58c" title=" " alt="" coords="228,29,403,69"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,47,214,47,214,52,180,52"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="274,30,271,20,278,10,293,5,315,3,341,6,355,13,353,18,340,11,315,8,294,10,281,15,277,21,279,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,180,74"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="50,28,49,19,56,10,71,5,93,3,117,5,132,14,127,14,115,10,92,8,72,10,59,15,54,21,55,29"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__emission.html#a43aeebfd3770e24fbd18025f34e4a58c" title=" " alt="" coords="228,29,402,74"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,49,215,51,209,52,180,54"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="273,27,271,19,278,10,293,5,315,3,339,5,355,14,350,14,338,10,315,8,294,10,281,15,276,21,277,30"/>
 </map>

@@ -31,7 +31,7 @@ var searchData=
   ['eos_5finit_5ffi_28',['eos_init_fi',['../namespacemod__eos__fi.html#a8086c4873404cce71e1c1894a4b3cd30',1,'mod_eos_fi']]],
   ['eos_5finit_5flte_29',['eos_init_lte',['../namespacemod__eos__lte.html#acc61186eccafb636fa674285c3d7b166',1,'mod_eos_lte']]],
   ['eos_5finit_5fpi_30',['eos_init_pi',['../namespacemod__eos__pi.html#aac5a63f6c0935da1c44a939ae35a72d8',1,'mod_eos_pi']]],
-  ['eos_5fscalar2_5ffunc_31',['eos_scalar2_func',['../interfacemod__thermal__conduction_1_1eos__scalar2__func.html#a8746069765b60a6f731393e4d144cd0f',1,'mod_thermal_conduction::eos_scalar2_func::eos_scalar2_func()'],['../interfacemod__radiative__cooling_1_1eos__scalar2__func.html#ae74d51cf478bfd172adf059f4061d6b7',1,'mod_radiative_cooling::eos_scalar2_func::eos_scalar2_func()']]],
+  ['eos_5fscalar2_5ffunc_31',['eos_scalar2_func',['../interfacemod__radiative__cooling_1_1eos__scalar2__func.html#ae74d51cf478bfd172adf059f4061d6b7',1,'mod_radiative_cooling::eos_scalar2_func::eos_scalar2_func()'],['../interfacemod__thermal__conduction_1_1eos__scalar2__func.html#a8746069765b60a6f731393e4d144cd0f',1,'mod_thermal_conduction::eos_scalar2_func::eos_scalar2_func()']]],
   ['eos_5fvalidate_5ftable_32',['eos_validate_table',['../namespacemod__eos__lte__tables.html#a18f3ed1da91b272a77212af73bee3d09',1,'mod_eos_lte_tables']]],
   ['errest_33',['errest',['../namespacemod__errest.html#aec4df070250188e621b93a27e0507ece',1,'mod_errest']]],
   ['errormsg_34',['errormsg',['../namespacemod__variables.html#a67d7a43716758f18d4a148274819a39a',1,'mod_variables']]],
