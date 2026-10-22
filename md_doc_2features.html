@@ -102,10 +102,10 @@ Equations</h1>
 Grid and Boundary</h1>
 <p>The following types of finite-volume grids are supported:</p>
 <ul>
-<li>Cartesian 1D, 1.5D, 2D, 2.5D, 3D</li>
+<li>Cartesian 1D, 1.5D, 1.75D, 2D, 2.5D, 3D</li>
 <li>Cylindrical 2D, 2.5D, 3D</li>
 <li>Polar 2D, 2.5D, 3D</li>
-<li>Spherical 2D, 2.5D, 3D</li>
+<li>Spherical 1D, 2D, 2.5D, 3D</li>
 </ul>
 <p>The <b>slab</b>, <b>cylindrical</b> or <b>spherical</b> grids differ in the definition of volumes and surfaces for the grid cells, and there are some extra terms in the equations, like the p/r term in the radial momentum equation for hydrodynamics. These are defined in the <b>addgeometry</b> subroutines for each AMRVACPHYS module. For polar grids the same geometrical source terms are used.</p>
 <p>The boundaries are represented by ghost cells around the physical mesh. Of course, for a grid-adaptive computation, internal boundaries are handled appropriately, and the user is expected to interfere only with the physical domain boundaries, which represent 2, 4, or 6 regions depending on the dimensionality (1,2 or 3). The boundary types are defined for each region and each variable separately. The following boundary types are available:</p>

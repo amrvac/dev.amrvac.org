@@ -104,8 +104,12 @@ Transport Equation: rho</h2>
 <h2 class="doxsection"><a class="anchor" id="eq_nonlinear"></a>
 Scalar Nonlinear Equation: nonlinear</h2>
 <pre class="fragment">call nonlinear_activate()
-</pre><p>This module contains various instances of a scalar nonlinear equation, including the inviscid Burgers, inviscid nonconvex equation, as well as a possibility to handle the Korteweg-de Vries equation. It allows testing of truly nonlinear (shock steepening and formation) phenomena, in 1D to multi-D, or to test how source additions are best combined with flux prescriptions and discretizations. The equation implemented in \(N_d\) dimensions is </p><pre class="fragment">\f$  \frac{\partial \rho}{\partial t} + \nabla \cdot \mathbf{F}(\rho,\mathbf{x},t) = -\delta^2 \sum_{i=1}^{N_d} \frac{\partial^3 \rho}{\partial x_i^3} \f$
-</pre><p>where the RHS is activated through the <em><a class="el" href="mod__kdv_8t.html">mod_kdv.t</a></em> module. The actual flux expression can be chosen (depending on the parameter <span class="tt">nonlinear_flux_type</span>) to be one of \(   \mathbf{F}^{\mathrm{burgers}}  =  \frac{1}{2}{\rho^2}\mathbf{v}_0  \) or \(  \mathbf{F}^{\mathrm{nonconvex}}  =  {\rho^3}\mathbf{v}_0 \) where we introduced \(\mathbf{v}_0=\sum_{i=1}^{N_d} \hat{\mathbf{e}}_i\)</p>
+</pre><p>This module contains various instances of a scalar nonlinear equation, including the inviscid Burgers, inviscid nonconvex equation, as well as a possibility to handle the Korteweg-de Vries equation. It allows testing of truly nonlinear (shock steepening and formation) phenomena, in 1D to multi-D, or to test how source additions are best combined with flux prescriptions and discretizations. The equation implemented in \(N_d\) dimensions is</p>
+<p class="formulaDsp">
+\[\frac{\partial \rho}{\partial t} + \nabla \cdot \mathbf{F}(\rho,\mathbf{x},t) = -\delta^2 \sum_{i=1}^{N_d} \frac{\partial^3 \rho}{\partial x_i^3}
+\]
+</p>
+<p>where the RHS is activated through the <em><a class="el" href="mod__kdv_8t.html">mod_kdv.t</a></em> module. The actual flux expression can be chosen (depending on the parameter <span class="tt">nonlinear_flux_type</span>) to be one of \( \mathbf{F}^{\mathrm{burgers}}  =  \frac{1}{2}{\rho^2}\mathbf{v}_0 \) or \( \mathbf{F}^{\mathrm{nonconvex}}  =  {\rho^3}\mathbf{v}_0 \), where we introduced \( \mathbf{v}_0=\sum_{i=1}^{N_d} \hat{\mathbf{e}}_i \)</p>
 <h2 class="doxsection"><a class="anchor" id="eq_hd"></a>
 Hydrodynamics: hd</h2>
 <pre class="fragment">call hd_activate()
@@ -130,7 +134,7 @@ Hydrodynamics: hd</h2>
 <div class="image">
 <img src="eq.hdadiab.gif" alt=""/>
 </div>
-    <p>The system of adiabatic hydrodynamical equations are solved for the density <b>rho</b> and the momentum density <b>m=rho*v</b>. The pressure is a function of density only since an isentropic initial condition is assumed. There are two equation parameters, the adiabatic index <b>hd_gamma</b> (the isothermal case corresponds to <b>hd_gamma</b>) and the adiabatic constant <b>hd_adiab</b> (which should be positive or zero). It is possible to set <b>hd_adiab=0</b> and handle the case of pressureless dust.</p>
+    <p>The system of adiabatic hydrodynamical equations are solved for the density <b>rho</b> and the momentum density <b>m=rho*v</b>. The pressure is a function of density only since an isentropic initial condition is assumed. There are two equation parameters, the adiabatic index <b>hd_gamma</b> (the isothermal case corresponds to <b>hd_gamma = 1</b>) and the adiabatic constant <b>hd_adiab</b> (which should be positive or zero). It is possible to set <b>hd_adiab=0</b> and handle the case of pressureless dust.</p>
 <p>The system of <b>shallow water equations</b> is a special case with the following identifications: <b>rho=h</b> represents the height of the water column, <b>hd_gamma2</b> and the adiabatic coefficient is half of the gravitational acceleration <b>hd_adiab=g/2</b>.</p>
 <p>There is a Roe-type Riemann solver implemented, in <em><a class="el" href="mod__hd__roe_8t.html">hd/mod_hd_roe.t</a></em>. Several routines specific to HLLC are in <em><a class="el" href="mod__hd__hllc_8t.html">hd/mod_hd_hllc.t</a></em>.</p>
 <h2 class="doxsection"><a class="anchor" id="eq_mhd"></a>
