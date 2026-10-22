@@ -102,7 +102,7 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:afea7981754014b2f57fa8b3b191ac30f" id="r_afea7981754014b2f57fa8b3b191ac30f"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afea7981754014b2f57fa8b3b191ac30f">hd_e_to_ei</a> (ixil, ixol, w, x)</td></tr>
 <tr class="memdesc:afea7981754014b2f57fa8b3b191ac30f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform total energy to internal energy.  <br /></td></tr>
 <tr class="memitem:a44f30d12946c0f46f8c64c835aa589f6" id="r_a44f30d12946c0f46f8c64c835aa589f6"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44f30d12946c0f46f8c64c835aa589f6">hd_get_csound2</a> (w, x, ixil, ixol, csound2)</td></tr>
-<tr class="memdesc:a44f30d12946c0f46f8c64c835aa589f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pthermal first, then applies Gamma_1. For LTE+IonE: look up Gamma_1 from pressure-indexed table, then cs2 = Gamma_1 * p/rho. Uses pressure-indexed table (gamma1_from_nH_p) because pressure is continuous at contact discontinuities, avoiding spurious gamma1 spikes from the eint-indexed table.  <br /></td></tr>
+<tr class="memdesc:a44f30d12946c0f46f8c64c835aa589f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pthermal first, then applies Gamma_1. Squared sound speed of a conserved face state, Gamma_1 p/rho. Face states carry no Ne/Te, so under LTE the pressure comes from the internal energy through lte_p_from_eint, and Gamma_1 from the pressure-indexed table, since p is continuous at contact discontinuities.  <br /></td></tr>
 <tr class="memitem:a9654fea8ea56204cbdc52d7bc76badc3" id="r_a9654fea8ea56204cbdc52d7bc76badc3"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9654fea8ea56204cbdc52d7bc76badc3">hd_get_csrad2</a> (w, x, ixil, ixol, csound)</td></tr>
 <tr class="memdesc:a9654fea8ea56204cbdc52d7bc76badc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate modified squared sound speed for FLD NOTE: only for diagnostic purposes, unused subroutine.  <br /></td></tr>
 <tr class="memitem:aaf894e476f21b4a590155276d4bba9b9" id="r_aaf894e476f21b4a590155276d4bba9b9"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf894e476f21b4a590155276d4bba9b9">hd_get_csrad2_prim</a> (w, x, ixil, ixol, csound)</td></tr>
@@ -132,6 +132,8 @@ Variables</h2></td></tr>
 <tr class="memitem:ae38d3cc3c983cca3f7ad6d2aaf631da6" id="r_ae38d3cc3c983cca3f7ad6d2aaf631da6"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmod__thermal__emission_1_1te__fluid.html">te_fluid</a>), allocatable, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae38d3cc3c983cca3f7ad6d2aaf631da6">te_fl_hd</a></td></tr>
 <tr class="memitem:a16c6aca406adb87b50befc6a014b1947" id="r_a16c6aca406adb87b50befc6a014b1947"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16c6aca406adb87b50befc6a014b1947">hd_radiative_cooling</a> = .false.</td></tr>
 <tr class="memdesc:a16c6aca406adb87b50befc6a014b1947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether radiative cooling is added.  <br /></td></tr>
+<tr class="memitem:ac5a87e6110251420d54d0cf30fd0ced6" id="r_ac5a87e6110251420d54d0cf30fd0ced6"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5a87e6110251420d54d0cf30fd0ced6">hd_radiative_transfer</a> = .false.</td></tr>
+<tr class="memdesc:ac5a87e6110251420d54d0cf30fd0ced6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the short-characteristics radiative transfer is used, with its settings in &amp;rt_list.  <br /></td></tr>
 <tr class="memitem:ada83f636c4cc86f4b0165c1bc35ee891" id="r_ada83f636c4cc86f4b0165c1bc35ee891"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmod__radiative__cooling_1_1rc__fluid.html">rc_fluid</a>), allocatable, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada83f636c4cc86f4b0165c1bc35ee891">rc_fl</a></td></tr>
 <tr class="memitem:a08339a348bd234e4c3e376884a84d2b5" id="r_a08339a348bd234e4c3e376884a84d2b5"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08339a348bd234e4c3e376884a84d2b5">hd_dust</a> = .false.</td></tr>
 <tr class="memdesc:a08339a348bd234e4c3e376884a84d2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether dust is added.  <br /></td></tr>
@@ -211,6 +213,8 @@ Variables</h2></td></tr>
 <tr class="memitem:ae3cf8a8662b0f1d16eaa22f9c46ab4b6" id="r_ae3cf8a8662b0f1d16eaa22f9c46ab4b6"><td class="memItemLeft" align="right" valign="top">double precision, dimension(10), public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3cf8a8662b0f1d16eaa22f9c46ab4b6">hd_trac_zone_splits</a> = -1.d0</td></tr>
 <tr class="memitem:a2db70aa34c0845f8c9035a5a9082f403" id="r_a2db70aa34c0845f8c9035a5a9082f403"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2db70aa34c0845f8c9035a5a9082f403">hd_trac_delta</a> = 0.5d0</td></tr>
 <tr class="memdesc:a2db70aa34c0845f8c9035a5a9082f403"><td class="mdescLeft">&#160;</td><td class="mdescRight">Johnston 2021 resolution parameter delta (default 0.5).  <br /></td></tr>
+<tr class="memitem:a6816b3e0b75da557ae345be28a942ee0" id="r_a6816b3e0b75da557ae345be28a942ee0"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6816b3e0b75da557ae345be28a942ee0">hd_trac_tfix</a> = 3.d5</td></tr>
+<tr class="memdesc:a6816b3e0b75da557ae345be28a942ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">fixed cutoff temperature in K for hd_trac_type=0 (Lionello et al. 2009, Mikic et al. 2013)  <br /></td></tr>
 <tr class="memitem:aef405f23675746397a22431ac0c3531d" id="r_aef405f23675746397a22431ac0c3531d"><td class="memItemLeft" align="right" valign="top">logical, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef405f23675746397a22431ac0c3531d">hd_well_balanced</a> = .false.</td></tr>
 <tr class="memdesc:aef405f23675746397a22431ac0c3531d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether well-balanced reconstruction is used (Kaeppeli &amp; Mishra style).  <br /></td></tr>
 <tr class="memitem:a748bde3de60ce52fb8c93aaf03af9dd9" id="r_a748bde3de60ce52fb8c93aaf03af9dd9"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a748bde3de60ce52fb8c93aaf03af9dd9">h_ion_fr</a> =1d0</td></tr>
@@ -236,7 +240,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00878">878</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00881">881</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -303,7 +307,7 @@ Here is the call graph for this function:</div>
 <p>Returns logical argument flag where values are ok. </p>
 <p>Rather than redefining the hd_check_w and limiter procedure interfaces</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01196">1196</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01201">1201</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -358,7 +362,7 @@ Here is the call graph for this function:</div>
 
 <p>Transform total energy to internal energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01325">1325</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01330">1330</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -424,7 +428,7 @@ Here is the call graph for this function:</div>
 
 <p>Transform internal energy to total energy. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01313">1313</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01318">1318</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -472,18 +476,23 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pthermal first, then applies Gamma_1. For LTE+IonE: look up Gamma_1 from pressure-indexed table, then cs2 = Gamma_1 * p/rho. Uses pressure-indexed table (gamma1_from_nH_p) because pressure is continuous at contact discontinuities, avoiding spurious gamma1 spikes from the eint-indexed table. </p>
-<p>get_thermal_pressure has its own timing; only time the gamma1 loop here</p>
+<p>Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pthermal first, then applies Gamma_1. Squared sound speed of a conserved face state, Gamma_1 p/rho. Face states carry no Ne/Te, so under LTE the pressure comes from the internal energy through lte_p_from_eint, and Gamma_1 from the pressure-indexed table, since p is continuous at contact discontinuities. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01846">1846</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01851">1851</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__hd__phys_a44f30d12946c0f46f8c64c835aa589f6_cgraph.png" border="0" usemap="#anamespacemod__hd__phys_a44f30d12946c0f46f8c64c835aa589f6_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__hd__phys_a44f30d12946c0f46f8c64c835aa589f6_cgraph" id="anamespacemod__hd__phys_a44f30d12946c0f46f8c64c835aa589f6_cgraph">
-<area shape="rect" title="Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pther..." alt="" coords="5,5,169,50"/>
-<area shape="rect" href="namespacemod__eos__lte.html#ac730b189d6c6880f51a5d2f17745e9e5" title="Gamma_1 from pressure&#45;indexed table: (log10 nH, log10 p/nH) &#45;&gt; Gamma_1. For &#39;entropy&#39; the conversion ..." alt="" coords="217,5,387,50"/>
-<area shape="poly" title=" " alt="" coords="169,25,204,27,198,28,169,30"/>
+<area shape="rect" title="Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pther..." alt="" coords="5,96,169,141"/>
+<area shape="rect" href="namespacemod__timing.html#a54d2dfdac7cad9a75aabb2c4d76701a6" title="Open an EoS timing window; inside an OpenMP parallel region the EoS is not timed." alt="" coords="234,5,406,50"/>
+<area shape="poly" title=" " alt="" coords="137,93,216,60,237,54,232,57,218,65,139,98"/>
+<area shape="rect" href="namespacemod__timing.html#ae1ece5454e5113c14051a4994198f989" title="Close an EoS timing window, adding its time to acc when it is the outermost." alt="" coords="217,74,424,102"/>
+<area shape="poly" title=" " alt="" coords="168,105,203,102,198,105,170,110"/>
+<area shape="rect" href="namespacemod__eos__lte.html#abceab0626ab5a60ff80b859e7dc3906e" title="Gamma_1 of one cell from (p, rho): the ideal value where fully ionised, else the pressure&#45; indexed ta..." alt="" coords="223,125,418,170"/>
+<area shape="poly" title=" " alt="" coords="169,126,210,133,205,134,169,131"/>
+<area shape="rect" href="namespacemod__eos__lte.html#ae17e076260b52aff941390039e0b33a5" title="LTE pressure from internal energy in one cell: ideal without ionE, else the table floor,..." alt="" coords="248,195,392,239"/>
+<area shape="poly" title=" " alt="" coords="131,139,218,180,236,189,231,189,216,185,130,144"/>
 </map>
 </div>
 
@@ -535,7 +544,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate modified squared sound speed for FLD NOTE: only for diagnostic purposes, unused subroutine. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01879">1879</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01889">1889</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -595,7 +604,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate modified squared sound speed for FLD NOTE: w is primitive on entry here! NOTE: used in FLD module as phys_get_csrad2. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01897">1897</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01907">1907</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -655,7 +664,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate radiation pressure within ixO^L NOTE: w is primitive on entry here! NOTE: used in FLD module as it is called from phys_get_csrad2. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01937">1937</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01947">1947</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -715,7 +724,7 @@ Here is the call graph for this function:</div>
 
 <p>calculates the sum of the gas pressure and max Prad tensor element NOTE: only for diagnostic purposes, unused subroutine </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01951">1951</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01961">1961</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -775,7 +784,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate temperature=p/rho when in e_ the total energy is stored. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01987">1987</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01997">1997</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -861,7 +870,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculates radiation temperature. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01973">1973</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l01983">1983</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -916,7 +925,7 @@ Here is the call graph for this function:</div>
 <p>Convert to velocity to be compliant with p_to_e</p>
 <p>Restore momentum (conserved-form invariant)</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l02560">2560</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l02576">2576</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -975,7 +984,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l02536">2536</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l02552">2552</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -998,7 +1007,7 @@ Here is the call graph for this function:</div>
 <p>The implicit (MG diffusion) hooks need the fld_fl object, so they are wired here to physics-module wrappers that inject it.</p>
 <p>Cache log10(nH) in wextra for LTE+IonE TC (density invariant during STS)</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00276">276</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00281">281</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1087,7 +1096,7 @@ Here is the call graph for this function:</div>
 
 <p>Indices of the momentum density for the form of better vectorization. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00070">70</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00073">73</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1112,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00070">70</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00073">73</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1121,7 +1130,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the energy density (-1 if not present). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00076">76</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00079">79</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1139,7 +1148,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the FIP passive scalar rho*fip in conserved form, fip in primitive form. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00091">91</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00094">94</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1166,7 @@ Here is the call graph for this function:</div>
 
 <p>Radiation fluid object (gas-EoS callbacks for FLD), wired in hd_link_eos. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00041">41</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00044">44</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1175,7 +1184,7 @@ Here is the call graph for this function:</div>
 
 <p>Helium abundance over Hydrogen He_abundance is set in &amp;eos_list and accessed via eosHe_abundance Ionization fraction of H H_ion_fr = H+/(H+ + H). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00190">190</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00195">195</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1194,7 +1203,7 @@ Here is the call graph for this function:</div>
 <p>gamma is set in &amp;eos_list and accessed via eosgamma </p>
 <p>The adiabatic constant </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00173">173</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00176">176</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1212,7 +1221,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether CAK radiation line force is activated. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00056">56</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00059">59</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1230,7 +1239,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether dust is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00032">32</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00035">35</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1248,7 +1257,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether dust is added using and implicit update in IMEX. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00035">35</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00038">38</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1266,7 +1275,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether an energy equation is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00014">14</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00015">15</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1284,7 +1293,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether FIP passive scalar is enabled. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00094">94</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00097">97</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1300,7 +1309,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00039">39</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00042">42</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1318,7 +1327,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether gravity is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00047">47</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00050">50</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1336,7 +1345,7 @@ Here is the call graph for this function:</div>
 
 <p>Face-recipe heat-wave speed scaling: c_HTC,f = hd_htc_beta * c_max,f. Higher value -&gt; closer to diffusion limit (q tracks Spitzer noise aggressively, AMR-triggering corona noise). Lower value -&gt; more hyperbolic (q lags Spitzer target by Delta_t/tau ~ 1/beta^2 per step, dampening high-frequency noise). At our resolution beta=2-3 is the practical sweet spot: q evolves slowly enough that T-table round-off noise doesn't propagate, but fast enough that real TR conduction equilibrates within O(100) hydro timesteps. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00134">134</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00137">137</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1354,7 +1363,7 @@ Here is the call graph for this function:</div>
 
 <p>Gradient deadband: zero out the Spitzer face flux when abs(T_R - T_L) / max(T_L, T_R) &lt; hd_htc_gradT_floor This suppresses sign-flipping q noise driven by EoS-table round-off (~1e-4 in T) being amplified by huge coronal kappa. Default 1.0e-3 sits 10x above the table noise floor but 5x below typical coronal gradients (Delta_x / L_T ~ 5e-3 at our resolution), so it kills the noise without suppressing real conduction. Set to 0.0 to disable. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00160">160</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00163">163</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1376,7 +1385,7 @@ Here is the call graph for this function:</div>
 <li>6 q_i). MURaM (Rempel 2017) uses 0.02. Damps cell-scale q oscillations arising from kappa(T) amplifying small persistent T bumps in the EoS-derived cell-centred T profile; without it, the face-recipe q field has visible 5-cell-scale wiggles even where T is smooth. This is the only one of the OLD code's three q-smoothers (HLL diffusion, Koren reconstruction, hyperdiff) that the face-recipe needs &ndash; the architectural problems with the other two are not reintroduced. </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00124">124</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00127">127</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1403,7 @@ Here is the call graph for this function:</div>
 
 <p>Optional parfile override for hypertc_kappa (e.g. to match a constant-κ parabolic TC run for benchmarking). Default -1.0 leaves the Spitzer value computed from physical units. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00109">109</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00112">112</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1412,7 +1421,7 @@ Here is the call graph for this function:</div>
 
 <p>Per-face energy-positivity safety fraction: |q_f^{n+1/2} dt A_f| &lt;= hd_htc_pos_eta * min(e_int_L V_L, e_int_R V_R). Default 0.5 leaves headroom against simultaneous PdV and cooling decrements. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00145">145</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00148">148</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1430,7 +1439,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether saturation is considered for hyperbolic TC. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00023">23</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00024">24</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1448,7 +1457,7 @@ Here is the call graph for this function:</div>
 
 <p>Cowie-McKee saturation coefficient: q_sat = hd_htc_sat_alpha * rho * c_s^3. Standard convention is alpha ~ 1 (absorbs the sqrt(m_p/m_e) factor that would appear if c_s were replaced by the electron thermal speed). Default 1.0. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00140">140</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00143">143</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1466,7 +1475,7 @@ Here is the call graph for this function:</div>
 
 <p>Running max of l_r,f / dx_f across all face-recipe calls since simulation start. Inspect post-hoc via debugger or dump alongside dat files. Not reset per timestep &ndash; monotonic non-decreasing. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00165">165</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00168">168</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1484,7 +1493,7 @@ Here is the call graph for this function:</div>
 
 <p>Validity-monitor threshold for l_r,f / Delta_x_f. Warn if any face exceeds this in a given block (printed once per dtsave_log step). Default 0.1: above this, HTC is modifying the physics beyond pure Spitzer; above 1.0 the local Spitzer approximation breaks down. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00151">151</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00154">154</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1502,7 +1511,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether hyperbolic thermal conduction (Cattaneo relaxation) is used. 1D only : the q-variable is treated as a scalar carrying the heat flux along the only spatial direction. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00021">21</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00022">22</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1520,7 +1529,7 @@ Here is the call graph for this function:</div>
 
 <p>Number of tracer species. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00059">59</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00062">62</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1538,7 +1547,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether particles module is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00050">50</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00053">53</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1556,7 +1565,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether radiation-gas interaction is handled using flux limited diffusion. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00038">38</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00041">41</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1574,7 +1583,25 @@ Here is the call graph for this function:</div>
 
 <p>Whether radiative cooling is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00028">28</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00029">29</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="ac5a87e6110251420d54d0cf30fd0ced6" name="ac5a87e6110251420d54d0cf30fd0ced6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5a87e6110251420d54d0cf30fd0ced6">&#9670;&#160;</a></span>hd_radiative_transfer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical, public, protected mod_hd_phys::hd_radiative_transfer = .false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether the short-characteristics radiative transfer is used, with its settings in &amp;rt_list. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00031">31</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1592,7 +1619,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether rotating frame is activated. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00053">53</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00056">56</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1610,7 +1637,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether thermal conduction is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00017">17</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00018">18</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1628,7 +1655,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether TRAC method is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00176">176</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00179">179</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1646,7 +1673,7 @@ Here is the call graph for this function:</div>
 
 <p>Johnston 2021 resolution parameter delta (default 0.5). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00181">181</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00184">184</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1662,7 +1689,25 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00178">178</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00181">181</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="a6816b3e0b75da557ae345be28a942ee0" name="a6816b3e0b75da557ae345be28a942ee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6816b3e0b75da557ae345be28a942ee0">&#9670;&#160;</a></span>hd_trac_tfix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public, protected mod_hd_phys::hd_trac_tfix = 3.d5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fixed cutoff temperature in K for hd_trac_type=0 (Lionello et al. 2009, Mikic et al. 2013) </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00186">186</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1678,7 +1723,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00177">177</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00180">180</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1694,7 +1739,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00179">179</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00182">182</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1712,7 +1757,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether viscosity is added. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00044">44</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00047">47</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1730,7 +1775,7 @@ Here is the call graph for this function:</div>
 
 <p>Whether well-balanced reconstruction is used (Kaeppeli &amp; Mishra style). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00183">183</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00188">188</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1748,7 +1793,7 @@ Here is the call graph for this function:</div>
 
 <p>Ionization fraction of He He_ion_fr = (He2+ + He+)/(He2+ + He+ + He). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00193">193</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00198">198</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1766,7 +1811,7 @@ Here is the call graph for this function:</div>
 
 <p>Ratio of number He2+ / number He+ + He2+ He_ion_fr2 = He2+/(He2+ + He+). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00196">196</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00201">201</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1784,7 +1829,7 @@ Here is the call graph for this function:</div>
 
 <p>Thermal-conductivity prefactor in hyperbolic TC, set in hd_physical_units. Spitzer form: κ(T) = hypertc_kappa · T^{5/2}. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00104">104</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00107">107</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1802,7 +1847,7 @@ Here is the call graph for this function:</div>
 
 <p>Index into wextra for escape probability column mass. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00168">168</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00171">171</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1818,7 +1863,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00070">70</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00073">73</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1836,7 +1881,7 @@ Here is the call graph for this function:</div>
 
 <p>Indices of the momentum density. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00067">67</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00070">70</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1854,7 +1899,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the electron number density for LTE module. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00082">82</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00085">85</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1872,7 +1917,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the gas pressure (-1 if not present) should equal e_. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00079">79</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00082">82</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1890,7 +1935,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the hyperbolic-TC heat-flux variable (-1 if not present). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00100">100</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00103">103</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1908,7 +1953,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the radiation energy (when fld active). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00085">85</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00088">88</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1924,7 +1969,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00029">29</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00032">32</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1943,7 +1988,7 @@ Here is the call graph for this function:</div>
 <p>Whether plasma is partially ionized. </p>
 <p>Index of the density (in the w array) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00064">64</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00067">67</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1959,7 +2004,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00200">200</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00205">205</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1975,7 +2020,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00024">24</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00025">25</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -1993,7 +2038,7 @@ Here is the call graph for this function:</div>
 
 <p>Index of the cutoff temperature for the TRAC method. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00097">97</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00100">100</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2011,7 +2056,7 @@ Here is the call graph for this function:</div>
 
 <p>Indices of temperature. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00088">88</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00091">91</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2027,7 +2072,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00025">25</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00026">26</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>
@@ -2045,7 +2090,7 @@ Here is the call graph for this function:</div>
 
 <p>Indices of the tracers. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00073">73</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__hd__phys_8t_source.html#l00076">76</a> of file <a class="el" href="mod__hd__phys_8t_source.html">mod_hd_phys.t</a>.</p>
 
 </div>
 </div>

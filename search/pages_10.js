@@ -19,9 +19,10 @@ var searchData=
   ['numbers_16',['Numbers',['../md_doc_2code__style__guide.html#style-num',1,'']]],
   ['numerical_20methods_17',['Numerical methods',['../md_doc_2methods.html',1,'']]],
   ['numerics_18',['Numerics',['../md_doc_2reaction__diffusion.html#label-2',1,'']]],
-  ['nw_19',['nw',['../md_doc_2mpiamrvac__nw.html',1,'Auxiliary variables (nw...)'],['../md_doc_2mpiamrvac__nw.html#nw',1,'nw']]],
-  ['nwaux_20',['nwaux',['../md_doc_2mpiamrvac__nw.html#nwaux',1,'']]],
-  ['nwauxio_21',['nwauxio',['../md_doc_2mpiamrvac__nw.html#nwauxio',1,'']]],
-  ['nwextra_22',['nwextra',['../md_doc_2mpiamrvac__nw.html#nwextra',1,'']]],
-  ['nwflux_23',['nwflux',['../md_doc_2mpiamrvac__nw.html#nwflux',1,'']]]
+  ['numerics_20and_20implementation_19',['Numerics and implementation',['../md_doc_2eos.html#eos-implementation',1,'Numerics and implementation'],['../md_doc_2radiative__transfer.html#rt-implementation',1,'Numerics and implementation']]],
+  ['nw_20',['nw',['../md_doc_2mpiamrvac__nw.html',1,'Auxiliary variables (nw...)'],['../md_doc_2mpiamrvac__nw.html#nw',1,'nw']]],
+  ['nwaux_21',['nwaux',['../md_doc_2mpiamrvac__nw.html#nwaux',1,'']]],
+  ['nwauxio_22',['nwauxio',['../md_doc_2mpiamrvac__nw.html#nwauxio',1,'']]],
+  ['nwextra_23',['nwextra',['../md_doc_2mpiamrvac__nw.html#nwextra',1,'']]],
+  ['nwflux_24',['nwflux',['../md_doc_2mpiamrvac__nw.html#nwflux',1,'']]]
 ];

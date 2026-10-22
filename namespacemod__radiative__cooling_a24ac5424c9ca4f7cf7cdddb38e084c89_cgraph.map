@@ -1,17 +1,26 @@
 <map id="mod_radiative_cooling::get_cool_equi" name="mod_radiative_cooling::get_cool_equi">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,213,175,258"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,321,175,366"/>
 <area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="229,5,398,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,211,147,138,181,97,221,60,231,56,227,60,224,64,185,100,152,141,106,214"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,320,107,268,131,199,169,125,193,91,221,60,228,57,225,61,225,64,197,94,173,128,136,201,112,269,98,322"/>
 <area shape="rect" id="Node000003" href="$namespacemod__radiative__cooling.html#a8a64aa6cb7c2be55247c345678086604" title=" " alt="" coords="229,75,398,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,211,162,170,221,129,234,125,230,128,224,134,165,175,117,215"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,320,114,280,141,229,177,176,221,130,229,125,226,130,224,134,181,179,146,232,119,282,102,322"/>
 <area shape="rect" id="Node000004" href="$namespacemod__radiative__cooling.html#a212aed250bd6178bb546267a1afce854" title="Inverse Y_mod lookup: given Y_target and nH, return T such that Y_mod(log10 nH, log10 T) = Y_target...." alt="" coords="229,144,398,189"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,211,227,192,223,196,166,215"/>
-<area shape="rect" id="Node000005" href="$namespacemod__radiative__cooling.html#afc796e69f3a078d992911ee36792678d" title=" " alt="" coords="229,213,398,258"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="174,233,216,234,211,237,176,238"/>
-<area shape="rect" id="Node000006" href="$namespacemod__radiative__cooling.html#a81cd0f81479e631065613db1f2242837" title="Forward Y_mod lookup: bilinear interpolation in (log10 nH, log10 T) on the precomputed Y_mod table...." alt="" coords="229,283,398,327"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="164,256,227,276,222,279,165,261"/>
-<area shape="rect" id="Node000007" href="$namespacemod__radiative__cooling.html#a18a139f447b98088d873ff395f344f60" title=" " alt="" coords="225,352,402,413"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="117,256,166,296,224,337,232,344,227,344,221,342,163,301,117,261"/>
-<area shape="rect" id="Node000008" href="$namespacemod__radiative__cooling.html#a58da51978da2397c68dac8296c1794c4" title=" " alt="" coords="223,437,405,482"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="102,256,122,293,149,337,183,383,224,423,231,429,226,429,221,427,179,386,144,340,117,295,101,261"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="105,320,153,260,185,228,221,199,232,194,228,198,224,203,189,232,157,264,109,322"/>
+<area shape="rect" id="Node000006" href="$namespacemod__radiative__cooling.html#afc796e69f3a078d992911ee36792678d" title=" " alt="" coords="229,213,398,258"/>
+<area shape="poly" id="edge4_Node000001_Node000006" title=" " alt="" coords="127,319,221,268,237,263,234,266,224,273,131,323"/>
+<area shape="rect" id="Node000007" href="$namespacemod__radiative__cooling.html#a81cd0f81479e631065613db1f2242837" title="Forward Y_mod lookup in (log10 nH, log10 T), both axes uniform in log space; along nH the product nH*..." alt="" coords="229,283,398,327"/>
+<area shape="poly" id="edge5_Node000001_Node000007" title=" " alt="" coords="173,327,216,321,212,324,176,331"/>
+<area shape="rect" id="Node000008" href="$namespacemod__radiative__cooling.html#a18a139f447b98088d873ff395f344f60" title=" " alt="" coords="225,352,402,413"/>
+<area shape="poly" id="edge6_Node000001_Node000008" title=" " alt="" coords="174,356,212,363,208,366,176,361"/>
+<area shape="rect" id="Node000009" href="$namespacemod__radiative__cooling.html#af050df1687f59e7fd08d943fcd90597f" title=" " alt="" coords="223,437,405,482"/>
+<area shape="poly" id="edge7_Node000001_Node000009" title=" " alt="" coords="124,364,172,393,224,423,237,430,232,431,221,427,169,398,125,369"/>
+<area shape="rect" id="Node000011" href="$namespacemod__radiative__cooling.html#a245d8096aab5082ac5ad7d195d3b0ea2" title="Internal energy per volume at the floor temperature tlow, ionisation included." alt="" coords="229,531,398,575"/>
+<area shape="poly" id="edge8_Node000001_Node000011" title=" " alt="" coords="108,364,159,425,224,492,262,521,257,522,221,496,155,429,108,369"/>
+<area shape="rect" id="Node000012" href="$namespacemod__radiative__cooling.html#abecfd14d23bee8a10a51c0244b006c0a" title="TRAC factor (T/Tcoff)^(5/2) of the losses below Tcoff, and 1 without TRAC or where a user TRAC mask s..." alt="" coords="229,624,398,669"/>
+<area shape="poly" id="edge10_Node000001_Node000012" title=" " alt="" coords="99,364,119,410,146,467,181,529,225,586,258,615,253,615,221,590,177,532,141,470,114,412,99,369"/>
+<area shape="rect" id="Node000013" href="$namespacemod__radiative__cooling.html#a4d82e4f407cd03010f2483afcc0a60cd" title="True where ionisation buffers the cooling step, so that c_V varies: a large change of T below the tem..." alt="" coords="229,717,398,762"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="95,364,111,426,135,507,172,597,197,640,225,679,256,709,250,708,221,683,192,643,168,599,130,509,106,427,95,369"/>
+<area shape="poly" id="edge9_Node000011_Node000011" title=" " alt="" coords="271,529,270,521,277,512,292,506,314,504,338,507,354,515,349,516,337,512,314,509,293,511,280,516,275,522,276,531"/>
+<area shape="poly" id="edge11_Node000012_Node000012" title=" " alt="" coords="271,622,270,614,277,605,292,599,314,597,338,600,354,609,349,609,337,605,314,603,293,605,280,609,275,615,276,625"/>
+<area shape="poly" id="edge13_Node000013_Node000013" title=" " alt="" coords="271,715,270,707,277,698,292,693,314,691,338,693,354,702,349,702,337,698,314,696,293,698,280,703,275,709,276,718"/>
 </map>

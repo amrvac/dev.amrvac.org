@@ -107,6 +107,8 @@ Functions/Subroutines</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:aa230050290e49dcdd2ecfa05fe5f0e00" id="r_aa230050290e49dcdd2ecfa05fe5f0e00"><td class="memItemLeft" align="right" valign="top">integer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa230050290e49dcdd2ecfa05fe5f0e00">sts_app_id</a> = 0</td></tr>
+<tr class="memdesc:aa230050290e49dcdd2ecfa05fe5f0e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts STS applications (one per term per call of sts_add_source), so a term can tell the first stage of an application from the later ones.  <br /></td></tr>
 <tr class="memitem:a3cda8624c6f9661d148124933fff0d2f" id="r_a3cda8624c6f9661d148124933fff0d2f"><td class="memItemLeft" align="right" valign="top">double precision, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cda8624c6f9661d148124933fff0d2f">lb_tc_accum</a> = 0.0d0</td></tr>
 <tr class="memdesc:a3cda8624c6f9661d148124933fff0d2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-rank TC/STS compute accumulator for lb_diagnose. Sums the wall time spent inside the iigrid block-loops that call sts_set_sources (the per-block parabolic-conduction kernel) plus the per-block STS hooks (before_first_cycle, after_last_cycle, sts_handle_errors, phys_update_temperature). Excludes inter-rank ghostcell exchanges (getbc) and flux-conservation collectives. Reset by <a class="el" href="namespacemod__advance.html#a3abc5d81403e5443dc97a4db696acfd1" title="Advance all the grids over one time step, including all sources.">mod_advance::advance</a> at the start of each step.  <br /></td></tr>
 <tr class="memitem:a5eed6af0503fee10e276e32c2a22cf6f" id="r_a5eed6af0503fee10e276e32c2a22cf6f"><td class="memItemLeft" align="right" valign="top">integer, parameter, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eed6af0503fee10e276e32c2a22cf6f">sourcetype_sts_prior</a> =0</td></tr>
@@ -169,7 +171,7 @@ Variables</h2></td></tr>
 
 <p>subroutine which added programatically a term to be calculated using STS Params: sts_getdt function calculates the explicit timestep for this term sts_set_sources subroutine sets the source term startVar, nflux (making endVar=startVar+nflux-1) indices of start and number of the variables that need fix conservation startwbc, nwbc indices of start and number of the variables that need ghost cell exchange These terms implemented by an element of the derived type sts_term are put in a linked list </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00215">215</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00218">218</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -185,7 +187,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00183">183</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00186">186</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -210,7 +212,7 @@ Variables</h2></td></tr>
 
 <p>Set the hooks called before the first cycle and after the last cycle in the STS update This method should be called after add_sts_method. The hooks are added to the last term added with this subroutine Params: sts_before_first_cycle, sts_after_last_cycle subroutines which implement the hooks called before first cycle and after last cycle. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00277">277</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00280">280</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -231,7 +233,7 @@ Variables</h2></td></tr>
 
 <p>This sets the explicit dt and calculates the number of cycles for each of the terms implemented with STS. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00371">371</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00374">374</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -276,7 +278,7 @@ Here is the call graph for this function:</div>
 
 <p>Set the hook of error handling in the STS update. This method is called before updating the BC. This method should be called after add_sts_method. The hook is added to the last term added with this subroutine. Param: sts_error_handing the subroutine which handles the errors. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00302">302</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00305">305</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -294,7 +296,7 @@ Here is the call graph for this function:</div>
 
 <p>Initialize sts module. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00162">162</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00165">165</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -321,7 +323,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00153">153</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00156">156</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -339,7 +341,7 @@ Here is the call graph for this function:</div>
 
 <p>Per-rank TC/STS compute accumulator for lb_diagnose. Sums the wall time spent inside the iigrid block-loops that call sts_set_sources (the per-block parabolic-conduction kernel) plus the per-block STS hooks (before_first_cycle, after_last_cycle, sts_handle_errors, phys_update_temperature). Excludes inter-rank ghostcell exchanges (getbc) and flux-conservation collectives. Reset by <a class="el" href="namespacemod__advance.html#a3abc5d81403e5443dc97a4db696acfd1" title="Advance all the grids over one time step, including all sources.">mod_advance::advance</a> at the start of each step. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00046">46</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00049">49</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -355,7 +357,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00060">60</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00063">63</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -371,7 +373,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00058">58</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00061">61</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -387,7 +389,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00057">57</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00060">60</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -403,7 +405,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00059">59</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00062">62</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>
@@ -419,7 +421,25 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00156">156</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00159">159</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
+
+</div>
+</div>
+<a id="aa230050290e49dcdd2ecfa05fe5f0e00" name="aa230050290e49dcdd2ecfa05fe5f0e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa230050290e49dcdd2ecfa05fe5f0e00">&#9670;&#160;</a></span>sts_app_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, public mod_supertimestepping::sts_app_id = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Counts STS applications (one per term per call of sts_add_source), so a term can tell the first stage of an application from the later ones. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__supertimestepping_8t_source.html#l00039">39</a> of file <a class="el" href="mod__supertimestepping_8t_source.html">mod_supertimestepping.t</a>.</p>
 
 </div>
 </div>

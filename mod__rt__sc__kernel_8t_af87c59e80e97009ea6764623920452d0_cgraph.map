@@ -1,0 +1,6 @@
+<map id="upwind_x" name="upwind_x">
+<area shape="rect" id="Node000001" title="x&#45;upwind index of column i, wrapped in place when the block spans the periodic domain" alt="" coords="5,29,89,57"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="17,29,13,20,16,11,28,5,47,3,67,5,79,14,74,14,65,10,47,8,30,10,20,15,18,20,22,28"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__kernel.html#a33e99093b8d9f8636a5dc63d2a8ff7eb" title="Textbook Olson&#45;Kunasz weights for linear short characteristics over an optical&#45;depth step dtau." alt="" coords="137,21,295,66"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,41,124,43,119,44,89,46"/>
+</map>

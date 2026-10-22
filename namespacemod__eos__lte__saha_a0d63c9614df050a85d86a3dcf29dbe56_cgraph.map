@@ -1,5 +1,5 @@
 <map id="mod_eos_lte_saha::finalise_analytic_lte" name="mod_eos_lte_saha::finalise_analytic_lte">
-<area shape="rect" id="Node000001" title="Analytic&#45;method finalise (H&#45;only Saha): no table unit conversion needed; build the Gamma1 table only ..." alt="" coords="5,14,203,58"/>
-<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__tables.html#ae95aab518f10a74ad227b77e01c9cfe1" title=" " alt="" coords="251,5,426,67"/>
+<area shape="rect" id="Node000001" title="Analytic&#45;method finalise: no table unit conversion needed; build the Gamma1 table only for &#39;exact&#39; mo..." alt="" coords="5,14,203,58"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__tables.html#a943db605bba68bcb3d991cea179446d4" title="Precompute constants for bypassing table lookups when gas is fully ionised. Physics: above T ~ 50 kK,..." alt="" coords="251,5,426,67"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,34,238,36,232,36,203,39"/>
 </map>

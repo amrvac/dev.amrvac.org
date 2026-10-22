@@ -64,8 +64,10 @@ var searchData=
   ['dxcoarse_61',['dxcoarse',['../structmod__physicaldata_1_1state__sub.html#aead871b1276f7896bcf57197f78fe79b',1,'mod_physicaldata::state_sub']]],
   ['dxfirst_62',['dxfirst',['../namespacemod__global__parameters.html#ae8bd4f96706c14515d6e833bdb98cbe5',1,'mod_global_parameters']]],
   ['dxfirst_5f1mq_63',['dxfirst_1mq',['../namespacemod__global__parameters.html#af8a6712fb6a1869bdd1fe5e243335cd5',1,'mod_global_parameters']]],
-  ['dxlevel_64',['dxlevel',['../namespacemod__global__parameters.html#ac487446056522027f949f42ba64b2e11',1,'mod_global_parameters']]],
-  ['dxmid_65',['dxmid',['../namespacemod__global__parameters.html#afee2bc8ebcd7636780481dcfd79f3625',1,'mod_global_parameters']]],
-  ['dy_66',['dy',['../structmod__eos__container_1_1eos__container.html#a7fd2c82ecfd8edb6e059ee1fece4485e',1,'mod_eos_container::eos_container']]],
-  ['dy_5fkm_67',['dy_km',['../structmod__data__driven__boundary_1_1data__driven__boundary__series.html#ad51a47f17ee4bcc67cda4136eb1a5a93',1,'mod_data_driven_boundary::data_driven_boundary_series']]]
+  ['dxg_64',['dxg',['../namespacemod__rt__sc__kernel.html#abe3e47206471857e87cfc5dc137bc175',1,'mod_rt_sc_kernel']]],
+  ['dxlevel_65',['dxlevel',['../namespacemod__global__parameters.html#ac487446056522027f949f42ba64b2e11',1,'mod_global_parameters']]],
+  ['dxmid_66',['dxmid',['../namespacemod__global__parameters.html#afee2bc8ebcd7636780481dcfd79f3625',1,'mod_global_parameters']]],
+  ['dy_67',['dy',['../structmod__eos__container_1_1eos__container.html#a7fd2c82ecfd8edb6e059ee1fece4485e',1,'mod_eos_container::eos_container']]],
+  ['dy_5fkm_68',['dy_km',['../structmod__data__driven__boundary_1_1data__driven__boundary__series.html#ad51a47f17ee4bcc67cda4136eb1a5a93',1,'mod_data_driven_boundary::data_driven_boundary_series']]],
+  ['dyg_69',['dyg',['../namespacemod__rt__sc__kernel.html#a3cd67fe6811f4227f2ca0f8613ab146c',1,'mod_rt_sc_kernel']]]
 ];

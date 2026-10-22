@@ -1,5 +1,5 @@
 <map id="mod_eos_lte_entropy::finalise_entropy_lte" name="mod_eos_lte_entropy::finalise_entropy_lte">
 <area shape="rect" id="Node000001" title="Entropy&#45;method finalise: shift each loaded table&#39;s axes from CGS to code units and run the standard p..." alt="" coords="5,14,167,58"/>
-<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__tables.html#ae95aab518f10a74ad227b77e01c9cfe1" title=" " alt="" coords="215,5,390,67"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__tables.html#a943db605bba68bcb3d991cea179446d4" title="Precompute constants for bypassing table lookups when gas is fully ionised. Physics: above T ~ 50 kK,..." alt="" coords="215,5,390,67"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,34,202,36,196,36,167,39"/>
 </map>

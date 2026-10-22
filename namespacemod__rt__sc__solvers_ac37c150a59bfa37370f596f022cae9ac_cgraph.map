@@ -1,0 +1,7 @@
+<map id="mod_rt_sc_solvers::rt_sc_validate_pipe" name="mod_rt_sc_solvers::rt_sc_validate_pipe">
+<area shape="rect" id="Node000001" title="Validation of the pipelined KBA. The ray&#45;by&#45;ray Q is copied into i_iout and the pipelined Q left in i..." alt="" coords="5,40,156,85"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__solvers.html#a2ec2f4e00afd5ab689bf9cda82f65069" title="Ray&#45;by&#45;ray KBA, with one ray at a time passing through the diagonal wavefront." alt="" coords="214,5,364,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,47,201,42,196,44,157,52"/>
+<area shape="rect" id="Node000039" href="$namespacemod__rt__sc__solvers.html#aeb90808c0e6ed58befec017ec1ec0c24" title="Pipelined KBA. The direction&#45;sign corners run together in batches of nisw slots, and within each corn..." alt="" coords="204,75,375,119"/>
+<area shape="poly" id="edge2_Node000001_Node000039" title=" " alt="" coords="156,72,191,80,185,81,156,78"/>
+</map>

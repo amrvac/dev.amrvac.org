@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_solvers::rt_wave_end" name="mod_rt_sc_solvers::rt_wave_end">
+<area shape="rect" id="Node000001" title="Epilogue. It hands the seam edges over to the next solve, restores the hydro datatype and releases th..." alt="" coords="5,5,156,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__ghostcells__update.html#a327d9129bf4d1651e23a58a54e67f24d" title=" " alt="" coords="204,5,393,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,25,190,27,185,28,156,30"/>
+</map>

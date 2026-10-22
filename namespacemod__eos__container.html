@@ -92,13 +92,16 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Types</h2></td></tr>
+<tr class="memitem:convert_5Fcondition" id="r_convert_5Fcondition"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__eos__container_1_1convert__condition.html">convert_condition</a></td></tr>
+<tr class="memitem:update_5Feos_5Fspaces" id="r_update_5Feos_5Fspaces"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__eos__container_1_1update__eos__spaces.html">update_eos_spaces</a></td></tr>
+<tr class="memitem:get_5Feos_5Fvariable_5Falt" id="r_get_5Feos_5Fvariable_5Falt"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a></td></tr>
 <tr class="memitem:eos_5Ftable_5Fcontainer" id="r_eos_5Ftable_5Fcontainer"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__eos__container_1_1eos__table__container.html">eos_table_container</a></td></tr>
 <tr class="memitem:eos_5Fcontainer" id="r_eos_5Fcontainer"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__eos__container_1_1eos__container.html">eos_container</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a983de88847c066f829b549aa7165f5d4" id="r_a983de88847c066f829b549aa7165f5d4"><td class="memItemLeft" align="right" valign="top">integer, parameter, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a983de88847c066f829b549aa7165f5d4">eos_state</a> = 1</td></tr>
-<tr class="memdesc:a983de88847c066f829b549aa7165f5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">LTE method selector, decoded once from eosmethod into eosmethod_id so the runtime kernels dispatch on an integer rather than a string compare.  <br /></td></tr>
+<tr class="memdesc:a983de88847c066f829b549aa7165f5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">slot interfaces, for routines that hold or wrap an EoS slot  <br /></td></tr>
 <tr class="memitem:a0ae5bc58e4bc026852566124608cc16b" id="r_a0ae5bc58e4bc026852566124608cc16b"><td class="memItemLeft" align="right" valign="top">integer, parameter, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ae5bc58e4bc026852566124608cc16b">eos_analytic</a> = 2</td></tr>
 <tr class="memitem:a9fee601997a28380e12f883958321b4e" id="r_a9fee601997a28380e12f883958321b4e"><td class="memItemLeft" align="right" valign="top">integer, parameter, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fee601997a28380e12f883958321b4e">eos_entropy</a> = 3</td></tr>
 <tr class="memitem:a378ead203ea782b41b5aedb9a79e9463" id="r_a378ead203ea782b41b5aedb9a79e9463"><td class="memItemLeft" align="right" valign="top">integer, parameter, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a378ead203ea782b41b5aedb9a79e9463">eos_type_fi</a> = 1</td></tr>
@@ -129,7 +132,7 @@ Variables</h2></td></tr>
 
 <p>The single EoS state object, allocated in eos_init and shared (read-mostly) across all EoS sub-modules and the physics layer. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00236">236</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00240">240</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -145,7 +148,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00025">25</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00027">27</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -161,7 +164,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00025">25</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00027">27</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -177,9 +180,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>slot interfaces, for routines that hold or wrap an EoS slot </p>
 <p>LTE method selector, decoded once from eosmethod into eosmethod_id so the runtime kernels dispatch on an integer rather than a string compare. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00025">25</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00027">27</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -197,7 +201,7 @@ Variables</h2></td></tr>
 
 <p>EoS-type selector, decoded once from eoseos_type into eostype_id. Used by the mode-specific kernels to mpistop if called under the wrong eos_type (e.g. an LTE table kernel invoked while running FI or PI). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00030">30</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00032">32</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -213,7 +217,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00030">30</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00032">32</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -229,7 +233,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00030">30</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00032">32</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -247,7 +251,7 @@ Variables</h2></td></tr>
 
 <p>wextra index for the cached log10(nH) used during STS substeps (-1 = not allocated). Set by the physics module that owns the wextra slot. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00240">240</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00244">244</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>

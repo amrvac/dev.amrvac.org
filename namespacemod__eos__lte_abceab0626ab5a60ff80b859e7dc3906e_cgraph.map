@@ -1,0 +1,5 @@
+<map id="mod_eos_lte::lte_gamma1_from_p" name="mod_eos_lte::lte_gamma1_from_p">
+<area shape="rect" id="Node000001" title="Gamma_1 of one cell from (p, rho): the ideal value where fully ionised, else the pressure&#45; indexed ta..." alt="" coords="5,5,200,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte.html#ac730b189d6c6880f51a5d2f17745e9e5" title="Gamma_1 from (log10 nH, log10 p/nH), one lookup on the pressure&#45;indexed table." alt="" coords="248,5,418,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,25,235,27,230,28,200,30"/>
+</map>

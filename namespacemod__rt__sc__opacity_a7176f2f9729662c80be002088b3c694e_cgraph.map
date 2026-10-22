@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_opacity::rt_sc_chib_rosseland" name="mod_rt_sc_opacity::rt_sc_chib_rosseland">
+<area shape="rect" id="Node000001" title="Table Rosseland opacity, chi = kappa_R(rho, T) rho, and source B = a T^4, both multiplied by the tran..." alt="" coords="5,5,162,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__opacity.html#ac98cb767e9b10cbec0e7ce904b66bba7" title="chi and B of the built&#45;in opacities, the table when tabulated is set and the analytic fit otherwise...." alt="" coords="210,5,360,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,25,197,27,191,28,162,30"/>
+</map>

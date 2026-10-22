@@ -1,13 +1,15 @@
 <map id="mod_mhd_phys::mhd_get_v" name="mod_mhd_phys::mhd_get_v">
-<area shape="rect" id="Node000001" title="Calculate v vector." alt="" coords="5,114,210,142"/>
-<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="282,5,451,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,111,257,60,279,54,274,57,259,65,140,116"/>
-<area shape="rect" id="Node000003" href="$namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="282,75,451,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,113,269,108,264,110,211,118"/>
-<area shape="rect" id="Node000004" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="523,180,704,208"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="210,138,509,178,506,183,210,144"/>
-<area shape="rect" id="Node000005" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="258,218,475,246"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="145,140,318,210,314,213,144,145"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="462,215,505,211,510,210,463,220"/>
-<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="324,216,317,209,323,199,339,193,366,191,395,194,413,203,407,202,394,199,366,196,340,198,326,203,323,209,329,218"/>
+<area shape="rect" id="Node000001" title="Calculate v vector." alt="" coords="5,143,210,171"/>
+<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a7961a939e49a748f32727184fafd6718" title=" " alt="" coords="290,5,460,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,141,183,101,256,60,278,53,273,56,259,65,186,106,129,145"/>
+<area shape="rect" id="Node000003" href="$namespacemod__radiative__cooling.html#a1b83b5c9023a36e54f17b94790c062d5" title=" " alt="" coords="290,75,460,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,140,277,118,273,121,174,145"/>
+<area shape="rect" id="Node000004" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="540,180,721,208"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="210,160,492,180,527,185,522,185,492,185,210,166"/>
+<area shape="rect" id="Node000005" href="$namespacemod__mhd__phys.html#af871b6be3fe6f0ca6cca59a59309c86c" title=" " alt="" coords="266,218,484,246"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="160,169,310,212,306,215,160,174"/>
+<area shape="rect" id="Node000072" href="$namespacemod__mhd__phys.html#aa2e9635443a63a7be80a8c3f23d063bd" title="Velocity from the semirelativistic momentum (Gombosi et al. 2002 eqs 15&#45;16) and emech,..." alt="" coords="258,269,492,314"/>
+<area shape="poly" id="edge7_Node000001_Node000072" title=" " alt="" coords="127,169,184,211,259,255,275,264,270,263,256,259,181,215,126,174"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="474,215,527,209,522,210,475,220"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="331,217,324,209,330,199,347,193,375,191,405,194,423,203,417,202,404,199,375,196,348,198,333,203,330,209,336,218"/>
 </map>

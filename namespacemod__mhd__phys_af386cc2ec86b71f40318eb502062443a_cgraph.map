@@ -1,0 +1,7 @@
+<map id="mod_mhd_phys::mhd_semirelati_p" name="mod_mhd_phys::mhd_semirelati_p">
+<area shape="rect" id="Node000001" title="Thermal pressure from internal energy in one cell for the active EoS." alt="" coords="5,48,255,76"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte.html#ae17e076260b52aff941390039e0b33a5" title="LTE pressure from internal energy in one cell: ideal without ionE, else the table floor,..." alt="" coords="320,5,464,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,45,307,39,302,40,240,51"/>
+<area shape="rect" id="Node000004" href="$namespacemod__eos__pi.html#af4ce33028810a5d33f2cbeb4c95b3d6f" title="Conserved gas internal energy &#45;&gt; temperature, thermal pressure, R. Inverse of p_eint_from_rho_T_PI...." alt="" coords="303,75,481,119"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="239,74,290,83,285,83,239,79"/>
+</map>

@@ -12,9 +12,10 @@ var searchData=
   ['whitespace_9',['Indentation and whitespace',['../md_doc_2code__style__guide.html#style-indent',1,'']]],
   ['wing_20test_20problem_10',['Alfven wing test problem',['../md_tests_2mhd_2alfvenwing__3D_2alfvenwing.html',1,'']]],
   ['with_20git_11',['Working with git',['../md_doc_2contributing.html#contrib-git',1,'']]],
-  ['woodward_20collela_202d_20test_20problem_12',['Woodward-Collela 2D test problem',['../md_tests_2hd_2Woodward__Collela__2D_2Woodward__Collela__2d.html',1,'']]],
-  ['working_20with_20git_13',['Working with git',['../md_doc_2contributing.html#contrib-git',1,'']]],
-  ['works_14',['How it works',['../debug_field_dump.html#debug_field_dump_design',1,'']]],
-  ['write_20documentation_15',['How to write documentation',['../md_doc_2documentation.html#doc-howto',1,'']]],
-  ['writing_20a_20custom_20analysis_20subroutine_16',['Writing a custom analysis subroutine',['../md_doc_2analysis.html',1,'']]]
+  ['with_20short_20characteristics_20in_20mpi_20amrvac_12',['Radiative transfer with short characteristics in MPI-AMRVAC',['../md_doc_2radiative__transfer.html',1,'']]],
+  ['woodward_20collela_202d_20test_20problem_13',['Woodward-Collela 2D test problem',['../md_tests_2hd_2Woodward__Collela__2D_2Woodward__Collela__2d.html',1,'']]],
+  ['working_20with_20git_14',['Working with git',['../md_doc_2contributing.html#contrib-git',1,'']]],
+  ['works_15',['How it works',['../debug_field_dump.html#debug_field_dump_design',1,'']]],
+  ['write_20documentation_16',['How to write documentation',['../md_doc_2documentation.html#doc-howto',1,'']]],
+  ['writing_20a_20custom_20analysis_20subroutine_17',['Writing a custom analysis subroutine',['../md_doc_2analysis.html',1,'']]]
 ];

@@ -1,0 +1,5 @@
+<map id="mod_eos_lte::lte_p_from_eint" name="mod_eos_lte::lte_p_from_eint">
+<area shape="rect" id="Node000001" title="LTE pressure from internal energy in one cell: ideal without ionE, else the table floor,..." alt="" coords="5,5,150,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte.html#a3dbd6cc36fa05cf81b353ebec89e3b7c" title="p/nH = (1 + He + y) T from (log10 nH, log10 eint/nH)" alt="" coords="198,14,411,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,25,185,27,180,28,150,30"/>
+</map>

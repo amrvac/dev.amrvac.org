@@ -1,0 +1,9 @@
+<map id="mod_rt_sc_kernel::rt_sc_init" name="mod_rt_sc_kernel::rt_sc_init">
+<area shape="rect" id="Node000001" title="Build the quadrature into mux, muy, muz and wmu as full 3D cosines, according to rt_sc_quad." alt="" coords="5,65,159,110"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__kernel.html#a958e630aca4df4cd8702c7ce2f0560ca" title="Carlson A4 level&#45;symmetric set, built from the three cyclic permutations of (mu1, mu2,..." alt="" coords="216,5,392,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,65,207,53,202,56,160,69"/>
+<area shape="rect" id="Node000003" href="$namespacemod__rt__sc__kernel.html#a1a2d08b3b80acb4e66468ed34971108e" title="Product Gauss&#45;Legendre set, with nmu polar nodes about rt_sc_polar_axis and ndir azimuths at the midp..." alt="" coords="207,74,401,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,85,193,87,188,88,159,90"/>
+<area shape="rect" id="Node000005" href="$namespacemod__rt__sc__kernel.html#a417677a4660a4849adb4379d49c4d993" title="Merge rays that share (mux, muy) and add up their weights. Since the 2D sweep and the moments see onl..." alt="" coords="227,125,380,170"/>
+<area shape="poly" id="edge3_Node000001_Node000005" title=" " alt="" coords="159,106,215,122,209,123,159,111"/>
+</map>

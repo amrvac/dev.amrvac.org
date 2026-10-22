@@ -16,34 +16,34 @@
 <area shape="poly" id="edge9_Node000001_Node000011" title=" " alt="" coords="230,582,289,575,285,579,234,586"/>
 <area shape="rect" id="Node000019" href="$namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="294,331,469,375"/>
 <area shape="poly" id="edge11_Node000001_Node000019" title=" " alt="" coords="129,574,151,533,185,483,228,431,278,386,288,381,285,385,281,390,231,435,189,486,156,536,134,576"/>
-<area shape="rect" id="Node000032" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="291,612,472,640"/>
-<area shape="poly" id="edge13_Node000001_Node000032" title=" " alt="" coords="231,607,277,613,273,616,233,612"/>
-<area shape="rect" id="Node000033" href="$namespacemod__nlfff__optimization.html#a453c21274d072c51ee099a3e312ec63e" title=" " alt="" coords="283,688,480,733"/>
-<area shape="poly" id="edge15_Node000001_Node000033" title=" " alt="" coords="172,617,316,680,311,683,173,623"/>
-<area shape="rect" id="Node000034" href="$namespacemod__nlfff__optimization.html#acd3560be2aebd0d2b112545a7ed65357" title="Pointwise terms in Equations (13) and (15) of Wiegelmann (2004). Derivatives and Q=Omega_a x B,..." alt="" coords="280,757,483,802"/>
-<area shape="poly" id="edge17_Node000001_Node000034" title=" " alt="" coords="138,617,200,679,239,713,281,743,292,749,287,751,278,747,235,717,196,683,139,622"/>
-<area shape="rect" id="Node000035" href="$namespacemod__nlfff__optimization.html#a69b9c1eaffcdbaa4cebc6d1fecd4074a" title=" " alt="" coords="281,827,482,871"/>
-<area shape="poly" id="edge18_Node000001_Node000035" title=" " alt="" coords="130,617,155,660,188,712,231,766,281,812,289,818,284,819,278,816,227,769,184,715,151,663,131,623"/>
-<area shape="rect" id="Node000036" href="$namespacemod__nlfff__optimization.html#af56b3bf7c10f5dffb53a5fa3c5e9826c" title=" " alt="" coords="287,920,476,965"/>
-<area shape="poly" id="edge19_Node000001_Node000036" title=" " alt="" coords="128,617,151,670,183,739,227,814,253,849,281,882,319,911,314,913,278,886,249,853,223,817,178,742,146,672,128,622"/>
-<area shape="rect" id="Node000037" href="$namespacemod__nlfff__optimization.html#a4197a6c1ea7a8d30e27dccc7a8f2bba2" title=" " alt="" coords="290,1013,473,1058"/>
-<area shape="poly" id="edge21_Node000001_Node000037" title=" " alt="" coords="124,617,143,686,172,779,193,830,218,882,247,931,282,975,316,1005,311,1006,278,979,243,934,213,884,188,833,167,781,138,687,124,622"/>
-<area shape="rect" id="Node000038" href="$namespacemod__nlfff__optimization.html#a3508fd5e9369450cc7cd40d3876a522e" title=" " alt="" coords="295,1082,468,1144"/>
-<area shape="poly" id="edge23_Node000001_Node000038" title=" " alt="" coords="121,617,133,702,158,821,178,886,205,952,239,1013,282,1069,286,1074,280,1074,278,1072,235,1016,200,954,173,888,152,822,128,703,121,622"/>
-<area shape="rect" id="Node000039" href="$namespacemod__nlfff__optimization.html#ac196790c44c5619db82f022154622429" title=" " alt="" coords="290,424,473,469"/>
-<area shape="poly" id="edge24_Node000001_Node000039" title=" " alt="" coords="147,573,207,530,278,485,307,473,303,477,281,490,210,534,151,576"/>
-<area shape="rect" id="Node000041" href="$namespacemod__nlfff__diagnostics.html#a1ee1384d656da7b1b15851269e1a98d9" title=" " alt="" coords="299,1168,464,1229"/>
-<area shape="poly" id="edge27_Node000001_Node000041" title=" " alt="" coords="120,617,127,715,135,782,148,857,168,935,196,1013,233,1087,282,1154,290,1163,284,1162,278,1157,229,1090,191,1015,163,937,143,858,130,783,122,716,119,623"/>
-<area shape="rect" id="Node000042" href="$namespacemod__nlfff__diagnostics.html#a5272034b6249c1272f13fbcfd1293315" title=" " alt="" coords="290,1253,472,1298"/>
-<area shape="poly" id="edge28_Node000001_Node000042" title=" " alt="" coords="123,617,143,747,176,933,198,1029,223,1117,251,1190,266,1218,282,1239,285,1244,279,1243,278,1243,261,1221,246,1192,218,1119,192,1030,171,934,138,748,122,623"/>
+<area shape="rect" id="Node000035" href="$namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="291,612,472,640"/>
+<area shape="poly" id="edge13_Node000001_Node000035" title=" " alt="" coords="231,607,277,613,273,616,233,612"/>
+<area shape="rect" id="Node000036" href="$namespacemod__nlfff__optimization.html#a453c21274d072c51ee099a3e312ec63e" title=" " alt="" coords="283,688,480,733"/>
+<area shape="poly" id="edge15_Node000001_Node000036" title=" " alt="" coords="172,617,316,680,311,683,173,623"/>
+<area shape="rect" id="Node000037" href="$namespacemod__nlfff__optimization.html#acd3560be2aebd0d2b112545a7ed65357" title="Pointwise terms in Equations (13) and (15) of Wiegelmann (2004). Derivatives and Q=Omega_a x B,..." alt="" coords="280,757,483,802"/>
+<area shape="poly" id="edge17_Node000001_Node000037" title=" " alt="" coords="138,617,200,679,239,713,281,743,292,749,287,751,278,747,235,717,196,683,139,622"/>
+<area shape="rect" id="Node000038" href="$namespacemod__nlfff__optimization.html#a69b9c1eaffcdbaa4cebc6d1fecd4074a" title=" " alt="" coords="281,827,482,871"/>
+<area shape="poly" id="edge18_Node000001_Node000038" title=" " alt="" coords="130,617,155,660,188,712,231,766,281,812,289,818,284,819,278,816,227,769,184,715,151,663,131,623"/>
+<area shape="rect" id="Node000039" href="$namespacemod__nlfff__optimization.html#af56b3bf7c10f5dffb53a5fa3c5e9826c" title=" " alt="" coords="287,920,476,965"/>
+<area shape="poly" id="edge19_Node000001_Node000039" title=" " alt="" coords="128,617,151,670,183,739,227,814,253,849,281,882,319,911,314,913,278,886,249,853,223,817,178,742,146,672,128,622"/>
+<area shape="rect" id="Node000040" href="$namespacemod__nlfff__optimization.html#a4197a6c1ea7a8d30e27dccc7a8f2bba2" title=" " alt="" coords="290,1013,473,1058"/>
+<area shape="poly" id="edge21_Node000001_Node000040" title=" " alt="" coords="124,617,143,686,172,779,193,830,218,882,247,931,282,975,316,1005,311,1006,278,979,243,934,213,884,188,833,167,781,138,687,124,622"/>
+<area shape="rect" id="Node000041" href="$namespacemod__nlfff__optimization.html#a3508fd5e9369450cc7cd40d3876a522e" title=" " alt="" coords="295,1082,468,1144"/>
+<area shape="poly" id="edge23_Node000001_Node000041" title=" " alt="" coords="121,617,133,702,158,821,178,886,205,952,239,1013,282,1069,286,1074,280,1074,278,1072,235,1016,200,954,173,888,152,822,128,703,121,622"/>
+<area shape="rect" id="Node000042" href="$namespacemod__nlfff__optimization.html#ac196790c44c5619db82f022154622429" title=" " alt="" coords="290,424,473,469"/>
+<area shape="poly" id="edge24_Node000001_Node000042" title=" " alt="" coords="147,573,207,530,278,485,307,473,303,477,281,490,210,534,151,576"/>
+<area shape="rect" id="Node000044" href="$namespacemod__nlfff__diagnostics.html#a1ee1384d656da7b1b15851269e1a98d9" title=" " alt="" coords="299,1168,464,1229"/>
+<area shape="poly" id="edge27_Node000001_Node000044" title=" " alt="" coords="120,617,127,715,135,782,148,857,168,935,196,1013,233,1087,282,1154,290,1163,284,1162,278,1157,229,1090,191,1015,163,937,143,858,130,783,122,716,119,623"/>
+<area shape="rect" id="Node000045" href="$namespacemod__nlfff__diagnostics.html#a5272034b6249c1272f13fbcfd1293315" title=" " alt="" coords="290,1253,472,1298"/>
+<area shape="poly" id="edge28_Node000001_Node000045" title=" " alt="" coords="123,617,143,747,176,933,198,1029,223,1117,251,1190,266,1218,282,1239,285,1244,279,1243,278,1243,261,1221,246,1192,218,1119,192,1030,171,934,138,748,122,623"/>
 <area shape="poly" id="edge6_Node000007_Node000005" title=" " alt="" coords="468,211,518,205,514,208,471,215"/>
 <area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="468,244,555,266,550,268,470,249"/>
 <area shape="poly" id="edge8_Node000007_Node000010" title=" " alt="" coords="417,254,601,421,596,423,417,259"/>
 <area shape="poly" id="edge10_Node000011_Node000010" title=" " alt="" coords="440,541,482,523,591,466,587,470,484,527,443,545"/>
 <area shape="poly" id="edge12_Node000019_Node000010" title=" " alt="" coords="450,373,484,385,581,425,576,427,482,390,452,378"/>
-<area shape="poly" id="edge16_Node000033_Node000033" title=" " alt="" coords="335,687,333,678,341,669,357,663,381,661,408,664,425,672,420,674,407,669,381,667,358,669,344,673,338,679,340,688"/>
-<area shape="poly" id="edge20_Node000036_Node000036" title=" " alt="" coords="335,919,333,910,341,901,357,895,381,893,408,896,425,904,420,905,407,901,381,899,358,901,344,905,338,911,340,920"/>
-<area shape="poly" id="edge22_Node000037_Node000037" title=" " alt="" coords="335,1012,333,1003,341,994,357,989,381,987,408,989,425,998,420,999,407,994,381,992,358,994,344,999,338,1005,340,1014"/>
-<area shape="poly" id="edge25_Node000039_Node000010" title=" " alt="" coords="472,444,523,445,518,448,475,449"/>
-<area shape="poly" id="edge26_Node000039_Node000039" title=" " alt="" coords="334,423,333,414,341,405,357,399,381,397,408,400,425,408,420,410,407,405,381,403,358,405,344,409,338,415,340,424"/>
+<area shape="poly" id="edge16_Node000036_Node000036" title=" " alt="" coords="335,687,333,678,341,669,357,663,381,661,408,664,425,672,420,674,407,669,381,667,358,669,344,673,338,679,340,688"/>
+<area shape="poly" id="edge20_Node000039_Node000039" title=" " alt="" coords="335,919,333,910,341,901,357,895,381,893,408,896,425,904,420,905,407,901,381,899,358,901,344,905,338,911,340,920"/>
+<area shape="poly" id="edge22_Node000040_Node000040" title=" " alt="" coords="335,1012,333,1003,341,994,357,989,381,987,408,989,425,998,420,999,407,994,381,992,358,994,344,999,338,1005,340,1014"/>
+<area shape="poly" id="edge25_Node000042_Node000010" title=" " alt="" coords="472,444,523,445,518,448,475,449"/>
+<area shape="poly" id="edge26_Node000042_Node000042" title=" " alt="" coords="334,423,333,414,341,405,357,399,381,397,408,400,425,408,420,410,407,405,381,403,358,405,344,409,338,415,340,424"/>
 </map>

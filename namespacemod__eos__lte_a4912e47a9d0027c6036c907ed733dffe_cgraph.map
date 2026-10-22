@@ -1,0 +1,5 @@
+<map id="mod_eos_lte::get_temperature_from_eint_fast_lte" name="mod_eos_lte::get_temperature_from_eint_fast_lte">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,227,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="Scalar EoS kernels: one cell on (log10 nH, log10 eint/nH) or (log10 nH, log10 p/nH),..." alt="" coords="275,5,433,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,25,262,28,256,28,227,30"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="mod_rt_sc_slab::rt_sc_activate" name="mod_rt_sc_slab::rt_sc_activate">
+<area shape="rect" id="Node000001" title="Switch the RT on. The physics module calls this from its initialisation when hd_radiative_transfer or..." alt="" coords="5,75,146,119"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__state.html#ae3a9a5030d6953332f1a3f2b5621d0fe" title="Read &amp;rt_list from each parameter file. The values stay physical until rt_sc_setup,..." alt="" coords="194,5,340,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,72,191,54,187,57,140,76"/>
+<area shape="rect" id="Node000003" href="$namespacemod__rt__sc__state.html#a582b0e5c2b946bb7d29ef82c675233e1" title="Reserve the wavefront intensity slots in ps_rt, four in all, one per sweep corner,..." alt="" coords="194,75,340,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,94,181,96,176,98,147,100"/>
+<area shape="rect" id="Node000004" href="$namespacemod__variables.html#a924c3b2f4e13f6f6432de212ac790966" title="Set extra variable in w, which is not advected and has no boundary conditions. This has to be done af..." alt="" coords="194,144,340,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,117,192,138,186,139,139,123"/>
+</map>

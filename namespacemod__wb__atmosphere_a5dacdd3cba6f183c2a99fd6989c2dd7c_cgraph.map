@@ -1,5 +1,5 @@
 <map id="mod_wb_atmosphere::wb_atmos_set_w" name="mod_wb_atmosphere::wb_atmos_set_w">
 <area shape="rect" id="Node000001" title="Set w to the equilibrium state (rho, v=0, p) at each cell position." alt="" coords="5,5,175,50"/>
-<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="223,14,405,42"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,25,210,27,204,28,175,30"/>
+<area shape="rect" id="Node000002" href="$namespacemod__wb__atmosphere.html#af16066eef54b952d4e89d00001f59e16" title="Equilibrium (rho, p) of the grid&#45;aligned table at a coordinate x_grav along the gravity direction: th..." alt="" coords="223,5,392,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,25,210,27,205,28,175,30"/>
 </map>

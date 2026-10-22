@@ -183,6 +183,8 @@ Data Types</h2></td></tr>
 <tr class="memitem:set_5Ffield" id="r_set_5Ffield"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1set__field.html">set_field</a></td></tr>
 <tr class="memitem:sub_5Fget_5Fheating" id="r_sub_5Fget_5Fheating"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1sub__get__heating.html">sub_get_heating</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate volumetric heating rate for TRAC broadening.  <a href="interfacemod__usr__methods_1_1sub__get__heating.html#details">More...</a><br /></td></tr>
+<tr class="memitem:sub_5Frt_5Fsc_5Fchib" id="r_sub_5Frt_5Fsc_5Fchib"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1sub__rt__sc__chib.html">sub_rt_sc_chib</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opacity chi = kappa rho and Planck source bpl = a_rad T^4 (code units) for the SC RT.  <a href="interfacemod__usr__methods_1_1sub__rt__sc__chib.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -209,6 +211,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a905fdae645546965bba6a9817a90944a" id="r_a905fdae645546965bba6a9817a90944a"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1p__no__args.html">p_no_args</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a905fdae645546965bba6a9817a90944a">usr_before_main_loop</a> =&gt; null()</td></tr>
 <tr class="memitem:a0fb63a7582086ca69fd5351dda82f183" id="r_a0fb63a7582086ca69fd5351dda82f183"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1source.html">source</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fb63a7582086ca69fd5351dda82f183">usr_source</a> =&gt; null()</td></tr>
 <tr class="memitem:a0de3d63d0a41a56056f8d9cb9370ab72" id="r_a0de3d63d0a41a56056f8d9cb9370ab72"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1source.html">source</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0de3d63d0a41a56056f8d9cb9370ab72">usr_source_after</a> =&gt; null()</td></tr>
+<tr class="memitem:ab0b5f95fcab428678f706038d1427366" id="r_ab0b5f95fcab428678f706038d1427366"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1sub__rt__sc__chib.html">sub_rt_sc_chib</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0b5f95fcab428678f706038d1427366">usr_rt_sc_chib</a> =&gt; null()</td></tr>
+<tr class="memdesc:ab0b5f95fcab428678f706038d1427366"><td class="mdescLeft">&#160;</td><td class="mdescRight">opacity and Planck source for the SC RT when rt_sc_opacity = 'usr'  <br /></td></tr>
 <tr class="memitem:af0e6852a194065276db05fcebc526858" id="r_af0e6852a194065276db05fcebc526858"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1get__dt.html">get_dt</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0e6852a194065276db05fcebc526858">usr_get_dt</a> =&gt; null()</td></tr>
 <tr class="memitem:a475cb66920b435a067cecc79b38bdf47" id="r_a475cb66920b435a067cecc79b38bdf47"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1phys__gravity.html">phys_gravity</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a475cb66920b435a067cecc79b38bdf47">usr_gravity</a> =&gt; null()</td></tr>
 <tr class="memitem:a319da2e0a86a5b58793ccbf9d76cb468" id="r_a319da2e0a86a5b58793ccbf9d76cb468"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1sub__get__heating.html">sub_get_heating</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a319da2e0a86a5b58793ccbf9d76cb468">usr_get_heating</a> =&gt; null()</td></tr>
@@ -278,7 +282,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00089">89</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00091">91</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -326,7 +330,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00078">78</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00080">80</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -342,7 +346,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00077">77</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00079">79</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -358,7 +362,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00052">52</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00054">54</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -374,7 +378,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00065">65</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00067">67</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -390,7 +394,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00053">53</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00055">55</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -406,7 +410,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00047">47</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00049">49</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -422,7 +426,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00049">49</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00051">51</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -438,7 +442,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00048">48</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00050">50</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -488,7 +492,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00092">92</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00094">94</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -536,7 +540,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00080">80</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00082">82</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -552,7 +556,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00079">79</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00081">81</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -568,7 +572,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00081">81</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00083">83</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -680,7 +684,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00062">62</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00064">64</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -696,7 +700,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00064">64</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00066">66</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -712,7 +716,25 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00110">110</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00112">112</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+
+</div>
+</div>
+<a id="ab0b5f95fcab428678f706038d1427366" name="ab0b5f95fcab428678f706038d1427366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0b5f95fcab428678f706038d1427366">&#9670;&#160;</a></span>usr_rt_sc_chib</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__usr__methods_1_1sub__rt__sc__chib.html">sub_rt_sc_chib</a>), pointer mod_usr_methods::usr_rt_sc_chib =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>opacity and Planck source for the SC RT when rt_sc_opacity = 'usr' </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00048">48</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -728,7 +750,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00113">113</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00115">115</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -744,7 +766,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00068">68</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00070">70</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -760,7 +782,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00095">95</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00097">97</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -776,7 +798,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00070">70</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00072">72</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -792,7 +814,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00107">107</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00109">109</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -808,7 +830,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00106">106</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00108">108</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -824,7 +846,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00114">114</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00116">116</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -840,7 +862,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00072">72</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00074">74</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -874,7 +896,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00059">59</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00061">61</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -890,7 +912,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00103">103</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00105">105</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -906,7 +928,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00056">56</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00058">58</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -922,7 +944,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00098">98</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00100">100</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -1002,7 +1024,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00086">86</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00088">88</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -1018,7 +1040,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00085">85</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00087">87</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -1050,7 +1072,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00084">84</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00086">86</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1088,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00073">73</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00075">75</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -1100,7 +1122,7 @@ Variables</h2></td></tr>
 
 <p>Optionally provide local UAWSoM closure coefficients. The returned thread radius and Alfven correlation length are in code length units. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00118">118</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00120">120</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -1116,7 +1138,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00076">76</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00078">78</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>
@@ -1132,7 +1154,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00063">63</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00065">65</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>

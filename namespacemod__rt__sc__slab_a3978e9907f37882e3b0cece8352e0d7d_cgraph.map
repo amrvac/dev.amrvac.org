@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_slab::rt_sc_add_source" name="mod_rt_sc_slab::rt_sc_add_source">
+<area shape="rect" id="Node000001" title="Unsplit heating source of one block and stage, e += qdt Q, with Q read from i_qrad,..." alt="" coords="5,5,146,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__slab.html#a17132422d02a8664161bab353b152892" title="Share of the radiative losses taken by the optically thin treatment, with SC taking the rest,..." alt="" coords="194,5,334,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,25,181,27,176,28,146,30"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="mod_rt_sc_solvers::rt_sc_solve_gather" name="mod_rt_sc_solvers::rt_sc_solve_gather">
+<area shape="rect" id="Node000001" title="Replicated gather, the original implementation, kept for comparison and not for production...." alt="" coords="5,57,156,102"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="204,5,386,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,56,203,42,230,37,225,39,204,47,157,61"/>
+<area shape="rect" id="Node000003" href="$namespacemod__rt__sc__state.html#a6f045b8aa9487d026cc68a7d9648e8a2" title="In&#45;place sum allreduce of a 2D array in chunks of whole columns of about 1 MB." alt="" coords="222,57,368,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,77,209,78,204,80,156,82"/>
+<area shape="rect" id="Node000004" href="$namespacemod__rt__sc__solvers.html#a465a95f6cefc14e8af337aeaeb6825f3" title="Indices (ig, jg) on the replicated grid of band ib of the cell centred at xh along hdim and xv along ..." alt="" coords="220,126,370,171"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,99,212,120,206,121,151,105"/>
+</map>

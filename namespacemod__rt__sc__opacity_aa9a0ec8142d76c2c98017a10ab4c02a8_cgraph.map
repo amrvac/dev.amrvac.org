@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_opacity::rt_sc_chib_kramers" name="mod_rt_sc_opacity::rt_sc_chib_kramers">
+<area shape="rect" id="Node000001" title="Analytic H&#45;minus and Kramers opacity, with the source and the switch as in rt_sc_chiB_rosseland." alt="" coords="5,5,156,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__opacity.html#ac98cb767e9b10cbec0e7ce904b66bba7" title="chi and B of the built&#45;in opacities, the table when tabulated is set and the analytic fit otherwise...." alt="" coords="204,5,354,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,25,191,27,186,28,156,30"/>
+</map>

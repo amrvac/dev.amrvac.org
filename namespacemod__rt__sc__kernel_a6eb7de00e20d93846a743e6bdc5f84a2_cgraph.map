@@ -1,0 +1,4 @@
+<map id="mod_rt_sc_kernel::ray_sign" name="mod_rt_sc_kernel::ray_sign">
+<area shape="rect" id="Node000001" title="Sign of a direction cosine as &#45;1, 0 or 1. The zero case occurs, for example for the GL rays at phi = ..." alt="" coords="5,29,204,57"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="70,28,65,20,69,11,83,5,105,3,128,5,142,14,137,14,126,10,104,8,84,10,73,15,70,20,75,29"/>
+</map>

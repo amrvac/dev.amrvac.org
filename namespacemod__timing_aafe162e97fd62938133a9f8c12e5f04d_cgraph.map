@@ -1,0 +1,6 @@
+<map id="mod_timing::timer_open" name="mod_timing::timer_open">
+<area shape="rect" id="Node000001" title="Open a timing window, whose length leaves out the EoS and ghost&#45;cell time spent inside it,..." alt="" coords="5,29,187,57"/>
+<area shape="rect" id="Node000002" href="$namespacemod__timing.html#ac755f1bde7c24bcb7a14b8b8974ed085" title="All EoS time so far; windows that enclose EoS calls subtract its change." alt="" coords="235,29,402,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,41,222,43,216,43,187,46"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="280,28,274,20,279,11,294,5,318,3,344,5,360,14,355,14,343,10,318,8,295,10,282,15,279,20,285,30"/>
+</map>

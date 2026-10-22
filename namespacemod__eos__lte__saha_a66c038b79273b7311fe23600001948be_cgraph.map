@@ -1,7 +1,10 @@
 <map id="mod_eos_lte_saha::saha_t_from_nh_eint" name="mod_eos_lte_saha::saha_t_from_nh_eint">
-<area shape="rect" id="Node000001" title="Temperature inversion: given (nH, eint/nH) in CODE UNITS, find T in CODE UNITS, by bisection (guarant..." alt="" coords="5,28,187,72"/>
-<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="249,5,432,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,36,236,32,231,33,188,41"/>
-<area shape="rect" id="Node000003" href="$namespacemod__eos__interp.html#afc3e0cf0b1c55925665c40ec818beff4" title=" " alt="" coords="235,57,446,102"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,58,222,64,217,65,187,63"/>
+<area shape="rect" id="Node000001" title="Temperature and ionisation fraction from (nH, eint/nH) in code units, by bisection." alt="" coords="5,27,187,72"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="494,41,676,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,24,234,12,340,3,387,5,446,12,490,21,534,36,528,36,489,26,446,17,387,10,340,8,235,17,175,29"/>
+<area shape="rect" id="Node000003" href="$namespacemod__eos__interp.html#afc3e0cf0b1c55925665c40ec818beff4" title=" " alt="" coords="235,27,446,72"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,47,222,49,217,50,188,52"/>
+<area shape="rect" id="Node000004" href="$namespacemod__eos__lte__saha.html#af39abb9ed91ba2a036d43d32e1e352ea" title="Given (nH, p) in code units, T, y and optionally eint/nH: bisection on p = nH*(1+He+y(T))*T,..." alt="" coords="250,96,431,141"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,70,247,91,242,92,177,75"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="428,93,512,73,517,73,429,98"/>
 </map>

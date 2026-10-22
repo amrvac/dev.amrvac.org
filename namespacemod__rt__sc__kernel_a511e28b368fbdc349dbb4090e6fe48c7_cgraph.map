@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_kernel::rt_sc_heat_blend" name="mod_rt_sc_kernel::rt_sc_heat_blend">
+<area shape="rect" id="Node000001" title="Heating q_g, blending the thin imbalance c chi (J &#45; B) with the thick, conservative &#45;div F through w ..." alt="" coords="5,5,159,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__kernel.html#a5d7f1c39f9da9a0e49d951fa53d4583c" title="Heating of one cell. The thin imbalance c chi (J &#45; B) is blended with the thick, conservative &#45;div F ..." alt="" coords="207,5,386,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,25,194,27,188,28,159,30"/>
+</map>

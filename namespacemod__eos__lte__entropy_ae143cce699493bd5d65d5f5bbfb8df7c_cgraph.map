@@ -1,0 +1,7 @@
+<map id="mod_eos_lte_entropy::entropy_eint_from_p_bisect" name="mod_eos_lte_entropy::entropy_eint_from_p_bisect">
+<area shape="rect" id="Node000001" title="Bisection inverse: log10(eint/nH) [code] such that the forward pressure matches p exactly; the eintP ..." alt="" coords="5,32,167,93"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__entropy.html#a5615f9315386cb54d4cb32991a03ca5c" title="eint/p in code units from (log nH, log p/nH). The table holds log10(eint/nH) in CGS" alt="" coords="215,5,402,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,47,202,44,196,46,168,52"/>
+<area shape="rect" id="Node000003" href="$namespacemod__eos__lte__entropy.html#a0f44406397cf9e54f6f0d94c425d2e9e" title="Pressure in code units from (log nH, log eint/nH); the pfwd table holds p itself." alt="" coords="226,75,390,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,72,213,81,208,82,167,78"/>
+</map>

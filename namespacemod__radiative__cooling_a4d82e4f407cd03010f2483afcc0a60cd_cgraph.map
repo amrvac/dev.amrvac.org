@@ -1,0 +1,4 @@
+<map id="mod_radiative_cooling::rc_variable_cv" name="mod_radiative_cooling::rc_variable_cv">
+<area shape="rect" id="Node000001" title="True where ionisation buffers the cooling step, so that c_V varies: a large change of T below the tem..." alt="" coords="5,29,175,74"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="57,28,56,19,62,10,73,5,90,3,108,5,121,14,115,14,107,10,90,8,75,10,65,14,61,21,62,30"/>
+</map>

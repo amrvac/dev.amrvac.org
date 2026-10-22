@@ -92,26 +92,32 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:acc61186eccafb636fa674285c3d7b166" id="r_acc61186eccafb636fa674285c3d7b166"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc61186eccafb636fa674285c3d7b166">eos_init_lte</a> ()</td></tr>
-<tr class="memdesc:acc61186eccafb636fa674285c3d7b166"><td class="mdescLeft">&#160;</td><td class="mdescRight">update_eos_LTE, get_Te_LTE, get_temperature_from_eint_LTE and Rfactor_from_LTE are PRIVATE: all bound to eos% pointers inside eos_finalise_LTE, so no external module names them. get_temperature_from_eint_fast_LTE stays public &ndash; the seam binds it to tc_flget_temperature_from_eint (fast TC path).  <br /></td></tr>
+<tr class="memdesc:acc61186eccafb636fa674285c3d7b166"><td class="mdescLeft">&#160;</td><td class="mdescRight">update_eos_LTE, get_Te_LTE, get_temperature_from_eint_LTE and Rfactor_from_LTE are PRIVATE: all bound to eos% pointers inside eos_finalise_LTE, so no external module names them. get_temperature_from_eint_fast_LTE stays public &ndash; the seam binds it to tc_flget_temperature_ciso2_from_eint (fast TC path, optional p/rho)  <br /></td></tr>
 <tr class="memitem:a4ff7bd5cd303ffed8c560ec611fe24dc" id="r_a4ff7bd5cd303ffed8c560ec611fe24dc"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ff7bd5cd303ffed8c560ec611fe24dc">eos_finalise_lte</a> ()</td></tr>
-<tr class="memdesc:a4ff7bd5cd303ffed8c560ec611fe24dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per-method finaliser, each owned by its method module (analytic-&gt;<a class="el" href="namespacemod__eos__lte__saha.html" title="Analytic H-only Saha EoS (eos_method == &#39;analytic&#39;).">mod_eos_lte_saha</a>, entropy-&gt;<a class="el" href="namespacemod__eos__lte__entropy.html" title="Entropy-method LTE EoS: every query is ONE bicubic Hermite evaluation.">mod_eos_lte_entropy</a>, tables-&gt;<a class="el" href="namespacemod__eos__lte__tables.html" title="Shared LTE lookup-table infrastructure (build/IO; not on the hot path).">mod_eos_lte_tables</a>).  <br /></td></tr>
-<tr class="memitem:a7eb2db76bedf9e4a2749ac95f164028c" id="r_a7eb2db76bedf9e4a2749ac95f164028c"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eb2db76bedf9e4a2749ac95f164028c">get_temperature_from_eint_fast_lte</a> (w, x, ixil, ixol, res)</td></tr>
+<tr class="memdesc:a4ff7bd5cd303ffed8c560ec611fe24dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per-method finaliser, each owned by its method module (analytic-&gt;<a class="el" href="namespacemod__eos__lte__saha.html" title="Analytic hydrogen Saha EoS with neutral helium (eos_method == &#39;analytic&#39;).">mod_eos_lte_saha</a>, entropy-&gt;<a class="el" href="namespacemod__eos__lte__entropy.html" title="Entropy-method LTE EoS: every query is ONE bicubic Hermite evaluation.">mod_eos_lte_entropy</a>, tables-&gt;<a class="el" href="namespacemod__eos__lte__tables.html" title="Shared LTE lookup-table infrastructure (build/IO; not on the hot path).">mod_eos_lte_tables</a>).  <br /></td></tr>
+<tr class="memitem:a4912e47a9d0027c6036c907ed733dffe" id="r_a4912e47a9d0027c6036c907ed733dffe"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4912e47a9d0027c6036c907ed733dffe">get_temperature_from_eint_fast_lte</a> (w, x, ixil, ixol, res, ciso2)</td></tr>
 <tr class="memitem:a751d9926470ec56007930115bf5b7875" id="r_a751d9926470ec56007930115bf5b7875"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a751d9926470ec56007930115bf5b7875">y_from_nh_eint</a> (nh, eint_nh)</td></tr>
-<tr class="memdesc:a751d9926470ec56007930115bf5b7875"><td class="mdescLeft">&#160;</td><td class="mdescRight">####################################################################### Scalar EoS kernels: pointwise lookups on (log10 nH, log10 eint/nH) or (log10 nH, log10 p/nH) in code units, called by the hd/mhd EoS layer. Each dispatches analytic / entropy / table. Ionisation fraction and temperature first, then pressure / Gamma_1 / eint. #######################################################################  <br /></td></tr>
+<tr class="memdesc:a751d9926470ec56007930115bf5b7875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar EoS kernels: one cell on (log10 nH, log10 eint/nH) or (log10 nH, log10 p/nH), in code units, each dispatching to the analytic Saha solve, the entropy tables or the tables.  <br /></td></tr>
 <tr class="memitem:ad1e325f142fa31bedb6a09fc519d7061" id="r_ad1e325f142fa31bedb6a09fc519d7061"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1e325f142fa31bedb6a09fc519d7061">t_from_nh_eint</a> (nh, eint_nh)</td></tr>
-<tr class="memdesc:ad1e325f142fa31bedb6a09fc519d7061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temperature from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic -&gt; Saha bisection/Newton, tables -&gt; PCHIP interpolation.  <br /></td></tr>
+<tr class="memdesc:ad1e325f142fa31bedb6a09fc519d7061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temperature from (log10 nH, log10 eint/nH).  <br /></td></tr>
 <tr class="memitem:a4a9da8961173fdb2bd397004a5c543ce" id="r_a4a9da8961173fdb2bd397004a5c543ce"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a9da8961173fdb2bd397004a5c543ce">p2eint_from_nh_p</a> (nh, ponh)</td></tr>
-<tr class="memdesc:a4a9da8961173fdb2bd397004a5c543ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pressure-to-eint ratio from (log10 nH, log10 p/nH) in code units. Dispatches: analytic -&gt; Saha solve for eint/p, tables -&gt; PCHIP interpolation.  <br /></td></tr>
+<tr class="memdesc:a4a9da8961173fdb2bd397004a5c543ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ratio eint/p from (log10 nH, log10 p/nH).  <br /></td></tr>
 <tr class="memitem:ac730b189d6c6880f51a5d2f17745e9e5" id="r_ac730b189d6c6880f51a5d2f17745e9e5"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac730b189d6c6880f51a5d2f17745e9e5">gamma1_from_nh_p</a> (log_nh, log_p_nh)</td></tr>
-<tr class="memdesc:ac730b189d6c6880f51a5d2f17745e9e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gamma_1 from pressure-indexed table: (log10 nH, log10 p/nH) -&gt; Gamma_1. For 'entropy' the conversion p -&gt; eint -&gt; Gamma_1 via formula is intended to keep Maxwell consistency with the forward at runtime. The p-&gt;eint inverse is one bisection per cell &ndash; non-trivial cost; this function is in the hot path via hd_get_csound2_LTE.  <br /></td></tr>
+<tr class="memdesc:ac730b189d6c6880f51a5d2f17745e9e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gamma_1 from (log10 nH, log10 p/nH), one lookup on the pressure-indexed table.  <br /></td></tr>
+<tr class="memitem:abceab0626ab5a60ff80b859e7dc3906e" id="r_abceab0626ab5a60ff80b859e7dc3906e"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abceab0626ab5a60ff80b859e7dc3906e">lte_gamma1_from_p</a> (pres, rho_val)</td></tr>
+<tr class="memdesc:abceab0626ab5a60ff80b859e7dc3906e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gamma_1 of one cell from (p, rho): the ideal value where fully ionised, else the pressure- indexed table of the method.  <br /></td></tr>
 <tr class="memitem:a3dbd6cc36fa05cf81b353ebec89e3b7c" id="r_a3dbd6cc36fa05cf81b353ebec89e3b7c"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dbd6cc36fa05cf81b353ebec89e3b7c">p_nh_from_eint</a> (log_nh, log_eint_nh)</td></tr>
-<tr class="memdesc:a3dbd6cc36fa05cf81b353ebec89e3b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">p/nH from (log10 nH, log10 eint/nH) in code units. Returns (1+He+y)*T directly &ndash; single lookup replaces T + y lookups.  <br /></td></tr>
+<tr class="memdesc:a3dbd6cc36fa05cf81b353ebec89e3b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">p/nH = (1 + He + y) T from (log10 nH, log10 eint/nH)  <br /></td></tr>
 <tr class="memitem:a6f13cf75af7de7e50bf276ccc566f901" id="r_a6f13cf75af7de7e50bf276ccc566f901"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f13cf75af7de7e50bf276ccc566f901">eint_nh_from_t</a> (log_nh, log_t)</td></tr>
-<tr class="memdesc:a6f13cf75af7de7e50bf276ccc566f901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal energy per nH from (log10 nH, log10 T) in code units. Uses the bisection-built inverse table (H+He, machine precision). Fallback: H-only Saha if table not built.  <br /></td></tr>
+<tr class="memdesc:a6f13cf75af7de7e50bf276ccc566f901"><td class="mdescLeft">&#160;</td><td class="mdescRight">eint/nH from (log10 nH, log10 T), from the inverse table when one is built and the Saha solve otherwise  <br /></td></tr>
 <tr class="memitem:a7155ab3b6d02fbd6ebe09c3ae80f50bb" id="r_a7155ab3b6d02fbd6ebe09c3ae80f50bb"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7155ab3b6d02fbd6ebe09c3ae80f50bb">eint_from_p_bisect</a> (log_nh_val, log_p_val, log_eint_nh_out)</td></tr>
 <tr class="memdesc:a7155ab3b6d02fbd6ebe09c3ae80f50bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given log10(nH) and log10(p), find log10(eint/nH) by table-guessed bisection on the forward pressure table. Wraps the bracketing logic and log_p_bisect_cached into a single call for use by both HD and MHD from_conserved routines.  <br /></td></tr>
 <tr class="memitem:aba25e77fd2560dad035795115a1da4b7" id="r_aba25e77fd2560dad035795115a1da4b7"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba25e77fd2560dad035795115a1da4b7">eos_get_eintt_grid</a> (n_nh, lg_nh_min, lg_nh_max)</td></tr>
 <tr class="memdesc:aba25e77fd2560dad035795115a1da4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">####################################################################### Table-metadata helpers: expose inverse-table grid bounds without reaching into EoS table internals. #######################################################################  <br /></td></tr>
+<tr class="memitem:ae17e076260b52aff941390039e0b33a5" id="r_ae17e076260b52aff941390039e0b33a5"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae17e076260b52aff941390039e0b33a5">lte_p_from_eint</a> (eint_val, nh_val, log_nh_val, inv_rho)</td></tr>
+<tr class="memdesc:ae17e076260b52aff941390039e0b33a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">LTE pressure from internal energy in one cell: ideal without ionE, else the table floor, the FI bypass or p(nH, eint). log_nH_val is read only with ionE.  <br /></td></tr>
+<tr class="memitem:a24be814feadbac7910239751937805f8" id="r_a24be814feadbac7910239751937805f8"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24be814feadbac7910239751937805f8">lte_eint_from_p</a> (pres, nh_val, log_nh_val, rho_val)</td></tr>
+<tr class="memdesc:a24be814feadbac7910239751937805f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">LTE internal energy from pressure in one cell: FI bypass, else eint(nH, p).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>LTE (Saha-table) EoS kernels and finalise for the eos% family. </p>
@@ -142,16 +148,16 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Given log10(nH) and log10(p), find log10(eint/nH) by table-guessed bisection on the forward pressure table. Wraps the bracketing logic and log_p_bisect_cached into a single call for use by both HD and MHD from_conserved routines. </p>
-<p>eint-axis limits. var2_min/var2_max are populated for uniform tables only; with an adaptive (non-uniform) log_p table they are meaningless, so the guess/bracket clamps below let log_eint run out of range -&gt; out-of-bounds stencil load in bicubic_lookup (SIGSEGV at init). log_p_bisect_cached already branches on is_uniform; this wrapper did not.</p>
+<p>eint-axis limits: var2_min/var2_max are set for uniform tables only, so an adaptive log_p table takes its end nodes, which keeps the clamps below inside the bicubic stencil</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00758">758</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00728">728</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__lte_a7155ab3b6d02fbd6ebe09c3ae80f50bb_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_a7155ab3b6d02fbd6ebe09c3ae80f50bb_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__eos__lte_a7155ab3b6d02fbd6ebe09c3ae80f50bb_cgraph" id="anamespacemod__eos__lte_a7155ab3b6d02fbd6ebe09c3ae80f50bb_cgraph">
 <area shape="rect" title="Given log10(nH) and log10(p), find log10(eint/nH) by table&#45;guessed bisection on the forward pressure ..." alt="" coords="5,5,181,50"/>
-<area shape="rect" href="namespacemod__eos__lte.html#a4a9da8961173fdb2bd397004a5c543ce" title="Pressure&#45;to&#45;eint ratio from (log10 nH, log10 p/nH) in code units. Dispatches: analytic &#45;&gt; Saha solve ..." alt="" coords="229,5,382,50"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a4a9da8961173fdb2bd397004a5c543ce" title="Ratio eint/p from (log10 nH, log10 p/nH)." alt="" coords="229,5,382,50"/>
 <area shape="poly" title=" " alt="" coords="181,25,216,27,211,28,181,30"/>
 </map>
 </div>
@@ -177,19 +183,17 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Internal energy per nH from (log10 nH, log10 T) in code units. Uses the bisection-built inverse table (H+He, machine precision). Fallback: H-only Saha if table not built. </p>
+<p>eint/nH from (log10 nH, log10 T), from the inverse table when one is built and the Saha solve otherwise </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00536">536</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00510">510</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__lte_a6f13cf75af7de7e50bf276ccc566f901_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_a6f13cf75af7de7e50bf276ccc566f901_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__eos__lte_a6f13cf75af7de7e50bf276ccc566f901_cgraph" id="anamespacemod__eos__lte_a6f13cf75af7de7e50bf276ccc566f901_cgraph">
-<area shape="rect" title="Internal energy per nH from (log10 nH, log10 T) in code units. Uses the bisection&#45;built inverse table..." alt="" coords="5,40,166,85"/>
-<area shape="rect" href="namespacemod__eos__lte__entropy.html#a0b6ed1ef1e78d8d5b7362c24d99aad34" title="Inverse: log10(eint/nH) from (log nH, log T). Single bicubic Hermite eval of the eintT table." alt="" coords="214,5,398,50"/>
-<area shape="poly" title=" " alt="" coords="165,47,201,44,196,45,167,52"/>
-<area shape="rect" href="namespacemod__lookup__table.html#ab0ad52148ce35bc3631ed25345d51347" title="Binary search of sorted list for the smallest ix such that list(ix) &gt;= val. On failure,..." alt="" coords="220,75,392,119"/>
-<area shape="poly" title=" " alt="" coords="166,72,207,81,202,81,166,78"/>
+<area shape="rect" title="eint/nH from (log10 nH, log10 T), from the inverse table when one is built and the Saha solve otherwi..." alt="" coords="5,5,166,50"/>
+<area shape="rect" href="namespacemod__lookup__table.html#ab0ad52148ce35bc3631ed25345d51347" title="Binary search of sorted list for the smallest ix such that list(ix) &gt;= val. On failure,..." alt="" coords="214,5,386,50"/>
+<area shape="poly" title=" " alt="" coords="166,25,201,27,196,28,166,30"/>
 </map>
 </div>
 
@@ -207,26 +211,28 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per-method finaliser, each owned by its method module (analytic-&gt;<a class="el" href="namespacemod__eos__lte__saha.html" title="Analytic H-only Saha EoS (eos_method == &#39;analytic&#39;).">mod_eos_lte_saha</a>, entropy-&gt;<a class="el" href="namespacemod__eos__lte__entropy.html" title="Entropy-method LTE EoS: every query is ONE bicubic Hermite evaluation.">mod_eos_lte_entropy</a>, tables-&gt;<a class="el" href="namespacemod__eos__lte__tables.html" title="Shared LTE lookup-table infrastructure (build/IO; not on the hot path).">mod_eos_lte_tables</a>). </p>
+<p>LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per-method finaliser, each owned by its method module (analytic-&gt;<a class="el" href="namespacemod__eos__lte__saha.html" title="Analytic hydrogen Saha EoS with neutral helium (eos_method == &#39;analytic&#39;).">mod_eos_lte_saha</a>, entropy-&gt;<a class="el" href="namespacemod__eos__lte__entropy.html" title="Entropy-method LTE EoS: every query is ONE bicubic Hermite evaluation.">mod_eos_lte_entropy</a>, tables-&gt;<a class="el" href="namespacemod__eos__lte__tables.html" title="Shared LTE lookup-table infrastructure (build/IO; not on the hot path).">mod_eos_lte_tables</a>). </p>
 <p>R-factor: physics-independent (cached-Ne lookup), bound here rather than in the hd/mhd/ffhd link arms so the target stays private.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00059">59</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00060">60</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__lte_a4ff7bd5cd303ffed8c560ec611fe24dc_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_a4ff7bd5cd303ffed8c560ec611fe24dc_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__eos__lte_a4ff7bd5cd303ffed8c560ec611fe24dc_cgraph" id="anamespacemod__eos__lte_a4ff7bd5cd303ffed8c560ec611fe24dc_cgraph">
-<area shape="rect" title="LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per..." alt="" coords="5,152,219,180"/>
-<area shape="rect" href="namespacemod__eos__lte__saha.html#a0d63c9614df050a85d86a3dcf29dbe56" title="Analytic&#45;method finalise (H&#45;only Saha): no table unit conversion needed; build the Gamma1 table only ..." alt="" coords="267,5,464,50"/>
-<area shape="poly" title=" " alt="" coords="129,150,188,107,265,60,281,55,277,58,268,65,191,111,133,154"/>
+<area shape="rect" title="LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per..." alt="" coords="5,187,219,215"/>
+<area shape="rect" href="namespacemod__eos__lte__saha.html#a0d63c9614df050a85d86a3dcf29dbe56" title="Analytic&#45;method finalise: no table unit conversion needed; build the Gamma1 table only for &#39;exact&#39; mo..." alt="" coords="267,5,464,50"/>
+<area shape="poly" title=" " alt="" coords="123,185,181,126,221,91,265,60,278,55,274,59,268,65,224,95,185,130,127,189"/>
 <area shape="rect" href="namespacemod__eos__lte__entropy.html#a7c88e88863af72fb5439071533ce39f3" title="Entropy&#45;method finalise: shift each loaded table&#39;s axes from CGS to code units and run the standard p..." alt="" coords="285,75,446,119"/>
-<area shape="poly" title=" " alt="" coords="164,150,272,121,268,125,166,154"/>
+<area shape="poly" title=" " alt="" coords="142,184,266,129,285,124,281,127,268,134,144,189"/>
 <area shape="rect" href="namespacemod__eos__lte__state.html#a3ca5cc61ff895ba76b9c551ef8a7a5b6" title="Table&#45;based method finalise: shift the loaded T/neOnH (and ionE&#45;derived) tables to code units,..." alt="" coords="289,144,442,189"/>
-<area shape="poly" title=" " alt="" coords="219,164,276,165,271,167,220,169"/>
-<area shape="rect" href="namespacemod__eos__lte.html#ad1e325f142fa31bedb6a09fc519d7061" title="Temperature from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic &#45;&gt; Saha bisection/Newt..." alt="" coords="288,213,443,258"/>
-<area shape="poly" title=" " alt="" coords="165,178,275,209,270,212,165,183"/>
-<area shape="rect" href="namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="####################################################################### Scalar EoS kernels: pointwise..." alt="" coords="286,283,444,327"/>
-<area shape="poly" title=" " alt="" coords="132,178,191,222,268,268,282,277,276,276,265,273,188,226,131,183"/>
+<area shape="poly" title=" " alt="" coords="217,184,276,177,271,180,219,189"/>
+<area shape="rect" href="namespacemod__eos__lte__saha.html#a66c038b79273b7311fe23600001948be" title="Temperature and ionisation fraction from (nH, eint/nH) in code units, by bisection." alt="" coords="275,213,456,258"/>
+<area shape="poly" title=" " alt="" coords="217,213,261,220,256,222,218,218"/>
+<area shape="rect" href="namespacemod__eos__lte.html#ad1e325f142fa31bedb6a09fc519d7061" title="Temperature from (log10 nH, log10 eint/nH)." alt="" coords="288,283,443,327"/>
+<area shape="poly" title=" " alt="" coords="143,213,268,268,286,277,281,277,266,273,143,218"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="Scalar EoS kernels: one cell on (log10 nH, log10 eint/nH) or (log10 nH, log10 p/nH),..." alt="" coords="286,352,444,397"/>
+<area shape="poly" title=" " alt="" coords="126,213,185,272,224,307,268,337,279,345,273,345,265,342,221,311,181,276,125,218"/>
 </map>
 </div>
 
@@ -259,7 +265,7 @@ Here is the call graph for this function:</div>
 <p>####################################################################### Table-metadata helpers: expose inverse-table grid bounds without reaching into EoS table internals. ####################################################################### </p>
 <p>log_nH grid metadata of the (log_nH, log_T) inverse table (eint from T), choosing the container by method ('tables'-&gt;eint_from_T, 'entropy'-&gt;eintT). n_nH=0 if no such table (analytic/FI). Lets cooling's build_Y_mod_table get its grid without reaching into EoS table internals. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00826">826</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00794">794</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>
@@ -275,10 +281,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>update_eos_LTE, get_Te_LTE, get_temperature_from_eint_LTE and Rfactor_from_LTE are PRIVATE: all bound to eos% pointers inside eos_finalise_LTE, so no external module names them. get_temperature_from_eint_fast_LTE stays public &ndash; the seam binds it to tc_flget_temperature_from_eint (fast TC path). </p>
+<p>update_eos_LTE, get_Te_LTE, get_temperature_from_eint_LTE and Rfactor_from_LTE are PRIVATE: all bound to eos% pointers inside eos_finalise_LTE, so no external module names them. get_temperature_from_eint_fast_LTE stays public &ndash; the seam binds it to tc_flget_temperature_ciso2_from_eint (fast TC path, optional p/rho) </p>
 <p>Scalar table kernels (re-exported by <a class="el" href="namespacemod__eos.html" title="Equation of state for AMRVAC, handled through a single eos_container object.">mod_eos</a> for the hd/mhd/ffhd seams). T_and_y_from_nH_eint is internal-only (entropy update path). LTE arms of the eos_init / eos_finalise dispatchers LTE arm of eos_init (before units are known): dispatch on eos_method to the chosen method's loader, each owned by its method module (analytic loads nothing). The LTE temperature-from-pressure getter is a later pass, so unlike FI/PI it is left unset here. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00047">47</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00048">48</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -315,24 +321,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Gamma_1 from pressure-indexed table: (log10 nH, log10 p/nH) -&gt; Gamma_1. For 'entropy' the conversion p -&gt; eint -&gt; Gamma_1 via formula is intended to keep Maxwell consistency with the forward at runtime. The p-&gt;eint inverse is one bisection per cell &ndash; non-trivial cost; this function is in the hot path via hd_get_csound2_LTE. </p>
+<p>Gamma_1 from (log10 nH, log10 p/nH), one lookup on the pressure-indexed table. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00492">492</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemod__eos__lte_ac730b189d6c6880f51a5d2f17745e9e5_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_ac730b189d6c6880f51a5d2f17745e9e5_cgraph" loading="lazy" alt=""/></div>
-<map name="anamespacemod__eos__lte_ac730b189d6c6880f51a5d2f17745e9e5_cgraph" id="anamespacemod__eos__lte_ac730b189d6c6880f51a5d2f17745e9e5_cgraph">
-<area shape="rect" title="Gamma_1 from pressure&#45;indexed table: (log10 nH, log10 p/nH) &#45;&gt; Gamma_1. For &#39;entropy&#39; the conversion ..." alt="" coords="5,5,176,50"/>
-<area shape="rect" href="namespacemod__eos__lte__entropy.html#a8a73d4054341c0598653743005dcddb7" title="Inverse: Gamma_1 from (log nH, log p/nH). Bicubic Hermite of g1p." alt="" coords="224,5,444,50"/>
-<area shape="poly" title=" " alt="" coords="176,25,211,27,205,28,176,30"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00462">462</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>
-<a id="a7eb2db76bedf9e4a2749ac95f164028c" name="a7eb2db76bedf9e4a2749ac95f164028c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7eb2db76bedf9e4a2749ac95f164028c">&#9670;&#160;</a></span>get_temperature_from_eint_fast_lte()</h2>
+<a id="a4912e47a9d0027c6036c907ed733dffe" name="a4912e47a9d0027c6036c907ed733dffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4912e47a9d0027c6036c907ed733dffe">&#9670;&#160;</a></span>get_temperature_from_eint_fast_lte()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -370,7 +366,12 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s), intent(out)</td>          <td class="paramname"><span class="paramname"><em>res</em></span>&#160;)</td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(out)</td>          <td class="paramname"><span class="paramname"><em>res</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(out), optional</td>          <td class="paramname"><span class="paramname"><em>ciso2</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -381,43 +382,171 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <p>Pass 1 (vectorised): compute FI formula for ALL cells as array ops. The compiler vectorises this with SVML (no branches, pure arithmetic).</p>
-<p>Pass 2 (scalar): overwrite ionisation-zone cells with bilinear table lookup + dexp. Threshold check uses multiply (eint &lt;= threshold * rho) to avoid a 14-cycle scalar division.</p><dl class="params"><dt>Parameters</dt><dd>
+<p>Pass 2 (scalar): overwrite ionisation-zone cells with bilinear table lookup + dexp. Threshold check uses multiply (eint &lt;= threshold * rho) to avoid a 14-cycle scalar division. With ciso2 present it also returns p/rho = (1 + He + y) T / nH2rhoFactor at the current eint</p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>Fast TC variant: two-pass regime-aware bypass.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Pass 1 (vectorised): compute FI formula for ALL cells as array ops. The compiler vectorises this with SVML (no branches, pure arithmetic).</p>
-<p>Pass 2 (scalar): overwrite ionisation-zone cells with bilinear table lookup + dexp. Threshold check uses multiply (eint &lt;= threshold * rho) to avoid a 14-cycle scalar division.</p><dl class="params"><dt>Parameters</dt><dd>
+<p>Pass 2 (scalar): overwrite ionisation-zone cells with bilinear table lookup + dexp. Threshold check uses multiply (eint &lt;= threshold * rho) to avoid a 14-cycle scalar division. With ciso2 present it also returns p/rho = (1 + He + y) T / nH2rhoFactor at the current eint</p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ixo</td><td>Fast TC variant: two-pass regime-aware bypass.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Pass 1 (vectorised): compute FI formula for ALL cells as array ops. The compiler vectorises this with SVML (no branches, pure arithmetic).</p>
-<p>Pass 2 (scalar): overwrite ionisation-zone cells with bilinear table lookup + dexp. Threshold check uses multiply (eint &lt;= threshold * rho) to avoid a 14-cycle scalar division.</p><dl class="params"><dt>Parameters</dt><dd>
+<p>Pass 2 (scalar): overwrite ionisation-zone cells with bilinear table lookup + dexp. Threshold check uses multiply (eint &lt;= threshold * rho) to avoid a 14-cycle scalar division. With ciso2 present it also returns p/rho = (1 + He + y) T / nH2rhoFactor at the current eint</p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>Fast TC variant: two-pass regime-aware bypass.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Pass 1 (vectorised): compute FI formula for ALL cells as array ops. The compiler vectorises this with SVML (no branches, pure arithmetic).</p>
-<p>Pass 2 (scalar): overwrite ionisation-zone cells with bilinear table lookup + dexp. Threshold check uses multiply (eint &lt;= threshold * rho) to avoid a 14-cycle scalar division. </p>
+<p>Pass 2 (scalar): overwrite ionisation-zone cells with bilinear table lookup + dexp. Threshold check uses multiply (eint &lt;= threshold * rho) to avoid a 14-cycle scalar division. With ciso2 present it also returns p/rho = (1 + He + y) T / nH2rhoFactor at the current eint </p>
 <p>Precompute scalar constants (avoid per-cell divisions)</p>
 <p>Pass 1: FI formula for ALL cells (vectorisable array operations). T = (gamma-1) * (eint - eion_per_rho * rho) / (Rfactor_FI * rho)</p>
 <p>Pass 2: overwrite ionisation-zone cells.</p>
 <p>Inlined uniform bilinear (hot path: no function call).</p>
 <p>Non-uniform: dispatch to the binary-search bilinear. Slightly slower per cell (binary search adds ~8 cmps per axis) but unavoidable when the grid is non-uniform.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00265">265</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00244">244</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__eos__lte_a7eb2db76bedf9e4a2749ac95f164028c_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_a7eb2db76bedf9e4a2749ac95f164028c_cgraph" loading="lazy" alt=""/></div>
-<map name="anamespacemod__eos__lte_a7eb2db76bedf9e4a2749ac95f164028c_cgraph" id="anamespacemod__eos__lte_a7eb2db76bedf9e4a2749ac95f164028c_cgraph">
+<div class="center"><img src="namespacemod__eos__lte_a4912e47a9d0027c6036c907ed733dffe_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_a4912e47a9d0027c6036c907ed733dffe_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__eos__lte_a4912e47a9d0027c6036c907ed733dffe_cgraph" id="anamespacemod__eos__lte_a4912e47a9d0027c6036c907ed733dffe_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,227,50"/>
-<area shape="rect" href="namespacemod__eos__lte__entropy.html#a6a9b182e03e2bfcab5eb3c6b0aba6f7e" title="Public wrappers – code&#45;unit out." alt="" coords="275,5,459,50"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="Scalar EoS kernels: one cell on (log10 nH, log10 eint/nH) or (log10 nH, log10 p/nH),..." alt="" coords="275,5,433,50"/>
 <area shape="poly" title=" " alt="" coords="227,25,262,28,256,28,227,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a24be814feadbac7910239751937805f8" name="a24be814feadbac7910239751937805f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24be814feadbac7910239751937805f8">&#9670;&#160;</a></span>lte_eint_from_p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision function, public mod_eos_lte::lte_eint_from_p </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>pres</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>nh_val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>log_nh_val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>rho_val</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LTE internal energy from pressure in one cell: FI bypass, else eint(nH, p). </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00835">835</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__eos__lte_a24be814feadbac7910239751937805f8_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_a24be814feadbac7910239751937805f8_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__eos__lte_a24be814feadbac7910239751937805f8_cgraph" id="anamespacemod__eos__lte_a24be814feadbac7910239751937805f8_cgraph">
+<area shape="rect" title="LTE internal energy from pressure in one cell: FI bypass, else eint(nH, p)." alt="" coords="5,36,167,81"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a7155ab3b6d02fbd6ebe09c3ae80f50bb" title="Given log10(nH) and log10(p), find log10(eint/nH) by table&#45;guessed bisection on the forward pressure ..." alt="" coords="215,5,390,50"/>
+<area shape="poly" title=" " alt="" coords="166,44,202,42,196,43,167,50"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a4a9da8961173fdb2bd397004a5c543ce" title="Ratio eint/p from (log10 nH, log10 p/nH)." alt="" coords="438,36,591,81"/>
+<area shape="poly" title=" " alt="" coords="167,59,215,60,390,60,425,62,420,62,390,65,215,65,167,64"/>
+<area shape="poly" title=" " alt="" coords="390,38,425,45,420,45,390,43"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abceab0626ab5a60ff80b859e7dc3906e" name="abceab0626ab5a60ff80b859e7dc3906e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abceab0626ab5a60ff80b859e7dc3906e">&#9670;&#160;</a></span>lte_gamma1_from_p()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision function, public mod_eos_lte::lte_gamma1_from_p </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>pres</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>rho_val</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gamma_1 of one cell from (p, rho): the ideal value where fully ionised, else the pressure- indexed table of the method. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00474">474</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__eos__lte_abceab0626ab5a60ff80b859e7dc3906e_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_abceab0626ab5a60ff80b859e7dc3906e_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__eos__lte_abceab0626ab5a60ff80b859e7dc3906e_cgraph" id="anamespacemod__eos__lte_abceab0626ab5a60ff80b859e7dc3906e_cgraph">
+<area shape="rect" title="Gamma_1 of one cell from (p, rho): the ideal value where fully ionised, else the pressure&#45; indexed ta..." alt="" coords="5,5,200,50"/>
+<area shape="rect" href="namespacemod__eos__lte.html#ac730b189d6c6880f51a5d2f17745e9e5" title="Gamma_1 from (log10 nH, log10 p/nH), one lookup on the pressure&#45;indexed table." alt="" coords="248,5,418,50"/>
+<area shape="poly" title=" " alt="" coords="200,25,235,27,230,28,200,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae17e076260b52aff941390039e0b33a5" name="ae17e076260b52aff941390039e0b33a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae17e076260b52aff941390039e0b33a5">&#9670;&#160;</a></span>lte_p_from_eint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision function, public mod_eos_lte::lte_p_from_eint </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>eint_val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>nh_val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>log_nh_val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>inv_rho</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LTE pressure from internal energy in one cell: ideal without ionE, else the table floor, the FI bypass or p(nH, eint). log_nH_val is read only with ionE. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00816">816</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__eos__lte_ae17e076260b52aff941390039e0b33a5_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_ae17e076260b52aff941390039e0b33a5_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__eos__lte_ae17e076260b52aff941390039e0b33a5_cgraph" id="anamespacemod__eos__lte_ae17e076260b52aff941390039e0b33a5_cgraph">
+<area shape="rect" title="LTE pressure from internal energy in one cell: ideal without ionE, else the table floor,..." alt="" coords="5,5,150,50"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a3dbd6cc36fa05cf81b353ebec89e3b7c" title="p/nH = (1 + He + y) T from (log10 nH, log10 eint/nH)" alt="" coords="198,14,411,42"/>
+<area shape="poly" title=" " alt="" coords="150,25,185,27,180,28,150,30"/>
 </map>
 </div>
 
@@ -442,19 +571,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Pressure-to-eint ratio from (log10 nH, log10 p/nH) in code units. Dispatches: analytic -&gt; Saha solve for eint/p, tables -&gt; PCHIP interpolation. </p>
+<p>Ratio eint/p from (log10 nH, log10 p/nH). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00460">460</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemod__eos__lte_a4a9da8961173fdb2bd397004a5c543ce_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_a4a9da8961173fdb2bd397004a5c543ce_cgraph" loading="lazy" alt=""/></div>
-<map name="anamespacemod__eos__lte_a4a9da8961173fdb2bd397004a5c543ce_cgraph" id="anamespacemod__eos__lte_a4a9da8961173fdb2bd397004a5c543ce_cgraph">
-<area shape="rect" title="Pressure&#45;to&#45;eint ratio from (log10 nH, log10 p/nH) in code units. Dispatches: analytic &#45;&gt; Saha solve ..." alt="" coords="5,5,159,50"/>
-<area shape="rect" href="namespacemod__eos__lte__entropy.html#aa5897be54cd252b89fa14c22c826a3df" title="Inverse: log10(eint/nH) from (log nH, log p/nH). Single bicubic Hermite eval of the eintP table...." alt="" coords="207,5,394,50"/>
-<area shape="poly" title=" " alt="" coords="159,25,194,27,188,28,159,30"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00437">437</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>
@@ -477,19 +596,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>p/nH from (log10 nH, log10 eint/nH) in code units. Returns (1+He+y)*T directly &ndash; single lookup replaces T + y lookups. </p>
+<p>p/nH = (1 + He + y) T from (log10 nH, log10 eint/nH) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00515">515</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemod__eos__lte_a3dbd6cc36fa05cf81b353ebec89e3b7c_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_a3dbd6cc36fa05cf81b353ebec89e3b7c_cgraph" loading="lazy" alt=""/></div>
-<map name="anamespacemod__eos__lte_a3dbd6cc36fa05cf81b353ebec89e3b7c_cgraph" id="anamespacemod__eos__lte_a3dbd6cc36fa05cf81b353ebec89e3b7c_cgraph">
-<area shape="rect" title="p/nH from (log10 nH, log10 eint/nH) in code units. Returns (1+He+y)*T directly – single lookup replac..." alt="" coords="5,14,219,42"/>
-<area shape="rect" href="namespacemod__eos__lte__entropy.html#a21f1ad5ba5a26b7d02f9235d25e509f9" title=" " alt="" coords="267,5,454,50"/>
-<area shape="poly" title=" " alt="" coords="219,25,254,28,248,28,219,30"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00492">492</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>
@@ -512,21 +621,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Temperature from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic -&gt; Saha bisection/Newton, tables -&gt; PCHIP interpolation. </p>
+<p>Temperature from (log10 nH, log10 eint/nH). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00390">390</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemod__eos__lte_ad1e325f142fa31bedb6a09fc519d7061_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_ad1e325f142fa31bedb6a09fc519d7061_cgraph" loading="lazy" alt=""/></div>
-<map name="anamespacemod__eos__lte_ad1e325f142fa31bedb6a09fc519d7061_cgraph" id="anamespacemod__eos__lte_ad1e325f142fa31bedb6a09fc519d7061_cgraph">
-<area shape="rect" title="Temperature from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic &#45;&gt; Saha bisection/Newt..." alt="" coords="5,52,161,97"/>
-<area shape="rect" href="namespacemod__eos__lte__entropy.html#a96ef8d86882b4474a8082020184da9fc" title="Forward: T and y from (log nH, log eint/nH) – combined for the update_eos_LTE hot path that needs bot..." alt="" coords="213,5,388,67"/>
-<area shape="poly" title=" " alt="" coords="160,59,200,54,195,55,162,64"/>
-<area shape="rect" href="namespacemod__eos__lte__entropy.html#a6a9b182e03e2bfcab5eb3c6b0aba6f7e" title="Public wrappers – code&#45;unit out." alt="" coords="209,91,393,136"/>
-<area shape="poly" title=" " alt="" coords="161,86,196,94,191,95,161,91"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00378">378</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>
@@ -549,20 +646,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>####################################################################### Scalar EoS kernels: pointwise lookups on (log10 nH, log10 eint/nH) or (log10 nH, log10 p/nH) in code units, called by the hd/mhd EoS layer. Each dispatches analytic / entropy / table. Ionisation fraction and temperature first, then pressure / Gamma_1 / eint. ####################################################################### </p>
-<p>Ionization fraction from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic -&gt; Saha quadratic, tables -&gt; PCHIP interpolation. </p>
+<p>Scalar EoS kernels: one cell on (log10 nH, log10 eint/nH) or (log10 nH, log10 p/nH), in code units, each dispatching to the analytic Saha solve, the entropy tables or the tables. </p>
+<p>Ionisation fraction ne/nH from (log10 nH, log10 eint/nH) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00363">363</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemod__eos__lte_a751d9926470ec56007930115bf5b7875_cgraph.png" border="0" usemap="#anamespacemod__eos__lte_a751d9926470ec56007930115bf5b7875_cgraph" loading="lazy" alt=""/></div>
-<map name="anamespacemod__eos__lte_a751d9926470ec56007930115bf5b7875_cgraph" id="anamespacemod__eos__lte_a751d9926470ec56007930115bf5b7875_cgraph">
-<area shape="rect" title="####################################################################### Scalar EoS kernels: pointwise..." alt="" coords="5,5,164,50"/>
-<area shape="rect" href="namespacemod__eos__lte__entropy.html#aa1eae88d6d9a6a147b2a657149e58fd6" title="Forward: ne/nH from (log nH, log eint/nH). Single bicubic Hermite eval of the neOnH table." alt="" coords="212,5,399,50"/>
-<area shape="poly" title=" " alt="" coords="164,25,199,27,193,28,164,30"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00355">355</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>

@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_solvers::rt_exchange" name="mod_rt_sc_solvers::rt_exchange">
+<area shape="rect" id="Node000001" title="Ghost exchange of the nslot intensity columns of ps_rt from i_isw, with the physical boundaries left ..." alt="" coords="5,5,156,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="204,5,379,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,25,191,27,185,28,156,30"/>
+</map>

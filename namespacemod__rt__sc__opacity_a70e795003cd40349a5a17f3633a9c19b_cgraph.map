@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_opacity::read_opacity_table" name="mod_rt_sc_opacity::read_opacity_table">
+<area shape="rect" id="Node000001" title="Read the Rosseland table and shift it to code units. The file is in cgs, with T in K and R = rho/T6^3..." alt="" coords="5,5,156,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="204,14,386,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,25,191,27,185,28,156,30"/>
+</map>

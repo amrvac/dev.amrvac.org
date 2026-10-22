@@ -1,5 +1,11 @@
 <map id="mod_hd_phys::hd_get_csound2" name="mod_hd_phys::hd_get_csound2">
-<area shape="rect" id="Node000001" title="Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pther..." alt="" coords="5,5,169,50"/>
-<area shape="rect" id="Node000002" href="$namespacemod__eos__lte.html#ac730b189d6c6880f51a5d2f17745e9e5" title="Gamma_1 from pressure&#45;indexed table: (log10 nH, log10 p/nH) &#45;&gt; Gamma_1. For &#39;entropy&#39; the conversion ..." alt="" coords="217,5,387,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,25,204,27,198,28,169,30"/>
+<area shape="rect" id="Node000001" title="Calculate the square of the thermal sound speed csound2 within ixO^L. For conserved w: extracts pther..." alt="" coords="5,96,169,141"/>
+<area shape="rect" id="Node000002" href="$namespacemod__timing.html#a54d2dfdac7cad9a75aabb2c4d76701a6" title="Open an EoS timing window; inside an OpenMP parallel region the EoS is not timed." alt="" coords="234,5,406,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,93,216,60,237,54,232,57,218,65,139,98"/>
+<area shape="rect" id="Node000003" href="$namespacemod__timing.html#ae1ece5454e5113c14051a4994198f989" title="Close an EoS timing window, adding its time to acc when it is the outermost." alt="" coords="217,74,424,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,105,203,102,198,105,170,110"/>
+<area shape="rect" id="Node000004" href="$namespacemod__eos__lte.html#abceab0626ab5a60ff80b859e7dc3906e" title="Gamma_1 of one cell from (p, rho): the ideal value where fully ionised, else the pressure&#45; indexed ta..." alt="" coords="223,125,418,170"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,126,210,133,205,134,169,131"/>
+<area shape="rect" id="Node000006" href="$namespacemod__eos__lte.html#ae17e076260b52aff941390039e0b33a5" title="LTE pressure from internal energy in one cell: ideal without ionE, else the table floor,..." alt="" coords="248,195,392,239"/>
+<area shape="poly" id="edge4_Node000001_Node000006" title=" " alt="" coords="131,139,218,180,236,189,231,189,216,185,130,144"/>
 </map>

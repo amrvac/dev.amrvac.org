@@ -1,5 +1,7 @@
 <map id="mod_errest::errest" name="mod_errest::errest">
-<area shape="rect" id="Node000001" title="Do all local error estimation which determines (de)refinement." alt="" coords="5,5,147,33"/>
+<area shape="rect" id="Node000001" title="Do all local error estimation which determines (de)refinement." alt="" coords="5,36,147,64"/>
 <area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="195,5,377,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,17,182,19,176,19,147,22"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,37,182,34,177,36,148,42"/>
+<area shape="rect" id="Node000003" href="$namespacemod__rt__sc__slab.html#aac130c11bbcb7c188738c19be71ed7c2" title="Hold every block overlapping an RT band on rt_sc_amr_level. Called from forcedrefine_grid after usr_r..." alt="" coords="216,57,356,102"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,57,203,67,198,68,147,62"/>
 </map>

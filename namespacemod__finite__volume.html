@@ -404,7 +404,6 @@ Here is the call graph for this function:</div>
 
 <p>Determine the upwinded wLC(ixL) and wRC(ixR) from w. the wCT is only used when PPM is exploited. </p>
 <p>RJV: the PPM reconstruction residual and the alternation switch</p>
-<p>scratch for a face-value velocity limiter (weno5/wenoz5/mp5): those routines write every variable at once, so they are run into a copy and only the momentum rows kept. Allocated only when such a limiter is actually requested.</p>
 
 <p class="definition">Definition at line <a class="el" href="mod__finite__volume_8t_source.html#l01160">1160</a> of file <a class="el" href="mod__finite__volume_8t_source.html">mod_finite_volume.t</a>.</p>
 <div class="dynheader">
@@ -412,12 +411,17 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__finite__volume_ad2db0b98318dfd688534a66f8abf9733_cgraph.png" border="0" usemap="#anamespacemod__finite__volume_ad2db0b98318dfd688534a66f8abf9733_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__finite__volume_ad2db0b98318dfd688534a66f8abf9733_cgraph" id="anamespacemod__finite__volume_ad2db0b98318dfd688534a66f8abf9733_cgraph">
-<area shape="rect" title="Determine the upwinded wLC(ixL) and wRC(ixR) from w. the wCT is only used when PPM is exploited." alt="" coords="5,22,160,67"/>
-<area shape="rect" href="namespacemod__limiter.html#a50fb37f8c6e29ff87426a51324c698dc" title="Limit the centered dwC differences within ixC for iw in direction idim. The limiter is chosen accordi..." alt="" coords="208,5,386,33"/>
-<area shape="poly" title=" " alt="" coords="160,33,195,31,190,32,161,38"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="434,31,616,58"/>
-<area shape="poly" title=" " alt="" coords="160,42,419,42,418,47,160,47"/>
-<area shape="poly" title=" " alt="" coords="386,26,421,33,416,33,386,32"/>
+<area shape="rect" title="Determine the upwinded wLC(ixL) and wRC(ixR) from w. the wCT is only used when PPM is exploited." alt="" coords="5,85,160,130"/>
+<area shape="rect" href="namespacemod__limiter.html#a50fb37f8c6e29ff87426a51324c698dc" title="Limit the centered dwC differences within ixC for iw in direction idim. The limiter is chosen accordi..." alt="" coords="210,5,388,33"/>
+<area shape="poly" title=" " alt="" coords="130,82,207,49,243,37,238,40,209,54,133,87"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="439,31,621,58"/>
+<area shape="poly" title=" " alt="" coords="160,94,424,57,423,62,161,99"/>
+<area shape="rect" href="namespacemod__timing.html#aeb77f6de080f9195bfeb44302d18a6c9" title="Wall time since timer_open, less the EoS and ghost&#45;cell time spent in between." alt="" coords="208,131,391,158"/>
+<area shape="poly" title=" " alt="" coords="160,118,202,127,197,128,160,123"/>
+<area shape="rect" href="namespacemod__timing.html#aafe162e97fd62938133a9f8c12e5f04d" title="Open a timing window, whose length leaves out the EoS and ghost&#45;cell time spent inside it,..." alt="" coords="209,183,390,210"/>
+<area shape="poly" title=" " alt="" coords="125,127,209,167,232,178,227,178,207,172,124,133"/>
+<area shape="poly" title=" " alt="" coords="389,26,426,32,421,33,389,32"/>
+<area shape="poly" title=" " alt="" coords="262,129,256,122,261,112,276,106,299,104,325,107,340,115,335,115,323,112,299,109,277,111,264,116,261,121,267,131"/>
 </map>
 </div>
 

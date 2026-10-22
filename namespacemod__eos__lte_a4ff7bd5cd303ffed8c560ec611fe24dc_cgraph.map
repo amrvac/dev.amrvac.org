@@ -1,13 +1,15 @@
 <map id="mod_eos_lte::eos_finalise_lte" name="mod_eos_lte::eos_finalise_lte">
-<area shape="rect" id="Node000001" title="LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per..." alt="" coords="5,152,219,180"/>
-<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__saha.html#a0d63c9614df050a85d86a3dcf29dbe56" title="Analytic&#45;method finalise (H&#45;only Saha): no table unit conversion needed; build the Gamma1 table only ..." alt="" coords="267,5,464,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,150,188,107,265,60,281,55,277,58,268,65,191,111,133,154"/>
+<area shape="rect" id="Node000001" title="LTE arm of eos_finalise: wire the LTE runtime pointer targets, then dispatch on eos_method to the per..." alt="" coords="5,187,219,215"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__saha.html#a0d63c9614df050a85d86a3dcf29dbe56" title="Analytic&#45;method finalise: no table unit conversion needed; build the Gamma1 table only for &#39;exact&#39; mo..." alt="" coords="267,5,464,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,185,181,126,221,91,265,60,278,55,274,59,268,65,224,95,185,130,127,189"/>
 <area shape="rect" id="Node000004" href="$namespacemod__eos__lte__entropy.html#a7c88e88863af72fb5439071533ce39f3" title="Entropy&#45;method finalise: shift each loaded table&#39;s axes from CGS to code units and run the standard p..." alt="" coords="285,75,446,119"/>
-<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="164,150,272,121,268,125,166,154"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="142,184,266,129,285,124,281,127,268,134,144,189"/>
 <area shape="rect" id="Node000005" href="$namespacemod__eos__lte__state.html#a3ca5cc61ff895ba76b9c551ef8a7a5b6" title="Table&#45;based method finalise: shift the loaded T/neOnH (and ionE&#45;derived) tables to code units,..." alt="" coords="289,144,442,189"/>
-<area shape="poly" id="edge3_Node000001_Node000005" title=" " alt="" coords="219,164,276,165,271,167,220,169"/>
-<area shape="rect" id="Node000012" href="$namespacemod__eos__lte.html#ad1e325f142fa31bedb6a09fc519d7061" title="Temperature from (log10 nH, log10 eint/nH) in code units. Dispatches: analytic &#45;&gt; Saha bisection/Newt..." alt="" coords="288,213,443,258"/>
-<area shape="poly" id="edge4_Node000001_Node000012" title=" " alt="" coords="165,178,275,209,270,212,165,183"/>
-<area shape="rect" id="Node000015" href="$namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="####################################################################### Scalar EoS kernels: pointwise..." alt="" coords="286,283,444,327"/>
-<area shape="poly" id="edge5_Node000001_Node000015" title=" " alt="" coords="132,178,191,222,268,268,282,277,276,276,265,273,188,226,131,183"/>
+<area shape="poly" id="edge3_Node000001_Node000005" title=" " alt="" coords="217,184,276,177,271,180,219,189"/>
+<area shape="rect" id="Node000012" href="$namespacemod__eos__lte__saha.html#a66c038b79273b7311fe23600001948be" title="Temperature and ionisation fraction from (nH, eint/nH) in code units, by bisection." alt="" coords="275,213,456,258"/>
+<area shape="poly" id="edge4_Node000001_Node000012" title=" " alt="" coords="217,213,261,220,256,222,218,218"/>
+<area shape="rect" id="Node000014" href="$namespacemod__eos__lte.html#ad1e325f142fa31bedb6a09fc519d7061" title="Temperature from (log10 nH, log10 eint/nH)." alt="" coords="288,283,443,327"/>
+<area shape="poly" id="edge5_Node000001_Node000014" title=" " alt="" coords="143,213,268,268,286,277,281,277,266,273,143,218"/>
+<area shape="rect" id="Node000015" href="$namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="Scalar EoS kernels: one cell on (log10 nH, log10 eint/nH) or (log10 nH, log10 p/nH),..." alt="" coords="286,352,444,397"/>
+<area shape="poly" id="edge6_Node000001_Node000015" title=" " alt="" coords="126,213,185,272,224,307,268,337,279,345,273,345,265,342,221,311,181,276,125,218"/>
 </map>

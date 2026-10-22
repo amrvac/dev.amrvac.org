@@ -1,0 +1,32 @@
+<map id="mod_rt_sc_solvers::rt_sc_solve_wave_pipe" name="mod_rt_sc_solvers::rt_sc_solve_wave_pipe">
+<area shape="rect" id="Node000001" title="Pipelined KBA. The direction&#45;sign corners run together in batches of nisw slots, and within each corn..." alt="" coords="5,355,177,400"/>
+<area shape="rect" id="Node000002" href="$namespacemod__ghostcells__update.html#a327d9129bf4d1651e23a58a54e67f24d" title=" " alt="" coords="426,523,615,568"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,398,117,442,142,493,178,544,201,566,226,583,254,595,284,601,314,603,345,602,405,590,461,573,456,575,406,595,346,607,314,609,283,607,252,600,223,588,197,570,174,548,137,496,112,444,99,403"/>
+<area shape="rect" id="Node000004" href="$namespacemod__rt__sc__solvers.html#afb379fcb3984d7c8cdb68e2752090c27" title="Add the weighted intensity iib of ray k on block iblk to J in i_qrad, Fy in i_frad and Fx in rtw_fx." alt="" coords="226,43,376,88"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="95,354,110,303,135,235,172,163,196,129,223,98,229,95,226,99,227,102,200,132,177,166,140,237,115,304,100,355"/>
+<area shape="rect" id="Node000005" href="$namespacemod__rt__sc__solvers.html#a70b99e4471d61ebda3417e6453513374" title="Ghost exchange of the nslot intensity columns of ps_rt from i_isw, with the physical boundaries left ..." alt="" coords="446,48,596,93"/>
+<area shape="poly" id="edge3_Node000001_Node000005" title=" " alt="" coords="90,354,96,288,116,197,132,149,155,103,185,62,223,29,252,14,282,5,314,3,347,5,409,19,465,41,460,43,408,24,346,10,314,8,283,11,254,19,226,33,189,66,160,106,137,151,121,198,102,288,95,355"/>
+<area shape="rect" id="Node000024" href="$namespacemod__rt__sc__solvers.html#a6c0e9a0fdf3cb09dbddc5fd4f41f4348" title="Inflow intensity in slot islot. The ghosts beyond the band ends, and beyond the horizontal edges wher..." alt="" coords="226,182,376,226"/>
+<area shape="poly" id="edge4_Node000001_Node000024" title=" " alt="" coords="107,353,156,296,188,265,223,237,233,232,229,237,226,241,192,269,160,300,112,356"/>
+<area shape="rect" id="Node000026" href="$namespacemod__rt__sc__solvers.html#aa7149c3d88a73c2482d583229223882c" title="Seam read. At the domain edge where ray k enters, the wrapped upwind ghost column of the block takes ..." alt="" coords="226,251,376,296"/>
+<area shape="poly" id="edge5_Node000001_Node000026" title=" " alt="" coords="133,353,223,306,237,301,234,305,226,310,136,357"/>
+<area shape="rect" id="Node000027" href="$namespacemod__rt__sc__solvers.html#a60b6193ebbfbbee5361d770e86e118ad" title="Seam write. At the far domain edge the outflow of ray k is kept for the next solve...." alt="" coords="226,320,376,365"/>
+<area shape="poly" id="edge6_Node000001_Node000027" title=" " alt="" coords="175,361,213,356,209,359,178,365"/>
+<area shape="rect" id="Node000028" href="$namespacemod__rt__sc__solvers.html#a5c781b988ff03aaaa80bf00757f26df6" title="Sweep block iblk for ray k in place on iib. With updim = 1 the block is transposed around the kernel,..." alt="" coords="226,390,376,434"/>
+<area shape="poly" id="edge7_Node000001_Node000028" title=" " alt="" coords="176,389,213,396,208,399,178,394"/>
+<area shape="rect" id="Node000029" href="$namespacemod__rt__sc__solvers.html#a25c78e3c5d807238845b6b2d1fbde87c" title="Close the band. The fluxes are scaled by c_norm, Q is formed as the imbalance or as the &#45;div F blend ..." alt="" coords="225,112,378,157"/>
+<area shape="poly" id="edge8_Node000001_Node000029" title=" " alt="" coords="99,354,117,315,144,265,180,214,223,167,230,164,227,168,226,171,184,217,149,268,122,317,104,356"/>
+<area shape="rect" id="Node000032" href="$namespacemod__rt__sc__solvers.html#a54e8095d26fb8198ef09b9c40e3c8489" title="Open band ib. It lists and caches the band blocks and zeroes the accumulators." alt="" coords="226,528,377,573"/>
+<area shape="poly" id="edge11_Node000001_Node000032" title=" " alt="" coords="109,397,160,455,192,486,226,514,234,520,228,521,223,518,188,490,156,458,110,403"/>
+<area shape="rect" id="Node000035" href="$namespacemod__rt__sc__solvers.html#a402d38c4a6b647764df4508e4c54202d" title="Prologue of both KBA schedules on level rt_sc_amr_level. It checks the setup, sets the x&#45;distribution..." alt="" coords="226,648,376,693"/>
+<area shape="poly" id="edge12_Node000001_Node000035" title=" " alt="" coords="99,398,118,446,145,506,181,570,227,628,239,639,233,639,223,631,176,573,140,508,113,448,99,403"/>
+<area shape="rect" id="Node000036" href="$namespacemod__rt__sc__solvers.html#ae3fe1861ec1d76a7bbcb9612d0b09bfd" title="Epilogue. It hands the seam edges over to the next solve, restores the hydro datatype and releases th..." alt="" coords="226,459,376,504"/>
+<area shape="poly" id="edge14_Node000001_Node000036" title=" " alt="" coords="134,398,226,444,238,451,233,453,223,449,135,403"/>
+<area shape="rect" id="Node000037" href="$namespacemod__rt__sc__solvers.html#ad5abb7a3776b81b06fe39b018cdabbc7" title="Position of a block counted from the upwind end of a row of n blocks, for a ray whose cosine along th..." alt="" coords="226,742,376,786"/>
+<area shape="poly" id="edge16_Node000001_Node000037" title=" " alt="" coords="97,397,114,457,140,535,177,622,200,665,227,704,253,732,248,731,223,707,196,667,172,625,135,537,109,458,97,403"/>
+<area shape="poly" id="edge9_Node000029_Node000002" title=" " alt="" coords="364,155,380,168,412,208,439,252,461,300,479,347,504,437,517,509,512,507,499,438,474,349,457,302,434,255,408,211,376,171,364,160"/>
+<area shape="poly" id="edge10_Node000029_Node000005" title=" " alt="" coords="377,110,433,95,429,99,380,115"/>
+<area shape="poly" id="edge13_Node000035_Node000002" title=" " alt="" coords="344,645,377,627,466,577,471,575,379,632,346,650"/>
+<area shape="poly" id="edge15_Node000036_Node000002" title=" " alt="" coords="376,501,430,518,424,519,377,506"/>
+<area shape="poly" id="edge17_Node000037_Node000037" title=" " alt="" coords="261,740,260,732,267,723,281,717,301,715,324,718,339,727,334,726,323,723,301,720,282,722,270,727,265,733,266,743"/>
+</map>

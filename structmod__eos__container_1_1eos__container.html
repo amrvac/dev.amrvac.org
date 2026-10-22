@@ -116,6 +116,8 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a06d8788d9f3a212983cab569615d89fd" id="r_a06d8788d9f3a212983cab569615d89fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ace50d8a8a744a200b0c4b1604cac5306">integer</a>, dimension(set <a class="el" href="#ac2f54f1648e869fa5646467861b1d46d">at</a> init)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06d8788d9f3a212983cab569615d89fd">eos_type</a></td></tr>
 <tr class="memitem:abd1294c07dbe0986a01be21631de46f8" id="r_abd1294c07dbe0986a01be21631de46f8"><td class="memItemLeft" align="right" valign="top">character(len=20)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd1294c07dbe0986a01be21631de46f8">gamma1_method</a> = 'exact'</td></tr>
 <tr class="memitem:a36cbb451847320ea2a2a5b776ae7f6fd" id="r_a36cbb451847320ea2a2a5b776ae7f6fd"><td class="memItemLeft" align="right" valign="top">character(len=20), dimension(<a class="el" href="#a7ed0b54ad97f81f1c16a65880c7c81aa">fast</a>)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36cbb451847320ea2a2a5b776ae7f6fd">p2eint_method</a> = '<a class="el" href="#a72ca087bbb3be168df988e2381d6824d">table</a>'</td></tr>
+<tr class="memitem:ac94f584db78798b584b9a191dc0a77b9" id="r_ac94f584db78798b584b9a191dc0a77b9"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac94f584db78798b584b9a191dc0a77b9">p2eint_bisect</a> = .false.</td></tr>
+<tr class="memitem:a2b398a3862bfcdf02e36e64888818d08" id="r_a2b398a3862bfcdf02e36e64888818d08"><td class="memItemLeft" align="right" valign="top">logical, dimension(<a class="el" href="#a7ed0b54ad97f81f1c16a65880c7c81aa">fast</a>)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b398a3862bfcdf02e36e64888818d08">p2eint_method</a> == 'bisect'</td></tr>
 <tr class="memitem:a6ca29c58a8a3057e91863e43ea303c63" id="r_a6ca29c58a8a3057e91863e43ea303c63"><td class="memItemLeft" align="right" valign="top">character(len=20)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ca29c58a8a3057e91863e43ea303c63">pi_table</a> = 'chromosphere'</td></tr>
 <tr class="memitem:ae7f1805ea9023428de01bd13a7e483b7" id="r_ae7f1805ea9023428de01bd13a7e483b7"><td class="memItemLeft" align="right" valign="top">character(len=20)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7f1805ea9023428de01bd13a7e483b7">pi</a></td></tr>
 <tr class="memitem:a8ee5aa3cac9ee2650631bffca1101045" id="r_a8ee5aa3cac9ee2650631bffca1101045"><td class="memItemLeft" align="right" valign="top">character(len=20)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ee5aa3cac9ee2650631bffca1101045">backend</a></td></tr>
@@ -148,6 +150,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad902137d47300bbb16a7f78f5c1e96f4" id="r_ad902137d47300bbb16a7f78f5c1e96f4"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad902137d47300bbb16a7f78f5c1e96f4">is</a></td></tr>
 <tr class="memitem:ad6e72f3c058d506799edac59a57a31f9" id="r_ad6e72f3c058d506799edac59a57a31f9"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6e72f3c058d506799edac59a57a31f9">fully</a></td></tr>
 <tr class="memitem:a0900715f2c67980ef58fd546ad09d042" id="r_a0900715f2c67980ef58fd546ad09d042"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0900715f2c67980ef58fd546ad09d042">ionised</a> = 1 + 2*A_He</td></tr>
+<tr class="memitem:afb871b146171fcbf5ee844e73614c476" id="r_afb871b146171fcbf5ee844e73614c476"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb871b146171fcbf5ee844e73614c476">eint_nh_min</a> = 0.0d0</td></tr>
+<tr class="memitem:a239b09e6a02e4ac223193a555bea1d70" id="r_a239b09e6a02e4ac223193a555bea1d70"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a239b09e6a02e4ac223193a555bea1d70">floor</a></td></tr>
+<tr class="memitem:a54f32e3872ddb5e7897b52a0be3bb846" id="r_a54f32e3872ddb5e7897b52a0be3bb846"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54f32e3872ddb5e7897b52a0be3bb846">of</a></td></tr>
+<tr class="memitem:a4b5df2fb7c988fdb2f83b3755dd30378" id="r_a4b5df2fb7c988fdb2f83b3755dd30378"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b5df2fb7c988fdb2f83b3755dd30378">the</a></td></tr>
+<tr class="memitem:ab1f54a828c506ea85571f19199d474cd" id="r_ab1f54a828c506ea85571f19199d474cd"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1f54a828c506ea85571f19199d474cd">lte</a></td></tr>
+<tr class="memitem:ab3dcc8e82081d87fae1c6f7576d063a3" id="r_ab3dcc8e82081d87fae1c6f7576d063a3"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3dcc8e82081d87fae1c6f7576d063a3">paths</a></td></tr>
 <tr class="memitem:abfddc7613f3c58cbec5e5099b8adfcc5" id="r_abfddc7613f3c58cbec5e5099b8adfcc5"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abfddc7613f3c58cbec5e5099b8adfcc5">p_rho_fi_threshold</a></td></tr>
 <tr class="memitem:ab9dd69b0c2f55d3012cce5aa9bd3d288" id="r_ab9dd69b0c2f55d3012cce5aa9bd3d288"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9dd69b0c2f55d3012cce5aa9bd3d288">p</a></td></tr>
 <tr class="memitem:a94babc58b5e5c5bbcb0b7c0b8088e30f" id="r_a94babc58b5e5c5bbcb0b7c0b8088e30f"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94babc58b5e5c5bbcb0b7c0b8088e30f">n_per_nh_fi</a></td></tr>
@@ -240,24 +248,24 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a87ad1cd64fdb5b16c05f71b3cc9c6909" id="r_a87ad1cd64fdb5b16c05f71b3cc9c6909"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmod__eos__container_1_1eos__table__container.html">eos_table_container</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87ad1cd64fdb5b16c05f71b3cc9c6909">to_primitive</a></td></tr>
-<tr class="memitem:a7f9638f2f5ef24cc5cf6addb11795d33" id="r_a7f9638f2f5ef24cc5cf6addb11795d33"><td class="memItemLeft" align="right" valign="top">procedure(convert_condition), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f9638f2f5ef24cc5cf6addb11795d33">to_conserved</a> =&gt; null()</td></tr>
-<tr class="memitem:a2a4a2bb9142c5b69e0e3f38d1b52159d" id="r_a2a4a2bb9142c5b69e0e3f38d1b52159d"><td class="memItemLeft" align="right" valign="top">procedure(convert_condition), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a4a2bb9142c5b69e0e3f38d1b52159d">to_primitive</a> =&gt; null()</td></tr>
-<tr class="memitem:a40e9cd88d736eba0a9cb3e260615a2b7" id="r_a40e9cd88d736eba0a9cb3e260615a2b7"><td class="memItemLeft" align="right" valign="top">procedure(convert_condition), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40e9cd88d736eba0a9cb3e260615a2b7">p_to_e</a> =&gt; null()</td></tr>
-<tr class="memitem:aaf5f08079b6757437365e9e596d403ec" id="r_aaf5f08079b6757437365e9e596d403ec"><td class="memItemLeft" align="right" valign="top">procedure(update_eos_spaces), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf5f08079b6757437365e9e596d403ec">update_eos</a> =&gt; null()</td></tr>
-<tr class="memitem:ac0f312993dcc6dbd430e298ff4e22a6b" id="r_ac0f312993dcc6dbd430e298ff4e22a6b"><td class="memItemLeft" align="right" valign="top">procedure(get_eos_variable_alt), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0f312993dcc6dbd430e298ff4e22a6b">get_thermal_pressure</a> =&gt; null()</td></tr>
-<tr class="memitem:a37afb374e70cc9fcf731dc211f7eeb78" id="r_a37afb374e70cc9fcf731dc211f7eeb78"><td class="memItemLeft" align="right" valign="top">procedure(get_eos_variable_alt), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37afb374e70cc9fcf731dc211f7eeb78">get_temperature_from_eint</a> =&gt; null()</td></tr>
-<tr class="memitem:a73f270ec4338272604d3572d07999e02" id="r_a73f270ec4338272604d3572d07999e02"><td class="memItemLeft" align="right" valign="top">procedure(get_eos_variable_alt), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f270ec4338272604d3572d07999e02">get_temperature_from_etot</a> =&gt; null()</td></tr>
-<tr class="memitem:af0c3fc96403d96d54076544103b8bc97" id="r_af0c3fc96403d96d54076544103b8bc97"><td class="memItemLeft" align="right" valign="top">procedure(get_eos_variable_alt), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0c3fc96403d96d54076544103b8bc97">get_temperature_from_pressure</a> =&gt; null()</td></tr>
-<tr class="memitem:a74c1f212075544cd01ff720c040f0120" id="r_a74c1f212075544cd01ff720c040f0120"><td class="memItemLeft" align="right" valign="top">procedure(get_eos_variable_alt), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74c1f212075544cd01ff720c040f0120">get_rfactor</a> =&gt; null()</td></tr>
-<tr class="memitem:a1b1f68fa81e86666a60f3db29e19f987" id="r_a1b1f68fa81e86666a60f3db29e19f987"><td class="memItemLeft" align="right" valign="top">procedure(get_eos_variable_alt), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b1f68fa81e86666a60f3db29e19f987">get_rho</a> =&gt; null()</td></tr>
-<tr class="memitem:abd961956475161bdb9d540abea1c148a" id="r_abd961956475161bdb9d540abea1c148a"><td class="memItemLeft" align="right" valign="top">procedure(get_eos_variable_alt), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd961956475161bdb9d540abea1c148a">get_nh</a> =&gt; null()</td></tr>
+<tr class="memitem:a7f9638f2f5ef24cc5cf6addb11795d33" id="r_a7f9638f2f5ef24cc5cf6addb11795d33"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1convert__condition.html">convert_condition</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f9638f2f5ef24cc5cf6addb11795d33">to_conserved</a> =&gt; null()</td></tr>
+<tr class="memitem:a2a4a2bb9142c5b69e0e3f38d1b52159d" id="r_a2a4a2bb9142c5b69e0e3f38d1b52159d"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1convert__condition.html">convert_condition</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a4a2bb9142c5b69e0e3f38d1b52159d">to_primitive</a> =&gt; null()</td></tr>
+<tr class="memitem:a40e9cd88d736eba0a9cb3e260615a2b7" id="r_a40e9cd88d736eba0a9cb3e260615a2b7"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1convert__condition.html">convert_condition</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40e9cd88d736eba0a9cb3e260615a2b7">p_to_e</a> =&gt; null()</td></tr>
+<tr class="memitem:aaf5f08079b6757437365e9e596d403ec" id="r_aaf5f08079b6757437365e9e596d403ec"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1update__eos__spaces.html">update_eos_spaces</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf5f08079b6757437365e9e596d403ec">update_eos</a> =&gt; null()</td></tr>
+<tr class="memitem:ac0f312993dcc6dbd430e298ff4e22a6b" id="r_ac0f312993dcc6dbd430e298ff4e22a6b"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0f312993dcc6dbd430e298ff4e22a6b">get_thermal_pressure</a> =&gt; null()</td></tr>
+<tr class="memitem:a37afb374e70cc9fcf731dc211f7eeb78" id="r_a37afb374e70cc9fcf731dc211f7eeb78"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37afb374e70cc9fcf731dc211f7eeb78">get_temperature_from_eint</a> =&gt; null()</td></tr>
+<tr class="memitem:a73f270ec4338272604d3572d07999e02" id="r_a73f270ec4338272604d3572d07999e02"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f270ec4338272604d3572d07999e02">get_temperature_from_etot</a> =&gt; null()</td></tr>
+<tr class="memitem:af0c3fc96403d96d54076544103b8bc97" id="r_af0c3fc96403d96d54076544103b8bc97"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0c3fc96403d96d54076544103b8bc97">get_temperature_from_pressure</a> =&gt; null()</td></tr>
+<tr class="memitem:a74c1f212075544cd01ff720c040f0120" id="r_a74c1f212075544cd01ff720c040f0120"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74c1f212075544cd01ff720c040f0120">get_rfactor</a> =&gt; null()</td></tr>
+<tr class="memitem:a1b1f68fa81e86666a60f3db29e19f987" id="r_a1b1f68fa81e86666a60f3db29e19f987"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b1f68fa81e86666a60f3db29e19f987">get_rho</a> =&gt; null()</td></tr>
+<tr class="memitem:abd961956475161bdb9d540abea1c148a" id="r_abd961956475161bdb9d540abea1c148a"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd961956475161bdb9d540abea1c148a">get_nh</a> =&gt; null()</td></tr>
 <tr class="memitem:aa5e469872c769ecab7be7393109fe8d5" id="r_aa5e469872c769ecab7be7393109fe8d5"><td class="memItemLeft" align="right" valign="top">procedure(get_ne_nh_iface), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5e469872c769ecab7be7393109fe8d5">get_ne_nh</a> =&gt; null()</td></tr>
-<tr class="memitem:ab2d936e1f0d52ac25fb55e234406c44d" id="r_ab2d936e1f0d52ac25fb55e234406c44d"><td class="memItemLeft" align="right" valign="top">procedure(get_eos_variable_alt), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2d936e1f0d52ac25fb55e234406c44d">get_te</a> =&gt; null()</td></tr>
-<tr class="memitem:a3ba10c96439cf2c0fe35fb0b46c3c22c" id="r_a3ba10c96439cf2c0fe35fb0b46c3c22c"><td class="memItemLeft" align="right" valign="top">procedure(get_eos_variable_alt), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ba10c96439cf2c0fe35fb0b46c3c22c">get_csound2</a> =&gt; null()</td></tr>
+<tr class="memitem:ab2d936e1f0d52ac25fb55e234406c44d" id="r_ab2d936e1f0d52ac25fb55e234406c44d"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2d936e1f0d52ac25fb55e234406c44d">get_te</a> =&gt; null()</td></tr>
+<tr class="memitem:a3ba10c96439cf2c0fe35fb0b46c3c22c" id="r_a3ba10c96439cf2c0fe35fb0b46c3c22c"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ba10c96439cf2c0fe35fb0b46c3c22c">get_csound2</a> =&gt; null()</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00112">112</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00114">114</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="aa310f9fc56ff75cca291da3c8c96032a" name="aa310f9fc56ff75cca291da3c8c96032a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa310f9fc56ff75cca291da3c8c96032a">&#9670;&#160;</a></span>above</h2>
@@ -271,7 +279,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00134">134</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -287,7 +295,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00147">147</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -303,7 +311,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00176">176</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00180">180</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -319,7 +327,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00120">120</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00123">123</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -335,7 +343,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00150">150</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00154">154</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -351,7 +359,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00187">187</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00191">191</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -367,7 +375,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00180">180</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00184">184</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -383,7 +391,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00133">133</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -399,7 +407,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00148">148</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00152">152</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -415,7 +423,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00166">166</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00170">170</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -431,7 +439,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00168">168</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00172">172</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -447,7 +455,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00196">196</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00200">200</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -463,7 +471,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00183">183</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00187">187</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -479,7 +487,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00179">179</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00183">183</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -495,7 +503,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00194">194</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00198">198</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -511,7 +519,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00193">193</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00197">197</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -527,7 +535,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00155">155</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -543,7 +551,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00181">181</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00185">185</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -559,7 +567,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00177">177</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00181">181</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -575,7 +583,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00166">166</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00170">170</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -591,7 +599,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00167">167</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00171">171</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -607,7 +615,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00149">149</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00153">153</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -623,7 +631,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00134">134</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -639,7 +647,23 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00149">149</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00153">153</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+
+</div>
+</div>
+<a id="afb871b146171fcbf5ee844e73614c476" name="afb871b146171fcbf5ee844e73614c476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb871b146171fcbf5ee844e73614c476">&#9670;&#160;</a></span>eint_nh_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_eos_container::eos_container::eint_nh_min = 0.0d0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00138">138</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -655,7 +679,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00134">134</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -673,7 +697,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Inverse (lr, lp): eint from (rho, p), replaces p2eint bisection at runtime. Stored as log10(eint/nH), CGS axis units before shift. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00187">187</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00191">191</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -689,7 +713,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00188">188</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00192">192</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -705,7 +729,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00190">190</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00194">194</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -721,7 +745,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00189">189</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00193">193</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -739,7 +763,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Inverse (lr, lT): eint from (rho, T). Used by IC, HSE BC, cooling. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00199">199</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00203">203</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -755,7 +779,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00200">200</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00204">204</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -771,7 +795,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00202">202</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00206">206</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -787,7 +811,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00201">201</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00205">205</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -805,7 +829,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Fully-ionised regime bypass constants (precomputed in eos_finalise). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00133">133</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -821,7 +845,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00133">133</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -837,7 +861,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00117">117</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00119">119</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -853,7 +877,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00114">114</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00116">116</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -869,7 +893,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00180">180</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00184">184</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -885,7 +909,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00148">148</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00152">152</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -901,7 +925,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00140">140</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -917,7 +941,23 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00147">147</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+
+</div>
+</div>
+<a id="a239b09e6a02e4ac223193a555bea1d70" name="a239b09e6a02e4ac223193a555bea1d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a239b09e6a02e4ac223193a555bea1d70">&#9670;&#160;</a></span>floor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_eos_container::eos_container::floor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00138">138</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -933,7 +973,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00148">148</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00152">152</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -949,7 +989,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00116">116</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00118">118</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -965,7 +1005,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00134">134</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -983,7 +1023,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Inverse (lr, lp): gamma_1 at (rho, p) for csound2-from-pressure paths. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00193">193</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00197">197</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -999,7 +1039,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00194">194</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00198">198</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1055,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00196">196</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00200">200</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1071,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00195">195</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00199">199</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1047,7 +1087,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00124">124</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00127">127</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1063,7 +1103,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00147">147</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1079,7 +1119,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00118">118</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00120">120</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1095,7 +1135,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00148">148</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00152">152</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1111,7 +1151,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00147">147</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1127,7 +1167,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00125">125</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00128">128</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1143,7 +1183,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00134">134</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1197,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (get_eos_variable_alt), pointer, nopass mod_eos_container::eos_container::get_csound2 =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass mod_eos_container::eos_container::get_csound2 =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -1167,7 +1207,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00220">220</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00224">224</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1191,7 +1231,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00218">218</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00222">222</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1205,7 +1245,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (get_eos_variable_alt), pointer, nopass mod_eos_container::eos_container::get_nh =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass mod_eos_container::eos_container::get_nh =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -1215,7 +1255,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00217">217</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00221">221</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1229,55 +1269,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (get_eos_variable_alt), pointer, nopass mod_eos_container::eos_container::get_rfactor =&gt; null()</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00215">215</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
-
-</div>
-</div>
-<a id="a1b1f68fa81e86666a60f3db29e19f987" name="a1b1f68fa81e86666a60f3db29e19f987"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b1f68fa81e86666a60f3db29e19f987">&#9670;&#160;</a></span>get_rho</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">procedure (get_eos_variable_alt), pointer, nopass mod_eos_container::eos_container::get_rho =&gt; null()</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00216">216</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
-
-</div>
-</div>
-<a id="ab2d936e1f0d52ac25fb55e234406c44d" name="ab2d936e1f0d52ac25fb55e234406c44d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2d936e1f0d52ac25fb55e234406c44d">&#9670;&#160;</a></span>get_te</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">procedure (get_eos_variable_alt), pointer, nopass mod_eos_container::eos_container::get_te =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass mod_eos_container::eos_container::get_rfactor =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -1291,6 +1283,54 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a1b1f68fa81e86666a60f3db29e19f987" name="a1b1f68fa81e86666a60f3db29e19f987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b1f68fa81e86666a60f3db29e19f987">&#9670;&#160;</a></span>get_rho</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass mod_eos_container::eos_container::get_rho =&gt; null()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00220">220</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+
+</div>
+</div>
+<a id="ab2d936e1f0d52ac25fb55e234406c44d" name="ab2d936e1f0d52ac25fb55e234406c44d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2d936e1f0d52ac25fb55e234406c44d">&#9670;&#160;</a></span>get_te</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass mod_eos_container::eos_container::get_te =&gt; null()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00223">223</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+
+</div>
+</div>
 <a id="a37afb374e70cc9fcf731dc211f7eeb78" name="a37afb374e70cc9fcf731dc211f7eeb78"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37afb374e70cc9fcf731dc211f7eeb78">&#9670;&#160;</a></span>get_temperature_from_eint</h2>
 
@@ -1301,7 +1341,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (get_eos_variable_alt), pointer, nopass mod_eos_container::eos_container::get_temperature_from_eint =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass mod_eos_container::eos_container::get_temperature_from_eint =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -1311,7 +1351,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00212">212</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00216">216</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1325,7 +1365,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (get_eos_variable_alt), pointer, nopass mod_eos_container::eos_container::get_temperature_from_etot =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass mod_eos_container::eos_container::get_temperature_from_etot =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -1335,7 +1375,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00213">213</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00217">217</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1349,7 +1389,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (get_eos_variable_alt), pointer, nopass mod_eos_container::eos_container::get_temperature_from_pressure =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass mod_eos_container::eos_container::get_temperature_from_pressure =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -1359,7 +1399,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00214">214</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00218">218</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1373,7 +1413,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (get_eos_variable_alt), pointer, nopass mod_eos_container::eos_container::get_thermal_pressure =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1get__eos__variable__alt.html">get_eos_variable_alt</a>), pointer, nopass mod_eos_container::eos_container::get_thermal_pressure =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -1383,7 +1423,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00211">211</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00215">215</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1399,7 +1439,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00123">123</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00126">126</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1415,7 +1455,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00205">205</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00209">209</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1431,7 +1471,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00155">155</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1447,7 +1487,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00147">147</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1463,7 +1503,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00116">116</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00118">118</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1479,7 +1519,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00205">205</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00209">209</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1495,7 +1535,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00126">126</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00129">129</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1511,7 +1551,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00127">127</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00130">130</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1527,7 +1567,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00129">129</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00132">132</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1583,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00128">128</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00131">131</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1559,7 +1599,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00149">149</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00153">153</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1575,7 +1615,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00121">121</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00124">124</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1591,7 +1631,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00133">133</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1607,7 +1647,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00134">134</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1623,7 +1663,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00134">134</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1639,7 +1679,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00176">176</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00180">180</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1655,7 +1695,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00150">150</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00154">154</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1671,7 +1711,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00150">150</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00154">154</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1687,7 +1727,23 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00155">155</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+
+</div>
+</div>
+<a id="ab1f54a828c506ea85571f19199d474cd" name="ab1f54a828c506ea85571f19199d474cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f54a828c506ea85571f19199d474cd">&#9670;&#160;</a></span>lte</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_eos_container::eos_container::lte</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00138">138</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1703,7 +1759,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00150">150</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00154">154</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1719,7 +1775,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00116">116</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00118">118</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1735,7 +1791,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00115">115</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00117">117</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1751,7 +1807,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00116">116</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00118">118</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1767,7 +1823,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00140">140</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1783,7 +1839,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00141">141</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1801,7 +1857,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Leaving a comment here to remind me that it's a bad idea to have anything outside of the w() array if one wants to /ensure/ the fields are consistent given OMP directives and load balancing. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00144">144</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00148">148</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1817,7 +1873,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00141">141</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1836,7 +1892,7 @@ Static Public Attributes</h2></td></tr>
 <p>Entropy-method tables (eosmethod == 'entropy'). Each quantity Q is stored as four containers &ndash; Q, Q_x, Q_y, Q_xy (value plus the two first derivatives and the cross derivative) &ndash; fully determining the bicubic Hermite polynomial in each cell (<a class="el" href="namespacemod__eos__lte__entropy.html" title="Entropy-method LTE EoS: every query is ONE bicubic Hermite evaluation.">mod_eos_lte_entropy</a>). Five quantities: Forward (log_nH, log_eint/nH): Tfwd, pfwd, neOnH. Inverse (log_nH, log_p/nH): eintP, g1p (= Gamma_1). Inverse (log_nH, log_T): eintT. The inverse tables are bisected against the analytic Saha solver at build time and frozen to disk, so every runtime query is one lookup. </p>
 <p>Forward (lr, le): ionisation fraction. The neOnH value container is the existing neOnH field above; add three derivative tables. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00166">166</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00170">170</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1852,7 +1908,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00168">168</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00172">172</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1868,7 +1924,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00167">167</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00171">171</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1884,7 +1940,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00149">149</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00153">153</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1900,7 +1956,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00133">133</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1916,7 +1972,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00130">130</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00133">133</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1932,12 +1988,28 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00205">205</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00209">209</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+
+</div>
+</div>
+<a id="a54f32e3872ddb5e7897b52a0be3bb846" name="a54f32e3872ddb5e7897b52a0be3bb846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f32e3872ddb5e7897b52a0be3bb846">&#9670;&#160;</a></span>of <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_eos_container::eos_container::of</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00138">138</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
 <a id="ab7ba575e018755da3ee97c45687b374c" name="ab7ba575e018755da3ee97c45687b374c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7ba575e018755da3ee97c45687b374c">&#9670;&#160;</a></span>of</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ba575e018755da3ee97c45687b374c">&#9670;&#160;</a></span>of <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1948,7 +2020,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00116">116</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00118">118</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1964,7 +2036,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00115">115</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00117">117</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1980,7 +2052,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00155">155</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -1996,7 +2068,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00135">135</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00139">139</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2012,12 +2084,44 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00146">146</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00150">150</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+
+</div>
+</div>
+<a id="ac94f584db78798b584b9a191dc0a77b9" name="ac94f584db78798b584b9a191dc0a77b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94f584db78798b584b9a191dc0a77b9">&#9670;&#160;</a></span>p2eint_bisect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical mod_eos_container::eos_container::p2eint_bisect = .false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00122">122</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+
+</div>
+</div>
+<a id="a2b398a3862bfcdf02e36e64888818d08" name="a2b398a3862bfcdf02e36e64888818d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b398a3862bfcdf02e36e64888818d08">&#9670;&#160;</a></span>p2eint_method <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical, dimension (<a class="el" href="#a7ed0b54ad97f81f1c16a65880c7c81aa">fast</a>) mod_eos_container::eos_container::p2eint_method == 'bisect'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00122">122</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
 <a id="a36cbb451847320ea2a2a5b776ae7f6fd" name="a36cbb451847320ea2a2a5b776ae7f6fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36cbb451847320ea2a2a5b776ae7f6fd">&#9670;&#160;</a></span>p2eint_method</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a36cbb451847320ea2a2a5b776ae7f6fd">&#9670;&#160;</a></span>p2eint_method <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2028,7 +2132,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00119">119</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00121">121</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2044,7 +2148,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00155">155</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2060,7 +2164,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00135">135</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00139">139</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2074,7 +2178,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (convert_condition), pointer, nopass mod_eos_container::eos_container::p_to_e =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1convert__condition.html">convert_condition</a>), pointer, nopass mod_eos_container::eos_container::p_to_e =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -2084,7 +2188,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00209">209</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00213">213</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2100,7 +2204,23 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00140">140</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+
+</div>
+</div>
+<a id="ab3dcc8e82081d87fae1c6f7576d063a3" name="ab3dcc8e82081d87fae1c6f7576d063a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3dcc8e82081d87fae1c6f7576d063a3">&#9670;&#160;</a></span>paths</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_eos_container::eos_container::paths</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00138">138</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2116,7 +2236,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00133">133</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2132,7 +2252,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00180">180</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00184">184</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2148,7 +2268,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00181">181</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00185">185</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2164,7 +2284,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00183">183</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00187">187</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2180,7 +2300,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00182">182</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00186">186</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2196,7 +2316,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00120">120</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00123">123</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2212,7 +2332,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00120">120</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00123">123</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2228,7 +2348,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00205">205</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00209">209</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2244,7 +2364,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00134">134</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2260,7 +2380,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00145">145</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00149">149</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2276,7 +2396,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00149">149</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00153">153</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2292,7 +2412,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00120">120</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00123">123</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2310,7 +2430,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Interleaved Group A table: T, neOnH, p_over_nH at same (nH, eint/nH) grid. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00204">204</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00208">208</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2326,7 +2446,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00122">122</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00125">125</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2344,7 +2464,7 @@ Static Public Attributes</h2></td></tr>
 
 <p>Forward (lr, le): direct T and p tables. We do NOT derive T from ds/dy of the s polynomial at runtime; the bicubic Hermite gives O(h^3) error in derivatives vs O(h^4) in values. Storing T and p as their own bicubic Hermite tables (built from the same Saha call as s) keeps O(h^4) accuracy and preserves Maxwell consistency at every node (T, p, s, gamma1 all from one Saha state). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00176">176</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00180">180</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2360,7 +2480,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00177">177</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00181">181</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2376,7 +2496,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00179">179</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00183">183</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2392,7 +2512,23 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00178">178</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00182">182</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+
+</div>
+</div>
+<a id="a4b5df2fb7c988fdb2f83b3755dd30378" name="a4b5df2fb7c988fdb2f83b3755dd30378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b5df2fb7c988fdb2f83b3755dd30378">&#9670;&#160;</a></span>the</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision mod_eos_container::eos_container::the</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00138">138</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2406,7 +2542,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (convert_condition), pointer, nopass mod_eos_container::eos_container::to_conserved =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1convert__condition.html">convert_condition</a>), pointer, nopass mod_eos_container::eos_container::to_conserved =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -2416,7 +2552,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00207">207</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00211">211</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2430,7 +2566,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (convert_condition), pointer, nopass mod_eos_container::eos_container::to_primitive =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1convert__condition.html">convert_condition</a>), pointer, nopass mod_eos_container::eos_container::to_primitive =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -2440,7 +2576,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00208">208</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00212">212</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2464,7 +2600,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00151">151</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00155">155</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2480,7 +2616,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00133">133</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2496,7 +2632,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00117">117</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00119">119</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2512,7 +2648,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00133">133</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2526,7 +2662,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">procedure (update_eos_spaces), pointer, nopass mod_eos_container::eos_container::update_eos =&gt; null()</td>
+          <td class="memname">procedure (<a class="el" href="interfacemod__eos__container_1_1update__eos__spaces.html">update_eos_spaces</a>), pointer, nopass mod_eos_container::eos_container::update_eos =&gt; null()</td>
         </tr>
       </table>
   </td>
@@ -2536,7 +2672,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00210">210</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00214">214</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2552,7 +2688,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00150">150</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00154">154</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2568,7 +2704,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00136">136</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00140">140</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2584,7 +2720,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00134">134</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00137">137</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2600,7 +2736,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00188">188</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00192">192</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>
@@ -2616,7 +2752,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00189">189</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__container_8t_source.html#l00193">193</a> of file <a class="el" href="mod__eos__container_8t_source.html">mod_eos_container.t</a>.</p>
 
 </div>
 </div>

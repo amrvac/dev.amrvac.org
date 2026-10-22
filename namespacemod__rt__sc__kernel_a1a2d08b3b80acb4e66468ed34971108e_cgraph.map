@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_kernel::build_gl" name="mod_rt_sc_kernel::build_gl">
+<area shape="rect" id="Node000001" title="Product Gauss&#45;Legendre set, with nmu polar nodes about rt_sc_polar_axis and ndir azimuths at the midp..." alt="" coords="5,14,200,42"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__kernel.html#a86ba912a714fcd387c7b0d22bae783ac" title="Gauss&#45;Legendre nodes and weights on [&#45;1,1] for n in {2,4,6,8}. Any other n is moved up to the next su..." alt="" coords="248,5,429,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,25,234,27,229,28,200,30"/>
+</map>

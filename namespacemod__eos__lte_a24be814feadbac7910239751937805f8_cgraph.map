@@ -1,0 +1,8 @@
+<map id="mod_eos_lte::lte_eint_from_p" name="mod_eos_lte::lte_eint_from_p">
+<area shape="rect" id="Node000001" title="LTE internal energy from pressure in one cell: FI bypass, else eint(nH, p)." alt="" coords="5,36,167,81"/>
+<area shape="rect" id="Node000002" href="$namespacemod__eos__lte.html#a7155ab3b6d02fbd6ebe09c3ae80f50bb" title="Given log10(nH) and log10(p), find log10(eint/nH) by table&#45;guessed bisection on the forward pressure ..." alt="" coords="215,5,390,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,44,202,42,196,43,167,50"/>
+<area shape="rect" id="Node000003" href="$namespacemod__eos__lte.html#a4a9da8961173fdb2bd397004a5c543ce" title="Ratio eint/p from (log10 nH, log10 p/nH)." alt="" coords="438,36,591,81"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="167,59,215,60,390,60,425,62,420,62,390,65,215,65,167,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="390,38,425,45,420,45,390,43"/>
+</map>

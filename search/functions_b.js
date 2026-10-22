@@ -47,6 +47,9 @@ var searchData=
   ['lt_5flin_5finterp_5flist_44',['lt_lin_interp_list',['../namespacemod__lookup__table.html#a6d82fcd000721de2c3f007d206c66f24',1,'mod_lookup_table']]],
   ['lt_5fset_5fcol_45',['lt_set_col',['../namespacemod__lookup__table.html#a488ed42f3cdbe3619fe5ba16fb69a148',1,'mod_lookup_table']]],
   ['lt_5fto_5ffile_46',['lt_to_file',['../namespacemod__lookup__table.html#a87df0bdef4029dd5ecc288fd1f247d41',1,'mod_lookup_table']]],
-  ['lubksb_47',['lubksb',['../namespacemod__lu.html#a078c4837c97ca72c6a29b6ba9025715f',1,'mod_lu']]],
-  ['ludcmp_48',['ludcmp',['../namespacemod__lu.html#a4939cd387acc1b11d9c6301ceea22d23',1,'mod_lu']]]
+  ['lte_5feint_5ffrom_5fp_47',['lte_eint_from_p',['../namespacemod__eos__lte.html#a24be814feadbac7910239751937805f8',1,'mod_eos_lte']]],
+  ['lte_5fgamma1_5ffrom_5fp_48',['lte_gamma1_from_p',['../namespacemod__eos__lte.html#abceab0626ab5a60ff80b859e7dc3906e',1,'mod_eos_lte']]],
+  ['lte_5fp_5ffrom_5feint_49',['lte_p_from_eint',['../namespacemod__eos__lte.html#ae17e076260b52aff941390039e0b33a5',1,'mod_eos_lte']]],
+  ['lubksb_50',['lubksb',['../namespacemod__lu.html#a078c4837c97ca72c6a29b6ba9025715f',1,'mod_lu']]],
+  ['ludcmp_51',['ludcmp',['../namespacemod__lu.html#a4939cd387acc1b11d9c6301ceea22d23',1,'mod_lu']]]
 ];

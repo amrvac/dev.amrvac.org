@@ -1,0 +1,6 @@
+<map id="mod_rt_sc_kernel::sc_sweep_block" name="mod_rt_sc_kernel::sc_sweep_block">
+<area shape="rect" id="Node000001" title="Sweep of one block for ray (nx, ny), the kernel of the wavefront solvers. The upwind face and corner ..." alt="" coords="5,21,163,66"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__kernel.html#a6eb7de00e20d93846a743e6bdc5f84a2" title="Sign of a direction cosine as &#45;1, 0 or 1. The zero case occurs, for example for the GL rays at phi = ..." alt="" coords="211,29,409,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,41,198,43,193,43,163,46"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="271,28,265,20,270,11,285,5,310,3,336,5,352,14,347,14,335,10,310,8,286,10,273,15,270,20,276,30"/>
+</map>

@@ -100,7 +100,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:ab21258116c3f901e1f65a1c1182ce1b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build guard (bucket) arrays so that adaptive index lookup is O(1). No-op for uniform tables. Safe to call repeatedly. Idea here is to map nonuniform table nodes to a uniform search grid.  <br /></td></tr>
 <tr class="memitem:a18f3ed1da91b272a77212af73bee3d09" id="r_a18f3ed1da91b272a77212af73bee3d09"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18f3ed1da91b272a77212af73bee3d09">eos_validate_table</a> (tc, name)</td></tr>
 <tr class="memdesc:a18f3ed1da91b272a77212af73bee3d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defensive consistency check for one table after init. Aborts with a diagnostic message if any silent-failure invariant is violated.  <br /></td></tr>
-<tr class="memitem:ae95aab518f10a74ad227b77e01c9cfe1" id="r_ae95aab518f10a74ad227b77e01c9cfe1"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae95aab518f10a74ad227b77e01c9cfe1">precompute_fi_bypass_constants</a> ()</td></tr>
+<tr class="memitem:a943db605bba68bcb3d991cea179446d4" id="r_a943db605bba68bcb3d991cea179446d4"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a943db605bba68bcb3d991cea179446d4">precompute_fi_bypass_constants</a> (chi_h_only)</td></tr>
+<tr class="memdesc:a943db605bba68bcb3d991cea179446d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Precompute constants for bypassing table lookups when gas is fully ionised. Physics: above T ~ 50 kK, H is &gt;99.99% ionised and He is &gt;90% ionised. The EoS reduces to ideal gas with constant mu, Gamma_1 = 5/3, ne/nH = 1+2*A_He. We check eint/rho &gt; threshold (1 division + 1 comparison) to skip all table lookups. With chi_H_only (the analytic route, erg) helium stays neutral and only hydrogen ionises.  <br /></td></tr>
 <tr class="memitem:a2510131ae7d8528d4a74db15f6e38e4d" id="r_a2510131ae7d8528d4a74db15f6e38e4d"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2510131ae7d8528d4a74db15f6e38e4d">load_tables_lte</a> (fieldname)</td></tr>
 <tr class="memdesc:a2510131ae7d8528d4a74db15f6e38e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read one named table file into its eos% container. The filename encodes the composition (H or HHe) and whether ionisation energy is included.  <br /></td></tr>
 <tr class="memitem:a1246d0f0e3285cf4b65f34c582f08509" id="r_a1246d0f0e3285cf4b65f34c582f08509"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1246d0f0e3285cf4b65f34c582f08509">try_load_tables_lte</a> (fieldname)</td></tr>
@@ -209,7 +210,7 @@ Here is the call graph for this function:</div>
 <p>Consider the ionisation energy?</p>
 <p>Entropy-method tables. Unit shifts MUST happen in eos_finalise (where unit_* are set), not here.</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00266">266</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00272">272</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -223,26 +224,29 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ae95aab518f10a74ad227b77e01c9cfe1" name="ae95aab518f10a74ad227b77e01c9cfe1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae95aab518f10a74ad227b77e01c9cfe1">&#9670;&#160;</a></span>precompute_fi_bypass_constants()</h2>
+<a id="a943db605bba68bcb3d991cea179446d4" name="a943db605bba68bcb3d991cea179446d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943db605bba68bcb3d991cea179446d4">&#9670;&#160;</a></span>precompute_fi_bypass_constants()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">subroutine, public mod_eos_lte_tables::precompute_fi_bypass_constants</td>
+          <td class="memname">subroutine, public mod_eos_lte_tables::precompute_fi_bypass_constants </td>
+          <td>(</td>
+          <td class="paramtype">double precision, intent(in), optional</td>          <td class="paramname"><span class="paramname"><em>chi_h_only</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Precompute constants for bypassing table lookups when gas is fully ionised. Physics: above T ~ 50 kK, H is &gt;99.99% ionised and He is &gt;90% ionised. The EoS reduces to ideal gas with constant mu, Gamma_1 = 5/3, ne/nH = 1+2*A_He. We check eint/rho &gt; threshold (1 division + 1 comparison) to skip all table lookups.</p>
+
+<p>Precompute constants for bypassing table lookups when gas is fully ionised. Physics: above T ~ 50 kK, H is &gt;99.99% ionised and He is &gt;90% ionised. The EoS reduces to ideal gas with constant mu, Gamma_1 = 5/3, ne/nH = 1+2*A_He. We check eint/rho &gt; threshold (1 division + 1 comparison) to skip all table lookups. With chi_H_only (the analytic route, erg) helium stays neutral and only hydrogen ionises. </p>
 <p>Ionisation energies in CGS (erg)</p>
-<p>Fully-ionised particle counts and electron fraction</p>
-<p>Total ionisation energy per hydrogen atom (CGS), converted to code units eion_per_nH [code] = eion_per_nH [erg] / (unit_pressure / unit_numberdensity)</p>
+<p>fully ionised particle count, electron fraction and ionisation energy per hydrogen atom, eion_per_nH [code] = eion_per_nH [erg] * unit_numberdensity / unit_pressure</p>
 <p>No-energy mode (.not. ionE): the ionisation energy is NOT folded into eint, so it must not appear anywhere in the thermodynamics. Zeroing it here collapses both the FI threshold below and every FI-zone temperature path (update_eos_LTE, get_temperature_from_eint[_fast]_LTE, the analytic FI bypasses) to their correct no-energy form from one place &ndash; the from-eint getters subtract eion unconditionally, so this is what keeps them consistent with update_eos_LTE's ionE-gated branch.</p>
 <p>Bypass threshold: eint/rho value corresponding to T = 200,000 K fully ionised. Raised from 50 kK to 200 kK so that blended LTE tables (which converge to FI by 200 kK) match the bypass formula exactly at the threshold &ndash; no discontinuity in ne/nH, T, Gamma_1, or p when cells cross the boundary. eint/nH = 1.5 * n_per_nH * kB * T + eion_per_nH (all in code units) eint/rho = eint/nH / nH2rhoFactor</p>
 <p>Pressure-based threshold for primitive-variable checks: For FI gas, T = p / (rho * Rfactor_FI), so p/rho &gt; Rfactor_FI * T_thresh where Rfactor_FI = n_per_nH_FI / (1 + 4*A_He) in code units</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00209">209</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00214">214</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 
 </div>
 </div>
@@ -315,7 +319,7 @@ Here is the call graph for this function:</div>
 
 <p>Attempt to load pre-computed table from binary file. If the file does not exist, silently skip and the table will be built at runtime. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00391">391</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__tables_8t_source.html#l00397">397</a> of file <a class="el" href="mod__eos__lte__tables_8t_source.html">mod_eos_lte_tables.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

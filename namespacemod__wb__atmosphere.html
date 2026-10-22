@@ -97,7 +97,7 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a5dacdd3cba6f183c2a99fd6989c2dd7c" id="r_a5dacdd3cba6f183c2a99fd6989c2dd7c"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dacdd3cba6f183c2a99fd6989c2dd7c">wb_atmos_set_w</a> (ixil, ixol, w, x)</td></tr>
 <tr class="memdesc:a5dacdd3cba6f183c2a99fd6989c2dd7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set w to the equilibrium state (rho, v=0, p) at each cell position.  <br /></td></tr>
 <tr class="memitem:af16066eef54b952d4e89d00001f59e16" id="r_af16066eef54b952d4e89d00001f59e16"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af16066eef54b952d4e89d00001f59e16">wb_atmos_get_eq</a> (x_grav, rho_eq, p_eq)</td></tr>
-<tr class="memdesc:af16066eef54b952d4e89d00001f59e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Look up equilibrium (rho, p) at an arbitrary coordinate along the gravity direction. Uses nearest-cell lookup from the grid-aligned table.  <br /></td></tr>
+<tr class="memdesc:af16066eef54b952d4e89d00001f59e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equilibrium (rho, p) of the grid-aligned table at a coordinate x_grav along the gravity direction: the node value at a node, else log-linear between the two nodes around it.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -143,9 +143,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Look up equilibrium (rho, p) at an arbitrary coordinate along the gravity direction. Uses nearest-cell lookup from the grid-aligned table. </p>
+<p>Equilibrium (rho, p) of the grid-aligned table at a coordinate x_grav along the gravity direction: the node value at a node, else log-linear between the two nodes around it. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__wb__atmosphere_8t_source.html#l00194">194</a> of file <a class="el" href="mod__wb__atmosphere_8t_source.html">mod_wb_atmosphere.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__wb__atmosphere_8t_source.html#l00184">184</a> of file <a class="el" href="mod__wb__atmosphere_8t_source.html">mod_wb_atmosphere.t</a>.</p>
 
 </div>
 </div>
@@ -274,7 +274,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Set w to the equilibrium state (rho, v=0, p) at each cell position. </p>
-<p>Point-value sample of the trap-rule-built grid table at cell centres. Consistent with the legacy_trap WB transform which expects point-value IC matching its own trap-rule recurrence at L_max.</p>
+<p>The grid-aligned table is sampled at the cell centres: the node value on the finest level, which matches the trap-rule recurrence of the legacy_trap WB transform, and log-linear between the two nodes around the centre of a coarse cell</p>
 <p>On exit: w(rho_) = rho_eq, w(mom(:)) = 0, w(p_) = p_eq. The caller must call phys_to_conserved afterwards. </p>
 
 <p class="definition">Definition at line <a class="el" href="mod__wb__atmosphere_8t_source.html#l00165">165</a> of file <a class="el" href="mod__wb__atmosphere_8t_source.html">mod_wb_atmosphere.t</a>.</p>
@@ -284,8 +284,8 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacemod__wb__atmosphere_a5dacdd3cba6f183c2a99fd6989c2dd7c_cgraph.png" border="0" usemap="#anamespacemod__wb__atmosphere_a5dacdd3cba6f183c2a99fd6989c2dd7c_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__wb__atmosphere_a5dacdd3cba6f183c2a99fd6989c2dd7c_cgraph" id="anamespacemod__wb__atmosphere_a5dacdd3cba6f183c2a99fd6989c2dd7c_cgraph">
 <area shape="rect" title="Set w to the equilibrium state (rho, v=0, p) at each cell position." alt="" coords="5,5,175,50"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="223,14,405,42"/>
-<area shape="poly" title=" " alt="" coords="175,25,210,27,204,28,175,30"/>
+<area shape="rect" href="namespacemod__wb__atmosphere.html#af16066eef54b952d4e89d00001f59e16" title="Equilibrium (rho, p) of the grid&#45;aligned table at a coordinate x_grav along the gravity direction: th..." alt="" coords="223,5,392,50"/>
+<area shape="poly" title=" " alt="" coords="175,25,210,27,205,28,175,30"/>
 </map>
 </div>
 

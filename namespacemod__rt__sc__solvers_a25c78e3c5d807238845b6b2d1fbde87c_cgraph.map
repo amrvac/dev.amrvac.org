@@ -1,0 +1,14 @@
+<map id="mod_rt_sc_solvers::rt_wave_band_close" name="mod_rt_sc_solvers::rt_wave_band_close">
+<area shape="rect" id="Node000001" title="Close the band. The fluxes are scaled by c_norm, Q is formed as the imbalance or as the &#45;div F blend ..." alt="" coords="5,125,159,170"/>
+<area shape="rect" id="Node000002" href="$namespacemod__ghostcells__update.html#a327d9129bf4d1651e23a58a54e67f24d" title=" " alt="" coords="207,5,396,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,123,205,67,233,55,229,59,208,71,118,127"/>
+<area shape="rect" id="Node000004" href="$namespacemod__ghostcells__update.html#a1b945d19ee179d85b1b4a719a8dfcad6" title="do update ghost cells of all blocks including physical boundaries" alt="" coords="444,131,619,175"/>
+<area shape="poly" id="edge2_Node000001_Node000004" title=" " alt="" coords="151,122,206,110,301,101,396,110,455,125,450,126,396,116,301,107,207,116,153,127"/>
+<area shape="rect" id="Node000022" href="$namespacemod__rt__sc__solvers.html#aeddf4d6e85acd9a1302f62cc074955fc" title="Tau from the band top to every cell centre of block iblk, integrated down from the top face of the bl..." alt="" coords="226,125,376,170"/>
+<area shape="poly" id="edge3_Node000001_Node000022" title=" " alt="" coords="158,145,213,146,209,149,160,150"/>
+<area shape="rect" id="Node000023" href="$namespacemod__rt__sc__solvers.html#a70b99e4471d61ebda3417e6453513374" title="Ghost exchange of the nslot intensity columns of ps_rt from i_isw, with the physical boundaries left ..." alt="" coords="226,195,376,239"/>
+<area shape="poly" id="edge4_Node000001_Node000023" title=" " alt="" coords="155,168,217,189,212,190,155,173"/>
+<area shape="rect" id="Node000024" href="$namespacemod__rt__sc__solvers.html#a29ac825d3805a6115e5a9ea9a13af27a" title="Tau at the top face of every block row of the current band, per global column along hdim...." alt="" coords="226,264,376,309"/>
+<area shape="poly" id="edge6_Node000001_Node000024" title=" " alt="" coords="106,168,152,209,208,249,219,257,214,257,205,254,149,213,105,173"/>
+<area shape="poly" id="edge5_Node000023_Node000004" title=" " alt="" coords="376,194,437,179,431,181,377,199"/>
+</map>

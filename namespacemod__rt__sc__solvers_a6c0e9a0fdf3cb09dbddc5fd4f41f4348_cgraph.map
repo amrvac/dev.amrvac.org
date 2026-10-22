@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_solvers::rt_inflow_ghosts" name="mod_rt_sc_solvers::rt_inflow_ghosts">
+<area shape="rect" id="Node000001" title="Inflow intensity in slot islot. The ghosts beyond the band ends, and beyond the horizontal edges wher..." alt="" coords="5,5,156,50"/>
+<area shape="rect" id="Node000002" href="$mod__rt__sc__solvers_8t.html#aec43e23320fff8a1c3feb8178e877088" title="Ghost rows iv_lo to iv_hi, from the edge row iv_src." alt="" coords="204,14,279,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,25,191,27,185,28,156,30"/>
+</map>

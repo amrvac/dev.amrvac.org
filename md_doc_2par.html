@@ -107,7 +107,9 @@ Introduction</h1>
 </ul>
 <p>Further namelist are used to control optional modules. Most of these lists are not documented here, but the parameters are described in the corresponding modules:</p>
 <ul>
+<li><span class="tt">eos_list</span> (equation of state, see <a class="el" href="md_doc_2eos.html">Equation of state</a>)</li>
 <li><span class="tt">rc_list</span> (radiative cooling, see <span class="tt"><a class="el" href="namespacemod__radiative__cooling.html" title="module radiative cooling – add optically thin radiative cooling">mod_radiative_cooling</a></span>)</li>
+<li><span class="tt">rt_list</span> (short-characteristics radiative transfer, see <a class="el" href="md_doc_2radiative__transfer.html">Radiative transfer</a>)</li>
 <li><span class="tt">tc_list</span> (thermal conduction, see <span class="tt"><a class="el" href="namespacemod__thermal__conduction.html" title="Thermal conduction for HD and MHD or RHD and RMHD or twofl (plasma-neutral) module Adaptation of mod_...">mod_thermal_conduction</a></span>)</li>
 <li><span class="tt">dust_list</span> (dust, see <span class="tt"><a class="el" href="namespacemod__dust.html" title="Module for including dust species, which interact with the gas through a drag force.">mod_dust</a></span>)</li>
 <li><span class="tt">vc_list</span> (viscosity, see <span class="tt"><a class="el" href="namespacemod__viscosity.html" title="The module add viscous source terms and check time step.">mod_viscosity</a></span>)</li>
@@ -518,6 +520,7 @@ HD list</h2>
   hd_hyperbolic_thermal_conduction= F | T (1D only)
   hd_htc_sat= F | T
   hd_radiative_cooling= F | T
+  hd_radiative_transfer= F | T
   hd_gravity= F | T
   hd_viscosity= F | T
   hd_particles= F | T
@@ -558,6 +561,7 @@ MHD list</h2>
  mhd_magnetofriction= F | T
  mhd_thermal_conduction= F | T
  mhd_radiative_cooling= F | T
+ mhd_radiative_transfer= F | T
  mhd_Hall= F | T
  mhd_gravity= F | T
  mhd_viscosity= F | T
@@ -636,7 +640,7 @@ Hyperbolic thermal conduction</h3>
 <p>FFHD and HD have different switches and dimensional support; see the <a class="el" href="md_doc_2thermal__conduction.html#tc-module-support">module support table</a>.</p>
 <h3 class="doxsection"><a class="anchor" id="par_semirelati"></a>
 Solve semirelativistic MHD to tackle extreme Alfven speed</h3>
-<p>The Alfven speed in nonrelativistic MHD, defined as B/sqrt(mu rho), can be extremely large, even unphysically larger than speed of light in strong magnetic field and low density regions. Semirelativistic MHD equations (Gombosi et al. 2002 JCP 177, 176) as the nonrelativistic hydrodynamic limit of the relativistic MHD equations solve the problem and have the same steady-state solution as nonrelativistic MHD. By artificially lowering the speed of light, one can reduce the wave speeds allowing larger time steps thus faster solution in explicit numerical schemes. Set 'mhd_semirelativistic=T' and 'mhd_reduced_c' equals to a value smaller than light speed with physical unit to solve semirelativistic MHD. If setting 'mhd_hydrodynamic_e=T' or 'mhd_internal_e=T', the approximate split semirelativistic MHD equations (Rempel 2017 ApJ 834, 10) are solved with hydrodynamic or internal energy instead of total energy. Since semirelativistic MHD waves are very complicated, only approximate fast magnetosonic wave speed is implemented to use HLL or tvdlf scheme, schemes (such as HLLC and HLLD) depending on more wave speeds are not yet fully compatible with semirelativistic MHD. Note that when using semirelativistic MHD, the definitions of momentum and total energy are different from MHD, so call 'mhd_to_primitive' to get velocity and gas pressure from momentum and total energy instead of using the classic relations.</p>
+<p>The Alfven speed in nonrelativistic MHD, defined as B/sqrt(mu rho), can be extremely large, even unphysically larger than speed of light in strong magnetic field and low density regions. Semirelativistic MHD equations (Gombosi et al. 2002 JCP 177, 176) as the nonrelativistic hydrodynamic limit of the relativistic MHD equations solve the problem and have the same steady-state solution as nonrelativistic MHD. By artificially lowering the speed of light, one can reduce the wave speeds allowing larger time steps thus faster solution in explicit numerical schemes. Set 'mhd_semirelativistic=T' and 'mhd_reduced_c' equals to a value smaller than light speed with physical unit to solve semirelativistic MHD. If setting 'mhd_hydrodynamic_e=T' or 'mhd_internal_e=T', the approximate split semirelativistic MHD equations (Rempel 2017 ApJ 834, 10) are solved with hydrodynamic or internal energy instead of total energy. Since semirelativistic MHD waves are very complicated, only approximate fast magnetosonic wave speed is implemented to use HLL or tvdlf scheme, schemes (such as HLLC and HLLD) depending on more wave speeds are not yet fully compatible with semirelativistic MHD. Note that when using semirelativistic MHD, the definitions of momentum and total energy are different from MHD, so call 'mhd_to_primitive' to get velocity and gas pressure from momentum and total energy instead of using the classic relations. Semirelativistic MHD can be combined with the PI and LTE equations of state and with B0 splitting, following Gombosi et al. 2002 eqs (92)-(97). These combinations, LTE with semirelativistic MHD and B0 splitting in particular, have had only limited testing so far, so use them with caution and compare against a classical MHD run where possible.</p>
 <h2 class="doxsection"><a class="anchor" id="par_emissionlist"></a>
 Synthetic EUV/SXR/whitelight emission</h2>
 <p>User can synthesize EUV images, EUV spectra, SXR images and whitelight images using 3D .dat files inside amrvac. These can be finished easily by adding some parameters into .par file. The images/spectra will be output to .vtu/.vti files when the convert_type in <a class="el" href="#par_filelist">Filelist</a> is set to 'EIvtiCCmpi', 'ESvtiCCmpi', 'SIvtiCCmpi' ... Thehe size of a pixel is the same as that in relevant observation data (such as SDO and RHESSI). The point spread function (PSF, instrument effect) has been included for 'instrument' resolution.</p>

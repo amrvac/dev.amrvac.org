@@ -1,7 +1,0 @@
-<map id="mod_eos_lte_entropy::entropy_eint_from_p_bisect" name="mod_eos_lte_entropy::entropy_eint_from_p_bisect">
-<area shape="rect" id="Node000001" title="Bisection inverse for the entropy table set: find log10(eint/nH) [code] such that p(nH,..." alt="" coords="5,32,167,93"/>
-<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__entropy.html#aa5897be54cd252b89fa14c22c826a3df" title="Inverse: log10(eint/nH) from (log nH, log p/nH). Single bicubic Hermite eval of the eintP table...." alt="" coords="215,5,402,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,47,202,44,196,46,168,52"/>
-<area shape="rect" id="Node000003" href="$namespacemod__eos__lte__entropy.html#a21f1ad5ba5a26b7d02f9235d25e509f9" title=" " alt="" coords="215,75,402,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,72,202,80,196,80,167,78"/>
-</map>

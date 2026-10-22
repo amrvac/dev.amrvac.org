@@ -113,6 +113,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a29d6f9885b76722d9fd862805d94e030" id="r_a29d6f9885b76722d9fd862805d94e030"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__slice.html#a29d6f9885b76722d9fd862805d94e030">mod_slice::get_igslice</a> (dir, x, igslice)</td></tr>
 <tr class="memitem:acef009a66603f2eac11506c10fd4a9e2" id="r_acef009a66603f2eac11506c10fd4a9e2"><td class="memItemLeft" align="right" valign="top">double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__slice.html#acef009a66603f2eac11506c10fd4a9e2">mod_slice::roundoff_minmax</a> (val, minval, maxval)</td></tr>
 <tr class="memitem:af810fa0cba1eb5efe962eb5b9fc00f05" id="r_af810fa0cba1eb5efe962eb5b9fc00f05"><td class="memItemLeft" align="right" valign="top">recursive subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__slice.html#af810fa0cba1eb5efe962eb5b9fc00f05">mod_slice::quicksort_integer</a> (arr, left, right)</td></tr>
+<tr class="memitem:a6422cce30dff6444cc53d1c5ec6a25d6" id="r_a6422cce30dff6444cc53d1c5ec6a25d6"><td class="memItemLeft" align="right" valign="top">character(len=13) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__slice.html#a6422cce30dff6444cc53d1c5ec6a25d6">mod_slice::slice_label</a> (xslice)</td></tr>
+<tr class="memdesc:a6422cce30dff6444cc53d1c5ec6a25d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signed slice coordinate for the file names, such as +0.500000D+00.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -148,16 +150,19 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="mod__slice_8t_ad9366c8b9a5321087966ad6804d65e77_cgraph.png" border="0" usemap="#amod__slice_8t_ad9366c8b9a5321087966ad6804d65e77_cgraph" loading="lazy" alt=""/></div>
 <map name="amod__slice_8t_ad9366c8b9a5321087966ad6804d65e77_cgraph" id="amod__slice_8t_ad9366c8b9a5321087966ad6804d65e77_cgraph">
-<area shape="rect" title=" " alt="" coords="5,96,113,124"/>
+<area shape="rect" title=" " alt="" coords="5,125,113,153"/>
 <area shape="rect" href="namespacemod__slice.html#a3e46b0faa76f755baca8577613805076" title=" " alt="" coords="196,5,384,33"/>
-<area shape="poly" title=" " alt="" coords="76,94,113,67,160,42,183,36,179,39,162,47,116,71,80,97"/>
+<area shape="poly" title=" " alt="" coords="69,124,106,82,131,60,159,42,184,34,180,37,162,47,134,65,109,86,73,127"/>
 <area shape="rect" href="namespacemod__slice.html#af1779f67911ecd3bab21aafbc64f5523" title=" " alt="" coords="219,57,362,102"/>
-<area shape="poly" title=" " alt="" coords="112,100,205,89,202,93,114,105"/>
+<area shape="poly" title=" " alt="" coords="112,123,206,99,202,104,114,128"/>
 <area shape="rect" href="namespacemod__calculate__xw.html#a3c777f366638d870c023352a16d4ef2e" title="get all variables names" alt="" coords="161,125,420,153"/>
-<area shape="poly" title=" " alt="" coords="112,114,163,121,159,124,113,119"/>
+<area shape="poly" title=" " alt="" coords="112,137,147,138,143,141,114,142"/>
 <area shape="rect" href="namespacemod__slice.html#acef009a66603f2eac11506c10fd4a9e2" title=" " alt="" coords="216,201,365,246"/>
-<area shape="poly" title=" " alt="" coords="86,122,162,162,226,194,221,195,159,167,85,127"/>
-<area shape="poly" title=" " alt="" coords="247,199,245,191,252,182,268,176,290,174,315,177,332,186,327,185,314,182,290,179,269,181,255,186,250,192,251,202"/>
+<area shape="poly" title=" " alt="" coords="100,151,214,193,210,197,100,156"/>
+<area shape="rect" href="namespacemod__slice.html#a6422cce30dff6444cc53d1c5ec6a25d6" title="Signed slice coordinate for the file names, such as +0.500000D+00." alt="" coords="208,293,372,321"/>
+<area shape="poly" title=" " alt="" coords="70,151,107,202,133,231,162,256,191,272,222,288,217,288,188,277,159,260,129,235,103,206,68,156"/>
+<area shape="poly" title=" " alt="" coords="246,199,245,191,252,182,268,176,290,174,315,177,332,186,327,186,314,182,290,179,269,181,255,186,250,192,251,201"/>
+<area shape="poly" title=" " alt="" coords="251,292,244,284,249,275,265,269,290,267,317,269,334,278,328,278,316,274,290,272,266,274,253,279,250,284,256,294"/>
 </map>
 </div>
 
@@ -178,7 +183,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__slice_8t_source.html#l00962">962</a> of file <a class="el" href="mod__slice_8t_source.html">mod_slice.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__slice_8t_source.html#l00938">938</a> of file <a class="el" href="mod__slice_8t_source.html">mod_slice.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_kernel::sc_sweep_2d" name="mod_rt_sc_kernel::sc_sweep_2d">
+<area shape="rect" id="Node000001" title="One sweep of the whole replicated grid for direction (nx, ny) into ii_g. The padded grid of sc_pad_gr..." alt="" coords="5,5,163,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__kernel.html#af3657d25799ebf57f8d4bcb5ead4ed9c" title="Sweep of one block for ray (nx, ny), the kernel of the wavefront solvers. The upwind face and corner ..." alt="" coords="211,5,368,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,25,198,27,192,28,163,30"/>
+</map>

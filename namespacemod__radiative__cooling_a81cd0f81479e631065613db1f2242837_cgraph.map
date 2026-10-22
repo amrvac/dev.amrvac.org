@@ -1,0 +1,5 @@
+<map id="mod_radiative_cooling::findy_mod" name="mod_radiative_cooling::findy_mod">
+<area shape="rect" id="Node000001" title="Forward Y_mod lookup in (log10 nH, log10 T), both axes uniform in log space; along nH the product nH*..." alt="" coords="5,5,175,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__radiative__cooling.html#a4ad8ef3998fdebacc3d5b542a99f5fd3" title="weights between the nH rows jy and jy+1: nH*Y is interpolated linearly in log10 nH,..." alt="" coords="223,5,392,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,25,210,27,205,28,175,30"/>
+</map>

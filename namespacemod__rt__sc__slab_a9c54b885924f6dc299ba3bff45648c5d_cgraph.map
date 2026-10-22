@@ -1,0 +1,14 @@
+<map id="mod_rt_sc_slab::rt_sc_emergent_tau1" name="mod_rt_sc_slab::rt_sc_emergent_tau1">
+<area shape="rect" id="Node000001" title="Horizontal mean of Fy on the tau = rt_sc_tau_emergent surface, the photosphere, into rt_sc_Ftau1...." alt="" coords="5,108,154,152"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__state.html#aa3b015526ef5770a4938c8b4e20245d8" title="Block indices (i1, i2) of the cell at position ih along hdim and iv along updim." alt="" coords="202,5,354,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,105,200,49,228,38,224,41,203,53,114,109"/>
+<area shape="rect" id="Node000003" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="402,87,584,114"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,105,201,93,296,86,389,90,384,92,296,91,202,98,149,109"/>
+<area shape="rect" id="Node000004" href="$namespacemod__rt__sc__solvers.html#a2da77cf5ba4482fdc04f0a1cb9333e06" title="List the blocks of this rank that lie in band ib, with their block position (bi, bj),..." alt="" coords="203,108,353,152"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,127,189,129,184,131,155,132"/>
+<area shape="rect" id="Node000006" href="$namespacemod__rt__sc__solvers.html#aeddf4d6e85acd9a1302f62cc074955fc" title="Tau from the band top to every cell centre of block iblk, integrated down from the top face of the bl..." alt="" coords="203,177,353,222"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="145,150,200,170,195,172,146,155"/>
+<area shape="rect" id="Node000007" href="$namespacemod__rt__sc__solvers.html#a29ac825d3805a6115e5a9ea9a13af27a" title="Tau at the top face of every block row of the current band, per global column along hdim...." alt="" coords="203,246,353,291"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="104,150,149,191,203,232,212,239,207,238,200,236,146,195,103,155"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="353,117,389,114,384,116,354,122"/>
+</map>

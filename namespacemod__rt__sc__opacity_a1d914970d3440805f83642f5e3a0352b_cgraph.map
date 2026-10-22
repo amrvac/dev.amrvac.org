@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_opacity::kappa_code_cell" name="mod_rt_sc_opacity::kappa_code_cell">
+<area shape="rect" id="Node000001" title="Rosseland opacity of one cell from the table, with temperature, density and opacity all in code units..." alt="" coords="5,5,156,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__opacity.html#a2f8027890b4f58f24231f0d39240bc7f" title="Bilinear interpolation of log10 kappa in (log10 T, log10 R)." alt="" coords="204,5,354,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,25,191,27,186,28,156,30"/>
+</map>

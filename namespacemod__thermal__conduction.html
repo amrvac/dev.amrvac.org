@@ -94,10 +94,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Types</h2></td></tr>
 <tr class="memitem:get_5Fvar_5Fsubr" id="r_get_5Fvar_5Fsubr"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__thermal__conduction_1_1get__var__subr.html">get_var_subr</a></td></tr>
+<tr class="memitem:get_5Ftciso2_5Fsubr" id="r_get_5Ftciso2_5Fsubr"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__thermal__conduction_1_1get__tciso2__subr.html">get_tciso2_subr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">temperature from the energy variable and, if present, ciso2 = p/rho  <a href="interfacemod__thermal__conduction_1_1get__tciso2__subr.html#details">More...</a><br /></td></tr>
 <tr class="memitem:get_5F2var_5Fsubr" id="r_get_5F2var_5Fsubr"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__thermal__conduction_1_1get__2var__subr.html">get_2var_subr</a></td></tr>
 <tr class="memitem:eos_5Fscalar2_5Ffunc" id="r_eos_5Fscalar2_5Ffunc"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__thermal__conduction_1_1eos__scalar2__func.html">eos_scalar2_func</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar EoS inverse, e.g. eint_nH_from_T(log_nH, log_T).  <a href="interfacemod__thermal__conduction_1_1eos__scalar2__func.html#details">More...</a><br /></td></tr>
 <tr class="memitem:tc_5Ffluid" id="r_tc_5Ffluid"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a></td></tr>
+<tr class="memitem:tc_5Fanchor_5Ft" id="r_tc_5Fanchor_5Ft"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmod__thermal__conduction_1_1tc__anchor__t.html">tc_anchor_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Per-block anchor of the frozen-ionisation conduction step: T, R and the internal energy at the step start, and the inverse frozen-composition heat capacity per volume.  <a href="structmod__thermal__conduction_1_1tc__anchor__t.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
@@ -110,21 +114,32 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:a17b4756aab5213e0be7b3525ebcb4785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the explicit timestep for the TC (mhd implementation) Note: for multi-D MHD (1D MHD will use HD fall-back).  <br /></td></tr>
 <tr class="memitem:a591ee12c87621f338cc65935a9c5fa20" id="r_a591ee12c87621f338cc65935a9c5fa20"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a591ee12c87621f338cc65935a9c5fa20">sts_set_source_tc_mhd</a> (ixil, ixol, w, x, wres, fix_conserve_at_step, my_dt, igrid, nflux, fl)</td></tr>
 <tr class="memdesc:a591ee12c87621f338cc65935a9c5fa20"><td class="mdescLeft">&#160;</td><td class="mdescRight">anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computational Physics 227, 123  <br /></td></tr>
-<tr class="memitem:af99d869a8e87c611519170f866a65b95" id="r_af99d869a8e87c611519170f866a65b95"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af99d869a8e87c611519170f866a65b95">set_source_tc_mhd</a> (ixil, ixol, w, x, fl, qvec, rho, te, alpha)</td></tr>
-<tr class="memitem:aec6aad95d98f110073e78609ef0267b6" id="r_aec6aad95d98f110073e78609ef0267b6"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec6aad95d98f110073e78609ef0267b6">set_source_tc_mhd_geo</a> (ixil, ixol, w, x, fl, qvec, rho, te, alpha)</td></tr>
+<tr class="memitem:a99939f88724e655ce343ee49b2367f3a" id="r_a99939f88724e655ce343ee49b2367f3a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99939f88724e655ce343ee49b2367f3a">set_source_tc_mhd</a> (ixil, ixol, w, x, fl, qvec, rho, te, ciso2, alpha)</td></tr>
+<tr class="memitem:a0460b14497e0ecf1e35dbf31f9ac9e83" id="r_a0460b14497e0ecf1e35dbf31f9ac9e83"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0460b14497e0ecf1e35dbf31f9ac9e83">set_source_tc_mhd_geo</a> (ixil, ixol, w, x, fl, qvec, rho, te, ciso2, alpha)</td></tr>
 <tr class="memitem:aa89a99da7c4e6f368d32d28f52e2cf85" id="r_aa89a99da7c4e6f368d32d28f52e2cf85"><td class="memItemLeft" align="right" valign="top">double precision function, dimension(ixi^s)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa89a99da7c4e6f368d32d28f52e2cf85">slope_limiter</a> (f, ixil, ixol, idims, pm, tc_slope_limiter)</td></tr>
 <tr class="memitem:a209af8dfb2abc0762cdfa89e6f840c80" id="r_a209af8dfb2abc0762cdfa89e6f840c80"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a209af8dfb2abc0762cdfa89e6f840c80">get_tc_dt_hd</a> (w, ixil, ixol, dxd, x, fl)</td></tr>
 <tr class="memdesc:a209af8dfb2abc0762cdfa89e6f840c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the explicit timestep for the TC (hd implementation) Note: also used in 1D MHD (or for neutrals in twofl).  <br /></td></tr>
+<tr class="memitem:a3d5e93d169c64e13cc17df703f456ec6" id="r_a3d5e93d169c64e13cc17df703f456ec6"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d5e93d169c64e13cc17df703f456ec6">tc_get_te_ciso2</a> (ixil, w, x, fl, igrid, te, ciso2)</td></tr>
+<tr class="memdesc:a3d5e93d169c64e13cc17df703f456ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Te over the block (+ghosts) and ciso2 = p/rho for the saturation limit: the frozen- ionisation map within a conduction step with frozen_ion, else the full EoS with the optional negative-eint repair (ciso2 = Te where R = 1 or without saturation).  <br /></td></tr>
+<tr class="memitem:a3b456f51b24d59bdfb46cf42625a23e9" id="r_a3b456f51b24d59bdfb46cf42625a23e9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b456f51b24d59bdfb46cf42625a23e9">tc_frozen_anchor</a> (ixil, w, x, fl, igrid)</td></tr>
+<tr class="memdesc:a3b456f51b24d59bdfb46cf42625a23e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anchor of the frozen-ionisation conduction step for block igrid, on the step-start state (internal energy in w(:,e_)): T and R = ciso2/T from the full EoS, the energy, and the inverse frozen-composition heat capacity. Within the step T = T0 + (e - e0)/(R0 rho/(gamma-1)), exact where the gas is fully ionised or neutral.  <br /></td></tr>
+<tr class="memitem:ada7688bb65f7c03cad3d0bf4ba99fc99" id="r_ada7688bb65f7c03cad3d0bf4ba99fc99"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada7688bb65f7c03cad3d0bf4ba99fc99">tc_equi_state</a> (ixil, w, x, fl, te, rho, ciso2)</td></tr>
+<tr class="memdesc:ada7688bb65f7c03cad3d0bf4ba99fc99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background Te and rho for the equilibrium flux. ciso2 keeps R = ciso2/Te of the full state.  <br /></td></tr>
+<tr class="memitem:ad3e1246f690d4ea8f738da5c85245108" id="r_ad3e1246f690d4ea8f738da5c85245108"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3e1246f690d4ea8f738da5c85245108">tc_flux_hd</a> (ixil, ixol, w, x, fl, qvec, rho, te, ciso2)</td></tr>
+<tr class="memdesc:ad3e1246f690d4ea8f738da5c85245108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Face fluxes for the HD STS source, uniform or general geometry.  <br /></td></tr>
+<tr class="memitem:a05b0316765dd122a551fea6be8f955da" id="r_a05b0316765dd122a551fea6be8f955da"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05b0316765dd122a551fea6be8f955da">tc_flux_mhd</a> (ixil, ixol, w, x, fl, qvec, rho, te, ciso2, alpha)</td></tr>
+<tr class="memdesc:a05b0316765dd122a551fea6be8f955da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Face fluxes for the MHD STS source, uniform or general geometry.  <br /></td></tr>
 <tr class="memitem:a57cf95e5b705d868c99792a156c06dcd" id="r_a57cf95e5b705d868c99792a156c06dcd"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57cf95e5b705d868c99792a156c06dcd">sts_set_source_tc_hd</a> (ixil, ixol, w, x, wres, fix_conserve_at_step, my_dt, igrid, nflux, fl)</td></tr>
-<tr class="memitem:ae7b3ea6235802277a9d72602e17c6e78" id="r_ae7b3ea6235802277a9d72602e17c6e78"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7b3ea6235802277a9d72602e17c6e78">set_source_tc_hd</a> (ixil, ixol, w, x, fl, qvec, rho, te)</td></tr>
-<tr class="memitem:a9d2565cdf0387ab66da2e065f75e3803" id="r_a9d2565cdf0387ab66da2e065f75e3803"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d2565cdf0387ab66da2e065f75e3803">set_source_tc_hd_geo</a> (ixil, ixol, w, x, fl, qvec, rho, te)</td></tr>
-<tr class="memitem:a508ea7544942721373d494e78f1ec61c" id="r_a508ea7544942721373d494e78f1ec61c"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a508ea7544942721373d494e78f1ec61c">tc_patch_negative_eint</a> (w, x, ixil, ixol, te, ie, fl)</td></tr>
-<tr class="memdesc:a508ea7544942721373d494e78f1ec61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patch cells where e_int &lt;= 0 by neighbor-averaging the temperature AND repairing the conserved internal energy w(:, ie) in place. Called after get_temperature_from_eint in the TC source routines when tc_patch_eint is .true. During STS RKL2 Chebyshev substeps the polynomial can overshoot e_int to negative values at low-density coronal cells. A negative T would produce NaN via sqrt(T) in the Spitzer conductivity. This routine replaces those cells' T with the average of valid (e_int &gt; 0) neighbors and writes the matching e_int back to w(ix, ie) via the EoS inverse helper eint_nH_from_T, so the next STS substep does not re-read negative w and amplify it.  <br /></td></tr>
+<tr class="memitem:a9f27ecbb8d66bbdbf38d95ea9db2b495" id="r_a9f27ecbb8d66bbdbf38d95ea9db2b495"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f27ecbb8d66bbdbf38d95ea9db2b495">set_source_tc_hd</a> (ixil, ixol, w, x, fl, qvec, rho, te, ciso2)</td></tr>
+<tr class="memitem:a5adeff744988e2cce98a43c6eb65a914" id="r_a5adeff744988e2cce98a43c6eb65a914"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5adeff744988e2cce98a43c6eb65a914">set_source_tc_hd_geo</a> (ixil, ixol, w, x, fl, qvec, rho, te, ciso2)</td></tr>
+<tr class="memitem:a73ff37299b2787b84037dc5349288de5" id="r_a73ff37299b2787b84037dc5349288de5"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73ff37299b2787b84037dc5349288de5">tc_patch_negative_eint</a> (w, x, ixil, ixol, te, ie, fl, patched)</td></tr>
+<tr class="memdesc:a73ff37299b2787b84037dc5349288de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patch cells where e_int &lt;= 0 by neighbor-averaging the temperature AND repairing the conserved internal energy w(:, ie) in place. Called after get_temperature_from_eint in the TC source routines when tc_patch_eint is .true. During STS RKL2 Chebyshev substeps the polynomial can overshoot e_int to negative values at low-density coronal cells. A negative T would produce NaN via sqrt(T) in the Spitzer conductivity. This routine replaces those cells' T with the average of valid (e_int &gt; 0) neighbors and writes the matching e_int back to w(ix, ie) via the EoS inverse helper eint_nH_from_T, so the next STS substep does not re-read negative w and amplify it.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a84688c40e5fec91e83b857bd080fd599" id="r_a84688c40e5fec91e83b857bd080fd599"><td class="memItemLeft" align="right" valign="top">double precision&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84688c40e5fec91e83b857bd080fd599">tc_gamma_1</a></td></tr>
 <tr class="memdesc:a84688c40e5fec91e83b857bd080fd599"><td class="mdescLeft">&#160;</td><td class="mdescRight">The adiabatic index.  <br /></td></tr>
+<tr class="memitem:a7ae0ecd0afbccb0959bc9e9ec538e357" id="r_a7ae0ecd0afbccb0959bc9e9ec538e357"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmod__thermal__conduction_1_1tc__anchor__t.html">tc_anchor_t</a>), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ae0ecd0afbccb0959bc9e9ec538e357">tc_anchor</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Thermal conduction for HD and MHD or RHD and RMHD or twofl (plasma-neutral) module Adaptation of <a class="el" href="namespacemod__thermal__conduction.html" title="Thermal conduction for HD and MHD or RHD and RMHD or twofl (plasma-neutral) module Adaptation of mod_...">mod_thermal_conduction</a> for the <a class="el" href="namespacemod__supertimestepping.html" title="Generic supertimestepping method which can be used for multiple source terms in the governing equatio...">mod_supertimestepping</a>. </p>
@@ -193,7 +208,7 @@ Variables</h2></td></tr>
 
 <p>Get the explicit timestep for the TC (hd implementation) Note: also used in 1D MHD (or for neutrals in twofl). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01399">1399</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01425">1425</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -253,12 +268,22 @@ Variables</h2></td></tr>
 
 <p>Get the explicit timestep for the TC (mhd implementation) Note: for multi-D MHD (1D MHD will use HD fall-back). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00227">227</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00258">258</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__thermal__conduction_a17b4756aab5213e0be7b3525ebcb4785_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a17b4756aab5213e0be7b3525ebcb4785_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_a17b4756aab5213e0be7b3525ebcb4785_cgraph" id="anamespacemod__thermal__conduction_a17b4756aab5213e0be7b3525ebcb4785_cgraph">
+<area shape="rect" title="Get the explicit timestep for the TC (mhd implementation) Note: for multi&#45;D MHD (1D MHD will use HD f..." alt="" coords="5,5,192,50"/>
+<area shape="rect" href="namespacemod__geometry.html#a9be440eb43ae039be6f1e52e5c841f69" title=" " alt="" coords="240,14,421,42"/>
+<area shape="poly" title=" " alt="" coords="192,25,227,27,221,28,192,30"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="ae7b3ea6235802277a9d72602e17c6e78" name="ae7b3ea6235802277a9d72602e17c6e78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7b3ea6235802277a9d72602e17c6e78">&#9670;&#160;</a></span>set_source_tc_hd()</h2>
+<a id="a9f27ecbb8d66bbdbf38d95ea9db2b495" name="a9f27ecbb8d66bbdbf38d95ea9db2b495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f27ecbb8d66bbdbf38d95ea9db2b495">&#9670;&#160;</a></span>set_source_tc_hd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,17 +336,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>te</em></span>&#160;)</td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>te</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>ciso2</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01538">1538</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01681">1681</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
-<a id="a9d2565cdf0387ab66da2e065f75e3803" name="a9d2565cdf0387ab66da2e065f75e3803"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d2565cdf0387ab66da2e065f75e3803">&#9670;&#160;</a></span>set_source_tc_hd_geo()</h2>
+<a id="a5adeff744988e2cce98a43c6eb65a914" name="a5adeff744988e2cce98a43c6eb65a914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5adeff744988e2cce98a43c6eb65a914">&#9670;&#160;</a></span>set_source_tc_hd_geo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,17 +404,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>te</em></span>&#160;)</td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>te</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>ciso2</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01686">1686</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01829">1829</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
-<a id="af99d869a8e87c611519170f866a65b95" name="af99d869a8e87c611519170f866a65b95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af99d869a8e87c611519170f866a65b95">&#9670;&#160;</a></span>set_source_tc_mhd()</h2>
+<a id="a99939f88724e655ce343ee49b2367f3a" name="a99939f88724e655ce343ee49b2367f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99939f88724e655ce343ee49b2367f3a">&#9670;&#160;</a></span>set_source_tc_mhd()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,17 +477,22 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>ciso2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00405">405</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00431">431</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__thermal__conduction_af99d869a8e87c611519170f866a65b95_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_af99d869a8e87c611519170f866a65b95_cgraph" loading="lazy" alt=""/></div>
-<map name="anamespacemod__thermal__conduction_af99d869a8e87c611519170f866a65b95_cgraph" id="anamespacemod__thermal__conduction_af99d869a8e87c611519170f866a65b95_cgraph">
+<div class="center"><img src="namespacemod__thermal__conduction_a99939f88724e655ce343ee49b2367f3a_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a99939f88724e655ce343ee49b2367f3a_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_a99939f88724e655ce343ee49b2367f3a_cgraph" id="anamespacemod__thermal__conduction_a99939f88724e655ce343ee49b2367f3a_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,192,50"/>
 <area shape="rect" href="namespacemod__thermal__conduction.html#aa89a99da7c4e6f368d32d28f52e2cf85" title=" " alt="" coords="240,5,426,50"/>
 <area shape="poly" title=" " alt="" coords="192,25,227,27,221,28,192,30"/>
@@ -461,8 +501,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="aec6aad95d98f110073e78609ef0267b6" name="aec6aad95d98f110073e78609ef0267b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec6aad95d98f110073e78609ef0267b6">&#9670;&#160;</a></span>set_source_tc_mhd_geo()</h2>
+<a id="a0460b14497e0ecf1e35dbf31f9ac9e83" name="a0460b14497e0ecf1e35dbf31f9ac9e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0460b14497e0ecf1e35dbf31f9ac9e83">&#9670;&#160;</a></span>set_source_tc_mhd_geo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -520,17 +560,22 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>ciso2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00868">868</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00894">894</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemod__thermal__conduction_aec6aad95d98f110073e78609ef0267b6_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_aec6aad95d98f110073e78609ef0267b6_cgraph" loading="lazy" alt=""/></div>
-<map name="anamespacemod__thermal__conduction_aec6aad95d98f110073e78609ef0267b6_cgraph" id="anamespacemod__thermal__conduction_aec6aad95d98f110073e78609ef0267b6_cgraph">
+<div class="center"><img src="namespacemod__thermal__conduction_a0460b14497e0ecf1e35dbf31f9ac9e83_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a0460b14497e0ecf1e35dbf31f9ac9e83_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_a0460b14497e0ecf1e35dbf31f9ac9e83_cgraph" id="anamespacemod__thermal__conduction_a0460b14497e0ecf1e35dbf31f9ac9e83_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,192,50"/>
 <area shape="rect" href="namespacemod__thermal__conduction.html#aa89a99da7c4e6f368d32d28f52e2cf85" title=" " alt="" coords="240,5,426,50"/>
 <area shape="poly" title=" " alt="" coords="192,25,227,27,221,28,192,30"/>
@@ -588,7 +633,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01357">1357</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01383">1383</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -661,21 +706,21 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01455">1455</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01609">1609</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__thermal__conduction_a57cf95e5b705d868c99792a156c06dcd_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a57cf95e5b705d868c99792a156c06dcd_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__thermal__conduction_a57cf95e5b705d868c99792a156c06dcd_cgraph" id="anamespacemod__thermal__conduction_a57cf95e5b705d868c99792a156c06dcd_cgraph">
-<area shape="rect" title=" " alt="" coords="5,105,192,150"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#ae7b3ea6235802277a9d72602e17c6e78" title=" " alt="" coords="252,5,438,50"/>
-<area shape="poly" title=" " alt="" coords="144,102,239,60,260,54,255,57,241,65,147,107"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a9d2565cdf0387ab66da2e065f75e3803" title=" " alt="" coords="252,75,438,119"/>
-<area shape="poly" title=" " alt="" coords="191,114,239,109,234,112,193,119"/>
-<area shape="rect" href="namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="240,143,451,171"/>
-<area shape="poly" title=" " alt="" coords="192,136,227,142,222,143,192,141"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a508ea7544942721373d494e78f1ec61c" title="Patch cells where e_int &lt;= 0 by neighbor&#45;averaging the temperature AND repairing the conserved intern..." alt="" coords="252,195,438,239"/>
-<area shape="poly" title=" " alt="" coords="157,148,241,180,262,189,257,189,239,185,156,153"/>
+<area shape="rect" title=" " alt="" coords="5,92,192,136"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="240,5,451,33"/>
+<area shape="poly" title=" " alt="" coords="138,89,186,65,239,42,263,36,258,39,241,47,188,69,141,93"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#ada7688bb65f7c03cad3d0bf4ba99fc99" title="Background Te and rho for the equilibrium flux. ciso2 keeps R = ciso2/Te of the full state." alt="" coords="252,57,438,102"/>
+<area shape="poly" title=" " alt="" coords="191,98,239,93,234,96,193,103"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#ad3e1246f690d4ea8f738da5c85245108" title="Face fluxes for the HD STS source, uniform or general geometry." alt="" coords="252,126,438,171"/>
+<area shape="poly" title=" " alt="" coords="192,124,239,133,234,134,192,130"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a3d5e93d169c64e13cc17df703f456ec6" title="Te over the block (+ghosts) and ciso2 = p/rho for the saturation limit: the frozen&#45; ionisation map wi..." alt="" coords="252,196,438,240"/>
+<area shape="poly" title=" " alt="" coords="143,134,241,181,259,190,254,190,239,186,141,139"/>
 </map>
 </div>
 
@@ -752,23 +797,292 @@ Here is the call graph for this function:</div>
 
 <p>anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computational Physics 227, 123 </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00314">314</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00350">350</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__thermal__conduction_a591ee12c87621f338cc65935a9c5fa20_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a591ee12c87621f338cc65935a9c5fa20_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__thermal__conduction_a591ee12c87621f338cc65935a9c5fa20_cgraph" id="anamespacemod__thermal__conduction_a591ee12c87621f338cc65935a9c5fa20_cgraph">
-<area shape="rect" title="anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computation..." alt="" coords="5,105,192,150"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#af99d869a8e87c611519170f866a65b95" title=" " alt="" coords="252,5,438,50"/>
-<area shape="poly" title=" " alt="" coords="144,102,239,60,260,54,255,57,241,65,147,107"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#aec6aad95d98f110073e78609ef0267b6" title=" " alt="" coords="252,75,438,119"/>
-<area shape="poly" title=" " alt="" coords="191,114,239,109,234,112,193,119"/>
-<area shape="rect" href="namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="240,143,451,171"/>
-<area shape="poly" title=" " alt="" coords="192,136,227,142,222,143,192,141"/>
-<area shape="rect" href="namespacemod__thermal__conduction.html#a508ea7544942721373d494e78f1ec61c" title="Patch cells where e_int &lt;= 0 by neighbor&#45;averaging the temperature AND repairing the conserved intern..." alt="" coords="252,195,438,239"/>
-<area shape="poly" title=" " alt="" coords="157,148,241,180,262,189,257,189,239,185,156,153"/>
+<area shape="rect" title="anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computation..." alt="" coords="5,92,192,136"/>
+<area shape="rect" href="namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="240,5,451,33"/>
+<area shape="poly" title=" " alt="" coords="138,89,186,65,239,42,263,36,258,39,241,47,188,69,141,93"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#ada7688bb65f7c03cad3d0bf4ba99fc99" title="Background Te and rho for the equilibrium flux. ciso2 keeps R = ciso2/Te of the full state." alt="" coords="252,57,438,102"/>
+<area shape="poly" title=" " alt="" coords="191,98,239,93,234,96,193,103"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a05b0316765dd122a551fea6be8f955da" title="Face fluxes for the MHD STS source, uniform or general geometry." alt="" coords="252,126,438,171"/>
+<area shape="poly" title=" " alt="" coords="192,124,239,133,234,134,192,130"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a3d5e93d169c64e13cc17df703f456ec6" title="Te over the block (+ghosts) and ciso2 = p/rho for the saturation limit: the frozen&#45; ionisation map wi..." alt="" coords="252,196,438,240"/>
+<area shape="poly" title=" " alt="" coords="143,134,241,181,259,190,254,190,239,186,141,139"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ada7688bb65f7c03cad3d0bf4ba99fc99" name="ada7688bb65f7c03cad3d0bf4ba99fc99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7688bb65f7c03cad3d0bf4ba99fc99">&#9670;&#160;</a></span>tc_equi_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_thermal_conduction::tc_equi_state </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>ixi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>l</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__variables.html#a0bc18ad8d488cfdb57d9bd182a490250">nw</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>fl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(inout)</td>          <td class="paramname"><span class="paramname"><em>te</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(inout)</td>          <td class="paramname"><span class="paramname"><em>rho</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(inout)</td>          <td class="paramname"><span class="paramname"><em>ciso2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Background Te and rho for the equilibrium flux. ciso2 keeps R = ciso2/Te of the full state. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01565">1565</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="ad3e1246f690d4ea8f738da5c85245108" name="ad3e1246f690d4ea8f738da5c85245108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e1246f690d4ea8f738da5c85245108">&#9670;&#160;</a></span>tc_flux_hd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_thermal_conduction::tc_flux_hd </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>ixi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>l</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>ixo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>l</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__variables.html#a0bc18ad8d488cfdb57d9bd182a490250">nw</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>fl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), intent(out)</td>          <td class="paramname"><span class="paramname"><em>qvec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>rho</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>te</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>ciso2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Face fluxes for the HD STS source, uniform or general geometry. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01578">1578</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__thermal__conduction_ad3e1246f690d4ea8f738da5c85245108_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_ad3e1246f690d4ea8f738da5c85245108_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_ad3e1246f690d4ea8f738da5c85245108_cgraph" id="anamespacemod__thermal__conduction_ad3e1246f690d4ea8f738da5c85245108_cgraph">
+<area shape="rect" title="Face fluxes for the HD STS source, uniform or general geometry." alt="" coords="5,40,192,85"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a9f27ecbb8d66bbdbf38d95ea9db2b495" title=" " alt="" coords="240,5,426,50"/>
+<area shape="poly" title=" " alt="" coords="191,46,227,43,222,44,193,51"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a5adeff744988e2cce98a43c6eb65a914" title=" " alt="" coords="240,75,426,119"/>
+<area shape="poly" title=" " alt="" coords="192,73,227,81,221,81,192,79"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a05b0316765dd122a551fea6be8f955da" name="a05b0316765dd122a551fea6be8f955da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b0316765dd122a551fea6be8f955da">&#9670;&#160;</a></span>tc_flux_mhd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_thermal_conduction::tc_flux_mhd </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>ixi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>l</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>ixo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>l</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__variables.html#a0bc18ad8d488cfdb57d9bd182a490250">nw</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>fl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), intent(out)</td>          <td class="paramname"><span class="paramname"><em>qvec</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>rho</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>te</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(in)</td>          <td class="paramname"><span class="paramname"><em>ciso2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, intent(in)</td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Face fluxes for the MHD STS source, uniform or general geometry. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01594">1594</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__thermal__conduction_a05b0316765dd122a551fea6be8f955da_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a05b0316765dd122a551fea6be8f955da_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_a05b0316765dd122a551fea6be8f955da_cgraph" id="anamespacemod__thermal__conduction_a05b0316765dd122a551fea6be8f955da_cgraph">
+<area shape="rect" title="Face fluxes for the MHD STS source, uniform or general geometry." alt="" coords="5,40,192,85"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a99939f88724e655ce343ee49b2367f3a" title=" " alt="" coords="240,5,426,50"/>
+<area shape="poly" title=" " alt="" coords="191,46,227,43,222,44,193,51"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a0460b14497e0ecf1e35dbf31f9ac9e83" title=" " alt="" coords="240,75,426,119"/>
+<area shape="poly" title=" " alt="" coords="192,73,227,81,221,81,192,79"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3b456f51b24d59bdfb46cf42625a23e9" name="a3b456f51b24d59bdfb46cf42625a23e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b456f51b24d59bdfb46cf42625a23e9">&#9670;&#160;</a></span>tc_frozen_anchor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_thermal_conduction::tc_frozen_anchor </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>ixi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>l</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__variables.html#a0bc18ad8d488cfdb57d9bd182a490250">nw</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>fl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>igrid</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Anchor of the frozen-ionisation conduction step for block igrid, on the step-start state (internal energy in w(:,e_)): T and R = ciso2/T from the full EoS, the energy, and the inverse frozen-composition heat capacity. Within the step T = T0 + (e - e0)/(R0 rho/(gamma-1)), exact where the gas is fully ionised or neutral. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01547">1547</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -794,7 +1108,7 @@ Here is the call graph for this function:</div>
 <p>Init TC coefficients: HD case. </p>
 <p>Read tc parameters from par file: HD case</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00191">191</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00222">222</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -820,7 +1134,74 @@ Here is the call graph for this function:</div>
 <p>Init TC coefficients: MHD case. </p>
 <p>Read tc module parameters from par file: MHD case</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00150">150</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00181">181</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="a3d5e93d169c64e13cc17df703f456ec6" name="a3d5e93d169c64e13cc17df703f456ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d5e93d169c64e13cc17df703f456ec6">&#9670;&#160;</a></span>tc_get_te_ciso2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_thermal_conduction::tc_get_te_ciso2 </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>ixi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>l</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__variables.html#a0bc18ad8d488cfdb57d9bd182a490250">nw</a>), intent(inout)</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s,1:<a class="el" href="namespacemod__global__parameters.html#a44dda3cb334ff384ee40e1797717cc38">ndim</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>fl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>igrid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(out)</td>          <td class="paramname"><span class="paramname"><em>te</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double precision, dimension(ixi^s), intent(out)</td>          <td class="paramname"><span class="paramname"><em>ciso2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Te over the block (+ghosts) and ciso2 = p/rho for the saturation limit: the frozen- ionisation map within a conduction step with frozen_ion, else the full EoS with the optional negative-eint repair (ciso2 = Te where R = 1 or without saturation). </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01489">1489</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__thermal__conduction_a3d5e93d169c64e13cc17df703f456ec6_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a3d5e93d169c64e13cc17df703f456ec6_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_a3d5e93d169c64e13cc17df703f456ec6_cgraph" id="anamespacemod__thermal__conduction_a3d5e93d169c64e13cc17df703f456ec6_cgraph">
+<area shape="rect" title="Te over the block (+ghosts) and ciso2 = p/rho for the saturation limit: the frozen&#45; ionisation map wi..." alt="" coords="5,40,192,85"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a3b456f51b24d59bdfb46cf42625a23e9" title="Anchor of the frozen&#45;ionisation conduction step for block igrid, on the step&#45;start state (internal en..." alt="" coords="240,5,426,50"/>
+<area shape="poly" title=" " alt="" coords="191,46,227,43,222,44,193,51"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a73ff37299b2787b84037dc5349288de5" title="Patch cells where e_int &lt;= 0 by neighbor&#45;averaging the temperature AND repairing the conserved intern..." alt="" coords="240,75,426,119"/>
+<area shape="poly" title=" " alt="" coords="192,73,227,81,221,81,192,79"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -839,12 +1220,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00142">142</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00173">173</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
-<a id="a508ea7544942721373d494e78f1ec61c" name="a508ea7544942721373d494e78f1ec61c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a508ea7544942721373d494e78f1ec61c">&#9670;&#160;</a></span>tc_patch_negative_eint()</h2>
+<a id="a73ff37299b2787b84037dc5349288de5" name="a73ff37299b2787b84037dc5349288de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ff37299b2787b84037dc5349288de5">&#9670;&#160;</a></span>tc_patch_negative_eint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -892,18 +1273,45 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>fl</em></span>&#160;)</td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(in)</td>          <td class="paramname"><span class="paramname"><em>fl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">logical, intent(out)</td>          <td class="paramname"><span class="paramname"><em>patched</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Patch cells where e_int &lt;= 0 by neighbor-averaging the temperature AND repairing the conserved internal energy w(:, ie) in place. Called after get_temperature_from_eint in the TC source routines when tc_patch_eint is .true. During STS RKL2 Chebyshev substeps the polynomial can overshoot e_int to negative values at low-density coronal cells. A negative T would produce NaN via sqrt(T) in the Spitzer conductivity. This routine replaces those cells' T with the average of valid (e_int &gt; 0) neighbors and writes the matching e_int back to w(ix, ie) via the EoS inverse helper eint_nH_from_T, so the next STS substep does not re-read negative w and amplify it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">patched</td><td>true when at least one cell was repaired </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01864">1864</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l02007">2007</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
 <a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Variable Documentation</h2>
+<a id="a7ae0ecd0afbccb0959bc9e9ec538e357" name="a7ae0ecd0afbccb0959bc9e9ec538e357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ae0ecd0afbccb0959bc9e9ec538e357">&#9670;&#160;</a></span>tc_anchor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structmod__thermal__conduction_1_1tc__anchor__t.html">tc_anchor_t</a>), dimension(:), allocatable mod_thermal_conduction::tc_anchor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00169">169</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
 <a id="a84688c40e5fec91e83b857bd080fd599" name="a84688c40e5fec91e83b857bd080fd599"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84688c40e5fec91e83b857bd080fd599">&#9670;&#160;</a></span>tc_gamma_1</h2>
 

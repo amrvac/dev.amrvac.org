@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_solvers::rt_wave_band_open" name="mod_rt_sc_solvers::rt_wave_band_open">
+<area shape="rect" id="Node000001" title="Open band ib. It lists and caches the band blocks and zeroes the accumulators." alt="" coords="5,5,157,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__rt__sc__solvers.html#a2da77cf5ba4482fdc04f0a1cb9333e06" title="List the blocks of this rank that lie in band ib, with their block position (bi, bj),..." alt="" coords="205,5,355,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,25,192,27,187,28,157,30"/>
+</map>
