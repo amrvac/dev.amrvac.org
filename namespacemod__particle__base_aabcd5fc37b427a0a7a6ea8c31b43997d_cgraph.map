@@ -1,0 +1,11 @@
+<map id="mod_particle_base::particle_exchange" name="mod_particle_base::particle_exchange">
+<area shape="rect" id="Node000001" title="Exchange only migrating particles, reusing geometrically grown buffers. All ranks participate; a glob..." alt="" coords="5,100,158,145"/>
+<area shape="rect" id="Node000002" href="$namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="231,5,384,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,97,205,60,224,54,220,57,207,65,128,102"/>
+<area shape="rect" id="Node000005" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="216,74,398,102"/>
+<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="157,108,203,103,198,105,159,113"/>
+<area shape="rect" id="Node000006" href="$namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="206,126,408,188"/>
+<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="157,131,194,138,189,140,158,137"/>
+<area shape="rect" id="Node000007" href="$namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="206,212,409,273"/>
+<area shape="poly" id="edge4_Node000001_Node000007" title=" " alt="" coords="116,143,207,197,218,205,213,204,204,202,115,148"/>
+</map>

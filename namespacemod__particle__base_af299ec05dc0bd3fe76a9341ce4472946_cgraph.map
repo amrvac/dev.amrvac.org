@@ -1,9 +1,11 @@
 <map id="mod_particle_base::comm_particles_global" name="mod_particle_base::comm_particles_global">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,83,178,127"/>
-<area shape="rect" id="Node000002" href="$namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="251,5,404,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,80,245,54,240,57,163,84"/>
-<area shape="rect" id="Node000005" href="$namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="226,74,428,136"/>
-<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="178,102,213,104,208,106,179,108"/>
-<area shape="rect" id="Node000006" href="$namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="226,160,429,221"/>
-<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="156,125,228,153,223,154,155,131"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,49,178,94"/>
+<area shape="rect" id="Node000002" href="$namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="441,5,593,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,46,225,34,329,25,428,25,423,26,329,30,226,40,169,51"/>
+<area shape="rect" id="Node000005" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="426,88,608,116"/>
+<area shape="poly" id="edge2_Node000001_Node000005" title=" " alt="" coords="167,92,226,104,320,110,408,111,413,111,320,115,225,109,167,97"/>
+<area shape="rect" id="Node000006" href="$namespacemod__particle__base.html#aabcd5fc37b427a0a7a6ea8c31b43997d" title="Exchange only migrating particles, reusing geometrically grown buffers. All ranks participate; a glob..." alt="" coords="226,49,378,94"/>
+<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="178,69,213,71,208,72,178,74"/>
+<area shape="poly" id="edge4_Node000006_Node000002" title=" " alt="" coords="378,54,423,47,428,46,379,59"/>
+<area shape="poly" id="edge5_Node000006_Node000005" title=" " alt="" coords="378,80,413,87,408,87,378,85"/>
 </map>

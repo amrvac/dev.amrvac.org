@@ -579,7 +579,7 @@ MHD list</h2>
  mhd_hyperbolic_tc_sat= F | T
  mhd_hyperbolic_tc_kappa= DOUBLE (default 0: Spitzer; positive: constant in code units)
  mhd_hyperbolic_tc_use_perp= F | T (2D/3D only)
- mhd_hyperbolic_tc_perp_mode= 'off' | 'fixed_reference' | 'weak_field_isotropization' | 'electron_magnetization'
+ mhd_hyperbolic_tc_perp_mode= 'fixed_reference' | 'weak_field_isotropization' | 'electron_magnetization'
  mhd_hyperbolic_tc_kappa_perp_factor= DOUBLE (default 0: automatic reference ratio)
  mhd_hyperbolic_tc_Bmin= DOUBLE (default 0: automatic; positive: code units)
  mhd_hyperbolic_tc_coulomb_log= DOUBLE (default 20)
@@ -636,7 +636,7 @@ Solve internal or hydrodynamic energy to avoid negative pressure</h3>
 <h3 class="doxsection"><a class="anchor" id="par_HTC"></a>
 Hyperbolic thermal conduction</h3>
 <p>Set <span class="tt">mhd_hyperbolic_tc=T</span> in <span class="tt">&amp;mhd_list</span> and initialize <span class="tt">qpar_</span> in <span class="tt">mod_usr.t</span>. The default coefficient selects Spitzer conduction; a positive <span class="tt">mhd_hyperbolic_tc_kappa</span> selects constant conductivity in code units. Use <span class="tt">mhd_hyperbolic_tc_sat=T</span> for saturation.</p>
-<p>For perpendicular conduction in 2D/3D, also set <span class="tt">mhd_hyperbolic_tc_use_perp=T</span>, choose <span class="tt">mhd_hyperbolic_tc_perp_mode</span>, and initialize <span class="tt">qperp_</span>. See <a class="el" href="md_doc_2thermal__conduction.html">Thermal conduction</a> for configuration examples, equations, and the <a class="el" href="md_doc_2thermal__conduction.html#tc-mhd-parameters">parameter table</a>.</p>
+<p>For perpendicular conduction in 2D/3D, also set <span class="tt">mhd_hyperbolic_tc_use_perp=T</span> and initialize <span class="tt">qperp_</span>. The default <span class="tt">mhd_hyperbolic_tc_perp_mode</span> is <span class="tt">fixed_reference</span>; select another mode explicitly when needed. See <a class="el" href="md_doc_2thermal__conduction.html">Thermal conduction</a> for configuration examples, equations, and the <a class="el" href="md_doc_2thermal__conduction.html#tc-mhd-parameters">parameter table</a>.</p>
 <p>FFHD and HD have different switches and dimensional support; see the <a class="el" href="md_doc_2thermal__conduction.html#tc-module-support">module support table</a>.</p>
 <h3 class="doxsection"><a class="anchor" id="par_semirelati"></a>
 Solve semirelativistic MHD to tackle extreme Alfven speed</h3>

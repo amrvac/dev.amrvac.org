@@ -180,7 +180,7 @@ MHD parameter summary</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">mhd_hyperbolic_tc_use_perp</span>  </td><td class="markdownTableBodyNone"><span class="tt">.false.</span>  </td><td class="markdownTableBodyNone">Enable the perpendicular channel in 2D/3D.  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><span class="tt">mhd_hyperbolic_tc_perp_mode</span>  </td><td class="markdownTableBodyNone"><span class="tt">'off'</span>  </td><td class="markdownTableBodyNone">Select one of the three closures above when enabling the perpendicular channel.  </td></tr>
+<td class="markdownTableBodyNone"><span class="tt">mhd_hyperbolic_tc_perp_mode</span>  </td><td class="markdownTableBodyNone"><span class="tt">'fixed_reference'</span>  </td><td class="markdownTableBodyNone">Select the closure; the mode alone does not enable the perpendicular channel.  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><span class="tt">mhd_hyperbolic_tc_kappa_perp_factor</span>  </td><td class="markdownTableBodyNone"><span class="tt">0</span>  </td><td class="markdownTableBodyNone">Fixed-reference ratio; zero selects an automatic normalization-based value.  </td></tr>
 <tr class="markdownTableRowOdd">
@@ -189,7 +189,7 @@ MHD parameter summary</h1>
 <td class="markdownTableBodyNone"><span class="tt">mhd_hyperbolic_tc_coulomb_log</span>  </td><td class="markdownTableBodyNone"><span class="tt">20</span>  </td><td class="markdownTableBodyNone">Positive Coulomb logarithm for <span class="tt">electron_magnetization</span>.  </td></tr>
 </table>
 <p>For <span class="tt">fixed_reference</span>, the automatic ratio is <span class="tt">4.d-10*unit_numberdensity**2/unit_magneticfield**2/unit_temperature**3</span> in cgs, with prefactor <span class="tt">4.d-30</span> in SI. It is fixed at initialization. For <span class="tt">weak_field_isotropization</span>, specify a positive code-unit Bmin when a particular physical scale is intended; the default expression above applies literally in either unit system.</p>
-<p>To turn off perpendicular conduction, set <span class="tt">mhd_hyperbolic_tc_use_perp=.false.</span>. A zero reference factor selects the automatic value, while enabling the channel with mode <span class="tt">'off'</span> is rejected.</p>
+<p>To turn off perpendicular conduction, set <span class="tt">mhd_hyperbolic_tc_use_perp=.false.</span>. Enabling the channel without specifying a mode selects <span class="tt">fixed_reference</span>. A zero reference factor selects the automatic value. Legacy mode <span class="tt">'off'</span> is accepted while the channel is disabled, but rejected when it is enabled.</p>
 <h1 class="doxsection"><a class="anchor" id="tc-module-support"></a>
 Other physics modules</h1>
 <table class="markdownTable">

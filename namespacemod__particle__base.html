@@ -103,6 +103,10 @@ Data Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
+<tr class="memitem:aabcd5fc37b427a0a7a6ea8c31b43997d" id="r_aabcd5fc37b427a0a7a6ea8c31b43997d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabcd5fc37b427a0a7a6ea8c31b43997d">particle_exchange</a> (outgoing_ids, destinations, nout, global_exchange)</td></tr>
+<tr class="memdesc:aabcd5fc37b427a0a7a6ea8c31b43997d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exchange only migrating particles, reusing geometrically grown buffers. All ranks participate; a global decision selects the non-neighbor fallback. Payload columns and particle slices stay contiguous until MPI_WAITALL.  <br /></td></tr>
+<tr class="memitem:af299ec05dc0bd3fe76a9341ce4472946" id="r_af299ec05dc0bd3fe76a9341ce4472946"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af299ec05dc0bd3fe76a9341ce4472946">comm_particles_global</a> ()</td></tr>
+<tr class="memitem:aa5f28cce5fcaba2c51de288ae406b6d7" id="r_aa5f28cce5fcaba2c51de288ae406b6d7"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5f28cce5fcaba2c51de288ae406b6d7">comm_particles</a> ()</td></tr>
 <tr class="memitem:a52b5801a73bf9d08f849f4f8187740a5" id="r_a52b5801a73bf9d08f849f4f8187740a5"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52b5801a73bf9d08f849f4f8187740a5">particles_finish</a> ()</td></tr>
 <tr class="memdesc:a52b5801a73bf9d08f849f4f8187740a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finalize the particles module.  <br /></td></tr>
 <tr class="memitem:a1c7a69af852985c5bb0245a9e996f140" id="r_a1c7a69af852985c5bb0245a9e996f140"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c7a69af852985c5bb0245a9e996f140">particles_params_read</a> (files)</td></tr>
@@ -173,8 +177,6 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:a9c80518aefdaa0a8b0e9d3252d377208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fix particle position when crossing the 0,2pi boundary in noncartesian coordinates.  <br /></td></tr>
 <tr class="memitem:a3a599b3fa0f3f5ccc9cfb73933f26404" id="r_a3a599b3fa0f3f5ccc9cfb73933f26404"><td class="memItemLeft" align="right" valign="top">recursive logical function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a599b3fa0f3f5ccc9cfb73933f26404">point_in_igrid_ghostc</a> (x, igrid, ngh)</td></tr>
 <tr class="memdesc:a3a599b3fa0f3f5ccc9cfb73933f26404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quick check if particle coordinate is inside igrid (ghost cells included, except the last ngh).  <br /></td></tr>
-<tr class="memitem:aa5f28cce5fcaba2c51de288ae406b6d7" id="r_aa5f28cce5fcaba2c51de288ae406b6d7"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5f28cce5fcaba2c51de288ae406b6d7">comm_particles</a> ()</td></tr>
-<tr class="memitem:af299ec05dc0bd3fe76a9341ce4472946" id="r_af299ec05dc0bd3fe76a9341ce4472946"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af299ec05dc0bd3fe76a9341ce4472946">comm_particles_global</a> ()</td></tr>
 <tr class="memitem:adc89985d56d34c0aa8f19240df55eeb5" id="r_adc89985d56d34c0aa8f19240df55eeb5"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc89985d56d34c0aa8f19240df55eeb5">apply_periodb</a> (<a class="el" href="#aa8a738f61f2ee57b8ef6415e36c3d360">particle</a>, igrid_particle, ipe_particle, bc_applied)</td></tr>
 <tr class="memitem:a43281fc1a5a02b8bbe9621cad0e2e605" id="r_a43281fc1a5a02b8bbe9621cad0e2e605"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43281fc1a5a02b8bbe9621cad0e2e605">destroy_particles</a> (destroy_n_particles_mype, particle_index_to_be_destroyed)</td></tr>
 <tr class="memdesc:a43281fc1a5a02b8bbe9621cad0e2e605"><td class="mdescLeft">&#160;</td><td class="mdescRight">clean up destroyed particles on all cores  <br /></td></tr>
@@ -270,6 +272,15 @@ Variables</h2></td></tr>
 <tr class="memdesc:a77d1b86267333922cdd0f678e1ef5ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header string used in CSV files.  <br /></td></tr>
 <tr class="memitem:ad7b9c3f3f81ff3839373a2ee4b834e1c" id="r_ad7b9c3f3f81ff3839373a2ee4b834e1c"><td class="memItemLeft" align="right" valign="top">character(len=60)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7b9c3f3f81ff3839373a2ee4b834e1c">csv_format</a></td></tr>
 <tr class="memdesc:ad7b9c3f3f81ff3839373a2ee4b834e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format string used in CSV files.  <br /></td></tr>
+<tr class="memitem:a2de413d6a7ded923c57f5626cb751b6d" id="r_a2de413d6a7ded923c57f5626cb751b6d"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmod__particle__base_1_1particle__t.html">particle_t</a>), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2de413d6a7ded923c57f5626cb751b6d">exchange_send</a></td></tr>
+<tr class="memitem:af99239da27be5294a4bf74ba4a73bea8" id="r_af99239da27be5294a4bf74ba4a73bea8"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmod__particle__base_1_1particle__t.html">particle_t</a>), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af99239da27be5294a4bf74ba4a73bea8">exchange_recv</a></td></tr>
+<tr class="memitem:af73798f6debf0107945bc3784d19a9b4" id="r_af73798f6debf0107945bc3784d19a9b4"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af73798f6debf0107945bc3784d19a9b4">exchange_send_payload</a></td></tr>
+<tr class="memitem:af2f5119109f3394a001f9c6744c7cdcc" id="r_af2f5119109f3394a001f9c6744c7cdcc"><td class="memItemLeft" align="right" valign="top">double precision, dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2f5119109f3394a001f9c6744c7cdcc">exchange_recv_payload</a></td></tr>
+<tr class="memitem:a8f381fe288e10a96dba12a5d77769780" id="r_a8f381fe288e10a96dba12a5d77769780"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f381fe288e10a96dba12a5d77769780">exchange_ids</a></td></tr>
+<tr class="memitem:a9ae8fcd5471b5341716d37804d344197" id="r_a9ae8fcd5471b5341716d37804d344197"><td class="memItemLeft" align="right" valign="top">integer, dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ae8fcd5471b5341716d37804d344197">exchange_requests</a></td></tr>
+<tr class="memitem:ad35e9092316f51321ccc6e5b4709de7a" id="r_ad35e9092316f51321ccc6e5b4709de7a"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad35e9092316f51321ccc6e5b4709de7a">exchange_status</a></td></tr>
+<tr class="memitem:a0f5b0c75d53d37b219fec4e74cdd042d" id="r_a0f5b0c75d53d37b219fec4e74cdd042d"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f5b0c75d53d37b219fec4e74cdd042d">exchange_send_capacity</a> =0</td></tr>
+<tr class="memitem:af6417de44c0d8fbd15c8e201438be41e" id="r_af6417de44c0d8fbd15c8e201438be41e"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6417de44c0d8fbd15c8e201438be41e">exchange_recv_capacity</a> =0</td></tr>
 <tr class="memitem:aa8a738f61f2ee57b8ef6415e36c3d360" id="r_aa8a738f61f2ee57b8ef6415e36c3d360"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmod__particle__base_1_1particle__ptr.html">particle_ptr</a>), dimension(:), allocatable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8a738f61f2ee57b8ef6415e36c3d360">particle</a></td></tr>
 <tr class="memitem:a1500c751bc27b1ad1aa3cd033ae83423" id="r_a1500c751bc27b1ad1aa3cd033ae83423"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structmod__random_1_1rng__t.html">rng_t</a>)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1500c751bc27b1ad1aa3cd033ae83423">rng</a></td></tr>
 <tr class="memitem:ab963bc57592e2c4d3d9f8cfb4bca1688" id="r_ab963bc57592e2c4d3d9f8cfb4bca1688"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__particle__base_1_1sub__fill__gridvars.html">sub_fill_gridvars</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab963bc57592e2c4d3d9f8cfb4bca1688">particles_fill_gridvars</a> =&gt; null()</td></tr>
@@ -277,6 +288,9 @@ Variables</h2></td></tr>
 <tr class="memitem:ae5f09005a6f5a64aedce3b0988b69307" id="r_ae5f09005a6f5a64aedce3b0988b69307"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__particle__base_1_1sub__fill__additional__gridvars.html">sub_fill_additional_gridvars</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5f09005a6f5a64aedce3b0988b69307">particles_fill_additional_gridvars</a> =&gt; null()</td></tr>
 <tr class="memitem:ab704eadb24aed019410673be2202f8fd" id="r_ab704eadb24aed019410673be2202f8fd"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__particle__base_1_1sub__integrate.html">sub_integrate</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab704eadb24aed019410673be2202f8fd">particles_integrate</a> =&gt; null()</td></tr>
 <tr class="memitem:aac70abba4c9785c2875fcad35cf3dab3" id="r_aac70abba4c9785c2875fcad35cf3dab3"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__particle__base_1_1fun__destroy.html">fun_destroy</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac70abba4c9785c2875fcad35cf3dab3">usr_destroy_particle</a> =&gt; null()</td></tr>
+<tr class="memitem:a5b2a21e7d9836ecd0c315ee753de9142" id="r_a5b2a21e7d9836ecd0c315ee753de9142"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b2a21e7d9836ecd0c315ee753de9142">particle_any_active</a> =.false.</td></tr>
+<tr class="memdesc:a5b2a21e7d9836ecd0c315ee753de9142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cached global activity and last replicated forest generation.  <br /></td></tr>
+<tr class="memitem:a438887f28150e31d18a32fd5574a2c11" id="r_a438887f28150e31d18a32fd5574a2c11"><td class="memItemLeft" align="right" valign="top">integer(kind=8)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a438887f28150e31d18a32fd5574a2c11">particle_last_mesh_epoch</a> =-1_8</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module with shared functionality for all the particle movers. </p>
@@ -308,7 +322,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00594">594</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00802">802</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -343,7 +357,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01169">1169</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01373">1373</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -376,7 +390,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02463">2463</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02347">2347</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -402,28 +416,26 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01821">1821</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00324">324</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__particle__base_aa5f28cce5fcaba2c51de288ae406b6d7_cgraph.png" border="0" usemap="#anamespacemod__particle__base_aa5f28cce5fcaba2c51de288ae406b6d7_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__particle__base_aa5f28cce5fcaba2c51de288ae406b6d7_cgraph" id="anamespacemod__particle__base_aa5f28cce5fcaba2c51de288ae406b6d7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,156,158,201"/>
-<area shape="rect" href="namespacemod__particle__base.html#adc89985d56d34c0aa8f19240df55eeb5" title=" " alt="" coords="231,5,384,50"/>
-<area shape="poly" title=" " alt="" coords="102,154,147,111,204,67,229,55,226,59,207,71,150,115,106,157"/>
-<area shape="rect" href="namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="482,47,634,91"/>
-<area shape="poly" title=" " alt="" coords="116,154,157,130,205,110,272,93,341,81,469,70,464,73,342,86,273,98,207,116,160,135,119,158"/>
-<area shape="rect" href="namespacemod__particle__base.html#a43281fc1a5a02b8bbe9621cad0e2e605" title="clean up destroyed particles on all cores" alt="" coords="231,125,384,170"/>
-<area shape="poly" title=" " alt="" coords="157,166,218,158,213,162,159,170"/>
-<area shape="rect" href="namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="457,137,659,198"/>
-<area shape="poly" title=" " alt="" coords="157,179,206,180,307,182,409,180,444,179,439,181,409,185,307,187,206,185,159,184"/>
-<area shape="rect" href="namespacemod__particle__base.html#a24d3f7d76b59c8f7954ad59258a02b32" title="Quick check if particle is still in igrid." alt="" coords="231,269,384,314"/>
-<area shape="poly" title=" " alt="" coords="128,199,250,261,245,263,128,204"/>
-<area shape="rect" href="namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="206,338,409,400"/>
-<area shape="poly" title=" " alt="" coords="98,199,143,261,173,294,207,324,213,330,208,329,204,328,170,298,139,264,96,204"/>
-<area shape="poly" title=" " alt="" coords="384,38,469,53,464,55,385,43"/>
-<area shape="poly" title=" " alt="" coords="384,151,444,158,439,159,385,156"/>
-<area shape="poly" title=" " alt="" coords="264,268,263,259,270,250,285,245,307,243,332,245,348,254,343,254,330,250,307,248,286,250,273,255,268,261,269,270"/>
+<area shape="rect" title=" " alt="" coords="5,125,158,170"/>
+<area shape="rect" href="namespacemod__particle__base.html#adc89985d56d34c0aa8f19240df55eeb5" title=" " alt="" coords="206,5,358,50"/>
+<area shape="poly" title=" " alt="" coords="116,123,204,67,227,56,223,60,207,71,119,127"/>
+<area shape="rect" href="namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="406,65,558,110"/>
+<area shape="poly" title=" " alt="" coords="154,122,205,110,300,97,393,91,388,93,301,102,206,116,157,127"/>
+<area shape="rect" href="namespacemod__particle__base.html#a43281fc1a5a02b8bbe9621cad0e2e605" title="clean up destroyed particles on all cores" alt="" coords="206,125,358,170"/>
+<area shape="poly" title=" " alt="" coords="157,145,193,146,188,149,159,150"/>
+<area shape="rect" href="namespacemod__particle__base.html#aabcd5fc37b427a0a7a6ea8c31b43997d" title="Exchange only migrating particles, reusing geometrically grown buffers. All ranks participate; a glob..." alt="" coords="206,195,358,239"/>
+<area shape="poly" title=" " alt="" coords="148,168,203,188,198,190,148,173"/>
+<area shape="rect" href="namespacemod__particle__base.html#a24d3f7d76b59c8f7954ad59258a02b32" title="Quick check if particle is still in igrid." alt="" coords="206,288,358,333"/>
+<area shape="poly" title=" " alt="" coords="110,168,207,250,242,278,236,278,204,254,108,173"/>
+<area shape="poly" title=" " alt="" coords="358,48,394,60,389,61,359,53"/>
+<area shape="poly" title=" " alt="" coords="335,192,357,180,402,150,441,122,446,119,405,154,359,185,337,197"/>
+<area shape="poly" title=" " alt="" coords="244,286,242,278,249,269,262,263,282,261,303,264,318,273,312,272,302,269,282,267,263,269,252,273,247,279,248,289"/>
 </map>
 </div>
 
@@ -441,19 +453,21 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02000">2000</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00307">307</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__particle__base_af299ec05dc0bd3fe76a9341ce4472946_cgraph.png" border="0" usemap="#anamespacemod__particle__base_af299ec05dc0bd3fe76a9341ce4472946_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__particle__base_af299ec05dc0bd3fe76a9341ce4472946_cgraph" id="anamespacemod__particle__base_af299ec05dc0bd3fe76a9341ce4472946_cgraph">
-<area shape="rect" title=" " alt="" coords="5,83,178,127"/>
-<area shape="rect" href="namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="251,5,404,50"/>
-<area shape="poly" title=" " alt="" coords="161,80,245,54,240,57,163,84"/>
-<area shape="rect" href="namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="226,74,428,136"/>
-<area shape="poly" title=" " alt="" coords="178,102,213,104,208,106,179,108"/>
-<area shape="rect" href="namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="226,160,429,221"/>
-<area shape="poly" title=" " alt="" coords="156,125,228,153,223,154,155,131"/>
+<area shape="rect" title=" " alt="" coords="5,49,178,94"/>
+<area shape="rect" href="namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="441,5,593,50"/>
+<area shape="poly" title=" " alt="" coords="168,46,225,34,329,25,428,25,423,26,329,30,226,40,169,51"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="426,88,608,116"/>
+<area shape="poly" title=" " alt="" coords="167,92,226,104,320,110,408,111,413,111,320,115,225,109,167,97"/>
+<area shape="rect" href="namespacemod__particle__base.html#aabcd5fc37b427a0a7a6ea8c31b43997d" title="Exchange only migrating particles, reusing geometrically grown buffers. All ranks participate; a glob..." alt="" coords="226,49,378,94"/>
+<area shape="poly" title=" " alt="" coords="178,69,213,71,208,72,178,74"/>
+<area shape="poly" title=" " alt="" coords="378,54,423,47,428,46,379,59"/>
+<area shape="poly" title=" " alt="" coords="378,80,413,87,408,87,378,85"/>
 </map>
 </div>
 
@@ -483,7 +497,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00841">841</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01045">1045</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -508,7 +522,7 @@ Here is the call graph for this function:</div>
 
 <p>clean up destroyed particles on all cores </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02500">2500</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02384">2384</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -550,7 +564,7 @@ Here is the call graph for this function:</div>
 
 <p>Determine fields from MHD variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00401">401</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00603">603</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -578,7 +592,7 @@ Here is the call graph for this function:</div>
 
 <p>This routine fills the particle grid variables with the default for mhd, i.e. only E and B. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00380">380</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00582">582</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -616,7 +630,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01281">1281</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01491">1491</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -647,7 +661,7 @@ Here is the call graph for this function:</div>
 
 <p>Deallocate grid variables for particles. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00368">368</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00570">570</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -672,7 +686,7 @@ Here is the call graph for this function:</div>
 
 <p>Fix particle position when crossing the 0,2pi boundary in noncartesian coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01766">1766</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01976">1976</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -716,7 +730,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00700">700</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00904">904</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -762,7 +776,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00759">759</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00963">963</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -804,7 +818,7 @@ Here is the call graph for this function:</div>
 
 <p>Get Lorentz factor from relativistic momentum. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00814">814</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01018">1018</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -829,7 +843,7 @@ Here is the call graph for this function:</div>
 
 <p>Get Lorentz factor from velocity. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00828">828</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01032">1032</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -852,7 +866,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00321">321</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00523">523</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -871,7 +885,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00333">333</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00535">535</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -915,7 +929,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00646">646</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00850">850</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -943,7 +957,7 @@ Here is the call graph for this function:</div>
 
 <p>Let particles evolve in time. The routine also handles grid variables and output. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00539">539</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00741">741</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -981,7 +995,7 @@ Here is the call graph for this function:</div>
 
 <p>Initialize grid variables for particles. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00344">344</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00546">546</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -999,7 +1013,7 @@ Here is the call graph for this function:</div>
 
 <p>Initialize communicators for particles. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00294">294</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00496">496</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1029,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01186">1186</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01390">1390</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1084,7 +1098,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00867">867</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01071">1071</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1117,7 +1131,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01406">1406</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01616">1616</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1150,7 +1164,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01388">1388</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01598">1598</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1197,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01397">1397</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01607">1607</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1206,7 +1220,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00626">626</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00830">830</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1234,7 +1248,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01236">1236</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01446">1446</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1262,7 +1276,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01472">1472</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01682">1682</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1304,7 +1318,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01492">1492</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01702">1702</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1330,7 +1344,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01563">1563</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01773">1773</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1373,7 +1387,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01596">1596</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01806">1806</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1408,7 +1422,7 @@ Here is the call graph for this function:</div>
 
 <p>Convert to noncartesian coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01664">1664</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01874">1874</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1433,7 +1447,7 @@ Here is the call graph for this function:</div>
 
 <p>Convert position to Cartesian coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01634">1634</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01844">1844</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1451,7 +1465,7 @@ Here is the call graph for this function:</div>
 
 <p>Give initial values to parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00208">208</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00407">407</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1460,6 +1474,57 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Give initial values to parameters." alt="" coords="5,5,158,50"/>
 <area shape="rect" href="namespacemod__particle__base.html#a1c7a69af852985c5bb0245a9e996f140" title="Read this module&#39;s parameters from a file." alt="" coords="206,5,375,50"/>
 <area shape="poly" title=" " alt="" coords="158,25,193,27,187,28,158,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aabcd5fc37b427a0a7a6ea8c31b43997d" name="aabcd5fc37b427a0a7a6ea8c31b43997d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabcd5fc37b427a0a7a6ea8c31b43997d">&#9670;&#160;</a></span>particle_exchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine mod_particle_base::particle_exchange </td>
+          <td>(</td>
+          <td class="paramtype">integer, dimension(:), intent(in)</td>          <td class="paramname"><span class="paramname"><em>outgoing_ids</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, dimension(:), intent(in)</td>          <td class="paramname"><span class="paramname"><em>destinations</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>nout</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">logical, intent(in)</td>          <td class="paramname"><span class="paramname"><em>global_exchange</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exchange only migrating particles, reusing geometrically grown buffers. All ranks participate; a global decision selects the non-neighbor fallback. Payload columns and particle slices stay contiguous until MPI_WAITALL. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00177">177</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__particle__base_aabcd5fc37b427a0a7a6ea8c31b43997d_cgraph.png" border="0" usemap="#anamespacemod__particle__base_aabcd5fc37b427a0a7a6ea8c31b43997d_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__particle__base_aabcd5fc37b427a0a7a6ea8c31b43997d_cgraph" id="anamespacemod__particle__base_aabcd5fc37b427a0a7a6ea8c31b43997d_cgraph">
+<area shape="rect" title="Exchange only migrating particles, reusing geometrically grown buffers. All ranks participate; a glob..." alt="" coords="5,100,158,145"/>
+<area shape="rect" href="namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="231,5,384,50"/>
+<area shape="poly" title=" " alt="" coords="125,97,205,60,224,54,220,57,207,65,128,102"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="216,74,398,102"/>
+<area shape="poly" title=" " alt="" coords="157,108,203,103,198,105,159,113"/>
+<area shape="rect" href="namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="206,126,408,188"/>
+<area shape="poly" title=" " alt="" coords="157,131,194,138,189,140,158,137"/>
+<area shape="rect" href="namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="206,212,409,273"/>
+<area shape="poly" title=" " alt="" coords="116,143,207,197,218,205,213,204,204,202,115,148"/>
 </map>
 </div>
 
@@ -1511,7 +1576,7 @@ Here is the call graph for this function:</div>
 
 <p>Calculate idirmin and the idirmin:3 components of the common current array make sure that <a class="el" href="namespacemod__global__parameters.html#ac487446056522027f949f42ba64b2e11" title="store unstretched cell size of current level">dxlevel(^D)</a> is set correctly. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00488">488</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00690">690</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1542,7 +1607,7 @@ Here is the call graph for this function:</div>
 
 <p>Check if particle is inside computational domain. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01318">1318</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01528">1528</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1576,7 +1641,7 @@ Here is the call graph for this function:</div>
 
 <p>Quick check if particle is still in igrid. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01327">1327</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01537">1537</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1603,7 +1668,7 @@ Here is the call graph for this function:</div>
 
 <p>Finalize the particles module. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00168">168</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00360">360</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1634,7 +1699,7 @@ Here is the call graph for this function:</div>
 
 <p>Read this module's parameters from a file. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00186">186</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00385">385</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1664,7 +1729,7 @@ Here is the call graph for this function:</div>
 
 <p>Convert vector from Cartesian coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01735">1735</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01945">1945</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1694,7 +1759,7 @@ Here is the call graph for this function:</div>
 
 <p>Convert vector to Cartesian coordinates. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01705">1705</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01915">1915</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1724,7 +1789,7 @@ Here is the call graph for this function:</div>
 
 <p>Quick check if particle coordinate is inside igrid (ghost cells included, except the last ngh). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01807">1807</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02017">2017</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1752,7 +1817,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02551">2551</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02436">2436</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1771,7 +1836,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02541">2541</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l02426">2426</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1787,7 +1852,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01051">1051</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01255">1255</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1818,7 +1883,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00993">993</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01197">1197</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1849,7 +1914,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01209">1209</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01413">1413</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1865,7 +1930,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01343">1343</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01553">1553</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1895,7 +1960,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00961">961</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01165">1165</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1913,7 +1978,7 @@ Here is the call graph for this function:</div>
 
 <p>update grid variables for particles </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00516">516</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00718">718</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -1929,7 +1994,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01421">1421</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01631">1631</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1957,7 +2022,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01079">1079</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l01283">1283</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2111,6 +2176,150 @@ Here is the call graph for this function:</div>
 <p>Variable index for electric field. </p>
 
 <p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00075">75</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="a8f381fe288e10a96dba12a5d77769780" name="a8f381fe288e10a96dba12a5d77769780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f381fe288e10a96dba12a5d77769780">&#9670;&#160;</a></span>exchange_ids</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(:), allocatable mod_particle_base::exchange_ids</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00130">130</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="af99239da27be5294a4bf74ba4a73bea8" name="af99239da27be5294a4bf74ba4a73bea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af99239da27be5294a4bf74ba4a73bea8">&#9670;&#160;</a></span>exchange_recv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structmod__particle__base_1_1particle__t.html">particle_t</a>), dimension(:), allocatable mod_particle_base::exchange_recv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00128">128</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="af6417de44c0d8fbd15c8e201438be41e" name="af6417de44c0d8fbd15c8e201438be41e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6417de44c0d8fbd15c8e201438be41e">&#9670;&#160;</a></span>exchange_recv_capacity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer mod_particle_base::exchange_recv_capacity =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00131">131</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="af2f5119109f3394a001f9c6744c7cdcc" name="af2f5119109f3394a001f9c6744c7cdcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2f5119109f3394a001f9c6744c7cdcc">&#9670;&#160;</a></span>exchange_recv_payload</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, dimension(:,:), allocatable mod_particle_base::exchange_recv_payload</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00129">129</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="a9ae8fcd5471b5341716d37804d344197" name="a9ae8fcd5471b5341716d37804d344197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae8fcd5471b5341716d37804d344197">&#9670;&#160;</a></span>exchange_requests</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(:), allocatable mod_particle_base::exchange_requests</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00130">130</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="a2de413d6a7ded923c57f5626cb751b6d" name="a2de413d6a7ded923c57f5626cb751b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2de413d6a7ded923c57f5626cb751b6d">&#9670;&#160;</a></span>exchange_send</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">type(<a class="el" href="structmod__particle__base_1_1particle__t.html">particle_t</a>), dimension(:), allocatable mod_particle_base::exchange_send</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00128">128</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="a0f5b0c75d53d37b219fec4e74cdd042d" name="a0f5b0c75d53d37b219fec4e74cdd042d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f5b0c75d53d37b219fec4e74cdd042d">&#9670;&#160;</a></span>exchange_send_capacity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer mod_particle_base::exchange_send_capacity =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00131">131</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="af73798f6debf0107945bc3784d19a9b4" name="af73798f6debf0107945bc3784d19a9b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73798f6debf0107945bc3784d19a9b4">&#9670;&#160;</a></span>exchange_send_payload</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, dimension(:,:), allocatable mod_particle_base::exchange_send_payload</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00129">129</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="ad35e9092316f51321ccc6e5b4709de7a" name="ad35e9092316f51321ccc6e5b4709de7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad35e9092316f51321ccc6e5b4709de7a">&#9670;&#160;</a></span>exchange_status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, dimension(:,:), allocatable mod_particle_base::exchange_status</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00130">130</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -2534,7 +2743,41 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00129">129</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00134">134</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="a5b2a21e7d9836ecd0c315ee753de9142" name="a5b2a21e7d9836ecd0c315ee753de9142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b2a21e7d9836ecd0c315ee753de9142">&#9670;&#160;</a></span>particle_any_active</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical mod_particle_base::particle_any_active =.false.</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cached global activity and last replicated forest generation. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00171">171</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+
+</div>
+</div>
+<a id="a438887f28150e31d18a32fd5574a2c11" name="a438887f28150e31d18a32fd5574a2c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a438887f28150e31d18a32fd5574a2c11">&#9670;&#160;</a></span>particle_last_mesh_epoch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer(kind=8) mod_particle_base::particle_last_mesh_epoch =-1_8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00172">172</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -2586,7 +2829,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00136">136</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00141">141</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -2636,7 +2879,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00137">137</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00142">142</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -2652,7 +2895,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00135">135</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00140">140</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -2668,7 +2911,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00138">138</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00143">143</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -2756,7 +2999,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00132">132</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00137">137</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>
@@ -2840,7 +3083,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00139">139</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__particle__base_8t_source.html#l00144">144</a> of file <a class="el" href="mod__particle__base_8t_source.html">mod_particle_base.t</a>.</p>
 
 </div>
 </div>

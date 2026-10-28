@@ -1,18 +1,16 @@
 <map id="mod_particle_base::comm_particles" name="mod_particle_base::comm_particles">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,156,158,201"/>
-<area shape="rect" id="Node000002" href="$namespacemod__particle__base.html#adc89985d56d34c0aa8f19240df55eeb5" title=" " alt="" coords="231,5,384,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,154,147,111,204,67,229,55,226,59,207,71,150,115,106,157"/>
-<area shape="rect" id="Node000003" href="$namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="482,47,634,91"/>
-<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="116,154,157,130,205,110,272,93,341,81,469,70,464,73,342,86,273,98,207,116,160,135,119,158"/>
-<area shape="rect" id="Node000006" href="$namespacemod__particle__base.html#a43281fc1a5a02b8bbe9621cad0e2e605" title="clean up destroyed particles on all cores" alt="" coords="231,125,384,170"/>
-<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="157,166,218,158,213,162,159,170"/>
-<area shape="rect" id="Node000010" href="$namespacemod__particle__base.html#a594d8a5c5b6d0801a3814db632cdedbf" title=" " alt="" coords="457,137,659,198"/>
-<area shape="poly" id="edge8_Node000001_Node000010" title=" " alt="" coords="157,179,206,180,307,182,409,180,444,179,439,181,409,185,307,187,206,185,159,184"/>
-<area shape="rect" id="Node000011" href="$namespacemod__particle__base.html#a24d3f7d76b59c8f7954ad59258a02b32" title="Quick check if particle is still in igrid." alt="" coords="231,269,384,314"/>
-<area shape="poly" id="edge6_Node000001_Node000011" title=" " alt="" coords="128,199,250,261,245,263,128,204"/>
-<area shape="rect" id="Node000012" href="$namespacemod__particle__base.html#a8cb2c79dc331397db976421b8e78431e" title=" " alt="" coords="206,338,409,400"/>
-<area shape="poly" id="edge9_Node000001_Node000012" title=" " alt="" coords="98,199,143,261,173,294,207,324,213,330,208,329,204,328,170,298,139,264,96,204"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="384,38,469,53,464,55,385,43"/>
-<area shape="poly" id="edge4_Node000006_Node000010" title=" " alt="" coords="384,151,444,158,439,159,385,156"/>
-<area shape="poly" id="edge7_Node000011_Node000011" title=" " alt="" coords="264,268,263,259,270,250,285,245,307,243,332,245,348,254,343,254,330,250,307,248,286,250,273,255,268,261,269,270"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,125,158,170"/>
+<area shape="rect" id="Node000002" href="$namespacemod__particle__base.html#adc89985d56d34c0aa8f19240df55eeb5" title=" " alt="" coords="206,5,358,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,123,204,67,227,56,223,60,207,71,119,127"/>
+<area shape="rect" id="Node000003" href="$namespacemod__particle__base.html#a557c63a62cb1491a66af98fb29258dd5" title=" " alt="" coords="406,65,558,110"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="154,122,205,110,300,97,393,91,388,93,301,102,206,116,157,127"/>
+<area shape="rect" id="Node000006" href="$namespacemod__particle__base.html#a43281fc1a5a02b8bbe9621cad0e2e605" title="clean up destroyed particles on all cores" alt="" coords="206,125,358,170"/>
+<area shape="poly" id="edge3_Node000001_Node000006" title=" " alt="" coords="157,145,193,146,188,149,159,150"/>
+<area shape="rect" id="Node000011" href="$namespacemod__particle__base.html#aabcd5fc37b427a0a7a6ea8c31b43997d" title="Exchange only migrating particles, reusing geometrically grown buffers. All ranks participate; a glob..." alt="" coords="206,195,358,239"/>
+<area shape="poly" id="edge5_Node000001_Node000011" title=" " alt="" coords="148,168,203,188,198,190,148,173"/>
+<area shape="rect" id="Node000014" href="$namespacemod__particle__base.html#a24d3f7d76b59c8f7954ad59258a02b32" title="Quick check if particle is still in igrid." alt="" coords="206,288,358,333"/>
+<area shape="poly" id="edge7_Node000001_Node000014" title=" " alt="" coords="110,168,207,250,242,278,236,278,204,254,108,173"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="358,48,394,60,389,61,359,53"/>
+<area shape="poly" id="edge6_Node000011_Node000003" title=" " alt="" coords="335,192,357,180,402,150,441,122,446,119,405,154,359,185,337,197"/>
+<area shape="poly" id="edge8_Node000014_Node000014" title=" " alt="" coords="244,286,242,278,249,269,262,263,282,261,303,264,318,273,312,272,302,269,282,267,263,269,252,273,247,279,248,289"/>
 </map>
