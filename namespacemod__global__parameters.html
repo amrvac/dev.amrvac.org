@@ -704,6 +704,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a28e56963e38905a7ed480fbd38926d84" id="r_a28e56963e38905a7ed480fbd38926d84"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28e56963e38905a7ed480fbd38926d84">any_source_split</a> =.false.</td></tr>
 <tr class="memdesc:a28e56963e38905a7ed480fbd38926d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">if any normal source term is added in split fasion  <br /></td></tr>
 <tr class="memitem:a122ab156050e3d8d53c27e3113d7f2a6" id="r_a122ab156050e3d8d53c27e3113d7f2a6"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a122ab156050e3d8d53c27e3113d7f2a6">dimsplit</a></td></tr>
+<tr class="memitem:a87372c52c98092ab0e91a79c4497306a" id="r_a87372c52c98092ab0e91a79c4497306a"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87372c52c98092ab0e91a79c4497306a">limit_on_wold</a></td></tr>
+<tr class="memdesc:a87372c52c98092ab0e91a79c4497306a"><td class="mdescLeft">&#160;</td><td class="mdescRight">VAC-type MUSCL-Hancock: limit the corrector slopes on w^n (typelimited='previous'), for time_stepper='twostep' with the Predictor_Corrector integrator and a Hancock predictor.  <br /></td></tr>
 <tr class="memitem:a2d5fa16c407fa74a0c8dce6685e47d52" id="r_a2d5fa16c407fa74a0c8dce6685e47d52"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d5fa16c407fa74a0c8dce6685e47d52">use_imex_scheme</a></td></tr>
 <tr class="memdesc:a2d5fa16c407fa74a0c8dce6685e47d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether IMEX in use or not  <br /></td></tr>
 <tr class="memitem:abdae450e90f9aeae06216ab1c4a5e568" id="r_abdae450e90f9aeae06216ab1c4a5e568"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdae450e90f9aeae06216ab1c4a5e568">need_global_cmax</a> =.false.</td></tr>
@@ -817,7 +819,7 @@ Variables</h2></td></tr>
 
 <p>Cross product of two vectors. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00935">935</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00939">939</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -836,7 +838,7 @@ Variables</h2></td></tr>
 
 <p>use arcsec as length unit of images/spectra </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00862">862</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00866">866</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -908,7 +910,7 @@ Variables</h2></td></tr>
 
 <p>True for dimensions with aperiodic boundaries. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00850">850</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00854">854</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -1032,7 +1034,7 @@ Variables</h2></td></tr>
 
 <p>Base file name for simulation output, which will be followed by a number. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00895">895</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00899">899</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -1230,7 +1232,7 @@ Variables</h2></td></tr>
 
 <p>big image </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00864">864</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00868">868</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -1248,7 +1250,7 @@ Variables</h2></td></tr>
 
 <p>Block pointer for using one block and its previous state. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00928">928</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00932">932</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -1474,7 +1476,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00889">889</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00893">893</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -1595,7 +1597,7 @@ Variables</h2></td></tr>
 <p>Which format to use when converting. </p>
 <p>Options are: tecplot, tecplotCC, vtu, vtuCC, vtuB, vtuBCC, tecplotmpi, tecplotCCmpi, vtumpi, vtuCCmpi, vtuBmpi, vtuBCCmpi, pvtumpi, pvtuCCmpi, pvtuBmpi, pvtuBCCmpi, tecline, teclinempi, onegrid </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00887">887</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00891">891</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -2171,7 +2173,7 @@ Variables</h2></td></tr>
 
 <p>Base file name for synthetic EUV emission output. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00908">908</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00912">912</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -2207,7 +2209,7 @@ Variables</h2></td></tr>
 
 <p>Base file name for synthetic SXR emission output. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00910">910</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00914">914</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -2225,7 +2227,7 @@ Variables</h2></td></tr>
 
 <p>Base file name for synthetic white light. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00912">912</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00916">916</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -2755,7 +2757,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00905">905</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00909">909</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -2773,7 +2775,7 @@ Variables</h2></td></tr>
 
 <p>whether copy values instead of interpolation in ghost cells of finer blocks </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00856">856</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00860">860</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -3343,7 +3345,7 @@ Variables</h2></td></tr>
 
 <p>if there is an internal boundary </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00859">859</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00863">863</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -3867,6 +3869,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a87372c52c98092ab0e91a79c4497306a" name="a87372c52c98092ab0e91a79c4497306a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87372c52c98092ab0e91a79c4497306a">&#9670;&#160;</a></span>limit_on_wold</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">logical mod_global_parameters::limit_on_wold</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>VAC-type MUSCL-Hancock: limit the corrector slopes on w^n (typelimited='previous'), for time_stepper='twostep' with the Predictor_Corrector integrator and a Hancock predictor. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00838">838</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+
+</div>
+</div>
 <a id="a66b6d102b0c1abd62b12a11b7fdb31b3" name="a66b6d102b0c1abd62b12a11b7fdb31b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66b6d102b0c1abd62b12a11b7fdb31b3">&#9670;&#160;</a></span>ll</h2>
 
@@ -3949,7 +3969,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00874">874</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00878">878</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -3965,7 +3985,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00874">874</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00878">878</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -4175,7 +4195,7 @@ Variables</h2></td></tr>
 
 <p>need global maximal wave speed </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00839">839</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00843">843</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -4509,7 +4529,7 @@ Variables</h2></td></tr>
 
 <p>Names of the output methods. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00880">880</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00884">884</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -4545,7 +4565,7 @@ Variables</h2></td></tr>
 
 <p>Which par files are used as input. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00922">922</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00926">926</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -4581,7 +4601,7 @@ Variables</h2></td></tr>
 
 <p>True for dimensions with periodic boundaries. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00844">844</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00848">848</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -4615,7 +4635,7 @@ Variables</h2></td></tr>
 
 <p>True if a block has any physical boundary. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00867">867</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00871">871</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -4781,7 +4801,7 @@ Variables</h2></td></tr>
 
 <p>Indicates whether there is a pole at a boundary. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00847">847</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00851">851</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -5293,7 +5313,7 @@ Variables</h2></td></tr>
 
 <p>If not 'unavailable', resume from snapshot with this base file name. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00898">898</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00902">902</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -6027,7 +6047,7 @@ Variables</h2></td></tr>
 
 <p>True for save physical boundary cells in dat files. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00853">853</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00857">857</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7185,7 +7205,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00903">903</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00907">907</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7219,7 +7239,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00904">904</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00908">908</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7235,7 +7255,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00919">919</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00923">923</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7253,7 +7273,7 @@ Variables</h2></td></tr>
 
 <p>Which type of entropy fix to use with Riemann-type solvers. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00925">925</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00929">929</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7271,7 +7291,7 @@ Variables</h2></td></tr>
 
 <p>Which type of log to write: 'normal', 'special', 'regression_test'. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00901">901</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00905">905</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7287,7 +7307,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00919">919</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00923">923</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7303,7 +7323,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00906">906</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00910">910</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7339,7 +7359,7 @@ Variables</h2></td></tr>
 
 <p>Which type of TVD method to use. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00917">917</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00921">921</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7355,7 +7375,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00877">877</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00881">881</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7759,7 +7779,7 @@ Variables</h2></td></tr>
 
 <p>whether IMEX in use or not </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00836">836</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00840">840</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7813,7 +7833,7 @@ Variables</h2></td></tr>
 
 <p>User parameter file. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00892">892</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00896">896</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7885,7 +7905,7 @@ Variables</h2></td></tr>
 
 <p>if true write the w variable in output </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00870">870</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00874">874</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7939,7 +7959,7 @@ Variables</h2></td></tr>
 
 <p>white light observation instrument </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00914">914</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00918">918</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
@@ -7955,7 +7975,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00872">872</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__global__parameters_8t_source.html#l00876">876</a> of file <a class="el" href="mod__global__parameters_8t_source.html">mod_global_parameters.t</a>.</p>
 
 </div>
 </div>
