@@ -10,12 +10,12 @@
 <area shape="poly" id="edge15_Node000001_Node000039" title=" " alt="" coords="228,246,558,228,555,232,229,252"/>
 <area shape="rect" id="Node000040" href="$namespacemod__mhd__phys.html#a7e7f9e0cfdae3f081d89b5a609011c5d" title="multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as &#45;mhd_eta_ambi/rh..." alt="" coords="547,48,794,76"/>
 <area shape="poly" id="edge18_Node000001_Node000040" title=" " alt="" coords="127,240,184,176,227,140,275,112,338,88,404,72,470,63,534,59,529,62,470,68,405,78,339,93,277,117,230,145,188,180,131,243"/>
-<area shape="rect" id="Node000071" href="$namespacemod__mhd__phys.html#abf54917ed4ea17469ce42ec87a36aa4b" title=" " alt="" coords="276,342,499,387"/>
-<area shape="poly" id="edge16_Node000001_Node000071" title=" " alt="" coords="153,267,318,335,314,338,153,272"/>
-<area shape="rect" id="Node000072" href="$namespacemod__fix__conserve.html#accd8011113a5f7b3efeec90d42bd9dad" title=" " alt="" coords="278,411,497,439"/>
-<area shape="poly" id="edge19_Node000001_Node000072" title=" " alt="" coords="130,267,189,331,231,367,277,397,291,405,286,405,274,402,227,371,185,335,129,272"/>
-<area shape="rect" id="Node000073" href="$namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="282,463,493,491"/>
-<area shape="poly" id="edge20_Node000001_Node000073" title=" " alt="" coords="126,267,148,305,181,354,225,405,250,428,277,448,290,457,285,456,274,452,247,432,221,409,177,357,144,308,125,273"/>
+<area shape="rect" id="Node000072" href="$namespacemod__mhd__phys.html#abf54917ed4ea17469ce42ec87a36aa4b" title=" " alt="" coords="276,342,499,387"/>
+<area shape="poly" id="edge16_Node000001_Node000072" title=" " alt="" coords="153,267,318,335,314,338,153,272"/>
+<area shape="rect" id="Node000073" href="$namespacemod__fix__conserve.html#accd8011113a5f7b3efeec90d42bd9dad" title=" " alt="" coords="278,411,497,439"/>
+<area shape="poly" id="edge19_Node000001_Node000073" title=" " alt="" coords="130,267,189,331,231,367,277,397,291,405,286,405,274,402,227,371,185,335,129,272"/>
+<area shape="rect" id="Node000074" href="$namespacemod__fix__conserve.html#a6ba16bd40994889786a4523e73309321" title=" " alt="" coords="282,463,493,491"/>
+<area shape="poly" id="edge20_Node000001_Node000074" title=" " alt="" coords="126,267,148,305,181,354,225,405,250,428,277,448,290,457,285,456,274,452,247,432,221,409,177,357,144,308,125,273"/>
 <area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="899,178,891,170,897,160,916,154,946,152,978,155,997,164,991,164,976,160,945,158,917,160,901,164,897,170,904,179"/>
 <area shape="poly" id="edge5_Node000032_Node000002" title=" " alt="" coords="467,146,843,79,838,83,468,152"/>
 <area shape="poly" id="edge6_Node000032_Node000003" title=" " alt="" coords="496,166,829,185,824,188,497,172"/>
@@ -27,5 +27,5 @@
 <area shape="poly" id="edge12_Node000040_Node000002" title=" " alt="" coords="794,60,843,61,838,63,796,65"/>
 <area shape="poly" id="edge13_Node000040_Node000003" title=" " alt="" coords="702,74,903,171,898,172,702,79"/>
 <area shape="poly" id="edge14_Node000040_Node000032" title=" " alt="" coords="562,78,548,85,477,113,417,144,414,139,474,109,546,80,567,75"/>
-<area shape="poly" id="edge17_Node000071_Node000071" title=" " alt="" coords="336,341,334,332,343,323,361,318,387,316,416,318,435,327,430,327,415,323,387,321,362,323,346,328,340,334,341,343"/>
+<area shape="poly" id="edge17_Node000072_Node000072" title=" " alt="" coords="336,341,334,332,343,323,361,318,387,316,416,318,435,327,430,327,415,323,387,321,362,323,346,328,340,334,341,343"/>
 </map>

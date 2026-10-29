@@ -1,0 +1,5 @@
+<map id="mod_thermal_conduction::tc_patch_negative_eint" name="mod_thermal_conduction::tc_patch_negative_eint">
+<area shape="rect" id="Node000001" title="Patch cells where e_int &lt;= 0 by neighbor&#45;averaging the temperature AND repairing the conserved intern..." alt="" coords="5,5,192,50"/>
+<area shape="rect" id="Node000002" href="$namespacemod__small__values.html#a1059b3f7e1221634136795a36b547954" title=" " alt="" coords="240,5,430,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,25,227,27,221,28,192,30"/>
+</map>
