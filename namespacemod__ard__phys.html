@@ -148,6 +148,8 @@ Variables</h2></td></tr>
 <tr class="memdesc:a667013b00c47e85a7b9bc923eefdcc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameter for Lorenz system (Prandtl number).  <br /></td></tr>
 <tr class="memitem:a52413d03697ccf13df52a7b36f65edf2" id="r_a52413d03697ccf13df52a7b36f65edf2"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52413d03697ccf13df52a7b36f65edf2">lor_b</a> = 8.0d0 / 3.0d0</td></tr>
 <tr class="memdesc:a52413d03697ccf13df52a7b36f65edf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameter for Lorenz system (aspect ratio of the convection rolls).  <br /></td></tr>
+<tr class="memitem:ace9ed8d3f26674f0df3c4f38e81d4096" id="r_ace9ed8d3f26674f0df3c4f38e81d4096"><td class="memItemLeft" align="right" valign="top">double precision, public, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace9ed8d3f26674f0df3c4f38e81d4096">ard_mg_tol</a> = 1.0d-7</td></tr>
+<tr class="memdesc:ace9ed8d3f26674f0df3c4f38e81d4096"><td class="mdescLeft">&#160;</td><td class="mdescRight">multigrid: max_residual = ard_mg_tol/qdt  <br /></td></tr>
 <tr class="memitem:aaace6948e45178c0fc4aaa22ec2f704c" id="r_aaace6948e45178c0fc4aaa22ec2f704c"><td class="memItemLeft" align="right" valign="top">type(<a class="el" href="structm__octree__mg__1d_1_1mg__bc__t.html">mg_bc_t</a>), dimension(3, <a class="el" href="namespacem__octree__mg__1d.html#af6efbc2432dae690b55c42a2f8734376">mg_num_neighbors</a>), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaace6948e45178c0fc4aaa22ec2f704c">ard_mg_bc</a></td></tr>
 <tr class="memdesc:aaace6948e45178c0fc4aaa22ec2f704c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boundary condition information for the multigrid method.  <br /></td></tr>
 </table>
@@ -170,7 +172,7 @@ diffusion-reaction equations" by Hundsdorfer &amp; Verwer, the Oregonator model,
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00176">176</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00177">177</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -271,7 +273,25 @@ Here is the call graph for this function:</div>
 
 <p>Boundary condition information for the multigrid method. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00105">105</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00106">106</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
+
+</div>
+</div>
+<a id="ace9ed8d3f26674f0df3c4f38e81d4096" name="ace9ed8d3f26674f0df3c4f38e81d4096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace9ed8d3f26674f0df3c4f38e81d4096">&#9670;&#160;</a></span>ard_mg_tol</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision, public, protected mod_ard_phys::ard_mg_tol = 1.0d-7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>multigrid: max_residual = ard_mg_tol/qdt </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__ard__phys_8t_source.html#l00103">103</a> of file <a class="el" href="mod__ard__phys_8t_source.html">mod_ard_phys.t</a>.</p>
 
 </div>
 </div>
