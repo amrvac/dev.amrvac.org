@@ -93,7 +93,7 @@ var searchData=
   ['equation_20of_20state_20in_20mpi_20amrvac_90',['Equation of state in MPI-AMRVAC',['../md_doc_2eos.html',1,'']]],
   ['equation_3a_20nonlinear_91',['Scalar Nonlinear Equation: nonlinear',['../md_doc_2equations.html#eq_nonlinear',1,'']]],
   ['equation_3a_20rho_92',['Transport Equation: rho',['../md_doc_2equations.html#eq_rho',1,'']]],
-  ['equation_5fname_93',['equation_name',['../namespacemod__ard__phys.html#a4e17344e7d44373d4c4492eff385b4fb',1,'mod_ard_phys::equation_name'],['../namespacemod__rd__phys.html#af124d4db48d34aac8d8d5cb0ff926da6',1,'mod_rd_phys::equation_name']]],
+  ['equation_5fname_93',['equation_name',['../namespacemod__ard__phys.html#a4e17344e7d44373d4c4492eff385b4fb',1,'mod_ard_phys']]],
   ['equations_94',['Equations',['../md_doc_2discretization.html#disc-eq',1,'Equations'],['../md_doc_2features.html#feat-eqns',1,'Equations']]],
   ['equations_95',['equations',['../md_doc_2equations.html',1,'Physics modules and equations'],['../md_doc_2twofluid.html',1,'Two fluid equations']]],
   ['equations_2emd_96',['equations.md',['../equations_8md.html',1,'']]],

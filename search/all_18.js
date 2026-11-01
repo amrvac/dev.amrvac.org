@@ -2,7 +2,7 @@ var searchData=
 [
   ['u_0',['u',['../structmod__particle__base_1_1particle__t.html#a994d311e7400a37ef36789062d3eaa4c',1,'mod_particle_base::particle_t']]],
   ['u0_1',['u0',['../structmod__trace__field_1_1trace__qperp__result.html#aa7842fe9a22b11b467ce009f5b003f82',1,'mod_trace_field::trace_qperp_result']]],
-  ['u_5f_2',['u_',['../namespacemod__ard__phys.html#a4ea914a4f8ddf7d322ec5de4c39a21d5',1,'mod_ard_phys::u_'],['../namespacemod__rd__phys.html#a152a00c83bf86d766cdf7755cca9bf4a',1,'mod_rd_phys::u_']]],
+  ['u_5f_2',['u_',['../namespacemod__ard__phys.html#a4ea914a4f8ddf7d322ec5de4c39a21d5',1,'mod_ard_phys']]],
   ['u_5fbackward_5fperp_3',['u_backward_perp',['../structmod__trace__field_1_1trace__qperp__result.html#aaa6b9ad3480d3d0a089712bbffc7c459',1,'mod_trace_field::trace_qperp_result']]],
   ['u_5fforward_5fperp_4',['u_forward_perp',['../structmod__trace__field_1_1trace__qperp__result.html#aa7d324cb2bd03d8b81c70297bbb48cf9',1,'mod_trace_field::trace_qperp_result']]],
   ['uawsom_20equation_20and_20implementation_20map_5',['UAWSoM equation and implementation map',['../md_doc_2uawsom__equation__map.html',1,'']]],
@@ -61,7 +61,7 @@ var searchData=
   ['upwind_5fx_58',['upwind_x',['../mod__rt__sc__kernel_8t.html#af87c59e80e97009ea6764623920452d0',1,'mod_rt_sc_kernel.t']]],
   ['upwindlrmf_59',['upwindlrmf',['../namespacemod__magnetofriction.html#aa7f2892aad3fee243653f4d53ddad988',1,'mod_magnetofriction']]],
   ['usage_60',['Usage',['../debug_field_dump.html#debug_field_dump_usage',1,'']]],
-  ['usage_61',['Practical usage',['../md_doc_2reaction__diffusion.html#label-3',1,'']]],
+  ['usage_61',['Practical usage',['../md_doc_2advection__reaction__diffusion.html#label-3',1,'']]],
   ['use_62',['use',['../md_doc_2eos.html#eos-practical',1,'Practical use'],['../md_doc_2radiative__transfer.html#rt-practical',1,'Practical use']]],
   ['use_20to_20restart_20a_20simulation_20my_20goal_20is_20to_20be_20able_20to_20change_20my_20data_20mid_20simulation_20through_20another_20program_63',['I&apos;m looking for a way to translate some .blk files (using &lt;span class=&quot;tt&quot;&gt;convert_type= &apos;onegrid&apos;&lt;/span&gt;) back into standard output &lt;span class=&quot;tt&quot;&gt;.dat&lt;/span&gt; that I can use to restart a simulation. My goal is to be able to change my data mid-simulation through another program.',['../md_doc_2faq.html#faq-blk-to-dat',1,'']]],
   ['use_5fimex_5fscheme_64',['use_imex_scheme',['../namespacemod__global__parameters.html#a2d5fa16c407fa74a0c8dce6685e47d52',1,'mod_global_parameters']]],

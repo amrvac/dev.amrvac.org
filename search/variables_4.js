@@ -45,7 +45,7 @@ var searchData=
   ['eq_5fenergy_5fki_42',['eq_energy_ki',['../namespacemod__twofl__phys.html#a3386d7a325007eec90db97181b5f9cf5',1,'mod_twofl_phys']]],
   ['eq_5fenergy_5fnone_43',['eq_energy_none',['../namespacemod__twofl__phys.html#a5a55edcabe88e4c6473ea540c9cbae57',1,'mod_twofl_phys']]],
   ['eq_5fenergy_5ftot_44',['eq_energy_tot',['../namespacemod__twofl__phys.html#ab4d3bfca73568c231b87b58467e2efae',1,'mod_twofl_phys']]],
-  ['equation_5fname_45',['equation_name',['../namespacemod__ard__phys.html#a4e17344e7d44373d4c4492eff385b4fb',1,'mod_ard_phys::equation_name'],['../namespacemod__rd__phys.html#af124d4db48d34aac8d8d5cb0ff926da6',1,'mod_rd_phys::equation_name']]],
+  ['equation_5fname_45',['equation_name',['../namespacemod__ard__phys.html#a4e17344e7d44373d4c4492eff385b4fb',1,'mod_ard_phys']]],
   ['equi_5fpe0_5f_46',['equi_pe0_',['../namespacemod__mhd__phys.html#ab13c0ad9bd433dcecd77a6a6f6dc0679',1,'mod_mhd_phys']]],
   ['equi_5fpe_5fc0_5f_47',['equi_pe_c0_',['../namespacemod__twofl__phys.html#aaf75cf4b78c1eaa47dbad124051551bb',1,'mod_twofl_phys']]],
   ['equi_5fpe_5fn0_5f_48',['equi_pe_n0_',['../namespacemod__twofl__phys.html#af2d164e7de2c65a9ea8842fa74b7a60f',1,'mod_twofl_phys']]],

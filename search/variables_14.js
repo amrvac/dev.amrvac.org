@@ -2,7 +2,7 @@ var searchData=
 [
   ['u_0',['u',['../structmod__particle__base_1_1particle__t.html#a994d311e7400a37ef36789062d3eaa4c',1,'mod_particle_base::particle_t']]],
   ['u0_1',['u0',['../structmod__trace__field_1_1trace__qperp__result.html#aa7842fe9a22b11b467ce009f5b003f82',1,'mod_trace_field::trace_qperp_result']]],
-  ['u_5f_2',['u_',['../namespacemod__ard__phys.html#a4ea914a4f8ddf7d322ec5de4c39a21d5',1,'mod_ard_phys::u_'],['../namespacemod__rd__phys.html#a152a00c83bf86d766cdf7755cca9bf4a',1,'mod_rd_phys::u_']]],
+  ['u_5f_2',['u_',['../namespacemod__ard__phys.html#a4ea914a4f8ddf7d322ec5de4c39a21d5',1,'mod_ard_phys']]],
   ['u_5fbackward_5fperp_3',['u_backward_perp',['../structmod__trace__field_1_1trace__qperp__result.html#aaa6b9ad3480d3d0a089712bbffc7c459',1,'mod_trace_field::trace_qperp_result']]],
   ['u_5fforward_5fperp_4',['u_forward_perp',['../structmod__trace__field_1_1trace__qperp__result.html#aa7d324cb2bd03d8b81c70297bbb48cf9',1,'mod_trace_field::trace_qperp_result']]],
   ['undefined_5',['undefined',['../namespacemod__global__parameters.html#aba6bd3b8579dde6b7c68f65ab628a049',1,'mod_global_parameters']]],

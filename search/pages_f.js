@@ -34,7 +34,7 @@ var searchData=
   ['mod_5fusr_20t_31',['Structure of mod_usr.t',['../md_doc_2amrvacusr.html#user_structure',1,'']]],
   ['mod_5fusr_20t_20and_20configure_20them_20through_20amrvac_20par_32',['Is there a way I can define my own parameters somewhere in mod_usr.t and configure them through &lt;span class=&quot;tt&quot;&gt;amrvac.par&lt;/span&gt; ?',['../md_doc_2faq.html#faq-own-parameters',1,'']]],
   ['model_33',['Choosing the gas model',['../md_doc_2eos.html#eos-namelist',1,'']]],
-  ['module_34',['module',['../md_doc_2radiative__transfer.html#rt-activation',1,'Activating the module'],['../md_doc_2advection__reaction__diffusion.html',1,'Advection-reaction-diffusion module'],['../md_doc_2reaction__diffusion.html',1,'Reaction-diffusion module']]],
+  ['module_34',['module',['../md_doc_2radiative__transfer.html#rt-activation',1,'Activating the module'],['../md_doc_2advection__reaction__diffusion.html',1,'Advection-reaction-diffusion module']]],
   ['module_20for_20hd_20mhd_35',['module for HD MHD',['../md_doc_2cakforce.html',1,'CAK radiation force module for HD/MHD'],['../md_doc_2particle.html',1,'Test particle module for HD/MHD']]],
   ['module_20handle_20hall_20mhd_36',['Can the MHD module handle Hall-MHD?',['../md_doc_2faq.html#faq-hall-mhd',1,'']]],
   ['module_20to_20mpi_20amrvac_37',['Adding a physics module to MPI-AMRVAC',['../md_doc_2addmodule.html',1,'']]],

@@ -174,7 +174,7 @@ var searchData=
   ['numbers_171',['Numbers',['../md_doc_2code__style__guide.html#style-num',1,'']]],
   ['numerical_20methods_172',['Numerical methods',['../md_doc_2methods.html',1,'']]],
   ['numerical_5fresistive_5fheating_173',['numerical_resistive_heating',['../namespacemod__mhd__phys.html#a47ea022fbef7a0d31a76e3c3e928df1b',1,'mod_mhd_phys']]],
-  ['numerics_174',['Numerics',['../md_doc_2reaction__diffusion.html#label-2',1,'']]],
+  ['numerics_174',['Numerics',['../md_doc_2advection__reaction__diffusion.html#label-2',1,'']]],
   ['numerics_20and_20implementation_175',['Numerics and implementation',['../md_doc_2eos.html#eos-implementation',1,'Numerics and implementation'],['../md_doc_2radiative__transfer.html#rt-implementation',1,'Numerics and implementation']]],
   ['nusrpayload_176',['nusrpayload',['../namespacemod__particle__base.html#a47c78119cf8d3b9322a595584603ba02',1,'mod_particle_base']]],
   ['nvector_177',['nvector',['../namespacemod__variables.html#a41770f0ac3db47db53f5f4da82242885',1,'mod_variables']]],

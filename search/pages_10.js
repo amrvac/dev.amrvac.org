@@ -18,7 +18,7 @@ var searchData=
   ['nstretchedblocks_5fbaselevel_15',['stretch_dim, stretch_uncentered, qstretch_baselevel, nstretchedblocks_baselevel',['../md_doc_2par.html#par_stretched',1,'']]],
   ['numbers_16',['Numbers',['../md_doc_2code__style__guide.html#style-num',1,'']]],
   ['numerical_20methods_17',['Numerical methods',['../md_doc_2methods.html',1,'']]],
-  ['numerics_18',['Numerics',['../md_doc_2reaction__diffusion.html#label-2',1,'']]],
+  ['numerics_18',['Numerics',['../md_doc_2advection__reaction__diffusion.html#label-2',1,'']]],
   ['numerics_20and_20implementation_19',['Numerics and implementation',['../md_doc_2eos.html#eos-implementation',1,'Numerics and implementation'],['../md_doc_2radiative__transfer.html#rt-implementation',1,'Numerics and implementation']]],
   ['nw_20',['nw',['../md_doc_2mpiamrvac__nw.html',1,'Auxiliary variables (nw...)'],['../md_doc_2mpiamrvac__nw.html#nw',1,'nw']]],
   ['nwaux_21',['nwaux',['../md_doc_2mpiamrvac__nw.html#nwaux',1,'']]],

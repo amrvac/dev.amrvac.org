@@ -30,7 +30,7 @@ var searchData=
   ['different_20tvd_20variants_27',['Different TVD variants',['../md_doc_2par.html#par_tvdvariants',1,'']]],
   ['different_20version_20of_20gnu_20fortran_28',['I get an error: mpi.mod was created by a different version of GNU Fortran',['../md_doc_2faq.html#faq-mpi-mod',1,'']]],
   ['diffusion_20gray_20scott_20evolution_29',['2D Reaction-Diffusion Gray-Scott evolution',['../md_doc_2demo-movies.html#demo_rd',1,'']]],
-  ['diffusion_20module_30',['diffusion module',['../md_doc_2advection__reaction__diffusion.html',1,'Advection-reaction-diffusion module'],['../md_doc_2reaction__diffusion.html',1,'Reaction-diffusion module']]],
+  ['diffusion_20module_30',['Advection-reaction-diffusion module',['../md_doc_2advection__reaction__diffusion.html',1,'']]],
   ['dimensional_20and_20source_20splitting_31',['Dimensional and Source Splitting',['../md_doc_2discretization.html#disc-splitting',1,'']]],
   ['dimensional_20splitting_32',['Dimensional splitting',['../md_doc_2par.html#par_dimsplit',1,'']]],
   ['discretization_33',['Discretization',['../md_doc_2discretization.html',1,'Discretization'],['../md_doc_2features.html#feat-spatial',1,'Spatial Discretization'],['../md_doc_2features.html#feat-temporal',1,'Temporal Discretization'],['../md_doc_2time__discretization.html',1,'Time Discretization'],['../md_doc_2discretization.html#disc-time',1,'Time Discretization']]],
