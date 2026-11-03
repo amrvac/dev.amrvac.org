@@ -1,5 +1,7 @@
 <map id="mod_thermal_conduction::set_source_tc_mhd_geo" name="mod_thermal_conduction::set_source_tc_mhd_geo">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,192,50"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,40,192,85"/>
 <area shape="rect" id="Node000002" href="$namespacemod__thermal__conduction.html#aa89a99da7c4e6f368d32d28f52e2cf85" title=" " alt="" coords="240,5,426,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,25,227,27,221,28,192,30"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,46,227,43,222,44,193,51"/>
+<area shape="rect" id="Node000003" href="$namespacemod__thermal__conduction.html#a3c51a93a964d3d53cc00589657379071" title="rho in the saturated flux: under LTE scaled by the local over the fully ionised ne/nH" alt="" coords="240,75,426,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,73,227,81,221,81,192,79"/>
 </map>

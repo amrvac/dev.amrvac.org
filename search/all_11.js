@@ -74,7 +74,7 @@ var searchData=
   ['nenh_5feq_5ftable_71',['nenh_eq_table',['../structmod__radiative__cooling_1_1rc__fluid.html#a39c9d407b8a40aaaa630abf887f1c51c',1,'mod_radiative_cooling::rc_fluid']]],
   ['nenh_5fspex_72',['nenh_spex',['../namespacemod__radloss__tables.html#a55bd273ca74a929ffa76e02542e6bbef',1,'mod_radloss_tables']]],
   ['neonh_73',['neonh',['../structmod__eos__container_1_1eos__container.html#aa2faac3aaa74a57f2bdf477138d117e4',1,'mod_eos_container::eos_container']]],
-  ['neonh_5ffi_74',['neonh_fi',['../structmod__eos__container_1_1eos__container.html#a0c549622900e72c396d966485580508e',1,'mod_eos_container::eos_container']]],
+  ['neonh_5ffi_74',['neonh_fi',['../structmod__eos__container_1_1eos__container.html#a0c549622900e72c396d966485580508e',1,'mod_eos_container::eos_container::neonh_fi'],['../structmod__thermal__conduction_1_1tc__fluid.html#ad1a4970396fda1a3cf7809882527ad33',1,'mod_thermal_conduction::tc_fluid::neonh_fi']]],
   ['neonh_5fx_75',['neonh_x',['../structmod__eos__container_1_1eos__container.html#a6b69ca6cc3cb8d14d4b9feb094f3d3eb',1,'mod_eos_container::eos_container']]],
   ['neonh_5fxy_76',['neonh_xy',['../structmod__eos__container_1_1eos__container.html#a92338a2cde630ed2d94e57b271c799cf',1,'mod_eos_container::eos_container']]],
   ['neonh_5fy_77',['neonh_y',['../structmod__eos__container_1_1eos__container.html#aff8942bb023bf343f90af5ef6f424034',1,'mod_eos_container::eos_container']]],

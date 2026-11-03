@@ -40,9 +40,9 @@
 <area shape="poly" id="edge20_Node000001_Node000126" title=" " alt="" coords="86,800,102,906,128,1053,144,1128,163,1197,185,1254,209,1293,211,1296,206,1297,205,1296,180,1256,158,1199,139,1130,122,1054,97,907,86,805"/>
 <area shape="rect" id="Node000127" href="$namespacemod__thermal__conduction.html#a591ee12c87621f338cc65935a9c5fa20" title="anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computation..." alt="" coords="211,1376,397,1421"/>
 <area shape="poly" id="edge21_Node000001_Node000127" title=" " alt="" coords="85,800,100,919,123,1087,140,1173,160,1252,182,1317,209,1362,211,1366,206,1366,205,1365,178,1320,154,1254,135,1174,118,1087,94,919,85,805"/>
-<area shape="rect" id="Node000136" href="$namespacemod__thermal__conduction.html#a06712e83dc81e2953a38bee9f3109661" title="Init TC coefficients: HD case." alt="" coords="211,1445,397,1490"/>
-<area shape="poly" id="edge22_Node000001_Node000136" title=" " alt="" coords="85,800,97,931,119,1119,135,1217,156,1307,180,1381,194,1409,209,1431,211,1435,205,1434,205,1435,189,1412,175,1383,151,1308,130,1218,114,1120,92,931,85,805"/>
-<area shape="rect" id="Node000137" href="$namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="211,1515,397,1559"/>
-<area shape="poly" id="edge23_Node000001_Node000137" title=" " alt="" coords="84,800,95,943,115,1152,131,1261,152,1361,178,1444,192,1476,209,1501,211,1505,206,1503,205,1504,188,1479,173,1446,147,1363,126,1262,110,1153,90,943,84,805"/>
+<area shape="rect" id="Node000137" href="$namespacemod__thermal__conduction.html#a06712e83dc81e2953a38bee9f3109661" title="Init TC coefficients: HD case." alt="" coords="211,1445,397,1490"/>
+<area shape="poly" id="edge22_Node000001_Node000137" title=" " alt="" coords="85,800,97,931,119,1119,135,1217,156,1307,180,1381,194,1409,209,1431,211,1435,205,1434,205,1435,189,1412,175,1383,151,1308,130,1218,114,1120,92,931,85,805"/>
+<area shape="rect" id="Node000138" href="$namespacemod__thermal__conduction.html#a398ab45440778263e648a5ad8787a4dc" title=" " alt="" coords="211,1515,397,1559"/>
+<area shape="poly" id="edge23_Node000001_Node000138" title=" " alt="" coords="84,800,95,943,115,1152,131,1261,152,1361,178,1444,192,1476,209,1501,211,1505,206,1503,205,1504,188,1479,173,1446,147,1363,126,1262,110,1153,90,943,84,805"/>
 <area shape="poly" id="edge7_Node000008_Node000008" title=" " alt="" coords="261,375,260,366,267,357,282,351,304,349,328,352,343,360,339,362,327,357,304,355,283,357,270,361,265,367,267,376"/>
 </map>

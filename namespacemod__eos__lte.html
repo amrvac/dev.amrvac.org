@@ -150,7 +150,7 @@ Functions/Subroutines</h2></td></tr>
 <p>Given log10(nH) and log10(p), find log10(eint/nH) by table-guessed bisection on the forward pressure table. Wraps the bracketing logic and log_p_bisect_cached into a single call for use by both HD and MHD from_conserved routines. </p>
 <p>eint-axis limits: var2_min/var2_max are set for uniform tables only, so an adaptive log_p table takes its end nodes, which keeps the clamps below inside the bicubic stencil</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00711">711</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00717">717</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -185,7 +185,7 @@ Here is the call graph for this function:</div>
 
 <p>eint/nH from (log10 nH, log10 T), from the inverse table when one is built and the Saha solve otherwise </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00493">493</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00495">495</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -265,7 +265,7 @@ Here is the call graph for this function:</div>
 <p>####################################################################### Table-metadata helpers: expose inverse-table grid bounds without reaching into EoS table internals. ####################################################################### </p>
 <p>log_nH grid metadata of the (log_nH, log_T) inverse table (eint from T), choosing the container by method ('tables'-&gt;eint_from_T, 'entropy'-&gt;eintT). n_nH=0 if no such table (analytic/FI). Lets cooling's build_Y_mod_table get its grid without reaching into EoS table internals. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00777">777</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00787">787</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>
@@ -323,7 +323,7 @@ Here is the call graph for this function:</div>
 
 <p>Gamma_1 from (log10 nH, log10 p/nH): one lookup on the pressure-indexed table, or for the analytic method the closed form after a Saha solve at that pressure. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00443">443</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00437">437</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>
@@ -440,7 +440,7 @@ Here is the call graph for this function:</div>
 
 <p>LTE internal energy from pressure in one cell: FI bypass, else eint(nH, p). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00818">818</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00828">828</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -478,7 +478,7 @@ Here is the call graph for this function:</div>
 
 <p>Gamma_1 of one cell from (p, rho): the ideal value where fully ionised, else the pressure- indexed table of the method. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00457">457</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00455">455</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -523,7 +523,7 @@ Here is the call graph for this function:</div>
 
 <p>LTE pressure from internal energy in one cell: ideal without ionE, else the table floor, the FI bypass or p(nH, eint). log_nH_val is read only with ionE. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00799">799</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00809">809</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -558,7 +558,7 @@ Here is the call graph for this function:</div>
 
 <p>Ratio eint/p from (log10 nH, log10 p/nH). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00417">417</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00414">414</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>
@@ -583,7 +583,7 @@ Here is the call graph for this function:</div>
 
 <p>p/nH = (1 + He + y) T from (log10 nH, log10 eint/nH) </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00475">475</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00473">473</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>
@@ -608,7 +608,7 @@ Here is the call graph for this function:</div>
 
 <p>Temperature from (log10 nH, log10 eint/nH). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00358">358</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte_8t_source.html#l00357">357</a> of file <a class="el" href="mod__eos__lte_8t_source.html">mod_eos_lte.t</a>.</p>
 
 </div>
 </div>
