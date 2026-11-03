@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['r0_0',['r0',['../structmod__thermal__conduction_1_1tc__anchor__t.html#ab5c79f2e571cfc4cc96e341159273122',1,'mod_thermal_conduction::tc_anchor_t::r0'],['../namespacemod__bremsstrahlung.html#aa8ccb6050dd7500988701083e23c8ec3',1,'mod_bremsstrahlung::r0']]],
+  ['r0_0',['r0',['../namespacemod__bremsstrahlung.html#aa8ccb6050dd7500988701083e23c8ec3',1,'mod_bremsstrahlung']]],
   ['r_5f_1',['r_',['../namespacemod__global__parameters.html#adc6c978e38a475d912f5a75d19e881ec',1,'mod_global_parameters']]],
   ['r_5f0_2',['r_0',['../namespacemod__pfss.html#a8d70e63f4c421fc0b81bdba8706bd2e5',1,'mod_pfss']]],
   ['r_5fe_3',['r_e',['../namespacemod__hd__phys.html#a32c4408104292f266820dea08f29960b',1,'mod_hd_phys::r_e'],['../namespacemod__mhd__phys.html#ad70349f22e0f60902d33210d1b228710',1,'mod_mhd_phys::r_e']]],

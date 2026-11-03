@@ -1,8 +1,9 @@
 <map id="tests/mhd" name="tests/mhd">
 <area shape="rect" id="node2" href="dir_8cde9e92f7f8d81dfb0071a8651768b5.html" title="alfvenwing_3D" alt="" coords="112,65,230,93"/>
 <area shape="rect" id="node3" href="dir_88ae5c0cbc8f232937aea130e4737808.html" title="icarus" alt="" coords="254,65,314,93"/>
-<area shape="rect" id="node4" href="dir_c96454dacb300b5ce5a80441f64b36c3.html" title="UAWSoM_1D" alt="" coords="338,65,443,93"/>
-<area shape="rect" id="node5" href="dir_7491cbe9152ebae38fbfde9582a5427f.html" title="UAWSoM_solar_atmosphere_2.5D" alt="" coords="467,65,709,93"/>
-<area shape="rect" id="clust2" href="dir_5af3a57a1f78d0955bde14958f7f91a3.html" alt="" coords="27,54,720,103"/>
-<area shape="rect" id="clust1" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html" title="tests" alt="" coords="16,16,731,114"/>
+<area shape="rect" id="node4" href="dir_85a185598f6ffe01c745082559f4e620.html" title="PI_ionisation_1D" alt="" coords="338,65,467,93"/>
+<area shape="rect" id="node5" href="dir_c96454dacb300b5ce5a80441f64b36c3.html" title="UAWSoM_1D" alt="" coords="491,65,597,93"/>
+<area shape="rect" id="node6" href="dir_7491cbe9152ebae38fbfde9582a5427f.html" title="UAWSoM_solar_atmosphere_2.5D" alt="" coords="621,65,862,93"/>
+<area shape="rect" id="clust2" href="dir_5af3a57a1f78d0955bde14958f7f91a3.html" alt="" coords="27,54,873,103"/>
+<area shape="rect" id="clust1" href="dir_59425e443f801f1f2fd8bbe4959a3ccf.html" title="tests" alt="" coords="16,16,884,114"/>
 </map>

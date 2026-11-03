@@ -110,8 +110,8 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:ac37c150a59bfa37370f596f022cae9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validation of the pipelined KBA. The ray-by-ray Q is copied into i_iout and the pipelined Q left in i_qrad, and the largest difference is printed relative to the largest Q, both over the whole band and away from the seam blocks, the outermost x-block on either side. Both solves start from the same seam inflow, since the first one hands its own on to the second.  <br /></td></tr>
 <tr class="memitem:a2da77cf5ba4482fdc04f0a1cb9333e06" id="r_a2da77cf5ba4482fdc04f0a1cb9333e06"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#a2da77cf5ba4482fdc04f0a1cb9333e06">mod_rt_sc_solvers::rt_band_blocks</a> (ib)</td></tr>
 <tr class="memdesc:a2da77cf5ba4482fdc04f0a1cb9333e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">List the blocks of this rank that lie in band ib, with their block position (bi, bj), cache chi and B on them, ghosts included, and check that the band is one complete level.  <br /></td></tr>
-<tr class="memitem:a6abb83620a0aba3d9b60eec6030cc7a7" id="r_a6abb83620a0aba3d9b60eec6030cc7a7"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6abb83620a0aba3d9b60eec6030cc7a7">copy_edge_row</a> (iv_lo, iv_hi, iv_src)</td></tr>
-<tr class="memdesc:a6abb83620a0aba3d9b60eec6030cc7a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rows iv_lo to iv_hi of the chi and B caches of block iblk take row iv_src.  <br /></td></tr>
+<tr class="memitem:abb407813852e1d563a798531dfcc56dc" id="r_abb407813852e1d563a798531dfcc56dc"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb407813852e1d563a798531dfcc56dc">copy_edge_row</a> (iv_lo, iv_hi, iv_src, thermal)</td></tr>
+<tr class="memdesc:abb407813852e1d563a798531dfcc56dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ghost rows iv_lo to iv_hi of the chi and B caches of block iblk beyond the edge row iv_src. At an open end chi is zero in the ghosts, so that the first step into the band crosses only the half cell between the band edge and the cell centre, chi_edge dy/2 in optical depth. Copying the edge chi would add a ghost half cell of emitting gas above the band and lower the outgoing flux by about (3/4) q(0) dtau of sigma Teff**4. At a thermal end chi takes the edge value and B keeps the value rt_sc_chiB gave the ghost state, which the boundary conditions set, so that the inflow of rt_thermal_inflow does not follow the heating of the band.  <br /></td></tr>
 <tr class="memitem:a29ac825d3805a6115e5a9ea9a13af27a" id="r_a29ac825d3805a6115e5a9ea9a13af27a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#a29ac825d3805a6115e5a9ea9a13af27a">mod_rt_sc_solvers::rt_tau_tops</a> (tautop)</td></tr>
 <tr class="memdesc:a29ac825d3805a6115e5a9ea9a13af27a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tau at the top face of every block row of the current band, per global column along hdim. Each block adds the optical thickness of its columns, one allreduce assembles the table, and the top of a row lies below all the rows above it.  <br /></td></tr>
 <tr class="memitem:aeddf4d6e85acd9a1302f62cc074955fc" id="r_aeddf4d6e85acd9a1302f62cc074955fc"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#aeddf4d6e85acd9a1302f62cc074955fc">mod_rt_sc_solvers::rt_block_tau</a> (iblk, tautop, taub)</td></tr>
@@ -122,14 +122,18 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:a54e8095d26fb8198ef09b9c40e3c8489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open band ib. It lists and caches the band blocks and zeroes the accumulators.  <br /></td></tr>
 <tr class="memitem:a25c78e3c5d807238845b6b2d1fbde87c" id="r_a25c78e3c5d807238845b6b2d1fbde87c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#a25c78e3c5d807238845b6b2d1fbde87c">mod_rt_sc_solvers::rt_wave_band_close</a> (nslot)</td></tr>
 <tr class="memdesc:a25c78e3c5d807238845b6b2d1fbde87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the band. The fluxes are scaled by c_norm, Q is formed as the imbalance or as the -div F blend with the tau^2 taper, and the nslot wavefront datatype is restored.  <br /></td></tr>
+<tr class="memitem:a6531018be7bc8e9115f3e2f770313aa2" id="r_a6531018be7bc8e9115f3e2f770313aa2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#a6531018be7bc8e9115f3e2f770313aa2">mod_rt_sc_solvers::rt_thermal_inflow</a> (iblk, k, iib)</td></tr>
+<tr class="memdesc:a6531018be7bc8e9115f3e2f770313aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Diffusion inflow of ray k at a thermal band end, written into the ghosts of the block copy iib. Beyond the end the radiation is taken as the diffusion limit, I = B + abs(mu_v) dB/dtau with tau increasing away from the band, where the isotropic I = B would carry no flux into the band and leave it with half the diffusive flux at its edge. B and its gradient come from the two ghost rows, the state the boundary conditions set, and not from the band, whose heating would otherwise feed back on its own inflow. Only rays entering through the end change.  <br /></td></tr>
+<tr class="memitem:a508eac399c1cadf875a481f8c0e43ddb" id="r_a508eac399c1cadf875a481f8c0e43ddb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a508eac399c1cadf875a481f8c0e43ddb">fill_rows</a> (iv_lo, iv_hi, g1, g2)</td></tr>
+<tr class="memdesc:a508eac399c1cadf875a481f8c0e43ddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ghost rows iv_lo to iv_hi, with the gradient from the ghost row g1 next to the band to the one beyond it, g2. With a single ghost row there is no gradient, and the inflow is B itself.  <br /></td></tr>
 <tr class="memitem:afb379fcb3984d7c8cdb68e2752090c27" id="r_afb379fcb3984d7c8cdb68e2752090c27"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#afb379fcb3984d7c8cdb68e2752090c27">mod_rt_sc_solvers::rt_add_moments</a> (iblk, k, iib)</td></tr>
 <tr class="memdesc:afb379fcb3984d7c8cdb68e2752090c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the weighted intensity iib of ray k on block iblk to J in i_qrad, Fy in i_frad and Fx in rtw_fx.  <br /></td></tr>
 <tr class="memitem:a70b99e4471d61ebda3417e6453513374" id="r_a70b99e4471d61ebda3417e6453513374"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#a70b99e4471d61ebda3417e6453513374">mod_rt_sc_solvers::rt_exchange</a> (nslot)</td></tr>
 <tr class="memdesc:a70b99e4471d61ebda3417e6453513374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ghost exchange of the nslot intensity columns of ps_rt from i_isw, with the physical boundaries left alone, since the inflows are written separately.  <br /></td></tr>
 <tr class="memitem:ae3fe1861ec1d76a7bbcb9612d0b09bfd" id="r_ae3fe1861ec1d76a7bbcb9612d0b09bfd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#ae3fe1861ec1d76a7bbcb9612d0b09bfd">mod_rt_sc_solvers::rt_wave_end</a> ()</td></tr>
 <tr class="memdesc:ae3fe1861ec1d76a7bbcb9612d0b09bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Epilogue. It hands the seam edges over to the next solve, restores the hydro datatype and releases the block list.  <br /></td></tr>
-<tr class="memitem:aa7149c3d88a73c2482d583229223882c" id="r_aa7149c3d88a73c2482d583229223882c"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#aa7149c3d88a73c2482d583229223882c">mod_rt_sc_solvers::rt_seam_read</a> (iib, igrid, ibi, sx, k)</td></tr>
-<tr class="memdesc:aa7149c3d88a73c2482d583229223882c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seam read. At the domain edge where ray k enters, the wrapped upwind ghost column of the block takes the outflow of the far edge from the last solve. A ray moving in +x enters through the first block column and reads seamR, and one moving in -x enters through the last and reads seamL.  <br /></td></tr>
+<tr class="memitem:a6682afe1f38cc10e53727b8d304b2b58" id="r_a6682afe1f38cc10e53727b8d304b2b58"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#a6682afe1f38cc10e53727b8d304b2b58">mod_rt_sc_solvers::rt_seam_read</a> (iib, igrid, ibi, ibj, sx, k)</td></tr>
+<tr class="memdesc:a6682afe1f38cc10e53727b8d304b2b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seam read. At the domain edge where ray k enters, the wrapped upwind ghost column of the block takes the outflow of the far edge from the last solve. A ray moving in +x enters through the first block column and reads seamR, and one moving in -x enters through the last and reads seamL. The column includes the corner cells above and below the block, which getbc fills from a block the ray has not reached yet, except beyond a band end, where the inflow stays.  <br /></td></tr>
 <tr class="memitem:a60b6193ebbfbbee5361d770e86e118ad" id="r_a60b6193ebbfbbee5361d770e86e118ad"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#a60b6193ebbfbbee5361d770e86e118ad">mod_rt_sc_solvers::rt_seam_write</a> (iib, igrid, ibi, sx, k)</td></tr>
 <tr class="memdesc:a60b6193ebbfbbee5361d770e86e118ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seam write. At the far domain edge the outflow of ray k is kept for the next solve. A ray moving in +x leaves through the last block column into seamR, and one moving in -x leaves through the first into seamL.  <br /></td></tr>
 <tr class="memitem:a6c0e9a0fdf3cb09dbddc5fd4f41f4348" id="r_a6c0e9a0fdf3cb09dbddc5fd4f41f4348"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#a6c0e9a0fdf3cb09dbddc5fd4f41f4348">mod_rt_sc_solvers::rt_inflow_ghosts</a> (islot)</td></tr>
@@ -143,11 +147,11 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a2ec2f4e00afd5ab689bf9cda82f65069" id="r_a2ec2f4e00afd5ab689bf9cda82f65069"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#a2ec2f4e00afd5ab689bf9cda82f65069">mod_rt_sc_solvers::rt_sc_solve_wave</a> ()</td></tr>
 <tr class="memdesc:a2ec2f4e00afd5ab689bf9cda82f65069"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ray-by-ray KBA, with one ray at a time passing through the diagonal wavefront.  <br /></td></tr>
 <tr class="memitem:aeb90808c0e6ed58befec017ec1ec0c24" id="r_aeb90808c0e6ed58befec017ec1ec0c24"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__rt__sc__solvers.html#aeb90808c0e6ed58befec017ec1ec0c24">mod_rt_sc_solvers::rt_sc_solve_wave_pipe</a> ()</td></tr>
-<tr class="memdesc:aeb90808c0e6ed58befec017ec1ec0c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pipelined KBA. The direction-sign corners run together in batches of nisw slots, and within each corner the rays follow one another through its wavefront. The result agrees with that of rt_sc_solve_wave to round-off, since the moments are summed in another order.  <br /></td></tr>
+<tr class="memdesc:aeb90808c0e6ed58befec017ec1ec0c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pipelined KBA. The direction-sign corners run together in batches of up to nisw, and within each corner the rays follow one another through its wavefront. Each corner has two slots, one for its even and one for its odd rays: the diagonal upwind neighbour of a block is one ray ahead, so with a single slot its ghost would already hold the next ray, while with two it still holds the current one when the getbc delivers it. The result agrees with that of rt_sc_solve_wave to round-off, since the moments are summed in another order.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function/Subroutine Documentation</h2>
-<a id="a6abb83620a0aba3d9b60eec6030cc7a7" name="a6abb83620a0aba3d9b60eec6030cc7a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6abb83620a0aba3d9b60eec6030cc7a7">&#9670;&#160;</a></span>copy_edge_row()</h2>
+<a id="abb407813852e1d563a798531dfcc56dc" name="abb407813852e1d563a798531dfcc56dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb407813852e1d563a798531dfcc56dc">&#9670;&#160;</a></span>copy_edge_row()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,19 +169,59 @@ Functions/Subroutines</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>iv_src</em></span>&#160;)</td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>iv_src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">logical, intent(in)</td>          <td class="paramname"><span class="paramname"><em>thermal</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Rows iv_lo to iv_hi of the chi and B caches of block iblk take row iv_src. </p>
+<p>Ghost rows iv_lo to iv_hi of the chi and B caches of block iblk beyond the edge row iv_src. At an open end chi is zero in the ghosts, so that the first step into the band crosses only the half cell between the band edge and the cell centre, chi_edge dy/2 in optical depth. Copying the edge chi would add a ghost half cell of emitting gas above the band and lower the outgoing flux by about (3/4) q(0) dtau of sigma Teff**4. At a thermal end chi takes the edge value and B keeps the value rt_sc_chiB gave the ghost state, which the boundary conditions set, so that the inflow of rt_thermal_inflow does not follow the heating of the band. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__rt__sc__solvers_8t_source.html#l00316">316</a> of file <a class="el" href="mod__rt__sc__solvers_8t_source.html">mod_rt_sc_solvers.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__rt__sc__solvers_8t_source.html#l00323">323</a> of file <a class="el" href="mod__rt__sc__solvers_8t_source.html">mod_rt_sc_solvers.t</a>.</p>
+
+</div>
+</div>
+<a id="a508eac399c1cadf875a481f8c0e43ddb" name="a508eac399c1cadf875a481f8c0e43ddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a508eac399c1cadf875a481f8c0e43ddb">&#9670;&#160;</a></span>fill_rows() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine rt_thermal_inflow::fill_rows </td>
+          <td>(</td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>iv_lo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>iv_hi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>g1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">integer, intent(in)</td>          <td class="paramname"><span class="paramname"><em>g2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ghost rows iv_lo to iv_hi, with the gradient from the ghost row g1 next to the band to the one beyond it, g2. With a single ghost row there is no gradient, and the inflow is B itself. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__rt__sc__solvers_8t_source.html#l00528">528</a> of file <a class="el" href="mod__rt__sc__solvers_8t_source.html">mod_rt_sc_solvers.t</a>.</p>
 
 </div>
 </div>
 <a id="aec43e23320fff8a1c3feb8178e877088" name="aec43e23320fff8a1c3feb8178e877088"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec43e23320fff8a1c3feb8178e877088">&#9670;&#160;</a></span>fill_rows()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aec43e23320fff8a1c3feb8178e877088">&#9670;&#160;</a></span>fill_rows() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +251,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Ghost rows iv_lo to iv_hi, from the edge row iv_src. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__rt__sc__solvers_8t_source.html#l00601">601</a> of file <a class="el" href="mod__rt__sc__solvers_8t_source.html">mod_rt_sc_solvers.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__rt__sc__solvers_8t_source.html#l00651">651</a> of file <a class="el" href="mod__rt__sc__solvers_8t_source.html">mod_rt_sc_solvers.t</a>.</p>
 
 </div>
 </div>

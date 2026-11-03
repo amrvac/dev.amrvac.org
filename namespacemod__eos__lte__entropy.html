@@ -114,7 +114,7 @@ Functions/Subroutines</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Entropy-method LTE EoS: every query is ONE bicubic Hermite evaluation. </p>
 <p>Each quantity is stored as four tables &ndash; the value plus its three derivatives (d/dx, d/dy, d2/dxdy) at every node &ndash; which fully determine the bicubic Hermite polynomial in each cell: exact at nodes, O(h^4) inside, no closure. No Newton, bisection, or iteration on the hot path; the iterative work is done offline against the analytic Saha solver (see entropy128/generate_entropy_tables.py).</p>
-<p>Forward tables, axes (log10 nH, log10 eint/nH): Tfwd -&gt; T pfwd -&gt; p neOnH -&gt; ne/nH Inverse tables: eintP (log nH, log p/nH) -&gt; log10(eint/nH) eintT (log nH, log T) -&gt; log10(eint/nH) g1p (log nH, log p/nH) -&gt; Gamma_1</p>
+<p>Forward tables, axes (log10 nH, log10 eint/nH): Tfwd -&gt; T pfwd -&gt; p neOnH -&gt; ne/nH (interpolated as ln(ne/nH)) Inverse tables: eintP (log nH, log p/nH) -&gt; log10(eint/nH) eintT (log nH, log T) -&gt; log10(eint/nH) g1p (log nH, log p/nH) -&gt; Gamma_1</p>
 <p>Gamma_1 is tabulated directly (g1p) rather than recovered from second derivatives, so the lookup stays smooth; values are Maxwell-consistent with (p, T) by construction. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function/Subroutine Documentation</h2>
 <a id="a5615f9315386cb54d4cb32991a03ca5c" name="a5615f9315386cb54d4cb32991a03ca5c"></a>
@@ -138,7 +138,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>eint/p in code units from (log nH, log p/nH). The table holds log10(eint/nH) in CGS </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00370">370</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00385">385</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -163,7 +163,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>log10(eint/nH) in code units from (log nH, log T); the table holds it in CGS </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00448">448</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00463">463</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -213,7 +213,7 @@ Here is the call graph for this function:</div>
 
 <p>Bisection inverse: log10(eint/nH) [code] such that the forward pressure matches p exactly; the eintP table only supplies the initial guess. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00379">379</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00394">394</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -248,7 +248,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00442">442</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00457">457</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -273,7 +273,7 @@ Here is the call graph for this function:</div>
 
 <p>Pressure in code units from (log nH, log eint/nH); the pfwd table holds p itself. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00340">340</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00355">355</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -296,7 +296,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00333">333</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00348">348</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -331,7 +331,7 @@ Here is the call graph for this function:</div>
 
 <p>T and ne/nH at one point: Tfwd and neOnH share the forward grid, so the cell location and the basis are computed once. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00352">352</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00367">367</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -356,7 +356,7 @@ Here is the call graph for this function:</div>
 
 <p>Public lookups, code units in and out. Forward tables are on (log nH, log eint/nH), eintP and g1p on (log nH, log p/nH), eintT on (log nH, log T). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00328">328</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00343">343</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -379,7 +379,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00345">345</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__eos__lte__entropy_8t_source.html#l00360">360</a> of file <a class="el" href="mod__eos__lte__entropy_8t_source.html">mod_eos_lte_entropy.t</a>.</p>
 
 </div>
 </div>
@@ -404,9 +404,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__eos__lte__entropy_a7c88e88863af72fb5439071533ce39f3_cgraph.png" border="0" usemap="#anamespacemod__eos__lte__entropy_a7c88e88863af72fb5439071533ce39f3_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__eos__lte__entropy_a7c88e88863af72fb5439071533ce39f3_cgraph" id="anamespacemod__eos__lte__entropy_a7c88e88863af72fb5439071533ce39f3_cgraph">
-<area shape="rect" title="Entropy&#45;method finalise: shift each loaded table&#39;s axes from CGS to code units and run the standard p..." alt="" coords="5,14,167,58"/>
-<area shape="rect" href="namespacemod__eos__lte__tables.html#a943db605bba68bcb3d991cea179446d4" title="Precompute constants for bypassing table lookups when gas is fully ionised. Physics: above T ~ 50 kK,..." alt="" coords="215,5,390,67"/>
-<area shape="poly" title=" " alt="" coords="167,34,202,36,196,36,167,39"/>
+<area shape="rect" title="Entropy&#45;method finalise: shift each loaded table&#39;s axes from CGS to code units and run the standard p..." alt="" coords="5,32,167,76"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="215,5,397,33"/>
+<area shape="poly" title=" " alt="" coords="166,39,202,35,197,37,168,44"/>
+<area shape="rect" href="namespacemod__eos__lte__tables.html#a943db605bba68bcb3d991cea179446d4" title="Precompute constants for bypassing table lookups when gas is fully ionised. Physics: above T ~ 50 kK,..." alt="" coords="218,58,394,119"/>
+<area shape="poly" title=" " alt="" coords="167,64,205,72,200,73,167,69"/>
 </map>
 </div>
 

@@ -1,0 +1,5 @@
+<map id="mod_rt_sc_solvers::rt_thermal_inflow" name="mod_rt_sc_solvers::rt_thermal_inflow">
+<area shape="rect" id="Node000001" title="Diffusion inflow of ray k at a thermal band end, written into the ghosts of the block copy iib...." alt="" coords="5,5,156,50"/>
+<area shape="rect" id="Node000002" href="$mod__rt__sc__solvers_8t.html#a508eac399c1cadf875a481f8c0e43ddb" title="Ghost rows iv_lo to iv_hi, with the gradient from the ghost row g1 next to the band to the one beyond..." alt="" coords="204,14,279,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,25,191,27,185,28,156,30"/>
+</map>

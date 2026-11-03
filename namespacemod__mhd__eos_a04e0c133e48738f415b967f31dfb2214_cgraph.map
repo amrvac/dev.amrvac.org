@@ -6,7 +6,7 @@
 <area shape="poly" id="edge2_Node000001_Node000007" title=" " alt="" coords="114,403,128,348,156,269,176,226,201,183,231,144,266,111,275,107,271,111,269,115,235,148,205,186,181,228,161,271,133,350,119,405"/>
 <area shape="rect" id="Node000009" href="$namespacemod__eos__lte.html#a6f13cf75af7de7e50bf276ccc566f901" title="eint/nH from (log10 nH, log10 T), from the inverse table when one is built and the Saha solve otherwi..." alt="" coords="299,125,460,170"/>
 <area shape="poly" id="edge3_Node000001_Node000009" title=" " alt="" coords="117,403,135,360,166,300,210,236,237,206,266,180,287,169,283,174,269,184,240,210,214,239,171,303,140,362,122,405"/>
-<area shape="rect" id="Node000011" href="$namespacemod__eos.html#a59e9f7d590dfe773b31963e7d8164ac0" title="The EoS hooks of the conduction fluid fl. sat_R_variable is false when R is the constant 1,..." alt="" coords="297,194,462,222"/>
+<area shape="rect" id="Node000011" href="$namespacemod__eos.html#ab246ffec70d4ee568287ac2b62066db6" title="The EoS hooks of the conduction fluid fl." alt="" coords="297,194,462,222"/>
 <area shape="poly" id="edge4_Node000001_Node000011" title=" " alt="" coords="119,403,140,367,172,320,215,272,266,231,284,224,280,228,269,235,219,276,177,324,144,370,124,405"/>
 <area shape="rect" id="Node000012" href="$namespacemod__eos__lte.html#aba25e77fd2560dad035795115a1da4b7" title="####################################################################### Table&#45;metadata helpers: expos..." alt="" coords="298,245,461,290"/>
 <area shape="poly" id="edge5_Node000001_Node000012" title=" " alt="" coords="127,403,185,353,225,325,266,300,285,293,281,297,269,305,228,329,189,357,131,406"/>

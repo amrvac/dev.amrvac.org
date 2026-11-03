@@ -1,5 +1,7 @@
 <map id="mod_eos_lte_entropy::finalise_entropy_lte" name="mod_eos_lte_entropy::finalise_entropy_lte">
-<area shape="rect" id="Node000001" title="Entropy&#45;method finalise: shift each loaded table&#39;s axes from CGS to code units and run the standard p..." alt="" coords="5,14,167,58"/>
-<area shape="rect" id="Node000002" href="$namespacemod__eos__lte__tables.html#a943db605bba68bcb3d991cea179446d4" title="Precompute constants for bypassing table lookups when gas is fully ionised. Physics: above T ~ 50 kK,..." alt="" coords="215,5,390,67"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,34,202,36,196,36,167,39"/>
+<area shape="rect" id="Node000001" title="Entropy&#45;method finalise: shift each loaded table&#39;s axes from CGS to code units and run the standard p..." alt="" coords="5,32,167,76"/>
+<area shape="rect" id="Node000002" href="$namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="215,5,397,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,39,202,35,197,37,168,44"/>
+<area shape="rect" id="Node000003" href="$namespacemod__eos__lte__tables.html#a943db605bba68bcb3d991cea179446d4" title="Precompute constants for bypassing table lookups when gas is fully ionised. Physics: above T ~ 50 kK,..." alt="" coords="218,58,394,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,64,205,72,200,73,167,69"/>
 </map>
