@@ -78,7 +78,7 @@ var searchData=
   ['special_5fmg_5fbc_75',['special_mg_bc',['../interfacemod__usr__methods_1_1special__mg__bc.html#a52eaef036bbad753965be235ffd0160f',1,'mod_usr_methods::special_mg_bc']]],
   ['special_5fopacity_76',['special_opacity',['../interfacemod__usr__methods_1_1special__opacity.html#a6e34498769535ccc0e4fa2a8b3fafecd',1,'mod_usr_methods::special_opacity']]],
   ['special_5fprepare_5fbc_77',['special_prepare_bc',['../interfacemod__usr__methods_1_1special__prepare__bc.html#a70e0caeaebdd8a38690d996aeb59efcf',1,'mod_usr_methods::special_prepare_bc']]],
-  ['special_5fresistivity_78',['special_resistivity',['../interfacemod__usr__methods_1_1special__resistivity.html#a4e9fa4b0fba07155259c88b4205cf793',1,'mod_usr_methods::special_resistivity']]],
+  ['special_5fresistivity_78',['special_resistivity',['../interfacemod__usr__methods_1_1special__resistivity.html#a047a8294910e352b50eb92284ca7ea01',1,'mod_usr_methods::special_resistivity']]],
   ['specialvar_5foutput23_79',['specialvar_output23',['../namespacemod__convert__files.html#ad5087b8b23a1987dc0535f126cc7544e',1,'mod_convert_files']]],
   ['sph_5fadd_5fphi_5fintersection_80',['sph_add_phi_intersection',['../namespacemod__thermal__emission.html#a655f9244a8d0075b4740020e57851ec4',1,'mod_thermal_emission']]],
   ['sph_5fadd_5fsphere_5fintersections_81',['sph_add_sphere_intersections',['../namespacemod__thermal__emission.html#af4c025a4709f07d021dc28733189114f',1,'mod_thermal_emission']]],
