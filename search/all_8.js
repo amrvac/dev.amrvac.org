@@ -89,7 +89,7 @@ var searchData=
   ['eq_5fenergy_5fki_86',['eq_energy_ki',['../namespacemod__twofl__phys.html#a3386d7a325007eec90db97181b5f9cf5',1,'mod_twofl_phys']]],
   ['eq_5fenergy_5fnone_87',['eq_energy_none',['../namespacemod__twofl__phys.html#a5a55edcabe88e4c6473ea540c9cbae57',1,'mod_twofl_phys']]],
   ['eq_5fenergy_5ftot_88',['eq_energy_tot',['../namespacemod__twofl__phys.html#ab4d3bfca73568c231b87b58467e2efae',1,'mod_twofl_phys']]],
-  ['equation_20and_20implementation_20map_89',['UAWSoM equation and implementation map',['../md_doc_2uawsom__equation__map.html',1,'']]],
+  ['equation_20and_20implementation_20map_89',['WHiSKi equation and implementation map',['../md_doc_2whiski__equation__map.html',1,'']]],
   ['equation_20of_20state_20in_20mpi_20amrvac_90',['Equation of state in MPI-AMRVAC',['../md_doc_2eos.html',1,'']]],
   ['equation_3a_20nonlinear_91',['Scalar Nonlinear Equation: nonlinear',['../md_doc_2equations.html#eq_nonlinear',1,'']]],
   ['equation_3a_20rho_92',['Transport Equation: rho',['../md_doc_2equations.html#eq_rho',1,'']]],

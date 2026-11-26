@@ -81,7 +81,7 @@ var searchData=
   ['imlo_5fh_78',['imlo_h',['../namespacemod__rt__sc__state.html#ae117de8fa34b378c3ca569030b5d23cf',1,'mod_rt_sc_state']]],
   ['imlo_5fv_79',['imlo_v',['../namespacemod__rt__sc__state.html#acf9466e968da21a5149d0e9bc91425ae',1,'mod_rt_sc_state']]],
   ['implementation_80',['implementation',['../md_doc_2eos.html#eos-implementation',1,'Numerics and implementation'],['../md_doc_2radiative__transfer.html#rt-implementation',1,'Numerics and implementation']]],
-  ['implementation_20map_81',['UAWSoM equation and implementation map',['../md_doc_2uawsom__equation__map.html',1,'']]],
+  ['implementation_20map_81',['WHiSKi equation and implementation map',['../md_doc_2whiski__equation__map.html',1,'']]],
   ['implosion_20test_20problem_3a_202d_20hd_20liska_20wendroff_82',['Implosion test problem: 2D HD Liska-Wendroff',['../md_tests_2hd_2implosion__2D_2implosion.html',1,'']]],
   ['implosion_2emd_83',['implosion.md',['../implosion_8md.html',1,'']]],
   ['improve_5finitial_5fcondition_84',['improve_initial_condition',['../namespacemod__initialize__amr.html#a0057789c0baf7737ff7d12f1c6a5ff65',1,'mod_initialize_amr']]],

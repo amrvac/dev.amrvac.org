@@ -6,7 +6,7 @@ var searchData=
   ['i_20m_20looking_20for_20a_20way_20to_20translate_20some_20blk_20files_20using_20convert_5ftype_20onegrid_20back_20into_20standard_20output_20dat_20that_20i_20can_20use_20to_20restart_20a_20simulation_20my_20goal_20is_20to_20be_20able_20to_20change_20my_20data_20mid_20simulation_20through_20another_20program_3',['I&apos;m looking for a way to translate some .blk files (using &lt;span class=&quot;tt&quot;&gt;convert_type= &apos;onegrid&apos;&lt;/span&gt;) back into standard output &lt;span class=&quot;tt&quot;&gt;.dat&lt;/span&gt; that I can use to restart a simulation. My goal is to be able to change my data mid-simulation through another program.',['../md_doc_2faq.html#faq-blk-to-dat',1,'']]],
   ['icarus_4',['icarus',['../md_tests_2mhd_2icarus_2icarus.html',1,'']]],
   ['implementation_5',['implementation',['../md_doc_2eos.html#eos-implementation',1,'Numerics and implementation'],['../md_doc_2radiative__transfer.html#rt-implementation',1,'Numerics and implementation']]],
-  ['implementation_20map_6',['UAWSoM equation and implementation map',['../md_doc_2uawsom__equation__map.html',1,'']]],
+  ['implementation_20map_6',['WHiSKi equation and implementation map',['../md_doc_2whiski__equation__map.html',1,'']]],
   ['implosion_20test_20problem_3a_202d_20hd_20liska_20wendroff_7',['Implosion test problem: 2D HD Liska-Wendroff',['../md_tests_2hd_2implosion__2D_2implosion.html',1,'']]],
   ['in_202d_8',['Test Rayleigh-Taylor Instability in 2D',['../md_tests_2hd_2Rayleigh__Taylor__2D_2rayleightaylor2d.html',1,'']]],
   ['in_20development_20planned_9',['Features currently in development/planned',['../md_doc_2yt__usage.html#features_todo',1,'']]],

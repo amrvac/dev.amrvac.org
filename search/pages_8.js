@@ -5,7 +5,7 @@ var searchData=
   ['emission_2',['Synthetic EUV/SXR/whitelight emission',['../md_doc_2par.html#par_emissionlist',1,'']]],
   ['energy_20to_20avoid_20negative_20pressure_3',['Solve internal or hydrodynamic energy to avoid negative pressure',['../md_doc_2par.html#par_AIE',1,'']]],
   ['entropycoef_4',['Typeentropy, entropycoef',['../md_doc_2par.html#par_typeentropy',1,'']]],
-  ['equation_20and_20implementation_20map_5',['UAWSoM equation and implementation map',['../md_doc_2uawsom__equation__map.html',1,'']]],
+  ['equation_20and_20implementation_20map_5',['WHiSKi equation and implementation map',['../md_doc_2whiski__equation__map.html',1,'']]],
   ['equation_20of_20state_20in_20mpi_20amrvac_6',['Equation of state in MPI-AMRVAC',['../md_doc_2eos.html',1,'']]],
   ['equation_3a_20nonlinear_7',['Scalar Nonlinear Equation: nonlinear',['../md_doc_2equations.html#eq_nonlinear',1,'']]],
   ['equation_3a_20rho_8',['Transport Equation: rho',['../md_doc_2equations.html#eq_rho',1,'']]],

@@ -51,7 +51,7 @@ var searchData=
   ['and_20electron_20density_48',['Cached temperature and electron density',['../md_doc_2eos.html#eos-cache',1,'']]],
   ['and_20equations_49',['Physics modules and equations',['../md_doc_2equations.html',1,'']]],
   ['and_20implementation_50',['and implementation',['../md_doc_2eos.html#eos-implementation',1,'Numerics and implementation'],['../md_doc_2radiative__transfer.html#rt-implementation',1,'Numerics and implementation']]],
-  ['and_20implementation_20map_51',['UAWSoM equation and implementation map',['../md_doc_2uawsom__equation__map.html',1,'']]],
+  ['and_20implementation_20map_51',['WHiSKi equation and implementation map',['../md_doc_2whiski__equation__map.html',1,'']]],
   ['and_20its_20documentation_52',['Contributing to MPI-AMRVAC and its documentation',['../md_doc_2contributing.html',1,'']]],
   ['and_20language_20features_53',['Standards and language features',['../md_doc_2code__style__guide.html#style-standard',1,'']]],
   ['and_20mesh_54',['Grid and Mesh',['../md_doc_2discretization.html#disc-grid',1,'']]],

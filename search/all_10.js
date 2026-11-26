@@ -31,7 +31,7 @@ var searchData=
   ['magnetohydrodynamics_3a_20mhd_28',['Magnetohydrodynamics: mhd',['../md_doc_2equations.html#eq_mhd',1,'']]],
   ['mailinglist_29',['Is there a mailinglist?',['../md_doc_2faq.html#faq-mailinglist',1,'']]],
   ['make_5fparticle_5ffilename_30',['make_particle_filename',['../namespacemod__particle__base.html#af1c6a0038ac3f58e52ee1938654b026f',1,'mod_particle_base']]],
-  ['map_31',['UAWSoM equation and implementation map',['../md_doc_2uawsom__equation__map.html',1,'']]],
+  ['map_31',['WHiSKi equation and implementation map',['../md_doc_2whiski__equation__map.html',1,'']]],
   ['map_5fbackward_5fendpoint_32',['map_backward_endpoint',['../structmod__trace__field_1_1trace__topology__result.html#a1b9467d08c01ca3e97662b3112cfb8c1',1,'mod_trace_field::trace_topology_result']]],
   ['map_5fbackward_5fface_33',['map_backward_face',['../structmod__trace__field_1_1trace__topology__result.html#a6a82faa16e50ebb55ca80d867c3b63dc',1,'mod_trace_field::trace_topology_result']]],
   ['map_5fbackward_5flength_34',['map_backward_length',['../structmod__trace__field_1_1trace__topology__result.html#a7bd1eba1940e836a1a2c177ba6af056a',1,'mod_trace_field::trace_topology_result']]],

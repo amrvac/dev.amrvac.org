@@ -7,7 +7,7 @@ var searchData=
   ['magnetic_20topology_20and_20qsl_20products_4',['Magnetic Topology and QSL Products',['../md_doc_2magnetic__topology__qsl.html',1,'']]],
   ['magnetohydrodynamics_3a_20mhd_5',['Magnetohydrodynamics: mhd',['../md_doc_2equations.html#eq_mhd',1,'']]],
   ['mailinglist_6',['Is there a mailinglist?',['../md_doc_2faq.html#faq-mailinglist',1,'']]],
-  ['map_7',['UAWSoM equation and implementation map',['../md_doc_2uawsom__equation__map.html',1,'']]],
+  ['map_7',['WHiSKi equation and implementation map',['../md_doc_2whiski__equation__map.html',1,'']]],
   ['markdown_20files_8',['Documentation in markdown files',['../md_doc_2documentation.html#doc-md',1,'']]],
   ['max_5fblocks_20domain_5fnx_20d_20block_5fnx_20d_20xprobmin_20d_20xprobmax_20d_9',['refine_max_level, max_blocks, domain_nx^D, block_nx^D, xprobmin^D, xprobmax^D',['../md_doc_2par.html#par_refine_max_level',1,'']]],
   ['meetings_10',['Meetings',['../md_doc_2meetings.html',1,'']]],
