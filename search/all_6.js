@@ -83,7 +83,7 @@ var searchData=
   ['circle_80',['circle',['../structmod__random_1_1rng__t.html#aecf3d582d667f283ed5fbb5c4b325609',1,'mod_random::rng_t']]],
   ['clean_5finitial_5fdivb_81',['clean_initial_divb',['../namespacemod__mf__phys.html#a3cbdde47fd036e1d6eab5619370dc80b',1,'mod_mf_phys::clean_initial_divb'],['../namespacemod__mhd__phys.html#a9a767541d6e7087b6c16778f08b93736',1,'mod_mhd_phys::clean_initial_divb'],['../namespacemod__twofl__phys.html#a09a4f8abb19c33c312cb76b8a342f5b2',1,'mod_twofl_phys::clean_initial_divb']]],
   ['closed_5ffieldlines_82',['closed_fieldlines',['../structmod__nlfff__grad__rubin_1_1nlfff__grad__rubin__result.html#a0d97b86bfa60775d8cc14adeda734a1c',1,'mod_nlfff_grad_rubin::nlfff_grad_rubin_result']]],
-  ['closures_83',['Perpendicular closures',['../md_doc_2thermal__conduction.html#tc-hyperbolic-closures',1,'']]],
+  ['closures_83',['closures',['../structmod__eos__container_1_1eos__container.html#a55f85d3e120bcfa4695d120181230400',1,'mod_eos_container::eos_container::closures'],['../md_doc_2thermal__conduction.html#tc-hyperbolic-closures',1,'Perpendicular closures']]],
   ['cm_84',['cm',['../structmod__eos__container_1_1eos__container.html#aa8c5f2753cf73e6b50e387443e7ae867',1,'mod_eos_container::eos_container']]],
   ['cmax_5fglobal_85',['cmax_global',['../namespacemod__global__parameters.html#a4f55f4cc1474cb823b2c12c32831d509',1,'mod_global_parameters::cmax_global'],['../namespacemod__magnetofriction.html#aeefa0b9e0497a416c1ca73d476e2adb3',1,'mod_magnetofriction::cmax_global']]],
   ['cmax_5fmype_86',['cmax_mype',['../namespacemod__magnetofriction.html#aa9753da5d3df3e3ef9b02ae3cd0bb2d4',1,'mod_magnetofriction']]],

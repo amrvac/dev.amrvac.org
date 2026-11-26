@@ -1,0 +1,8 @@
+<map id="mod_thermal_conduction::tc_get_mhd_params" name="mod_thermal_conduction::tc_get_mhd_params">
+<area shape="rect" id="Node000001" title="Init TC coefficients: MHD case." alt="" coords="5,52,192,97"/>
+<area shape="rect" id="Node000002" href="$namespacemod__thermal__conduction.html#a758d51cef97a867c4d11ccde3747dd73" title="Saturated flux factor. q_sat = 5 phi rho c**3 (Cowie &amp; McKee 1977 eq 8), c**2 = xt kT/m_p with xt the..." alt="" coords="240,5,426,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,53,227,48,222,50,193,58"/>
+<area shape="rect" id="Node000003" href="$namespacemod__thermal__conduction.html#a4f8655b3a5e11ddc17fc7ce183d7c632" title="Spitzer conductivity coefficient parallel to the field, in code units." alt="" coords="240,99,426,143"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,90,227,99,222,100,192,96"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="289,97,287,89,294,80,310,74,333,72,358,75,375,84,370,83,357,80,333,77,311,79,297,84,292,90,293,100"/>
+</map>

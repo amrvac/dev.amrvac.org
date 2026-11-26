@@ -108,6 +108,10 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:a8c9c30e2196550623da28cc61d017793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init TC coefficients: MHD case.  <br /></td></tr>
 <tr class="memitem:a06712e83dc81e2953a38bee9f3109661" id="r_a06712e83dc81e2953a38bee9f3109661"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06712e83dc81e2953a38bee9f3109661">tc_get_hd_params</a> (fl, read_hd_params)</td></tr>
 <tr class="memdesc:a06712e83dc81e2953a38bee9f3109661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init TC coefficients: HD case.  <br /></td></tr>
+<tr class="memitem:a4f8655b3a5e11ddc17fc7ce183d7c632" id="r_a4f8655b3a5e11ddc17fc7ce183d7c632"><td class="memItemLeft" align="right" valign="top">double precision function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f8655b3a5e11ddc17fc7ce183d7c632">tc_spitzer_k_para</a> ()</td></tr>
+<tr class="memdesc:a4f8655b3a5e11ddc17fc7ce183d7c632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spitzer conductivity coefficient parallel to the field, in code units.  <br /></td></tr>
+<tr class="memitem:a758d51cef97a867c4d11ccde3747dd73" id="r_a758d51cef97a867c4d11ccde3747dd73"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a758d51cef97a867c4d11ccde3747dd73">tc_set_saturation</a> (fl, report)</td></tr>
+<tr class="memdesc:a758d51cef97a867c4d11ccde3747dd73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saturated flux factor. q_sat = 5 phi rho c**3 (Cowie &amp; McKee 1977 eq 8), c**2 = xt kT/m_p with xt the fully ionised particles per proton mass. Per face rho = (rho_A+rho_B)/2, so the factor is 2.5 phi. FI/PI code T is xt kT/m_p, so T**1.5 is c**3. LTE code T is kT/m_p, so c**3 = xt**1.5 T**1.5, and tc_sat_rho scales rho by the local over the fully ionised ne/nH. Their eq 7, 0.4 (2kT/pi m_e)^(1/2) ne kT, is phi = 0.4 sqrt(2/pi) sqrt(m_p/m_e) xe/(5 xt**1.5), xe the fully ionised electrons per proton mass. Unset tc_sat_coef gives phi = 0.3 for FI/PI and eq 7 for LTE, which with the local ne is self-consistent; a set tc_sat_coef is phi for all.  <br /></td></tr>
 <tr class="memitem:a17b4756aab5213e0be7b3525ebcb4785" id="r_a17b4756aab5213e0be7b3525ebcb4785"><td class="memItemLeft" align="right" valign="top">double precision function, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17b4756aab5213e0be7b3525ebcb4785">get_tc_dt_mhd</a> (w, ixil, ixol, dxd, x, fl)</td></tr>
 <tr class="memdesc:a17b4756aab5213e0be7b3525ebcb4785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the explicit timestep for the TC (mhd implementation) Note: for multi-D MHD (1D MHD will use HD fall-back).  <br /></td></tr>
 <tr class="memitem:a591ee12c87621f338cc65935a9c5fa20" id="r_a591ee12c87621f338cc65935a9c5fa20"><td class="memItemLeft" align="right" valign="top">subroutine, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a591ee12c87621f338cc65935a9c5fa20">sts_set_source_tc_mhd</a> (ixil, ixol, w, x, wres, fix_conserve_at_step, my_dt, igrid, nflux, fl)</td></tr>
@@ -147,7 +151,7 @@ Variables</h2></td></tr>
 <p>PURPOSE: IN MHD ADD THE HEAT CONDUCTION SOURCE TO THE ENERGY EQUATION S=DIV(KAPPA_i,j . GRAD_j T) where KAPPA_i,j = tc_k_para b_i b_j + tc_k_perp (I - b_i b_j) b_i b_j = B_i B_j / B**2, I is the unit matrix, and i, j= 1, 2, 3 for 3D IN HD ADD THE HEAT CONDUCTION SOURCE TO THE ENERGY EQUATION S=DIV(tc_k_para . GRAD T) USAGE:</p><ol type="1">
 <li>in mod_usr.t -&gt; subroutine usr_init(), add unit_length=your length unit unit_numberdensity=your number density unit unit_velocity=your velocity unit unit_temperature=your temperature unit before call (m)hd_activate()</li>
 <li>to switch on thermal conduction in the (r)(m)hd_list of amrvac.par add: (r)(m)hd_thermal_conduction=.true.</li>
-<li>in the tc_list of amrvac.par : tc_perpendicular=.true. ! (default .false.) turn on thermal conduction perpendicular to magnetic field tc_saturate=.true. ! (default .false. ) turn on thermal conduction saturate effect tc_slope_limiter='MC' ! choose limiter for slope-limited anisotropic thermal conduction in MHD note: twofl_list incorporates instances for charges and neutrals </li>
+<li>in the tc_list of amrvac.par : tc_perpendicular=.true. ! (default .false.) turn on thermal conduction perpendicular to magnetic field tc_saturate=.true. ! (default .false. ) turn on thermal conduction saturate effect tc_sat_coef=1.1 ! phi in the saturated flux 5 phi rho c**3, Cowie &amp; McKee (1977). Unset: 0.3 for ! FI/PI; for LTE their eq 7 with the local ne (0.97 pure H, 1.11 He/H 0.1) tc_slope_limiter='MC' ! choose limiter for slope-limited anisotropic thermal conduction in MHD note: twofl_list incorporates instances for charges and neutrals </li>
 </ol>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function/Subroutine Documentation</h2>
 <a id="a209af8dfb2abc0762cdfa89e6f840c80" name="a209af8dfb2abc0762cdfa89e6f840c80"></a>
@@ -206,7 +210,7 @@ Variables</h2></td></tr>
 
 <p>Get the explicit timestep for the TC (hd implementation) Note: also used in 1D MHD (or for neutrals in twofl). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01432">1432</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01470">1470</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -266,7 +270,7 @@ Variables</h2></td></tr>
 
 <p>Get the explicit timestep for the TC (mhd implementation) Note: for multi-D MHD (1D MHD will use HD fall-back). </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00252">252</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00292">292</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -339,7 +343,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01675">1675</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01713">1713</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -412,7 +416,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01826">1826</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01863">1863</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -490,7 +494,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00432">432</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00472">472</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -570,7 +574,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00898">898</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00937">937</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -635,7 +639,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01390">1390</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01428">1428</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -708,7 +712,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01602">1602</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01640">1640</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -797,7 +801,7 @@ Here is the call graph for this function:</div>
 
 <p>anisotropic thermal conduction with slope limited symmetric scheme Sharma 2007 Journal of Computational Physics 227, 123 </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00350">350</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00390">390</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -876,7 +880,7 @@ Here is the call graph for this function:</div>
 
 <p>Face fluxes for the HD STS source, uniform or general geometry. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01571">1571</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01609">1609</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -958,7 +962,7 @@ Here is the call graph for this function:</div>
 
 <p>Face fluxes for the MHD STS source, uniform or general geometry. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01587">1587</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01625">1625</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1015,7 +1019,7 @@ Here is the call graph for this function:</div>
 
 <p>Anchor of the frozen-ionisation conduction step for block igrid, on the step-start state (internal energy in w(:,e_)): T from the full EoS, the energy, and the inverse frozen-composition heat capacity with R from the cached ionisation. Within the step T = T0 + (e - e0)/(R rho/(gamma-1)), exact where the gas is fully ionised or neutral. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01553">1553</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01591">1591</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -1041,7 +1045,20 @@ Here is the call graph for this function:</div>
 <p>Init TC coefficients: HD case. </p>
 <p>Read tc parameters from par file: HD case</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00216">216</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00220">220</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__thermal__conduction_a06712e83dc81e2953a38bee9f3109661_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a06712e83dc81e2953a38bee9f3109661_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_a06712e83dc81e2953a38bee9f3109661_cgraph" id="anamespacemod__thermal__conduction_a06712e83dc81e2953a38bee9f3109661_cgraph">
+<area shape="rect" title="Init TC coefficients: HD case." alt="" coords="5,52,192,97"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a758d51cef97a867c4d11ccde3747dd73" title="Saturated flux factor. q_sat = 5 phi rho c**3 (Cowie &amp; McKee 1977 eq 8), c**2 = xt kT/m_p with xt the..." alt="" coords="240,5,426,50"/>
+<area shape="poly" title=" " alt="" coords="191,53,227,48,222,50,193,58"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a4f8655b3a5e11ddc17fc7ce183d7c632" title="Spitzer conductivity coefficient parallel to the field, in code units." alt="" coords="240,99,426,143"/>
+<area shape="poly" title=" " alt="" coords="192,90,227,99,222,100,192,96"/>
+<area shape="poly" title=" " alt="" coords="289,97,287,89,294,80,310,74,333,72,358,75,375,84,370,83,357,80,333,77,311,79,297,84,292,90,293,100"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1067,7 +1084,20 @@ Here is the call graph for this function:</div>
 <p>Init TC coefficients: MHD case. </p>
 <p>Read tc module parameters from par file: MHD case</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00175">175</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00182">182</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__thermal__conduction_a8c9c30e2196550623da28cc61d017793_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a8c9c30e2196550623da28cc61d017793_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_a8c9c30e2196550623da28cc61d017793_cgraph" id="anamespacemod__thermal__conduction_a8c9c30e2196550623da28cc61d017793_cgraph">
+<area shape="rect" title="Init TC coefficients: MHD case." alt="" coords="5,52,192,97"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a758d51cef97a867c4d11ccde3747dd73" title="Saturated flux factor. q_sat = 5 phi rho c**3 (Cowie &amp; McKee 1977 eq 8), c**2 = xt kT/m_p with xt the..." alt="" coords="240,5,426,50"/>
+<area shape="poly" title=" " alt="" coords="191,53,227,48,222,50,193,58"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a4f8655b3a5e11ddc17fc7ce183d7c632" title="Spitzer conductivity coefficient parallel to the field, in code units." alt="" coords="240,99,426,143"/>
+<area shape="poly" title=" " alt="" coords="192,90,227,99,222,100,192,96"/>
+<area shape="poly" title=" " alt="" coords="289,97,287,89,294,80,310,74,333,72,358,75,375,84,370,83,357,80,333,77,311,79,297,84,292,90,293,100"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1117,7 +1147,7 @@ Here is the call graph for this function:</div>
 
 <p>Te over the block (+ghosts): the frozen-ionisation map within a conduction step with frozen_ion, else the full EoS with the optional negative-eint repair. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01519">1519</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01557">1557</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1148,7 +1178,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00167">167</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00174">174</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -1208,7 +1238,7 @@ Here is the call graph for this function:</div>
 
 <p>Patch cells where e_int &lt;= 0 by neighbor-averaging the temperature AND repairing the conserved internal energy w(:, ie) in place. Called after get_temperature_from_eint in the TC source routines when tc_patch_eint is .true. During STS RKL2 Chebyshev substeps the polynomial can overshoot e_int to negative values at low-density coronal cells. A negative T would produce NaN via sqrt(T) in the Spitzer conductivity. This routine replaces those cells' T with the average of valid (e_int &gt; 0) neighbors and writes the matching e_int back to w(ix, ie) via the EoS inverse helper eint_nH_from_T, so the next STS substep does not re-read negative w and amplify it. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l02007">2007</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l02043">2043</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1268,7 +1298,65 @@ Here is the call graph for this function:</div>
 
 <p>rho in the saturated flux: under LTE scaled by the local over the fully ionised ne/nH </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01501">1501</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l01539">1539</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="a758d51cef97a867c4d11ccde3747dd73" name="a758d51cef97a867c4d11ccde3747dd73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a758d51cef97a867c4d11ccde3747dd73">&#9670;&#160;</a></span>tc_set_saturation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine, public mod_thermal_conduction::tc_set_saturation </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structmod__thermal__conduction_1_1tc__fluid.html">tc_fluid</a>), intent(inout)</td>          <td class="paramname"><span class="paramname"><em>fl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">logical, intent(in)</td>          <td class="paramname"><span class="paramname"><em>report</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saturated flux factor. q_sat = 5 phi rho c**3 (Cowie &amp; McKee 1977 eq 8), c**2 = xt kT/m_p with xt the fully ionised particles per proton mass. Per face rho = (rho_A+rho_B)/2, so the factor is 2.5 phi. FI/PI code T is xt kT/m_p, so T**1.5 is c**3. LTE code T is kT/m_p, so c**3 = xt**1.5 T**1.5, and tc_sat_rho scales rho by the local over the fully ionised ne/nH. Their eq 7, 0.4 (2kT/pi m_e)^(1/2) ne kT, is phi = 0.4 sqrt(2/pi) sqrt(m_p/m_e) xe/(5 xt**1.5), xe the fully ionised electrons per proton mass. Unset tc_sat_coef gives phi = 0.3 for FI/PI and eq 7 for LTE, which with the local ne is self-consistent; a set tc_sat_coef is phi for all. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">report</td><td>print phi once the EoS has set the composition </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00266">266</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+
+</div>
+</div>
+<a id="a4f8655b3a5e11ddc17fc7ce183d7c632" name="a4f8655b3a5e11ddc17fc7ce183d7c632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f8655b3a5e11ddc17fc7ce183d7c632">&#9670;&#160;</a></span>tc_spitzer_k_para()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double precision function mod_thermal_conduction::tc_spitzer_k_para</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Spitzer conductivity coefficient parallel to the field, in code units. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00250">250</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemod__thermal__conduction_a4f8655b3a5e11ddc17fc7ce183d7c632_cgraph.png" border="0" usemap="#anamespacemod__thermal__conduction_a4f8655b3a5e11ddc17fc7ce183d7c632_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacemod__thermal__conduction_a4f8655b3a5e11ddc17fc7ce183d7c632_cgraph" id="anamespacemod__thermal__conduction_a4f8655b3a5e11ddc17fc7ce183d7c632_cgraph">
+<area shape="rect" title="Spitzer conductivity coefficient parallel to the field, in code units." alt="" coords="5,29,192,74"/>
+<area shape="poly" title=" " alt="" coords="62,28,61,19,67,10,80,5,99,3,118,5,132,14,127,14,117,10,98,8,81,10,71,15,66,21,68,30"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1285,7 +1373,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00163">163</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00170">170</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>
@@ -1303,7 +1391,7 @@ Here is the call graph for this function:</div>
 
 <p>The adiabatic index. </p>
 
-<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00052">52</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__thermal__conduction_8t_source.html#l00054">54</a> of file <a class="el" href="mod__thermal__conduction_8t_source.html">mod_thermal_conduction.t</a>.</p>
 
 </div>
 </div>

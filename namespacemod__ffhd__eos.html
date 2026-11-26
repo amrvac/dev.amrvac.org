@@ -115,60 +115,62 @@ Functions/Subroutines</h2></td></tr>
 <p>PI energy-mode overrides (eos_type='PI', ionE=.true.). Energy mode differs from no-energy PI only in the eint&lt;-&gt;p relation (eint carries the ionisation energy), so override exactly the routines touching it, all via the portable <a class="el" href="namespacemod__eos__pi.html" title="PI (partial-ionisation, eos_type=&#39;PI&#39;) arm of the eos% family.">mod_eos_pi</a> backend. get_Rfactor stays the Te_-addressed routine above (Te_ refreshed each step by ffhd_update_temperature_PI).</p>
 <p>eosget_csound2 =&gt; get_csound2_PI set in eos_finalise_PI (private target)</p>
 
-<p class="definition">Definition at line <a class="el" href="mod__ffhd__eos_8t_source.html#l00043">43</a> of file <a class="el" href="mod__ffhd__eos_8t_source.html">mod_ffhd_eos.t</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mod__ffhd__eos_8t_source.html#l00044">44</a> of file <a class="el" href="mod__ffhd__eos_8t_source.html">mod_ffhd_eos.t</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemod__ffhd__eos_a1f1ff64d857d7bf69ad107612b339978_cgraph.png" border="0" usemap="#anamespacemod__ffhd__eos_a1f1ff64d857d7bf69ad107612b339978_cgraph" loading="lazy" alt=""/></div>
 <map name="anamespacemod__ffhd__eos_a1f1ff64d857d7bf69ad107612b339978_cgraph" id="anamespacemod__ffhd__eos_a1f1ff64d857d7bf69ad107612b339978_cgraph">
-<area shape="rect" title="Link the appropriate EoS conversion/closure routines per eos_type. Called from ffhd_activate after ff..." alt="" coords="5,731,151,775"/>
-<area shape="rect" href="namespacemod__radiative__cooling.html#a6734611e0cdf1279b4fb32cb3322dbaa" title="===================================================================" alt="" coords="220,5,390,50"/>
-<area shape="poly" title=" " alt="" coords="78,730,85,595,105,395,120,291,140,195,166,115,180,84,197,61,208,52,206,57,201,64,185,87,171,117,146,196,126,292,110,395,91,596,83,731"/>
-<area shape="rect" href="namespacemod__eos__pi.html#a6db481882d7d8de88ef604b90d828c4d" title="Internal energy per H from temperature: eint/nH(T)." alt="" coords="204,74,406,102"/>
-<area shape="poly" title=" " alt="" coords="78,730,86,603,106,417,122,321,142,233,166,161,181,133,197,111,202,109,199,113,201,115,185,135,171,163,147,234,127,322,111,418,91,603,83,730"/>
-<area shape="rect" href="namespacemod__eos__lte.html#a6f13cf75af7de7e50bf276ccc566f901" title="eint/nH from (log10 nH, log10 T), from the inverse table when one is built and the Saha solve otherwi..." alt="" coords="225,125,385,170"/>
-<area shape="poly" title=" " alt="" coords="78,730,90,616,112,452,128,367,147,289,170,225,197,181,212,169,210,174,201,184,175,227,152,291,133,368,117,453,95,617,84,731"/>
-<area shape="rect" href="namespacemod__eos.html#ab246ffec70d4ee568287ac2b62066db6" title="The EoS hooks of the conduction fluid fl." alt="" coords="222,194,388,222"/>
-<area shape="poly" title=" " alt="" coords="79,730,91,625,114,475,130,398,149,328,171,270,197,231,210,222,207,227,201,235,176,273,154,330,135,399,119,476,96,625,84,731"/>
-<area shape="rect" href="namespacemod__eos__lte.html#aba25e77fd2560dad035795115a1da4b7" title="####################################################################### Table&#45;metadata helpers: expos..." alt="" coords="223,245,386,290"/>
-<area shape="poly" title=" " alt="" coords="76,730,77,650,82,596,91,536,105,473,127,411,157,352,197,301,211,290,209,295,201,304,162,355,132,413,111,475,96,537,87,596,82,651,81,730"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#afe11ff52a2c462a09c3378a75168098e" title=" " alt="" coords="228,315,382,359"/>
-<area shape="poly" title=" " alt="" coords="77,730,82,661,99,565,114,512,135,461,162,413,197,370,216,357,213,361,201,374,167,416,140,463,119,514,104,566,87,661,82,730"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#ad3418da655c172d48c6fe1c71919ee4b" title=" " alt="" coords="228,384,382,429"/>
-<area shape="poly" title=" " alt="" coords="79,730,88,672,108,594,123,552,143,511,167,473,197,439,216,427,213,432,200,443,171,476,147,514,128,554,113,596,93,673,84,730"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#a862a2a1806189befd54c964bcec30b96" title=" " alt="" coords="228,453,382,498"/>
-<area shape="poly" title=" " alt="" coords="82,730,95,684,117,624,151,562,172,534,197,508,216,497,213,501,200,512,176,537,155,565,122,626,100,685,87,731"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#a93d78d561f925daa0c3acd5b2291657f" title="Internal energy eint = E_total &#45; E_kinetic (single field&#45;aligned momentum). Wired to phys_get_ei; the..." alt="" coords="228,523,382,567"/>
-<area shape="poly" title=" " alt="" coords="86,730,103,696,128,655,159,613,197,578,216,568,212,572,200,582,163,617,132,658,108,698,92,731"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#aac7e728108a4cb6bc38b618c04212b78" title=" " alt="" coords="225,592,384,637"/>
-<area shape="poly" title=" " alt="" coords="98,729,142,687,197,647,213,640,209,645,200,651,145,691,102,731"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#a70b3e9c22d7ec05675ca8daf8df05d43" title=" " alt="" coords="201,661,409,706"/>
-<area shape="poly" title=" " alt="" coords="149,729,216,709,213,713,153,733"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#ac1c14f1303b05252143fa1bf824c78cb" title=" " alt="" coords="207,731,402,775"/>
-<area shape="poly" title=" " alt="" coords="149,751,194,751,190,755,152,755"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#acb02b7dc1f4371392e692f5d1f5d1bcb" title=" " alt="" coords="225,800,384,845"/>
-<area shape="poly" title=" " alt="" coords="150,773,217,793,212,796,152,778"/>
-<area shape="rect" href="namespacemod__ffhd__phys.html#a0df81abb798f9764287898e385529c93" title=" " alt="" coords="228,869,382,914"/>
-<area shape="poly" title=" " alt="" coords="99,773,145,815,200,855,217,864,212,866,197,859,142,819,101,778"/>
-<area shape="rect" href="namespacemod__eos__pi.html#abebe95a10a89427265c7a3b274a226c8" title="Effective Gamma1 = cs2 * rho / p for the same primitive state." alt="" coords="199,938,411,966"/>
-<area shape="poly" title=" " alt="" coords="88,773,107,808,131,849,162,890,200,924,209,930,204,932,197,928,158,894,126,852,102,811,89,778"/>
-<area shape="rect" href="namespacemod__eos__lte.html#a24be814feadbac7910239751937805f8" title="LTE internal energy from pressure in one cell: FI bypass, else eint(nH, p)." alt="" coords="224,989,386,1034"/>
-<area shape="poly" title=" " alt="" coords="85,773,102,817,125,871,157,927,177,953,200,975,213,985,208,986,197,979,173,956,153,930,120,874,97,819,85,778"/>
-<area shape="rect" href="namespacemod__eos__lte.html#a4a9da8961173fdb2bd397004a5c543ce" title="Ratio eint/p from (log10 nH, log10 p/nH)." alt="" coords="459,1020,612,1065"/>
-<area shape="poly" title=" " alt="" coords="81,773,90,833,109,908,124,947,144,984,169,1017,200,1044,228,1060,259,1070,323,1079,388,1076,450,1067,445,1070,388,1082,323,1085,257,1075,226,1064,197,1049,165,1021,139,987,119,949,104,910,85,834,80,778"/>
-<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="214,1108,396,1136"/>
-<area shape="poly" title=" " alt="" coords="81,773,90,837,109,921,124,967,144,1011,169,1052,200,1088,215,1100,210,1102,197,1092,165,1055,139,1013,119,969,104,923,85,838,81,778"/>
-<area shape="rect" href="namespacemod__eos__pi.html#a2e629488e9eaf056d980f8e1ff2c3a7d" title="eint/p factor from pressure per H: maps p &#45;&gt; eint = p * (this)." alt="" coords="221,1160,388,1188"/>
-<area shape="poly" title=" " alt="" coords="79,773,85,847,101,947,115,1001,136,1054,164,1103,201,1146,210,1154,205,1155,197,1150,160,1106,132,1056,110,1003,95,948,80,848,79,778"/>
-<area shape="rect" href="namespacemod__eos__pi.html#ad9ef13a12258d8519ad41bc7b3b9a540" title="Temperature from internal energy per H." alt="" coords="230,1212,380,1257"/>
-<area shape="poly" title=" " alt="" coords="79,773,83,855,87,908,96,967,111,1029,132,1090,162,1147,201,1198,218,1213,213,1214,197,1202,157,1150,128,1092,106,1030,91,968,82,909,77,855,78,778"/>
-<area shape="rect" href="namespacemod__eos__lte.html#ad1e325f142fa31bedb6a09fc519d7061" title="Temperature from (log10 nH, log10 eint/nH)." alt="" coords="227,1281,382,1326"/>
-<area shape="poly" title=" " alt="" coords="82,773,97,880,121,1027,137,1103,155,1172,177,1229,201,1267,216,1281,211,1282,197,1271,172,1231,150,1174,132,1104,115,1028,92,880,82,778"/>
-<area shape="rect" href="namespacemod__eos__pi.html#a9630051643d79b0e600206bafcf801aa" title="Electron&#45;to&#45;hydrogen ratio ne/nH from internal energy per H. ne/nH = iz_H + A_He*iz_He*(1+iz_He) (mat..." alt="" coords="228,1351,382,1395"/>
-<area shape="poly" title=" " alt="" coords="81,773,94,892,116,1060,132,1147,151,1227,174,1292,187,1317,201,1337,217,1352,212,1352,197,1340,182,1320,169,1294,146,1228,127,1148,111,1061,89,892,81,778"/>
-<area shape="rect" href="namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="Scalar EoS kernels: one cell on (log10 nH, log10 eint/nH) or (log10 nH, log10 p/nH),..." alt="" coords="226,1420,384,1465"/>
-<area shape="poly" title=" " alt="" coords="81,773,92,905,112,1094,128,1192,148,1282,172,1356,186,1384,201,1406,215,1420,210,1419,197,1409,181,1387,167,1358,142,1283,123,1193,107,1095,87,905,80,779"/>
-<area shape="poly" title=" " alt="" coords="385,1020,446,1029,441,1031,387,1025"/>
+<area shape="rect" title="Link the appropriate EoS conversion/closure routines per eos_type. Called from ffhd_activate after ff..." alt="" coords="5,784,151,829"/>
+<area shape="rect" href="namespacemod__radiative__cooling.html#a6734611e0cdf1279b4fb32cb3322dbaa" title="===================================================================" alt="" coords="225,5,394,50"/>
+<area shape="poly" title=" " alt="" coords="77,783,83,639,102,422,117,310,137,206,163,120,179,86,197,61,213,49,210,53,201,64,184,89,168,122,142,207,122,310,107,423,89,639,83,784"/>
+<area shape="rect" href="namespacemod__eos__pi.html#a6db481882d7d8de88ef604b90d828c4d" title="Internal energy per H from temperature: eint/nH(T)." alt="" coords="209,74,410,102"/>
+<area shape="poly" title=" " alt="" coords="77,783,84,647,103,445,118,340,138,244,164,165,180,134,197,111,201,109,199,114,201,115,184,137,169,167,143,245,123,341,108,445,89,647,83,784"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a6f13cf75af7de7e50bf276ccc566f901" title="eint/nH from (log10 nH, log10 T), from the inverse table when one is built and the Saha solve otherwi..." alt="" coords="229,125,390,170"/>
+<area shape="poly" title=" " alt="" coords="78,783,88,660,109,479,124,386,144,300,168,229,182,202,197,181,217,166,214,171,201,184,186,205,173,232,149,302,130,387,114,480,93,660,83,784"/>
+<area shape="rect" href="namespacemod__eos__lte.html#aba25e77fd2560dad035795115a1da4b7" title="####################################################################### Table&#45;metadata helpers: expos..." alt="" coords="228,195,391,239"/>
+<area shape="poly" title=" " alt="" coords="79,784,90,672,113,513,129,430,148,355,170,293,197,250,216,236,213,241,201,253,175,295,153,357,134,432,118,513,95,673,84,784"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#afe11ff52a2c462a09c3378a75168098e" title=" " alt="" coords="233,264,386,309"/>
+<area shape="poly" title=" " alt="" coords="79,783,93,684,117,546,133,475,152,410,173,356,197,319,220,303,217,308,201,323,178,359,157,411,138,476,122,547,98,685,85,784"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#ad3418da655c172d48c6fe1c71919ee4b" title=" " alt="" coords="233,333,386,378"/>
+<area shape="poly" title=" " alt="" coords="76,784,79,709,94,604,109,546,131,489,159,436,197,388,220,373,217,378,201,392,164,439,135,491,114,548,100,605,85,710,82,784"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#a862a2a1806189befd54c964bcec30b96" title=" " alt="" coords="233,403,386,447"/>
+<area shape="poly" title=" " alt="" coords="78,783,85,720,103,633,118,586,139,539,164,496,197,458,220,443,217,447,200,462,169,499,143,542,123,588,108,634,90,721,83,784"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#a93d78d561f925daa0c3acd5b2291657f" title="Internal energy eint = E_total &#45; E_kinetic (single field&#45;aligned momentum). Wired to phys_get_ei; the..." alt="" coords="233,472,386,517"/>
+<area shape="poly" title=" " alt="" coords="80,783,91,731,112,662,146,590,169,556,197,527,220,513,217,517,200,531,174,560,151,593,117,664,96,732,85,784"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#aac7e728108a4cb6bc38b618c04212b78" title=" " alt="" coords="230,541,389,586"/>
+<area shape="poly" title=" " alt="" coords="84,783,98,743,122,693,154,641,175,617,197,596,217,585,214,589,200,600,178,621,159,644,126,695,103,745,89,785"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#a70b3e9c22d7ec05675ca8daf8df05d43" title=" " alt="" coords="205,611,414,655"/>
+<area shape="poly" title=" " alt="" coords="91,783,134,724,163,693,197,665,208,660,205,665,200,670,167,697,138,728,95,785"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#ac1c14f1303b05252143fa1bf824c78cb" title=" " alt="" coords="212,680,407,725"/>
+<area shape="poly" title=" " alt="" coords="112,782,152,757,198,735,216,729,213,733,200,739,155,762,116,785"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#acb02b7dc1f4371392e692f5d1f5d1bcb" title=" " alt="" coords="230,749,389,794"/>
+<area shape="poly" title=" " alt="" coords="149,793,216,784,212,788,153,798"/>
+<area shape="rect" href="namespacemod__ffhd__phys.html#a0df81abb798f9764287898e385529c93" title=" " alt="" coords="233,819,386,863"/>
+<area shape="poly" title=" " alt="" coords="150,815,219,826,215,829,152,820"/>
+<area shape="rect" href="namespacemod__eos__pi.html#abebe95a10a89427265c7a3b274a226c8" title="Effective Gamma1 = cs2 * rho / p for the same primitive state." alt="" coords="203,887,416,915"/>
+<area shape="poly" title=" " alt="" coords="111,827,154,851,200,873,220,881,216,884,198,878,151,856,113,832"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a7eb2db76bedf9e4a2749ac95f164028c" title=" " alt="" coords="199,939,420,983"/>
+<area shape="poly" title=" " alt="" coords="96,826,141,876,169,902,200,924,211,931,206,933,197,929,166,906,137,880,97,832"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a24be814feadbac7910239751937805f8" title="LTE internal energy from pressure in one cell: FI bypass, else eint(nH, p)." alt="" coords="229,1008,390,1053"/>
+<area shape="poly" title=" " alt="" coords="87,827,106,865,129,909,161,955,200,994,217,1005,212,1007,197,998,157,958,125,912,101,867,88,832"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a4a9da8961173fdb2bd397004a5c543ce" title="Ratio eint/p from (log10 nH, log10 p/nH)." alt="" coords="468,1039,621,1083"/>
+<area shape="poly" title=" " alt="" coords="82,827,94,880,114,946,129,979,148,1011,172,1040,200,1063,229,1078,261,1089,327,1098,393,1095,456,1086,451,1089,393,1100,327,1103,259,1094,227,1083,197,1067,168,1044,144,1014,124,982,109,948,89,881,82,832"/>
+<area shape="rect" href="namespacemod__comm__lib.html#a9b6f1a8fd13bc5670e3b426151c34048" title="Exit MPI&#45;AMRVAC with an error message." alt="" coords="218,1127,400,1155"/>
+<area shape="poly" title=" " alt="" coords="82,826,93,885,113,960,128,1000,148,1039,172,1075,200,1107,216,1119,211,1121,197,1111,167,1079,143,1042,124,1002,108,962,88,886,82,832"/>
+<area shape="rect" href="namespacemod__eos__pi.html#a2e629488e9eaf056d980f8e1ff2c3a7d" title="eint/p factor from pressure per H: maps p &#45;&gt; eint = p * (this)." alt="" coords="226,1179,393,1207"/>
+<area shape="poly" title=" " alt="" coords="80,827,88,895,105,986,120,1035,140,1082,167,1126,200,1164,214,1175,209,1177,197,1168,163,1129,135,1085,115,1037,100,987,82,896,80,832"/>
+<area shape="rect" href="namespacemod__eos__pi.html#ad9ef13a12258d8519ad41bc7b3b9a540" title="Temperature from internal energy per H." alt="" coords="234,1231,384,1275"/>
+<area shape="poly" title=" " alt="" coords="79,826,85,903,100,1007,115,1063,136,1119,164,1171,201,1216,223,1233,217,1235,197,1220,160,1174,131,1121,110,1065,95,1008,80,903,79,832"/>
+<area shape="rect" href="namespacemod__eos__lte.html#ad1e325f142fa31bedb6a09fc519d7061" title="Temperature from (log10 nH, log10 eint/nH)." alt="" coords="232,1300,387,1345"/>
+<area shape="poly" title=" " alt="" coords="82,827,98,927,123,1065,139,1134,157,1198,178,1251,201,1286,220,1302,215,1303,197,1289,173,1253,152,1200,134,1136,118,1066,93,928,82,832"/>
+<area shape="rect" href="namespacemod__thermal__conduction.html#a758d51cef97a867c4d11ccde3747dd73" title="Saturated flux factor. q_sat = 5 phi rho c**3 (Cowie &amp; McKee 1977 eq 8), c**2 = xt kT/m_p with xt the..." alt="" coords="216,1369,402,1414"/>
+<area shape="poly" title=" " alt="" coords="81,827,96,940,118,1098,134,1179,153,1253,175,1314,201,1355,206,1362,201,1362,197,1359,171,1316,148,1255,129,1180,113,1099,90,940,81,832"/>
+<area shape="rect" href="namespacemod__eos__pi.html#a9630051643d79b0e600206bafcf801aa" title="Electron&#45;to&#45;hydrogen ratio ne/nH from internal energy per H. ne/nH = iz_H + A_He*iz_He*(1+iz_He) (mat..." alt="" coords="233,1439,386,1483"/>
+<area shape="poly" title=" " alt="" coords="81,826,93,952,114,1131,130,1223,149,1308,173,1377,186,1404,201,1425,221,1442,216,1442,197,1428,182,1407,168,1380,144,1309,125,1224,109,1131,88,952,81,832"/>
+<area shape="rect" href="namespacemod__eos__lte.html#a751d9926470ec56007930115bf5b7875" title="Scalar EoS kernels: one cell on (log10 nH, log10 eint/nH) or (log10 nH, log10 p/nH),..." alt="" coords="230,1508,388,1553"/>
+<area shape="poly" title=" " alt="" coords="80,827,91,964,110,1164,125,1268,145,1363,170,1441,185,1471,201,1494,219,1511,214,1510,197,1497,180,1474,165,1443,140,1364,120,1268,105,1165,85,965,80,832"/>
+<area shape="poly" title=" " alt="" coords="389,1038,455,1048,450,1050,391,1043"/>
 </map>
 </div>
 
