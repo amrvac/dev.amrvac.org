@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="Transform total energy to internal energy." alt="" coords="5,52,182,97"/>
 <area shape="rect" id="Node000002" href="$namespacemod__mhd__phys.html#aa2e9635443a63a7be80a8c3f23d063bd" title="Velocity from the semirelativistic momentum (Gombosi et al. 2002 eqs 15&#45;16) and emech,..." alt="" coords="230,5,464,50"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,56,217,51,212,53,183,61"/>
-<area shape="rect" id="Node000003" href="$namespacemod__mhd__phys.html#a0fa65d9477fe8e18ed31713daa4572f1" title=" " alt="" coords="242,99,452,143"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,88,229,99,224,99,182,93"/>
+<area shape="rect" id="Node000003" href="$namespacemod__mhd__phys.html#a7d60fcea37cd005281d33dfba1976131" title=" " alt="" coords="235,99,458,143"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,88,222,97,217,98,182,93"/>
 <area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="299,97,297,88,305,80,322,74,347,72,374,75,392,84,387,83,373,80,347,77,323,79,308,84,302,90,304,100"/>
 </map>
