@@ -583,18 +583,18 @@ MHD list</h2>
  mhd_hyperbolic_tc_kappa_perp_factor= DOUBLE (default 0: automatic reference ratio)
  mhd_hyperbolic_tc_Bmin= DOUBLE (default 0: automatic; positive: code units)
  mhd_hyperbolic_tc_coulomb_log= DOUBLE (default 20)
- mhd_uawsom= F | T (default F)
- mhd_uawsom_reflection= F | T (default F)
- mhd_uawsom_reflection_mode= 'one_dimensional_gradient' | 'cartesian_gradient_vorticity' (default 'one_dimensional_gradient')
- mhd_uawsom_kink_reflection= F | T (default F)
- mhd_uawsom_sigma= non-negative DOUBLE (default 0; one_dimensional_gradient only)
- mhd_uawsom_height_dim= INTEGER from 1 to ndim (default ndim)
- mhd_uawsom_zeta0= DOUBLE greater than 1 (default 5)
- mhd_uawsom_filling_factor= DOUBLE between 0 and 1 (default 0.1)
- mhd_uawsom_zeta_scale= positive DOUBLE (physical length; default -1 selects automatic value)
- mhd_uawsom_thread_radius0= positive DOUBLE (physical length; default -1 selects automatic value)
- mhd_uawsom_Bref= positive DOUBLE (physical magnetic field; default -1 selects automatic value)
- mhd_uawsom_alfven_corr_length0= positive DOUBLE (physical length; default -1 selects automatic value)
+ mhd_whiski= F | T (default F)
+ mhd_whiski_reflection= F | T (default F)
+ mhd_whiski_reflection_mode= 'one_dimensional_gradient' | 'cartesian_gradient_vorticity' (default 'one_dimensional_gradient')
+ mhd_whiski_kink_reflection= F | T (default F)
+ mhd_whiski_sigma= non-negative DOUBLE (default 0; one_dimensional_gradient only)
+ mhd_whiski_height_dim= INTEGER from 1 to ndim (default ndim)
+ mhd_whiski_zeta0= DOUBLE greater than 1 (default 5)
+ mhd_whiski_filling_factor= DOUBLE between 0 and 1 (default 0.1)
+ mhd_whiski_zeta_scale= positive DOUBLE (physical length; default -1 selects automatic value)
+ mhd_whiski_thread_radius0= positive DOUBLE (physical length; default -1 selects automatic value)
+ mhd_whiski_Bref= positive DOUBLE (physical magnetic field; default -1 selects automatic value)
+ mhd_whiski_alfven_corr_length0= positive DOUBLE (physical length; default -1 selects automatic value)
  mhd_hd_mom_conserve_fix= F | T
  typedivbfix= 'linde'|'ct'|'glm'|'powel'|'lindejanhunen'|'lindepowel'|'lindeglm'|'multigrid'|'none'
  type_ct='uct_contact'|'uct_hll'|'average'
@@ -613,9 +613,9 @@ MHD list</h2>
  He_abundance= DOUBLE from 0 to 1
  SI_unit= F | T
 /
-</pre><p>The optional UAWSoM equations are disabled by default. Length and magnetic field inputs use physical units (cm and G in cgs mode; m and T in SI mode) and are converted once during initialization. The default closure profile uses the selected Cartesian direction and measures height from that direction's lower problem boundary. A problem can instead assign <span class="tt">usr_uawsom_coefficients</span> to return local <span class="tt">zeta</span>, thread radius, and Alfvén correlation length in code units. The callback also receives a <span class="tt">primitive</span> flag so that state-dependent closures can recover thermodynamic quantities from the correct representation.</p>
+</pre><p>The optional whiski equations are disabled by default. Length and magnetic field inputs use physical units (cm and G in cgs mode; m and T in SI mode) and are converted once during initialization. The default closure profile uses the selected Cartesian direction and measures height from that direction's lower problem boundary. A problem can instead assign <span class="tt">usr_whiski_coefficients</span> to return local <span class="tt">zeta</span>, thread radius, and Alfvén correlation length in code units. The callback also receives a <span class="tt">primitive</span> flag so that state-dependent closures can recover thermodynamic quantities from the correct representation.</p>
 <p>For the four physical scales, the <span class="tt">-1</span> sentinel selects cgs defaults of <span class="tt">3.4805e11 cm</span>, <span class="tt">1e7 cm</span>, <span class="tt">10 G</span>, and <span class="tt">1.5e9 cm</span>, respectively. In SI mode the equivalent inputs are <span class="tt">3.4805e9 m</span>, <span class="tt">1e5 m</span>, <span class="tt">1e-3 T</span>, and <span class="tt">1.5e7 m</span>.</p>
-<p>The initial, boundary, and output state can access the public indices <span class="tt">wAplus_</span>, <span class="tt">wAminus_</span>, <span class="tt">wkplus_</span>, and <span class="tt">wkminus_</span>. The <span class="tt">plus</span> variables propagate against the magnetic field and the <span class="tt">minus</span> variables along it. <span class="tt">mhd_uawsom_reflection_mode='one_dimensional_gradient'</span> preserves the original one-dimensional gradient source and is the only path controlled by <span class="tt">mhd_uawsom_sigma</span>. <span class="tt">cartesian_gradient_vorticity</span> computes the Alfvén directional speed gradient and field-aligned velocity vorticity from the total field; its limiter is <span class="tt">min(R_imb,A,max(Gamma_plus,Gamma_minus))</span> and is independent of sigma. Kink reflection uses only the directional kink-speed gradient, with an analogous sigma-independent limiter. Both multidimensional paths apply the 4:1 imbalance factor, a damping-rate upper bound, and a donor positivity cap. Initial primitive states must set all four wave energies before calling the normal MHD/EOS conserved conversion.</p>
+<p>The initial, boundary, and output state can access the public indices <span class="tt">wAplus_</span>, <span class="tt">wAminus_</span>, <span class="tt">wkplus_</span>, and <span class="tt">wkminus_</span>. The <span class="tt">plus</span> variables propagate against the magnetic field and the <span class="tt">minus</span> variables along it. <span class="tt">mhd_whiski_reflection_mode='one_dimensional_gradient'</span> preserves the original one-dimensional gradient source and is the only path controlled by <span class="tt">mhd_whiski_sigma</span>. <span class="tt">cartesian_gradient_vorticity</span> computes the Alfvén directional speed gradient and field-aligned velocity vorticity from the total field; its limiter is <span class="tt">min(R_imb,A,max(Gamma_plus,Gamma_minus))</span> and is independent of sigma. Kink reflection uses only the directional kink-speed gradient, with an analogous sigma-independent limiter. Both multidimensional paths apply the 4:1 imbalance factor, a damping-rate upper bound, and a donor positivity cap. Initial primitive states must set all four wave energies before calling the normal MHD/EOS conserved conversion.</p>
 <p>The first implementation supports uniform Cartesian 1D/2D/3D total-energy MHD with the fixed-ionization EOS, including B0 splitting. It rejects semirelativistic MHD, equilibrium density/pressure splitting, FLD, no-energy, internal-energy, and hydrodynamic-energy formulations at startup. It does not implement cylindrical, polar, or spherical coordinates, nonuniform grids, <span class="tt">source_geom</span>/<span class="tt">source_geom_split</span>, or <span class="tt">angmomfix</span> combinations.</p>
 <p>In strong magnetic field at coarse-fine block boundaries of AMR mesh, the momentum flux conservation fix induces high speed flows from the boundaries to the coarse blocks leading to low density and pressure there. Setting <b>mhd_hd_mom_conserve_fix=T</b> cures this problem by using the hydrodynamic momentum flux (rho v v + p I) excluding the Maxwell stress part for momentum flux conservation fix. In the HLL, HLLC, and HLLD flux scheme, the hydrodynamic momentum flux is calculated using HLL scheme. In the tvdlf flux scheme, the hydrodynamic momentum flux is calculated using tvdlf scheme.</p>
 <h3 class="doxsection"><a class="anchor" id="par_divbfix"></a>
