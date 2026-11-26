@@ -92,7 +92,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Types</h2></td></tr>
-<tr class="memitem:uawsom_5Fcoefficients" id="r_uawsom_5Fcoefficients"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1uawsom__coefficients.html">uawsom_coefficients</a></td></tr>
+<tr class="memitem:whiski_5Fcoefficients" id="r_whiski_5Fcoefficients"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1whiski__coefficients.html">whiski_coefficients</a></td></tr>
 <tr class="memitem:p_5Fno_5Fargs" id="r_p_5Fno_5Fargs"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1p__no__args.html">p_no_args</a></td></tr>
 <tr class="memitem:init_5Fone_5Fgrid" id="r_init_5Fone_5Fgrid"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacemod__usr__methods_1_1init__one__grid.html">init_one_grid</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize one grid.  <a href="interfacemod__usr__methods_1_1init__one__grid.html#details">More...</a><br /></td></tr>
@@ -247,8 +247,8 @@ Variables</h2></td></tr>
 <tr class="memitem:a0cbdc0fea03ff0780bb3a5772e546234" id="r_a0cbdc0fea03ff0780bb3a5772e546234"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1rfactor.html">rfactor</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cbdc0fea03ff0780bb3a5772e546234">usr_rfactor</a> =&gt; null()</td></tr>
 <tr class="memitem:a15358b971276ac5a6bd8a3affa1d4f88" id="r_a15358b971276ac5a6bd8a3affa1d4f88"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1set__adiab.html">set_adiab</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15358b971276ac5a6bd8a3affa1d4f88">usr_set_adiab</a> =&gt; null()</td></tr>
 <tr class="memitem:a173195e924efa404b4b70f48cc47f900" id="r_a173195e924efa404b4b70f48cc47f900"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1set__adiab.html">set_adiab</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a173195e924efa404b4b70f48cc47f900">usr_set_gamma</a> =&gt; null()</td></tr>
-<tr class="memitem:a81c8435ed1de74abc6e774a3e59c2df7" id="r_a81c8435ed1de74abc6e774a3e59c2df7"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1uawsom__coefficients.html">uawsom_coefficients</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81c8435ed1de74abc6e774a3e59c2df7">usr_uawsom_coefficients</a> =&gt; null()</td></tr>
-<tr class="memdesc:a81c8435ed1de74abc6e774a3e59c2df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally provide local UAWSoM closure coefficients. The returned thread radius and Alfven correlation length are in code length units.  <br /></td></tr>
+<tr class="memitem:ad63d3b3a78293f69caf5b7d6027a590e" id="r_ad63d3b3a78293f69caf5b7d6027a590e"><td class="memItemLeft" align="right" valign="top">procedure(<a class="el" href="interfacemod__usr__methods_1_1whiski__coefficients.html">whiski_coefficients</a>), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad63d3b3a78293f69caf5b7d6027a590e">usr_whiski_coefficients</a> =&gt; null()</td></tr>
+<tr class="memdesc:ad63d3b3a78293f69caf5b7d6027a590e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionally provide local whiski closure coefficients. The returned thread radius and Alfven correlation length are in code length units.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Module with all the methods that users can customize in AMRVAC. </p>
@@ -1108,24 +1108,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a81c8435ed1de74abc6e774a3e59c2df7" name="a81c8435ed1de74abc6e774a3e59c2df7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81c8435ed1de74abc6e774a3e59c2df7">&#9670;&#160;</a></span>usr_uawsom_coefficients</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">procedure(<a class="el" href="interfacemod__usr__methods_1_1uawsom__coefficients.html">uawsom_coefficients</a>), pointer mod_usr_methods::usr_uawsom_coefficients =&gt; null()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Optionally provide local UAWSoM closure coefficients. The returned thread radius and Alfven correlation length are in code length units. </p>
-
-<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00120">120</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
-
-</div>
-</div>
 <a id="a8862a3c5b6a6b71d588f8e21af63581d" name="a8862a3c5b6a6b71d588f8e21af63581d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8862a3c5b6a6b71d588f8e21af63581d">&#9670;&#160;</a></span>usr_update_payload</h2>
 
@@ -1155,6 +1137,24 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00065">65</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
+
+</div>
+</div>
+<a id="ad63d3b3a78293f69caf5b7d6027a590e" name="ad63d3b3a78293f69caf5b7d6027a590e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63d3b3a78293f69caf5b7d6027a590e">&#9670;&#160;</a></span>usr_whiski_coefficients</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">procedure(<a class="el" href="interfacemod__usr__methods_1_1whiski__coefficients.html">whiski_coefficients</a>), pointer mod_usr_methods::usr_whiski_coefficients =&gt; null()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optionally provide local whiski closure coefficients. The returned thread radius and Alfven correlation length are in code length units. </p>
+
+<p class="definition">Definition at line <a class="el" href="mod__usr__methods_8t_source.html#l00120">120</a> of file <a class="el" href="mod__usr__methods_8t_source.html">mod_usr_methods.t</a>.</p>
 
 </div>
 </div>

@@ -95,8 +95,8 @@ var searchData=
   ['usr_5fspecial_5fopacity_92',['usr_special_opacity',['../namespacemod__usr__methods.html#a16455de3026251152e3a60a940db167f',1,'mod_usr_methods']]],
   ['usr_5fspecial_5fresistivity_93',['usr_special_resistivity',['../namespacemod__usr__methods.html#a105ac28441d3e88f53cea58c818da1e2',1,'mod_usr_methods']]],
   ['usr_5ftransform_5fw_94',['usr_transform_w',['../namespacemod__usr__methods.html#ae95367023a331f1118de73c42283b348',1,'mod_usr_methods']]],
-  ['usr_5fuawsom_5fcoefficients_95',['usr_uawsom_coefficients',['../namespacemod__usr__methods.html#a81c8435ed1de74abc6e774a3e59c2df7',1,'mod_usr_methods']]],
-  ['usr_5fupdate_5fpayload_96',['usr_update_payload',['../namespacemod__usr__methods.html#a8862a3c5b6a6b71d588f8e21af63581d',1,'mod_usr_methods']]],
-  ['usr_5fvar_5ffor_5ferrest_97',['usr_var_for_errest',['../namespacemod__usr__methods.html#ad9c9a3c8c653226a2ac678af957b8a94',1,'mod_usr_methods']]],
+  ['usr_5fupdate_5fpayload_95',['usr_update_payload',['../namespacemod__usr__methods.html#a8862a3c5b6a6b71d588f8e21af63581d',1,'mod_usr_methods']]],
+  ['usr_5fvar_5ffor_5ferrest_96',['usr_var_for_errest',['../namespacemod__usr__methods.html#ad9c9a3c8c653226a2ac678af957b8a94',1,'mod_usr_methods']]],
+  ['usr_5fwhiski_5fcoefficients_97',['usr_whiski_coefficients',['../namespacemod__usr__methods.html#ad63d3b3a78293f69caf5b7d6027a590e',1,'mod_usr_methods']]],
   ['usr_5fwrite_5fanalysis_98',['usr_write_analysis',['../namespacemod__usr__methods.html#a8e96d26dba482ea92807a1d2c6d4a833',1,'mod_usr_methods']]]
 ];
