@@ -32,7 +32,7 @@
 <area shape="poly" id="edge15_Node000001_Node000340" title=" " alt="" coords="183,1029,287,1052,283,1056,186,1034"/>
 <area shape="rect" id="Node000341" href="$namespacemod__mhd__phys.html#aa2e9635443a63a7be80a8c3f23d063bd" title="Velocity from the semirelativistic momentum (Gombosi et al. 2002 eqs 15&#45;16) and emech,..." alt="" coords="544,911,778,955"/>
 <area shape="poly" id="edge28_Node000001_Node000341" title=" " alt="" coords="140,1001,202,967,240,951,280,938,343,927,407,921,530,921,526,924,407,926,343,932,281,944,242,956,204,972,145,1004"/>
-<area shape="rect" id="Node000342" href="$namespacemod__mhd__phys.html#a7d60fcea37cd005281d33dfba1976131" title=" " alt="" coords="550,1115,773,1159"/>
+<area shape="rect" id="Node000342" href="$namespacemod__mhd__phys.html#a0fa65d9477fe8e18ed31713daa4572f1" title=" " alt="" coords="556,1115,766,1159"/>
 <area shape="poly" id="edge29_Node000001_Node000342" title=" " alt="" coords="130,1029,155,1059,190,1097,232,1133,282,1160,318,1171,355,1178,432,1181,505,1174,573,1162,569,1165,506,1179,432,1186,354,1183,316,1176,280,1165,229,1137,186,1100,151,1063,131,1034"/>
 <area shape="rect" id="Node000343" href="$namespacemod__mhd__phys.html#af0bab1b3ad07312a82c867579d3714b3" title="Transform internal energy to total energy." alt="" coords="281,1123,496,1151"/>
 <area shape="poly" id="edge19_Node000001_Node000343" title=" " alt="" coords="139,1029,202,1069,282,1109,301,1117,296,1119,280,1114,200,1073,141,1034"/>
@@ -70,7 +70,7 @@
 <area shape="poly" id="edge16_Node000340_Node000341" title=" " alt="" coords="414,1053,471,1009,543,965,560,960,556,963,545,970,474,1013,418,1056"/>
 <area shape="poly" id="edge17_Node000340_Node000342" title=" " alt="" coords="476,1094,544,1109,539,1112,478,1099"/>
 <area shape="poly" id="edge18_Node000342_Node000342" title=" " alt="" coords="609,1114,608,1104,617,1095,635,1090,661,1088,690,1090,709,1098,704,1100,689,1096,661,1093,636,1095,619,1100,613,1106,615,1115"/>
-<area shape="poly" id="edge20_Node000343_Node000342" title=" " alt="" coords="495,1135,536,1136,532,1138,498,1139"/>
+<area shape="poly" id="edge20_Node000343_Node000342" title=" " alt="" coords="495,1135,543,1136,538,1138,498,1139"/>
 <area shape="poly" id="edge24_Node000314_Node000314" title=" " alt="" coords="615,1003,607,994,613,984,632,979,661,977,693,979,712,987,707,989,692,984,661,982,633,984,617,989,613,994,620,1002"/>
 <area shape="poly" id="edge27_Node000347_Node000341" title=" " alt="" coords="489,952,530,948,526,951,493,956"/>
 <area shape="poly" id="edge26_Node000347_Node000314" title=" " alt="" coords="466,978,570,998,566,1001,468,983"/>
