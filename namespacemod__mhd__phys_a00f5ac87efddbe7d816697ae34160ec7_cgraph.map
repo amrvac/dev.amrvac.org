@@ -6,8 +6,8 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,187,206,163,275,142,347,130,420,122,558,117,553,119,421,127,348,135,276,148,208,168,150,191"/>
 <area shape="rect" id="Node000032" href="$namespacemod__mhd__phys.html#a7cefae9319d59d3d9182e9b35bad1e28" title="Compute 2 times total magnetic energy." alt="" coords="301,251,498,295"/>
 <area shape="poly" id="edge4_Node000001_Node000032" title=" " alt="" coords="176,215,293,245,288,248,176,221"/>
-<area shape="rect" id="Node000072" href="$namespacemod__mhd__phys.html#abf54917ed4ea17469ce42ec87a36aa4b" title=" " alt="" coords="288,181,511,226"/>
-<area shape="poly" id="edge6_Node000001_Node000072" title=" " alt="" coords="227,201,275,203,270,205,229,206"/>
+<area shape="rect" id="Node000072" href="$namespacemod__mhd__phys.html#ae9aed8ec3fb3fe8077da5a0adc87e61a" title=" " alt="" coords="294,181,504,226"/>
+<area shape="poly" id="edge6_Node000001_Node000072" title=" " alt="" coords="227,201,281,203,276,205,229,206"/>
 <area shape="rect" id="Node000040" href="$namespacemod__mhd__phys.html#a7e7f9e0cfdae3f081d89b5a609011c5d" title="multiply res by the ambipolar coefficient The ambipolar coefficient is calculated as &#45;mhd_eta_ambi/rh..." alt="" coords="276,55,523,83"/>
 <area shape="poly" id="edge8_Node000001_Node000040" title=" " alt="" coords="134,187,194,144,233,120,275,99,315,86,311,89,277,103,236,124,197,148,137,191"/>
 <area shape="rect" id="Node000073" href="$namespacemod__fix__conserve.html#accd8011113a5f7b3efeec90d42bd9dad" title=" " alt="" coords="290,319,509,347"/>
